@@ -1,0 +1,2537 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+  <key id="name" attr.name="name" attr.type="string" for="node"/>
+  <key id="type" attr.name="type" attr.type="string" for="node"/>
+  <key id="subject" attr.name="subject" attr.type="string" for="node"/>
+  <key id="module" attr.name="module" attr.type="string" for="node"/>
+  <key id="chapter" attr.name="chapter" attr.type="string" for="node"/>
+  <key id="difficulty" attr.name="difficulty" attr.type="int" for="node"/>
+  <key id="description" attr.name="description" attr.type="string" for="node"/>
+  <key id="keywords" attr.name="keywords" attr.type="string" for="node"/>
+  <key id="exam_type" attr.name="exam_type" attr.type="string" for="node"/>
+  <key id="importance" attr.name="importance" attr.type="int" for="node"/>
+  <key id="textbook_source" attr.name="textbook_source" attr.type="string" for="node"/>
+  <key id="relation" attr.name="relation" attr.type="string" for="edge"/>
+  <key id="weight" attr.name="weight" attr.type="double" for="edge"/>
+  <key id="description" attr.name="description" attr.type="string" for="edge"/>
+  <graph id="G" edgedefault="directed">
+    <node id="M1">
+      <data key="name">必修第一册(力学基础)</data>
+      <data key="type">Module</data>
+      <data key="subject">物理</data>
+      <data key="description">运动的描述、匀变速直线运动、相互作用(力)、牛顿运动定律,经典力学基石。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="module">必修第一册(力学基础)</data>
+      <data key="chapter"/>
+      <data key="textbook_source"/>
+    </node>
+    <node id="M2">
+      <data key="name">必修第二册(力学进阶)</data>
+      <data key="type">Module</data>
+      <data key="subject">物理</data>
+      <data key="description">抛体运动、圆周运动、万有引力与宇宙航行、机械能守恒定律。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="module">必修第二册(力学进阶)</data>
+      <data key="chapter"/>
+      <data key="textbook_source"/>
+    </node>
+    <node id="M3">
+      <data key="name">必修第三册(电学)</data>
+      <data key="type">Module</data>
+      <data key="subject">物理</data>
+      <data key="description">静电场、电路与电能、电磁感应与电磁波初步。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="module">必修第三册(电学)</data>
+      <data key="chapter"/>
+      <data key="textbook_source"/>
+    </node>
+    <node id="M4">
+      <data key="name">选择性必修第一册(动量振动光)</data>
+      <data key="type">Module</data>
+      <data key="subject">物理</data>
+      <data key="description">动量守恒定律、机械振动与机械波、光。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="module">选择性必修第一册(动量振动光)</data>
+      <data key="chapter"/>
+      <data key="textbook_source"/>
+    </node>
+    <node id="M5">
+      <data key="name">选择性必修第二册(电磁场)</data>
+      <data key="type">Module</data>
+      <data key="subject">物理</data>
+      <data key="description">电磁场与电磁波、传感器。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="module">选择性必修第二册(电磁场)</data>
+      <data key="chapter"/>
+      <data key="textbook_source"/>
+    </node>
+    <node id="M6">
+      <data key="name">选择性必修第三册(热学原子)</data>
+      <data key="type">Module</data>
+      <data key="subject">物理</data>
+      <data key="description">固体液体气体、热力学定律、原子结构、原子核。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="module">选择性必修第三册(热学原子)</data>
+      <data key="chapter"/>
+      <data key="textbook_source"/>
+    </node>
+    <node id="C1">
+      <data key="name">运动的描述</data>
+      <data key="type">Chapter</data>
+      <data key="subject">物理</data>
+      <data key="module">必修第一册(力学基础)</data>
+      <data key="chapter">运动的描述</data>
+      <data key="description">质点、参考系、坐标系、时间位移、速度加速度。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="textbook_source">必修第一册</data>
+    </node>
+    <node id="C2">
+      <data key="name">匀变速直线运动的研究</data>
+      <data key="type">Chapter</data>
+      <data key="subject">物理</data>
+      <data key="module">必修第一册(力学基础)</data>
+      <data key="chapter">匀变速直线运动的研究</data>
+      <data key="description">匀变速直线运动规律、自由落体运动、运动图象。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="textbook_source">必修第一册</data>
+    </node>
+    <node id="C3">
+      <data key="name">相互作用——力</data>
+      <data key="type">Chapter</data>
+      <data key="subject">物理</data>
+      <data key="module">必修第一册(力学基础)</data>
+      <data key="chapter">相互作用——力</data>
+      <data key="description">重力、弹力、摩擦力、力的合成与分解、共点力平衡。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="textbook_source">必修第一册</data>
+    </node>
+    <node id="C4">
+      <data key="name">牛顿运动定律</data>
+      <data key="type">Chapter</data>
+      <data key="subject">物理</data>
+      <data key="module">必修第一册(力学基础)</data>
+      <data key="chapter">牛顿运动定律</data>
+      <data key="description">牛顿三大定律、力学单位制、牛顿定律的应用。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="textbook_source">必修第一册</data>
+    </node>
+    <node id="C5">
+      <data key="name">运动和力</data>
+      <data key="type">Chapter</data>
+      <data key="subject">物理</data>
+      <data key="module">必修第二册(力学进阶)</data>
+      <data key="chapter">运动和力</data>
+      <data key="description">牛顿运动定律的综合应用与运动和力的关系。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="textbook_source">必修第二册</data>
+    </node>
+    <node id="C6">
+      <data key="name">抛体运动</data>
+      <data key="type">Chapter</data>
+      <data key="subject">物理</data>
+      <data key="module">必修第二册(力学进阶)</data>
+      <data key="chapter">抛体运动</data>
+      <data key="description">曲线运动、运动的合成与分解、平抛运动。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="textbook_source">必修第二册</data>
+    </node>
+    <node id="C7">
+      <data key="name">圆周运动</data>
+      <data key="type">Chapter</data>
+      <data key="subject">物理</data>
+      <data key="module">必修第二册(力学进阶)</data>
+      <data key="chapter">圆周运动</data>
+      <data key="description">圆周运动描述、向心加速度、向心力及实例分析。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="textbook_source">必修第二册</data>
+    </node>
+    <node id="C8">
+      <data key="name">万有引力与宇宙航行</data>
+      <data key="type">Chapter</data>
+      <data key="subject">物理</data>
+      <data key="module">必修第二册(力学进阶)</data>
+      <data key="chapter">万有引力与宇宙航行</data>
+      <data key="description">行星运动、万有引力定律、宇宙速度、经典力学局限性。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="textbook_source">必修第二册</data>
+    </node>
+    <node id="C9">
+      <data key="name">机械能守恒定律</data>
+      <data key="type">Chapter</data>
+      <data key="subject">物理</data>
+      <data key="module">必修第二册(力学进阶)</data>
+      <data key="chapter">机械能守恒定律</data>
+      <data key="description">功、功率、动能定理、势能、机械能守恒定律。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="textbook_source">必修第二册</data>
+    </node>
+    <node id="C10">
+      <data key="name">静电场</data>
+      <data key="type">Chapter</data>
+      <data key="subject">物理</data>
+      <data key="module">必修第三册(电学)</data>
+      <data key="chapter">静电场</data>
+      <data key="description">电荷、库仑定律、电场强度、电势、电容器。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="textbook_source">必修第三册</data>
+    </node>
+    <node id="C11">
+      <data key="name">电能(电路)</data>
+      <data key="type">Chapter</data>
+      <data key="subject">物理</data>
+      <data key="module">必修第三册(电学)</data>
+      <data key="chapter">电能(电路)</data>
+      <data key="description">电流、电阻、欧姆定律、串并联电路、闭合电路欧姆定律。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="textbook_source">必修第三册</data>
+    </node>
+    <node id="C12">
+      <data key="name">电磁感应与电磁波初步</data>
+      <data key="type">Chapter</data>
+      <data key="subject">物理</data>
+      <data key="module">必修第三册(电学)</data>
+      <data key="chapter">电磁感应与电磁波初步</data>
+      <data key="description">电流磁效应、磁场、电磁感应、法拉第定律、电磁波。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="textbook_source">必修第三册</data>
+    </node>
+    <node id="C13">
+      <data key="name">动量守恒定律</data>
+      <data key="type">Chapter</data>
+      <data key="subject">物理</data>
+      <data key="module">选择性必修第一册(动量振动光)</data>
+      <data key="chapter">动量守恒定律</data>
+      <data key="description">动量、冲量与动量定理、动量守恒定律、反冲运动。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="textbook_source">选择性必修第一册</data>
+    </node>
+    <node id="C14">
+      <data key="name">机械振动与机械波</data>
+      <data key="type">Chapter</data>
+      <data key="subject">物理</data>
+      <data key="module">选择性必修第一册(动量振动光)</data>
+      <data key="chapter">机械振动与机械波</data>
+      <data key="description">简谐运动、单摆、机械波、波长频率波速、波的干涉衍射。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="textbook_source">选择性必修第一册</data>
+    </node>
+    <node id="C15">
+      <data key="name">光</data>
+      <data key="type">Chapter</data>
+      <data key="subject">物理</data>
+      <data key="module">选择性必修第一册(动量振动光)</data>
+      <data key="chapter">光</data>
+      <data key="description">光的折射、干涉、衍射、偏振与色散。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="textbook_source">选择性必修第一册</data>
+    </node>
+    <node id="C16">
+      <data key="name">电磁场与电磁波</data>
+      <data key="type">Chapter</data>
+      <data key="subject">物理</data>
+      <data key="module">选择性必修第二册(电磁场)</data>
+      <data key="chapter">电磁场与电磁波</data>
+      <data key="description">麦克斯韦电磁场理论、电磁波谱、电磁波发射与接收。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="textbook_source">选择性必修第二册</data>
+    </node>
+    <node id="C17">
+      <data key="name">传感器</data>
+      <data key="type">Chapter</data>
+      <data key="subject">物理</data>
+      <data key="module">选择性必修第二册(电磁场)</data>
+      <data key="chapter">传感器</data>
+      <data key="description">传感器工作原理及常见应用。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="textbook_source">选择性必修第二册</data>
+    </node>
+    <node id="C18">
+      <data key="name">固体、液体、气体</data>
+      <data key="type">Chapter</data>
+      <data key="subject">物理</data>
+      <data key="module">选择性必修第三册(热学原子)</data>
+      <data key="chapter">固体、液体、气体</data>
+      <data key="description">晶体、液体表面张力、气体实验定律、理想气体状态方程。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="textbook_source">选择性必修第三册</data>
+    </node>
+    <node id="C19">
+      <data key="name">热力学定律</data>
+      <data key="type">Chapter</data>
+      <data key="subject">物理</data>
+      <data key="module">选择性必修第三册(热学原子)</data>
+      <data key="chapter">热力学定律</data>
+      <data key="description">内能、热力学第一定律、热力学第二定律、熵。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="textbook_source">选择性必修第三册</data>
+    </node>
+    <node id="C20">
+      <data key="name">原子结构</data>
+      <data key="type">Chapter</data>
+      <data key="subject">物理</data>
+      <data key="module">选择性必修第三册(热学原子)</data>
+      <data key="chapter">原子结构</data>
+      <data key="description">电子发现、原子核式结构、玻尔模型、原子光谱。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="textbook_source">选择性必修第三册</data>
+    </node>
+    <node id="C21">
+      <data key="name">原子核</data>
+      <data key="type">Chapter</data>
+      <data key="subject">物理</data>
+      <data key="module">选择性必修第三册(热学原子)</data>
+      <data key="chapter">原子核</data>
+      <data key="description">天然放射现象、原子核组成、衰变、核力结合能、核反应核能。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="textbook_source">选择性必修第三册</data>
+    </node>
+    <node id="K1">
+      <data key="name">质点与参考系</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">物理</data>
+      <data key="module">必修第一册(力学基础)</data>
+      <data key="chapter">运动的描述</data>
+      <data key="difficulty">2</data>
+      <data key="description">理解质点模型的条件与参考系的概念,能判断物体能否看作质点,会选择参考系描述运动。</data>
+      <data key="keywords">质点,参考系,模型,理想化</data>
+      <data key="exam_type">选择题,概念辨析</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">必修第一册</data>
+    </node>
+    <node id="K2">
+      <data key="name">时间与时刻、坐标与位移</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">物理</data>
+      <data key="module">必修第一册(力学基础)</data>
+      <data key="chapter">运动的描述</data>
+      <data key="difficulty">2</data>
+      <data key="description">区分时间间隔与时刻,理解坐标系、路程与位移的区别与联系。</data>
+      <data key="keywords">时刻,时间间隔,位移,路程,坐标系</data>
+      <data key="exam_type">选择题,概念辨析</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">必修第一册</data>
+    </node>
+    <node id="K3">
+      <data key="name">速度</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">物理</data>
+      <data key="module">必修第一册(力学基础)</data>
+      <data key="chapter">运动的描述</data>
+      <data key="difficulty">2</data>
+      <data key="description">理解平均速度与瞬时速度的概念及区别,掌握速度的矢量性,理解速率。</data>
+      <data key="keywords">平均速度,瞬时速度,速率,矢量</data>
+      <data key="exam_type">选择题,计算题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">必修第一册</data>
+    </node>
+    <node id="K4">
+      <data key="name">加速度</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">物理</data>
+      <data key="module">必修第一册(力学基础)</data>
+      <data key="chapter">运动的描述</data>
+      <data key="difficulty">3</data>
+      <data key="description">理解加速度的概念、物理意义与矢量性,掌握加速度与速度、速度变化的关系。</data>
+      <data key="keywords">加速度,速度变化率,矢量,方向</data>
+      <data key="exam_type">选择题,概念辨析,计算</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">必修第一册</data>
+    </node>
+    <node id="K5">
+      <data key="name">匀变速直线运动的速度与时间关系</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">物理</data>
+      <data key="module">必修第一册(力学基础)</data>
+      <data key="chapter">匀变速直线运动的研究</data>
+      <data key="difficulty">3</data>
+      <data key="description">掌握匀变速直线运动的速度公式v=v0+at,理解v-t图象及其斜率意义。</data>
+      <data key="keywords">速度公式,v-t图象,匀变速,斜率</data>
+      <data key="exam_type">计算题,图象分析</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">必修第一册</data>
+    </node>
+    <node id="K6">
+      <data key="name">匀变速直线运动的位移与时间关系</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">物理</data>
+      <data key="module">必修第一册(力学基础)</data>
+      <data key="chapter">匀变速直线运动的研究</data>
+      <data key="difficulty">4</data>
+      <data key="description">掌握位移公式x=v0t+½at²及速度位移公式v²-v0²=2ax,理解x-t图象与v-t图象中面积的意义。</data>
+      <data key="keywords">位移公式,速度位移关系,x-t图象,面积意义</data>
+      <data key="exam_type">计算题,图象分析</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">必修第一册</data>
+    </node>
+    <node id="K7">
+      <data key="name">自由落体运动</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">物理</data>
+      <data key="module">必修第一册(力学基础)</data>
+      <data key="chapter">匀变速直线运动的研究</data>
+      <data key="difficulty">3</data>
+      <data key="description">理解自由落体运动是初速度为零的匀加速直线运动,掌握重力加速度g及自由落体公式。</data>
+      <data key="keywords">自由落体,重力加速度,初速度为零,匀加速</data>
+      <data key="exam_type">计算题,自由落体</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">必修第一册</data>
+    </node>
+    <node id="K8">
+      <data key="name">运动图象的分析</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">物理</data>
+      <data key="module">必修第一册(力学基础)</data>
+      <data key="chapter">匀变速直线运动的研究</data>
+      <data key="difficulty">4</data>
+      <data key="description">掌握x-t图与v-t图的物理意义,能从图象提取运动信息(斜率、截距、面积、交点)。</data>
+      <data key="keywords">x-t图,v-t图,斜率,面积,截距,交点</data>
+      <data key="exam_type">选择题,图象综合分析</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">必修第一册</data>
+    </node>
+    <node id="K9">
+      <data key="name">重力</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">物理</data>
+      <data key="module">必修第一册(力学基础)</data>
+      <data key="chapter">相互作用——力</data>
+      <data key="difficulty">2</data>
+      <data key="description">理解重力的产生、大小与方向,掌握重心概念及重心的确定方法。</data>
+      <data key="keywords">重力,重力加速度,重心,自由落体</data>
+      <data key="exam_type">选择题,概念</data>
+      <data key="importance">3</data>
+      <data key="textbook_source">必修第一册</data>
+    </node>
+    <node id="K10">
+      <data key="name">弹力</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">物理</data>
+      <data key="module">必修第一册(力学基础)</data>
+      <data key="chapter">相互作用——力</data>
+      <data key="difficulty">3</data>
+      <data key="description">理解弹力的产生条件与方向,掌握胡克定律F=kx,能计算弹簧弹力。</data>
+      <data key="keywords">弹力,形变,胡克定律,劲度系数,方向</data>
+      <data key="exam_type">选择题,计算题,胡克定律</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">必修第一册</data>
+    </node>
+    <node id="K11">
+      <data key="name">摩擦力(滑动与静摩擦力)</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">物理</data>
+      <data key="module">必修第一册(力学基础)</data>
+      <data key="chapter">相互作用——力</data>
+      <data key="difficulty">4</data>
+      <data key="description">理解滑动摩擦力与静摩擦力的产生条件、方向与大小,掌握f=μN及最大静摩擦力概念。</data>
+      <data key="keywords">滑动摩擦力,静摩擦力,最大静摩擦力,μN</data>
+      <data key="exam_type">选择题,计算题,摩擦力判断</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">必修第一册</data>
+    </node>
+    <node id="K12">
+      <data key="name">力的合成与分解</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">物理</data>
+      <data key="module">必修第一册(力学基础)</data>
+      <data key="chapter">相互作用——力</data>
+      <data key="difficulty">4</data>
+      <data key="description">掌握力的平行四边形定则与正交分解法,能进行力的合成与分解计算。</data>
+      <data key="keywords">平行四边形定则,正交分解,合力分力,矢量运算</data>
+      <data key="exam_type">计算题,力的合成分解</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">必修第一册</data>
+    </node>
+    <node id="K13">
+      <data key="name">共点力的平衡</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">物理</data>
+      <data key="module">必修第一册(力学基础)</data>
+      <data key="chapter">相互作用——力</data>
+      <data key="difficulty">4</data>
+      <data key="description">掌握共点力平衡条件(合力为零),能运用正交分解法解决平衡问题。</data>
+      <data key="keywords">共点力,平衡条件,正交分解,平衡问题</data>
+      <data key="exam_type">计算题,平衡问题综合</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">必修第一册</data>
+    </node>
+    <node id="K14">
+      <data key="name">牛顿第一定律与惯性</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">物理</data>
+      <data key="module">必修第一册(力学基础)</data>
+      <data key="chapter">牛顿运动定律</data>
+      <data key="difficulty">3</data>
+      <data key="description">理解牛顿第一定律的内容与意义,理解惯性概念及质量是惯性大小的量度。</data>
+      <data key="keywords">牛顿第一定律,惯性,质量,惯性大小</data>
+      <data key="exam_type">选择题,概念辨析</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">必修第一册</data>
+    </node>
+    <node id="K15">
+      <data key="name">牛顿第二定律</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">物理</data>
+      <data key="module">必修第一册(力学基础)</data>
+      <data key="chapter">牛顿运动定律</data>
+      <data key="difficulty">5</data>
+      <data key="description">掌握牛顿第二定律F=ma的内容与矢量性,理解加速度与合外力的瞬时对应关系。</data>
+      <data key="keywords">牛顿第二定律,F=ma,矢量性,瞬时性,合外力</data>
+      <data key="exam_type">计算题,牛顿定律综合</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">必修第一册</data>
+    </node>
+    <node id="K16">
+      <data key="name">牛顿第三定律</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">物理</data>
+      <data key="module">必修第一册(力学基础)</data>
+      <data key="chapter">牛顿运动定律</data>
+      <data key="difficulty">3</data>
+      <data key="description">理解牛顿第三定律(作用力与反作用力),区分作用力反作用力与平衡力。</data>
+      <data key="keywords">牛顿第三定律,作用力反作用力,平衡力</data>
+      <data key="exam_type">选择题,概念辨析</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">必修第一册</data>
+    </node>
+    <node id="K17">
+      <data key="name">力学单位制</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">物理</data>
+      <data key="module">必修第一册(力学基础)</data>
+      <data key="chapter">牛顿运动定律</data>
+      <data key="difficulty">2</data>
+      <data key="description">理解基本单位与导出单位,掌握国际单位制中的力学基本单位。</data>
+      <data key="keywords">单位制,基本单位,导出单位,国际单位制</data>
+      <data key="exam_type">选择题,单位换算</data>
+      <data key="importance">3</data>
+      <data key="textbook_source">必修第一册</data>
+    </node>
+    <node id="K18">
+      <data key="name">牛顿运动定律的应用(超重与失重)</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">物理</data>
+      <data key="module">必修第一册(力学基础)</data>
+      <data key="chapter">牛顿运动定律</data>
+      <data key="difficulty">4</data>
+      <data key="description">掌握用牛顿定律分析超重与失重现象,理解视重与实重的关系及完全失重条件。</data>
+      <data key="keywords">超重,失重,完全失重,视重,加速度</data>
+      <data key="exam_type">选择题,计算题,超重失重</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">必修第一册</data>
+    </node>
+    <node id="K19">
+      <data key="name">牛顿定律的综合应用</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">物理</data>
+      <data key="module">必修第二册(力学进阶)</data>
+      <data key="chapter">运动和力</data>
+      <data key="difficulty">5</data>
+      <data key="description">综合运用牛顿运动定律与运动学公式解决动力学问题(连接体、传送带、斜面等)。</data>
+      <data key="keywords">动力学综合,连接体,传送带,斜面,牛顿定律</data>
+      <data key="exam_type">综合题,动力学综合</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">必修第二册</data>
+    </node>
+    <node id="K20">
+      <data key="name">曲线运动</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">物理</data>
+      <data key="module">必修第二册(力学进阶)</data>
+      <data key="chapter">抛体运动</data>
+      <data key="difficulty">3</data>
+      <data key="description">理解曲线运动的速度方向(切线方向)与曲线运动的条件(合外力方向指向曲率中心)。</data>
+      <data key="keywords">曲线运动,速度方向,切线,合外力方向</data>
+      <data key="exam_type">选择题,概念</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">必修第二册</data>
+    </node>
+    <node id="K21">
+      <data key="name">运动的合成与分解</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">物理</data>
+      <data key="module">必修第二册(力学进阶)</data>
+      <data key="chapter">抛体运动</data>
+      <data key="difficulty">4</data>
+      <data key="description">掌握运动的合成与分解(等效替代),理解合运动与分运动的关系(等时性、独立性)。</data>
+      <data key="keywords">运动合成分解,合运动分运动,等时性,独立性</data>
+      <data key="exam_type">计算题,运动合成分解</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">必修第二册</data>
+    </node>
+    <node id="K22">
+      <data key="name">平抛运动</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">物理</data>
+      <data key="module">必修第二册(力学进阶)</data>
+      <data key="chapter">抛体运动</data>
+      <data key="difficulty">4</data>
+      <data key="description">掌握平抛运动的规律(水平匀速、竖直自由落体),能求解平抛的时间、速度与位移。</data>
+      <data key="keywords">平抛运动,水平匀速,竖直自由落体,落地速度</data>
+      <data key="exam_type">计算题,平抛运动</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">必修第二册</data>
+    </node>
+    <node id="K23">
+      <data key="name">圆周运动的描述</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">物理</data>
+      <data key="module">必修第二册(力学进阶)</data>
+      <data key="chapter">圆周运动</data>
+      <data key="difficulty">3</data>
+      <data key="description">掌握线速度、角速度、周期、频率、转速等描述量及其关系v=ωr。</data>
+      <data key="keywords">线速度,角速度,周期,频率,v=ωr</data>
+      <data key="exam_type">选择题,计算题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">必修第二册</data>
+    </node>
+    <node id="K24">
+      <data key="name">向心加速度</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">物理</data>
+      <data key="module">必修第二册(力学进阶)</data>
+      <data key="chapter">圆周运动</data>
+      <data key="difficulty">4</data>
+      <data key="description">理解向心加速度的方向与物理意义,掌握向心加速度公式a=v²/r=ω²r。</data>
+      <data key="keywords">向心加速度,方向,公式,a=v²/r,ω²r</data>
+      <data key="exam_type">计算题,向心加速度</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">必修第二册</data>
+    </node>
+    <node id="K25">
+      <data key="name">向心力</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">物理</data>
+      <data key="module">必修第二册(力学进阶)</data>
+      <data key="chapter">圆周运动</data>
+      <data key="difficulty">5</data>
+      <data key="description">理解向心力是效果力,掌握向心力公式F=mv²/r=mω²r,能分析圆周运动的向心力来源。</data>
+      <data key="keywords">向心力,效果力,F=mv²/r,向心力来源</data>
+      <data key="exam_type">计算题,圆周运动综合</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">必修第二册</data>
+    </node>
+    <node id="K26">
+      <data key="name">圆周运动的实例分析</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">物理</data>
+      <data key="module">必修第二册(力学进阶)</data>
+      <data key="chapter">圆周运动</data>
+      <data key="difficulty">5</data>
+      <data key="description">能分析汽车转弯、火车转弯、圆锥摆、过最高点(绳、杆模型)等实际圆周运动问题。</data>
+      <data key="keywords">圆周运动实例,圆锥摆,过最高点,绳模型杆模型</data>
+      <data key="exam_type">综合题,圆周运动临界</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">必修第二册</data>
+    </node>
+    <node id="K27">
+      <data key="name">行星的运动(开普勒定律)</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">物理</data>
+      <data key="module">必修第二册(力学进阶)</data>
+      <data key="chapter">万有引力与宇宙航行</data>
+      <data key="difficulty">3</data>
+      <data key="description">理解开普勒三大行星运动定律,了解行星运动轨道特点。</data>
+      <data key="keywords">开普勒定律,椭圆轨道,面积定律,周期定律</data>
+      <data key="exam_type">选择题,开普勒定律</data>
+      <data key="importance">3</data>
+      <data key="textbook_source">必修第二册</data>
+    </node>
+    <node id="K28">
+      <data key="name">万有引力定律</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">物理</data>
+      <data key="module">必修第二册(力学进阶)</data>
+      <data key="chapter">万有引力与宇宙航行</data>
+      <data key="difficulty">4</data>
+      <data key="description">掌握万有引力定律F=Gm1m2/r²的内容与适用条件,理解引力常量G的意义。</data>
+      <data key="keywords">万有引力定律,引力常量G,质量,距离</data>
+      <data key="exam_type">计算题,万有引力</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">必修第二册</data>
+    </node>
+    <node id="K29">
+      <data key="name">万有引力定律的应用(宇宙速度)</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">物理</data>
+      <data key="module">必修第二册(力学进阶)</data>
+      <data key="chapter">万有引力与宇宙航行</data>
+      <data key="difficulty">5</data>
+      <data key="description">掌握用万有引力等于向心力分析卫星运动,理解第一、第二、第三宇宙速度及变轨问题。</data>
+      <data key="keywords">宇宙速度,卫星,变轨,万有引力等于向心力,轨道</data>
+      <data key="exam_type">综合题,卫星天体运动</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">必修第二册</data>
+    </node>
+    <node id="K30">
+      <data key="name">经典力学的局限性</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">物理</data>
+      <data key="module">必修第二册(力学进阶)</data>
+      <data key="chapter">万有引力与宇宙航行</data>
+      <data key="difficulty">2</data>
+      <data key="description">了解经典力学在高速(接近光速)、微观领域的局限性,理解相对论与量子力学的引入背景。</data>
+      <data key="keywords">经典力学,局限性,相对论,量子力学,高速微观</data>
+      <data key="exam_type">选择题,概念</data>
+      <data key="importance">2</data>
+      <data key="textbook_source">必修第二册</data>
+    </node>
+    <node id="K31">
+      <data key="name">功</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">物理</data>
+      <data key="module">必修第二册(力学进阶)</data>
+      <data key="chapter">机械能守恒定律</data>
+      <data key="difficulty">4</data>
+      <data key="description">理解功的概念与公式W=Flcosθ,掌握正负功的判断及恒力做功与变力做功。</data>
+      <data key="keywords">功,公式,正负功,恒力做功,功的矢量性</data>
+      <data key="exam_type">计算题,功的计算</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">必修第二册</data>
+    </node>
+    <node id="K32">
+      <data key="name">功率</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">物理</data>
+      <data key="module">必修第二册(力学进阶)</data>
+      <data key="chapter">机械能守恒定律</data>
+      <data key="difficulty">3</data>
+      <data key="description">理解功率的概念与公式P=W/t及P=Fv,理解额定功率与实际功率、平均功率与瞬时功率。</data>
+      <data key="keywords">功率,平均功率,瞬时功率,P=Fv,额定功率</data>
+      <data key="exam_type">计算题,功率</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">必修第二册</data>
+    </node>
+    <node id="K33">
+      <data key="name">动能与动能定理</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">物理</data>
+      <data key="module">必修第二册(力学进阶)</data>
+      <data key="chapter">机械能守恒定律</data>
+      <data key="difficulty">5</data>
+      <data key="description">理解动能概念Ek=½mv²,掌握动能定理W合=ΔEk及其应用,能解决变力做功问题。</data>
+      <data key="keywords">动能,动能定理,合外力做功,动能变化</data>
+      <data key="exam_type">综合题,动能定理应用</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">必修第二册</data>
+    </node>
+    <node id="K34">
+      <data key="name">重力势能</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">物理</data>
+      <data key="module">必修第二册(力学进阶)</data>
+      <data key="chapter">机械能守恒定律</data>
+      <data key="difficulty">3</data>
+      <data key="description">理解重力势能Ep=mgh的概念及相对性,掌握重力做功与重力势能变化的关系。</data>
+      <data key="keywords">重力势能,相对性,参考面,重力做功</data>
+      <data key="exam_type">计算题,重力势能</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">必修第二册</data>
+    </node>
+    <node id="K35">
+      <data key="name">机械能守恒定律</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">物理</data>
+      <data key="module">必修第二册(力学进阶)</data>
+      <data key="chapter">机械能守恒定律</data>
+      <data key="difficulty">5</data>
+      <data key="description">掌握机械能守恒的条件(只有重力或弹力做功)及守恒定律的表达与应用。</data>
+      <data key="keywords">机械能守恒,守恒条件,动能势能转化</data>
+      <data key="exam_type">综合题,机械能守恒</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">必修第二册</data>
+    </node>
+    <node id="K36">
+      <data key="name">功能关系与功能原理</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">物理</data>
+      <data key="module">必修第二册(力学进阶)</data>
+      <data key="chapter">机械能守恒定律</data>
+      <data key="difficulty">5</data>
+      <data key="description">理解各种力做功与对应能量变化的关系(重力做功与重力势能、合外力做功与动能等)。</data>
+      <data key="keywords">功能关系,功能原理,能量转化,做功</data>
+      <data key="exam_type">综合题,功能关系</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">必修第二册</data>
+    </node>
+    <node id="K37">
+      <data key="name">电荷与电荷守恒</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">物理</data>
+      <data key="module">必修第三册(电学)</data>
+      <data key="chapter">静电场</data>
+      <data key="difficulty">2</data>
+      <data key="description">理解电荷的种类与电荷守恒定律,掌握元电荷概念及电荷的分配规律。</data>
+      <data key="keywords">电荷,正负电荷,电荷守恒,元电荷</data>
+      <data key="exam_type">选择题,概念</data>
+      <data key="importance">3</data>
+      <data key="textbook_source">必修第三册</data>
+    </node>
+    <node id="K38">
+      <data key="name">库仑定律</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">物理</data>
+      <data key="module">必修第三册(电学)</data>
+      <data key="chapter">静电场</data>
+      <data key="difficulty">4</data>
+      <data key="description">掌握库仑定律F=kq1q2/r²的内容与适用条件(真空中、点电荷),理解库仑力。</data>
+      <data key="keywords">库仑定律,点电荷,k,真空,距离平方</data>
+      <data key="exam_type">计算题,库仑力</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">必修第三册</data>
+    </node>
+    <node id="K39">
+      <data key="name">电场与电场强度</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">物理</data>
+      <data key="module">必修第三册(电学)</data>
+      <data key="chapter">静电场</data>
+      <data key="difficulty">5</data>
+      <data key="description">理解电场概念与电场强度的定义E=F/q,掌握点电荷电场及场强叠加原理,会画电场线。</data>
+      <data key="keywords">电场强度,定义,E=F/q,点电荷电场,叠加原理,电场线</data>
+      <data key="exam_type">计算题,场强计算</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">必修第三册</data>
+    </node>
+    <node id="K40">
+      <data key="name">电势能与电势</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">物理</data>
+      <data key="module">必修第三册(电学)</data>
+      <data key="chapter">静电场</data>
+      <data key="difficulty">5</data>
+      <data key="description">理解电势能、电势的概念及电势φ=Ep/q,掌握等势面及电场力做功与电势能变化的关系。</data>
+      <data key="keywords">电势能,电势,等势面,电场力做功,电势能变化</data>
+      <data key="exam_type">计算题,电势电势能</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">必修第三册</data>
+    </node>
+    <node id="K41">
+      <data key="name">电势差与匀强电场</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">物理</data>
+      <data key="module">必修第三册(电学)</data>
+      <data key="chapter">静电场</data>
+      <data key="difficulty">4</data>
+      <data key="description">掌握电势差UAB=φA-φB及U=Ed(匀强电场),理解电势差与电场力做功的关系W=qU。</data>
+      <data key="keywords">电势差,匀强电场,U=Ed,W=qU,电场力做功</data>
+      <data key="exam_type">计算题,电势差</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">必修第三册</data>
+    </node>
+    <node id="K42">
+      <data key="name">电容器与电容</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">物理</data>
+      <data key="module">必修第三册(电学)</data>
+      <data key="chapter">静电场</data>
+      <data key="difficulty">4</data>
+      <data key="description">理解电容器的充放电,掌握电容定义C=Q/U及平行板电容器电容的决定式。</data>
+      <data key="keywords">电容器,电容,C=Q/U,平行板,充放电</data>
+      <data key="exam_type">选择题,计算题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">必修第三册</data>
+    </node>
+    <node id="K43">
+      <data key="name">带电粒子在电场中的运动</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">物理</data>
+      <data key="module">必修第三册(电学)</data>
+      <data key="chapter">静电场</data>
+      <data key="difficulty">5</data>
+      <data key="description">掌握带电粒子在匀强电场中的加速与偏转规律,能结合动能定理与类平抛运动分析。</data>
+      <data key="keywords">带电粒子,加速,偏转,类平抛,动能定理</data>
+      <data key="exam_type">综合题,带电粒子运动</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">必修第三册</data>
+    </node>
+    <node id="K44">
+      <data key="name">电流与电源</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">物理</data>
+      <data key="module">必修第三册(电学)</data>
+      <data key="chapter">电能(电路)</data>
+      <data key="difficulty">2</data>
+      <data key="description">理解电流的定义I=q/t及方向规定,理解电源在电路中的作用及电动势概念。</data>
+      <data key="keywords">电流,定义,方向,电源,电动势</data>
+      <data key="exam_type">选择题,概念</data>
+      <data key="importance">3</data>
+      <data key="textbook_source">必修第三册</data>
+    </node>
+    <node id="K45">
+      <data key="name">电阻与电阻定律</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">物理</data>
+      <data key="module">必修第三册(电学)</data>
+      <data key="chapter">电能(电路)</data>
+      <data key="difficulty">3</data>
+      <data key="description">理解电阻概念,掌握电阻定律R=ρl/S及电阻率的影响因素(温度)。</data>
+      <data key="keywords">电阻,电阻定律,电阻率,温度,长度截面积</data>
+      <data key="exam_type">计算题,电阻定律</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">必修第三册</data>
+    </node>
+    <node id="K46">
+      <data key="name">部分电路欧姆定律</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">物理</data>
+      <data key="module">必修第三册(电学)</data>
+      <data key="chapter">电能(电路)</data>
+      <data key="difficulty">3</data>
+      <data key="description">掌握部分电路欧姆定律I=U/R及I-U图象(伏安特性曲线),理解线性与非线性元件。</data>
+      <data key="keywords">欧姆定律,I=U/R,伏安特性曲线,线性非线性</data>
+      <data key="exam_type">计算题,欧姆定律</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">必修第三册</data>
+    </node>
+    <node id="K47">
+      <data key="name">串并联电路</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">物理</data>
+      <data key="module">必修第三册(电学)</data>
+      <data key="chapter">电能(电路)</data>
+      <data key="difficulty">3</data>
+      <data key="description">掌握串联分压、并联分流规律及串并联电路的总电阻、电流电压功率分配。</data>
+      <data key="keywords">串联,并联,分压分流,总电阻,功率分配</data>
+      <data key="exam_type">计算题,串并联</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">必修第三册</data>
+    </node>
+    <node id="K48">
+      <data key="name">闭合电路欧姆定律</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">物理</data>
+      <data key="module">必修第三册(电学)</data>
+      <data key="chapter">电能(电路)</data>
+      <data key="difficulty">5</data>
+      <data key="description">掌握闭合电路欧姆定律I=E/(R+r)及路端电压与外电阻的关系,理解电源功率与效率。</data>
+      <data key="keywords">闭合电路欧姆定律,路端电压,内阻,电源功率</data>
+      <data key="exam_type">综合题,闭合电路</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">必修第三册</data>
+    </node>
+    <node id="K49">
+      <data key="name">焦耳定律与电功率</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">物理</data>
+      <data key="module">必修第三册(电学)</data>
+      <data key="chapter">电能(电路)</data>
+      <data key="difficulty">3</data>
+      <data key="description">掌握焦耳定律Q=I²Rt及电功率P=UI、P=I²R的适用条件,区分纯电阻与非纯电阻电路。</data>
+      <data key="keywords">焦耳定律,电功率,热功率,纯电阻,非纯电阻</data>
+      <data key="exam_type">计算题,电功率焦耳热</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">必修第三册</data>
+    </node>
+    <node id="K50">
+      <data key="name">电流的磁效应与磁场</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">物理</data>
+      <data key="module">必修第三册(电学)</data>
+      <data key="chapter">电磁感应与电磁波初步</data>
+      <data key="difficulty">3</data>
+      <data key="description">理解奥斯特实验与电流的磁效应,掌握磁场方向与磁感线,理解磁感应强度B的概念。</data>
+      <data key="keywords">电流磁效应,奥斯特,磁场,磁感线,磁感应强度</data>
+      <data key="exam_type">选择题,概念</data>
+      <data key="importance">3</data>
+      <data key="textbook_source">必修第三册</data>
+    </node>
+    <node id="K51">
+      <data key="name">安培力</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">物理</data>
+      <data key="module">必修第三册(电学)</data>
+      <data key="chapter">电磁感应与电磁波初步</data>
+      <data key="difficulty">4</data>
+      <data key="description">掌握安培力公式F=BIL及左手定则,能判断安培力方向并计算通电导线受力。</data>
+      <data key="keywords">安培力,F=BIL,左手定则,方向判断</data>
+      <data key="exam_type">计算题,安培力</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">必修第三册</data>
+    </node>
+    <node id="K52">
+      <data key="name">电磁感应现象</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">物理</data>
+      <data key="module">必修第三册(电学)</data>
+      <data key="chapter">电磁感应与电磁波初步</data>
+      <data key="difficulty">4</data>
+      <data key="description">理解磁通量概念与电磁感应现象,掌握产生感应电流的条件(磁通量变化)。</data>
+      <data key="keywords">电磁感应,磁通量,感应电流,磁通量变化</data>
+      <data key="exam_type">选择题,电磁感应条件</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">必修第三册</data>
+    </node>
+    <node id="K53">
+      <data key="name">法拉第电磁感应定律</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">物理</data>
+      <data key="module">必修第三册(电学)</data>
+      <data key="chapter">电磁感应与电磁波初步</data>
+      <data key="difficulty">5</data>
+      <data key="description">掌握法拉第定律E=nΔΦ/Δt及导体切割磁感线E=BLv,理解感应电动势方向(楞次定律)。</data>
+      <data key="keywords">法拉第定律,感应电动势,ΔΦ/Δt,BLv,楞次定律</data>
+      <data key="exam_type">综合题,电磁感应</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">必修第三册</data>
+    </node>
+    <node id="K54">
+      <data key="name">电磁波的产生与特点</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">物理</data>
+      <data key="module">必修第三册(电学)</data>
+      <data key="chapter">电磁感应与电磁波初步</data>
+      <data key="difficulty">3</data>
+      <data key="description">理解电磁波的产生(振荡电路)与传播特点(真空中光速),了解电磁波谱及应用。</data>
+      <data key="keywords">电磁波,振荡电路,光速,电磁波谱</data>
+      <data key="exam_type">选择题,电磁波</data>
+      <data key="importance">3</data>
+      <data key="textbook_source">必修第三册</data>
+    </node>
+    <node id="K55">
+      <data key="name">动量</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">物理</data>
+      <data key="module">选择性必修第一册(动量振动光)</data>
+      <data key="chapter">动量守恒定律</data>
+      <data key="difficulty">3</data>
+      <data key="description">理解动量的概念p=mv及其矢量性,理解动量与动能的区别与联系。</data>
+      <data key="keywords">动量,p=mv,矢量,动能,区别联系</data>
+      <data key="exam_type">选择题,概念计算</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">选择性必修第一册</data>
+    </node>
+    <node id="K56">
+      <data key="name">冲量与动量定理</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">物理</data>
+      <data key="module">选择性必修第一册(动量振动光)</data>
+      <data key="chapter">动量守恒定律</data>
+      <data key="difficulty">4</data>
+      <data key="description">理解冲量I=Ft的概念,掌握动量定理Ft=Δp及其在缓冲、碰撞等问题中的应用。</data>
+      <data key="keywords">冲量,动量定理,Ft=Δp,缓冲,变力冲量</data>
+      <data key="exam_type">计算题,动量定理应用</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">选择性必修第一册</data>
+    </node>
+    <node id="K57">
+      <data key="name">动量守恒定律</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">物理</data>
+      <data key="module">选择性必修第一册(动量振动光)</data>
+      <data key="chapter">动量守恒定律</data>
+      <data key="difficulty">5</data>
+      <data key="description">掌握动量守恒的条件(系统不受外力或合外力为零)及守恒定律表达式,能解决碰撞问题。</data>
+      <data key="keywords">动量守恒,守恒条件,碰撞,系统内力</data>
+      <data key="exam_type">综合题,动量守恒碰撞</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">选择性必修第一册</data>
+    </node>
+    <node id="K58">
+      <data key="name">反冲运动与火箭</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">物理</data>
+      <data key="module">选择性必修第一册(动量振动光)</data>
+      <data key="chapter">动量守恒定律</data>
+      <data key="difficulty">3</data>
+      <data key="description">理解反冲运动原理,能利用动量守恒分析火箭发射等反冲现象。</data>
+      <data key="keywords">反冲运动,火箭,动量守恒,反冲速度</data>
+      <data key="exam_type">计算题,反冲运动</data>
+      <data key="importance">3</data>
+      <data key="textbook_source">选择性必修第一册</data>
+    </node>
+    <node id="K59">
+      <data key="name">简谐运动</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">物理</data>
+      <data key="module">选择性必修第一册(动量振动光)</data>
+      <data key="chapter">机械振动与机械波</data>
+      <data key="difficulty">4</data>
+      <data key="description">理解简谐运动的特征(F=-kx)与回复力概念,掌握简谐运动的振幅、周期、频率及图象。</data>
+      <data key="keywords">简谐运动,回复力,F=-kx,振幅,周期,图象</data>
+      <data key="exam_type">选择题,计算题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">选择性必修第一册</data>
+    </node>
+    <node id="K60">
+      <data key="name">单摆</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">物理</data>
+      <data key="module">选择性必修第一册(动量振动光)</data>
+      <data key="chapter">机械振动与机械波</data>
+      <data key="difficulty">4</data>
+      <data key="description">理解单摆模型与简谐运动的近似条件,掌握单摆周期公式T=2π√(L/g)及重力加速度测定。</data>
+      <data key="keywords">单摆,周期公式,T=2π√(L/g),等效力场</data>
+      <data key="exam_type">计算题,单摆周期</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">选择性必修第一册</data>
+    </node>
+    <node id="K61">
+      <data key="name">机械波的形成与传播</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">物理</data>
+      <data key="module">选择性必修第一册(动量振动光)</data>
+      <data key="chapter">机械振动与机械波</data>
+      <data key="difficulty">4</data>
+      <data key="description">理解机械波的形成条件与传播特点(传播振动形式与能量而非物质),区分横波与纵波。</data>
+      <data key="keywords">机械波,横波,纵波,传播能量,介质</data>
+      <data key="exam_type">选择题,概念</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">选择性必修第一册</data>
+    </node>
+    <node id="K62">
+      <data key="name">波长、频率与波速</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">物理</data>
+      <data key="module">选择性必修第一册(动量振动光)</data>
+      <data key="chapter">机械振动与机械波</data>
+      <data key="difficulty">4</data>
+      <data key="description">掌握波长、频率、波速的关系v=λf,理解波的周期性(时间周期性与空间周期性)。</data>
+      <data key="keywords">波长,频率,波速,v=λf,周期性</data>
+      <data key="exam_type">计算题,波速波长</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">选择性必修第一册</data>
+    </node>
+    <node id="K63">
+      <data key="name">波的干涉与衍射</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">物理</data>
+      <data key="module">选择性必修第一册(动量振动光)</data>
+      <data key="chapter">机械振动与机械波</data>
+      <data key="difficulty">4</data>
+      <data key="description">理解波的叠加原理、干涉现象(相干条件)与衍射现象(明显衍射条件),理解多普勒效应。</data>
+      <data key="keywords">干涉,衍射,叠加,相干波源,多普勒效应</data>
+      <data key="exam_type">选择题,干涉衍射</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">选择性必修第一册</data>
+    </node>
+    <node id="K64">
+      <data key="name">光的折射</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">物理</data>
+      <data key="module">选择性必修第一册(动量振动光)</data>
+      <data key="chapter">光</data>
+      <data key="difficulty">4</data>
+      <data key="description">掌握光的折射定律与折射率n=c/v=n1sinθ1=n2sinθ2,理解全反射与临界角。</data>
+      <data key="keywords">折射定律,折射率,全反射,临界角,光疏光密</data>
+      <data key="exam_type">计算题,折射全反射</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">选择性必修第一册</data>
+    </node>
+    <node id="K65">
+      <data key="name">光的干涉</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">物理</data>
+      <data key="module">选择性必修第一册(动量振动光)</data>
+      <data key="chapter">光</data>
+      <data key="difficulty">4</data>
+      <data key="description">理解光的干涉现象(杨氏双缝干涉)及干涉条纹间距公式,理解薄膜干涉与牛顿环。</data>
+      <data key="keywords">干涉,双缝干涉,条纹间距,薄膜干涉,光程差</data>
+      <data key="exam_type">选择题,计算题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">选择性必修第一册</data>
+    </node>
+    <node id="K66">
+      <data key="name">光的衍射与偏振</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">物理</data>
+      <data key="module">选择性必修第一册(动量振动光)</data>
+      <data key="chapter">光</data>
+      <data key="difficulty">3</data>
+      <data key="description">理解光的衍射现象(单缝衍射)与偏振现象,理解偏振是横波的证据。</data>
+      <data key="keywords">衍射,单缝衍射,偏振,横波,偏振片</data>
+      <data key="exam_type">选择题,概念</data>
+      <data key="importance">3</data>
+      <data key="textbook_source">选择性必修第一册</data>
+    </node>
+    <node id="K67">
+      <data key="name">光的色散</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">物理</data>
+      <data key="module">选择性必修第一册(动量振动光)</data>
+      <data key="chapter">光</data>
+      <data key="difficulty">3</data>
+      <data key="description">理解光的色散现象(棱镜色散)及折射率与频率、颜色的关系。</data>
+      <data key="keywords">色散,棱镜,折射率,频率,颜色</data>
+      <data key="exam_type">选择题,色散</data>
+      <data key="importance">3</data>
+      <data key="textbook_source">选择性必修第一册</data>
+    </node>
+    <node id="K68">
+      <data key="name">电磁场理论(麦克斯韦)</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">物理</data>
+      <data key="module">选择性必修第二册(电磁场)</data>
+      <data key="chapter">电磁场与电磁波</data>
+      <data key="difficulty">4</data>
+      <data key="description">理解麦克斯韦电磁场理论的核心(变化的电场产生磁场、变化的磁场产生电场)。</data>
+      <data key="keywords">麦克斯韦,电磁场理论,变化电场磁场</data>
+      <data key="exam_type">选择题,概念</data>
+      <data key="importance">3</data>
+      <data key="textbook_source">选择性必修第二册</data>
+    </node>
+    <node id="K69">
+      <data key="name">电磁波谱</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">物理</data>
+      <data key="module">选择性必修第二册(电磁场)</data>
+      <data key="chapter">电磁场与电磁波</data>
+      <data key="difficulty">3</data>
+      <data key="description">了解电磁波谱的排列(无线电波、微波、红外线、可见光、紫外线、X射线、γ射线)及特性应用。</data>
+      <data key="keywords">电磁波谱,无线电波,红外,紫外,X射线,γ射线</data>
+      <data key="exam_type">选择题,电磁波谱</data>
+      <data key="importance">3</data>
+      <data key="textbook_source">选择性必修第二册</data>
+    </node>
+    <node id="K70">
+      <data key="name">电磁波的发射与接收</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">物理</data>
+      <data key="module">选择性必修第二册(电磁场)</data>
+      <data key="chapter">电磁场与电磁波</data>
+      <data key="difficulty">2</data>
+      <data key="description">了解电磁波的发射(调制)、传播(地波、天波、空间波)与接收(调谐、解调)的基本原理。</data>
+      <data key="keywords">发射,接收,调制,调谐,解调,传播方式</data>
+      <data key="exam_type">选择题,概念</data>
+      <data key="importance">2</data>
+      <data key="textbook_source">选择性必修第二册</data>
+    </node>
+    <node id="K71">
+      <data key="name">传感器的工作原理</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">物理</data>
+      <data key="module">选择性必修第二册(电磁场)</data>
+      <data key="chapter">传感器</data>
+      <data key="difficulty">3</data>
+      <data key="description">理解传感器将非电学量转换为电学量的原理,了解常见敏感元件(光敏、热敏、力敏)。</data>
+      <data key="keywords">传感器,非电学量,电学量,光敏,热敏,力敏</data>
+      <data key="exam_type">选择题,概念</data>
+      <data key="importance">3</data>
+      <data key="textbook_source">选择性必修第二册</data>
+    </node>
+    <node id="K72">
+      <data key="name">常见传感器的应用</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">物理</data>
+      <data key="module">选择性必修第二册(电磁场)</data>
+      <data key="chapter">传感器</data>
+      <data key="difficulty">2</data>
+      <data key="description">了解传感器在电子秤、自动门、火灾报警器、电饭锅等生活与工业中的应用实例。</data>
+      <data key="keywords">传感器应用,电子秤,自动门,报警器</data>
+      <data key="exam_type">选择题,应用</data>
+      <data key="importance">2</data>
+      <data key="textbook_source">选择性必修第二册</data>
+    </node>
+    <node id="K73">
+      <data key="name">固体的微观结构与晶体</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">物理</data>
+      <data key="module">选择性必修第三册(热学原子)</data>
+      <data key="chapter">固体、液体、气体</data>
+      <data key="difficulty">3</data>
+      <data key="description">理解晶体与非晶体的区别(熔点、各向异性),了解单晶体与多晶体及晶体的微观结构。</data>
+      <data key="keywords">晶体,非晶体,各向异性,单晶多晶,微观结构</data>
+      <data key="exam_type">选择题,晶体</data>
+      <data key="importance">3</data>
+      <data key="textbook_source">选择性必修第三册</data>
+    </node>
+    <node id="K74">
+      <data key="name">液体的表面张力</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">物理</data>
+      <data key="module">选择性必修第三册(热学原子)</data>
+      <data key="chapter">固体、液体、气体</data>
+      <data key="difficulty">2</data>
+      <data key="description">理解液体表面张力的产生原因与现象,了解浸润与不浸润、毛细现象。</data>
+      <data key="keywords">表面张力,浸润,不浸润,毛细现象</data>
+      <data key="exam_type">选择题,概念</data>
+      <data key="importance">2</data>
+      <data key="textbook_source">选择性必修第三册</data>
+    </node>
+    <node id="K75">
+      <data key="name">气体实验定律</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">物理</data>
+      <data key="module">选择性必修第三册(热学原子)</data>
+      <data key="chapter">固体、液体、气体</data>
+      <data key="difficulty">4</data>
+      <data key="description">掌握玻意耳定律(pV=常量)、查理定律(p/T=常量)与盖-吕萨克定律(V/T=常量)及应用。</data>
+      <data key="keywords">玻意耳定律,查理定律,盖吕萨克定律,等温等容等压</data>
+      <data key="exam_type">计算题,气体定律</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">选择性必修第三册</data>
+    </node>
+    <node id="K76">
+      <data key="name">理想气体状态方程</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">物理</data>
+      <data key="module">选择性必修第三册(热学原子)</data>
+      <data key="chapter">固体、液体、气体</data>
+      <data key="difficulty">4</data>
+      <data key="description">掌握理想气体状态方程pV/T=常量及pV=nRT,理解理想气体模型与气体图象(p-V、p-T、V-T图)。</data>
+      <data key="keywords">理想气体,状态方程,pV/T,气体图象,摩尔</data>
+      <data key="exam_type">综合题,气体状态方程</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">选择性必修第三册</data>
+    </node>
+    <node id="K77">
+      <data key="name">内能与分子动理论</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">物理</data>
+      <data key="module">选择性必修第三册(热学原子)</data>
+      <data key="chapter">热力学定律</data>
+      <data key="difficulty">3</data>
+      <data key="description">理解分子动理论的基本观点,掌握内能的概念及其与温度、体积的关系。</data>
+      <data key="keywords">内能,分子动理论,温度,分子势能,分子动能</data>
+      <data key="exam_type">选择题,内能</data>
+      <data key="importance">3</data>
+      <data key="textbook_source">选择性必修第三册</data>
+    </node>
+    <node id="K78">
+      <data key="name">热力学第一定律</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">物理</data>
+      <data key="module">选择性必修第三册(热学原子)</data>
+      <data key="chapter">热力学定律</data>
+      <data key="difficulty">4</data>
+      <data key="description">掌握热力学第一定律ΔU=Q+W,理解做功与热传递是改变内能的两种方式及符号法则。</data>
+      <data key="keywords">热力学第一定律,ΔU=Q+W,做功,热传递,符号法则</data>
+      <data key="exam_type">计算题,热力学第一定律</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">选择性必修第三册</data>
+    </node>
+    <node id="K79">
+      <data key="name">热力学第二定律</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">物理</data>
+      <data key="module">选择性必修第三册(热学原子)</data>
+      <data key="chapter">热力学定律</data>
+      <data key="difficulty">4</data>
+      <data key="description">理解热力学第二定律(克劳修斯表述与开尔文表述)的方向性,理解可逆与不可逆过程。</data>
+      <data key="keywords">热力学第二定律,方向性,克劳修斯,开尔文,可逆不可逆</data>
+      <data key="exam_type">选择题,概念</data>
+      <data key="importance">3</data>
+      <data key="textbook_source">选择性必修第三册</data>
+    </node>
+    <node id="K80">
+      <data key="name">能量耗散与熵</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">物理</data>
+      <data key="module">选择性必修第三册(热学原子)</data>
+      <data key="chapter">热力学定律</data>
+      <data key="difficulty">3</data>
+      <data key="description">理解能量耗散与品质降低的概念,了解熵增原理与热力学第三定律(绝对零度不可达到)。</data>
+      <data key="keywords">能量耗散,熵,熵增原理,绝对零度,热力学第三定律</data>
+      <data key="exam_type">选择题,概念</data>
+      <data key="importance">2</data>
+      <data key="textbook_source">选择性必修第三册</data>
+    </node>
+    <node id="K81">
+      <data key="name">电子的发现</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">物理</data>
+      <data key="module">选择性必修第三册(热学原子)</data>
+      <data key="chapter">原子结构</data>
+      <data key="difficulty">2</data>
+      <data key="description">了解阴极射线与电子的发现(汤姆孙),理解电子是原子的组成部分及比荷的测定。</data>
+      <data key="keywords">电子,阴极射线,汤姆孙,比荷</data>
+      <data key="exam_type">选择题,科学史</data>
+      <data key="importance">2</data>
+      <data key="textbook_source">选择性必修第三册</data>
+    </node>
+    <node id="K82">
+      <data key="name">原子的核式结构</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">物理</data>
+      <data key="module">选择性必修第三册(热学原子)</data>
+      <data key="chapter">原子结构</data>
+      <data key="difficulty">3</data>
+      <data key="description">理解α粒子散射实验与卢瑟福的原子核式结构模型,理解原子核带正电且体积极小。</data>
+      <data key="keywords">α粒子散射,核式结构,卢瑟福,原子核</data>
+      <data key="exam_type">选择题,原子结构</data>
+      <data key="importance">3</data>
+      <data key="textbook_source">选择性必修第三册</data>
+    </node>
+    <node id="K83">
+      <data key="name">玻尔原子模型与氢光谱</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">物理</data>
+      <data key="module">选择性必修第三册(热学原子)</data>
+      <data key="chapter">原子结构</data>
+      <data key="difficulty">4</data>
+      <data key="description">理解玻尔原子模型的三个假设(定态、跃迁、轨道量子化)及氢原子光谱规律。</data>
+      <data key="keywords">玻尔模型,定态,跃迁,能级,轨道量子化,氢光谱</data>
+      <data key="exam_type">选择题,计算题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">选择性必修第三册</data>
+    </node>
+    <node id="K84">
+      <data key="name">原子光谱</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">物理</data>
+      <data key="module">选择性必修第三册(热学原子)</data>
+      <data key="chapter">原子结构</data>
+      <data key="difficulty">2</data>
+      <data key="description">理解原子光谱(发射光谱与吸收光谱)的特征及光谱分析的应用。</data>
+      <data key="keywords">原子光谱,发射光谱,吸收光谱,光谱分析</data>
+      <data key="exam_type">选择题,概念</data>
+      <data key="importance">2</data>
+      <data key="textbook_source">选择性必修第三册</data>
+    </node>
+    <node id="K85">
+      <data key="name">天然放射现象</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">物理</data>
+      <data key="module">选择性必修第三册(热学原子)</data>
+      <data key="chapter">原子核</data>
+      <data key="difficulty">3</data>
+      <data key="description">了解天然放射现象与三种射线(α、β、γ射线)的性质,理解放射性的本质。</data>
+      <data key="keywords">天然放射,α射线,β射线,γ射线,放射性</data>
+      <data key="exam_type">选择题,射线性质</data>
+      <data key="importance">3</data>
+      <data key="textbook_source">选择性必修第三册</data>
+    </node>
+    <node id="K86">
+      <data key="name">原子核的组成</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">物理</data>
+      <data key="module">选择性必修第三册(热学原子)</data>
+      <data key="chapter">原子核</data>
+      <data key="difficulty">2</data>
+      <data key="description">理解原子核由质子与中子组成,掌握质量数、电荷数、同位素的概念及核素表示。</data>
+      <data key="keywords">原子核,质子,中子,质量数,电荷数,同位素</data>
+      <data key="exam_type">选择题,概念</data>
+      <data key="importance">3</data>
+      <data key="textbook_source">选择性必修第三册</data>
+    </node>
+    <node id="K87">
+      <data key="name">放射性元素的衰变</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">物理</data>
+      <data key="module">选择性必修第三册(热学原子)</data>
+      <data key="chapter">原子核</data>
+      <data key="difficulty">4</data>
+      <data key="description">掌握α衰变与β衰变的规律及衰变方程,理解半衰期概念及其统计意义。</data>
+      <data key="keywords">α衰变,β衰变,衰变方程,半衰期,质量数电荷数守恒</data>
+      <data key="exam_type">计算题,衰变半衰期</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">选择性必修第三册</data>
+    </node>
+    <node id="K88">
+      <data key="name">核力与结合能</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">物理</data>
+      <data key="module">选择性必修第三册(热学原子)</data>
+      <data key="chapter">原子核</data>
+      <data key="difficulty">4</data>
+      <data key="description">理解核力的性质与比结合能概念,掌握质能方程E=mc²及质量亏损与结合能的计算。</data>
+      <data key="keywords">核力,结合能,比结合能,质能方程,质量亏损</data>
+      <data key="exam_type">计算题,结合能</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">选择性必修第三册</data>
+    </node>
+    <node id="K89">
+      <data key="name">核反应与核能(裂变与聚变)</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">物理</data>
+      <data key="module">选择性必修第三册(热学原子)</data>
+      <data key="chapter">原子核</data>
+      <data key="difficulty">4</data>
+      <data key="description">理解重核裂变与轻核聚变,掌握链式反应条件与核能释放原理,了解核电站与氢弹原理。</data>
+      <data key="keywords">核裂变,核聚变,链式反应,核电站,临界体积</data>
+      <data key="exam_type">选择题,计算题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">选择性必修第三册</data>
+    </node>
+    <edge source="M1" target="C1">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">模块[M1]包含章节[运动的描述]</data>
+    </edge>
+    <edge source="M1" target="C2">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">模块[M1]包含章节[匀变速直线运动的研究]</data>
+    </edge>
+    <edge source="M1" target="C3">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">模块[M1]包含章节[相互作用——力]</data>
+    </edge>
+    <edge source="M1" target="C4">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">模块[M1]包含章节[牛顿运动定律]</data>
+    </edge>
+    <edge source="M2" target="C5">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">模块[M2]包含章节[运动和力]</data>
+    </edge>
+    <edge source="M2" target="C6">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">模块[M2]包含章节[抛体运动]</data>
+    </edge>
+    <edge source="M2" target="C7">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">模块[M2]包含章节[圆周运动]</data>
+    </edge>
+    <edge source="M2" target="C8">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">模块[M2]包含章节[万有引力与宇宙航行]</data>
+    </edge>
+    <edge source="M2" target="C9">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">模块[M2]包含章节[机械能守恒定律]</data>
+    </edge>
+    <edge source="M3" target="C10">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">模块[M3]包含章节[静电场]</data>
+    </edge>
+    <edge source="M3" target="C11">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">模块[M3]包含章节[电能(电路)]</data>
+    </edge>
+    <edge source="M3" target="C12">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">模块[M3]包含章节[电磁感应与电磁波初步]</data>
+    </edge>
+    <edge source="M4" target="C13">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">模块[M4]包含章节[动量守恒定律]</data>
+    </edge>
+    <edge source="M4" target="C14">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">模块[M4]包含章节[机械振动与机械波]</data>
+    </edge>
+    <edge source="M4" target="C15">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">模块[M4]包含章节[光]</data>
+    </edge>
+    <edge source="M5" target="C16">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">模块[M5]包含章节[电磁场与电磁波]</data>
+    </edge>
+    <edge source="M5" target="C17">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">模块[M5]包含章节[传感器]</data>
+    </edge>
+    <edge source="M6" target="C18">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">模块[M6]包含章节[固体、液体、气体]</data>
+    </edge>
+    <edge source="M6" target="C19">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">模块[M6]包含章节[热力学定律]</data>
+    </edge>
+    <edge source="M6" target="C20">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">模块[M6]包含章节[原子结构]</data>
+    </edge>
+    <edge source="M6" target="C21">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">模块[M6]包含章节[原子核]</data>
+    </edge>
+    <edge source="C1" target="K1">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[质点与参考系]</data>
+    </edge>
+    <edge source="C1" target="K2">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[时间与时刻、坐标与位移]</data>
+    </edge>
+    <edge source="C1" target="K3">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[速度]</data>
+    </edge>
+    <edge source="C1" target="K4">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[加速度]</data>
+    </edge>
+    <edge source="C2" target="K5">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[匀变速直线运动的速度与时间关系]</data>
+    </edge>
+    <edge source="C2" target="K6">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[匀变速直线运动的位移与时间关系]</data>
+    </edge>
+    <edge source="C2" target="K7">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[自由落体运动]</data>
+    </edge>
+    <edge source="C2" target="K8">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[运动图象的分析]</data>
+    </edge>
+    <edge source="C3" target="K9">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[重力]</data>
+    </edge>
+    <edge source="C3" target="K10">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[弹力]</data>
+    </edge>
+    <edge source="C3" target="K11">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[摩擦力(滑动与静摩擦力)]</data>
+    </edge>
+    <edge source="C3" target="K12">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[力的合成与分解]</data>
+    </edge>
+    <edge source="C3" target="K13">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[共点力的平衡]</data>
+    </edge>
+    <edge source="C4" target="K14">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[牛顿第一定律与惯性]</data>
+    </edge>
+    <edge source="C4" target="K15">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[牛顿第二定律]</data>
+    </edge>
+    <edge source="C4" target="K16">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[牛顿第三定律]</data>
+    </edge>
+    <edge source="C4" target="K17">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[力学单位制]</data>
+    </edge>
+    <edge source="C4" target="K18">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[牛顿运动定律的应用(超重与失重)]</data>
+    </edge>
+    <edge source="C5" target="K19">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[牛顿定律的综合应用]</data>
+    </edge>
+    <edge source="C6" target="K20">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[曲线运动]</data>
+    </edge>
+    <edge source="C6" target="K21">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[运动的合成与分解]</data>
+    </edge>
+    <edge source="C6" target="K22">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[平抛运动]</data>
+    </edge>
+    <edge source="C7" target="K23">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[圆周运动的描述]</data>
+    </edge>
+    <edge source="C7" target="K24">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[向心加速度]</data>
+    </edge>
+    <edge source="C7" target="K25">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[向心力]</data>
+    </edge>
+    <edge source="C7" target="K26">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[圆周运动的实例分析]</data>
+    </edge>
+    <edge source="C8" target="K27">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[行星的运动(开普勒定律)]</data>
+    </edge>
+    <edge source="C8" target="K28">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[万有引力定律]</data>
+    </edge>
+    <edge source="C8" target="K29">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[万有引力定律的应用(宇宙速度)]</data>
+    </edge>
+    <edge source="C8" target="K30">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[经典力学的局限性]</data>
+    </edge>
+    <edge source="C9" target="K31">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[功]</data>
+    </edge>
+    <edge source="C9" target="K32">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[功率]</data>
+    </edge>
+    <edge source="C9" target="K33">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[动能与动能定理]</data>
+    </edge>
+    <edge source="C9" target="K34">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[重力势能]</data>
+    </edge>
+    <edge source="C9" target="K35">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[机械能守恒定律]</data>
+    </edge>
+    <edge source="C9" target="K36">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[功能关系与功能原理]</data>
+    </edge>
+    <edge source="C10" target="K37">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[电荷与电荷守恒]</data>
+    </edge>
+    <edge source="C10" target="K38">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[库仑定律]</data>
+    </edge>
+    <edge source="C10" target="K39">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[电场与电场强度]</data>
+    </edge>
+    <edge source="C10" target="K40">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[电势能与电势]</data>
+    </edge>
+    <edge source="C10" target="K41">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[电势差与匀强电场]</data>
+    </edge>
+    <edge source="C10" target="K42">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[电容器与电容]</data>
+    </edge>
+    <edge source="C10" target="K43">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[带电粒子在电场中的运动]</data>
+    </edge>
+    <edge source="C11" target="K44">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[电流与电源]</data>
+    </edge>
+    <edge source="C11" target="K45">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[电阻与电阻定律]</data>
+    </edge>
+    <edge source="C11" target="K46">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[部分电路欧姆定律]</data>
+    </edge>
+    <edge source="C11" target="K47">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[串并联电路]</data>
+    </edge>
+    <edge source="C11" target="K48">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[闭合电路欧姆定律]</data>
+    </edge>
+    <edge source="C11" target="K49">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[焦耳定律与电功率]</data>
+    </edge>
+    <edge source="C12" target="K50">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[电流的磁效应与磁场]</data>
+    </edge>
+    <edge source="C12" target="K51">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[安培力]</data>
+    </edge>
+    <edge source="C12" target="K52">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[电磁感应现象]</data>
+    </edge>
+    <edge source="C12" target="K53">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[法拉第电磁感应定律]</data>
+    </edge>
+    <edge source="C12" target="K54">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[电磁波的产生与特点]</data>
+    </edge>
+    <edge source="C13" target="K55">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[动量]</data>
+    </edge>
+    <edge source="C13" target="K56">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[冲量与动量定理]</data>
+    </edge>
+    <edge source="C13" target="K57">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[动量守恒定律]</data>
+    </edge>
+    <edge source="C13" target="K58">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[反冲运动与火箭]</data>
+    </edge>
+    <edge source="C14" target="K59">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[简谐运动]</data>
+    </edge>
+    <edge source="C14" target="K60">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[单摆]</data>
+    </edge>
+    <edge source="C14" target="K61">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[机械波的形成与传播]</data>
+    </edge>
+    <edge source="C14" target="K62">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[波长、频率与波速]</data>
+    </edge>
+    <edge source="C14" target="K63">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[波的干涉与衍射]</data>
+    </edge>
+    <edge source="C15" target="K64">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[光的折射]</data>
+    </edge>
+    <edge source="C15" target="K65">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[光的干涉]</data>
+    </edge>
+    <edge source="C15" target="K66">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[光的衍射与偏振]</data>
+    </edge>
+    <edge source="C15" target="K67">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[光的色散]</data>
+    </edge>
+    <edge source="C16" target="K68">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[电磁场理论(麦克斯韦)]</data>
+    </edge>
+    <edge source="C16" target="K69">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[电磁波谱]</data>
+    </edge>
+    <edge source="C16" target="K70">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[电磁波的发射与接收]</data>
+    </edge>
+    <edge source="C17" target="K71">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[传感器的工作原理]</data>
+    </edge>
+    <edge source="C17" target="K72">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[常见传感器的应用]</data>
+    </edge>
+    <edge source="C18" target="K73">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[固体的微观结构与晶体]</data>
+    </edge>
+    <edge source="C18" target="K74">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[液体的表面张力]</data>
+    </edge>
+    <edge source="C18" target="K75">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[气体实验定律]</data>
+    </edge>
+    <edge source="C18" target="K76">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[理想气体状态方程]</data>
+    </edge>
+    <edge source="C19" target="K77">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[内能与分子动理论]</data>
+    </edge>
+    <edge source="C19" target="K78">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[热力学第一定律]</data>
+    </edge>
+    <edge source="C19" target="K79">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[热力学第二定律]</data>
+    </edge>
+    <edge source="C19" target="K80">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[能量耗散与熵]</data>
+    </edge>
+    <edge source="C20" target="K81">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[电子的发现]</data>
+    </edge>
+    <edge source="C20" target="K82">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[原子的核式结构]</data>
+    </edge>
+    <edge source="C20" target="K83">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[玻尔原子模型与氢光谱]</data>
+    </edge>
+    <edge source="C20" target="K84">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[原子光谱]</data>
+    </edge>
+    <edge source="C21" target="K85">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[天然放射现象]</data>
+    </edge>
+    <edge source="C21" target="K86">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[原子核的组成]</data>
+    </edge>
+    <edge source="C21" target="K87">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[放射性元素的衰变]</data>
+    </edge>
+    <edge source="C21" target="K88">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[核力与结合能]</data>
+    </edge>
+    <edge source="C21" target="K89">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[核反应与核能(裂变与聚变)]</data>
+    </edge>
+    <edge source="K1" target="K3">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.8</data>
+      <data key="description">质点与参考系是描述速度的基础</data>
+    </edge>
+    <edge source="K2" target="K3">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.7</data>
+      <data key="description">时间位移概念是理解速度的基础</data>
+    </edge>
+    <edge source="K3" target="K4">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.9</data>
+      <data key="description">速度是理解加速度的前提</data>
+    </edge>
+    <edge source="K4" target="K5">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.9</data>
+      <data key="description">加速度是匀变速运动规律的基础</data>
+    </edge>
+    <edge source="K5" target="K6">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.9</data>
+      <data key="description">速度公式是位移公式的基础</data>
+    </edge>
+    <edge source="K6" target="K7">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.8</data>
+      <data key="description">匀变速运动推广到自由落体</data>
+    </edge>
+    <edge source="K7" target="K6">
+      <data key="relation">DERIVED_FROM</data>
+      <data key="weight">0.7</data>
+      <data key="description">自由落体是匀变速运动的特例</data>
+    </edge>
+    <edge source="K5" target="K8">
+      <data key="relation">RELATED_TO</data>
+      <data key="weight">0.7</data>
+      <data key="description">速度公式与v-t图象相关</data>
+    </edge>
+    <edge source="K6" target="K8">
+      <data key="relation">RELATED_TO</data>
+      <data key="weight">0.7</data>
+      <data key="description">位移公式与图象面积相关</data>
+    </edge>
+    <edge source="K9" target="K11">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.5</data>
+      <data key="description">重力概念与摩擦力都属常见力</data>
+    </edge>
+    <edge source="K10" target="K12">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.7</data>
+      <data key="description">弹力是力的合成分解的对象</data>
+    </edge>
+    <edge source="K11" target="K13">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.8</data>
+      <data key="description">摩擦力是平衡问题的常见力</data>
+    </edge>
+    <edge source="K12" target="K13">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.9</data>
+      <data key="description">力的合成分解是平衡问题的基础</data>
+    </edge>
+    <edge source="K13" target="K15">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.7</data>
+      <data key="description">平衡分析能力有助于理解牛顿第二定律</data>
+    </edge>
+    <edge source="K14" target="K15">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.9</data>
+      <data key="description">牛顿第一定律是第二定律的基础</data>
+    </edge>
+    <edge source="K15" target="K16">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.5</data>
+      <data key="description">第二与第三定律共同构成牛顿定律体系</data>
+    </edge>
+    <edge source="K15" target="K18">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.9</data>
+      <data key="description">牛顿第二定律是分析超重失重的基础</data>
+    </edge>
+    <edge source="K15" target="K19">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.9</data>
+      <data key="description">牛顿第二定律是动力学综合的核心</data>
+    </edge>
+    <edge source="K8" target="K19">
+      <data key="relation">APPLIED_IN</data>
+      <data key="weight">0.6</data>
+      <data key="description">运动图象分析用于动力学综合</data>
+    </edge>
+    <edge source="K20" target="K21">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.8</data>
+      <data key="description">曲线运动是运动合成分解的基础</data>
+    </edge>
+    <edge source="K21" target="K22">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.9</data>
+      <data key="description">运动合成分解是平抛运动的基础</data>
+    </edge>
+    <edge source="K22" target="K21">
+      <data key="relation">DERIVED_FROM</data>
+      <data key="weight">0.6</data>
+      <data key="description">平抛运动是运动合成分解的应用</data>
+    </edge>
+    <edge source="K4" target="K24">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.7</data>
+      <data key="description">加速度概念推广到向心加速度</data>
+    </edge>
+    <edge source="K23" target="K24">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.8</data>
+      <data key="description">圆周运动描述量是向心加速度的基础</data>
+    </edge>
+    <edge source="K24" target="K25">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.9</data>
+      <data key="description">向心加速度是向心力的基础</data>
+    </edge>
+    <edge source="K25" target="K26">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.9</data>
+      <data key="description">向心力是圆周运动实例分析的基础</data>
+    </edge>
+    <edge source="K15" target="K25">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.7</data>
+      <data key="description">牛顿第二定律用于向心力分析</data>
+    </edge>
+    <edge source="K28" target="K29">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.9</data>
+      <data key="description">万有引力定律是分析卫星运动的基础</data>
+    </edge>
+    <edge source="K27" target="K29">
+      <data key="relation">RELATED_TO</data>
+      <data key="weight">0.5</data>
+      <data key="description">开普勒定律与万有引力应用于天体运动</data>
+    </edge>
+    <edge source="K28" target="K27">
+      <data key="relation">DERIVED_FROM</data>
+      <data key="weight">0.5</data>
+      <data key="description">万有引力定律可由开普勒定律推导</data>
+    </edge>
+    <edge source="K31" target="K32">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.8</data>
+      <data key="description">功的概念是功率的基础</data>
+    </edge>
+    <edge source="K31" target="K33">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.9</data>
+      <data key="description">功的概念是动能定理的基础</data>
+    </edge>
+    <edge source="K33" target="K31">
+      <data key="relation">DERIVED_FROM</data>
+      <data key="weight">0.7</data>
+      <data key="description">动能定理由功的概念推导</data>
+    </edge>
+    <edge source="K31" target="K34">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.6</data>
+      <data key="description">功与势能变化相关</data>
+    </edge>
+    <edge source="K33" target="K35">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.8</data>
+      <data key="description">动能定理是机械能守恒的基础</data>
+    </edge>
+    <edge source="K34" target="K35">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.8</data>
+      <data key="description">重力势能是机械能的组成部分</data>
+    </edge>
+    <edge source="K33" target="K36">
+      <data key="relation">RELATED_TO</data>
+      <data key="weight">0.8</data>
+      <data key="description">动能定理与功能关系紧密相关</data>
+    </edge>
+    <edge source="K35" target="K36">
+      <data key="relation">RELATED_TO</data>
+      <data key="weight">0.8</data>
+      <data key="description">机械能守恒与功能关系相关</data>
+    </edge>
+    <edge source="K35" target="K22">
+      <data key="relation">APPLIED_IN</data>
+      <data key="weight">0.5</data>
+      <data key="description">机械能守恒可用于平抛运动分析</data>
+    </edge>
+    <edge source="K37" target="K38">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.8</data>
+      <data key="description">电荷概念是库仑定律的基础</data>
+    </edge>
+    <edge source="K38" target="K39">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.7</data>
+      <data key="description">库仑力是电场力的体现</data>
+    </edge>
+    <edge source="K39" target="K40">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.8</data>
+      <data key="description">电场强度是电势概念的基础</data>
+    </edge>
+    <edge source="K40" target="K41">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.9</data>
+      <data key="description">电势是电势差的基础</data>
+    </edge>
+    <edge source="K39" target="K41">
+      <data key="relation">RELATED_TO</data>
+      <data key="weight">0.6</data>
+      <data key="description">电场强度与匀强电场电势差相关</data>
+    </edge>
+    <edge source="K41" target="K42">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.5</data>
+      <data key="description">电势差概念与电容器相关</data>
+    </edge>
+    <edge source="K39" target="K43">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.8</data>
+      <data key="description">电场强度是分析带电粒子运动的基础</data>
+    </edge>
+    <edge source="K41" target="K43">
+      <data key="relation">APPLIED_IN</data>
+      <data key="weight">0.7</data>
+      <data key="description">电势差用于带电粒子加速</data>
+    </edge>
+    <edge source="K44" target="K46">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.7</data>
+      <data key="description">电流概念是欧姆定律的基础</data>
+    </edge>
+    <edge source="K45" target="K46">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.7</data>
+      <data key="description">电阻概念是欧姆定律的基础</data>
+    </edge>
+    <edge source="K46" target="K47">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.8</data>
+      <data key="description">欧姆定律是串并联电路的基础</data>
+    </edge>
+    <edge source="K47" target="K48">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.9</data>
+      <data key="description">串并联是闭合电路的基础</data>
+    </edge>
+    <edge source="K48" target="K49">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.7</data>
+      <data key="description">闭合电路与电功率相关</data>
+    </edge>
+    <edge source="K49" target="K46">
+      <data key="relation">RELATED_TO</data>
+      <data key="weight">0.5</data>
+      <data key="description">焦耳定律与欧姆定律在纯电阻电路统一</data>
+    </edge>
+    <edge source="K50" target="K51">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.8</data>
+      <data key="description">磁场概念是安培力的基础</data>
+    </edge>
+    <edge source="K51" target="K52">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.6</data>
+      <data key="description">磁场与电磁感应相关</data>
+    </edge>
+    <edge source="K52" target="K53">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.9</data>
+      <data key="description">电磁感应现象是法拉第定律的基础</data>
+    </edge>
+    <edge source="K53" target="K52">
+      <data key="relation">DERIVED_FROM</data>
+      <data key="weight">0.7</data>
+      <data key="description">法拉第定律由电磁感应现象发展</data>
+    </edge>
+    <edge source="K50" target="K54">
+      <data key="relation">RELATED_TO</data>
+      <data key="weight">0.6</data>
+      <data key="description">磁场与电磁波都源于电磁现象</data>
+    </edge>
+    <edge source="K55" target="K56">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.9</data>
+      <data key="description">动量概念是动量定理的基础</data>
+    </edge>
+    <edge source="K56" target="K55">
+      <data key="relation">DERIVED_FROM</data>
+      <data key="weight">0.7</data>
+      <data key="description">动量定理由动量概念推导</data>
+    </edge>
+    <edge source="K56" target="K57">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.9</data>
+      <data key="description">动量定理是动量守恒的基础</data>
+    </edge>
+    <edge source="K57" target="K58">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.8</data>
+      <data key="description">动量守恒是反冲运动的原理</data>
+    </edge>
+    <edge source="K33" target="K56">
+      <data key="relation">RELATED_TO</data>
+      <data key="weight">0.6</data>
+      <data key="description">动能定理与动量定理都是力学重要定理</data>
+    </edge>
+    <edge source="K35" target="K57">
+      <data key="relation">RELATED_TO</data>
+      <data key="weight">0.5</data>
+      <data key="description">机械能守恒与动量守恒常同时用于碰撞</data>
+    </edge>
+    <edge source="K59" target="K60">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.8</data>
+      <data key="description">简谐运动是单摆模型的基础</data>
+    </edge>
+    <edge source="K60" target="K59">
+      <data key="relation">DERIVED_FROM</data>
+      <data key="weight">0.6</data>
+      <data key="description">单摆是简谐运动的应用实例</data>
+    </edge>
+    <edge source="K61" target="K62">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.9</data>
+      <data key="description">机械波形成是波长波速的基础</data>
+    </edge>
+    <edge source="K63" target="K61">
+      <data key="relation">RELATED_TO</data>
+      <data key="weight">0.6</data>
+      <data key="description">干涉衍射基于波的叠加与传播</data>
+    </edge>
+    <edge source="K64" target="K65">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.5</data>
+      <data key="description">折射与干涉都属光的波动性</data>
+    </edge>
+    <edge source="K65" target="K66">
+      <data key="relation">RELATED_TO</data>
+      <data key="weight">0.7</data>
+      <data key="description">干涉与衍射都证明光的波动性</data>
+    </edge>
+    <edge source="K66" target="K67">
+      <data key="relation">RELATED_TO</data>
+      <data key="weight">0.5</data>
+      <data key="description">偏振与色散都属光的现象</data>
+    </edge>
+    <edge source="K54" target="K68">
+      <data key="relation">RELATED_TO</data>
+      <data key="weight">0.6</data>
+      <data key="description">电磁波初步与电磁场理论相关</data>
+    </edge>
+    <edge source="K68" target="K50">
+      <data key="relation">DERIVED_FROM</data>
+      <data key="weight">0.5</data>
+      <data key="description">麦克斯韦理论由电磁现象发展</data>
+    </edge>
+    <edge source="K68" target="K69">
+      <data key="relation">RELATED_TO</data>
+      <data key="weight">0.7</data>
+      <data key="description">电磁场理论是电磁波谱的基础</data>
+    </edge>
+    <edge source="K71" target="K72">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.8</data>
+      <data key="description">传感器原理是应用的基础</data>
+    </edge>
+    <edge source="K51" target="K72">
+      <data key="relation">APPLIED_IN</data>
+      <data key="weight">0.4</data>
+      <data key="description">安培力等电磁知识用于传感器</data>
+    </edge>
+    <edge source="K77" target="K78">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.8</data>
+      <data key="description">内能是热力学第一定律的基础</data>
+    </edge>
+    <edge source="K78" target="K36">
+      <data key="relation">RELATED_TO</data>
+      <data key="weight">0.5</data>
+      <data key="description">热力学第一定律与功能关系都是能量守恒的体现</data>
+    </edge>
+    <edge source="K78" target="K79">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.7</data>
+      <data key="description">热力学第一定律是第二定律的基础</data>
+    </edge>
+    <edge source="K79" target="K80">
+      <data key="relation">RELATED_TO</data>
+      <data key="weight">0.7</data>
+      <data key="description">热力学第二定律与熵增相关</data>
+    </edge>
+    <edge source="K81" target="K82">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.8</data>
+      <data key="description">电子发现是核式结构的基础</data>
+    </edge>
+    <edge source="K82" target="K83">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.8</data>
+      <data key="description">核式结构是玻尔模型的基础</data>
+    </edge>
+    <edge source="K83" target="K82">
+      <data key="relation">DERIVED_FROM</data>
+      <data key="weight">0.5</data>
+      <data key="description">玻尔模型在核式结构基础上发展</data>
+    </edge>
+    <edge source="K83" target="K84">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.6</data>
+      <data key="description">玻尔模型与原子光谱相关</data>
+    </edge>
+    <edge source="K85" target="K86">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.7</data>
+      <data key="description">放射现象揭示原子核组成</data>
+    </edge>
+    <edge source="K86" target="K87">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.8</data>
+      <data key="description">原子核组成是衰变规律的基础</data>
+    </edge>
+    <edge source="K87" target="K88">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.7</data>
+      <data key="description">衰变与核力结合能相关</data>
+    </edge>
+    <edge source="K88" target="K89">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.8</data>
+      <data key="description">结合能概念是核反应核能的基础</data>
+    </edge>
+    <edge source="K83" target="K89">
+      <data key="relation">RELATED_TO</data>
+      <data key="weight">0.4</data>
+      <data key="description">原子能级与核能都涉及质能关系</data>
+    </edge>
+    <edge source="K15" target="K19">
+      <data key="relation">APPLIED_IN</data>
+      <data key="weight">0.9</data>
+      <data key="description">牛顿第二定律应用于动力学综合</data>
+    </edge>
+    <edge source="K25" target="K26">
+      <data key="relation">APPLIED_IN</data>
+      <data key="weight">0.8</data>
+      <data key="description">向心力应用于圆周运动实例</data>
+    </edge>
+    <edge source="K53" target="K43">
+      <data key="relation">APPLIED_IN</data>
+      <data key="weight">0.4</data>
+      <data key="description">电磁感应与带电粒子运动相关</data>
+    </edge>
+  </graph>
+</graphml>

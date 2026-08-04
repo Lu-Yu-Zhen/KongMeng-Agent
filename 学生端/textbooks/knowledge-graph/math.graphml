@@ -1,0 +1,2543 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+  <key id="name" attr.name="name" attr.type="string" for="node"/>
+  <key id="type" attr.name="type" attr.type="string" for="node"/>
+  <key id="subject" attr.name="subject" attr.type="string" for="node"/>
+  <key id="module" attr.name="module" attr.type="string" for="node"/>
+  <key id="chapter" attr.name="chapter" attr.type="string" for="node"/>
+  <key id="difficulty" attr.name="difficulty" attr.type="int" for="node"/>
+  <key id="description" attr.name="description" attr.type="string" for="node"/>
+  <key id="keywords" attr.name="keywords" attr.type="string" for="node"/>
+  <key id="exam_type" attr.name="exam_type" attr.type="string" for="node"/>
+  <key id="importance" attr.name="importance" attr.type="int" for="node"/>
+  <key id="textbook_source" attr.name="textbook_source" attr.type="string" for="node"/>
+  <key id="relation" attr.name="relation" attr.type="string" for="edge"/>
+  <key id="weight" attr.name="weight" attr.type="double" for="edge"/>
+  <key id="description" attr.name="description" attr.type="string" for="edge"/>
+  <graph id="G" edgedefault="directed">
+    <node id="M1">
+      <data key="name">必修第一册(代数基础)</data>
+      <data key="type">Module</data>
+      <data key="subject">数学</data>
+      <data key="description">集合、函数、不等式、指对数与三角函数等代数基础内容,高中数学的根基。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="module">必修第一册(代数基础)</data>
+      <data key="chapter"/>
+      <data key="textbook_source"/>
+    </node>
+    <node id="M2">
+      <data key="name">必修第二册(几何与统计)</data>
+      <data key="type">Module</data>
+      <data key="subject">数学</data>
+      <data key="description">平面向量、复数、立体几何初步、统计与概率,几何与数据处理基础。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="module">必修第二册(几何与统计)</data>
+      <data key="chapter"/>
+      <data key="textbook_source"/>
+    </node>
+    <node id="M3">
+      <data key="name">选择性必修第一册(解析几何)</data>
+      <data key="type">Module</data>
+      <data key="subject">数学</data>
+      <data key="description">空间向量与立体几何、平面解析几何(直线、圆、圆锥曲线)。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="module">选择性必修第一册(解析几何)</data>
+      <data key="chapter"/>
+      <data key="textbook_source"/>
+    </node>
+    <node id="M4">
+      <data key="name">选择性必修第二册(数列与导数)</data>
+      <data key="type">Module</data>
+      <data key="subject">数学</data>
+      <data key="description">数列、导数及其应用,函数与极限思想的深化。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="module">选择性必修第二册(数列与导数)</data>
+      <data key="chapter"/>
+      <data key="textbook_source"/>
+    </node>
+    <node id="M5">
+      <data key="name">选择性必修第三册(计数与统计)</data>
+      <data key="type">Module</data>
+      <data key="subject">数学</data>
+      <data key="description">计数原理、随机变量及其分布、成对数据的统计分析。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="module">选择性必修第三册(计数与统计)</data>
+      <data key="chapter"/>
+      <data key="textbook_source"/>
+    </node>
+    <node id="C1">
+      <data key="name">集合与常用逻辑用语</data>
+      <data key="type">Chapter</data>
+      <data key="subject">数学</data>
+      <data key="module">必修第一册(代数基础)</data>
+      <data key="chapter">集合与常用逻辑用语</data>
+      <data key="description">集合的概念、关系、运算及常用逻辑用语。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="textbook_source">必修第一册</data>
+    </node>
+    <node id="C2">
+      <data key="name">一元二次函数、方程和不等式</data>
+      <data key="type">Chapter</data>
+      <data key="subject">数学</data>
+      <data key="module">必修第一册(代数基础)</data>
+      <data key="chapter">一元二次函数、方程和不等式</data>
+      <data key="description">不等式性质、基本不等式及一元二次函数与不等式的关系。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="textbook_source">必修第一册</data>
+    </node>
+    <node id="C3">
+      <data key="name">函数的概念与性质</data>
+      <data key="type">Chapter</data>
+      <data key="subject">数学</data>
+      <data key="module">必修第一册(代数基础)</data>
+      <data key="chapter">函数的概念与性质</data>
+      <data key="description">函数概念、表示、单调性、奇偶性、幂函数。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="textbook_source">必修第一册</data>
+    </node>
+    <node id="C4">
+      <data key="name">指数函数与对数函数</data>
+      <data key="type">Chapter</data>
+      <data key="subject">数学</data>
+      <data key="module">必修第一册(代数基础)</data>
+      <data key="chapter">指数函数与对数函数</data>
+      <data key="description">指数与对数运算、指数函数与对数函数的图象与性质。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="textbook_source">必修第一册</data>
+    </node>
+    <node id="C5">
+      <data key="name">三角函数</data>
+      <data key="type">Chapter</data>
+      <data key="subject">数学</data>
+      <data key="module">必修第一册(代数基础)</data>
+      <data key="chapter">三角函数</data>
+      <data key="description">任意角与弧度制、三角函数定义、诱导公式、图象与性质、恒等变换。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="textbook_source">必修第一册</data>
+    </node>
+    <node id="C6">
+      <data key="name">平面向量及其应用</data>
+      <data key="type">Chapter</data>
+      <data key="subject">数学</data>
+      <data key="module">必修第二册(几何与统计)</data>
+      <data key="chapter">平面向量及其应用</data>
+      <data key="description">向量概念、线性运算、数量积、坐标表示及几何物理应用。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="textbook_source">必修第二册</data>
+    </node>
+    <node id="C7">
+      <data key="name">复数</data>
+      <data key="type">Chapter</data>
+      <data key="subject">数学</data>
+      <data key="module">必修第二册(几何与统计)</data>
+      <data key="chapter">复数</data>
+      <data key="description">复数概念、几何意义与四则运算。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="textbook_source">必修第二册</data>
+    </node>
+    <node id="C8">
+      <data key="name">立体几何初步</data>
+      <data key="type">Chapter</data>
+      <data key="subject">数学</data>
+      <data key="module">必修第二册(几何与统计)</data>
+      <data key="chapter">立体几何初步</data>
+      <data key="description">空间几何体结构、三视图、表面积体积、点线面位置关系。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="textbook_source">必修第二册</data>
+    </node>
+    <node id="C9">
+      <data key="name">统计</data>
+      <data key="type">Chapter</data>
+      <data key="subject">数学</data>
+      <data key="module">必修第二册(几何与统计)</data>
+      <data key="chapter">统计</data>
+      <data key="description">随机抽样、用样本估计总体、样本数字特征。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="textbook_source">必修第二册</data>
+    </node>
+    <node id="C10">
+      <data key="name">概率</data>
+      <data key="type">Chapter</data>
+      <data key="subject">数学</data>
+      <data key="module">必修第二册(几何与统计)</data>
+      <data key="chapter">概率</data>
+      <data key="description">随机事件与概率、古典概型、概率基本性质与事件独立性。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="textbook_source">必修第二册</data>
+    </node>
+    <node id="C11">
+      <data key="name">空间向量与立体几何</data>
+      <data key="type">Chapter</data>
+      <data key="subject">数学</data>
+      <data key="module">选择性必修第一册(解析几何)</data>
+      <data key="chapter">空间向量与立体几何</data>
+      <data key="description">空间向量及其坐标表示、数量积,用向量研究空间位置关系。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="textbook_source">选择性必修第一册</data>
+    </node>
+    <node id="C12">
+      <data key="name">直线与方程</data>
+      <data key="type">Chapter</data>
+      <data key="subject">数学</data>
+      <data key="module">选择性必修第一册(解析几何)</data>
+      <data key="chapter">直线与方程</data>
+      <data key="description">直线倾斜角与斜率、直线方程的多种形式、两直线位置关系。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="textbook_source">选择性必修第一册</data>
+    </node>
+    <node id="C13">
+      <data key="name">圆与方程</data>
+      <data key="type">Chapter</data>
+      <data key="subject">数学</data>
+      <data key="module">选择性必修第一册(解析几何)</data>
+      <data key="chapter">圆与方程</data>
+      <data key="description">圆的标准方程与一般方程、直线与圆、圆与圆的位置关系。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="textbook_source">选择性必修第一册</data>
+    </node>
+    <node id="C14">
+      <data key="name">圆锥曲线</data>
+      <data key="type">Chapter</data>
+      <data key="subject">数学</data>
+      <data key="module">选择性必修第一册(解析几何)</data>
+      <data key="chapter">圆锥曲线</data>
+      <data key="description">椭圆、双曲线、抛物线的标准方程与几何性质、直线与圆锥曲线。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="textbook_source">选择性必修第一册</data>
+    </node>
+    <node id="C15">
+      <data key="name">数列</data>
+      <data key="type">Chapter</data>
+      <data key="subject">数学</data>
+      <data key="module">选择性必修第二册(数列与导数)</data>
+      <data key="chapter">数列</data>
+      <data key="description">数列概念、等差与等比数列及其前n项和、数列求和方法。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="textbook_source">选择性必修第二册</data>
+    </node>
+    <node id="C16">
+      <data key="name">导数及其应用</data>
+      <data key="type">Chapter</data>
+      <data key="subject">数学</data>
+      <data key="module">选择性必修第二册(数列与导数)</data>
+      <data key="chapter">导数及其应用</data>
+      <data key="description">导数概念与几何意义、导数运算、用导数研究函数单调性与极值。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="textbook_source">选择性必修第二册</data>
+    </node>
+    <node id="C17">
+      <data key="name">计数原理</data>
+      <data key="type">Chapter</data>
+      <data key="subject">数学</data>
+      <data key="module">选择性必修第三册(计数与统计)</data>
+      <data key="chapter">计数原理</data>
+      <data key="description">分类与分步计数原理、排列组合、二项式定理。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="textbook_source">选择性必修第三册</data>
+    </node>
+    <node id="C18">
+      <data key="name">随机变量及其分布</data>
+      <data key="type">Chapter</data>
+      <data key="subject">数学</data>
+      <data key="module">选择性必修第三册(计数与统计)</data>
+      <data key="chapter">随机变量及其分布</data>
+      <data key="description">离散型随机变量、分布列、均值方差、条件概率、二项分布、正态分布。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="textbook_source">选择性必修第三册</data>
+    </node>
+    <node id="C19">
+      <data key="name">成对数据的统计分析</data>
+      <data key="type">Chapter</data>
+      <data key="subject">数学</data>
+      <data key="module">选择性必修第三册(计数与统计)</data>
+      <data key="chapter">成对数据的统计分析</data>
+      <data key="description">回归分析与独立性检验。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="textbook_source">选择性必修第三册</data>
+    </node>
+    <node id="K1">
+      <data key="name">集合的概念与表示</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">数学</data>
+      <data key="module">必修第一册(代数基础)</data>
+      <data key="chapter">集合与常用逻辑用语</data>
+      <data key="difficulty">2</data>
+      <data key="description">理解集合的含义,掌握集合的列举法与描述法表示,能判断元素与集合的属于关系。</data>
+      <data key="keywords">集合,元素,属于,列举法,描述法</data>
+      <data key="exam_type">选择题,概念辨析题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">必修第一册</data>
+    </node>
+    <node id="K2">
+      <data key="name">集合间的基本关系</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">数学</data>
+      <data key="module">必修第一册(代数基础)</data>
+      <data key="chapter">集合与常用逻辑用语</data>
+      <data key="difficulty">3</data>
+      <data key="description">理解子集、真子集、集合相等的概念,掌握包含关系的符号表示,会求集合的子集个数。</data>
+      <data key="keywords">子集,真子集,集合相等,包含关系</data>
+      <data key="exam_type">选择题,集合关系判断</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">必修第一册</data>
+    </node>
+    <node id="K3">
+      <data key="name">集合的基本运算</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">数学</data>
+      <data key="module">必修第一册(代数基础)</data>
+      <data key="chapter">集合与常用逻辑用语</data>
+      <data key="difficulty">3</data>
+      <data key="description">掌握并集、交集、补集的运算,会用Venn图表示集合运算,能求解含参数的集合运算。</data>
+      <data key="keywords">并集,交集,补集,Venn图,全集</data>
+      <data key="exam_type">选择题,计算题,集合运算</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">必修第一册</data>
+    </node>
+    <node id="K4">
+      <data key="name">充分条件与必要条件</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">数学</data>
+      <data key="module">必修第一册(代数基础)</data>
+      <data key="chapter">集合与常用逻辑用语</data>
+      <data key="difficulty">3</data>
+      <data key="description">理解充分条件、必要条件、充要条件的含义,能判断命题间的条件关系。</data>
+      <data key="keywords">充分条件,必要条件,充要条件,命题</data>
+      <data key="exam_type">选择题,条件判断题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">必修第一册</data>
+    </node>
+    <node id="K5">
+      <data key="name">全称量词与存在量词</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">数学</data>
+      <data key="module">必修第一册(代数基础)</data>
+      <data key="chapter">集合与常用逻辑用语</data>
+      <data key="difficulty">3</data>
+      <data key="description">理解全称量词命题与存在量词命题的含义,能正确否定含量词的命题。</data>
+      <data key="keywords">全称量词,存在量词,命题否定,量词</data>
+      <data key="exam_type">选择题,命题判断</data>
+      <data key="importance">3</data>
+      <data key="textbook_source">必修第一册</data>
+    </node>
+    <node id="K6">
+      <data key="name">不等式的基本性质</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">数学</data>
+      <data key="module">必修第一册(代数基础)</data>
+      <data key="chapter">一元二次函数、方程和不等式</data>
+      <data key="difficulty">2</data>
+      <data key="description">掌握不等式的基本性质(对称性、传递性、加法与乘法性质),能用于不等式比较与推导。</data>
+      <data key="keywords">不等式性质,比较大小,作差比较</data>
+      <data key="exam_type">选择题,比较大小</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">必修第一册</data>
+    </node>
+    <node id="K7">
+      <data key="name">基本不等式</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">数学</data>
+      <data key="module">必修第一册(代数基础)</data>
+      <data key="chapter">一元二次函数、方程和不等式</data>
+      <data key="difficulty">4</data>
+      <data key="description">掌握基本不等式a+b&gt;=2√ab及其变形,能利用基本不等式求最值,注意等号成立条件。</data>
+      <data key="keywords">基本不等式,均值不等式,最值,等号成立条件</data>
+      <data key="exam_type">填空题,求最值,证明题</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">必修第一册</data>
+    </node>
+    <node id="K8">
+      <data key="name">一元二次不等式及其解法</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">数学</data>
+      <data key="module">必修第一册(代数基础)</data>
+      <data key="chapter">一元二次函数、方程和不等式</data>
+      <data key="difficulty">3</data>
+      <data key="description">掌握一元二次不等式的解法,理解二次函数图象与不等式的关系,会解含参数的二次不等式。</data>
+      <data key="keywords">一元二次不等式,二次函数,判别式,解集</data>
+      <data key="exam_type">选择题,解不等式,含参讨论</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">必修第一册</data>
+    </node>
+    <node id="K9">
+      <data key="name">二次函数与一元二次方程不等式的关系</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">数学</data>
+      <data key="module">必修第一册(代数基础)</data>
+      <data key="chapter">一元二次函数、方程和不等式</data>
+      <data key="difficulty">4</data>
+      <data key="description">理解二次函数图象、一元二次方程根与一元二次不等式解集之间的内在联系(三个二次的关系)。</data>
+      <data key="keywords">三个二次,函数方程不等式,判别式,图象</data>
+      <data key="exam_type">综合题,函数与不等式综合</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">必修第一册</data>
+    </node>
+    <node id="K10">
+      <data key="name">函数的概念</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">数学</data>
+      <data key="module">必修第一册(代数基础)</data>
+      <data key="chapter">函数的概念与性质</data>
+      <data key="difficulty">3</data>
+      <data key="description">理解函数是两个非空数集间的对应关系,掌握定义域、值域、对应法则三要素。</data>
+      <data key="keywords">函数,定义域,值域,对应法则,函数三要素</data>
+      <data key="exam_type">选择题,概念辨析</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">必修第一册</data>
+    </node>
+    <node id="K11">
+      <data key="name">函数的表示法</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">数学</data>
+      <data key="module">必修第一册(代数基础)</data>
+      <data key="chapter">函数的概念与性质</data>
+      <data key="difficulty">3</data>
+      <data key="description">掌握函数的解析法、列表法、图象法三种表示,能进行表示法之间的转换。</data>
+      <data key="keywords">解析法,列表法,图象法,函数表示</data>
+      <data key="exam_type">选择题,作图题</data>
+      <data key="importance">3</data>
+      <data key="textbook_source">必修第一册</data>
+    </node>
+    <node id="K12">
+      <data key="name">分段函数</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">数学</data>
+      <data key="module">必修第一册(代数基础)</data>
+      <data key="chapter">函数的概念与性质</data>
+      <data key="difficulty">4</data>
+      <data key="description">理解分段函数的概念,会求分段函数的定义域、值域及在某点的函数值,能作分段函数图象。</data>
+      <data key="keywords">分段函数,定义域,值域,函数值</data>
+      <data key="exam_type">选择题,计算题,分段函数综合</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">必修第一册</data>
+    </node>
+    <node id="K13">
+      <data key="name">函数的单调性</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">数学</data>
+      <data key="module">必修第一册(代数基础)</data>
+      <data key="chapter">函数的概念与性质</data>
+      <data key="difficulty">4</data>
+      <data key="description">理解增函数与减函数定义,能用定义法证明函数单调性,会用图象判断单调区间。</data>
+      <data key="keywords">单调性,增函数,减函数,单调区间,定义法证明</data>
+      <data key="exam_type">证明题,选择题,单调性判断</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">必修第一册</data>
+    </node>
+    <node id="K14">
+      <data key="name">函数的最大(小)值</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">数学</data>
+      <data key="module">必修第一册(代数基础)</data>
+      <data key="chapter">函数的概念与性质</data>
+      <data key="difficulty">4</data>
+      <data key="description">理解函数最大值与最小值的概念,掌握利用单调性求最值的方法。</data>
+      <data key="keywords">最大值,最小值,最值,单调性</data>
+      <data key="exam_type">计算题,求最值</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">必修第一册</data>
+    </node>
+    <node id="K15">
+      <data key="name">函数的奇偶性</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">数学</data>
+      <data key="module">必修第一册(代数基础)</data>
+      <data key="chapter">函数的概念与性质</data>
+      <data key="difficulty">4</data>
+      <data key="description">理解奇函数与偶函数的定义,会判断函数奇偶性,理解奇偶性与图象对称性的关系。</data>
+      <data key="keywords">奇函数,偶函数,奇偶性,对称性,定义域</data>
+      <data key="exam_type">选择题,判断题,奇偶性综合</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">必修第一册</data>
+    </node>
+    <node id="K16">
+      <data key="name">幂函数</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">数学</data>
+      <data key="module">必修第一册(代数基础)</data>
+      <data key="chapter">函数的概念与性质</data>
+      <data key="difficulty">3</data>
+      <data key="description">掌握幂函数y=x^a的概念,了解常见幂函数的图象与性质。</data>
+      <data key="keywords">幂函数,指数,定义域,图象性质</data>
+      <data key="exam_type">选择题,幂函数性质</data>
+      <data key="importance">3</data>
+      <data key="textbook_source">必修第一册</data>
+    </node>
+    <node id="K17">
+      <data key="name">指数与指数幂的运算</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">数学</data>
+      <data key="module">必修第一册(代数基础)</data>
+      <data key="chapter">指数函数与对数函数</data>
+      <data key="difficulty">3</data>
+      <data key="description">理解n次方根与分数指数幂的概念,掌握有理指数幂的运算性质。</data>
+      <data key="keywords">n次方根,分数指数幂,指数运算,根式</data>
+      <data key="exam_type">计算题,指数化简</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">必修第一册</data>
+    </node>
+    <node id="K18">
+      <data key="name">指数函数的图象与性质</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">数学</data>
+      <data key="module">必修第一册(代数基础)</data>
+      <data key="chapter">指数函数与对数函数</data>
+      <data key="difficulty">4</data>
+      <data key="description">掌握指数函数y=a^x(a&gt;0且a≠1)的图象特征与单调性、值域等性质,理解底数对图象的影响。</data>
+      <data key="keywords">指数函数,图象,单调性,值域,底数</data>
+      <data key="exam_type">选择题,图象题,性质应用</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">必修第一册</data>
+    </node>
+    <node id="K19">
+      <data key="name">对数的概念</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">数学</data>
+      <data key="module">必修第一册(代数基础)</data>
+      <data key="chapter">指数函数与对数函数</data>
+      <data key="difficulty">3</data>
+      <data key="description">理解对数的定义,掌握对数式与指数式的互化,了解常用对数与自然对数。</data>
+      <data key="keywords">对数,指数,互化,常用对数,自然对数</data>
+      <data key="exam_type">选择题,对数运算</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">必修第一册</data>
+    </node>
+    <node id="K20">
+      <data key="name">对数的运算性质</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">数学</data>
+      <data key="module">必修第一册(代数基础)</data>
+      <data key="chapter">指数函数与对数函数</data>
+      <data key="difficulty">3</data>
+      <data key="description">掌握对数的积、商、幂的运算性质及换底公式,能熟练进行对数式的化简与求值。</data>
+      <data key="keywords">对数运算,换底公式,积商幂,对数恒等式</data>
+      <data key="exam_type">计算题,对数化简求值</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">必修第一册</data>
+    </node>
+    <node id="K21">
+      <data key="name">对数函数的图象与性质</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">数学</data>
+      <data key="module">必修第一册(代数基础)</data>
+      <data key="chapter">指数函数与对数函数</data>
+      <data key="difficulty">4</data>
+      <data key="description">掌握对数函数y=log_a x的图象特征与单调性、定义域值域等性质,理解底数对图象的影响。</data>
+      <data key="keywords">对数函数,图象,单调性,定义域,反函数</data>
+      <data key="exam_type">选择题,图象题,性质综合</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">必修第一册</data>
+    </node>
+    <node id="K22">
+      <data key="name">反函数</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">数学</data>
+      <data key="module">必修第一册(代数基础)</data>
+      <data key="chapter">指数函数与对数函数</data>
+      <data key="difficulty">3</data>
+      <data key="description">理解反函数的概念,掌握指数函数与对数函数互为反函数,了解互为反函数图象的对称性。</data>
+      <data key="keywords">反函数,互为反函数,图象对称,定义域值域</data>
+      <data key="exam_type">选择题,反函数概念</data>
+      <data key="importance">3</data>
+      <data key="textbook_source">必修第一册</data>
+    </node>
+    <node id="K23">
+      <data key="name">任意角与弧度制</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">数学</data>
+      <data key="module">必修第一册(代数基础)</data>
+      <data key="chapter">三角函数</data>
+      <data key="difficulty">3</data>
+      <data key="description">理解任意角的概念(正角、负角、零角),掌握弧度制,能进行弧度与角度的互化。</data>
+      <data key="keywords">任意角,弧度制,正角负角,弧度角度互化</data>
+      <data key="exam_type">选择题,角度弧度换算</data>
+      <data key="importance">3</data>
+      <data key="textbook_source">必修第一册</data>
+    </node>
+    <node id="K24">
+      <data key="name">三角函数的定义</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">数学</data>
+      <data key="module">必修第一册(代数基础)</data>
+      <data key="chapter">三角函数</data>
+      <data key="difficulty">4</data>
+      <data key="description">掌握任意角三角函数(正弦、余弦、正切)的坐标法定义,理解三角函数值在各象限的符号。</data>
+      <data key="keywords">三角函数,单位圆,正弦,余弦,正切,象限符号</data>
+      <data key="exam_type">选择题,定义应用</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">必修第一册</data>
+    </node>
+    <node id="K25">
+      <data key="name">同角三角函数的基本关系</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">数学</data>
+      <data key="module">必修第一册(代数基础)</data>
+      <data key="chapter">三角函数</data>
+      <data key="difficulty">4</data>
+      <data key="description">掌握平方关系sin²x+cos²x=1与商数关系tanx=sinx/cosx,能进行三角式的化简求值。</data>
+      <data key="keywords">平方关系,商数关系,同角三角函数,化简</data>
+      <data key="exam_type">计算题,化简求值</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">必修第一册</data>
+    </node>
+    <node id="K26">
+      <data key="name">诱导公式</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">数学</data>
+      <data key="module">必修第一册(代数基础)</data>
+      <data key="chapter">三角函数</data>
+      <data key="difficulty">4</data>
+      <data key="description">掌握角2kπ+a、-a、π+a、π-a等的诱导公式,能将任意角三角函数转化为锐角三角函数。</data>
+      <data key="keywords">诱导公式,任意角,锐角三角函数,符号判断</data>
+      <data key="exam_type">选择题,计算题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">必修第一册</data>
+    </node>
+    <node id="K27">
+      <data key="name">三角函数的图象</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">数学</data>
+      <data key="module">必修第一册(代数基础)</data>
+      <data key="chapter">三角函数</data>
+      <data key="difficulty">4</data>
+      <data key="description">掌握正弦、余弦、正切函数的图象特征,理解周期性、单调性、对称性等性质。</data>
+      <data key="keywords">正弦曲线,余弦曲线,正切曲线,周期性</data>
+      <data key="exam_type">选择题,图象分析</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">必修第一册</data>
+    </node>
+    <node id="K28">
+      <data key="name">三角函数的性质</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">数学</data>
+      <data key="module">必修第一册(代数基础)</data>
+      <data key="chapter">三角函数</data>
+      <data key="difficulty">4</data>
+      <data key="description">掌握三角函数的周期性、单调性、奇偶性、最大最小值等性质,能求三角函数的最值与周期。</data>
+      <data key="keywords">周期性,单调性,奇偶性,最值,周期</data>
+      <data key="exam_type">选择题,性质综合</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">必修第一册</data>
+    </node>
+    <node id="K29">
+      <data key="name">函数y=Asin(ωx+φ)的图象</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">数学</data>
+      <data key="module">必修第一册(代数基础)</data>
+      <data key="chapter">三角函数</data>
+      <data key="difficulty">5</data>
+      <data key="description">掌握y=Asin(ωx+φ)图象的变换(振幅、周期、相位变换),能由图象确定A、ω、φ的值。</data>
+      <data key="keywords">振幅变换,周期变换,相位变换,图象变换</data>
+      <data key="exam_type">综合题,图象变换,解析式确定</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">必修第一册</data>
+    </node>
+    <node id="K30">
+      <data key="name">两角和与差的三角函数公式</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">数学</data>
+      <data key="module">必修第一册(代数基础)</data>
+      <data key="chapter">三角函数</data>
+      <data key="difficulty">5</data>
+      <data key="description">掌握两角和与差的正弦、余弦、正切公式,能用于三角式的化简、求值与证明。</data>
+      <data key="keywords">两角和差公式,正弦,余弦,正切,化简求值</data>
+      <data key="exam_type">计算题,化简求值证明</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">必修第一册</data>
+    </node>
+    <node id="K31">
+      <data key="name">二倍角公式</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">数学</data>
+      <data key="module">必修第一册(代数基础)</data>
+      <data key="chapter">三角函数</data>
+      <data key="difficulty">4</data>
+      <data key="description">掌握二倍角的正弦、余弦、正切公式及其变形,能用于三角式化简与求值。</data>
+      <data key="keywords">二倍角公式,正弦,余弦,正切,半角</data>
+      <data key="exam_type">计算题,化简求值</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">必修第一册</data>
+    </node>
+    <node id="K32">
+      <data key="name">平面向量的概念</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">数学</data>
+      <data key="module">必修第二册(几何与统计)</data>
+      <data key="chapter">平面向量及其应用</data>
+      <data key="difficulty">2</data>
+      <data key="description">理解向量的概念(大小与方向),掌握向量的模、零向量、单位向量、平行(共线)向量、相等向量。</data>
+      <data key="keywords">向量,模,零向量,单位向量,共线向量,相等向量</data>
+      <data key="exam_type">选择题,概念辨析</data>
+      <data key="importance">3</data>
+      <data key="textbook_source">必修第二册</data>
+    </node>
+    <node id="K33">
+      <data key="name">向量的线性运算</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">数学</data>
+      <data key="module">必修第二册(几何与统计)</data>
+      <data key="chapter">平面向量及其应用</data>
+      <data key="difficulty">3</data>
+      <data key="description">掌握向量的加法、减法与数乘运算及其几何意义,理解向量共线的条件。</data>
+      <data key="keywords">向量加法,向量减法,数乘,线性运算,共线条件</data>
+      <data key="exam_type">选择题,计算题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">必修第二册</data>
+    </node>
+    <node id="K34">
+      <data key="name">平面向量基本定理</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">数学</data>
+      <data key="module">必修第二册(几何与统计)</data>
+      <data key="chapter">平面向量及其应用</data>
+      <data key="difficulty">4</data>
+      <data key="description">理解平面向量基本定理,掌握向量的基底表示与分解,能选择基底表示任意向量。</data>
+      <data key="keywords">向量基本定理,基底,分解,线性组合</data>
+      <data key="exam_type">选择题,证明题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">必修第二册</data>
+    </node>
+    <node id="K35">
+      <data key="name">平面向量的坐标表示</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">数学</data>
+      <data key="module">必修第二册(几何与统计)</data>
+      <data key="chapter">平面向量及其应用</data>
+      <data key="difficulty">3</data>
+      <data key="description">掌握向量的坐标表示,理解坐标下的加法、减法、数乘运算及共线条件的坐标形式。</data>
+      <data key="keywords">坐标表示,坐标运算,共线条件,坐标</data>
+      <data key="exam_type">计算题,坐标运算</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">必修第二册</data>
+    </node>
+    <node id="K36">
+      <data key="name">向量的数量积</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">数学</data>
+      <data key="module">必修第二册(几何与统计)</data>
+      <data key="chapter">平面向量及其应用</data>
+      <data key="difficulty">4</data>
+      <data key="description">理解向量数量积的定义与几何意义,掌握数量积的坐标运算及夹角、模的计算。</data>
+      <data key="keywords">数量积,点积,夹角,投影,模,垂直条件</data>
+      <data key="exam_type">计算题,夹角与模</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">必修第二册</data>
+    </node>
+    <node id="K37">
+      <data key="name">向量在几何与物理中的应用</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">数学</data>
+      <data key="module">必修第二册(几何与统计)</data>
+      <data key="chapter">平面向量及其应用</data>
+      <data key="difficulty">4</data>
+      <data key="description">能利用向量方法解决平面几何问题(平行、垂直、长度、夹角)及物理中的力、速度问题。</data>
+      <data key="keywords">向量应用,几何证明,物理应用,力,速度</data>
+      <data key="exam_type">综合题,向量应用</data>
+      <data key="importance">3</data>
+      <data key="textbook_source">必修第二册</data>
+    </node>
+    <node id="K38">
+      <data key="name">复数的概念</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">数学</data>
+      <data key="module">必修第二册(几何与统计)</data>
+      <data key="chapter">复数</data>
+      <data key="difficulty">2</data>
+      <data key="description">理解复数的引入背景与概念,掌握复数a+bi的实部、虚部及复数相等的条件。</data>
+      <data key="keywords">复数,实部,虚部,虚数单位,复数相等</data>
+      <data key="exam_type">选择题,概念辨析</data>
+      <data key="importance">3</data>
+      <data key="textbook_source">必修第二册</data>
+    </node>
+    <node id="K39">
+      <data key="name">复数的几何意义</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">数学</data>
+      <data key="module">必修第二册(几何与统计)</data>
+      <data key="chapter">复数</data>
+      <data key="difficulty">3</data>
+      <data key="description">理解复数与复平面内点的对应关系及复数与向量的对应,掌握复数的模。</data>
+      <data key="keywords">复平面,点,向量,模,几何意义</data>
+      <data key="exam_type">选择题,几何意义</data>
+      <data key="importance">3</data>
+      <data key="textbook_source">必修第二册</data>
+    </node>
+    <node id="K40">
+      <data key="name">复数的四则运算</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">数学</data>
+      <data key="module">必修第二册(几何与统计)</data>
+      <data key="chapter">复数</data>
+      <data key="difficulty">3</data>
+      <data key="description">掌握复数的加、减、乘、除运算及共轭复数的概念,能进行复数运算与化简。</data>
+      <data key="keywords">复数运算,加减乘除,共轭复数,除法</data>
+      <data key="exam_type">计算题,复数运算</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">必修第二册</data>
+    </node>
+    <node id="K41">
+      <data key="name">空间几何体的结构</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">数学</data>
+      <data key="module">必修第二册(几何与统计)</data>
+      <data key="chapter">立体几何初步</data>
+      <data key="difficulty">2</data>
+      <data key="description">认识棱柱、棱锥、棱台、圆柱、圆锥、圆台、球等空间几何体的结构特征。</data>
+      <data key="keywords">棱柱,棱锥,棱台,圆柱,圆锥,球,结构特征</data>
+      <data key="exam_type">选择题,识别几何体</data>
+      <data key="importance">3</data>
+      <data key="textbook_source">必修第二册</data>
+    </node>
+    <node id="K42">
+      <data key="name">空间几何体的三视图</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">数学</data>
+      <data key="module">必修第二册(几何与统计)</data>
+      <data key="chapter">立体几何初步</data>
+      <data key="difficulty">4</data>
+      <data key="description">掌握空间几何体的三视图(正视图、侧视图、俯视图),能由三视图还原几何体并计算。</data>
+      <data key="keywords">三视图,正视图,侧视图,俯视图,还原</data>
+      <data key="exam_type">选择题,三视图还原计算</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">必修第二册</data>
+    </node>
+    <node id="K43">
+      <data key="name">空间几何体的表面积与体积</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">数学</data>
+      <data key="module">必修第二册(几何与统计)</data>
+      <data key="chapter">立体几何初步</data>
+      <data key="difficulty">4</data>
+      <data key="description">掌握柱、锥、台、球的表面积与体积公式,能结合三视图计算几何体的表面积与体积。</data>
+      <data key="keywords">表面积,体积,柱锥台球,公式</data>
+      <data key="exam_type">计算题,表面积体积</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">必修第二册</data>
+    </node>
+    <node id="K44">
+      <data key="name">空间点、直线、平面之间的位置关系</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">数学</data>
+      <data key="module">必修第二册(几何与统计)</data>
+      <data key="chapter">立体几何初步</data>
+      <data key="difficulty">4</data>
+      <data key="description">理解空间点线面的位置关系(共面、异面直线、线在面内等),掌握四个基本公理。</data>
+      <data key="keywords">位置关系,异面直线,公理,共面,共线</data>
+      <data key="exam_type">选择题,位置关系判断</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">必修第二册</data>
+    </node>
+    <node id="K45">
+      <data key="name">直线与平面平行的判定与性质</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">数学</data>
+      <data key="module">必修第二册(几何与统计)</data>
+      <data key="chapter">立体几何初步</data>
+      <data key="difficulty">4</data>
+      <data key="description">掌握线面平行的判定定理与性质定理,能进行平行关系的证明与转化。</data>
+      <data key="keywords">线面平行,判定定理,性质定理,平行证明</data>
+      <data key="exam_type">证明题,线面平行</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">必修第二册</data>
+    </node>
+    <node id="K46">
+      <data key="name">直线与平面垂直的判定与性质</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">数学</data>
+      <data key="module">必修第二册(几何与统计)</data>
+      <data key="chapter">立体几何初步</data>
+      <data key="difficulty">5</data>
+      <data key="description">掌握线面垂直的判定定理与性质定理,理解二面角,能进行垂直关系的证明与角度计算。</data>
+      <data key="keywords">线面垂直,判定定理,二面角,垂直证明</data>
+      <data key="exam_type">证明题,线面垂直,二面角</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">必修第二册</data>
+    </node>
+    <node id="K47">
+      <data key="name">随机抽样</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">数学</data>
+      <data key="module">必修第二册(几何与统计)</data>
+      <data key="chapter">统计</data>
+      <data key="difficulty">2</data>
+      <data key="description">理解简单随机抽样、分层抽样、系统抽样的概念与方法,能选择合适的抽样方法。</data>
+      <data key="keywords">简单随机抽样,分层抽样,系统抽样,抽样方法</data>
+      <data key="exam_type">选择题,抽样方法选择</data>
+      <data key="importance">3</data>
+      <data key="textbook_source">必修第二册</data>
+    </node>
+    <node id="K48">
+      <data key="name">用样本估计总体</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">数学</data>
+      <data key="module">必修第二册(几何与统计)</data>
+      <data key="chapter">统计</data>
+      <data key="difficulty">3</data>
+      <data key="description">掌握频率分布直方图、茎叶图等图表方法,会用样本的频率分布估计总体分布。</data>
+      <data key="keywords">频率分布直方图,茎叶图,样本估计总体</data>
+      <data key="exam_type">计算题,读图分析</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">必修第二册</data>
+    </node>
+    <node id="K49">
+      <data key="name">样本的数字特征</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">数学</data>
+      <data key="module">必修第二册(几何与统计)</data>
+      <data key="chapter">统计</data>
+      <data key="difficulty">3</data>
+      <data key="description">掌握样本均值(平均数)、中位数、众数、方差、标准差等数字特征的计算与意义。</data>
+      <data key="keywords">平均数,中位数,众数,方差,标准差</data>
+      <data key="exam_type">计算题,数字特征计算</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">必修第二册</data>
+    </node>
+    <node id="K50">
+      <data key="name">随机事件与概率</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">数学</data>
+      <data key="module">必修第二册(几何与统计)</data>
+      <data key="chapter">概率</data>
+      <data key="difficulty">3</data>
+      <data key="description">理解随机事件、必然事件、不可能事件,掌握概率的统计定义与古典定义。</data>
+      <data key="keywords">随机事件,概率,必然事件,不可能事件</data>
+      <data key="exam_type">选择题,概率概念</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">必修第二册</data>
+    </node>
+    <node id="K51">
+      <data key="name">古典概型</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">数学</data>
+      <data key="module">必修第二册(几何与统计)</data>
+      <data key="chapter">概率</data>
+      <data key="difficulty">4</data>
+      <data key="description">掌握古典概型的两个特征(有限性、等可能性),能用排列组合或列举法求古典概率。</data>
+      <data key="keywords">古典概型,等可能性,有限性,概率计算</data>
+      <data key="exam_type">计算题,古典概型</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">必修第二册</data>
+    </node>
+    <node id="K52">
+      <data key="name">概率的基本性质与事件运算</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">数学</data>
+      <data key="module">必修第二册(几何与统计)</data>
+      <data key="chapter">概率</data>
+      <data key="difficulty">3</data>
+      <data key="description">掌握互斥事件、对立事件的概念及概率加法公式,理解事件的交并运算。</data>
+      <data key="keywords">互斥事件,对立事件,加法公式,事件运算</data>
+      <data key="exam_type">选择题,计算题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">必修第二册</data>
+    </node>
+    <node id="K53">
+      <data key="name">事件的独立性</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">数学</data>
+      <data key="module">必修第二册(几何与统计)</data>
+      <data key="chapter">概率</data>
+      <data key="difficulty">4</data>
+      <data key="description">理解两个事件相互独立的概念,掌握独立事件同时发生的概率乘法公式。</data>
+      <data key="keywords">独立事件,乘法公式,独立性,概率</data>
+      <data key="exam_type">计算题,独立事件概率</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">必修第二册</data>
+    </node>
+    <node id="K54">
+      <data key="name">空间向量的概念与运算</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">数学</data>
+      <data key="module">选择性必修第一册(解析几何)</data>
+      <data key="chapter">空间向量与立体几何</data>
+      <data key="difficulty">3</data>
+      <data key="description">理解空间向量的概念,掌握空间向量的加法、减法、数乘及数量积运算。</data>
+      <data key="keywords">空间向量,加减数乘,数量积,运算</data>
+      <data key="exam_type">选择题,向量运算</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">选择性必修第一册</data>
+    </node>
+    <node id="K55">
+      <data key="name">空间向量的坐标表示与数量积</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">数学</data>
+      <data key="module">选择性必修第一册(解析几何)</data>
+      <data key="chapter">空间向量与立体几何</data>
+      <data key="difficulty">4</data>
+      <data key="description">建立空间直角坐标系,掌握空间向量的坐标表示及数量积的坐标运算,能求夹角与距离。</data>
+      <data key="keywords">空间直角坐标,坐标表示,数量积,夹角距离</data>
+      <data key="exam_type">计算题,坐标运算</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">选择性必修第一册</data>
+    </node>
+    <node id="K56">
+      <data key="name">直线的方向向量与平面的法向量</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">数学</data>
+      <data key="module">选择性必修第一册(解析几何)</data>
+      <data key="chapter">空间向量与立体几何</data>
+      <data key="difficulty">4</data>
+      <data key="description">理解方向向量与法向量的概念,能用向量表示直线与平面,建立位置关系的向量判定。</data>
+      <data key="keywords">方向向量,法向量,直线平面表示</data>
+      <data key="exam_type">选择题,概念应用</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">选择性必修第一册</data>
+    </node>
+    <node id="K57">
+      <data key="name">用向量研究空间中的平行与垂直关系</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">数学</data>
+      <data key="module">选择性必修第一册(解析几何)</data>
+      <data key="chapter">空间向量与立体几何</data>
+      <data key="difficulty">5</data>
+      <data key="description">掌握用向量判定线线、线面、面面的平行与垂直关系,能进行向量法空间证明。</data>
+      <data key="keywords">向量法,平行判定,垂直判定,空间证明</data>
+      <data key="exam_type">证明题,向量法空间证明</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">选择性必修第一册</data>
+    </node>
+    <node id="K58">
+      <data key="name">空间距离与夹角的向量求法</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">数学</data>
+      <data key="module">选择性必修第一册(解析几何)</data>
+      <data key="chapter">空间向量与立体几何</data>
+      <data key="difficulty">5</data>
+      <data key="description">掌握用向量求两点间距离、点到面的距离及线线角、线面角、面面角(二面角)的方法。</data>
+      <data key="keywords">距离,夹角,线面角,二面角,向量法</data>
+      <data key="exam_type">综合题,空间角与距离</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">选择性必修第一册</data>
+    </node>
+    <node id="K59">
+      <data key="name">直线的倾斜角与斜率</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">数学</data>
+      <data key="module">选择性必修第一册(解析几何)</data>
+      <data key="chapter">直线与方程</data>
+      <data key="difficulty">3</data>
+      <data key="description">理解直线倾斜角与斜率的概念,掌握斜率公式及斜率与倾斜角的关系。</data>
+      <data key="keywords">倾斜角,斜率,斜率公式,斜率范围</data>
+      <data key="exam_type">选择题,斜率计算</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">选择性必修第一册</data>
+    </node>
+    <node id="K60">
+      <data key="name">直线方程的多种形式</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">数学</data>
+      <data key="module">选择性必修第一册(解析几何)</data>
+      <data key="chapter">直线与方程</data>
+      <data key="difficulty">4</data>
+      <data key="description">掌握点斜式、斜截式、两点式、截距式、一般式等直线方程形式及互化。</data>
+      <data key="keywords">点斜式,斜截式,两点式,截距式,一般式</data>
+      <data key="exam_type">计算题,求直线方程</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">选择性必修第一册</data>
+    </node>
+    <node id="K61">
+      <data key="name">两直线的位置关系</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">数学</data>
+      <data key="module">选择性必修第一册(解析几何)</data>
+      <data key="chapter">直线与方程</data>
+      <data key="difficulty">4</data>
+      <data key="description">掌握两直线平行、垂直、相交(含垂直)的判定条件,能求两直线交点。</data>
+      <data key="keywords">平行,垂直,相交,交点,斜率关系</data>
+      <data key="exam_type">选择题,计算题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">选择性必修第一册</data>
+    </node>
+    <node id="K62">
+      <data key="name">点到直线的距离</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">数学</data>
+      <data key="module">选择性必修第一册(解析几何)</data>
+      <data key="chapter">直线与方程</data>
+      <data key="difficulty">4</data>
+      <data key="description">掌握点到直线的距离公式及两平行线间距离公式,能解决距离相关最值问题。</data>
+      <data key="keywords">点到直线距离,平行线距离,距离公式</data>
+      <data key="exam_type">计算题,距离最值</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">选择性必修第一册</data>
+    </node>
+    <node id="K63">
+      <data key="name">圆的标准方程与一般方程</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">数学</data>
+      <data key="module">选择性必修第一册(解析几何)</data>
+      <data key="chapter">圆与方程</data>
+      <data key="difficulty">3</data>
+      <data key="description">掌握圆的标准方程(x-a)²+(y-b)²=r²与一般方程,能由条件求圆的方程。</data>
+      <data key="keywords">圆标准方程,圆一般方程,圆心半径</data>
+      <data key="exam_type">计算题,求圆方程</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">选择性必修第一册</data>
+    </node>
+    <node id="K64">
+      <data key="name">直线与圆的位置关系</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">数学</data>
+      <data key="module">选择性必修第一册(解析几何)</data>
+      <data key="chapter">圆与方程</data>
+      <data key="difficulty">4</data>
+      <data key="description">掌握直线与圆相交、相切、相离的判定方法(几何法与代数法),能求弦长与切线。</data>
+      <data key="keywords">相交相切相离,弦长,切线,位置关系</data>
+      <data key="exam_type">计算题,直线与圆</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">选择性必修第一册</data>
+    </node>
+    <node id="K65">
+      <data key="name">圆与圆的位置关系</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">数学</data>
+      <data key="module">选择性必修第一册(解析几何)</data>
+      <data key="chapter">圆与方程</data>
+      <data key="difficulty">3</data>
+      <data key="description">掌握两圆位置关系(相离、外切、相交、内切、内含)的判定,能求公共弦方程。</data>
+      <data key="keywords">圆与圆,位置关系,公共弦,圆心距</data>
+      <data key="exam_type">选择题,计算题</data>
+      <data key="importance">3</data>
+      <data key="textbook_source">选择性必修第一册</data>
+    </node>
+    <node id="K66">
+      <data key="name">椭圆及其标准方程</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">数学</data>
+      <data key="module">选择性必修第一册(解析几何)</data>
+      <data key="chapter">圆锥曲线</data>
+      <data key="difficulty">4</data>
+      <data key="description">理解椭圆定义,掌握椭圆标准方程的推导,能由条件求椭圆方程。</data>
+      <data key="keywords">椭圆,定义,标准方程,a,b,c,焦点</data>
+      <data key="exam_type">计算题,求椭圆方程</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">选择性必修第一册</data>
+    </node>
+    <node id="K67">
+      <data key="name">椭圆的几何性质</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">数学</data>
+      <data key="module">选择性必修第一册(解析几何)</data>
+      <data key="chapter">圆锥曲线</data>
+      <data key="difficulty">4</data>
+      <data key="description">掌握椭圆的范围、对称性、顶点、离心率等几何性质,理解a、b、c、e的关系。</data>
+      <data key="keywords">椭圆性质,范围,对称性,顶点,离心率</data>
+      <data key="exam_type">选择题,椭圆性质</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">选择性必修第一册</data>
+    </node>
+    <node id="K68">
+      <data key="name">双曲线及其标准方程</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">数学</data>
+      <data key="module">选择性必修第一册(解析几何)</data>
+      <data key="chapter">圆锥曲线</data>
+      <data key="difficulty">4</data>
+      <data key="description">理解双曲线定义(含渐近线概念),掌握双曲线标准方程,能由条件求双曲线方程。</data>
+      <data key="keywords">双曲线,定义,标准方程,渐近线,焦点</data>
+      <data key="exam_type">计算题,求双曲线方程</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">选择性必修第一册</data>
+    </node>
+    <node id="K69">
+      <data key="name">双曲线的几何性质</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">数学</data>
+      <data key="module">选择性必修第一册(解析几何)</data>
+      <data key="chapter">圆锥曲线</data>
+      <data key="difficulty">4</data>
+      <data key="description">掌握双曲线的范围、对称性、顶点、渐近线、离心率等几何性质。</data>
+      <data key="keywords">双曲线性质,渐近线,离心率,范围</data>
+      <data key="exam_type">选择题,双曲线性质</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">选择性必修第一册</data>
+    </node>
+    <node id="K70">
+      <data key="name">抛物线及其标准方程</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">数学</data>
+      <data key="module">选择性必修第一册(解析几何)</data>
+      <data key="chapter">圆锥曲线</data>
+      <data key="difficulty">4</data>
+      <data key="description">理解抛物线定义,掌握四种标准方程形式,能由条件求抛物线方程。</data>
+      <data key="keywords">抛物线,定义,标准方程,焦点,准线</data>
+      <data key="exam_type">计算题,求抛物线方程</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">选择性必修第一册</data>
+    </node>
+    <node id="K71">
+      <data key="name">抛物线的几何性质</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">数学</data>
+      <data key="module">选择性必修第一册(解析几何)</data>
+      <data key="chapter">圆锥曲线</data>
+      <data key="difficulty">3</data>
+      <data key="description">掌握抛物线的范围、对称性、顶点、离心率等几何性质及焦半径公式。</data>
+      <data key="keywords">抛物线性质,焦半径,焦点弦,准线</data>
+      <data key="exam_type">选择题,抛物线性质</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">选择性必修第一册</data>
+    </node>
+    <node id="K72">
+      <data key="name">直线与圆锥曲线的位置关系</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">数学</data>
+      <data key="module">选择性必修第一册(解析几何)</data>
+      <data key="chapter">圆锥曲线</data>
+      <data key="difficulty">5</data>
+      <data key="description">掌握直线与椭圆、双曲线、抛物线位置关系的代数判别方法,能求弦长、面积、定点定值问题。</data>
+      <data key="keywords">直线圆锥曲线,弦长,韦达定理,定点定值,焦点弦</data>
+      <data key="exam_type">综合题,解析几何压轴</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">选择性必修第一册</data>
+    </node>
+    <node id="K73">
+      <data key="name">数列的概念与简单表示</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">数学</data>
+      <data key="module">选择性必修第二册(数列与导数)</data>
+      <data key="chapter">数列</data>
+      <data key="difficulty">2</data>
+      <data key="description">理解数列的概念,掌握数列的通项公式与递推公式表示,理解数列与函数的关系。</data>
+      <data key="keywords">数列,通项公式,递推公式,项,有界</data>
+      <data key="exam_type">选择题,求数列通项</data>
+      <data key="importance">3</data>
+      <data key="textbook_source">选择性必修第二册</data>
+    </node>
+    <node id="K74">
+      <data key="name">等差数列及其前n项和</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">数学</data>
+      <data key="module">选择性必修第二册(数列与导数)</data>
+      <data key="chapter">数列</data>
+      <data key="difficulty">4</data>
+      <data key="description">掌握等差数列的定义、通项公式、性质及前n项和公式,能解决等差数列综合问题。</data>
+      <data key="keywords">等差数列,通项公式,前n项和,公差,性质</data>
+      <data key="exam_type">计算题,等差数列综合</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">选择性必修第二册</data>
+    </node>
+    <node id="K75">
+      <data key="name">等比数列及其前n项和</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">数学</data>
+      <data key="module">选择性必修第二册(数列与导数)</data>
+      <data key="chapter">数列</data>
+      <data key="difficulty">4</data>
+      <data key="description">掌握等比数列的定义、通项公式、性质及前n项和公式,能解决等比数列综合问题。</data>
+      <data key="keywords">等比数列,通项公式,前n项和,公比,性质</data>
+      <data key="exam_type">计算题,等比数列综合</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">选择性必修第二册</data>
+    </node>
+    <node id="K76">
+      <data key="name">数列求和的特殊方法</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">数学</data>
+      <data key="module">选择性必修第二册(数列与导数)</data>
+      <data key="chapter">数列</data>
+      <data key="difficulty">5</data>
+      <data key="description">掌握错位相减法、裂项相消法、分组求和法、倒序相加法等数列求和方法。</data>
+      <data key="keywords">错位相减,裂项相消,分组求和,倒序相加</data>
+      <data key="exam_type">综合题,数列求和</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">选择性必修第二册</data>
+    </node>
+    <node id="K77">
+      <data key="name">导数的概念</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">数学</data>
+      <data key="module">选择性必修第二册(数列与导数)</data>
+      <data key="chapter">导数及其应用</data>
+      <data key="difficulty">4</data>
+      <data key="description">理解导数的概念与瞬时变化率的含义,掌握用极限定义导数的方法。</data>
+      <data key="keywords">导数,瞬时变化率,极限,平均变化率</data>
+      <data key="exam_type">选择题,导数概念</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">选择性必修第二册</data>
+    </node>
+    <node id="K78">
+      <data key="name">导数的几何意义</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">数学</data>
+      <data key="module">选择性必修第二册(数列与导数)</data>
+      <data key="chapter">导数及其应用</data>
+      <data key="difficulty">4</data>
+      <data key="description">理解导数的几何意义为切线斜率,掌握求曲线在某点处切线方程的方法。</data>
+      <data key="keywords">切线斜率,切线方程,几何意义,切点</data>
+      <data key="exam_type">计算题,切线方程</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">选择性必修第二册</data>
+    </node>
+    <node id="K79">
+      <data key="name">基本初等函数的导数公式</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">数学</data>
+      <data key="module">选择性必修第二册(数列与导数)</data>
+      <data key="chapter">导数及其应用</data>
+      <data key="difficulty">4</data>
+      <data key="description">掌握常数、幂函数、指数函数、对数函数、三角函数等基本初等函数的导数公式。</data>
+      <data key="keywords">导数公式,幂函数,指数对数,三角函数导数</data>
+      <data key="exam_type">计算题,求导数</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">选择性必修第二册</data>
+    </node>
+    <node id="K80">
+      <data key="name">导数的四则运算法则与复合函数求导</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">数学</data>
+      <data key="module">选择性必修第二册(数列与导数)</data>
+      <data key="chapter">导数及其应用</data>
+      <data key="difficulty">5</data>
+      <data key="description">掌握导数的和差积商法则及复合函数的链式求导法则,能对复杂函数求导。</data>
+      <data key="keywords">四则运算法则,复合函数,链式法则,求导</data>
+      <data key="exam_type">计算题,复合函数求导</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">选择性必修第二册</data>
+    </node>
+    <node id="K81">
+      <data key="name">函数的单调性与导数</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">数学</data>
+      <data key="module">选择性必修第二册(数列与导数)</data>
+      <data key="chapter">导数及其应用</data>
+      <data key="difficulty">5</data>
+      <data key="description">掌握用导数判断函数单调性的方法,能求函数单调区间并证明单调性。</data>
+      <data key="keywords">单调性,导数符号,单调区间,求导判断</data>
+      <data key="exam_type">综合题,单调性分析</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">选择性必修第二册</data>
+    </node>
+    <node id="K82">
+      <data key="name">函数的极值与导数</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">数学</data>
+      <data key="module">选择性必修第二册(数列与导数)</data>
+      <data key="chapter">导数及其应用</data>
+      <data key="difficulty">5</data>
+      <data key="description">理解极值概念,掌握用导数求函数极值(极大值、极小值)的方法,会求极值点。</data>
+      <data key="keywords">极值,极大值,极小值,极值点,导数变号</data>
+      <data key="exam_type">综合题,求极值</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">选择性必修第二册</data>
+    </node>
+    <node id="K83">
+      <data key="name">函数的最大(小)值与导数</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">数学</data>
+      <data key="module">选择性必修第二册(数列与导数)</data>
+      <data key="chapter">导数及其应用</data>
+      <data key="difficulty">5</data>
+      <data key="description">掌握用导数求闭区间上函数最大值与最小值的方法,解决实际最值优化问题。</data>
+      <data key="keywords">最大值,最小值,闭区间,导数,优化问题</data>
+      <data key="exam_type">综合题,最值应用题</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">选择性必修第二册</data>
+    </node>
+    <node id="K84">
+      <data key="name">分类加法与分步乘法计数原理</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">数学</data>
+      <data key="module">选择性必修第三册(计数与统计)</data>
+      <data key="chapter">计数原理</data>
+      <data key="difficulty">3</data>
+      <data key="description">理解分类加法计数原理与分步乘法计数原理,能用于排列组合问题的分析与计数。</data>
+      <data key="keywords">分类计数原理,分步计数原理,加法,乘法</data>
+      <data key="exam_type">选择题,计算题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">选择性必修第三册</data>
+    </node>
+    <node id="K85">
+      <data key="name">排列与排列数</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">数学</data>
+      <data key="module">选择性必修第三册(计数与统计)</data>
+      <data key="chapter">计数原理</data>
+      <data key="difficulty">4</data>
+      <data key="description">理解排列概念,掌握排列数公式A(n,m),能解决排列应用题(含限制条件)。</data>
+      <data key="keywords">排列,排列数公式,限制条件,排列应用</data>
+      <data key="exam_type">计算题,排列应用题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">选择性必修第三册</data>
+    </node>
+    <node id="K86">
+      <data key="name">组合与组合数</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">数学</data>
+      <data key="module">选择性必修第三册(计数与统计)</data>
+      <data key="chapter">计数原理</data>
+      <data key="difficulty">4</data>
+      <data key="description">理解组合概念,掌握组合数公式C(n,m)及组合数性质,能解决组合应用题。</data>
+      <data key="keywords">组合,组合数公式,组合数性质,组合应用</data>
+      <data key="exam_type">计算题,组合应用题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">选择性必修第三册</data>
+    </node>
+    <node id="K87">
+      <data key="name">二项式定理</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">数学</data>
+      <data key="module">选择性必修第三册(计数与统计)</data>
+      <data key="chapter">计数原理</data>
+      <data key="difficulty">5</data>
+      <data key="description">掌握二项式定理及通项公式,理解二项式系数的性质,能求展开式中特定项与系数。</data>
+      <data key="keywords">二项式定理,通项公式,二项式系数,特定项</data>
+      <data key="exam_type">计算题,二项式展开</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">选择性必修第三册</data>
+    </node>
+    <node id="K88">
+      <data key="name">离散型随机变量及其分布列</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">数学</data>
+      <data key="module">选择性必修第三册(计数与统计)</data>
+      <data key="chapter">随机变量及其分布</data>
+      <data key="difficulty">4</data>
+      <data key="description">理解离散型随机变量概念,掌握分布列的性质,能求简单随机变量的分布列。</data>
+      <data key="keywords">随机变量,分布列,离散型,概率分布</data>
+      <data key="exam_type">计算题,分布列</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">选择性必修第三册</data>
+    </node>
+    <node id="K89">
+      <data key="name">离散型随机变量的均值与方差</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">数学</data>
+      <data key="module">选择性必修第三册(计数与统计)</data>
+      <data key="chapter">随机变量及其分布</data>
+      <data key="difficulty">4</data>
+      <data key="description">掌握离散型随机变量均值(数学期望)与方差的计算公式及性质,理解其统计意义。</data>
+      <data key="keywords">均值,数学期望,方差,标准差,性质</data>
+      <data key="exam_type">计算题,期望方差</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">选择性必修第三册</data>
+    </node>
+    <node id="K90">
+      <data key="name">条件概率与全概率公式</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">数学</data>
+      <data key="module">选择性必修第三册(计数与统计)</data>
+      <data key="chapter">随机变量及其分布</data>
+      <data key="difficulty">4</data>
+      <data key="description">理解条件概率概念,掌握条件概率公式与全概率公式,能解决条件概率问题。</data>
+      <data key="keywords">条件概率,全概率公式,贝叶斯,概率</data>
+      <data key="exam_type">计算题,条件概率</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">选择性必修第三册</data>
+    </node>
+    <node id="K91">
+      <data key="name">独立重复试验与二项分布</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">数学</data>
+      <data key="module">选择性必修第三册(计数与统计)</data>
+      <data key="chapter">随机变量及其分布</data>
+      <data key="difficulty">5</data>
+      <data key="description">理解n次独立重复试验,掌握二项分布B(n,p)及其均值方差,能解决二项分布问题。</data>
+      <data key="keywords">独立重复试验,二项分布,B(n,p),均值方差</data>
+      <data key="exam_type">计算题,二项分布</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">选择性必修第三册</data>
+    </node>
+    <node id="K92">
+      <data key="name">正态分布</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">数学</data>
+      <data key="module">选择性必修第三册(计数与统计)</data>
+      <data key="chapter">随机变量及其分布</data>
+      <data key="difficulty">4</data>
+      <data key="description">理解正态分布N(μ,σ²)的概念与密度曲线特征,掌握3σ原则及正态分布的性质。</data>
+      <data key="keywords">正态分布,密度曲线,μ,σ,3σ原则</data>
+      <data key="exam_type">选择题,正态分布</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">选择性必修第三册</data>
+    </node>
+    <node id="K93">
+      <data key="name">回归分析</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">数学</data>
+      <data key="module">选择性必修第三册(计数与统计)</data>
+      <data key="chapter">成对数据的统计分析</data>
+      <data key="difficulty">4</data>
+      <data key="description">理解线性回归模型,掌握最小二乘法求回归方程,理解相关系数与残差分析。</data>
+      <data key="keywords">回归分析,最小二乘法,回归方程,相关系数,残差</data>
+      <data key="exam_type">计算题,回归分析</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">选择性必修第三册</data>
+    </node>
+    <node id="K94">
+      <data key="name">独立性检验</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">数学</data>
+      <data key="module">选择性必修第三册(计数与统计)</data>
+      <data key="chapter">成对数据的统计分析</data>
+      <data key="difficulty">4</data>
+      <data key="description">理解独立性检验(卡方检验)的基本思想,掌握χ²统计量的计算与查表判断。</data>
+      <data key="keywords">独立性检验,卡方检验,χ²,列联表,显著性</data>
+      <data key="exam_type">计算题,独立性检验</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">选择性必修第三册</data>
+    </node>
+    <edge source="M1" target="C1">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">模块[M1]包含章节[集合与常用逻辑用语]</data>
+    </edge>
+    <edge source="M1" target="C2">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">模块[M1]包含章节[一元二次函数、方程和不等式]</data>
+    </edge>
+    <edge source="M1" target="C3">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">模块[M1]包含章节[函数的概念与性质]</data>
+    </edge>
+    <edge source="M1" target="C4">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">模块[M1]包含章节[指数函数与对数函数]</data>
+    </edge>
+    <edge source="M1" target="C5">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">模块[M1]包含章节[三角函数]</data>
+    </edge>
+    <edge source="M2" target="C6">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">模块[M2]包含章节[平面向量及其应用]</data>
+    </edge>
+    <edge source="M2" target="C7">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">模块[M2]包含章节[复数]</data>
+    </edge>
+    <edge source="M2" target="C8">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">模块[M2]包含章节[立体几何初步]</data>
+    </edge>
+    <edge source="M2" target="C9">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">模块[M2]包含章节[统计]</data>
+    </edge>
+    <edge source="M2" target="C10">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">模块[M2]包含章节[概率]</data>
+    </edge>
+    <edge source="M3" target="C11">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">模块[M3]包含章节[空间向量与立体几何]</data>
+    </edge>
+    <edge source="M3" target="C12">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">模块[M3]包含章节[直线与方程]</data>
+    </edge>
+    <edge source="M3" target="C13">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">模块[M3]包含章节[圆与方程]</data>
+    </edge>
+    <edge source="M3" target="C14">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">模块[M3]包含章节[圆锥曲线]</data>
+    </edge>
+    <edge source="M4" target="C15">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">模块[M4]包含章节[数列]</data>
+    </edge>
+    <edge source="M4" target="C16">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">模块[M4]包含章节[导数及其应用]</data>
+    </edge>
+    <edge source="M5" target="C17">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">模块[M5]包含章节[计数原理]</data>
+    </edge>
+    <edge source="M5" target="C18">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">模块[M5]包含章节[随机变量及其分布]</data>
+    </edge>
+    <edge source="M5" target="C19">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">模块[M5]包含章节[成对数据的统计分析]</data>
+    </edge>
+    <edge source="C1" target="K1">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[集合的概念与表示]</data>
+    </edge>
+    <edge source="C1" target="K2">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[集合间的基本关系]</data>
+    </edge>
+    <edge source="C1" target="K3">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[集合的基本运算]</data>
+    </edge>
+    <edge source="C1" target="K4">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[充分条件与必要条件]</data>
+    </edge>
+    <edge source="C1" target="K5">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[全称量词与存在量词]</data>
+    </edge>
+    <edge source="C2" target="K6">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[不等式的基本性质]</data>
+    </edge>
+    <edge source="C2" target="K7">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[基本不等式]</data>
+    </edge>
+    <edge source="C2" target="K8">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[一元二次不等式及其解法]</data>
+    </edge>
+    <edge source="C2" target="K9">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[二次函数与一元二次方程不等式的关系]</data>
+    </edge>
+    <edge source="C3" target="K10">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[函数的概念]</data>
+    </edge>
+    <edge source="C3" target="K11">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[函数的表示法]</data>
+    </edge>
+    <edge source="C3" target="K12">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[分段函数]</data>
+    </edge>
+    <edge source="C3" target="K13">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[函数的单调性]</data>
+    </edge>
+    <edge source="C3" target="K14">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[函数的最大(小)值]</data>
+    </edge>
+    <edge source="C3" target="K15">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[函数的奇偶性]</data>
+    </edge>
+    <edge source="C3" target="K16">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[幂函数]</data>
+    </edge>
+    <edge source="C4" target="K17">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[指数与指数幂的运算]</data>
+    </edge>
+    <edge source="C4" target="K18">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[指数函数的图象与性质]</data>
+    </edge>
+    <edge source="C4" target="K19">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[对数的概念]</data>
+    </edge>
+    <edge source="C4" target="K20">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[对数的运算性质]</data>
+    </edge>
+    <edge source="C4" target="K21">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[对数函数的图象与性质]</data>
+    </edge>
+    <edge source="C4" target="K22">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[反函数]</data>
+    </edge>
+    <edge source="C5" target="K23">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[任意角与弧度制]</data>
+    </edge>
+    <edge source="C5" target="K24">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[三角函数的定义]</data>
+    </edge>
+    <edge source="C5" target="K25">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[同角三角函数的基本关系]</data>
+    </edge>
+    <edge source="C5" target="K26">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[诱导公式]</data>
+    </edge>
+    <edge source="C5" target="K27">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[三角函数的图象]</data>
+    </edge>
+    <edge source="C5" target="K28">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[三角函数的性质]</data>
+    </edge>
+    <edge source="C5" target="K29">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[函数y=Asin(ωx+φ)的图象]</data>
+    </edge>
+    <edge source="C5" target="K30">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[两角和与差的三角函数公式]</data>
+    </edge>
+    <edge source="C5" target="K31">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[二倍角公式]</data>
+    </edge>
+    <edge source="C6" target="K32">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[平面向量的概念]</data>
+    </edge>
+    <edge source="C6" target="K33">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[向量的线性运算]</data>
+    </edge>
+    <edge source="C6" target="K34">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[平面向量基本定理]</data>
+    </edge>
+    <edge source="C6" target="K35">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[平面向量的坐标表示]</data>
+    </edge>
+    <edge source="C6" target="K36">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[向量的数量积]</data>
+    </edge>
+    <edge source="C6" target="K37">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[向量在几何与物理中的应用]</data>
+    </edge>
+    <edge source="C7" target="K38">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[复数的概念]</data>
+    </edge>
+    <edge source="C7" target="K39">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[复数的几何意义]</data>
+    </edge>
+    <edge source="C7" target="K40">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[复数的四则运算]</data>
+    </edge>
+    <edge source="C8" target="K41">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[空间几何体的结构]</data>
+    </edge>
+    <edge source="C8" target="K42">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[空间几何体的三视图]</data>
+    </edge>
+    <edge source="C8" target="K43">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[空间几何体的表面积与体积]</data>
+    </edge>
+    <edge source="C8" target="K44">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[空间点、直线、平面之间的位置关系]</data>
+    </edge>
+    <edge source="C8" target="K45">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[直线与平面平行的判定与性质]</data>
+    </edge>
+    <edge source="C8" target="K46">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[直线与平面垂直的判定与性质]</data>
+    </edge>
+    <edge source="C9" target="K47">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[随机抽样]</data>
+    </edge>
+    <edge source="C9" target="K48">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[用样本估计总体]</data>
+    </edge>
+    <edge source="C9" target="K49">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[样本的数字特征]</data>
+    </edge>
+    <edge source="C10" target="K50">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[随机事件与概率]</data>
+    </edge>
+    <edge source="C10" target="K51">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[古典概型]</data>
+    </edge>
+    <edge source="C10" target="K52">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[概率的基本性质与事件运算]</data>
+    </edge>
+    <edge source="C10" target="K53">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[事件的独立性]</data>
+    </edge>
+    <edge source="C11" target="K54">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[空间向量的概念与运算]</data>
+    </edge>
+    <edge source="C11" target="K55">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[空间向量的坐标表示与数量积]</data>
+    </edge>
+    <edge source="C11" target="K56">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[直线的方向向量与平面的法向量]</data>
+    </edge>
+    <edge source="C11" target="K57">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[用向量研究空间中的平行与垂直关系]</data>
+    </edge>
+    <edge source="C11" target="K58">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[空间距离与夹角的向量求法]</data>
+    </edge>
+    <edge source="C12" target="K59">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[直线的倾斜角与斜率]</data>
+    </edge>
+    <edge source="C12" target="K60">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[直线方程的多种形式]</data>
+    </edge>
+    <edge source="C12" target="K61">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[两直线的位置关系]</data>
+    </edge>
+    <edge source="C12" target="K62">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[点到直线的距离]</data>
+    </edge>
+    <edge source="C13" target="K63">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[圆的标准方程与一般方程]</data>
+    </edge>
+    <edge source="C13" target="K64">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[直线与圆的位置关系]</data>
+    </edge>
+    <edge source="C13" target="K65">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[圆与圆的位置关系]</data>
+    </edge>
+    <edge source="C14" target="K66">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[椭圆及其标准方程]</data>
+    </edge>
+    <edge source="C14" target="K67">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[椭圆的几何性质]</data>
+    </edge>
+    <edge source="C14" target="K68">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[双曲线及其标准方程]</data>
+    </edge>
+    <edge source="C14" target="K69">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[双曲线的几何性质]</data>
+    </edge>
+    <edge source="C14" target="K70">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[抛物线及其标准方程]</data>
+    </edge>
+    <edge source="C14" target="K71">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[抛物线的几何性质]</data>
+    </edge>
+    <edge source="C14" target="K72">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[直线与圆锥曲线的位置关系]</data>
+    </edge>
+    <edge source="C15" target="K73">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[数列的概念与简单表示]</data>
+    </edge>
+    <edge source="C15" target="K74">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[等差数列及其前n项和]</data>
+    </edge>
+    <edge source="C15" target="K75">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[等比数列及其前n项和]</data>
+    </edge>
+    <edge source="C15" target="K76">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[数列求和的特殊方法]</data>
+    </edge>
+    <edge source="C16" target="K77">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[导数的概念]</data>
+    </edge>
+    <edge source="C16" target="K78">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[导数的几何意义]</data>
+    </edge>
+    <edge source="C16" target="K79">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[基本初等函数的导数公式]</data>
+    </edge>
+    <edge source="C16" target="K80">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[导数的四则运算法则与复合函数求导]</data>
+    </edge>
+    <edge source="C16" target="K81">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[函数的单调性与导数]</data>
+    </edge>
+    <edge source="C16" target="K82">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[函数的极值与导数]</data>
+    </edge>
+    <edge source="C16" target="K83">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[函数的最大(小)值与导数]</data>
+    </edge>
+    <edge source="C17" target="K84">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[分类加法与分步乘法计数原理]</data>
+    </edge>
+    <edge source="C17" target="K85">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[排列与排列数]</data>
+    </edge>
+    <edge source="C17" target="K86">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[组合与组合数]</data>
+    </edge>
+    <edge source="C17" target="K87">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[二项式定理]</data>
+    </edge>
+    <edge source="C18" target="K88">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[离散型随机变量及其分布列]</data>
+    </edge>
+    <edge source="C18" target="K89">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[离散型随机变量的均值与方差]</data>
+    </edge>
+    <edge source="C18" target="K90">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[条件概率与全概率公式]</data>
+    </edge>
+    <edge source="C18" target="K91">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[独立重复试验与二项分布]</data>
+    </edge>
+    <edge source="C18" target="K92">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[正态分布]</data>
+    </edge>
+    <edge source="C19" target="K93">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[回归分析]</data>
+    </edge>
+    <edge source="C19" target="K94">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[独立性检验]</data>
+    </edge>
+    <edge source="K1" target="K2">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.9</data>
+      <data key="description">掌握集合概念是理解集合间关系的前提</data>
+    </edge>
+    <edge source="K2" target="K3">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.9</data>
+      <data key="description">理解集合关系是进行集合运算的基础</data>
+    </edge>
+    <edge source="K6" target="K7">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.8</data>
+      <data key="description">不等式性质是基本不等式的基础</data>
+    </edge>
+    <edge source="K7" target="K8">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.8</data>
+      <data key="description">基本不等式用于解一元二次不等式</data>
+    </edge>
+    <edge source="K8" target="K9">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.9</data>
+      <data key="description">一元二次不等式是理解三个二次关系的前提</data>
+    </edge>
+    <edge source="K10" target="K13">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.9</data>
+      <data key="description">函数概念是研究单调性的基础</data>
+    </edge>
+    <edge source="K10" target="K15">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.9</data>
+      <data key="description">函数概念是研究奇偶性的基础</data>
+    </edge>
+    <edge source="K13" target="K14">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.9</data>
+      <data key="description">单调性是求最值的基础</data>
+    </edge>
+    <edge source="K13" target="K15">
+      <data key="relation">RELATED_TO</data>
+      <data key="weight">0.6</data>
+      <data key="description">单调性与奇偶性都是函数的重要性质</data>
+    </edge>
+    <edge source="K17" target="K18">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.9</data>
+      <data key="description">指数运算是研究指数函数的基础</data>
+    </edge>
+    <edge source="K19" target="K20">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.9</data>
+      <data key="description">对数概念是学习对数运算的前提</data>
+    </edge>
+    <edge source="K20" target="K21">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.9</data>
+      <data key="description">对数运算是研究对数函数的基础</data>
+    </edge>
+    <edge source="K18" target="K21">
+      <data key="relation">RELATED_TO</data>
+      <data key="weight">0.8</data>
+      <data key="description">指数函数与对数函数互为反函数</data>
+    </edge>
+    <edge source="K22" target="K18">
+      <data key="relation">DERIVED_FROM</data>
+      <data key="weight">0.7</data>
+      <data key="description">反函数由指数函数推导得到对数函数</data>
+    </edge>
+    <edge source="K23" target="K24">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.9</data>
+      <data key="description">弧度制是定义任意角三角函数的基础</data>
+    </edge>
+    <edge source="K24" target="K25">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.9</data>
+      <data key="description">三角函数定义是同角关系的前提</data>
+    </edge>
+    <edge source="K25" target="K26">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.8</data>
+      <data key="description">同角关系与诱导公式结合使用</data>
+    </edge>
+    <edge source="K26" target="K27">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.8</data>
+      <data key="description">诱导公式有助于理解三角函数图象</data>
+    </edge>
+    <edge source="K27" target="K28">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.8</data>
+      <data key="description">三角函数图象是研究性质的基础</data>
+    </edge>
+    <edge source="K28" target="K29">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.8</data>
+      <data key="description">三角函数性质是图象变换的基础</data>
+    </edge>
+    <edge source="K30" target="K31">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.9</data>
+      <data key="description">两角和差公式是二倍角公式的基础</data>
+    </edge>
+    <edge source="K31" target="K30">
+      <data key="relation">DERIVED_FROM</data>
+      <data key="weight">0.8</data>
+      <data key="description">二倍角公式由两角和公式推导</data>
+    </edge>
+    <edge source="K32" target="K33">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.9</data>
+      <data key="description">向量概念是线性运算的基础</data>
+    </edge>
+    <edge source="K33" target="K34">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.8</data>
+      <data key="description">线性运算是向量基本定理的基础</data>
+    </edge>
+    <edge source="K34" target="K35">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.8</data>
+      <data key="description">基本定理是坐标表示的理论基础</data>
+    </edge>
+    <edge source="K35" target="K36">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.9</data>
+      <data key="description">坐标表示是数量积坐标运算的基础</data>
+    </edge>
+    <edge source="K36" target="K37">
+      <data key="relation">APPLIED_IN</data>
+      <data key="weight">0.7</data>
+      <data key="description">数量积应用于几何与物理问题</data>
+    </edge>
+    <edge source="K38" target="K40">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.8</data>
+      <data key="description">复数概念是四则运算的基础</data>
+    </edge>
+    <edge source="K41" target="K42">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.7</data>
+      <data key="description">几何体结构是三视图的基础</data>
+    </edge>
+    <edge source="K42" target="K43">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.8</data>
+      <data key="description">三视图是计算表面积体积的基础</data>
+    </edge>
+    <edge source="K44" target="K45">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.8</data>
+      <data key="description">点线面位置关系是平行判定的基础</data>
+    </edge>
+    <edge source="K45" target="K46">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.8</data>
+      <data key="description">平行与垂直关系相互关联</data>
+    </edge>
+    <edge source="K47" target="K48">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.7</data>
+      <data key="description">抽样是用样本估计总体的前提</data>
+    </edge>
+    <edge source="K48" target="K49">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.8</data>
+      <data key="description">样本分布与数字特征紧密关联</data>
+    </edge>
+    <edge source="K50" target="K51">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.8</data>
+      <data key="description">概率概念是古典概型的基础</data>
+    </edge>
+    <edge source="K51" target="K52">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.8</data>
+      <data key="description">古典概型与概率性质相关</data>
+    </edge>
+    <edge source="K52" target="K53">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.8</data>
+      <data key="description">事件运算与独立性相关</data>
+    </edge>
+    <edge source="K33" target="K54">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.6</data>
+      <data key="description">平面向量运算推广到空间向量</data>
+    </edge>
+    <edge source="K54" target="K55">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.9</data>
+      <data key="description">向量运算是坐标表示的基础</data>
+    </edge>
+    <edge source="K55" target="K56">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.8</data>
+      <data key="description">坐标表示是方向向量法向量的基础</data>
+    </edge>
+    <edge source="K56" target="K57">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.9</data>
+      <data key="description">方向向量与法向量是判定平行垂直的基础</data>
+    </edge>
+    <edge source="K57" target="K58">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.8</data>
+      <data key="description">平行垂直判定是求距离夹角的基础</data>
+    </edge>
+    <edge source="K46" target="K58">
+      <data key="relation">RELATED_TO</data>
+      <data key="weight">0.7</data>
+      <data key="description">立体几何中的垂直关系与向量法求角相关</data>
+    </edge>
+    <edge source="K59" target="K60">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.9</data>
+      <data key="description">斜率是直线方程的基础</data>
+    </edge>
+    <edge source="K60" target="K61">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.8</data>
+      <data key="description">直线方程是研究位置关系的基础</data>
+    </edge>
+    <edge source="K61" target="K62">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.8</data>
+      <data key="description">位置关系与距离计算相关</data>
+    </edge>
+    <edge source="K63" target="K64">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.9</data>
+      <data key="description">圆的方程是研究直线与圆的基础</data>
+    </edge>
+    <edge source="K64" target="K65">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.7</data>
+      <data key="description">直线与圆的关系推广到圆与圆</data>
+    </edge>
+    <edge source="K63" target="K66">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.5</data>
+      <data key="description">圆的方程为椭圆方程奠定坐标法基础</data>
+    </edge>
+    <edge source="K66" target="K67">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.9</data>
+      <data key="description">椭圆方程是研究椭圆性质的基础</data>
+    </edge>
+    <edge source="K67" target="K68">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.6</data>
+      <data key="description">椭圆性质与双曲线对比</data>
+    </edge>
+    <edge source="K68" target="K69">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.9</data>
+      <data key="description">双曲线方程是研究性质的基础</data>
+    </edge>
+    <edge source="K66" target="K70">
+      <data key="relation">RELATED_TO</data>
+      <data key="weight">0.5</data>
+      <data key="description">椭圆与抛物线同属圆锥曲线</data>
+    </edge>
+    <edge source="K70" target="K71">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.9</data>
+      <data key="description">抛物线方程是研究性质的基础</data>
+    </edge>
+    <edge source="K67" target="K72">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.8</data>
+      <data key="description">椭圆性质是直线与圆锥曲线的基础</data>
+    </edge>
+    <edge source="K71" target="K72">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.7</data>
+      <data key="description">抛物线性质与直线抛物线综合相关</data>
+    </edge>
+    <edge source="K73" target="K74">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.8</data>
+      <data key="description">数列概念是等差数列的基础</data>
+    </edge>
+    <edge source="K74" target="K75">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.6</data>
+      <data key="description">等差与等比数列方法类比</data>
+    </edge>
+    <edge source="K75" target="K76">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.8</data>
+      <data key="description">等比数列前n项和涉及错位相减</data>
+    </edge>
+    <edge source="K77" target="K78">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.9</data>
+      <data key="description">导数概念是几何意义的基础</data>
+    </edge>
+    <edge source="K78" target="K79">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.7</data>
+      <data key="description">几何意义与导数公式相关</data>
+    </edge>
+    <edge source="K79" target="K80">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.9</data>
+      <data key="description">基本导数公式是复合求导的基础</data>
+    </edge>
+    <edge source="K80" target="K81">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.9</data>
+      <data key="description">求导法则是用导数研究单调性的基础</data>
+    </edge>
+    <edge source="K81" target="K82">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.9</data>
+      <data key="description">单调性是研究极值的基础</data>
+    </edge>
+    <edge source="K82" target="K83">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.9</data>
+      <data key="description">极值是求最值的基础</data>
+    </edge>
+    <edge source="K84" target="K85">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.9</data>
+      <data key="description">计数原理是排列的基础</data>
+    </edge>
+    <edge source="K85" target="K86">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.7</data>
+      <data key="description">排列与组合紧密关联</data>
+    </edge>
+    <edge source="K86" target="K87">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.8</data>
+      <data key="description">组合是二项式定理的基础</data>
+    </edge>
+    <edge source="K87" target="K86">
+      <data key="relation">DERIVED_FROM</data>
+      <data key="weight">0.7</data>
+      <data key="description">二项式定理由组合数推导</data>
+    </edge>
+    <edge source="K84" target="K88">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.6</data>
+      <data key="description">计数原理是分布列的基础</data>
+    </edge>
+    <edge source="K88" target="K89">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.9</data>
+      <data key="description">分布列是均值方差的基础</data>
+    </edge>
+    <edge source="K53" target="K90">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.6</data>
+      <data key="description">独立性与条件概率相关</data>
+    </edge>
+    <edge source="K90" target="K91">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.8</data>
+      <data key="description">条件概率是独立重复试验的基础</data>
+    </edge>
+    <edge source="K91" target="K92">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.5</data>
+      <data key="description">二项分布与正态分布概念相关</data>
+    </edge>
+    <edge source="K49" target="K93">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.6</data>
+      <data key="description">样本数字特征与回归分析相关</data>
+    </edge>
+    <edge source="K89" target="K93">
+      <data key="relation">APPLIED_IN</data>
+      <data key="weight">0.5</data>
+      <data key="description">均值方差思想用于回归分析</data>
+    </edge>
+    <edge source="K53" target="K91">
+      <data key="relation">RELATED_TO</data>
+      <data key="weight">0.6</data>
+      <data key="description">事件独立性与二项分布相关</data>
+    </edge>
+    <edge source="K92" target="K93">
+      <data key="relation">RELATED_TO</data>
+      <data key="weight">0.4</data>
+      <data key="description">正态分布与回归都是统计推断</data>
+    </edge>
+    <edge source="K13" target="K81">
+      <data key="relation">RELATED_TO</data>
+      <data key="weight">0.7</data>
+      <data key="description">函数单调性可用导数研究,定义法与导数法互通</data>
+    </edge>
+    <edge source="K81" target="K13">
+      <data key="relation">DERIVED_FROM</data>
+      <data key="weight">0.6</data>
+      <data key="description">导数法单调性由单调性定义发展而来</data>
+    </edge>
+    <edge source="K14" target="K83">
+      <data key="relation">RELATED_TO</data>
+      <data key="weight">0.7</data>
+      <data key="description">最值的初等方法与导数方法互通</data>
+    </edge>
+    <edge source="K36" target="K55">
+      <data key="relation">RELATED_TO</data>
+      <data key="weight">0.5</data>
+      <data key="description">平面向量数量积推广到空间</data>
+    </edge>
+    <edge source="K7" target="K83">
+      <data key="relation">APPLIED_IN</data>
+      <data key="weight">0.5</data>
+      <data key="description">基本不等式与导数都可求最值</data>
+    </edge>
+    <edge source="K29" target="K31">
+      <data key="relation">APPLIED_IN</data>
+      <data key="weight">0.6</data>
+      <data key="description">三角函数图象变换与恒等变换综合应用</data>
+    </edge>
+    <edge source="K72" target="K82">
+      <data key="relation">RELATED_TO</data>
+      <data key="weight">0.4</data>
+      <data key="description">解析几何与导数综合常作为压轴题</data>
+    </edge>
+  </graph>
+</graphml>
