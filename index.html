@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="孔孟大模型 · 教育智能体 —— 在线体验学生端与教师端。">
+<title>孔孟大模型 · 教育智能体</title>
+<style>
+  :root {
+    --ink: #19160f;
+    --ink-2: #5b5345;
+    --jade: #4f7a66;
+    --jade-dark: #345042;
+    --jade-light: #eef4f0;
+    --paper: #faf8f3;
+    --card: #ffffff;
+    --border: #e4dccb;
+    --accent: #a8814e;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: "Noto Sans SC", "PingFang SC", "Microsoft YaHei", system-ui, sans-serif;
+    background: var(--paper);
+    background-image: radial-gradient(circle at 1px 1px, rgba(120,100,70,.03) 1px, transparent 0);
+    background-size: 24px 24px;
+    color: var(--ink);
+    min-height: 100vh;
+    line-height: 1.6;
+  }
+  .wrap { max-width: 880px; margin: 0 auto; padding: 48px 20px 64px; }
+  .head { text-align: center; margin-bottom: 40px; }
+  .logo {
+    width: 64px; height: 64px; border-radius: 16px;
+    background: linear-gradient(135deg, var(--jade), var(--jade-dark));
+    color: #fff; display: flex; align-items: center; justify-content: center;
+    font-family: "Noto Serif SC", serif; font-size: 22px; font-weight: 700;
+    margin: 0 auto 18px; box-shadow: 0 8px 24px rgba(47,111,79,.22);
+  }
+  .head h1 { font-size: 28px; font-weight: 700; letter-spacing: 1px; }
+  .head p { color: var(--ink-2); margin-top: 10px; font-size: 15px; }
+  .head .badge {
+    display: inline-block; margin-top: 14px; padding: 5px 14px;
+    background: var(--jade-light); color: var(--jade-dark);
+    border: 1px solid #cfe0d6; border-radius: 20px; font-size: 13px;
+  }
+  .cards { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .card {
+    background: var(--card); border: 1px solid var(--border); border-radius: 16px;
+    padding: 28px 24px; text-decoration: none; color: inherit; display: block;
+    transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+  }
+  .card:hover { transform: translateY(-4px); box-shadow: 0 14px 34px rgba(52,64,48,.12); border-color: var(--jade); }
+  .card .icon { font-size: 30px; margin-bottom: 12px; }
+  .card h2 { font-size: 20px; font-weight: 700; }
+  .card .desc { color: var(--ink-2); font-size: 14px; margin-top: 8px; }
+  .card .cta {
+    display: inline-block; margin-top: 16px; padding: 8px 20px;
+    background: var(--jade); color: #fff; border-radius: 24px; font-size: 14px; font-weight: 600;
+  }
+  .note {
+    margin-top: 32px; padding: 16px 18px; background: #fff8ec;
+    border: 1px solid #ecd9b8; border-radius: 12px; font-size: 13px; color: #6b542e;
+  }
+  .note b { color: #8a6400; }
+  .foot { text-align: center; margin-top: 40px; color: var(--ink-2); font-size: 12px; }
+  .foot a { color: var(--jade); text-decoration: none; }
+  @media (max-width: 560px) {
+    .cards { grid-template-columns: 1fr; }
+    .wrap { padding: 32px 16px 48px; }
+    .head h1 { font-size: 23px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="head">
+    <div class="logo">孔孟</div>
+    <h1>孔孟大模型 · 教育智能体</h1>
+    <p>AI 赋能个性化学习与智能教研 —— 在线体验双端应用</p>
+    <span class="badge">在线演示版 · 需自备大模型 API Key</span>
+  </div>
+
+  <div class="cards">
+    <a class="card" href="学生端/">
+      <div class="icon">🎓</div>
+      <h2>学生端</h2>
+      <div class="desc">AI 个性化学习助手：知识讲解、AI 问答、题目批改、练习诊断、知识图谱。</div>
+      <span class="cta">进入学生端 →</span>
+    </a>
+    <a class="card" href="教师端/">
+      <div class="icon">👩‍🏫</div>
+      <h2>教师端</h2>
+      <div class="desc">智能教研工作台：教案编写、教学 PPT、题目批改、学情分析、易错点分析。</div>
+      <span class="cta">进入教师端 →</span>
+    </a>
+  </div>
+
+  <div class="note">
+    <b>使用说明：</b>在线演示版为浏览器直连大模型，首次使用请在应用「设置」中填入你自己的 API Key（支持通义千问 / DeepSeek / GLM 等）。数据保存在本地浏览器，不会上传。需要完整本地体验，请下载 <a href="installers/" style="color:var(--jade-dark);font-weight:600;">桌面安装包</a>。
+  </div>
+
+  <div class="foot">
+    <a href="https://github.com/Lu-Yu-Zhen/KongMeng-Agent" target="_blank" rel="noopener">GitHub 开源仓库</a> · 开源共创，欢迎参与
+  </div>
+</div>
+</body>
+</html>
