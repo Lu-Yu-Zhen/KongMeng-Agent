@@ -1,0 +1,40 @@
+# ===================== Node.js =====================
+node_modules/
+npm-debug.log*
+yarn-error.log*
+*.tsbuildinfo
+
+# ===================== 构建产物 =====================
+# 学生端构建产物
+学生端/dist/
+学生端/dist-installer/
+学生端/dist-old/
+# 教师端构建产物
+教师端/dist/
+教师端/dist-*/
+
+# ===================== 运行时数据 =====================
+# 教师端运行时数据（备课、学情、组卷等）
+教师端/data/
+# 智能体沙箱运行时数据
+teacher-agent-sandbox/memory/memory-store.json
+teacher-agent-sandbox/sandbox/workspace/
+teacher-agent-sandbox/sandbox/data/
+teacher-agent-sandbox/sandbox/logs/
+
+# ===================== 环境与密钥 =====================
+.env
+.env.local
+.env.*.local
+
+# ===================== 日志 =====================
+*.log
+logs/
+
+# ===================== 系统 / 编辑器 =====================
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*.swo
