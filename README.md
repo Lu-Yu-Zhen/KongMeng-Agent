@@ -73,6 +73,9 @@ npm start          # 启动桌面应用（开发模式）
 
 ## 参与贡献
 
+详细的贡献流程、提交规范与代码规范，请参阅 [CONTRIBUTING.md](CONTRIBUTING.md)。
+
+### 快速开始
 1. `Fork` 本仓库并克隆到本地
 2. 创建特性分支：`git checkout -b feature/xxx`
 3. 提交更改：`git commit -m "feat: 描述"`（遵循 Conventional Commits）
@@ -87,19 +90,6 @@ npm start          # 启动桌面应用（开发模式）
 ### 注意
 1、目前只有高中版本，若有其他学段的想法，都可以参与进来一起完成；
 2、可能有些功能还不完善，也欢迎大家提交Issues或者Pull requests
-
-## 二进制资源说明
-
-> 由于仓库体积与 GitHub 上传限制，部分二进制资源（Logo 图片、安装图标、KaTeX/字体图标字体文件）暂未提交到仓库，稍后补充。以下文件缺失时应用会自动回退：字体图标库有 CDN 回退，Logo 有占位回退，不影响核心功能运行。
-
-缺失的二进制文件包括：
-- `学生端/logo.png`
-- `教师端/教育大模型logo.png`
-- `教师端/build/icon.ico`（构建安装包所需）
-- `教师端/teacher-agent-sandbox/vendor/font-awesome/webfonts/*`（字体图标）
-- `教师端/teacher-agent-sandbox/vendor/katex/fonts/*`（数学公式字体）
-
-补充方式：将本地完整项目中的对应文件复制到仓库对应目录后提交即可。
 
 ## 许可证
 
