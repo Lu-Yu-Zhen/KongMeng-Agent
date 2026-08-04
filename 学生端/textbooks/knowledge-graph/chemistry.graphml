@@ -1,0 +1,2536 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+  <key id="name" attr.name="name" attr.type="string" for="node"/>
+  <key id="type" attr.name="type" attr.type="string" for="node"/>
+  <key id="subject" attr.name="subject" attr.type="string" for="node"/>
+  <key id="module" attr.name="module" attr.type="string" for="node"/>
+  <key id="chapter" attr.name="chapter" attr.type="string" for="node"/>
+  <key id="difficulty" attr.name="difficulty" attr.type="int" for="node"/>
+  <key id="description" attr.name="description" attr.type="string" for="node"/>
+  <key id="keywords" attr.name="keywords" attr.type="string" for="node"/>
+  <key id="exam_type" attr.name="exam_type" attr.type="string" for="node"/>
+  <key id="importance" attr.name="importance" attr.type="int" for="node"/>
+  <key id="textbook_source" attr.name="textbook_source" attr.type="string" for="node"/>
+  <key id="relation" attr.name="relation" attr.type="string" for="edge"/>
+  <key id="weight" attr.name="weight" attr.type="double" for="edge"/>
+  <key id="description" attr.name="description" attr.type="string" for="edge"/>
+  <graph id="G" edgedefault="directed">
+    <node id="M1">
+      <data key="name">必修第一册(无机基础)</data>
+      <data key="type">Module</data>
+      <data key="subject">化学</data>
+      <data key="description">物质变化、钠铁等元素化合物、物质结构与元素周期律。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="module">必修第一册(无机基础)</data>
+      <data key="chapter"/>
+      <data key="textbook_source"/>
+    </node>
+    <node id="M2">
+      <data key="name">必修第二册(反应与有机)</data>
+      <data key="type">Module</data>
+      <data key="subject">化学</data>
+      <data key="description">化学反应与能量、有机化合物、化学与可持续发展。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="module">必修第二册(反应与有机)</data>
+      <data key="chapter"/>
+      <data key="textbook_source"/>
+    </node>
+    <node id="M3">
+      <data key="name">选择性必修1(化学反应原理)</data>
+      <data key="type">Module</data>
+      <data key="subject">化学</data>
+      <data key="description">反应热、反应速率、化学平衡、水溶液离子平衡、电化学。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="module">选择性必修1(化学反应原理)</data>
+      <data key="chapter"/>
+      <data key="textbook_source"/>
+    </node>
+    <node id="M4">
+      <data key="name">选择性必修2(物质结构与性质)</data>
+      <data key="type">Module</data>
+      <data key="subject">化学</data>
+      <data key="description">原子结构、化学键与分子结构、晶体结构。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="module">选择性必修2(物质结构与性质)</data>
+      <data key="chapter"/>
+      <data key="textbook_source"/>
+    </node>
+    <node id="M5">
+      <data key="name">选择性必修3(有机化学基础)</data>
+      <data key="type">Module</data>
+      <data key="subject">化学</data>
+      <data key="description">有机物结构特点、烃、烃的衍生物、生物大分子与合成高分子。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="module">选择性必修3(有机化学基础)</data>
+      <data key="chapter"/>
+      <data key="textbook_source"/>
+    </node>
+    <node id="C1">
+      <data key="name">物质及其变化</data>
+      <data key="type">Chapter</data>
+      <data key="subject">化学</data>
+      <data key="module">必修第一册(无机基础)</data>
+      <data key="chapter">物质及其变化</data>
+      <data key="description">物质分类、转化、离子反应、氧化还原反应。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="textbook_source">必修第一册</data>
+    </node>
+    <node id="C2">
+      <data key="name">钠及其化合物</data>
+      <data key="type">Chapter</data>
+      <data key="subject">化学</data>
+      <data key="module">必修第一册(无机基础)</data>
+      <data key="chapter">钠及其化合物</data>
+      <data key="description">钠单质、氧化钠过氧化钠、碳酸钠碳酸氢钠、焰色试验。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="textbook_source">必修第一册</data>
+    </node>
+    <node id="C3">
+      <data key="name">铁金属材料</data>
+      <data key="type">Chapter</data>
+      <data key="subject">化学</data>
+      <data key="module">必修第一册(无机基础)</data>
+      <data key="chapter">铁金属材料</data>
+      <data key="description">铁单质、铁的氧化物与氢氧化物、铁盐亚铁盐转化、合金。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="textbook_source">必修第一册</data>
+    </node>
+    <node id="C4">
+      <data key="name">物质结构 元素周期律</data>
+      <data key="type">Chapter</data>
+      <data key="subject">化学</data>
+      <data key="module">必修第一册(无机基础)</data>
+      <data key="chapter">物质结构 元素周期律</data>
+      <data key="description">原子结构、核外电子排布、元素周期表与周期律、化学键。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="textbook_source">必修第一册</data>
+    </node>
+    <node id="C5">
+      <data key="name">化学反应与能量</data>
+      <data key="type">Chapter</data>
+      <data key="subject">化学</data>
+      <data key="module">必修第二册(反应与有机)</data>
+      <data key="chapter">化学反应与能量</data>
+      <data key="description">化学反应能量变化、化学能与热能电能、反应速率初步。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="textbook_source">必修第二册</data>
+    </node>
+    <node id="C6">
+      <data key="name">有机化合物</data>
+      <data key="type">Chapter</data>
+      <data key="subject">化学</data>
+      <data key="module">必修第二册(反应与有机)</data>
+      <data key="chapter">有机化合物</data>
+      <data key="description">甲烷、乙烯、苯、乙醇、乙酸、基本营养物质。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="textbook_source">必修第二册</data>
+    </node>
+    <node id="C7">
+      <data key="name">化学与可持续发展</data>
+      <data key="type">Chapter</data>
+      <data key="subject">化学</data>
+      <data key="module">必修第二册(反应与有机)</data>
+      <data key="chapter">化学与可持续发展</data>
+      <data key="description">自然资源开发利用、化学品合成与环境保护。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="textbook_source">必修第二册</data>
+    </node>
+    <node id="C8">
+      <data key="name">化学反应热</data>
+      <data key="type">Chapter</data>
+      <data key="subject">化学</data>
+      <data key="module">选择性必修1(化学反应原理)</data>
+      <data key="chapter">化学反应热</data>
+      <data key="description">反应热焓变、热化学方程式、盖斯定律。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="textbook_source">选择性必修1</data>
+    </node>
+    <node id="C9">
+      <data key="name">化学反应速率</data>
+      <data key="type">Chapter</data>
+      <data key="subject">化学</data>
+      <data key="module">选择性必修1(化学反应原理)</data>
+      <data key="chapter">化学反应速率</data>
+      <data key="description">反应速率概念计算、影响因素、速率方程与催化剂。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="textbook_source">选择性必修1</data>
+    </node>
+    <node id="C10">
+      <data key="name">化学平衡</data>
+      <data key="type">Chapter</data>
+      <data key="subject">化学</data>
+      <data key="module">选择性必修1(化学反应原理)</data>
+      <data key="chapter">化学平衡</data>
+      <data key="description">平衡状态、平衡常数、平衡移动、等效平衡。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="textbook_source">选择性必修1</data>
+    </node>
+    <node id="C11">
+      <data key="name">水溶液中的离子反应与平衡</data>
+      <data key="type">Chapter</data>
+      <data key="subject">化学</data>
+      <data key="module">选择性必修1(化学反应原理)</data>
+      <data key="chapter">水溶液中的离子反应与平衡</data>
+      <data key="description">弱电解质电离、水电离、pH、盐类水解、溶解平衡。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="textbook_source">选择性必修1</data>
+    </node>
+    <node id="C12">
+      <data key="name">电池与电解池(电化学)</data>
+      <data key="type">Chapter</data>
+      <data key="subject">化学</data>
+      <data key="module">选择性必修1(化学反应原理)</data>
+      <data key="chapter">电池与电解池(电化学)</data>
+      <data key="description">原电池原理、化学电源、电解原理及应用、金属腐蚀防护。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="textbook_source">选择性必修1</data>
+    </node>
+    <node id="C13">
+      <data key="name">原子结构与元素性质</data>
+      <data key="type">Chapter</data>
+      <data key="subject">化学</data>
+      <data key="module">选择性必修2(物质结构与性质)</data>
+      <data key="chapter">原子结构与元素性质</data>
+      <data key="description">构造原理、核外电子排布、周期表分区、电离能电负性。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="textbook_source">选择性必修2</data>
+    </node>
+    <node id="C14">
+      <data key="name">化学键与分子结构</data>
+      <data key="type">Chapter</data>
+      <data key="subject">化学</data>
+      <data key="module">选择性必修2(物质结构与性质)</data>
+      <data key="chapter">化学键与分子结构</data>
+      <data key="description">共价键类型与参数、VSEPR与杂化、分子极性与分子间作用力。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="textbook_source">选择性必修2</data>
+    </node>
+    <node id="C15">
+      <data key="name">晶体结构</data>
+      <data key="type">Chapter</data>
+      <data key="subject">化学</data>
+      <data key="module">选择性必修2(物质结构与性质)</data>
+      <data key="chapter">晶体结构</data>
+      <data key="description">晶体常识、离子晶体、原子晶体、分子晶体、金属晶体。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="textbook_source">选择性必修2</data>
+    </node>
+    <node id="C16">
+      <data key="name">有机化合物的结构特点</data>
+      <data key="type">Chapter</data>
+      <data key="subject">化学</data>
+      <data key="module">选择性必修3(有机化学基础)</data>
+      <data key="chapter">有机化合物的结构特点</data>
+      <data key="description">有机物分类、官能团、命名、同分异构体。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="textbook_source">选择性必修3</data>
+    </node>
+    <node id="C17">
+      <data key="name">烃</data>
+      <data key="type">Chapter</data>
+      <data key="subject">化学</data>
+      <data key="module">选择性必修3(有机化学基础)</data>
+      <data key="chapter">烃</data>
+      <data key="description">烷烃、烯烃、炔烃、苯及芳香烃、石油煤加工。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="textbook_source">选择性必修3</data>
+    </node>
+    <node id="C18">
+      <data key="name">烃的衍生物</data>
+      <data key="type">Chapter</data>
+      <data key="subject">化学</data>
+      <data key="module">选择性必修3(有机化学基础)</data>
+      <data key="chapter">烃的衍生物</data>
+      <data key="description">卤代烃、醇、酚、醛、羧酸、酯、有机合成。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="textbook_source">选择性必修3</data>
+    </node>
+    <node id="C19">
+      <data key="name">生物大分子与合成高分子</data>
+      <data key="type">Chapter</data>
+      <data key="subject">化学</data>
+      <data key="module">选择性必修3(有机化学基础)</data>
+      <data key="chapter">生物大分子与合成高分子</data>
+      <data key="description">糖类、蛋白质核酸、合成高分子化合物。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="textbook_source">选择性必修3</data>
+    </node>
+    <node id="K1">
+      <data key="name">物质的分类</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">化学</data>
+      <data key="module">必修第一册(无机基础)</data>
+      <data key="chapter">物质及其变化</data>
+      <data key="difficulty">2</data>
+      <data key="description">掌握物质的简单分类(纯净物与混合物、单质与化合物、酸碱盐氧化物等),理解分类法的意义。</data>
+      <data key="keywords">分类,纯净物,混合物,单质,化合物,酸碱盐氧化物</data>
+      <data key="exam_type">选择题,分类判断</data>
+      <data key="importance">3</data>
+      <data key="textbook_source">必修第一册</data>
+    </node>
+    <node id="K2">
+      <data key="name">物质的转化</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">化学</data>
+      <data key="module">必修第一册(无机基础)</data>
+      <data key="chapter">物质及其变化</data>
+      <data key="difficulty">2</data>
+      <data key="description">理解物质转化的关系(无机反应基本类型),掌握酸碱盐氧化物间的转化规律。</data>
+      <data key="keywords">物质转化,反应类型,四类基本反应,转化关系</data>
+      <data key="exam_type">选择题,转化关系</data>
+      <data key="importance">3</data>
+      <data key="textbook_source">必修第一册</data>
+    </node>
+    <node id="K3">
+      <data key="name">离子反应</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">化学</data>
+      <data key="module">必修第一册(无机基础)</data>
+      <data key="chapter">物质及其变化</data>
+      <data key="difficulty">4</data>
+      <data key="description">理解电解质与非电解质概念,掌握离子反应发生的条件(生成沉淀、气体、水等)。</data>
+      <data key="keywords">离子反应,电解质,非电解质,复分解,沉淀气体水</data>
+      <data key="exam_type">选择题,离子共存</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">必修第一册</data>
+    </node>
+    <node id="K4">
+      <data key="name">离子方程式</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">化学</data>
+      <data key="module">必修第一册(无机基础)</data>
+      <data key="chapter">物质及其变化</data>
+      <data key="difficulty">4</data>
+      <data key="description">掌握离子方程式的书写步骤与正误判断,理解离子方程式表示的意义。</data>
+      <data key="keywords">离子方程式,书写步骤,正误判断,拆分规则</data>
+      <data key="exam_type">选择题,书写离子方程式</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">必修第一册</data>
+    </node>
+    <node id="K5">
+      <data key="name">氧化还原反应</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">化学</data>
+      <data key="module">必修第一册(无机基础)</data>
+      <data key="chapter">物质及其变化</data>
+      <data key="difficulty">5</data>
+      <data key="description">理解氧化还原反应的本质(电子转移)与特征(化合价变化),掌握双线桥与单线桥法。</data>
+      <data key="keywords">氧化还原,电子转移,化合价,氧化反应还原反应</data>
+      <data key="exam_type">选择题,氧化还原分析</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">必修第一册</data>
+    </node>
+    <node id="K6">
+      <data key="name">氧化剂与还原剂</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">化学</data>
+      <data key="module">必修第一册(无机基础)</data>
+      <data key="chapter">物质及其变化</data>
+      <data key="difficulty">4</data>
+      <data key="description">理解氧化剂与还原剂的概念,掌握常见的氧化剂与还原剂及氧化还原反应的规律。</data>
+      <data key="keywords">氧化剂,还原剂,氧化性还原性,常见试剂</data>
+      <data key="exam_type">选择题,判断题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">必修第一册</data>
+    </node>
+    <node id="K7">
+      <data key="name">钠的单质</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">化学</data>
+      <data key="module">必修第一册(无机基础)</data>
+      <data key="chapter">钠及其化合物</data>
+      <data key="difficulty">3</data>
+      <data key="description">掌握钠的物理性质与化学性质(与水、氧气反应),理解钠的强还原性及保存方法。</data>
+      <data key="keywords">钠,物理性质,与水反应,与氧气反应,还原性</data>
+      <data key="exam_type">选择题,实验题,钠的性质</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">必修第一册</data>
+    </node>
+    <node id="K8">
+      <data key="name">氧化钠与过氧化钠</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">化学</data>
+      <data key="module">必修第一册(无机基础)</data>
+      <data key="chapter">钠及其化合物</data>
+      <data key="difficulty">4</data>
+      <data key="description">掌握Na2O与Na2O2的性质差异,理解过氧化钠与水及二氧化碳反应的特殊性(供氧剂)。</data>
+      <data key="keywords">氧化钠,过氧化钠,过氧离子,供氧剂,反应</data>
+      <data key="exam_type">选择题,计算题,Na2O2反应</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">必修第一册</data>
+    </node>
+    <node id="K9">
+      <data key="name">碳酸钠与碳酸氢钠</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">化学</data>
+      <data key="module">必修第一册(无机基础)</data>
+      <data key="chapter">钠及其化合物</data>
+      <data key="difficulty">4</data>
+      <data key="description">掌握Na2CO3与NaHCO3的性质差异(溶解度、热稳定性、与酸反应),理解相互转化。</data>
+      <data key="keywords">碳酸钠,碳酸氢钠,溶解度,热稳定性,转化</data>
+      <data key="exam_type">选择题,计算题,除杂鉴别</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">必修第一册</data>
+    </node>
+    <node id="K10">
+      <data key="name">焰色试验</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">化学</data>
+      <data key="module">必修第一册(无机基础)</data>
+      <data key="chapter">钠及其化合物</data>
+      <data key="difficulty">2</data>
+      <data key="description">掌握焰色试验的操作方法与现象(钠黄色、钾紫色),理解其用于鉴别某些金属离子。</data>
+      <data key="keywords">焰色试验,钠黄色,钾紫色,鉴别,蓝色钴玻璃</data>
+      <data key="exam_type">选择题,实验鉴别</data>
+      <data key="importance">3</data>
+      <data key="textbook_source">必修第一册</data>
+    </node>
+    <node id="K11">
+      <data key="name">钠的存在与用途</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">化学</data>
+      <data key="module">必修第一册(无机基础)</data>
+      <data key="chapter">钠及其化合物</data>
+      <data key="difficulty">2</data>
+      <data key="description">了解钠在自然界以化合态存在(主要NaCl),理解钠的用途(制取钠化合物、电光源)。</data>
+      <data key="keywords">钠,化合态,用途,钠灯,制取</data>
+      <data key="exam_type">选择题,概念</data>
+      <data key="importance">2</data>
+      <data key="textbook_source">必修第一册</data>
+    </node>
+    <node id="K12">
+      <data key="name">铁的单质</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">化学</data>
+      <data key="module">必修第一册(无机基础)</data>
+      <data key="chapter">铁金属材料</data>
+      <data key="difficulty">2</data>
+      <data key="description">掌握铁的物理性质与化学性质(与氧气、氯气、水蒸气反应),理解铁的变价特征。</data>
+      <data key="keywords">铁,物理性质,化学性质,变价,与水蒸气反应</data>
+      <data key="exam_type">选择题,铁的性质</data>
+      <data key="importance">3</data>
+      <data key="textbook_source">必修第一册</data>
+    </node>
+    <node id="K13">
+      <data key="name">铁的氧化物</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">化学</data>
+      <data key="module">必修第一册(无机基础)</data>
+      <data key="chapter">铁金属材料</data>
+      <data key="difficulty">3</data>
+      <data key="description">掌握FeO、Fe2O3、Fe3O4的性质与颜色,理解它们与酸的反应及用途。</data>
+      <data key="keywords">铁的氧化物,FeO,Fe2O3,Fe3O4,颜色,用途</data>
+      <data key="exam_type">选择题,氧化物性质</data>
+      <data key="importance">3</data>
+      <data key="textbook_source">必修第一册</data>
+    </node>
+    <node id="K14">
+      <data key="name">铁的氢氧化物</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">化学</data>
+      <data key="module">必修第一册(无机基础)</data>
+      <data key="chapter">铁金属材料</data>
+      <data key="difficulty">3</data>
+      <data key="description">掌握Fe(OH)2与Fe(OH)3的制备、颜色变化(白色到灰绿色到红褐色)及性质。</data>
+      <data key="keywords">氢氧化亚铁,氢氧化铁,颜色变化,制备,氧化</data>
+      <data key="exam_type">选择题,实验题,Fe(OH)2制备</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">必修第一册</data>
+    </node>
+    <node id="K15">
+      <data key="name">铁盐与亚铁盐的相互转化</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">化学</data>
+      <data key="module">必修第一册(无机基础)</data>
+      <data key="chapter">铁金属材料</data>
+      <data key="difficulty">5</data>
+      <data key="description">掌握Fe2+与Fe3+的检验方法(KSCN)及相互转化条件(氧化剂与还原剂),理解守恒法计算。</data>
+      <data key="keywords">铁盐,亚铁盐,Fe2+,Fe3+,KSCN检验,相互转化</data>
+      <data key="exam_type">综合题,推断题,Fe2+Fe3+转化</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">必修第一册</data>
+    </node>
+    <node id="K16">
+      <data key="name">合金与金属材料</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">化学</data>
+      <data key="module">必修第一册(无机基础)</data>
+      <data key="chapter">铁金属材料</data>
+      <data key="difficulty">2</data>
+      <data key="description">理解合金的概念与特性(硬度大、熔点低),了解常见合金(钢、黄铜、硬铝)及新型材料。</data>
+      <data key="keywords">合金,硬度,熔点,钢,黄铜,硬铝,新型材料</data>
+      <data key="exam_type">选择题,概念</data>
+      <data key="importance">2</data>
+      <data key="textbook_source">必修第一册</data>
+    </node>
+    <node id="K17">
+      <data key="name">原子结构</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">化学</data>
+      <data key="module">必修第一册(无机基础)</data>
+      <data key="chapter">物质结构 元素周期律</data>
+      <data key="difficulty">3</data>
+      <data key="description">理解原子的构成(质子、中子、电子),掌握质子数、中子数、质量数、核电荷数的关系。</data>
+      <data key="keywords">原子结构,质子,中子,电子,质量数,核电荷数</data>
+      <data key="exam_type">选择题,原子结构计算</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">必修第一册</data>
+    </node>
+    <node id="K18">
+      <data key="name">核外电子排布(前18号)</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">化学</data>
+      <data key="module">必修第一册(无机基础)</data>
+      <data key="chapter">物质结构 元素周期律</data>
+      <data key="difficulty">3</data>
+      <data key="description">掌握核外电子分层排布规律(能量最低原理、每层最多2n的平方个等),能书写前18号元素原子结构示意图。</data>
+      <data key="keywords">核外电子排布,KLM层,原子结构示意图,2n平方</data>
+      <data key="exam_type">选择题,画结构示意图</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">必修第一册</data>
+    </node>
+    <node id="K19">
+      <data key="name">元素周期表</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">化学</data>
+      <data key="module">必修第一册(无机基础)</data>
+      <data key="chapter">物质结构 元素周期律</data>
+      <data key="difficulty">4</data>
+      <data key="description">掌握元素周期表的结构(周期、族),理解周期序与族序数与电子层、价电子的关系。</data>
+      <data key="keywords">元素周期表,周期,族,主族副族,周期序</data>
+      <data key="exam_type">选择题,周期表结构</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">必修第一册</data>
+    </node>
+    <node id="K20">
+      <data key="name">元素周期律</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">化学</data>
+      <data key="module">必修第一册(无机基础)</data>
+      <data key="chapter">物质结构 元素周期律</data>
+      <data key="difficulty">4</data>
+      <data key="description">理解元素周期律(随原子序数递增元素性质呈周期性变化),掌握原子半径、化合价、金属性非金属性的递变规律。</data>
+      <data key="keywords">元素周期律,原子半径,化合价,金属性非金属性,递变</data>
+      <data key="exam_type">选择题,推断题,周期律</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">必修第一册</data>
+    </node>
+    <node id="K21">
+      <data key="name">化学键(离子键与共价键)</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">化学</data>
+      <data key="module">必修第一册(无机基础)</data>
+      <data key="chapter">物质结构 元素周期律</data>
+      <data key="difficulty">4</data>
+      <data key="description">理解离子键与共价键的形成与本质,掌握电子式表示物质形成过程,区分离子化合物与共价化合物。</data>
+      <data key="keywords">离子键,共价键,电子式,离子化合物,共价化合物</data>
+      <data key="exam_type">选择题,电子式书写</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">必修第一册</data>
+    </node>
+    <node id="K22">
+      <data key="name">化学反应与能量变化</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">化学</data>
+      <data key="module">必修第二册(反应与有机)</data>
+      <data key="chapter">化学反应与能量</data>
+      <data key="difficulty">3</data>
+      <data key="description">理解化学反应中能量变化(吸热与放热)的本质(反应物总能量与生成物总能量的相对大小)。</data>
+      <data key="keywords">能量变化,放热反应,吸热反应,反应物生成物总能量</data>
+      <data key="exam_type">选择题,能量变化判断</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">必修第二册</data>
+    </node>
+    <node id="K23">
+      <data key="name">化学能与热能</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">化学</data>
+      <data key="module">必修第二册(反应与有机)</data>
+      <data key="chapter">化学反应与能量</data>
+      <data key="difficulty">2</data>
+      <data key="description">理解化学能与热能的转化,了解中和热测定实验及燃料的燃烧。</data>
+      <data key="keywords">化学能热能,中和热,燃烧,放热吸热</data>
+      <data key="exam_type">选择题,实验题</data>
+      <data key="importance">3</data>
+      <data key="textbook_source">必修第二册</data>
+    </node>
+    <node id="K24">
+      <data key="name">化学能与电能(原电池初步)</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">化学</data>
+      <data key="module">必修第二册(反应与有机)</data>
+      <data key="chapter">化学反应与能量</data>
+      <data key="difficulty">4</data>
+      <data key="description">理解原电池的原理(化学能转化为电能),掌握原电池的构成条件与电极反应。</data>
+      <data key="keywords">原电池,化学能电能,电极反应,构成条件</data>
+      <data key="exam_type">选择题,实验题,原电池</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">必修第二册</data>
+    </node>
+    <node id="K25">
+      <data key="name">化学反应速率(初步)</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">化学</data>
+      <data key="module">必修第二册(反应与有机)</data>
+      <data key="chapter">化学反应与能量</data>
+      <data key="difficulty">3</data>
+      <data key="description">初步了解化学反应速率的概念与表示方法,了解影响反应速率的因素。</data>
+      <data key="keywords">反应速率,表示方法,影响因素,初步</data>
+      <data key="exam_type">选择题,概念</data>
+      <data key="importance">3</data>
+      <data key="textbook_source">必修第二册</data>
+    </node>
+    <node id="K26">
+      <data key="name">甲烷</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">化学</data>
+      <data key="module">必修第二册(反应与有机)</data>
+      <data key="chapter">有机化合物</data>
+      <data key="difficulty">3</data>
+      <data key="description">掌握甲烷的分子结构(正四面体)与化学性质(取代反应、氧化反应、受热分解)。</data>
+      <data key="keywords">甲烷,正四面体,取代反应,氧化反应,燃烧</data>
+      <data key="exam_type">选择题,甲烷性质</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">必修第二册</data>
+    </node>
+    <node id="K27">
+      <data key="name">乙烯</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">化学</data>
+      <data key="module">必修第二册(反应与有机)</data>
+      <data key="chapter">有机化合物</data>
+      <data key="difficulty">4</data>
+      <data key="description">掌握乙烯的分子结构(平面型、碳碳双键)与化学性质(加成反应、聚合反应、氧化反应)。</data>
+      <data key="keywords">乙烯,碳碳双键,加成反应,聚合反应,加聚</data>
+      <data key="exam_type">选择题,计算题,乙烯性质</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">必修第二册</data>
+    </node>
+    <node id="K28">
+      <data key="name">苯</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">化学</data>
+      <data key="module">必修第二册(反应与有机)</data>
+      <data key="chapter">有机化合物</data>
+      <data key="difficulty">4</data>
+      <data key="description">掌握苯的分子结构(环状、特殊键)与化学性质(取代、加成反应的特殊性)。</data>
+      <data key="keywords">苯,苯环结构,取代反应,加成反应,特殊键</data>
+      <data key="exam_type">选择题,苯的性质</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">必修第二册</data>
+    </node>
+    <node id="K29">
+      <data key="name">乙醇</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">化学</data>
+      <data key="module">必修第二册(反应与有机)</data>
+      <data key="chapter">有机化合物</data>
+      <data key="difficulty">3</data>
+      <data key="description">掌握乙醇的分子结构(羟基官能团)与化学性质(与钠反应、消去反应、氧化反应)。</data>
+      <data key="keywords">乙醇,羟基,与钠反应,消去反应,氧化反应</data>
+      <data key="exam_type">选择题,计算题,乙醇性质</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">必修第二册</data>
+    </node>
+    <node id="K30">
+      <data key="name">乙酸</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">化学</data>
+      <data key="module">必修第二册(反应与有机)</data>
+      <data key="chapter">有机化合物</data>
+      <data key="difficulty">3</data>
+      <data key="description">掌握乙酸的分子结构(羧基官能团)与酸性及酯化反应原理与条件。</data>
+      <data key="keywords">乙酸,羧基,酸性,酯化反应,可逆反应</data>
+      <data key="exam_type">选择题,实验题,酯化反应</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">必修第二册</data>
+    </node>
+    <node id="K31">
+      <data key="name">基本营养物质</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">化学</data>
+      <data key="module">必修第二册(反应与有机)</data>
+      <data key="chapter">有机化合物</data>
+      <data key="difficulty">3</data>
+      <data key="description">了解糖类(葡萄糖、淀粉、纤维素)、油脂、蛋白质的组成、性质及在人体中的作用。</data>
+      <data key="keywords">营养物质,糖类,油脂,蛋白质,葡萄糖,淀粉</data>
+      <data key="exam_type">选择题,概念</data>
+      <data key="importance">3</data>
+      <data key="textbook_source">必修第二册</data>
+    </node>
+    <node id="K32">
+      <data key="name">化学与自然资源开发利用</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">化学</data>
+      <data key="module">必修第二册(反应与有机)</data>
+      <data key="chapter">化学与可持续发展</data>
+      <data key="difficulty">2</data>
+      <data key="description">了解海水资源的综合利用(海水提溴、提镁、提碘)、金属冶炼的方法。</data>
+      <data key="keywords">自然资源,海水提溴提镁提碘,金属冶炼,综合利用</data>
+      <data key="exam_type">选择题,工业流程</data>
+      <data key="importance">3</data>
+      <data key="textbook_source">必修第二册</data>
+    </node>
+    <node id="K33">
+      <data key="name">化学品的合成与环境保护</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">化学</data>
+      <data key="module">必修第二册(反应与有机)</data>
+      <data key="chapter">化学与可持续发展</data>
+      <data key="difficulty">2</data>
+      <data key="description">了解化肥、农药等化学品的合理使用及大气、水体污染的化学治理方法。</data>
+      <data key="keywords">化学品,化肥农药,环境保护,大气水污染,治理</data>
+      <data key="exam_type">选择题,概念</data>
+      <data key="importance">2</data>
+      <data key="textbook_source">必修第二册</data>
+    </node>
+    <node id="K34">
+      <data key="name">反应热与焓变</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">化学</data>
+      <data key="module">选择性必修1(化学反应原理)</data>
+      <data key="chapter">化学反应热</data>
+      <data key="difficulty">4</data>
+      <data key="description">理解反应热(焓变deltaH)的概念,掌握放热反应与吸热反应的判断及deltaH的正负号。</data>
+      <data key="keywords">反应热,焓变,deltaH,放热吸热,正负号</data>
+      <data key="exam_type">选择题,反应热判断</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">选择性必修1</data>
+    </node>
+    <node id="K35">
+      <data key="name">热化学方程式</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">化学</data>
+      <data key="module">选择性必修1(化学反应原理)</data>
+      <data key="chapter">化学反应热</data>
+      <data key="difficulty">4</data>
+      <data key="description">掌握热化学方程式的书写规则(注明状态、聚集状态、deltaH及单位、化学计量数含义)。</data>
+      <data key="keywords">热化学方程式,书写规则,聚集状态,化学计量数,deltaH</data>
+      <data key="exam_type">选择题,书写热化学方程式</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">选择性必修1</data>
+    </node>
+    <node id="K36">
+      <data key="name">盖斯定律</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">化学</data>
+      <data key="module">选择性必修1(化学反应原理)</data>
+      <data key="chapter">化学反应热</data>
+      <data key="difficulty">4</data>
+      <data key="description">理解盖斯定律(反应总热量只与始终态有关),能利用盖斯定律计算未知反应的反应热。</data>
+      <data key="keywords">盖斯定律,始终态,反应热计算,加和</data>
+      <data key="exam_type">计算题,盖斯定律应用</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">选择性必修1</data>
+    </node>
+    <node id="K37">
+      <data key="name">反应热的计算</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">化学</data>
+      <data key="module">选择性必修1(化学反应原理)</data>
+      <data key="chapter">化学反应热</data>
+      <data key="difficulty">4</data>
+      <data key="description">掌握利用键能计算反应热(反应物键能减生成物键能)及利用盖斯定律的综合计算。</data>
+      <data key="keywords">反应热计算,键能,燃烧热,中和热,盖斯定律</data>
+      <data key="exam_type">计算题,反应热综合计算</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">选择性必修1</data>
+    </node>
+    <node id="K38">
+      <data key="name">化学反应速率的概念与计算</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">化学</data>
+      <data key="module">选择性必修1(化学反应原理)</data>
+      <data key="chapter">化学反应速率</data>
+      <data key="difficulty">3</data>
+      <data key="description">掌握化学反应速率的定义v等于delta c除以delta t及其计算,理解速率的比值等于方程式计量数之比。</data>
+      <data key="keywords">反应速率,delta c除以delta t,计算,计量数之比</data>
+      <data key="exam_type">计算题,速率计算</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">选择性必修1</data>
+    </node>
+    <node id="K39">
+      <data key="name">影响反应速率的因素</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">化学</data>
+      <data key="module">选择性必修1(化学反应原理)</data>
+      <data key="chapter">化学反应速率</data>
+      <data key="difficulty">4</data>
+      <data key="description">掌握浓度、温度、压强、催化剂等因素对反应速率的影响,理解有效碰撞理论解释。</data>
+      <data key="keywords">影响速率,浓度,温度,压强,催化剂,有效碰撞</data>
+      <data key="exam_type">选择题,实验题,速率影响因素</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">选择性必修1</data>
+    </node>
+    <node id="K40">
+      <data key="name">速率常数与反应速率方程</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">化学</data>
+      <data key="module">选择性必修1(化学反应原理)</data>
+      <data key="chapter">化学反应速率</data>
+      <data key="difficulty">4</data>
+      <data key="description">理解速率方程v等于k乘以浓度幂及速率常数k的物理意义与影响因素。</data>
+      <data key="keywords">速率方程,速率常数k,反应级数,浓度幂</data>
+      <data key="exam_type">计算题,速率方程</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">选择性必修1</data>
+    </node>
+    <node id="K41">
+      <data key="name">催化剂与反应速率</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">化学</data>
+      <data key="module">选择性必修1(化学反应原理)</data>
+      <data key="chapter">化学反应速率</data>
+      <data key="difficulty">3</data>
+      <data key="description">理解催化剂改变反应速率的原理(降低活化能),了解催化剂的选择性与特性。</data>
+      <data key="keywords">催化剂,活化能,选择性,改变途径</data>
+      <data key="exam_type">选择题,催化剂原理</data>
+      <data key="importance">3</data>
+      <data key="textbook_source">选择性必修1</data>
+    </node>
+    <node id="K42">
+      <data key="name">化学平衡状态</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">化学</data>
+      <data key="module">选择性必修1(化学反应原理)</data>
+      <data key="chapter">化学平衡</data>
+      <data key="difficulty">4</data>
+      <data key="description">理解可逆反应与化学平衡状态的概念,掌握判断平衡的标志(正逆反应速率相等)。</data>
+      <data key="keywords">化学平衡,可逆反应,平衡状态,正逆速率相等,判断标志</data>
+      <data key="exam_type">选择题,平衡判断</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">选择性必修1</data>
+    </node>
+    <node id="K43">
+      <data key="name">化学平衡常数</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">化学</data>
+      <data key="module">选择性必修1(化学反应原理)</data>
+      <data key="chapter">化学平衡</data>
+      <data key="difficulty">5</data>
+      <data key="description">掌握化学平衡常数K的表达式及其意义,理解K只受温度影响及转化率与K的关系。</data>
+      <data key="keywords">平衡常数,K,表达式,温度,转化率</data>
+      <data key="exam_type">计算题,平衡常数</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">选择性必修1</data>
+    </node>
+    <node id="K44">
+      <data key="name">化学反应的方向</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">化学</data>
+      <data key="module">选择性必修1(化学反应原理)</data>
+      <data key="chapter">化学平衡</data>
+      <data key="difficulty">3</data>
+      <data key="description">理解焓变、熵变及复合判据(deltaG等于deltaH减T乘deltaS)判断反应自发性的方法。</data>
+      <data key="keywords">反应方向,焓变,熵变,deltaG,自发性,复合判据</data>
+      <data key="exam_type">选择题,反应方向判断</data>
+      <data key="importance">3</data>
+      <data key="textbook_source">选择性必修1</data>
+    </node>
+    <node id="K45">
+      <data key="name">化学平衡的移动(勒夏特列原理)</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">化学</data>
+      <data key="module">选择性必修1(化学反应原理)</data>
+      <data key="chapter">化学平衡</data>
+      <data key="difficulty">5</data>
+      <data key="description">掌握浓度、温度、压强对平衡移动的影响,理解勒夏特列原理及平衡移动方向判断。</data>
+      <data key="keywords">平衡移动,勒夏特列原理,浓度温度压强,移动方向</data>
+      <data key="exam_type">选择题,计算题,平衡移动</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">选择性必修1</data>
+    </node>
+    <node id="K46">
+      <data key="name">等效平衡</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">化学</data>
+      <data key="module">选择性必修1(化学反应原理)</data>
+      <data key="chapter">化学平衡</data>
+      <data key="difficulty">5</data>
+      <data key="description">理解等效平衡的概念与判断方法(恒温恒压、恒温恒容),能解决等效平衡问题。</data>
+      <data key="keywords">等效平衡,恒温恒压,恒温恒容,极限转换法</data>
+      <data key="exam_type">综合题,等效平衡</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">选择性必修1</data>
+    </node>
+    <node id="K47">
+      <data key="name">弱电解质的电离</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">化学</data>
+      <data key="module">选择性必修1(化学反应原理)</data>
+      <data key="chapter">水溶液中的离子反应与平衡</data>
+      <data key="difficulty">4</data>
+      <data key="description">理解强电解质与弱电解质的区别,掌握弱酸弱碱的电离平衡及电离常数Ka、Kb。</data>
+      <data key="keywords">弱电解质,电离平衡,电离常数,Ka,Kb,强弱电解质</data>
+      <data key="exam_type">选择题,计算题,电离平衡</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">选择性必修1</data>
+    </node>
+    <node id="K48">
+      <data key="name">水的电离与溶液的酸碱性</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">化学</data>
+      <data key="module">选择性必修1(化学反应原理)</data>
+      <data key="chapter">水溶液中的离子反应与平衡</data>
+      <data key="difficulty">4</data>
+      <data key="description">理解水的电离平衡与水的离子积常数Kw,理解溶液酸碱性与氢离子氢氧根浓度的关系。</data>
+      <data key="keywords">水电离,离子积Kw,酸碱性,氢离子,氢氧根</data>
+      <data key="exam_type">选择题,计算题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">选择性必修1</data>
+    </node>
+    <node id="K49">
+      <data key="name">溶液的pH</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">化学</data>
+      <data key="module">选择性必修1(化学反应原理)</data>
+      <data key="chapter">水溶液中的离子反应与平衡</data>
+      <data key="difficulty">4</data>
+      <data key="description">掌握pH的定义(pH等于负对数氢离子浓度)及计算方法,理解pH与酸碱性强弱的关系。</data>
+      <data key="keywords">pH,定义,计算,负对数,酸碱性,pH试纸</data>
+      <data key="exam_type">计算题,pH计算</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">选择性必修1</data>
+    </node>
+    <node id="K50">
+      <data key="name">盐类的水解</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">化学</data>
+      <data key="module">选择性必修1(化学反应原理)</data>
+      <data key="chapter">水溶液中的离子反应与平衡</data>
+      <data key="difficulty">5</data>
+      <data key="description">理解盐类水解的本质(促进水的电离),掌握水解规律(有弱才水解)及影响因素。</data>
+      <data key="keywords">盐类水解,水解规律,有弱才水解,促进水电离,影响因素</data>
+      <data key="exam_type">选择题,计算题,水解平衡</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">选择性必修1</data>
+    </node>
+    <node id="K51">
+      <data key="name">难溶电解质的溶解平衡</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">化学</data>
+      <data key="module">选择性必修1(化学反应原理)</data>
+      <data key="chapter">水溶液中的离子反应与平衡</data>
+      <data key="difficulty">5</data>
+      <data key="description">理解沉淀溶解平衡与溶度积常数Ksp,掌握沉淀的生成、溶解与转化原理及应用。</data>
+      <data key="keywords">溶解平衡,溶度积Ksp,沉淀生成溶解转化,沉淀转化</data>
+      <data key="exam_type">综合题,溶解平衡Ksp</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">选择性必修1</data>
+    </node>
+    <node id="K52">
+      <data key="name">原电池原理</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">化学</data>
+      <data key="module">选择性必修1(化学反应原理)</data>
+      <data key="chapter">电池与电解池(电化学)</data>
+      <data key="difficulty">5</data>
+      <data key="description">掌握原电池的工作原理(正负极判断、电极反应式书写、电子与离子流向)及构成条件。</data>
+      <data key="keywords">原电池,正负极,电极反应式,电子流向,离子流向</data>
+      <data key="exam_type">选择题,实验题,原电池综合</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">选择性必修1</data>
+    </node>
+    <node id="K53">
+      <data key="name">化学电源</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">化学</data>
+      <data key="module">选择性必修1(化学反应原理)</data>
+      <data key="chapter">电池与电解池(电化学)</data>
+      <data key="difficulty">4</data>
+      <data key="description">了解一次电池、二次电池(蓄电池)与燃料电池的原理及常见化学电源(铅蓄电池、燃料电池)。</data>
+      <data key="keywords">化学电源,一次电池,二次电池,燃料电池,铅蓄电池</data>
+      <data key="exam_type">选择题,化学电源</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">选择性必修1</data>
+    </node>
+    <node id="K54">
+      <data key="name">电解原理</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">化学</data>
+      <data key="module">选择性必修1(化学反应原理)</data>
+      <data key="chapter">电池与电解池(电化学)</data>
+      <data key="difficulty">5</data>
+      <data key="description">掌握电解池的工作原理(阴阳极判断、电极反应、放电顺序)及电解规律。</data>
+      <data key="keywords">电解池,阴阳极,电极反应,放电顺序,电解规律</data>
+      <data key="exam_type">选择题,计算题,电解原理</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">选择性必修1</data>
+    </node>
+    <node id="K55">
+      <data key="name">电解池的应用</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">化学</data>
+      <data key="module">选择性必修1(化学反应原理)</data>
+      <data key="chapter">电池与电解池(电化学)</data>
+      <data key="difficulty">4</data>
+      <data key="description">掌握电镀、电解饱和食盐水(氯碱工业)、电冶金等电解池应用及电极反应式书写。</data>
+      <data key="keywords">电镀,电解食盐水,氯碱工业,电冶金,应用</data>
+      <data key="exam_type">选择题,实验题,电解应用</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">选择性必修1</data>
+    </node>
+    <node id="K56">
+      <data key="name">金属的电化学腐蚀与防护</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">化学</data>
+      <data key="module">选择性必修1(化学反应原理)</data>
+      <data key="chapter">电池与电解池(电化学)</data>
+      <data key="difficulty">4</data>
+      <data key="description">理解金属腐蚀(化学腐蚀与电化学腐蚀)的原理,掌握牺牲阳极与外加电流等防护方法。</data>
+      <data key="keywords">金属腐蚀,电化学腐蚀,吸氧腐蚀析氢腐蚀,防护,牺牲阳极</data>
+      <data key="exam_type">选择题,腐蚀防护</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">选择性必修1</data>
+    </node>
+    <node id="K57">
+      <data key="name">原子核外电子排布(构造原理)</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">化学</data>
+      <data key="module">选择性必修2(物质结构与性质)</data>
+      <data key="chapter">原子结构与元素性质</data>
+      <data key="difficulty">4</data>
+      <data key="description">掌握构造原理与能级顺序(1s2s2p3s3p4s等),能书写1-36号元素基态原子的电子排布式与轨道表示式。</data>
+      <data key="keywords">构造原理,能级,电子排布式,轨道表示式,基态激发态</data>
+      <data key="exam_type">选择题,书写电子排布</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">选择性必修2</data>
+    </node>
+    <node id="K58">
+      <data key="name">原子结构与元素周期表</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">化学</data>
+      <data key="module">选择性必修2(物质结构与性质)</data>
+      <data key="chapter">原子结构与元素性质</data>
+      <data key="difficulty">4</data>
+      <data key="description">理解价电子排布与周期表分区(s、p、d、ds、f区)的关系,能由电子排布推断元素位置。</data>
+      <data key="keywords">价电子,周期表分区,s区p区d区,族,位置推断</data>
+      <data key="exam_type">选择题,推断题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">选择性必修2</data>
+    </node>
+    <node id="K59">
+      <data key="name">元素周期律(原子半径电离能)</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">化学</data>
+      <data key="module">选择性必修2(物质结构与性质)</data>
+      <data key="chapter">原子结构与元素性质</data>
+      <data key="difficulty">4</data>
+      <data key="description">掌握原子半径、第一电离能的递变规律及异常现象(如Be大于B、N大于O),理解其与电子排布的关系。</data>
+      <data key="keywords">原子半径,第一电离能,递变规律,异常,电子排布</data>
+      <data key="exam_type">选择题,周期律</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">选择性必修2</data>
+    </node>
+    <node id="K60">
+      <data key="name">电负性</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">化学</data>
+      <data key="module">选择性必修2(物质结构与性质)</data>
+      <data key="chapter">原子结构与元素性质</data>
+      <data key="difficulty">3</data>
+      <data key="description">理解电负性的概念与递变规律,能用电负性判断元素的吸引电子能力及化学键类型。</data>
+      <data key="keywords">电负性,递变规律,吸引电子,化学键类型判断</data>
+      <data key="exam_type">选择题,电负性应用</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">选择性必修2</data>
+    </node>
+    <node id="K61">
+      <data key="name">共价键的本质与类型</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">化学</data>
+      <data key="module">选择性必修2(物质结构与性质)</data>
+      <data key="chapter">化学键与分子结构</data>
+      <data key="difficulty">4</data>
+      <data key="description">理解共价键的本质(电子云重叠)与类型(sigma键与pi键),掌握配位键概念。</data>
+      <data key="keywords">共价键,电子云重叠,sigma键,pi键,配位键</data>
+      <data key="exam_type">选择题,共价键类型</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">选择性必修2</data>
+    </node>
+    <node id="K62">
+      <data key="name">键参数(键长键能键角)</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">化学</data>
+      <data key="module">选择性必修2(物质结构与性质)</data>
+      <data key="chapter">化学键与分子结构</data>
+      <data key="difficulty">3</data>
+      <data key="description">理解键长、键能、键角等键参数的含义,理解键参数与分子稳定性及空间构型的关系。</data>
+      <data key="keywords">键长,键能,键角,键参数,稳定性,构型</data>
+      <data key="exam_type">选择题,键参数</data>
+      <data key="importance">3</data>
+      <data key="textbook_source">选择性必修2</data>
+    </node>
+    <node id="K63">
+      <data key="name">分子的空间结构(VSEPR模型)</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">化学</data>
+      <data key="module">选择性必修2(物质结构与性质)</data>
+      <data key="chapter">化学键与分子结构</data>
+      <data key="difficulty">5</data>
+      <data key="description">掌握价层电子对互斥(VSEPR)模型预测分子空间构型(直线、平面三角、四面体、三角双锥、八面体)。</data>
+      <data key="keywords">VSEPR,价层电子对,空间构型,直线平面三角四面体</data>
+      <data key="exam_type">选择题,推断分子构型</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">选择性必修2</data>
+    </node>
+    <node id="K64">
+      <data key="name">杂化轨道理论</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">化学</data>
+      <data key="module">选择性必修2(物质结构与性质)</data>
+      <data key="chapter">化学键与分子结构</data>
+      <data key="difficulty">5</data>
+      <data key="description">掌握sp、sp2、sp3杂化轨道类型及与分子空间构型的关系,能判断中心原子的杂化方式。</data>
+      <data key="keywords">杂化轨道,sp,sp2,sp3,杂化方式,构型关系</data>
+      <data key="exam_type">选择题,判断杂化</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">选择性必修2</data>
+    </node>
+    <node id="K65">
+      <data key="name">分子的极性</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">化学</data>
+      <data key="module">选择性必修2(物质结构与性质)</data>
+      <data key="chapter">化学键与分子结构</data>
+      <data key="difficulty">3</data>
+      <data key="description">理解极性键与非极性键,掌握极性分子与非极性分子的判断(键的极性与分子空间对称性)。</data>
+      <data key="keywords">极性键,非极性键,极性分子,非极性分子,对称性</data>
+      <data key="exam_type">选择题,极性判断</data>
+      <data key="importance">3</data>
+      <data key="textbook_source">选择性必修2</data>
+    </node>
+    <node id="K66">
+      <data key="name">分子间作用力与氢键</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">化学</data>
+      <data key="module">选择性必修2(物质结构与性质)</data>
+      <data key="chapter">化学键与分子结构</data>
+      <data key="difficulty">4</data>
+      <data key="description">理解范德华力与氢键的概念及对物质熔沸点的影响,掌握氢键的形成条件与特点。</data>
+      <data key="keywords">范德华力,氢键,熔沸点,形成条件,分子间作用力</data>
+      <data key="exam_type">选择题,氢键判断</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">选择性必修2</data>
+    </node>
+    <node id="K67">
+      <data key="name">晶体的常识</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">化学</data>
+      <data key="module">选择性必修2(物质结构与性质)</data>
+      <data key="chapter">晶体结构</data>
+      <data key="difficulty">2</data>
+      <data key="description">理解晶体与非晶体的区别,掌握晶体的基本特征(自范性、各向异性、固定熔点)及四种晶体类型。</data>
+      <data key="keywords">晶体,非晶体,自范性,各向异性,四种晶体类型</data>
+      <data key="exam_type">选择题,晶体概念</data>
+      <data key="importance">3</data>
+      <data key="textbook_source">选择性必修2</data>
+    </node>
+    <node id="K68">
+      <data key="name">离子晶体</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">化学</data>
+      <data key="module">选择性必修2(物质结构与性质)</data>
+      <data key="chapter">晶体结构</data>
+      <data key="difficulty">3</data>
+      <data key="description">理解离子晶体的结构特点与配位数,掌握离子晶体的物理性质(熔沸点、硬度、溶解性)。</data>
+      <data key="keywords">离子晶体,配位数,NaCl型,CsCl型,熔沸点</data>
+      <data key="exam_type">选择题,离子晶体性质</data>
+      <data key="importance">3</data>
+      <data key="textbook_source">选择性必修2</data>
+    </node>
+    <node id="K69">
+      <data key="name">原子晶体(共价晶体)</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">化学</data>
+      <data key="module">选择性必修2(物质结构与性质)</data>
+      <data key="chapter">晶体结构</data>
+      <data key="difficulty">3</data>
+      <data key="description">理解原子晶体的结构特点(所有原子以共价键结合成空间网状),掌握金刚石、二氧化硅的性质。</data>
+      <data key="keywords">原子晶体,共价键,空间网状,金刚石,二氧化硅</data>
+      <data key="exam_type">选择题,原子晶体</data>
+      <data key="importance">3</data>
+      <data key="textbook_source">选择性必修2</data>
+    </node>
+    <node id="K70">
+      <data key="name">分子晶体</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">化学</data>
+      <data key="module">选择性必修2(物质结构与性质)</data>
+      <data key="chapter">晶体结构</data>
+      <data key="difficulty">2</data>
+      <data key="description">理解分子晶体的结构特点(分子间以分子间作用力结合),掌握分子晶体的物理性质及冰的结构。</data>
+      <data key="keywords">分子晶体,分子间作用力,冰,熔沸点低,干冰</data>
+      <data key="exam_type">选择题,分子晶体</data>
+      <data key="importance">3</data>
+      <data key="textbook_source">选择性必修2</data>
+    </node>
+    <node id="K71">
+      <data key="name">金属晶体</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">化学</data>
+      <data key="module">选择性必修2(物质结构与性质)</data>
+      <data key="chapter">晶体结构</data>
+      <data key="difficulty">3</data>
+      <data key="description">理解金属晶体的结构特点(金属阳离子与自由电子的金属键),理解金属通性与电子气理论。</data>
+      <data key="keywords">金属晶体,金属键,自由电子,电子气理论,金属通性</data>
+      <data key="exam_type">选择题,金属晶体</data>
+      <data key="importance">3</data>
+      <data key="textbook_source">选择性必修2</data>
+    </node>
+    <node id="K72">
+      <data key="name">有机化合物的分类</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">化学</data>
+      <data key="module">选择性必修3(有机化学基础)</data>
+      <data key="chapter">有机化合物的结构特点</data>
+      <data key="difficulty">2</data>
+      <data key="description">掌握有机物按碳骨架(链状、环状)与官能团(烯、炔、醇、醛、酸、酯等)的分类方法。</data>
+      <data key="keywords">有机物分类,碳骨架,官能团,链状环状,烯炔醇醛酸酯</data>
+      <data key="exam_type">选择题,分类判断</data>
+      <data key="importance">3</data>
+      <data key="textbook_source">选择性必修3</data>
+    </node>
+    <node id="K73">
+      <data key="name">有机物中的官能团</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">化学</data>
+      <data key="module">选择性必修3(有机化学基础)</data>
+      <data key="chapter">有机化合物的结构特点</data>
+      <data key="difficulty">3</data>
+      <data key="description">掌握常见官能团(碳碳双键、三键、羟基、醛基、羧基、酯基等)的结构与名称及特征反应。</data>
+      <data key="keywords">官能团,双键,三键,羟基,醛基,羧基,酯基,特征反应</data>
+      <data key="exam_type">选择题,官能团识别</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">选择性必修3</data>
+    </node>
+    <node id="K74">
+      <data key="name">有机化合物的命名</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">化学</data>
+      <data key="module">选择性必修3(有机化学基础)</data>
+      <data key="chapter">有机化合物的结构特点</data>
+      <data key="difficulty">3</data>
+      <data key="description">掌握有机物系统命名法(选主链、编号、写名称)及习惯命名法,能正确命名烷烃及含官能团有机物。</data>
+      <data key="keywords">系统命名,主链,编号,烷烃命名,含官能团命名</data>
+      <data key="exam_type">选择题,命名题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">选择性必修3</data>
+    </node>
+    <node id="K75">
+      <data key="name">同分异构体</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">化学</data>
+      <data key="module">选择性必修3(有机化学基础)</data>
+      <data key="chapter">有机化合物的结构特点</data>
+      <data key="difficulty">5</data>
+      <data key="description">理解同分异构现象与同分异构体的概念,掌握碳链异构、位置异构、官能团异构及书写与计数方法。</data>
+      <data key="keywords">同分异构体,碳链异构,位置异构,官能团异构,计数</data>
+      <data key="exam_type">选择题,书写同分异构体</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">选择性必修3</data>
+    </node>
+    <node id="K76">
+      <data key="name">烷烃</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">化学</data>
+      <data key="module">选择性必修3(有机化学基础)</data>
+      <data key="chapter">烃</data>
+      <data key="difficulty">3</data>
+      <data key="description">掌握烷烃的通式、结构特点(饱和链状)、命名及化学性质(取代反应、氧化燃烧)。</data>
+      <data key="keywords">烷烃,通式,饱和,取代反应,命名,燃烧</data>
+      <data key="exam_type">选择题,计算题,烷烃</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">选择性必修3</data>
+    </node>
+    <node id="K77">
+      <data key="name">烯烃</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">化学</data>
+      <data key="module">选择性必修3(有机化学基础)</data>
+      <data key="chapter">烃</data>
+      <data key="difficulty">4</data>
+      <data key="description">掌握烯烃的通式、结构特点(碳碳双键)及化学性质(加成、加聚、氧化反应)。</data>
+      <data key="keywords">烯烃,双键,加成反应,加聚反应,氧化,马氏规则</data>
+      <data key="exam_type">选择题,计算题,烯烃</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">选择性必修3</data>
+    </node>
+    <node id="K78">
+      <data key="name">炔烃</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">化学</data>
+      <data key="module">选择性必修3(有机化学基础)</data>
+      <data key="chapter">烃</data>
+      <data key="difficulty">3</data>
+      <data key="description">掌握炔烃的通式、结构特点(碳碳三键)及化学性质(加成、氧化反应)。</data>
+      <data key="keywords">炔烃,三键,加成反应,氧化反应,乙炔</data>
+      <data key="exam_type">选择题,炔烃性质</data>
+      <data key="importance">3</data>
+      <data key="textbook_source">选择性必修3</data>
+    </node>
+    <node id="K79">
+      <data key="name">苯及芳香烃</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">化学</data>
+      <data key="module">选择性必修3(有机化学基础)</data>
+      <data key="chapter">烃</data>
+      <data key="difficulty">4</data>
+      <data key="description">掌握苯的结构特点(大pi键)与化学性质(取代、加成反应的特殊性)及苯的同系物性质。</data>
+      <data key="keywords">苯,芳香烃,大pi键,取代反应,加成,苯的同系物</data>
+      <data key="exam_type">选择题,推断题,芳香烃</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">选择性必修3</data>
+    </node>
+    <node id="K80">
+      <data key="name">石油与煤的加工</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">化学</data>
+      <data key="module">选择性必修3(有机化学基础)</data>
+      <data key="chapter">烃</data>
+      <data key="difficulty">2</data>
+      <data key="description">了解石油的分馏、裂化、裂解及煤的干馏、气化、液化等加工方法及产物。</data>
+      <data key="keywords">石油,分馏,裂化,裂解,煤,干馏,气化,液化</data>
+      <data key="exam_type">选择题,工业概念</data>
+      <data key="importance">2</data>
+      <data key="textbook_source">选择性必修3</data>
+    </node>
+    <node id="K81">
+      <data key="name">卤代烃</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">化学</data>
+      <data key="module">选择性必修3(有机化学基础)</data>
+      <data key="chapter">烃的衍生物</data>
+      <data key="difficulty">4</data>
+      <data key="description">掌握卤代烃的结构(卤素原子官能团)及化学性质(水解取代反应、消去反应)。</data>
+      <data key="keywords">卤代烃,卤素原子,水解反应,消去反应,检验卤素</data>
+      <data key="exam_type">选择题,实验题,卤代烃</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">选择性必修3</data>
+    </node>
+    <node id="K82">
+      <data key="name">醇</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">化学</data>
+      <data key="module">选择性必修3(有机化学基础)</data>
+      <data key="chapter">烃的衍生物</data>
+      <data key="difficulty">4</data>
+      <data key="description">掌握醇的结构(羟基)与化学性质(与钠反应、消去反应、催化氧化、酯化反应)。</data>
+      <data key="keywords">醇,羟基,与钠反应,消去,催化氧化,酯化</data>
+      <data key="exam_type">选择题,推断题,醇的性质</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">选择性必修3</data>
+    </node>
+    <node id="K83">
+      <data key="name">酚</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">化学</data>
+      <data key="module">选择性必修3(有机化学基础)</data>
+      <data key="chapter">烃的衍生物</data>
+      <data key="difficulty">3</data>
+      <data key="description">掌握酚的结构(苯环上直接连羟基)与化学性质(弱酸性、显色反应、取代反应)。</data>
+      <data key="keywords">酚,苯酚,弱酸性,显色反应,取代反应,苯环羟基</data>
+      <data key="exam_type">选择题,苯酚性质</data>
+      <data key="importance">3</data>
+      <data key="textbook_source">选择性必修3</data>
+    </node>
+    <node id="K84">
+      <data key="name">醛</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">化学</data>
+      <data key="module">选择性必修3(有机化学基础)</data>
+      <data key="chapter">烃的衍生物</data>
+      <data key="difficulty">4</data>
+      <data key="description">掌握醛的结构(醛基)与化学性质(银镜反应、与新制氢氧化铜反应、加成还原反应)。</data>
+      <data key="keywords">醛,醛基,银镜反应,费林反应,加成还原,氧化还原</data>
+      <data key="exam_type">选择题,推断题,醛的性质</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">选择性必修3</data>
+    </node>
+    <node id="K85">
+      <data key="name">羧酸</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">化学</data>
+      <data key="module">选择性必修3(有机化学基础)</data>
+      <data key="chapter">烃的衍生物</data>
+      <data key="difficulty">3</data>
+      <data key="description">掌握羧酸的结构(羧基)与化学性质(酸性、酯化反应)及常见羧酸(甲酸、乙酸、苯甲酸)。</data>
+      <data key="keywords">羧酸,羧基,酸性,酯化反应,甲酸,乙酸,苯甲酸</data>
+      <data key="exam_type">选择题,推断题,羧酸</data>
+      <data key="importance">3</data>
+      <data key="textbook_source">选择性必修3</data>
+    </node>
+    <node id="K86">
+      <data key="name">酯</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">化学</data>
+      <data key="module">选择性必修3(有机化学基础)</data>
+      <data key="chapter">烃的衍生物</data>
+      <data key="difficulty">4</data>
+      <data key="description">掌握酯的结构(酯基)与化学性质(水解反应),理解酯化反应与酯的水解是可逆关系。</data>
+      <data key="keywords">酯,酯基,水解反应,皂化,可逆反应,酯化水解</data>
+      <data key="exam_type">选择题,计算题,酯</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">选择性必修3</data>
+    </node>
+    <node id="K87">
+      <data key="name">有机合成</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">化学</data>
+      <data key="module">选择性必修3(有机化学基础)</data>
+      <data key="chapter">烃的衍生物</data>
+      <data key="difficulty">5</data>
+      <data key="description">掌握有机合成路线的设计方法(碳骨架构建、官能团引入与转化),理解逆合成分析法。</data>
+      <data key="keywords">有机合成,合成路线,逆合成分析,官能团转化,碳骨架</data>
+      <data key="exam_type">综合题,有机合成路线设计</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">选择性必修3</data>
+    </node>
+    <node id="K88">
+      <data key="name">糖类</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">化学</data>
+      <data key="module">选择性必修3(有机化学基础)</data>
+      <data key="chapter">生物大分子与合成高分子</data>
+      <data key="difficulty">3</data>
+      <data key="description">掌握糖类的分类(单糖、二糖、多糖)与葡萄糖、果糖、蔗糖、淀粉、纤维素的结构与性质。</data>
+      <data key="keywords">糖类,单糖,二糖,多糖,葡萄糖,淀粉,纤维素,银镜</data>
+      <data key="exam_type">选择题,计算题,糖类性质</data>
+      <data key="importance">3</data>
+      <data key="textbook_source">选择性必修3</data>
+    </node>
+    <node id="K89">
+      <data key="name">蛋白质与核酸</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">化学</data>
+      <data key="module">选择性必修3(有机化学基础)</data>
+      <data key="chapter">生物大分子与合成高分子</data>
+      <data key="difficulty">3</data>
+      <data key="description">理解蛋白质的组成(氨基酸)与结构,掌握蛋白质的性质(盐析、变性、颜色反应)及核酸的功能。</data>
+      <data key="keywords">蛋白质,氨基酸,盐析,变性,颜色反应,核酸,DNA,RNA</data>
+      <data key="exam_type">选择题,蛋白质性质</data>
+      <data key="importance">3</data>
+      <data key="textbook_source">选择性必修3</data>
+    </node>
+    <node id="K90">
+      <data key="name">合成高分子化合物</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">化学</data>
+      <data key="module">选择性必修3(有机化学基础)</data>
+      <data key="chapter">生物大分子与合成高分子</data>
+      <data key="difficulty">3</data>
+      <data key="description">理解加聚反应与缩聚反应的原理,了解塑料、合成纤维、合成橡胶等高分子材料的结构与性能。</data>
+      <data key="keywords">高分子,加聚反应,缩聚反应,塑料,合成纤维,合成橡胶,单体</data>
+      <data key="exam_type">选择题,高分子概念</data>
+      <data key="importance">3</data>
+      <data key="textbook_source">选择性必修3</data>
+    </node>
+    <edge source="M1" target="C1">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">模块[M1]包含章节[物质及其变化]</data>
+    </edge>
+    <edge source="M1" target="C2">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">模块[M1]包含章节[钠及其化合物]</data>
+    </edge>
+    <edge source="M1" target="C3">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">模块[M1]包含章节[铁金属材料]</data>
+    </edge>
+    <edge source="M1" target="C4">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">模块[M1]包含章节[物质结构 元素周期律]</data>
+    </edge>
+    <edge source="M2" target="C5">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">模块[M2]包含章节[化学反应与能量]</data>
+    </edge>
+    <edge source="M2" target="C6">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">模块[M2]包含章节[有机化合物]</data>
+    </edge>
+    <edge source="M2" target="C7">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">模块[M2]包含章节[化学与可持续发展]</data>
+    </edge>
+    <edge source="M3" target="C8">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">模块[M3]包含章节[化学反应热]</data>
+    </edge>
+    <edge source="M3" target="C9">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">模块[M3]包含章节[化学反应速率]</data>
+    </edge>
+    <edge source="M3" target="C10">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">模块[M3]包含章节[化学平衡]</data>
+    </edge>
+    <edge source="M3" target="C11">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">模块[M3]包含章节[水溶液中的离子反应与平衡]</data>
+    </edge>
+    <edge source="M3" target="C12">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">模块[M3]包含章节[电池与电解池(电化学)]</data>
+    </edge>
+    <edge source="M4" target="C13">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">模块[M4]包含章节[原子结构与元素性质]</data>
+    </edge>
+    <edge source="M4" target="C14">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">模块[M4]包含章节[化学键与分子结构]</data>
+    </edge>
+    <edge source="M4" target="C15">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">模块[M4]包含章节[晶体结构]</data>
+    </edge>
+    <edge source="M5" target="C16">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">模块[M5]包含章节[有机化合物的结构特点]</data>
+    </edge>
+    <edge source="M5" target="C17">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">模块[M5]包含章节[烃]</data>
+    </edge>
+    <edge source="M5" target="C18">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">模块[M5]包含章节[烃的衍生物]</data>
+    </edge>
+    <edge source="M5" target="C19">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">模块[M5]包含章节[生物大分子与合成高分子]</data>
+    </edge>
+    <edge source="C1" target="K1">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[物质的分类]</data>
+    </edge>
+    <edge source="C1" target="K2">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[物质的转化]</data>
+    </edge>
+    <edge source="C1" target="K3">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[离子反应]</data>
+    </edge>
+    <edge source="C1" target="K4">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[离子方程式]</data>
+    </edge>
+    <edge source="C1" target="K5">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[氧化还原反应]</data>
+    </edge>
+    <edge source="C1" target="K6">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[氧化剂与还原剂]</data>
+    </edge>
+    <edge source="C2" target="K7">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[钠的单质]</data>
+    </edge>
+    <edge source="C2" target="K8">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[氧化钠与过氧化钠]</data>
+    </edge>
+    <edge source="C2" target="K9">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[碳酸钠与碳酸氢钠]</data>
+    </edge>
+    <edge source="C2" target="K10">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[焰色试验]</data>
+    </edge>
+    <edge source="C2" target="K11">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[钠的存在与用途]</data>
+    </edge>
+    <edge source="C3" target="K12">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[铁的单质]</data>
+    </edge>
+    <edge source="C3" target="K13">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[铁的氧化物]</data>
+    </edge>
+    <edge source="C3" target="K14">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[铁的氢氧化物]</data>
+    </edge>
+    <edge source="C3" target="K15">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[铁盐与亚铁盐的相互转化]</data>
+    </edge>
+    <edge source="C3" target="K16">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[合金与金属材料]</data>
+    </edge>
+    <edge source="C4" target="K17">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[原子结构]</data>
+    </edge>
+    <edge source="C4" target="K18">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[核外电子排布(前18号)]</data>
+    </edge>
+    <edge source="C4" target="K19">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[元素周期表]</data>
+    </edge>
+    <edge source="C4" target="K20">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[元素周期律]</data>
+    </edge>
+    <edge source="C4" target="K21">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[化学键(离子键与共价键)]</data>
+    </edge>
+    <edge source="C5" target="K22">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[化学反应与能量变化]</data>
+    </edge>
+    <edge source="C5" target="K23">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[化学能与热能]</data>
+    </edge>
+    <edge source="C5" target="K24">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[化学能与电能(原电池初步)]</data>
+    </edge>
+    <edge source="C5" target="K25">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[化学反应速率(初步)]</data>
+    </edge>
+    <edge source="C6" target="K26">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[甲烷]</data>
+    </edge>
+    <edge source="C6" target="K27">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[乙烯]</data>
+    </edge>
+    <edge source="C6" target="K28">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[苯]</data>
+    </edge>
+    <edge source="C6" target="K29">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[乙醇]</data>
+    </edge>
+    <edge source="C6" target="K30">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[乙酸]</data>
+    </edge>
+    <edge source="C6" target="K31">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[基本营养物质]</data>
+    </edge>
+    <edge source="C7" target="K32">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[化学与自然资源开发利用]</data>
+    </edge>
+    <edge source="C7" target="K33">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[化学品的合成与环境保护]</data>
+    </edge>
+    <edge source="C8" target="K34">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[反应热与焓变]</data>
+    </edge>
+    <edge source="C8" target="K35">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[热化学方程式]</data>
+    </edge>
+    <edge source="C8" target="K36">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[盖斯定律]</data>
+    </edge>
+    <edge source="C8" target="K37">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[反应热的计算]</data>
+    </edge>
+    <edge source="C9" target="K38">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[化学反应速率的概念与计算]</data>
+    </edge>
+    <edge source="C9" target="K39">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[影响反应速率的因素]</data>
+    </edge>
+    <edge source="C9" target="K40">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[速率常数与反应速率方程]</data>
+    </edge>
+    <edge source="C9" target="K41">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[催化剂与反应速率]</data>
+    </edge>
+    <edge source="C10" target="K42">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[化学平衡状态]</data>
+    </edge>
+    <edge source="C10" target="K43">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[化学平衡常数]</data>
+    </edge>
+    <edge source="C10" target="K44">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[化学反应的方向]</data>
+    </edge>
+    <edge source="C10" target="K45">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[化学平衡的移动(勒夏特列原理)]</data>
+    </edge>
+    <edge source="C10" target="K46">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[等效平衡]</data>
+    </edge>
+    <edge source="C11" target="K47">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[弱电解质的电离]</data>
+    </edge>
+    <edge source="C11" target="K48">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[水的电离与溶液的酸碱性]</data>
+    </edge>
+    <edge source="C11" target="K49">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[溶液的pH]</data>
+    </edge>
+    <edge source="C11" target="K50">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[盐类的水解]</data>
+    </edge>
+    <edge source="C11" target="K51">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[难溶电解质的溶解平衡]</data>
+    </edge>
+    <edge source="C12" target="K52">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[原电池原理]</data>
+    </edge>
+    <edge source="C12" target="K53">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[化学电源]</data>
+    </edge>
+    <edge source="C12" target="K54">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[电解原理]</data>
+    </edge>
+    <edge source="C12" target="K55">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[电解池的应用]</data>
+    </edge>
+    <edge source="C12" target="K56">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[金属的电化学腐蚀与防护]</data>
+    </edge>
+    <edge source="C13" target="K57">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[原子核外电子排布(构造原理)]</data>
+    </edge>
+    <edge source="C13" target="K58">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[原子结构与元素周期表]</data>
+    </edge>
+    <edge source="C13" target="K59">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[元素周期律(原子半径电离能)]</data>
+    </edge>
+    <edge source="C13" target="K60">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[电负性]</data>
+    </edge>
+    <edge source="C14" target="K61">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[共价键的本质与类型]</data>
+    </edge>
+    <edge source="C14" target="K62">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[键参数(键长键能键角)]</data>
+    </edge>
+    <edge source="C14" target="K63">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[分子的空间结构(VSEPR模型)]</data>
+    </edge>
+    <edge source="C14" target="K64">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[杂化轨道理论]</data>
+    </edge>
+    <edge source="C14" target="K65">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[分子的极性]</data>
+    </edge>
+    <edge source="C14" target="K66">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[分子间作用力与氢键]</data>
+    </edge>
+    <edge source="C15" target="K67">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[晶体的常识]</data>
+    </edge>
+    <edge source="C15" target="K68">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[离子晶体]</data>
+    </edge>
+    <edge source="C15" target="K69">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[原子晶体(共价晶体)]</data>
+    </edge>
+    <edge source="C15" target="K70">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[分子晶体]</data>
+    </edge>
+    <edge source="C15" target="K71">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[金属晶体]</data>
+    </edge>
+    <edge source="C16" target="K72">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[有机化合物的分类]</data>
+    </edge>
+    <edge source="C16" target="K73">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[有机物中的官能团]</data>
+    </edge>
+    <edge source="C16" target="K74">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[有机化合物的命名]</data>
+    </edge>
+    <edge source="C16" target="K75">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[同分异构体]</data>
+    </edge>
+    <edge source="C17" target="K76">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[烷烃]</data>
+    </edge>
+    <edge source="C17" target="K77">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[烯烃]</data>
+    </edge>
+    <edge source="C17" target="K78">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[炔烃]</data>
+    </edge>
+    <edge source="C17" target="K79">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[苯及芳香烃]</data>
+    </edge>
+    <edge source="C17" target="K80">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[石油与煤的加工]</data>
+    </edge>
+    <edge source="C18" target="K81">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[卤代烃]</data>
+    </edge>
+    <edge source="C18" target="K82">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[醇]</data>
+    </edge>
+    <edge source="C18" target="K83">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[酚]</data>
+    </edge>
+    <edge source="C18" target="K84">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[醛]</data>
+    </edge>
+    <edge source="C18" target="K85">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[羧酸]</data>
+    </edge>
+    <edge source="C18" target="K86">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[酯]</data>
+    </edge>
+    <edge source="C18" target="K87">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[有机合成]</data>
+    </edge>
+    <edge source="C19" target="K88">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[糖类]</data>
+    </edge>
+    <edge source="C19" target="K89">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[蛋白质与核酸]</data>
+    </edge>
+    <edge source="C19" target="K90">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点[合成高分子化合物]</data>
+    </edge>
+    <edge source="K1" target="K3">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.7</data>
+      <data key="description">物质分类是理解离子反应的基础</data>
+    </edge>
+    <edge source="K2" target="K3">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.7</data>
+      <data key="description">物质转化关系与离子反应相关</data>
+    </edge>
+    <edge source="K3" target="K4">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.9</data>
+      <data key="description">离子反应是书写离子方程式的基础</data>
+    </edge>
+    <edge source="K3" target="K5">
+      <data key="relation">RELATED_TO</data>
+      <data key="weight">0.6</data>
+      <data key="description">离子反应与氧化还原都是反应原理</data>
+    </edge>
+    <edge source="K5" target="K6">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.9</data>
+      <data key="description">氧化还原概念是理解氧化剂还原剂的前提</data>
+    </edge>
+    <edge source="K5" target="K15">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.6</data>
+      <data key="description">氧化还原用于铁盐亚铁盐转化分析</data>
+    </edge>
+    <edge source="K7" target="K8">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.8</data>
+      <data key="description">钠单质性质是学习钠化合物的基础</data>
+    </edge>
+    <edge source="K8" target="K9">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.7</data>
+      <data key="description">氧化钠过氧化钠与碳酸盐相关</data>
+    </edge>
+    <edge source="K7" target="K9">
+      <data key="relation">RELATED_TO</data>
+      <data key="weight">0.4</data>
+      <data key="description">钠及其化合物的性质关联</data>
+    </edge>
+    <edge source="K12" target="K13">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.8</data>
+      <data key="description">铁单质性质是铁氧化物的基础</data>
+    </edge>
+    <edge source="K13" target="K14">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.8</data>
+      <data key="description">铁氧化物是氢氧化物的基础</data>
+    </edge>
+    <edge source="K14" target="K15">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.8</data>
+      <data key="description">铁氢氧化物与铁盐亚铁盐转化相关</data>
+    </edge>
+    <edge source="K15" target="K5">
+      <data key="relation">DERIVED_FROM</data>
+      <data key="weight">0.7</data>
+      <data key="description">铁盐亚铁盐转化基于氧化还原原理</data>
+    </edge>
+    <edge source="K17" target="K18">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.9</data>
+      <data key="description">原子结构是核外电子排布的基础</data>
+    </edge>
+    <edge source="K18" target="K19">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.8</data>
+      <data key="description">核外电子排布是周期表结构的基础</data>
+    </edge>
+    <edge source="K19" target="K20">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.9</data>
+      <data key="description">周期表结构是理解周期律的基础</data>
+    </edge>
+    <edge source="K20" target="K18">
+      <data key="relation">DERIVED_FROM</data>
+      <data key="weight">0.7</data>
+      <data key="description">元素周期律由核外电子排布规律推导</data>
+    </edge>
+    <edge source="K21" target="K18">
+      <data key="relation">RELATED_TO</data>
+      <data key="weight">0.5</data>
+      <data key="description">化学键与核外电子排布相关</data>
+    </edge>
+    <edge source="K22" target="K23">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.7</data>
+      <data key="description">能量变化是化学能热能的基础</data>
+    </edge>
+    <edge source="K22" target="K34">
+      <data key="relation">RELATED_TO</data>
+      <data key="weight">0.6</data>
+      <data key="description">必修能量变化与选择性必修反应热相关</data>
+    </edge>
+    <edge source="K24" target="K52">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.5</data>
+      <data key="description">原电池初步与原电池原理衔接</data>
+    </edge>
+    <edge source="K25" target="K38">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.6</data>
+      <data key="description">反应速率初步与反应速率计算衔接</data>
+    </edge>
+    <edge source="K26" target="K76">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.6</data>
+      <data key="description">甲烷是烷烃的代表物</data>
+    </edge>
+    <edge source="K27" target="K77">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.7</data>
+      <data key="description">乙烯是烯烃的代表物</data>
+    </edge>
+    <edge source="K28" target="K79">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.7</data>
+      <data key="description">苯是芳香烃的代表物</data>
+    </edge>
+    <edge source="K29" target="K82">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.7</data>
+      <data key="description">乙醇是醇类的代表物</data>
+    </edge>
+    <edge source="K30" target="K85">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.7</data>
+      <data key="description">乙酸是羧酸的代表物</data>
+    </edge>
+    <edge source="K30" target="K86">
+      <data key="relation">RELATED_TO</data>
+      <data key="weight">0.7</data>
+      <data key="description">乙酸酯化与酯的水解互为可逆</data>
+    </edge>
+    <edge source="K34" target="K35">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.9</data>
+      <data key="description">反应热概念是热化学方程式的基础</data>
+    </edge>
+    <edge source="K35" target="K36">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.9</data>
+      <data key="description">热化学方程式是盖斯定律的基础</data>
+    </edge>
+    <edge source="K36" target="K37">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.9</data>
+      <data key="description">盖斯定律是反应热计算的基础</data>
+    </edge>
+    <edge source="K34" target="K37">
+      <data key="relation">RELATED_TO</data>
+      <data key="weight">0.5</data>
+      <data key="description">反应热概念与反应热计算相关</data>
+    </edge>
+    <edge source="K38" target="K39">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.8</data>
+      <data key="description">速率概念是研究影响因素的基础</data>
+    </edge>
+    <edge source="K39" target="K40">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.8</data>
+      <data key="description">影响因素与速率方程相关</data>
+    </edge>
+    <edge source="K39" target="K41">
+      <data key="relation">RELATED_TO</data>
+      <data key="weight">0.7</data>
+      <data key="description">影响因素中催化剂与催化剂专节相关</data>
+    </edge>
+    <edge source="K25" target="K42">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.4</data>
+      <data key="description">反应速率初步与化学平衡衔接</data>
+    </edge>
+    <edge source="K38" target="K42">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.5</data>
+      <data key="description">反应速率与平衡都属反应原理</data>
+    </edge>
+    <edge source="K42" target="K43">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.9</data>
+      <data key="description">平衡状态是平衡常数的基础</data>
+    </edge>
+    <edge source="K43" target="K45">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.9</data>
+      <data key="description">平衡常数是平衡移动的基础</data>
+    </edge>
+    <edge source="K43" target="K45">
+      <data key="relation">RELATED_TO</data>
+      <data key="weight">0.7</data>
+      <data key="description">平衡常数与平衡移动相互关联</data>
+    </edge>
+    <edge source="K44" target="K42">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.5</data>
+      <data key="description">反应方向与平衡状态相关</data>
+    </edge>
+    <edge source="K45" target="K46">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.7</data>
+      <data key="description">平衡移动是等效平衡的基础</data>
+    </edge>
+    <edge source="K48" target="K49">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.9</data>
+      <data key="description">水电离与酸碱性是pH的基础</data>
+    </edge>
+    <edge source="K47" target="K50">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.7</data>
+      <data key="description">弱电解质电离与盐类水解相关</data>
+    </edge>
+    <edge source="K50" target="K48">
+      <data key="relation">DERIVED_FROM</data>
+      <data key="weight">0.7</data>
+      <data key="description">盐类水解促进水的电离</data>
+    </edge>
+    <edge source="K47" target="K49">
+      <data key="relation">RELATED_TO</data>
+      <data key="weight">0.6</data>
+      <data key="description">弱电解质与pH计算相关</data>
+    </edge>
+    <edge source="K49" target="K51">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.6</data>
+      <data key="description">pH与溶解平衡都涉及离子浓度</data>
+    </edge>
+    <edge source="K50" target="K51">
+      <data key="relation">RELATED_TO</data>
+      <data key="weight">0.6</data>
+      <data key="description">盐类水解与溶解平衡都属水溶液平衡</data>
+    </edge>
+    <edge source="K24" target="K52">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.6</data>
+      <data key="description">原电池初步是原电池原理的基础</data>
+    </edge>
+    <edge source="K52" target="K24">
+      <data key="relation">DERIVED_FROM</data>
+      <data key="weight">0.6</data>
+      <data key="description">原电池原理由初步概念发展</data>
+    </edge>
+    <edge source="K52" target="K53">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.8</data>
+      <data key="description">原电池原理是化学电源的基础</data>
+    </edge>
+    <edge source="K52" target="K54">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.7</data>
+      <data key="description">原电池与电解池原理对比</data>
+    </edge>
+    <edge source="K52" target="K56">
+      <data key="relation">RELATED_TO</data>
+      <data key="weight">0.6</data>
+      <data key="description">原电池原理用于分析金属腐蚀</data>
+    </edge>
+    <edge source="K54" target="K55">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.8</data>
+      <data key="description">电解原理是电解应用的基础</data>
+    </edge>
+    <edge source="K55" target="K56">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.5</data>
+      <data key="description">电解应用与金属电化学防护相关</data>
+    </edge>
+    <edge source="K18" target="K57">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.6</data>
+      <data key="description">必修电子排布与构造原理衔接</data>
+    </edge>
+    <edge source="K57" target="K58">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.9</data>
+      <data key="description">构造原理是周期表分区的基础</data>
+    </edge>
+    <edge source="K58" target="K59">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.8</data>
+      <data key="description">周期表与周期律递变相关</data>
+    </edge>
+    <edge source="K20" target="K59">
+      <data key="relation">RELATED_TO</data>
+      <data key="weight">0.6</data>
+      <data key="description">必修周期律与选择性必修电离能递变衔接</data>
+    </edge>
+    <edge source="K59" target="K60">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.7</data>
+      <data key="description">电离能与电负性都描述原子性质</data>
+    </edge>
+    <edge source="K21" target="K61">
+      <data key="relation">RELATED_TO</data>
+      <data key="weight">0.6</data>
+      <data key="description">必修化学键与选择性必修共价键深化</data>
+    </edge>
+    <edge source="K61" target="K62">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.8</data>
+      <data key="description">共价键类型是键参数的基础</data>
+    </edge>
+    <edge source="K62" target="K63">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.7</data>
+      <data key="description">键参数有助于理解分子构型</data>
+    </edge>
+    <edge source="K63" target="K64">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.8</data>
+      <data key="description">VSEPR与杂化轨道共同预测构型</data>
+    </edge>
+    <edge source="K63" target="K64">
+      <data key="relation">RELATED_TO</data>
+      <data key="weight">0.8</data>
+      <data key="description">VSEPR与杂化理论互为补充</data>
+    </edge>
+    <edge source="K64" target="K65">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.7</data>
+      <data key="description">杂化与空间构型是判断极性的基础</data>
+    </edge>
+    <edge source="K65" target="K66">
+      <data key="relation">RELATED_TO</data>
+      <data key="weight">0.5</data>
+      <data key="description">分子极性与分子间作用力相关</data>
+    </edge>
+    <edge source="K66" target="K70">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.5</data>
+      <data key="description">分子间作用力影响分子晶体性质</data>
+    </edge>
+    <edge source="K67" target="K68">
+      <data key="relation">RELATED_TO</data>
+      <data key="weight">0.6</data>
+      <data key="description">晶体常识与离子晶体相关</data>
+    </edge>
+    <edge source="K67" target="K69">
+      <data key="relation">RELATED_TO</data>
+      <data key="weight">0.6</data>
+      <data key="description">晶体常识与原子晶体相关</data>
+    </edge>
+    <edge source="K67" target="K70">
+      <data key="relation">RELATED_TO</data>
+      <data key="weight">0.6</data>
+      <data key="description">晶体常识与分子晶体相关</data>
+    </edge>
+    <edge source="K67" target="K71">
+      <data key="relation">RELATED_TO</data>
+      <data key="weight">0.6</data>
+      <data key="description">晶体常识与金属晶体相关</data>
+    </edge>
+    <edge source="K21" target="K68">
+      <data key="relation">RELATED_TO</data>
+      <data key="weight">0.5</data>
+      <data key="description">离子键与离子晶体相关</data>
+    </edge>
+    <edge source="K61" target="K69">
+      <data key="relation">RELATED_TO</data>
+      <data key="weight">0.5</data>
+      <data key="description">共价键与原子晶体相关</data>
+    </edge>
+    <edge source="K72" target="K73">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.8</data>
+      <data key="description">有机物分类是认识官能团的基础</data>
+    </edge>
+    <edge source="K73" target="K74">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.7</data>
+      <data key="description">官能团是命名的基础</data>
+    </edge>
+    <edge source="K74" target="K75">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.8</data>
+      <data key="description">命名是理解同分异构的基础</data>
+    </edge>
+    <edge source="K76" target="K77">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.7</data>
+      <data key="description">烷烃与烯烃结构对比</data>
+    </edge>
+    <edge source="K77" target="K78">
+      <data key="relation">RELATED_TO</data>
+      <data key="weight">0.7</data>
+      <data key="description">烯烃与炔烃都含不饱和键</data>
+    </edge>
+    <edge source="K28" target="K79">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.6</data>
+      <data key="description">必修苯与选择性必修芳香烃衔接</data>
+    </edge>
+    <edge source="K76" target="K79">
+      <data key="relation">RELATED_TO</data>
+      <data key="weight">0.4</data>
+      <data key="description">烷烃与芳香烃都属烃类</data>
+    </edge>
+    <edge source="K81" target="K82">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.7</data>
+      <data key="description">卤代烃与醇都含官能团转化关系</data>
+    </edge>
+    <edge source="K82" target="K84">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.7</data>
+      <data key="description">醇可氧化为醛</data>
+    </edge>
+    <edge source="K84" target="K82">
+      <data key="relation">DERIVED_FROM</data>
+      <data key="weight">0.6</data>
+      <data key="description">醛由醇催化氧化得到</data>
+    </edge>
+    <edge source="K84" target="K85">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.8</data>
+      <data key="description">醛可氧化为羧酸</data>
+    </edge>
+    <edge source="K85" target="K86">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.9</data>
+      <data key="description">羧酸与醇酯化生成酯</data>
+    </edge>
+    <edge source="K86" target="K85">
+      <data key="relation">DERIVED_FROM</data>
+      <data key="weight">0.7</data>
+      <data key="description">酯由羧酸酯化反应得到</data>
+    </edge>
+    <edge source="K82" target="K83">
+      <data key="relation">RELATED_TO</data>
+      <data key="weight">0.6</data>
+      <data key="description">醇与酚都含羟基但性质不同</data>
+    </edge>
+    <edge source="K73" target="K87">
+      <data key="relation">APPLIED_IN</data>
+      <data key="weight">0.6</data>
+      <data key="description">官能团知识用于有机合成设计</data>
+    </edge>
+    <edge source="K75" target="K87">
+      <data key="relation">APPLIED_IN</data>
+      <data key="weight">0.5</data>
+      <data key="description">同分异构体知识用于合成路线</data>
+    </edge>
+    <edge source="K31" target="K88">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.5</data>
+      <data key="description">必修营养物质与选择性必修糖类衔接</data>
+    </edge>
+    <edge source="K88" target="K89">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.6</data>
+      <data key="description">糖类与蛋白质都属生物大分子</data>
+    </edge>
+    <edge source="K89" target="K90">
+      <data key="relation">RELATED_TO</data>
+      <data key="weight">0.5</data>
+      <data key="description">天然与合成高分子对比</data>
+    </edge>
+    <edge source="K27" target="K90">
+      <data key="relation">APPLIED_IN</data>
+      <data key="weight">0.5</data>
+      <data key="description">加聚反应原理用于合成高分子</data>
+    </edge>
+    <edge source="K5" target="K50">
+      <data key="relation">RELATED_TO</data>
+      <data key="weight">0.4</data>
+      <data key="description">氧化还原与盐类水解都涉及电子或质子转移</data>
+    </edge>
+    <edge source="K9" target="K50">
+      <data key="relation">RELATED_TO</data>
+      <data key="weight">0.4</data>
+      <data key="description">碳酸氢钠性质与盐类水解相关</data>
+    </edge>
+    <edge source="K45" target="K51">
+      <data key="relation">APPLIED_IN</data>
+      <data key="weight">0.5</data>
+      <data key="description">平衡移动原理用于溶解平衡</data>
+    </edge>
+    <edge source="K43" target="K51">
+      <data key="relation">RELATED_TO</data>
+      <data key="weight">0.5</data>
+      <data key="description">平衡常数与溶度积都属平衡常数</data>
+    </edge>
+  </graph>
+</graphml>

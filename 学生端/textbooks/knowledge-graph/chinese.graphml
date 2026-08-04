@@ -1,0 +1,2257 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+  <key id="name" attr.name="name" attr.type="string" for="node"/>
+  <key id="type" attr.name="type" attr.type="string" for="node"/>
+  <key id="subject" attr.name="subject" attr.type="string" for="node"/>
+  <key id="module" attr.name="module" attr.type="string" for="node"/>
+  <key id="chapter" attr.name="chapter" attr.type="string" for="node"/>
+  <key id="difficulty" attr.name="difficulty" attr.type="int" for="node"/>
+  <key id="description" attr.name="description" attr.type="string" for="node"/>
+  <key id="keywords" attr.name="keywords" attr.type="string" for="node"/>
+  <key id="exam_type" attr.name="exam_type" attr.type="string" for="node"/>
+  <key id="importance" attr.name="importance" attr.type="int" for="node"/>
+  <key id="textbook_source" attr.name="textbook_source" attr.type="string" for="node"/>
+  <key id="relation" attr.name="relation" attr.type="string" for="edge"/>
+  <key id="weight" attr.name="weight" attr.type="double" for="edge"/>
+  <key id="description" attr.name="description" attr.type="string" for="edge"/>
+  <graph id="G" edgedefault="directed">
+    <node id="M1">
+      <data key="name">必修上册</data>
+      <data key="type">Module</data>
+      <data key="subject">语文</data>
+      <data key="description">涵盖青春价值、劳动光荣、生命诗意、家乡文化生活、学习之道、自然情怀、词语与文化等单元，兼及现代诗歌、古诗词、散文、议论文、文言文等文体。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="module">必修上册</data>
+      <data key="chapter"/>
+      <data key="textbook_source"/>
+    </node>
+    <node id="M2">
+      <data key="name">必修下册</data>
+      <data key="type">Module</data>
+      <data key="subject">语文</data>
+      <data key="description">围绕中华文明之光、责任担当、探索创新、媒介素养、传统文化、小说鉴赏、剧本欣赏等单元，深化文言文与文学鉴赏能力。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="module">必修下册</data>
+      <data key="chapter"/>
+      <data key="textbook_source"/>
+    </node>
+    <node id="M3">
+      <data key="name">选择性必修上册</data>
+      <data key="type">Module</data>
+      <data key="subject">语文</data>
+      <data key="description">聚焦中国革命传统作品、逻辑思维训练与小说欣赏，提升理论文章阅读与逻辑分析能力。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="module">选择性必修上册</data>
+      <data key="chapter"/>
+      <data key="textbook_source"/>
+    </node>
+    <node id="M4">
+      <data key="name">选择性必修中册</data>
+      <data key="type">Module</data>
+      <data key="subject">语文</data>
+      <data key="description">涵盖理论的价值、苦难与新生、历史的回响、丰富的心灵，深入理论文章、现代诗歌、咏史诗与外国小说鉴赏。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="module">选择性必修中册</data>
+      <data key="chapter"/>
+      <data key="textbook_source"/>
+    </node>
+    <node id="M5">
+      <data key="name">选择性必修下册</data>
+      <data key="type">Module</data>
+      <data key="subject">语文</data>
+      <data key="description">包括诗散文鉴赏、语言鉴赏、中国现代作家作品与外国作家作品，侧重语言运用与比较文学阅读。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="module">选择性必修下册</data>
+      <data key="chapter"/>
+      <data key="textbook_source"/>
+    </node>
+    <node id="C1">
+      <data key="name">青春价值</data>
+      <data key="type">Chapter</data>
+      <data key="subject">语文</data>
+      <data key="module">必修上册</data>
+      <data key="chapter">青春价值</data>
+      <data key="description">以现代诗歌为主，学习意象、意境与抒情方式，把握青春主题的情感表达。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="textbook_source">必修上册</data>
+    </node>
+    <node id="C2">
+      <data key="name">劳动光荣</data>
+      <data key="type">Chapter</data>
+      <data key="subject">语文</data>
+      <data key="module">必修上册</data>
+      <data key="chapter">劳动光荣</data>
+      <data key="description">学习新闻通讯与报告文学，掌握新闻文体特点与人物通讯写作方法。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="textbook_source">必修上册</data>
+    </node>
+    <node id="C3">
+      <data key="name">生命的诗意</data>
+      <data key="type">Chapter</data>
+      <data key="subject">语文</data>
+      <data key="module">必修上册</data>
+      <data key="chapter">生命的诗意</data>
+      <data key="description">学习古诗词，掌握意象分析、炼字艺术与用典手法。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="textbook_source">必修上册</data>
+    </node>
+    <node id="C4">
+      <data key="name">家乡文化生活与整本书阅读</data>
+      <data key="type">Chapter</data>
+      <data key="subject">语文</data>
+      <data key="module">必修上册</data>
+      <data key="chapter">家乡文化生活与整本书阅读</data>
+      <data key="description">开展社会调查与整本书阅读(《乡土中国》)，掌握调查报告与学术著作阅读方法。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="textbook_source">必修上册</data>
+    </node>
+    <node id="C5">
+      <data key="name">学习之道</data>
+      <data key="type">Chapter</data>
+      <data key="subject">语文</data>
+      <data key="module">必修上册</data>
+      <data key="chapter">学习之道</data>
+      <data key="description">学习议论文，掌握论点提炼、论证方法与议论文结构。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="textbook_source">必修上册</data>
+    </node>
+    <node id="C6">
+      <data key="name">自然情怀</data>
+      <data key="type">Chapter</data>
+      <data key="subject">语文</data>
+      <data key="module">必修上册</data>
+      <data key="chapter">自然情怀</data>
+      <data key="description">学习散文，掌握形散神聚、线索结构及借景抒情手法。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="textbook_source">必修上册</data>
+    </node>
+    <node id="C7">
+      <data key="name">词语与文化</data>
+      <data key="type">Chapter</data>
+      <data key="subject">语文</data>
+      <data key="module">必修上册</data>
+      <data key="chapter">词语与文化</data>
+      <data key="description">学习文言文，掌握实词虚词、特殊句式与词类活用。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="textbook_source">必修上册</data>
+    </node>
+    <node id="C8">
+      <data key="name">中华文明之光</data>
+      <data key="type">Chapter</data>
+      <data key="subject">语文</data>
+      <data key="module">必修下册</data>
+      <data key="chapter">中华文明之光</data>
+      <data key="description">学习先秦诸子散文，掌握说理方法与文言文翻译技巧。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="textbook_source">必修下册</data>
+    </node>
+    <node id="C9">
+      <data key="name">责任与担当</data>
+      <data key="type">Chapter</data>
+      <data key="subject">语文</data>
+      <data key="module">必修下册</data>
+      <data key="chapter">责任与担当</data>
+      <data key="description">学习古代记叙散文与传记，掌握叙事艺术与史传文学特点。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="textbook_source">必修下册</data>
+    </node>
+    <node id="C10">
+      <data key="name">探索与创新</data>
+      <data key="type">Chapter</data>
+      <data key="subject">语文</data>
+      <data key="module">必修下册</data>
+      <data key="chapter">探索与创新</data>
+      <data key="description">学习科普文章，掌握说明方法与说明顺序。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="textbook_source">必修下册</data>
+    </node>
+    <node id="C11">
+      <data key="name">媒介素养</data>
+      <data key="type">Chapter</data>
+      <data key="subject">语文</data>
+      <data key="module">必修下册</data>
+      <data key="chapter">媒介素养</data>
+      <data key="description">学习新闻消息与媒体信息辨析，掌握消息结构与信息评价方法。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="textbook_source">必修下册</data>
+    </node>
+    <node id="C12">
+      <data key="name">中华优秀传统文化</data>
+      <data key="type">Chapter</data>
+      <data key="subject">语文</data>
+      <data key="module">必修下册</data>
+      <data key="chapter">中华优秀传统文化</data>
+      <data key="description">学习传统文化常识与对联创作，掌握对联格律。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="textbook_source">必修下册</data>
+    </node>
+    <node id="C13">
+      <data key="name">小说鉴赏</data>
+      <data key="type">Chapter</data>
+      <data key="subject">语文</data>
+      <data key="module">必修下册</data>
+      <data key="chapter">小说鉴赏</data>
+      <data key="description">学习小说三要素、人物形象分析、环境描写与叙事视角。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="textbook_source">必修下册</data>
+    </node>
+    <node id="C14">
+      <data key="name">剧本欣赏</data>
+      <data key="type">Chapter</data>
+      <data key="subject">语文</data>
+      <data key="module">必修下册</data>
+      <data key="chapter">剧本欣赏</data>
+      <data key="description">学习戏剧冲突、戏剧语言特点与人物形象分析。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="textbook_source">必修下册</data>
+    </node>
+    <node id="C15">
+      <data key="name">中国革命传统作品</data>
+      <data key="type">Chapter</data>
+      <data key="subject">语文</data>
+      <data key="module">选择性必修上册</data>
+      <data key="chapter">中国革命传统作品</data>
+      <data key="description">学习革命文学与纪实文学，掌握时代背景分析与纪实写作特点。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="textbook_source">选择性必修上册</data>
+    </node>
+    <node id="C16">
+      <data key="name">逻辑思维</data>
+      <data key="type">Chapter</data>
+      <data key="subject">语文</data>
+      <data key="module">选择性必修上册</data>
+      <data key="chapter">逻辑思维</data>
+      <data key="description">学习形式逻辑基本规律、推理方法与逻辑谬误识别。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="textbook_source">选择性必修上册</data>
+    </node>
+    <node id="C17">
+      <data key="name">小说欣赏</data>
+      <data key="type">Chapter</data>
+      <data key="subject">语文</data>
+      <data key="module">选择性必修上册</data>
+      <data key="chapter">小说欣赏</data>
+      <data key="description">深入小说主题多义性与叙述技巧分析。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="textbook_source">选择性必修上册</data>
+    </node>
+    <node id="C18">
+      <data key="name">理论的价值</data>
+      <data key="type">Chapter</data>
+      <data key="subject">语文</data>
+      <data key="module">选择性必修中册</data>
+      <data key="chapter">理论的价值</data>
+      <data key="description">学习理论文章的阅读方法与论证逻辑。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="textbook_source">选择性必修中册</data>
+    </node>
+    <node id="C19">
+      <data key="name">苦难与新生</data>
+      <data key="type">Chapter</data>
+      <data key="subject">语文</data>
+      <data key="module">选择性必修中册</data>
+      <data key="chapter">苦难与新生</data>
+      <data key="description">学习现代诗歌象征手法与抒情诗鉴赏。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="textbook_source">选择性必修中册</data>
+    </node>
+    <node id="C20">
+      <data key="name">历史的回响</data>
+      <data key="type">Chapter</data>
+      <data key="subject">语文</data>
+      <data key="module">选择性必修中册</data>
+      <data key="chapter">历史的回响</data>
+      <data key="description">学习咏史诗特点与怀古用典手法。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="textbook_source">选择性必修中册</data>
+    </node>
+    <node id="C21">
+      <data key="name">丰富的心灵</data>
+      <data key="type">Chapter</data>
+      <data key="subject">语文</data>
+      <data key="module">选择性必修中册</data>
+      <data key="chapter">丰富的心灵</data>
+      <data key="description">学习外国小说鉴赏与心理描写方法。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="textbook_source">选择性必修中册</data>
+    </node>
+    <node id="C22">
+      <data key="name">诗散文鉴赏</data>
+      <data key="type">Chapter</data>
+      <data key="subject">语文</data>
+      <data key="module">选择性必修下册</data>
+      <data key="chapter">诗散文鉴赏</data>
+      <data key="description">学习现代散文诗与现当代诗歌鉴赏。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="textbook_source">选择性必修下册</data>
+    </node>
+    <node id="C23">
+      <data key="name">语言鉴赏</data>
+      <data key="type">Chapter</data>
+      <data key="subject">语文</data>
+      <data key="module">选择性必修下册</data>
+      <data key="chapter">语言鉴赏</data>
+      <data key="description">学习词语色彩义、句式变换与修辞手法。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="textbook_source">选择性必修下册</data>
+    </node>
+    <node id="C24">
+      <data key="name">中国现代作家作品</data>
+      <data key="type">Chapter</data>
+      <data key="subject">语文</data>
+      <data key="module">选择性必修下册</data>
+      <data key="chapter">中国现代作家作品</data>
+      <data key="description">学习鲁迅小说批判性、现代散文流派与现代话剧成就。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="textbook_source">选择性必修下册</data>
+    </node>
+    <node id="C25">
+      <data key="name">外国作家作品</data>
+      <data key="type">Chapter</data>
+      <data key="subject">语文</data>
+      <data key="module">选择性必修下册</data>
+      <data key="chapter">外国作家作品</data>
+      <data key="description">学习外国小说流派、外国诗歌鉴赏与比较文学阅读方法。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="textbook_source">选择性必修下册</data>
+    </node>
+    <node id="K1">
+      <data key="name">现代诗歌的意象与意境</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">语文</data>
+      <data key="module">必修上册</data>
+      <data key="chapter">青春价值</data>
+      <data key="difficulty">3</data>
+      <data key="description">掌握意象(融入主观情感的客观物象)与意境(由意象构成的整体氛围)的概念，能分析现代诗歌中意象的组合方式与意境营造。</data>
+      <data key="keywords">意象,意境,客观物象,主观情感,氛围营造</data>
+      <data key="exam_type">诗歌鉴赏题,选择题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">必修上册</data>
+    </node>
+    <node id="K2">
+      <data key="name">诗歌的抒情方式</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">语文</data>
+      <data key="module">必修上册</data>
+      <data key="chapter">青春价值</data>
+      <data key="difficulty">3</data>
+      <data key="description">区分直抒胸臆与间接抒情(借景抒情、托物言志、借古抒怀)，能判断诗歌中的抒情方式并分析其效果。</data>
+      <data key="keywords">直抒胸臆,借景抒情,托物言志,借古抒怀,间接抒情</data>
+      <data key="exam_type">诗歌鉴赏题,选择题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">必修上册</data>
+    </node>
+    <node id="K3">
+      <data key="name">青春主题作品的情感把握</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">语文</data>
+      <data key="module">必修上册</data>
+      <data key="chapter">青春价值</data>
+      <data key="difficulty">2</data>
+      <data key="description">理解青春题材作品中理想与现实、激情与困惑等情感主题，能结合时代背景分析作品情感基调。</data>
+      <data key="keywords">青春,理想,激情,情感主题,时代背景</data>
+      <data key="exam_type">阅读理解题,鉴赏题</data>
+      <data key="importance">3</data>
+      <data key="textbook_source">必修上册</data>
+    </node>
+    <node id="K4">
+      <data key="name">新闻通讯的特点与结构</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">语文</data>
+      <data key="module">必修上册</data>
+      <data key="chapter">劳动光荣</data>
+      <data key="difficulty">3</data>
+      <data key="description">掌握新闻通讯的特点(真实性与文学性结合、详细深入)及结构(导语、主体、背景、结尾)，区分通讯与消息的差异。</data>
+      <data key="keywords">新闻通讯,真实性,文学性,导语,主体,背景</data>
+      <data key="exam_type">选择题,阅读分析题</data>
+      <data key="importance">3</data>
+      <data key="textbook_source">必修上册</data>
+    </node>
+    <node id="K5">
+      <data key="name">报告文学的真实性与文学性</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">语文</data>
+      <data key="module">必修上册</data>
+      <data key="chapter">劳动光荣</data>
+      <data key="difficulty">3</data>
+      <data key="description">理解报告文学兼具新闻真实性与文学艺术性的特征，掌握其在叙事中合理运用虚构手法的边界。</data>
+      <data key="keywords">报告文学,真实性,文学性,新闻性,虚构边界</data>
+      <data key="exam_type">选择题,分析题</data>
+      <data key="importance">3</data>
+      <data key="textbook_source">必修上册</data>
+    </node>
+    <node id="K6">
+      <data key="name">人物通讯的写作方法</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">语文</data>
+      <data key="module">必修上册</data>
+      <data key="chapter">劳动光荣</data>
+      <data key="difficulty">3</data>
+      <data key="description">掌握人物通讯通过典型事例、细节描写和语言行动刻画人物形象的写作方法，能进行人物通讯片段写作。</data>
+      <data key="keywords">人物通讯,典型事例,细节描写,语言行动,人物形象</data>
+      <data key="exam_type">写作题,阅读分析题</data>
+      <data key="importance">3</data>
+      <data key="textbook_source">必修上册</data>
+    </node>
+    <node id="K7">
+      <data key="name">古诗词意象分析</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">语文</data>
+      <data key="module">必修上册</data>
+      <data key="chapter">生命的诗意</data>
+      <data key="difficulty">4</data>
+      <data key="description">掌握古诗词中常见意象(月、柳、梅、菊、松等)的固定寓意与文化内涵，能分析意象的组合方式与表现效果。</data>
+      <data key="keywords">意象,月,柳,梅,菊,松,固定寓意,文化内涵</data>
+      <data key="exam_type">诗歌鉴赏题,选择题</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">必修上册</data>
+    </node>
+    <node id="K8">
+      <data key="name">古典诗歌的炼字艺术</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">语文</data>
+      <data key="module">必修上册</data>
+      <data key="chapter">生命的诗意</data>
+      <data key="difficulty">4</data>
+      <data key="description">掌握炼字(动词、形容词、数量词、叠词)的分析方法，能赏析关键字词在表情达意上的精妙之处。</data>
+      <data key="keywords">炼字,动词,形容词,叠词,诗眼,表情达意</data>
+      <data key="exam_type">诗歌鉴赏题,分析题</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">必修上册</data>
+    </node>
+    <node id="K9">
+      <data key="name">诗歌的用典手法</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">语文</data>
+      <data key="module">必修上册</data>
+      <data key="chapter">生命的诗意</data>
+      <data key="difficulty">4</data>
+      <data key="description">理解用典(借用历史故事或前人语句表达情感)的作用(含蓄凝练、借古讽今、以古喻今)，能分析诗歌中的典故及其表达效果。</data>
+      <data key="keywords">用典,典故,借古讽今,以古喻今,含蓄凝练</data>
+      <data key="exam_type">诗歌鉴赏题,分析题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">必修上册</data>
+    </node>
+    <node id="K10">
+      <data key="name">社会调查报告的写作</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">语文</data>
+      <data key="module">必修上册</data>
+      <data key="chapter">家乡文化生活与整本书阅读</data>
+      <data key="difficulty">3</data>
+      <data key="description">掌握社会调查的基本方法(问卷、访谈、实地考察)及调查报告的结构(标题、前言、主体、结尾、附件)，能撰写规范的调查报告。</data>
+      <data key="keywords">社会调查,问卷,访谈,调查报告,结构,前言,主体</data>
+      <data key="exam_type">写作题,应用文</data>
+      <data key="importance">3</data>
+      <data key="textbook_source">必修上册</data>
+    </node>
+    <node id="K11">
+      <data key="name">整本书阅读方法</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">语文</data>
+      <data key="module">必修上册</data>
+      <data key="chapter">家乡文化生活与整本书阅读</data>
+      <data key="difficulty">3</data>
+      <data key="description">掌握整本书阅读的基本方法(通读、精读、批注、思维导图、专题探究)，以《乡土中国》为例理解学术著作的阅读策略。</data>
+      <data key="keywords">整本书阅读,通读,精读,批注,思维导图,乡土中国</data>
+      <data key="exam_type">阅读理解题,综合题</data>
+      <data key="importance">3</data>
+      <data key="textbook_source">必修上册</data>
+    </node>
+    <node id="K12">
+      <data key="name">学术著作的阅读策略</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">语文</data>
+      <data key="module">必修上册</data>
+      <data key="chapter">家乡文化生活与整本书阅读</data>
+      <data key="difficulty">4</data>
+      <data key="description">掌握学术著作的阅读策略(把握核心概念、梳理论证逻辑、联系现实思考)，理解《乡土中国》中差序格局、礼俗社会等核心概念。</data>
+      <data key="keywords">学术著作,核心概念,差序格局,礼俗社会,论证逻辑</data>
+      <data key="exam_type">选择题,阅读分析题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">必修上册</data>
+    </node>
+    <node id="K13">
+      <data key="name">议论文的论点提炼</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">语文</data>
+      <data key="module">必修上册</data>
+      <data key="chapter">学习之道</data>
+      <data key="difficulty">3</data>
+      <data key="description">掌握论点(中心论点与分论点)的提炼方法，能从材料中准确概括论点并判断论点是否鲜明、正确、新颖。</data>
+      <data key="keywords">论点,中心论点,分论点,提炼,鲜明,正确,新颖</data>
+      <data key="exam_type">选择题,写作题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">必修上册</data>
+    </node>
+    <node id="K14">
+      <data key="name">议论文的论证方法</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">语文</data>
+      <data key="module">必修上册</data>
+      <data key="chapter">学习之道</data>
+      <data key="difficulty">4</data>
+      <data key="description">掌握举例论证、道理论证、对比论证、比喻论证等论证方法的特点与运用技巧，能分析论证的有效性。</data>
+      <data key="keywords">举例论证,道理论证,对比论证,比喻论证,论证有效性</data>
+      <data key="exam_type">阅读分析题,选择题,写作题</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">必修上册</data>
+    </node>
+    <node id="K15">
+      <data key="name">议论文的结构</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">语文</data>
+      <data key="module">必修上册</data>
+      <data key="chapter">学习之道</data>
+      <data key="difficulty">3</data>
+      <data key="description">掌握议论文的基本结构(总分总式、并列式、递进式、对照式)，能分析文章论证思路并运用结构进行写作。</data>
+      <data key="keywords">总分总,并列式,递进式,对照式,论证思路</data>
+      <data key="exam_type">选择题,阅读分析题,写作题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">必修上册</data>
+    </node>
+    <node id="K16">
+      <data key="name">散文的形散神聚</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">语文</data>
+      <data key="module">必修上册</data>
+      <data key="chapter">自然情怀</data>
+      <data key="difficulty">3</data>
+      <data key="description">理解散文'形散'(选材广泛、表达自由)与'神聚'(主题集中、线索统一)的特征，能分析散文的形神关系。</data>
+      <data key="keywords">散文,形散,神聚,选材,主题,线索</data>
+      <data key="exam_type">阅读分析题,选择题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">必修上册</data>
+    </node>
+    <node id="K17">
+      <data key="name">散文的线索与结构</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">语文</data>
+      <data key="module">必修上册</data>
+      <data key="chapter">自然情怀</data>
+      <data key="difficulty">3</data>
+      <data key="description">掌握散文常见线索类型(时间线、空间线、情感线、事物线、人物线)及结构安排(纵式、横式、纵横交错式)。</data>
+      <data key="keywords">散文线索,时间线,空间线,情感线,事物线,结构安排</data>
+      <data key="exam_type">阅读分析题,选择题</data>
+      <data key="importance">3</data>
+      <data key="textbook_source">必修上册</data>
+    </node>
+    <node id="K18">
+      <data key="name">借景抒情的写作手法</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">语文</data>
+      <data key="module">必修上册</data>
+      <data key="chapter">自然情怀</data>
+      <data key="difficulty">3</data>
+      <data key="description">掌握借景抒情(融情于景、情景交融)的手法，能分析景物描写中蕴含的情感并运用该手法进行写作。</data>
+      <data key="keywords">借景抒情,融情于景,情景交融,景物描写,情感</data>
+      <data key="exam_type">阅读分析题,写作题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">必修上册</data>
+    </node>
+    <node id="K19">
+      <data key="name">文言实词一词多义</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">语文</data>
+      <data key="module">必修上册</data>
+      <data key="chapter">词语与文化</data>
+      <data key="difficulty">4</data>
+      <data key="description">掌握常见文言实词(如&quot;发&quot;&quot;辞&quot;&quot;信&quot;&quot;乘&quot;等)的一词多义现象，能根据语境推断词义并积累常用实词。</data>
+      <data key="keywords">文言实词,一词多义,语境推断,词义,积累</data>
+      <data key="exam_type">文言文翻译题,选择题</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">必修上册</data>
+    </node>
+    <node id="K20">
+      <data key="name">文言虚词的用法</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">语文</data>
+      <data key="module">必修上册</data>
+      <data key="chapter">词语与文化</data>
+      <data key="difficulty">4</data>
+      <data key="description">掌握常见文言虚词(之、乎、者、也、而、以、于、其、为、则等)的多种用法及语法功能，能判断虚词在具体语境中的意义。</data>
+      <data key="keywords">文言虚词,之,乎,者,也,而,以,于,其,语法功能</data>
+      <data key="exam_type">选择题,文言文翻译题</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">必修上册</data>
+    </node>
+    <node id="K21">
+      <data key="name">文言特殊句式</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">语文</data>
+      <data key="module">必修上册</data>
+      <data key="chapter">词语与文化</data>
+      <data key="difficulty">5</data>
+      <data key="description">掌握判断句、被动句、倒装句(宾语前置、定语后置、状语后置、主谓倒装)和省略句等文言特殊句式，能准确翻译和识别。</data>
+      <data key="keywords">判断句,被动句,倒装句,宾语前置,定语后置,省略句</data>
+      <data key="exam_type">文言文翻译题,选择题</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">必修上册</data>
+    </node>
+    <node id="K22">
+      <data key="name">文言词类活用</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">语文</data>
+      <data key="module">必修上册</data>
+      <data key="chapter">词语与文化</data>
+      <data key="difficulty">4</data>
+      <data key="description">掌握名词作动词、形容词作动词、名词作状语、使动用法、意动用法等词类活用类型，能在翻译中准确体现。</data>
+      <data key="keywords">词类活用,名词作动词,名词作状语,使动用法,意动用法</data>
+      <data key="exam_type">文言文翻译题,选择题</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">必修上册</data>
+    </node>
+    <node id="K23">
+      <data key="name">诸子散文的说理方法</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">语文</data>
+      <data key="module">必修下册</data>
+      <data key="chapter">中华文明之光</data>
+      <data key="difficulty">4</data>
+      <data key="description">掌握先秦诸子散文(儒、道、法等)的说理方法(比喻说理、类比说理、正反对比说理、寓言说理)，能分析论证特色。</data>
+      <data key="keywords">诸子散文,比喻说理,类比说理,对比说理,寓言说理,儒家,道家</data>
+      <data key="exam_type">阅读分析题,选择题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">必修下册</data>
+    </node>
+    <node id="K24">
+      <data key="name">文言文翻译的原则和方法</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">语文</data>
+      <data key="module">必修下册</data>
+      <data key="chapter">中华文明之光</data>
+      <data key="difficulty">5</data>
+      <data key="description">掌握文言文翻译的'信、达、雅'原则和'留、删、换、调、补、对'六字方法，能准确翻译文言文段落。</data>
+      <data key="keywords">翻译原则,信达雅,留删换调补对,翻译方法</data>
+      <data key="exam_type">文言文翻译题</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">必修下册</data>
+    </node>
+    <node id="K25">
+      <data key="name">先秦思想流派比较</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">语文</data>
+      <data key="module">必修下册</data>
+      <data key="chapter">中华文明之光</data>
+      <data key="difficulty">4</data>
+      <data key="description">理解儒、道、法、墨等先秦思想流派的核心理念差异(儒家仁礼、道家无为、法家法治、墨家兼爱)，能结合文本分析思想内涵。</data>
+      <data key="keywords">儒家,道家,法家,墨家,仁礼,无为,法治,兼爱</data>
+      <data key="exam_type">选择题,综合分析题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">必修下册</data>
+    </node>
+    <node id="K26">
+      <data key="name">古代传记的叙事艺术</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">语文</data>
+      <data key="module">必修下册</data>
+      <data key="chapter">责任与担当</data>
+      <data key="difficulty">4</data>
+      <data key="description">掌握古代传记(如《鸿门宴》《廉颇蔺相如列传》)的叙事艺术(剪裁详略、人物刻画、矛盾冲突组织)，能分析叙事特色。</data>
+      <data key="keywords">古代传记,叙事艺术,剪裁详略,人物刻画,矛盾冲突</data>
+      <data key="exam_type">阅读分析题,综合题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">必修下册</data>
+    </node>
+    <node id="K27">
+      <data key="name">史传文学的真实与虚构</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">语文</data>
+      <data key="module">必修下册</data>
+      <data key="chapter">责任与担当</data>
+      <data key="difficulty">3</data>
+      <data key="description">理解史传文学在尊重史实基础上合理虚构(细节描写、心理刻画、对话设计)的特点，能辨析真实与虚构的边界。</data>
+      <data key="keywords">史传文学,真实,虚构,史实,细节描写</data>
+      <data key="exam_type">选择题,分析题</data>
+      <data key="importance">3</data>
+      <data key="textbook_source">必修下册</data>
+    </node>
+    <node id="K28">
+      <data key="name">科普文章的说明方法</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">语文</data>
+      <data key="module">必修下册</data>
+      <data key="chapter">探索与创新</data>
+      <data key="difficulty">3</data>
+      <data key="description">掌握下定义、分类别、作比较、举例子、列数字、打比方、画图表等说明方法及其表达效果。</data>
+      <data key="keywords">说明方法,下定义,分类别,作比较,举例子,列数字,打比方</data>
+      <data key="exam_type">选择题,阅读分析题</data>
+      <data key="importance">3</data>
+      <data key="textbook_source">必修下册</data>
+    </node>
+    <node id="K29">
+      <data key="name">说明文的说明顺序</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">语文</data>
+      <data key="module">必修下册</data>
+      <data key="chapter">探索与创新</data>
+      <data key="difficulty">3</data>
+      <data key="description">掌握时间顺序、空间顺序、逻辑顺序(从现象到本质、从原因到结果、从概括到具体等)及综合运用。</data>
+      <data key="keywords">说明顺序,时间顺序,空间顺序,逻辑顺序,从现象到本质</data>
+      <data key="exam_type">选择题,阅读分析题</data>
+      <data key="importance">3</data>
+      <data key="textbook_source">必修下册</data>
+    </node>
+    <node id="K30">
+      <data key="name">新闻消息的结构</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">语文</data>
+      <data key="module">必修下册</data>
+      <data key="chapter">媒介素养</data>
+      <data key="difficulty">2</data>
+      <data key="description">掌握消息的结构(标题、导语、主体、背景、结语)及倒金字塔结构的特点，能分析消息的构成要素。</data>
+      <data key="keywords">消息,标题,导语,主体,背景,结语,倒金字塔</data>
+      <data key="exam_type">选择题,阅读分析题</data>
+      <data key="importance">3</data>
+      <data key="textbook_source">必修下册</data>
+    </node>
+    <node id="K31">
+      <data key="name">媒体信息的辨析与评价</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">语文</data>
+      <data key="module">必修下册</data>
+      <data key="chapter">媒介素养</data>
+      <data key="difficulty">3</data>
+      <data key="description">掌握辨析媒体信息可信度的方法(信源可靠性、证据充分性、逻辑严密性、立场客观性)，能对媒体信息进行批判性评价。</data>
+      <data key="keywords">媒体信息,信源可靠性,证据充分,批判性评价,信息辨析</data>
+      <data key="exam_type">选择题,综合分析题</data>
+      <data key="importance">3</data>
+      <data key="textbook_source">必修下册</data>
+    </node>
+    <node id="K32">
+      <data key="name">传统文化常识</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">语文</data>
+      <data key="module">必修下册</data>
+      <data key="chapter">中华优秀传统文化</data>
+      <data key="difficulty">2</data>
+      <data key="description">掌握古代称谓、科举制度、历法节气、传统节日、礼仪习俗等传统文化常识，能运用于文言文阅读与写作。</data>
+      <data key="keywords">传统文化,称谓,科举,历法节气,传统节日,礼仪</data>
+      <data key="exam_type">选择题,文化常识题</data>
+      <data key="importance">3</data>
+      <data key="textbook_source">必修下册</data>
+    </node>
+    <node id="K33">
+      <data key="name">对联的格律与创作</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">语文</data>
+      <data key="module">必修下册</data>
+      <data key="chapter">中华优秀传统文化</data>
+      <data key="difficulty">3</data>
+      <data key="description">掌握对联的基本格律(字数相等、词性相对、平仄相协、仄起平收)及创作方法，能判断对联优劣并进行简单创作。</data>
+      <data key="keywords">对联,格律,字数相等,词性相对,平仄相协,仄起平收</data>
+      <data key="exam_type">选择题,写作题</data>
+      <data key="importance">3</data>
+      <data key="textbook_source">必修下册</data>
+    </node>
+    <node id="K34">
+      <data key="name">小说的三要素</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">语文</data>
+      <data key="module">必修下册</data>
+      <data key="chapter">小说鉴赏</data>
+      <data key="difficulty">3</data>
+      <data key="description">掌握小说三要素(人物、情节、环境)及其相互关系，能分析三要素在小说中的作用。</data>
+      <data key="keywords">小说三要素,人物,情节,环境,相互关系</data>
+      <data key="exam_type">选择题,阅读分析题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">必修下册</data>
+    </node>
+    <node id="K35">
+      <data key="name">小说人物形象分析</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">语文</data>
+      <data key="module">必修下册</data>
+      <data key="chapter">小说鉴赏</data>
+      <data key="difficulty">4</data>
+      <data key="description">掌握通过肖像、语言、行动、心理、细节描写分析人物形象的方法，能概括人物性格特征并评价人物的社会意义。</data>
+      <data key="keywords">人物形象,肖像描写,语言描写,行动描写,心理描写,性格特征</data>
+      <data key="exam_type">阅读分析题,综合题</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">必修下册</data>
+    </node>
+    <node id="K36">
+      <data key="name">小说的环境描写作用</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">语文</data>
+      <data key="module">必修下册</data>
+      <data key="chapter">小说鉴赏</data>
+      <data key="difficulty">4</data>
+      <data key="description">掌握环境描写(自然环境与社会环境)的作用(交代背景、渲染气氛、烘托心情、推动情节、暗示主题)，能分析环境描写在小说中的功能。</data>
+      <data key="keywords">环境描写,自然环境,社会环境,渲染气氛,烘托心情,推动情节,暗示主题</data>
+      <data key="exam_type">阅读分析题,综合题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">必修下册</data>
+    </node>
+    <node id="K37">
+      <data key="name">小说的叙事视角</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">语文</data>
+      <data key="module">必修下册</data>
+      <data key="chapter">小说鉴赏</data>
+      <data key="difficulty">4</data>
+      <data key="description">区分第一人称、第二人称、第三人称(全知视角与有限视角)叙事的特点与效果，能分析叙事视角对小说表达的影响。</data>
+      <data key="keywords">叙事视角,第一人称,第二人称,第三人称,全知视角,有限视角</data>
+      <data key="exam_type">选择题,阅读分析题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">必修下册</data>
+    </node>
+    <node id="K38">
+      <data key="name">戏剧冲突的构成</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">语文</data>
+      <data key="module">必修下册</data>
+      <data key="chapter">剧本欣赏</data>
+      <data key="difficulty">4</data>
+      <data key="description">理解戏剧冲突(人物与环境的冲突、人物间的冲突、人物内心冲突)是戏剧的核心，能分析戏剧冲突的组织与推进。</data>
+      <data key="keywords">戏剧冲突,人物与环境,人物间冲突,内心冲突,戏剧核心</data>
+      <data key="exam_type">阅读分析题,选择题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">必修下册</data>
+    </node>
+    <node id="K39">
+      <data key="name">戏剧语言的特点</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">语文</data>
+      <data key="module">必修下册</data>
+      <data key="chapter">剧本欣赏</data>
+      <data key="difficulty">3</data>
+      <data key="description">掌握戏剧语言(人物台词与舞台说明)的个性化(符合人物身份性格)和动作性(推动剧情发展)特点，能分析戏剧语言的功能。</data>
+      <data key="keywords">戏剧语言,台词,舞台说明,个性化,动作性</data>
+      <data key="exam_type">选择题,阅读分析题</data>
+      <data key="importance">3</data>
+      <data key="textbook_source">必修下册</data>
+    </node>
+    <node id="K40">
+      <data key="name">戏剧人物形象分析</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">语文</data>
+      <data key="module">必修下册</data>
+      <data key="chapter">剧本欣赏</data>
+      <data key="difficulty">3</data>
+      <data key="description">掌握通过戏剧冲突和台词分析人物性格与命运的方法，能评价戏剧人物的典型意义与悲剧/喜剧色彩。</data>
+      <data key="keywords">戏剧人物,性格分析,典型意义,悲剧,喜剧</data>
+      <data key="exam_type">阅读分析题,综合题</data>
+      <data key="importance">3</data>
+      <data key="textbook_source">必修下册</data>
+    </node>
+    <node id="K41">
+      <data key="name">革命文学作品的时代背景</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">语文</data>
+      <data key="module">选择性必修上册</data>
+      <data key="chapter">中国革命传统作品</data>
+      <data key="difficulty">3</data>
+      <data key="description">理解中国革命不同历史时期(建党、土地革命、抗日战争、解放战争)的社会背景，能结合时代背景解读革命文学作品。</data>
+      <data key="keywords">革命文学,时代背景,土地革命,抗日战争,解放战争</data>
+      <data key="exam_type">选择题,阅读分析题</data>
+      <data key="importance">3</data>
+      <data key="textbook_source">选择性必修上册</data>
+    </node>
+    <node id="K42">
+      <data key="name">纪实文学的写作特点</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">语文</data>
+      <data key="module">选择性必修上册</data>
+      <data key="chapter">中国革命传统作品</data>
+      <data key="difficulty">3</data>
+      <data key="description">掌握纪实文学以真实事件为基础、运用文学手法增强感染力的写作特点，能区分纪实文学与虚构文学的边界。</data>
+      <data key="keywords">纪实文学,真实事件,文学手法,感染力,虚构边界</data>
+      <data key="exam_type">选择题,分析题</data>
+      <data key="importance">3</data>
+      <data key="textbook_source">选择性必修上册</data>
+    </node>
+    <node id="K43">
+      <data key="name">形式逻辑基本规律</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">语文</data>
+      <data key="module">选择性必修上册</data>
+      <data key="chapter">逻辑思维</data>
+      <data key="difficulty">4</data>
+      <data key="description">掌握同一律(A是A)、矛盾律(A不是非A)、排中律(A或非A)三大形式逻辑基本规律，能识别违反规律的逻辑错误。</data>
+      <data key="keywords">形式逻辑,同一律,矛盾律,排中律,逻辑错误</data>
+      <data key="exam_type">选择题,分析题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">选择性必修上册</data>
+    </node>
+    <node id="K44">
+      <data key="name">演绎推理与归纳推理</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">语文</data>
+      <data key="module">选择性必修上册</data>
+      <data key="chapter">逻辑思维</data>
+      <data key="difficulty">4</data>
+      <data key="description">掌握演绎推理(三段论:大前提、小前提、结论)与归纳推理(完全归纳与不完全归纳)的方法与区别，能进行推理分析。</data>
+      <data key="keywords">演绎推理,归纳推理,三段论,大前提,小前提,完全归纳,不完全归纳</data>
+      <data key="exam_type">选择题,分析题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">选择性必修上册</data>
+    </node>
+    <node id="K45">
+      <data key="name">逻辑谬误的识别</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">语文</data>
+      <data key="module">选择性必修上册</data>
+      <data key="chapter">逻辑思维</data>
+      <data key="difficulty">3</data>
+      <data key="description">掌握常见逻辑谬误(以偏概全、偷换概念、因果倒置、诉诸权威、人身攻击、滑坡谬误等)的类型与特征，能识别并分析论证中的谬误。</data>
+      <data key="keywords">逻辑谬误,以偏概全,偷换概念,因果倒置,诉诸权威,人身攻击</data>
+      <data key="exam_type">选择题,分析题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">选择性必修上册</data>
+    </node>
+    <node id="K46">
+      <data key="name">复言命题推理</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">语文</data>
+      <data key="module">选择性必修上册</data>
+      <data key="chapter">逻辑思维</data>
+      <data key="difficulty">4</data>
+      <data key="description">掌握联言命题、选言命题、假言命题(充分条件、必要条件、充要条件)的推理规则，能进行复合命题的逻辑推理。</data>
+      <data key="keywords">复言命题,联言命题,选言命题,假言命题,充分条件,必要条件</data>
+      <data key="exam_type">选择题,分析题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">选择性必修上册</data>
+    </node>
+    <node id="K47">
+      <data key="name">论证的加强和削弱</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">语文</data>
+      <data key="module">选择性必修上册</data>
+      <data key="chapter">逻辑思维</data>
+      <data key="difficulty">4</data>
+      <data key="description">掌握加强论证(补充论据、建立因果联系、排除他因)和削弱论证(反驳论据、切断因果联系、提出他因)的方法。</data>
+      <data key="keywords">论证加强,论证削弱,补充论据,因果联系,排除他因</data>
+      <data key="exam_type">选择题,分析题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">选择性必修上册</data>
+    </node>
+    <node id="K48">
+      <data key="name">小说主题的多义性</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">语文</data>
+      <data key="module">选择性必修上册</data>
+      <data key="chapter">小说欣赏</data>
+      <data key="difficulty">4</data>
+      <data key="description">理解小说主题的多义性(可从社会、人性、哲学等多角度解读)，能结合文本进行多角度主题分析。</data>
+      <data key="keywords">小说主题,多义性,多角度解读,社会,人性,哲学</data>
+      <data key="exam_type">阅读分析题,综合题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">选择性必修上册</data>
+    </node>
+    <node id="K49">
+      <data key="name">小说叙述技巧</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">语文</data>
+      <data key="module">选择性必修上册</data>
+      <data key="chapter">小说欣赏</data>
+      <data key="difficulty">4</data>
+      <data key="description">掌握伏笔与照应、悬念与铺垫、巧合与突转、插叙与倒叙等叙述技巧，能分析技巧在情节安排中的效果。</data>
+      <data key="keywords">叙述技巧,伏笔,照应,悬念,铺垫,巧合,突转,插叙,倒叙</data>
+      <data key="exam_type">阅读分析题,选择题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">选择性必修上册</data>
+    </node>
+    <node id="K50">
+      <data key="name">理论文章的阅读方法</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">语文</data>
+      <data key="module">选择性必修中册</data>
+      <data key="chapter">理论的价值</data>
+      <data key="difficulty">3</data>
+      <data key="description">掌握理论文章的阅读方法(把握核心论点、梳理论证框架、理解理论概念、联系实践思考)，能分析理论文章的逻辑结构。</data>
+      <data key="keywords">理论文章,核心论点,论证框架,理论概念,逻辑结构</data>
+      <data key="exam_type">阅读分析题,选择题</data>
+      <data key="importance">3</data>
+      <data key="textbook_source">选择性必修中册</data>
+    </node>
+    <node id="K51">
+      <data key="name">理论文章的论证逻辑</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">语文</data>
+      <data key="module">选择性必修中册</data>
+      <data key="chapter">理论的价值</data>
+      <data key="difficulty">4</data>
+      <data key="description">掌握理论文章从概念界定到判断推理再到结论的论证逻辑，能分析理论论证的严密性与说服力。</data>
+      <data key="keywords">论证逻辑,概念界定,判断推理,严密性,说服力</data>
+      <data key="exam_type">阅读分析题,综合题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">选择性必修中册</data>
+    </node>
+    <node id="K52">
+      <data key="name">现代诗歌的象征手法</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">语文</data>
+      <data key="module">选择性必修中册</data>
+      <data key="chapter">苦难与新生</data>
+      <data key="difficulty">4</data>
+      <data key="description">理解象征(以具体事物暗示抽象意义)在诗歌中的作用，能分析现代诗中象征意象的多层含义与整体象征效果。</data>
+      <data key="keywords">象征手法,具体事物,抽象意义,象征意象,多层含义</data>
+      <data key="exam_type">诗歌鉴赏题,分析题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">选择性必修中册</data>
+    </node>
+    <node id="K53">
+      <data key="name">抒情诗的鉴赏</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">语文</data>
+      <data key="module">选择性必修中册</data>
+      <data key="chapter">苦难与新生</data>
+      <data key="difficulty">3</data>
+      <data key="description">掌握抒情诗鉴赏的角度(情感基调、意象选取、节奏韵律、修辞手法)，能进行抒情诗的综合鉴赏。</data>
+      <data key="keywords">抒情诗,情感基调,意象,节奏韵律,修辞手法,综合鉴赏</data>
+      <data key="exam_type">诗歌鉴赏题,综合题</data>
+      <data key="importance">3</data>
+      <data key="textbook_source">选择性必修中册</data>
+    </node>
+    <node id="K54">
+      <data key="name">咏史诗的特点</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">语文</data>
+      <data key="module">选择性必修中册</data>
+      <data key="chapter">历史的回响</data>
+      <data key="difficulty">3</data>
+      <data key="description">掌握咏史诗(怀古诗)的特点(借古讽今、以古喻今、借古抒怀、感慨兴亡)，能分析咏史诗的题材特征与表现手法。</data>
+      <data key="keywords">咏史诗,怀古诗,借古讽今,以古喻今,借古抒怀,感慨兴亡</data>
+      <data key="exam_type">诗歌鉴赏题,选择题</data>
+      <data key="importance">3</data>
+      <data key="textbook_source">选择性必修中册</data>
+    </node>
+    <node id="K55">
+      <data key="name">古代诗歌的用典与怀古</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">语文</data>
+      <data key="module">选择性必修中册</data>
+      <data key="chapter">历史的回响</data>
+      <data key="difficulty">4</data>
+      <data key="description">深入理解怀古诗中用典的类型(正用与反用)及效果，能分析典故与怀古主题之间的关系。</data>
+      <data key="keywords">用典,怀古,正用,反用,典故,怀古主题</data>
+      <data key="exam_type">诗歌鉴赏题,分析题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">选择性必修中册</data>
+    </node>
+    <node id="K56">
+      <data key="name">外国小说的鉴赏</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">语文</data>
+      <data key="module">选择性必修中册</data>
+      <data key="chapter">丰富的心灵</data>
+      <data key="difficulty">4</data>
+      <data key="description">掌握外国小说鉴赏的角度(文化背景、叙事传统、人物塑造、主题表达)，能结合文化背景分析外国小说特色。</data>
+      <data key="keywords">外国小说,文化背景,叙事传统,人物塑造,主题表达</data>
+      <data key="exam_type">阅读分析题,综合题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">选择性必修中册</data>
+    </node>
+    <node id="K57">
+      <data key="name">心理描写方法</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">语文</data>
+      <data key="module">选择性必修中册</data>
+      <data key="chapter">丰富的心灵</data>
+      <data key="difficulty">3</data>
+      <data key="description">掌握直接心理描写(内心独白、心理分析)与间接心理描写(动作暗示、环境烘托、梦境幻觉)的方法与效果。</data>
+      <data key="keywords">心理描写,内心独白,心理分析,动作暗示,环境烘托,梦境幻觉</data>
+      <data key="exam_type">阅读分析题,写作题</data>
+      <data key="importance">3</data>
+      <data key="textbook_source">选择性必修中册</data>
+    </node>
+    <node id="K58">
+      <data key="name">现代散文诗的特点</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">语文</data>
+      <data key="module">选择性必修下册</data>
+      <data key="chapter">诗散文鉴赏</data>
+      <data key="difficulty">3</data>
+      <data key="description">理解散文诗兼有散文的自由与诗的意境的特点，能分析散文诗的意象组合与情感表达方式。</data>
+      <data key="keywords">散文诗,散文自由,诗歌意境,意象组合,情感表达</data>
+      <data key="exam_type">诗歌鉴赏题,选择题</data>
+      <data key="importance">3</data>
+      <data key="textbook_source">选择性必修下册</data>
+    </node>
+    <node id="K59">
+      <data key="name">中国现当代诗歌鉴赏</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">语文</data>
+      <data key="module">选择性必修下册</data>
+      <data key="chapter">诗散文鉴赏</data>
+      <data key="difficulty">4</data>
+      <data key="description">掌握现当代诗歌(新月派、朦胧诗等)的流派特点与鉴赏角度(意象、节奏、主题、语言创新)，能进行综合鉴赏。</data>
+      <data key="keywords">现当代诗歌,新月派,朦胧诗,意象,节奏,语言创新</data>
+      <data key="exam_type">诗歌鉴赏题,综合题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">选择性必修下册</data>
+    </node>
+    <node id="K60">
+      <data key="name">词语的色彩义</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">语文</data>
+      <data key="module">选择性必修下册</data>
+      <data key="chapter">语言鉴赏</data>
+      <data key="difficulty">3</data>
+      <data key="description">掌握词语的感情色彩(褒义、贬义、中性)、语体色彩(口语、书面语)和形象色彩，能分析词语色彩义在表达中的作用。</data>
+      <data key="keywords">词语色彩义,感情色彩,褒义,贬义,语体色彩,形象色彩</data>
+      <data key="exam_type">选择题,语言运用题</data>
+      <data key="importance">3</data>
+      <data key="textbook_source">选择性必修下册</data>
+    </node>
+    <node id="K61">
+      <data key="name">句式的选择与变换</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">语文</data>
+      <data key="module">选择性必修下册</data>
+      <data key="chapter">语言鉴赏</data>
+      <data key="difficulty">4</data>
+      <data key="description">掌握常式句与变式句、长句与短句、整句与散句的特点与表达效果，能进行句式变换并分析其表达作用。</data>
+      <data key="keywords">句式变换,常式句,变式句,长句,短句,整句,散句</data>
+      <data key="exam_type">语言运用题,选择题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">选择性必修下册</data>
+    </node>
+    <node id="K62">
+      <data key="name">修辞手法(一):比喻比拟借代夸张对偶排比</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">语文</data>
+      <data key="module">选择性必修下册</data>
+      <data key="chapter">语言鉴赏</data>
+      <data key="difficulty">4</data>
+      <data key="description">掌握比喻(明喻、暗喻、借喻)、比拟(拟人、拟物)、借代、夸张、对偶、排比等修辞手法的辨识与表达效果分析。</data>
+      <data key="keywords">修辞手法,比喻,明喻,暗喻,借喻,比拟,拟人,借代,夸张,对偶,排比</data>
+      <data key="exam_type">选择题,语言运用题,鉴赏题</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">选择性必修下册</data>
+    </node>
+    <node id="K63">
+      <data key="name">修辞手法(二):反复设问反问反语</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">语文</data>
+      <data key="module">选择性必修下册</data>
+      <data key="chapter">语言鉴赏</data>
+      <data key="difficulty">3</data>
+      <data key="description">掌握反复、设问、反问、反语、双关、通感等修辞手法的特点与表达效果，能辨析并赏析修辞手法。</data>
+      <data key="keywords">反复,设问,反问,反语,双关,通感,修辞赏析</data>
+      <data key="exam_type">选择题,语言运用题</data>
+      <data key="importance">3</data>
+      <data key="textbook_source">选择性必修下册</data>
+    </node>
+    <node id="K64">
+      <data key="name">语言得体性原则</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">语文</data>
+      <data key="module">选择性必修下册</data>
+      <data key="chapter">语言鉴赏</data>
+      <data key="difficulty">3</data>
+      <data key="description">掌握语言得体的要求(符合对象、场合、目的、身份)，能判断语言使用是否得体并进行修改。</data>
+      <data key="keywords">语言得体,对象,场合,目的,身份,语体</data>
+      <data key="exam_type">语言运用题,选择题</data>
+      <data key="importance">3</data>
+      <data key="textbook_source">选择性必修下册</data>
+    </node>
+    <node id="K65">
+      <data key="name">语体风格</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">语文</data>
+      <data key="module">选择性必修下册</data>
+      <data key="chapter">语言鉴赏</data>
+      <data key="difficulty">3</data>
+      <data key="description">区分口语语体与书面语语体、文艺语体与实用语体、政论语体与科技语体的特征，能根据语境选择恰当的语体。</data>
+      <data key="keywords">语体风格,口语,书面语,文艺语体,实用语体,政论语体,科技语体</data>
+      <data key="exam_type">选择题,语言运用题</data>
+      <data key="importance">3</data>
+      <data key="textbook_source">选择性必修下册</data>
+    </node>
+    <node id="K66">
+      <data key="name">鲁迅小说的批判性</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">语文</data>
+      <data key="module">选择性必修下册</data>
+      <data key="chapter">中国现代作家作品</data>
+      <data key="difficulty">4</data>
+      <data key="description">理解鲁迅小说以批判国民性为核心的创作特色(揭示精神麻木、批判封建礼教、反思文化传统)，能分析代表作的批判意蕴。</data>
+      <data key="keywords">鲁迅小说,批判性,国民性,精神麻木,封建礼教,文化传统</data>
+      <data key="exam_type">阅读分析题,综合题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">选择性必修下册</data>
+    </node>
+    <node id="K67">
+      <data key="name">现代散文流派特点</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">语文</data>
+      <data key="module">选择性必修下册</data>
+      <data key="chapter">中国现代作家作品</data>
+      <data key="difficulty">3</data>
+      <data key="description">了解现代散文的主要流派(语丝派、京派、海派等)及代表作家的创作风格，能比较不同流派的散文特色。</data>
+      <data key="keywords">现代散文,语丝派,京派,海派,创作风格,流派比较</data>
+      <data key="exam_type">选择题,分析题</data>
+      <data key="importance">3</data>
+      <data key="textbook_source">选择性必修下册</data>
+    </node>
+    <node id="K68">
+      <data key="name">现代话剧的艺术成就</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">语文</data>
+      <data key="module">选择性必修下册</data>
+      <data key="chapter">中国现代作家作品</data>
+      <data key="difficulty">3</data>
+      <data key="description">了解中国现代话剧(曹禺《雷雨》、老舍《茶馆》等)的代表作品与艺术成就，能分析现代话剧的民族化探索。</data>
+      <data key="keywords">现代话剧,曹禺,雷雨,老舍,茶馆,民族化</data>
+      <data key="exam_type">选择题,分析题</data>
+      <data key="importance">3</data>
+      <data key="textbook_source">选择性必修下册</data>
+    </node>
+    <node id="K69">
+      <data key="name">外国小说的流派</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">语文</data>
+      <data key="module">选择性必修下册</data>
+      <data key="chapter">外国作家作品</data>
+      <data key="difficulty">4</data>
+      <data key="description">了解外国小说的主要流派(现实主义、浪漫主义、自然主义、意识流、魔幻现实主义等)的特征与代表作品，能辨析流派风格。</data>
+      <data key="keywords">外国小说流派,现实主义,浪漫主义,自然主义,意识流,魔幻现实主义</data>
+      <data key="exam_type">选择题,分析题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">选择性必修下册</data>
+    </node>
+    <node id="K70">
+      <data key="name">外国诗歌的鉴赏</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">语文</data>
+      <data key="module">选择性必修下册</data>
+      <data key="chapter">外国作家作品</data>
+      <data key="difficulty">3</data>
+      <data key="description">掌握外国诗歌鉴赏的角度(文化背景、诗歌传统、意象隐喻、自由诗与格律诗)，能比较中外诗歌的异同。</data>
+      <data key="keywords">外国诗歌,文化背景,意象隐喻,自由诗,格律诗,中外比较</data>
+      <data key="exam_type">诗歌鉴赏题,综合题</data>
+      <data key="importance">3</data>
+      <data key="textbook_source">选择性必修下册</data>
+    </node>
+    <node id="K71">
+      <data key="name">比较文学阅读方法</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">语文</data>
+      <data key="module">选择性必修下册</data>
+      <data key="chapter">外国作家作品</data>
+      <data key="difficulty">4</data>
+      <data key="description">掌握比较文学阅读的基本方法(平行研究:同类主题/文体比较;影响研究:渊源与流传比较)，能进行中外文学作品的比较分析。</data>
+      <data key="keywords">比较文学,平行研究,影响研究,主题比较,文体比较,渊源流传</data>
+      <data key="exam_type">综合分析题,论述题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">选择性必修下册</data>
+    </node>
+    <edge source="M1" target="C1">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">模块包含章节</data>
+    </edge>
+    <edge source="M1" target="C2">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">模块包含章节</data>
+    </edge>
+    <edge source="M1" target="C3">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">模块包含章节</data>
+    </edge>
+    <edge source="M1" target="C4">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">模块包含章节</data>
+    </edge>
+    <edge source="M1" target="C5">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">模块包含章节</data>
+    </edge>
+    <edge source="M1" target="C6">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">模块包含章节</data>
+    </edge>
+    <edge source="M1" target="C7">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">模块包含章节</data>
+    </edge>
+    <edge source="M2" target="C8">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">模块包含章节</data>
+    </edge>
+    <edge source="M2" target="C9">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">模块包含章节</data>
+    </edge>
+    <edge source="M2" target="C10">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">模块包含章节</data>
+    </edge>
+    <edge source="M2" target="C11">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">模块包含章节</data>
+    </edge>
+    <edge source="M2" target="C12">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">模块包含章节</data>
+    </edge>
+    <edge source="M2" target="C13">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">模块包含章节</data>
+    </edge>
+    <edge source="M2" target="C14">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">模块包含章节</data>
+    </edge>
+    <edge source="M3" target="C15">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">模块包含章节</data>
+    </edge>
+    <edge source="M3" target="C16">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">模块包含章节</data>
+    </edge>
+    <edge source="M3" target="C17">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">模块包含章节</data>
+    </edge>
+    <edge source="M4" target="C18">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">模块包含章节</data>
+    </edge>
+    <edge source="M4" target="C19">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">模块包含章节</data>
+    </edge>
+    <edge source="M4" target="C20">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">模块包含章节</data>
+    </edge>
+    <edge source="M4" target="C21">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">模块包含章节</data>
+    </edge>
+    <edge source="M5" target="C22">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">模块包含章节</data>
+    </edge>
+    <edge source="M5" target="C23">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">模块包含章节</data>
+    </edge>
+    <edge source="M5" target="C24">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">模块包含章节</data>
+    </edge>
+    <edge source="M5" target="C25">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">模块包含章节</data>
+    </edge>
+    <edge source="C1" target="K1">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C1" target="K2">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C1" target="K3">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C2" target="K4">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C2" target="K5">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C2" target="K6">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C3" target="K7">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C3" target="K8">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C3" target="K9">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C4" target="K10">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C4" target="K11">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C4" target="K12">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C5" target="K13">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C5" target="K14">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C5" target="K15">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C6" target="K16">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C6" target="K17">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C6" target="K18">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C7" target="K19">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C7" target="K20">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C7" target="K21">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C7" target="K22">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C8" target="K23">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C8" target="K24">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C8" target="K25">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C9" target="K26">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C9" target="K27">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C10" target="K28">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C10" target="K29">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C11" target="K30">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C11" target="K31">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C12" target="K32">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C12" target="K33">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C13" target="K34">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C13" target="K35">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C13" target="K36">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C13" target="K37">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C14" target="K38">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C14" target="K39">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C14" target="K40">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C15" target="K41">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C15" target="K42">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C16" target="K43">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C16" target="K44">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C16" target="K45">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C16" target="K46">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C16" target="K47">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C17" target="K48">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C17" target="K49">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C18" target="K50">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C18" target="K51">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C19" target="K52">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C19" target="K53">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C20" target="K54">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C20" target="K55">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C21" target="K56">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C21" target="K57">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C22" target="K58">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C22" target="K59">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C23" target="K60">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C23" target="K61">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C23" target="K62">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C23" target="K63">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C23" target="K64">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C23" target="K65">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C24" target="K66">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C24" target="K67">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C24" target="K68">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C25" target="K69">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C25" target="K70">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C25" target="K71">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="K1" target="K2">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.7</data>
+      <data key="description">意象意境知识是理解抒情方式的基础</data>
+    </edge>
+    <edge source="K2" target="K3">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.6</data>
+      <data key="description">抒情方式知识有助于分析青春主题作品</data>
+    </edge>
+    <edge source="K1" target="K7">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.7</data>
+      <data key="description">现代诗歌意象知识是学习古诗词意象的基础</data>
+    </edge>
+    <edge source="K2" target="K8">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.5</data>
+      <data key="description">抒情方式与炼字艺术在表情达意上相通</data>
+    </edge>
+    <edge source="K7" target="K8">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.7</data>
+      <data key="description">意象分析是炼字赏析的基础</data>
+    </edge>
+    <edge source="K7" target="K9">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.6</data>
+      <data key="description">意象知识有助于理解用典</data>
+    </edge>
+    <edge source="K8" target="K9">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.5</data>
+      <data key="description">炼字与用典都是诗歌鉴赏的基本功</data>
+    </edge>
+    <edge source="K13" target="K14">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.8</data>
+      <data key="description">论点提炼是学习论证方法的前提</data>
+    </edge>
+    <edge source="K14" target="K15">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.7</data>
+      <data key="description">论证方法是构建议论文结构的基础</data>
+    </edge>
+    <edge source="K16" target="K17">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.8</data>
+      <data key="description">形散神聚是理解散文线索结构的前提</data>
+    </edge>
+    <edge source="K17" target="K18">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.6</data>
+      <data key="description">线索结构知识有助于分析借景抒情</data>
+    </edge>
+    <edge source="K19" target="K21">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.6</data>
+      <data key="description">实词知识是理解特殊句式的基础</data>
+    </edge>
+    <edge source="K20" target="K21">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.7</data>
+      <data key="description">虚词用法是分析句式结构的基础</data>
+    </edge>
+    <edge source="K19" target="K22">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.6</data>
+      <data key="description">实词知识是理解词类活用的前提</data>
+    </edge>
+    <edge source="K19" target="K24">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.7</data>
+      <data key="description">实词积累是文言文翻译的基础</data>
+    </edge>
+    <edge source="K20" target="K24">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.7</data>
+      <data key="description">虚词用法是文言文翻译的基础</data>
+    </edge>
+    <edge source="K21" target="K24">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.8</data>
+      <data key="description">特殊句式是文言文翻译的关键</data>
+    </edge>
+    <edge source="K22" target="K24">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.7</data>
+      <data key="description">词类活用是文言文翻译的难点</data>
+    </edge>
+    <edge source="K23" target="K25">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.6</data>
+      <data key="description">诸子散文说理方法有助于理解思想流派</data>
+    </edge>
+    <edge source="K24" target="K26">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.5</data>
+      <data key="description">文言翻译能力是阅读古代传记的基础</data>
+    </edge>
+    <edge source="K28" target="K29">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.6</data>
+      <data key="description">说明方法是安排说明顺序的手段</data>
+    </edge>
+    <edge source="K34" target="K35">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.8</data>
+      <data key="description">三要素知识是人物形象分析的基础</data>
+    </edge>
+    <edge source="K34" target="K36">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.7</data>
+      <data key="description">三要素知识是环境描写分析的基础</data>
+    </edge>
+    <edge source="K34" target="K37">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.6</data>
+      <data key="description">三要素知识是理解叙事视角的前提</data>
+    </edge>
+    <edge source="K35" target="K40">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.5</data>
+      <data key="description">小说人物分析方法可迁移至戏剧人物分析</data>
+    </edge>
+    <edge source="K38" target="K40">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.6</data>
+      <data key="description">戏剧冲突是分析戏剧人物的基础</data>
+    </edge>
+    <edge source="K39" target="K40">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.6</data>
+      <data key="description">戏剧语言特点有助于分析人物性格</data>
+    </edge>
+    <edge source="K34" target="K48">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.6</data>
+      <data key="description">三要素知识是分析主题多义性的基础</data>
+    </edge>
+    <edge source="K35" target="K49">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.5</data>
+      <data key="description">人物分析有助于理解叙述技巧</data>
+    </edge>
+    <edge source="K43" target="K44">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.7</data>
+      <data key="description">逻辑基本规律是学习推理方法的前提</data>
+    </edge>
+    <edge source="K43" target="K45">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.8</data>
+      <data key="description">基本规律是识别谬误的基础</data>
+    </edge>
+    <edge source="K44" target="K46">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.6</data>
+      <data key="description">推理方法是复言命题推理的基础</data>
+    </edge>
+    <edge source="K44" target="K47">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.7</data>
+      <data key="description">推理方法是论证加强削弱的基础</data>
+    </edge>
+    <edge source="K46" target="K47">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.5</data>
+      <data key="description">复言命题推理有助于分析论证逻辑</data>
+    </edge>
+    <edge source="K44" target="K51">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.6</data>
+      <data key="description">推理方法是分析理论论证逻辑的工具</data>
+    </edge>
+    <edge source="K45" target="K51">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.5</data>
+      <data key="description">谬误识别有助于评估论证严密性</data>
+    </edge>
+    <edge source="K52" target="K53">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.6</data>
+      <data key="description">象征手法是抒情诗鉴赏的角度之一</data>
+    </edge>
+    <edge source="K54" target="K55">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.8</data>
+      <data key="description">咏史诗特点是深入分析用典怀古的前提</data>
+    </edge>
+    <edge source="K9" target="K55">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.5</data>
+      <data key="description">用典手法知识可迁移至怀古诗鉴赏</data>
+    </edge>
+    <edge source="K56" target="K57">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.5</data>
+      <data key="description">外国小说鉴赏与心理描写分析相关</data>
+    </edge>
+    <edge source="K58" target="K59">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.6</data>
+      <data key="description">散文诗特点有助于现当代诗歌鉴赏</data>
+    </edge>
+    <edge source="K1" target="K59">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.5</data>
+      <data key="description">意象意境知识是现当代诗歌鉴赏的基础</data>
+    </edge>
+    <edge source="K60" target="K62">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.5</data>
+      <data key="description">词语色彩义是理解修辞表达效果的基础</data>
+    </edge>
+    <edge source="K60" target="K64">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.6</data>
+      <data key="description">词语色彩义是语言得体的要素</data>
+    </edge>
+    <edge source="K62" target="K63">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.7</data>
+      <data key="description">修辞手法(一)是学习修辞手法(二)的基础</data>
+    </edge>
+    <edge source="K64" target="K65">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.6</data>
+      <data key="description">语言得体是语体风格选择的要求</data>
+    </edge>
+    <edge source="K66" target="K67">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.4</data>
+      <data key="description">鲁迅小说与现代散文流派有时代关联</data>
+    </edge>
+    <edge source="K40" target="K68">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.4</data>
+      <data key="description">戏剧人物分析有助于理解现代话剧</data>
+    </edge>
+    <edge source="K69" target="K71">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.6</data>
+      <data key="description">了解外国小说流派是比较文学阅读的基础</data>
+    </edge>
+    <edge source="K70" target="K71">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.5</data>
+      <data key="description">外国诗歌鉴赏是比较文学阅读的能力基础</data>
+    </edge>
+    <edge source="K56" target="K69">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.6</data>
+      <data key="description">外国小说鉴赏是学习流派的延伸</data>
+    </edge>
+    <edge source="K14" target="K51">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.4</data>
+      <data key="description">论证方法有助于分析理论文章的论证逻辑</data>
+    </edge>
+    <edge source="K15" target="K50">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.4</data>
+      <data key="description">议论文结构有助于理解理论文章的阅读方法</data>
+    </edge>
+    <edge source="K9" target="K52">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.4</data>
+      <data key="description">用典与象征都是含蓄表达手法</data>
+    </edge>
+    <edge source="K7" target="K52">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.5</data>
+      <data key="description">意象分析与象征手法密切相关</data>
+    </edge>
+    <edge source="K7" target="K54">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.4</data>
+      <data key="description">意象分析是咏史诗鉴赏的基础</data>
+    </edge>
+    <edge source="K2" target="K18">
+      <data key="relation">RELATED_TO</data>
+      <data key="weight">0.5</data>
+      <data key="description">借景抒情与抒情方式都属于抒情手法</data>
+    </edge>
+    <edge source="K4" target="K30">
+      <data key="relation">RELATED_TO</data>
+      <data key="weight">0.6</data>
+      <data key="description">通讯与消息都是新闻文体</data>
+    </edge>
+    <edge source="K4" target="K5">
+      <data key="relation">RELATED_TO</data>
+      <data key="weight">0.6</data>
+      <data key="description">通讯与报告文学都有新闻性与文学性</data>
+    </edge>
+    <edge source="K5" target="K42">
+      <data key="relation">RELATED_TO</data>
+      <data key="weight">0.5</data>
+      <data key="description">报告文学与纪实文学都强调真实性与文学性</data>
+    </edge>
+    <edge source="K7" target="K58">
+      <data key="relation">RELATED_TO</data>
+      <data key="weight">0.5</data>
+      <data key="description">古诗词意象与散文诗意象在意象运用上相通</data>
+    </edge>
+    <edge source="K13" target="K50">
+      <data key="relation">RELATED_TO</data>
+      <data key="weight">0.4</data>
+      <data key="description">议论文论点提炼与理论文章核心论点把握相关</data>
+    </edge>
+    <edge source="K14" target="K23">
+      <data key="relation">RELATED_TO</data>
+      <data key="weight">0.4</data>
+      <data key="description">论证方法与诸子说理方法在说理技巧上相通</data>
+    </edge>
+    <edge source="K14" target="K47">
+      <data key="relation">RELATED_TO</data>
+      <data key="weight">0.5</data>
+      <data key="description">论证方法与论证加强削弱在逻辑分析上相关</data>
+    </edge>
+    <edge source="K16" target="K58">
+      <data key="relation">RELATED_TO</data>
+      <data key="weight">0.4</data>
+      <data key="description">散文形散神聚与散文诗特点相关</data>
+    </edge>
+    <edge source="K17" target="K49">
+      <data key="relation">RELATED_TO</data>
+      <data key="weight">0.4</data>
+      <data key="description">散文线索结构与小说叙述技巧都涉及结构安排</data>
+    </edge>
+    <edge source="K19" target="K32">
+      <data key="relation">RELATED_TO</data>
+      <data key="weight">0.4</data>
+      <data key="description">文言实词与传统文化常识在文言阅读中相关</data>
+    </edge>
+    <edge source="K21" target="K33">
+      <data key="relation">RELATED_TO</data>
+      <data key="weight">0.4</data>
+      <data key="description">文言特殊句式与对联格律都涉及语言结构</data>
+    </edge>
+    <edge source="K26" target="K27">
+      <data key="relation">RELATED_TO</data>
+      <data key="weight">0.7</data>
+      <data key="description">古代传记叙事艺术与史传文学真实虚构紧密关联</data>
+    </edge>
+    <edge source="K28" target="K29">
+      <data key="relation">RELATED_TO</data>
+      <data key="weight">0.7</data>
+      <data key="description">说明方法与说明顺序紧密关联</data>
+    </edge>
+    <edge source="K30" target="K31">
+      <data key="relation">RELATED_TO</data>
+      <data key="weight">0.5</data>
+      <data key="description">消息结构与媒体信息辨析都属于媒介素养</data>
+    </edge>
+    <edge source="K35" target="K57">
+      <data key="relation">RELATED_TO</data>
+      <data key="weight">0.4</data>
+      <data key="description">小说人物分析与心理描写方法都涉及人物刻画</data>
+    </edge>
+    <edge source="K38" target="K39">
+      <data key="relation">RELATED_TO</data>
+      <data key="weight">0.6</data>
+      <data key="description">戏剧冲突与戏剧语言紧密关联</data>
+    </edge>
+    <edge source="K43" target="K44">
+      <data key="relation">RELATED_TO</data>
+      <data key="weight">0.6</data>
+      <data key="description">逻辑基本规律与推理方法紧密关联</data>
+    </edge>
+    <edge source="K52" target="K59">
+      <data key="relation">RELATED_TO</data>
+      <data key="weight">0.5</data>
+      <data key="description">现代诗歌象征与现当代诗歌鉴赏相关</data>
+    </edge>
+    <edge source="K54" target="K9">
+      <data key="relation">RELATED_TO</data>
+      <data key="weight">0.5</data>
+      <data key="description">咏史诗用典与一般诗歌用典相关</data>
+    </edge>
+    <edge source="K62" target="K63">
+      <data key="relation">RELATED_TO</data>
+      <data key="weight">0.7</data>
+      <data key="description">两类修辞手法紧密关联</data>
+    </edge>
+    <edge source="K66" target="K69">
+      <data key="relation">RELATED_TO</data>
+      <data key="weight">0.3</data>
+      <data key="description">中国现代小说与外国小说在小说鉴赏上相关</data>
+    </edge>
+    <edge source="K60" target="K65">
+      <data key="relation">RELATED_TO</data>
+      <data key="weight">0.5</data>
+      <data key="description">词语色彩义与语体风格在语言运用上相关</data>
+    </edge>
+    <edge source="K25" target="K23">
+      <data key="relation">DERIVED_FROM</data>
+      <data key="weight">0.7</data>
+      <data key="description">思想流派比较由诸子散文说理方法延伸而来</data>
+    </edge>
+    <edge source="K48" target="K34">
+      <data key="relation">DERIVED_FROM</data>
+      <data key="weight">0.7</data>
+      <data key="description">主题多义性分析由小说三要素延伸而来</data>
+    </edge>
+    <edge source="K55" target="K9">
+      <data key="relation">DERIVED_FROM</data>
+      <data key="weight">0.6</data>
+      <data key="description">怀古用典分析由一般用典手法延伸而来</data>
+    </edge>
+    <edge source="K47" target="K44">
+      <data key="relation">DERIVED_FROM</data>
+      <data key="weight">0.7</data>
+      <data key="description">论证加强削弱由推理方法延伸而来</data>
+    </edge>
+    <edge source="K14" target="K51">
+      <data key="relation">APPLIED_IN</data>
+      <data key="weight">0.5</data>
+      <data key="description">论证方法应用于理论文章论证逻辑分析</data>
+    </edge>
+    <edge source="K21" target="K24">
+      <data key="relation">APPLIED_IN</data>
+      <data key="weight">0.8</data>
+      <data key="description">特殊句式知识应用于文言文翻译</data>
+    </edge>
+    <edge source="K22" target="K24">
+      <data key="relation">APPLIED_IN</data>
+      <data key="weight">0.8</data>
+      <data key="description">词类活用知识应用于文言文翻译</data>
+    </edge>
+    <edge source="K44" target="K45">
+      <data key="relation">APPLIED_IN</data>
+      <data key="weight">0.6</data>
+      <data key="description">推理方法应用于逻辑谬误识别</data>
+    </edge>
+    <edge source="K35" target="K40">
+      <data key="relation">APPLIED_IN</data>
+      <data key="weight">0.5</data>
+      <data key="description">人物形象分析方法应用于戏剧人物分析</data>
+    </edge>
+    <edge source="K62" target="K8">
+      <data key="relation">APPLIED_IN</data>
+      <data key="weight">0.4</data>
+      <data key="description">修辞手法应用于古典诗歌炼字赏析</data>
+    </edge>
+  </graph>
+</graphml>
