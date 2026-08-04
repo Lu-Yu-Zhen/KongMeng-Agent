@@ -42,6 +42,10 @@
         "to": "www/教育大模型logo.png"
       },
       {
+        "from": "悬浮球.js",
+        "to": "www/悬浮球.js"
+      },
+      {
         "from": "teacher-agent-sandbox",
         "to": "www/teacher-agent-sandbox"
       }
