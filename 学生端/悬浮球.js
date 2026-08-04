@@ -85,6 +85,22 @@
       var ACCENT_RGB = (hexToRgb(ACCENT).r) + ',' + (hexToRgb(ACCENT).g) + ',' + (hexToRgb(ACCENT).b);
       var ACCENT_SOFT = 'rgba(' + ACCENT_RGB + ',0.08)';
 
+      // 将主题色应用到悬浮球根节点，主题切换时重新应用
+      function applyThemeColors() {
+        ACCENT = getThemeAccent();
+        ACCENT_DARK = darken(ACCENT, 0.18);
+        ACCENT_LIGHT = lighten(ACCENT, 0.35);
+        ACCENT_RGB = (hexToRgb(ACCENT).r) + ',' + (hexToRgb(ACCENT).g) + ',' + (hexToRgb(ACCENT).b);
+        ACCENT_SOFT = 'rgba(' + ACCENT_RGB + ',0.08)';
+        root.style.setProperty('--km-a', ACCENT);
+        root.style.setProperty('--km-a-dark', ACCENT_DARK);
+        root.style.setProperty('--km-a-light', ACCENT_LIGHT);
+        root.style.setProperty('--km-a-rgb', ACCENT_RGB);
+        root.style.setProperty('--km-a-soft', ACCENT_SOFT);
+        var tiny = document.getElementById('km-float-reenable');
+        if (tiny) tiny.style.background = ACCENT;
+      }
+
       // ==================== 设置持久化 ====================
       function loadSettings() {
         var s = {};
@@ -246,7 +262,7 @@
 
       // ==================== 样式 ====================
       var CSS = '' +
-        '#km-float-root{--km-a:' + ACCENT + ';--km-a-dark:' + ACCENT_DARK + ';--km-a-light:' + ACCENT_LIGHT + ';--km-a-rgb:' + ACCENT_RGB + ';--km-a-soft:' + ACCENT_SOFT + ';position:fixed;left:0;top:0;width:0;height:0;z-index:2147483000;font-family:"Noto Sans SC","Microsoft YaHei",system-ui,sans-serif;}' +
+        '#km-float-root{position:fixed;left:0;top:0;width:0;height:0;z-index:2147483000;font-family:"Noto Sans SC","Microsoft YaHei",system-ui,sans-serif;}' +
         '#km-float-ball{position:fixed;border-radius:50%;cursor:grab;box-shadow:0 4px 16px rgba(0,0,0,.28);user-select:none;-webkit-user-select:none;overflow:hidden;background:#fff;border:2px solid var(--km-a);transition:transform .08s;}' +
         '#km-float-ball:active{cursor:grabbing;}' +
         '#km-float-ball img{width:100%;height:100%;object-fit:cover;display:block;pointer-events:none;}' +
@@ -348,6 +364,15 @@
       root.appendChild(settingsPanel);
 
       document.body.appendChild(root);
+
+      // 应用主题色并监听主题切换，实现实时同步
+      applyThemeColors();
+      if (window.MutationObserver) {
+        var themeObserver = new MutationObserver(function () {
+          applyThemeColors();
+        });
+        themeObserver.observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
+      }
 
       // ==================== 位置与布局 ====================
       function applyBallSize() {
