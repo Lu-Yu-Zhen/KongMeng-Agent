@@ -6,9 +6,10 @@
  *   1. 悬浮球悬浮于窗口边缘，鼠标左键点击打开/关闭聊天窗口；
  *   2. 聊天窗口 AI 可读取「当前页面全部内容 + 本端 data 文件夹数据」作为上下文；
  *   3. 聊天窗口大小可通过右下角拖拽手柄自由调整；
- *   4. 悬浮球右键打开设置面板（开关、吸附位置、自动隐藏、上下文开关、重置等）；
- *   5. 拖动悬浮球到屏幕边缘（碰到边缘）自动隐藏到边上，露出箭头，鼠标移上去即可重新显示；
+ *   4. 悬浮球右键打开设置面板（开关、大小、上下文开关、重置等）；
+ *   5. 悬浮球颜色跟随应用所选主题色；
  *   6. 悬浮球 logo 使用孔孟大模型 logo。
+ *   7. 设置页与聊天页互斥，只能同时打开一个；点击面板外部任意处即关闭。
  *
  * 依赖：应用已暴露的全局变量 MODEL_CONFIG / getSelectedChatModel() / getChatApiKey()。
  * 独立运行，不依赖框架，样式内嵌，直接 <script src="./悬浮球.js"></script> 引入即可。
@@ -31,24 +32,58 @@
 
       var DEFAULTS = {
         enabled: true,
-        snapSide: 'right',   // 悬浮球吸附边：left | right
-        autoHide: true,      // 拖到边缘是否自动隐藏
         includePage: true,   // 聊天时是否携带当前页面上下文
         includeData: true,   // 聊天时是否携带本地 data 数据上下文
-        width: 420,
-        height: 560,
-        x: null,             // 悬浮球水平位置（相对视口，null 表示吸附边）
-        y: null              // 悬浮球垂直位置（相对视口，null 表示中部）
+        width: 420,          // 聊天窗口宽度
+        height: 560,         // 聊天窗口高度
+        ballSize: 54,        // 悬浮球大小（直径 px）
+        x: null,             // 悬浮球水平位置（相对视口，null 表示靠右居中）
+        y: null              // 悬浮球垂直位置（相对视口，null 表示靠右居中）
       };
 
       var settings = loadSettings();
-      var ball = null, chat = null, settingsPanel = null, edge = null;
+      var ball = null, chat = null, settingsPanel = null;
       var isChatOpen = false;
-      var isHidden = false;     // 是否已隐藏到边缘（仅显示箭头）
       var isDragging = false;
       var isResizing = false;
       var messages = [];        // 当前会话消息
       var busy = false;
+      var ballSize = settings.ballSize || DEFAULTS.ballSize;
+
+      // ==================== 主题色 ====================
+      // 从应用的主题变量中读取主色（教师端 --accent，学生端 --brand-500）
+      function getThemeAccent() {
+        var cs = getComputedStyle(document.documentElement);
+        var candidates = ['--accent', '--brand-500', '--jade500'];
+        for (var i = 0; i < candidates.length; i++) {
+          var v = cs.getPropertyValue(candidates[i]).trim();
+          if (v) return v;
+        }
+        return '#1d4ed8';
+      }
+      function hexToRgb(hex) {
+        hex = String(hex).replace('#', '');
+        if (hex.length === 3) hex = hex.split('').map(function (c) { return c + c; }).join('');
+        var n = parseInt(hex, 16);
+        return { r: (n >> 16) & 255, g: (n >> 8) & 255, b: n & 255 };
+      }
+      function toHex(v) {
+        v = Math.max(0, Math.min(255, Math.round(v)));
+        return (v < 16 ? '0' : '') + v.toString(16);
+      }
+      function lighten(hex, pct) {
+        var c = hexToRgb(hex);
+        return '#' + toHex(c.r + (255 - c.r) * pct) + toHex(c.g + (255 - c.g) * pct) + toHex(c.b + (255 - c.b) * pct);
+      }
+      function darken(hex, pct) {
+        var c = hexToRgb(hex);
+        return '#' + toHex(c.r * (1 - pct)) + toHex(c.g * (1 - pct)) + toHex(c.b * (1 - pct));
+      }
+      var ACCENT = getThemeAccent();
+      var ACCENT_DARK = darken(ACCENT, 0.18);
+      var ACCENT_LIGHT = lighten(ACCENT, 0.35);
+      var ACCENT_RGB = (hexToRgb(ACCENT).r) + ',' + (hexToRgb(ACCENT).g) + ',' + (hexToRgb(ACCENT).b);
+      var ACCENT_SOFT = 'rgba(' + ACCENT_RGB + ',0.08)';
 
       // ==================== 设置持久化 ====================
       function loadSettings() {
@@ -211,53 +246,48 @@
 
       // ==================== 样式 ====================
       var CSS = '' +
-        '#km-float-root{position:fixed;left:0;top:0;width:0;height:0;z-index:2147483000;font-family:"Noto Sans SC","Microsoft YaHei",system-ui,sans-serif;}' +
-        '#km-float-ball{position:fixed;width:54px;height:54px;border-radius:50%;cursor:grab;box-shadow:0 4px 16px rgba(0,0,0,.28);user-select:none;-webkit-user-select:none;overflow:hidden;background:#fff;border:2px solid #fff;transition:transform .08s;}' +
+        '#km-float-root{--km-a:' + ACCENT + ';--km-a-dark:' + ACCENT_DARK + ';--km-a-light:' + ACCENT_LIGHT + ';--km-a-rgb:' + ACCENT_RGB + ';--km-a-soft:' + ACCENT_SOFT + ';position:fixed;left:0;top:0;width:0;height:0;z-index:2147483000;font-family:"Noto Sans SC","Microsoft YaHei",system-ui,sans-serif;}' +
+        '#km-float-ball{position:fixed;border-radius:50%;cursor:grab;box-shadow:0 4px 16px rgba(0,0,0,.28);user-select:none;-webkit-user-select:none;overflow:hidden;background:#fff;border:2px solid var(--km-a);transition:transform .08s;}' +
         '#km-float-ball:active{cursor:grabbing;}' +
         '#km-float-ball img{width:100%;height:100%;object-fit:cover;display:block;pointer-events:none;}' +
         '#km-float-ball:hover{transform:scale(1.06);}' +
-        '#km-float-edge{position:fixed;width:16px;top:0;bottom:0;cursor:pointer;display:flex;align-items:center;justify-content:center;z-index:2147483001;background:rgba(30,64,175,.08);}' +
-        '#km-float-edge .km-edge-icon{width:16px;height:44px;border-radius:0 8px 8px 0;background:linear-gradient(180deg,#1d4ed8,#3b82f6);color:#fff;display:flex;align-items:center;justify-content:center;font-size:12px;box-shadow:0 2px 8px rgba(0,0,0,.25);}' +
-        '#km-float-edge:hover .km-edge-icon{background:linear-gradient(180deg,#1e40af,#2563eb);}' +
         '#km-float-chat{position:fixed;display:none;flex-direction:column;background:#fff;border-radius:12px;box-shadow:0 10px 40px rgba(0,0,0,.25);overflow:hidden;z-index:2147483002;border:1px solid #e5e7eb;}' +
         '#km-float-chat.km-open{display:flex;}' +
-        '.km-chat-header{display:flex;align-items:center;gap:8px;padding:8px 12px;background:linear-gradient(90deg,#1d4ed8,#3b82f6);color:#fff;flex:none;}' +
+        '.km-chat-header{display:flex;align-items:center;gap:8px;padding:8px 12px;background:linear-gradient(90deg,var(--km-a-dark),var(--km-a));color:#fff;flex:none;}' +
         '.km-chat-header img{width:26px;height:26px;border-radius:50%;object-fit:cover;background:#fff;}' +
         '.km-chat-header .km-chat-title{font-size:14px;font-weight:600;flex:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}' +
         '.km-chat-header .km-chat-btn{background:rgba(255,255,255,.18);border:none;color:#fff;border-radius:6px;cursor:pointer;font-size:12px;padding:3px 7px;line-height:1;}' +
         '.km-chat-header .km-chat-btn:hover{background:rgba(255,255,255,.32);}' +
         '.km-chat-header .km-chat-btn.km-on{background:#22c55e;}' +
-        '.km-chat-ctx{flex:none;padding:4px 12px;background:#f0f9ff;border-bottom:1px solid #e0f2fe;font-size:11px;color:#0369a1;display:flex;align-items:center;gap:6px;}' +
+        '.km-chat-ctx{flex:none;padding:4px 12px;background:var(--km-a-soft);border-bottom:1px solid rgba(var(--km-a-rgb),.18);font-size:11px;color:var(--km-a-dark);display:flex;align-items:center;gap:6px;}' +
         '.km-chat-body{flex:1;overflow-y:auto;padding:12px;display:flex;flex-direction:column;gap:10px;background:#f8fafc;}' +
         '.km-msg{max-width:88%;padding:8px 12px;border-radius:10px;font-size:13px;line-height:1.6;white-space:pre-wrap;word-wrap:break-word;}' +
-        '.km-msg-user{align-self:flex-end;background:#1d4ed8;color:#fff;border-bottom-right-radius:3px;}' +
+        '.km-msg-user{align-self:flex-end;background:var(--km-a);color:#fff;border-bottom-right-radius:3px;}' +
         '.km-msg-ai{align-self:flex-start;background:#fff;color:#111827;border:1px solid #e5e7eb;border-bottom-left-radius:3px;}' +
         '.km-msg-err{align-self:flex-start;background:#fef2f2;color:#b91c1c;border:1px solid #fecaca;border-radius:10px;}' +
         '.km-msg-loading{align-self:flex-start;background:#fff;color:#6b7280;border:1px solid #e5e7eb;border-radius:10px;font-size:13px;padding:8px 12px;}' +
         '.km-chat-input{flex:none;display:flex;gap:8px;padding:10px;border-top:1px solid #e5e7eb;background:#fff;align-items:flex-end;}' +
-        '.km-chat-input textarea{flex:1;resize:none;border:1px solid #d1d5db;border-radius:8px;padding:8px 10px;font-size:13px;font-family:inherit;outline:none;min-height:38px;max-height:120px;line-height:1.5;}' +
-        '.km-chat-input textarea:focus{border-color:#3b82f6;box-shadow:0 0 0 2px rgba(59,130,246,.15);}' +
-        '.km-chat-input .km-send{flex:none;background:#1d4ed8;color:#fff;border:none;border-radius:8px;padding:9px 16px;font-size:13px;cursor:pointer;}' +
-        '.km-chat-input .km-send:hover{background:#1e40af;}' +
-        '.km-chat-input .km-send:disabled{background:#93c5fd;cursor:not-allowed;}' +
+        '.km-chat-input textarea{flex:1;resize:none;border:1px solid #d1d5db;border-radius:8px;padding:8px 10px;font-size:13px;font-family:inherit;outline:none;box-sizing:border-box;height:38px;min-height:38px;max-height:120px;line-height:1.5;}' +
+        '.km-chat-input textarea:focus{border-color:var(--km-a);box-shadow:0 0 0 2px rgba(var(--km-a-rgb),.15);}' +
+        '.km-chat-input .km-send{flex:none;background:var(--km-a);color:#fff;border:none;border-radius:8px;box-sizing:border-box;height:38px;padding:0 16px;font-size:13px;cursor:pointer;}' +
+        '.km-chat-input .km-send:hover{background:var(--km-a-dark);}' +
+        '.km-chat-input .km-send:disabled{background:var(--km-a-light);cursor:not-allowed;}' +
         '#km-float-chat .km-resize{position:absolute;right:0;bottom:0;width:16px;height:16px;cursor:nwse-resize;z-index:5;}' +
         '#km-float-chat .km-resize::after{content:"";position:absolute;right:3px;bottom:3px;width:8px;height:8px;border-right:2px solid #9ca3af;border-bottom:2px solid #9ca3af;}' +
-        '#km-float-settings{position:fixed;display:none;background:#fff;border-radius:10px;box-shadow:0 10px 40px rgba(0,0,0,.3);z-index:2147483003;width:230px;overflow:hidden;border:1px solid #e5e7eb;}' +
+        '#km-float-settings{position:fixed;display:none;background:#fff;border-radius:10px;box-shadow:0 10px 40px rgba(0,0,0,.3);z-index:2147483003;width:244px;overflow:hidden;border:1px solid #e5e7eb;}' +
         '#km-float-settings.km-open{display:block;}' +
-        '.km-settings-title{display:flex;align-items:center;gap:8px;padding:10px 12px;background:linear-gradient(90deg,#1d4ed8,#3b82f6);color:#fff;font-size:13px;font-weight:600;}' +
+        '.km-settings-title{display:flex;align-items:center;gap:8px;padding:10px 12px;background:linear-gradient(90deg,var(--km-a-dark),var(--km-a));color:#fff;font-size:13px;font-weight:600;}' +
         '.km-settings-title img{width:22px;height:22px;border-radius:50%;object-fit:cover;background:#fff;}' +
         '.km-settings-body{padding:8px 12px 12px;}' +
-        '.km-settings-row{display:flex;align-items:center;justify-content:space-between;padding:7px 0;font-size:13px;color:#111827;border-bottom:1px solid #f3f4f6;}' +
+        '.km-settings-row{display:flex;align-items:center;justify-content:space-between;padding:8px 0;font-size:13px;color:#111827;border-bottom:1px solid #f3f4f6;}' +
         '.km-settings-row:last-child{border-bottom:none;}' +
         '.km-settings-row .km-label{display:flex;align-items:center;gap:6px;}' +
-        '.km-settings-row .km-label i{color:#3b82f6;font-size:12px;width:14px;text-align:center;}' +
+        '.km-settings-row .km-label i{color:var(--km-a);font-size:12px;width:14px;text-align:center;}' +
         '.km-settings-switch{position:relative;width:36px;height:20px;background:#d1d5db;border-radius:10px;cursor:pointer;transition:background .2s;flex:none;}' +
-        '.km-settings-switch.km-on{background:#3b82f6;}' +
+        '.km-settings-switch.km-on{background:var(--km-a);}' +
         '.km-settings-switch::after{content:"";position:absolute;top:2px;left:2px;width:16px;height:16px;background:#fff;border-radius:50%;transition:left .2s;}' +
         '.km-settings-switch.km-on::after{left:18px;}' +
-        '.km-settings-seg{display:flex;border:1px solid #d1d5db;border-radius:6px;overflow:hidden;flex:none;}' +
-        '.km-settings-seg button{border:none;background:#fff;padding:4px 10px;font-size:12px;cursor:pointer;color:#374151;}' +
-        '.km-settings-seg button.km-on{background:#3b82f6;color:#fff;}' +
+        '.km-settings-range{flex:none;width:116px;cursor:pointer;accent-color:var(--km-a);}' +
         '.km-settings-btn{width:100%;margin-top:8px;padding:7px;border:1px solid #d1d5db;background:#fff;border-radius:6px;font-size:12px;color:#374151;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:6px;}' +
         '.km-settings-btn:hover{background:#f9fafb;}' +
         '.km-settings-btn.km-danger{color:#dc2626;border-color:#fecaca;}' +
@@ -280,13 +310,6 @@
       ballImg.alt = '孔孟大模型';
       ball.appendChild(ballImg);
       root.appendChild(ball);
-
-      // 边缘箭头（隐藏时显示）
-      edge = document.createElement('div');
-      edge.id = 'km-float-edge';
-      edge.style.display = 'none';
-      edge.innerHTML = '<div class="km-edge-icon"><i class="fa-solid fa-angle-left"></i></div>';
-      root.appendChild(edge);
 
       // 聊天窗口
       chat = document.createElement('div');
@@ -316,9 +339,7 @@
         '<div class="km-settings-title"><img src="' + LOGO + '" alt="孔孟大模型"> 悬浮球设置</div>' +
         '<div class="km-settings-body">' +
           '<div class="km-settings-row"><span class="km-label"><i class="fa-solid fa-toggle-on"></i> 悬浮球开关</span><div class="km-settings-switch km-on" data-key="enabled"></div></div>' +
-          '<div class="km-settings-row"><span class="km-label"><i class="fa-solid fa-left-right"></i> 吸附位置</span>' +
-            '<div class="km-settings-seg" data-key="snapSide"><button data-val="left">左</button><button data-val="right">右</button></div></div>' +
-          '<div class="km-settings-row"><span class="km-label"><i class="fa-solid fa-arrows-up-down"></i> 拖到边缘自动隐藏</span><div class="km-settings-switch km-on" data-key="autoHide"></div></div>' +
+          '<div class="km-settings-row"><span class="km-label"><i class="fa-solid fa-expand"></i> 悬浮球大小</span><input type="range" class="km-settings-range" id="km-settings-size" min="40" max="90" step="1"></div>' +
           '<div class="km-settings-row"><span class="km-label"><i class="fa-solid fa-file-lines"></i> 携带页面上下文</span><div class="km-settings-switch km-on" data-key="includePage"></div></div>' +
           '<div class="km-settings-row"><span class="km-label"><i class="fa-solid fa-database"></i> 携带本地数据</span><div class="km-settings-switch km-on" data-key="includeData"></div></div>' +
           '<button class="km-settings-btn" id="km-settings-reset"><i class="fa-solid fa-rotate-left"></i> 重置位置与大小</button>' +
@@ -329,26 +350,27 @@
       document.body.appendChild(root);
 
       // ==================== 位置与布局 ====================
+      function applyBallSize() {
+        ball.style.width = ballSize + 'px';
+        ball.style.height = ballSize + 'px';
+        applyBallPosition();
+      }
+
       function applyBallPosition() {
         if (settings.x !== null && settings.y !== null) {
-          ball.style.left = Math.max(0, Math.min(settings.x, (window.innerWidth - 54))) + 'px';
-          ball.style.top = Math.max(0, Math.min(settings.y, (window.innerHeight - 54))) + 'px';
+          ball.style.left = Math.max(0, Math.min(settings.x, (window.innerWidth - ballSize))) + 'px';
+          ball.style.top = Math.max(0, Math.min(settings.y, (window.innerHeight - ballSize))) + 'px';
           ball.style.right = 'auto';
         } else {
-          if (settings.snapSide === 'left') {
-            ball.style.left = '12px';
-            ball.style.right = 'auto';
-          } else {
-            ball.style.right = '12px';
-            ball.style.left = 'auto';
-          }
-          ball.style.top = ((window.innerHeight - 54) / 2) + 'px';
+          ball.style.right = '12px';
+          ball.style.left = 'auto';
+          ball.style.top = ((window.innerHeight - ballSize) / 2) + 'px';
         }
       }
 
       function positionChatWindow() {
         var cw = settings.width, ch = settings.height;
-        var bw = 54, bh = 54;
+        var bw = ballSize, bh = ballSize;
         var bx = ball.offsetLeft, by = ball.offsetTop;
         var gap = 10;
         var x, y;
@@ -371,32 +393,30 @@
         chat.style.top = y + 'px';
       }
 
-      function showBall() {
-        isHidden = false;
-        ball.style.display = 'block';
-        edge.style.display = 'none';
-        applyBallPosition();
+      // 设置面板跟随悬浮球移动，且不遮挡悬浮球
+      function positionSettingsWindow() {
+        var pw = 244, ph = settingsPanel.offsetHeight || 320;
+        var bw = ballSize, bh = ballSize;
+        var bx = ball.offsetLeft, by = ball.offsetTop;
+        var gap = 10;
+        var x, y;
+        if (bx + bw / 2 < window.innerWidth / 2) {
+          x = bx + bw + gap;
+        } else {
+          x = bx - pw - gap;
+        }
+        y = by + bh / 2 - ph / 2;
+        if (x < 6) x = 6;
+        if (x + pw > window.innerWidth - 6) x = window.innerWidth - pw - 6;
+        if (y < 6) y = 6;
+        if (y + ph > window.innerHeight - 6) y = window.innerHeight - ph - 6;
+        settingsPanel.style.left = x + 'px';
+        settingsPanel.style.top = y + 'px';
       }
 
-      function hideToEdge() {
-        if (!settings.autoHide) return;
-        isHidden = true;
-        closeChat();
-        ball.style.display = 'none';
-        edge.style.display = 'flex';
-        edge.style.left = 'auto';
-        edge.style.right = 'auto';
-        edge.style.top = Math.max(0, Math.min(ball.offsetTop, window.innerHeight - 44)) + 'px';
-        edge.style.bottom = 'auto';
-        if (settings.snapSide === 'left') {
-          edge.style.left = '0px';
-          edge.style.right = 'auto';
-          edge.querySelector('.km-edge-icon').innerHTML = '<i class="fa-solid fa-angle-right"></i>';
-        } else {
-          edge.style.right = '0px';
-          edge.style.left = 'auto';
-          edge.querySelector('.km-edge-icon').innerHTML = '<i class="fa-solid fa-angle-left"></i>';
-        }
+      function showBall() {
+        ball.style.display = 'block';
+        applyBallPosition();
       }
 
       function toggleChat() {
@@ -408,7 +428,7 @@
       }
 
       function openChat() {
-        if (isHidden) showBall();
+        closeSettings();
         isChatOpen = true;
         positionChatWindow();
         chat.style.display = 'flex';
@@ -481,12 +501,13 @@
           var dx = ev.clientX - startX, dy = ev.clientY - startY;
           if (Math.abs(dx) > 3 || Math.abs(dy) > 3) moved = true;
           var nx = origLeft + dx, ny = origTop + dy;
-          nx = Math.max(0, Math.min(nx, window.innerWidth - 54));
-          ny = Math.max(0, Math.min(ny, window.innerHeight - 54));
+          nx = Math.max(0, Math.min(nx, window.innerWidth - ballSize));
+          ny = Math.max(0, Math.min(ny, window.innerHeight - ballSize));
           ball.style.left = nx + 'px';
           ball.style.top = ny + 'px';
           ball.style.right = 'auto';
           if (isChatOpen) positionChatWindow();
+          if (settingsPanel.classList.contains('km-open')) positionSettingsWindow();
         }
 
         function onUp(ev) {
@@ -498,21 +519,10 @@
             toggleChat();
             return;
           }
-          // 拖动结束：记录位置；若靠近屏幕边缘则隐藏
+          // 拖动结束：记录位置（拖到边缘不再自动隐藏，仅由开关控制）
           settings.x = ball.offsetLeft;
           settings.y = ball.offsetTop;
           saveSettings();
-          var r = ball.getBoundingClientRect();
-          var vw = window.innerWidth;
-          var nearLeft = r.left <= 2;
-          var nearRight = r.right >= vw - 2;
-          if (nearLeft || nearRight) {
-            settings.snapSide = nearLeft ? 'left' : 'right';
-            settings.x = null;
-            settings.y = null;
-            saveSettings();
-            hideToEdge();
-          }
         }
 
         document.addEventListener('mousemove', onMove);
@@ -522,15 +532,7 @@
       ball.addEventListener('contextmenu', function (e) {
         e.preventDefault();
         e.stopPropagation();
-        openSettings(e.clientX, e.clientY);
-      });
-
-      // 边缘箭头：移入显示悬浮球
-      edge.addEventListener('mouseenter', function () {
-        showBall();
-      });
-      edge.addEventListener('click', function () {
-        showBall();
+        openSettings();
       });
 
       // 聊天窗口关闭
@@ -584,20 +586,12 @@
       });
 
       // 设置面板
-      function openSettings(x, y) {
+      function openSettings() {
+        closeChat();
+        refreshSettingsUI();
         settingsPanel.style.display = 'block';
         settingsPanel.classList.add('km-open');
-        // 刷新控件状态
-        refreshSettingsUI();
-        // 定位，避免超出视口
-        var pw = 230, ph = settingsPanel.offsetHeight || 320;
-        var px = x, py = y;
-        if (px + pw > window.innerWidth - 4) px = window.innerWidth - pw - 4;
-        if (py + ph > window.innerHeight - 4) py = window.innerHeight - ph - 4;
-        if (px < 4) px = 4;
-        if (py < 4) py = 4;
-        settingsPanel.style.left = px + 'px';
-        settingsPanel.style.top = py + 'px';
+        positionSettingsWindow();
       }
       function closeSettings() {
         settingsPanel.style.display = 'none';
@@ -605,26 +599,13 @@
       }
 
       function refreshSettingsUI() {
-        var switches = settingsPanel.querySelectorAll('.km-settings-switch');
-        switches.forEach(function (el) {
-          var key = el.getAttribute('data-key');
-          var on = settings[key] === true;
-          el.classList.toggle('km-on', on);
-          el.innerHTML = '';
-        });
-        // 重新渲染开关轨道
         settingsPanel.querySelectorAll('.km-settings-switch').forEach(function (el) {
           var key = el.getAttribute('data-key');
           var on = settings[key] === true;
           el.classList.toggle('km-on', on);
         });
-        // 吸附位置 seg
-        var seg = settingsPanel.querySelector('.km-settings-seg[data-key="snapSide"]');
-        if (seg) {
-          seg.querySelectorAll('button').forEach(function (btn) {
-            btn.classList.toggle('km-on', btn.getAttribute('data-val') === settings.snapSide);
-          });
-        }
+        var sizeRange = document.getElementById('km-settings-size');
+        if (sizeRange) sizeRange.value = ballSize;
       }
 
       function bindSettingsSwitches() {
@@ -635,7 +616,7 @@
             el.classList.toggle('km-on', settings[key]);
             saveSettings();
             if (key === 'enabled' && !settings.enabled) {
-              // 关闭悬浮球：隐藏，箭头也隐藏，并提供重新启用入口
+              // 关闭悬浮球：隐藏，并提供重新启用入口
               hideBallCompletely();
               showTinyReenable();
             } else if (key === 'enabled' && settings.enabled) {
@@ -643,23 +624,24 @@
             }
           });
         });
-        settingsPanel.querySelectorAll('.km-settings-seg[data-key="snapSide"] button').forEach(function (btn) {
-          btn.addEventListener('click', function () {
-            settings.snapSide = btn.getAttribute('data-val');
-            settings.x = null;
-            settings.y = null;
+        // 悬浮球大小滑动条
+        var sizeRange = document.getElementById('km-settings-size');
+        if (sizeRange) {
+          sizeRange.addEventListener('input', function () {
+            ballSize = parseInt(sizeRange.value, 10) || DEFAULTS.ballSize;
+            settings.ballSize = ballSize;
             saveSettings();
-            refreshSettingsUI();
-            showBall();
+            applyBallSize();
+            if (isChatOpen) positionChatWindow();
+            if (settingsPanel.classList.contains('km-open')) positionSettingsWindow();
           });
-        });
+        }
       }
 
       function hideBallCompletely() {
         closeChat();
         closeSettings();
         ball.style.display = 'none';
-        edge.style.display = 'none';
       }
 
       document.getElementById('km-settings-reset').addEventListener('click', function () {
@@ -667,8 +649,10 @@
         settings.height = DEFAULTS.height;
         settings.x = null;
         settings.y = null;
-        settings.snapSide = DEFAULTS.snapSide;
+        ballSize = DEFAULTS.ballSize;
+        settings.ballSize = DEFAULTS.ballSize;
         saveSettings();
+        applyBallSize();
         showBall();
         closeSettings();
       });
@@ -687,7 +671,7 @@
         tiny.id = 'km-float-reenable';
         tiny.textContent = '●';
         tiny.setAttribute('title', '点击重新开启悬浮球');
-        tiny.style.cssText = 'position:fixed;right:10px;bottom:10px;width:22px;height:22px;border-radius:50%;background:#1d4ed8;color:#fff;font-size:12px;display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:2147483004;box-shadow:0 2px 8px rgba(0,0,0,.3);';
+        tiny.style.cssText = 'position:fixed;right:10px;bottom:10px;width:22px;height:22px;border-radius:50%;background:' + ACCENT + ';color:#fff;font-size:12px;display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:2147483004;box-shadow:0 2px 8px rgba(0,0,0,.3);';
         document.body.appendChild(tiny);
         tiny.addEventListener('click', function () {
           settings.enabled = true;
@@ -698,24 +682,31 @@
         });
       }
 
-      // 点击空白处关闭设置面板
+      // 点击面板外部任意处关闭已打开的面板（设置与聊天互斥，各自外部点击关闭）
       document.addEventListener('mousedown', function (e) {
         if (settingsPanel.classList.contains('km-open') &&
             !settingsPanel.contains(e.target) &&
             !ball.contains(e.target)) {
           closeSettings();
         }
+        if (chat.classList.contains('km-open') &&
+            !chat.contains(e.target) &&
+            !ball.contains(e.target)) {
+          closeChat();
+        }
       });
 
       // 窗口尺寸变化时重新定位
       window.addEventListener('resize', function () {
         if (isChatOpen) positionChatWindow();
+        if (settingsPanel.classList.contains('km-open')) positionSettingsWindow();
         if (settings.x === null) applyBallPosition();
       });
 
       // ==================== 初始化 ====================
       bindSettingsSwitches();
       refreshSettingsUI();
+      applyBallSize();
       if (settings.enabled) {
         showBall();
       } else {
