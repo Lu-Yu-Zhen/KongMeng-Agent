@@ -1,0 +1,52 @@
+{
+  "name": "knowledge-qa",
+  "version": "1.0.0",
+  "description": "高中全科知识解答与高考题型辅导技能。覆盖语数英物化生全科，紧扣教材不超纲，熟悉高考各类题型，帮助高中生融会贯通地理解知识点。",
+  "author": "baige-edu",
+  "language": "zh-CN",
+  "tags": ["教育", "高中", "知识解答", "高考", "辅导"],
+  "trigger": {
+    "type": "intent",
+    "keywords": [
+      "高中", "知识点", "讲解", "解题", "高考", "题目", "怎么解",
+      "帮我理解", "为什么", "这道题", "这个概念", "公式",
+      "文言文", "古诗", "作文", "函数", "三角", "数列", "立体几何",
+      "解析几何", "阅读理解", "完形填空", "语法填空",
+      "牛顿定律", "电磁感应", "化学方程式", "氧化还原",
+      "细胞", "遗传", "光合作用", "生态"
+    ],
+    "exclude_keywords": [
+      "大学", "考研", "博士", "论文", "幼儿园", "小学", "初中"
+    ]
+  },
+  "references": [
+    "references/textbook-index.md",
+    "references/subject-chinese.md",
+    "references/subject-math.md",
+    "references/subject-english.md",
+    "references/subject-physics.md",
+    "references/subject-chemistry.md",
+    "references/subject-biology.md",
+    "references/exam-techniques.md",
+    "references/answering-templates.md",
+    "references/style-guide.md"
+  ],
+  "tools": [
+    "references/validator.py"
+  ],
+  "test_cases": [
+    "test_cases/positive_prompt.txt",
+    "test_cases/negative_prompt.txt"
+  ],
+  "config": {
+    "max_tokens": 4096,
+    "temperature": 0.3,
+    "stream": true,
+    "textbook_base_path": "教材/",
+    "textbook_online_url": "https://basic.smartedu.cn/tchMaterial?defaultTag=e7bbcefe-0590-11ed-9c79-92fc3b3249d5%2F6a749654-0772-11ed-ac74-092ab92074e6%2F44bee8bc-54e6-11ed-9c34-850ba61fa9f4",
+    "default_publisher": "人教版",
+    "subjects": ["语文", "数学", "英语", "物理", "化学", "生物"],
+    "grade_level": "高中",
+    "exam_focus": "高考"
+  }
+}

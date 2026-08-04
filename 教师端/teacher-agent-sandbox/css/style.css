@@ -1,0 +1,331 @@
+/*!
+ * teacher-agent-sandbox · 全局样式 (style.css)
+ * ------------------------------------------------------------------
+ * 智能体执行过程可视化样式。沿用教师端"暖墨·竹青"国风配色：
+ *   ink(暖墨色阶) / jade(竹青主色) / tan(秋香赭点缀)
+ * 仅作用于智能体沙箱相关元素，不影响既有界面。
+ */
+
+/* ============ 智能体运行卡片 ============ */
+.agent-run { position: relative; }
+.agent-run-head {
+  display: flex; align-items: center; gap: 8px;
+  padding: 6px 10px; margin-bottom: 10px;
+  background: linear-gradient(90deg, #eef4f0 0%, #faf8f3 100%);
+  border-left: 3px solid #4f7a66;
+  border-radius: 6px;
+  font-size: 12px; color: #5b5345;
+}
+.agent-status-dot {
+  width: 8px; height: 8px; border-radius: 50%;
+  background: #4f7a66;
+  box-shadow: 0 0 0 0 rgba(79,122,102,.5);
+  animation: agentPulse 1.4s infinite;
+}
+.agent-status-dot.done { background: #6e9882; animation: none; box-shadow: none; }
+.agent-status-dot.fail { background: #c2604f; animation: none; box-shadow: none; }
+.agent-status-text { font-weight: 600; color: #403a30; }
+.agent-step-badge { margin-left: auto; font-size: 10px; color: #a8814e; background: #f3eee4; padding: 1px 8px; border-radius: 10px; }
+.agent-skill-badge { font-size: 11px; color: #345042; background: #dae8e0; padding: 1px 8px; border-radius: 10px; }
+.agent-skill-badge i { margin-right: 3px; }
+
+@keyframes agentPulse {
+  0% { box-shadow: 0 0 0 0 rgba(79,122,102,.5); }
+  70% { box-shadow: 0 0 0 7px rgba(79,122,102,0); }
+  100% { box-shadow: 0 0 0 0 rgba(79,122,102,0); }
+}
+
+/* ============ 简化步骤行 ============ */
+.agent-steps { display: flex; flex-direction: column; gap: 6px; margin-bottom: 10px; }
+.agent-step-row {
+  border-radius: 8px; overflow: hidden;
+  background: rgba(250, 248, 243, 0.5);
+  border: 1px solid rgba(232, 223, 208, 0.6);
+}
+/* 执行中的步骤行：左侧脉冲指示条 + 轻微背景流动 */
+.agent-step-row.executing {
+  border-color: rgba(79, 122, 102, 0.35);
+  background: linear-gradient(90deg, rgba(238,244,240,0.6) 0%, rgba(250,248,243,0.5) 50%, rgba(238,244,240,0.6) 100%);
+  background-size: 200% 100%;
+  animation: stepRowShimmer 2.5s ease-in-out infinite;
+  position: relative;
+}
+.agent-step-row.executing::before {
+  content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 3px;
+  background: #4f7a66; border-radius: 3px 0 0 3px;
+  animation: stepBarPulse 1.2s ease-in-out infinite;
+}
+@keyframes stepRowShimmer {
+  0%, 100% { background-position: 0% 0%; }
+  50% { background-position: 100% 0%; }
+}
+@keyframes stepBarPulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+.agent-step-main {
+  display: flex; align-items: center; gap: 8px;
+  padding: 7px 10px; font-size: 12.5px; color: #5b5345;
+}
+.agent-step-icon {
+  width: 22px; height: 22px; flex-shrink: 0;
+  display: flex; align-items: center; justify-content: center;
+  background: rgba(79, 122, 102, 0.1); color: #4f7a66; border-radius: 5px;
+  font-size: 10px;
+}
+/* 执行中的图标：脉冲背景 */
+.agent-step-row.executing .agent-step-icon {
+  animation: iconPulse 1.5s ease-in-out infinite;
+  background: rgba(79, 122, 102, 0.2);
+}
+@keyframes iconPulse {
+  0%, 100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(79,122,102,0.3); }
+  50% { transform: scale(1.08); box-shadow: 0 0 0 4px rgba(79,122,102,0); }
+}
+.agent-step-text { flex: 1; min-width: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.agent-step-status { font-size: 10px; padding: 1px 7px; border-radius: 10px; flex-shrink: 0; display: inline-flex; align-items: center; gap: 4px; }
+.agent-step-status.running { background: #eef4f0; color: #4f7a66; }
+.agent-step-status.running::before { content: ''; width: 8px; height: 8px; border: 1.5px solid #4f7a66; border-top-color: transparent; border-radius: 50%; animation: agentSpin 0.8s linear infinite; display: inline-block; }
+.agent-step-status.ok { background: #e8f5e9; color: #2e7d32; }
+.agent-step-status.ok::before { content: '✓'; }
+.agent-step-status.fail { background: #fbe9e7; color: #c2604f; }
+.agent-step-status.fail::before { content: '✕'; }
+@keyframes agentSpin { to { transform: rotate(360deg); } }
+.agent-step-toggle {
+  background: transparent; border: none; color: #a89a82; cursor: pointer;
+  font-size: 10px; padding: 2px 6px; border-radius: 4px; transition: all .2s; flex-shrink: 0;
+}
+.agent-step-toggle:hover { color: #4f7a66; background: rgba(79, 122, 102, 0.08); }
+.agent-step-toggle.open { color: #4f7a66; }
+
+/* 步骤下拉详情（透明背景小字） */
+.agent-step-detail {
+  display: none; padding: 8px 12px 10px 36px;
+  background: transparent; font-size: 11px; color: #8a7c6a;
+}
+.agent-step-detail.open { display: block; }
+.agent-step-detail-section { margin-bottom: 6px; }
+.agent-detail-label {
+  display: inline-block; font-size: 10px; color: #a89a82;
+  font-weight: 600; margin-right: 6px; min-width: 32px;
+}
+.agent-detail-text { display: inline; color: #5b5345; word-break: break-word; }
+.agent-detail-text code { background: #403a30; color: #f3eee4; padding: 1px 5px; border-radius: 3px; font-size: 10px; }
+.agent-detail-code {
+  margin: 4px 0 0; padding: 6px 8px;
+  background: rgba(255, 255, 255, 0.6); border: 1px solid rgba(232, 223, 208, 0.5); border-radius: 5px;
+  font-family: 'Fira Code', 'Consolas', monospace;
+  font-size: 10.5px; color: #5b5345; line-height: 1.5;
+  white-space: pre-wrap; word-break: break-word; max-height: 140px; overflow-y: auto;
+}
+.agent-step-result-wrap .agent-detail-result pre { margin: 4px 0 0; }
+
+/* ============ 思考步骤行（实时显示智能体推理过程） ============ */
+.agent-step-row.thinking {
+  border-color: rgba(168, 129, 78, 0.25);
+  background: rgba(243, 238, 228, 0.4);
+}
+.agent-step-row.thinking .agent-step-icon {
+  background: rgba(168, 129, 78, 0.12);
+  color: #a8814e;
+}
+.agent-step-row.thinking .agent-step-text {
+  color: #8a7c6a;
+  font-style: italic;
+}
+.agent-step-row.thinking .agent-step-status.thinking {
+  background: #f3eee4; color: #a8814e;
+}
+.agent-step-row.thinking .agent-step-status.thinking::before {
+  content: ''; width: 6px; height: 6px; border-radius: 50%;
+  background: #a8814e; animation: thoughtDot 1.2s ease-in-out infinite;
+  display: inline-block;
+}
+@keyframes thoughtDot {
+  0%, 100% { opacity: 0.4; transform: scale(0.8); }
+  50% { opacity: 1; transform: scale(1.2); }
+}
+
+/* ============ 阶段步骤行（工作流阶段标识） ============ */
+.agent-step-row.stage {
+  border-color: rgba(79, 122, 102, 0.2);
+  background: linear-gradient(90deg, rgba(238,244,240,0.5) 0%, rgba(250,248,243,0.3) 100%);
+}
+.agent-step-row.stage .agent-step-icon {
+  background: rgba(79, 122, 102, 0.15);
+  color: #345042;
+}
+.agent-step-row.stage .agent-step-text {
+  color: #345042;
+  font-weight: 500;
+}
+.agent-step-row.stage .agent-step-status.stage-tag {
+  background: #dae8e0; color: #345042;
+}
+
+/* 思考详情区（长文本自动换行，支持 Markdown 内联渲染） */
+.agent-step-detail .agent-thought-detail {
+  padding: 8px 10px; margin-top: 4px;
+  background: rgba(243, 238, 228, 0.3);
+  border-radius: 6px; border-left: 2px solid rgba(168, 129, 78, 0.3);
+  font-size: 11.5px; color: #5b5345; line-height: 1.7;
+  white-space: pre-wrap; word-break: break-word;
+}
+
+/* ============ 最终答案区 ============ */
+.agent-answer { font-size: 15px; color: #2b271f; line-height: 1.75; }
+.agent-answer .ai-markdown, .agent-answer.ai-markdown { padding: 0; }
+
+/* ============ 错误 ============ */
+.agent-error {
+  display: flex; align-items: center; gap: 8px;
+  padding: 10px 12px; margin: 6px 0;
+  background: #fbe9e7; border: 1px solid #f5c6c0; border-radius: 8px;
+  color: #c2604f; font-size: 13px;
+}
+.agent-error i { font-size: 16px; }
+
+/* ============ 产物面板项 ============ */
+.agent-artifact-item {
+  display: flex; align-items: center; gap: 6px;
+  padding: 8px 8px; margin-bottom: 4px;
+  background: #faf8f3; border: 1px solid #e8dfd0; border-radius: 8px;
+  cursor: pointer; transition: all .2s;
+  width: 100%; box-sizing: border-box;
+}
+.agent-artifact-item:hover { border-color: #90b29d; background: #eef4f0; }
+.agent-artifact-main { display: flex; align-items: center; gap: 8px; flex: 1; min-width: 0; overflow: hidden; }
+.agent-artifact-icon { color: #4f7a66; font-size: 15px; flex-shrink: 0; }
+.agent-artifact-meta { flex: 1; min-width: 0; overflow: hidden; }
+.agent-artifact-name { font-size: 12px; color: #403a30; font-weight: 500; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.agent-artifact-size { font-size: 10px; color: #a89a82; margin-top: 1px; }
+.agent-artifact-dl {
+  flex-shrink: 0; width: 30px; height: 30px;
+  display: flex; align-items: center; justify-content: center;
+  background: #4f7a66; color: #fff; border: none; border-radius: 6px;
+  cursor: pointer; font-size: 12px; transition: all .2s;
+}
+.agent-artifact-dl:hover { background: #3d5f50; transform: scale(1.08); }
+
+/* ============ 在线预览弹窗 ============ */
+.preview-overlay {
+  position: fixed; inset: 0; z-index: 9999;
+  background: rgba(64, 58, 48, 0.5); backdrop-filter: blur(2px);
+  display: flex; align-items: center; justify-content: center;
+  padding: 24px; animation: previewFadeIn .2s ease;
+}
+@keyframes previewFadeIn { from { opacity: 0; } to { opacity: 1; } }
+.preview-modal {
+  background: #faf8f3; border-radius: 14px; max-width: 820px; width: 100%;
+  max-height: 88vh; display: flex; flex-direction: column;
+  box-shadow: 0 12px 48px rgba(0,0,0,0.2); overflow: hidden;
+  animation: previewSlideUp .3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+@keyframes previewSlideUp { from { transform: translateY(20px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+.preview-modal-header {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 14px 20px; border-bottom: 1px solid #e8dfd0;
+  background: linear-gradient(90deg, #eef4f0 0%, #faf8f3 100%);
+}
+.preview-modal-title { font-size: 14px; font-weight: 600; color: #345042; display: flex; align-items: center; gap: 8px; }
+.preview-modal-title i { color: #4f7a66; }
+.preview-modal-close {
+  background: none; border: none; color: #a89a82; cursor: pointer;
+  font-size: 16px; padding: 4px 8px; border-radius: 6px; transition: all .2s;
+}
+.preview-modal-close:hover { color: #c2604f; background: #fbe9e7; }
+.preview-modal-body { flex: 1; overflow-y: auto; padding: 20px; }
+.preview-img { max-width: 100%; max-height: 70vh; display: block; margin: 0 auto; border-radius: 8px; }
+.preview-md { font-size: 14px; line-height: 1.8; color: #2b271f; }
+.preview-md h1, .preview-md h2, .preview-md h3 { color: #345042; }
+.preview-md table { border-collapse: collapse; width: 100%; }
+.preview-md th, .preview-md td { border: 1px solid #e8dfd0; padding: 6px 10px; font-size: 13px; }
+.preview-md th { background: #f3eee4; }
+.preview-code {
+  background: #fff; border: 1px solid #ece5d8; border-radius: 8px;
+  padding: 12px 16px; font-family: 'Fira Code', 'Consolas', monospace;
+  font-size: 12px; color: #5b5345; line-height: 1.6;
+  white-space: pre-wrap; word-break: break-word; overflow-x: auto;
+}
+.preview-frame { width: 100%; height: 70vh; border: 1px solid #e8dfd0; border-radius: 8px; background: #fff; }
+.preview-binary {
+  text-align: center; padding: 40px 20px; color: #5b5345;
+}
+.preview-binary > i { font-size: 48px; color: #4f7a66; margin-bottom: 16px; display: block; }
+.preview-binary p { margin: 4px 0; font-size: 14px; }
+.preview-hint { color: #a89a82; font-size: 12px; margin: 8px 0 20px; }
+.preview-dl-btn {
+  background: #4f7a66; color: #fff; border: none;
+  padding: 8px 24px; border-radius: 8px; font-size: 13px;
+  cursor: pointer; transition: all .2s;
+}
+.preview-dl-btn:hover { background: #3d5f50; transform: translateY(-1px); }
+
+/* ============ 澄清面板"其他"输入框 ============ */
+.clarify-other-input {
+  margin-top: 6px; padding: 5px 12px; font-size: 12px;
+  border: 1px dashed #90b29d; border-radius: 16px;
+  background: #fff; color: #5b5345; outline: none;
+  min-width: 120px; flex: 1; transition: border-color .2s;
+}
+.clarify-other-input:focus { border-color: #4f7a66; border-style: solid; }
+.clarify-other-input.hidden { display: none; }
+.clarify-option-other { border-style: dashed; color: #a8814e; }
+.clarify-option-other.selected { border-style: solid; }
+
+/* ============ 技能市场卡片 ============ */
+.agent-skill-card { transition: all .2s; }
+.agent-skill-card:hover { transform: translateY(-2px); }
+
+/* ============ 澄清选择题面板（输入框上方） ============ */
+.beike-clarify-panel {
+  margin: 0 0 8px;
+  background: linear-gradient(135deg, #eef4f0 0%, #faf8f3 100%);
+  border: 1px solid #c5d9cf;
+  border-radius: 12px;
+  padding: 14px 16px 12px;
+  box-shadow: 0 2px 8px rgba(79, 122, 102, 0.08);
+  animation: clarifySlideIn 0.3s ease;
+}
+@keyframes clarifySlideIn {
+  from { opacity: 0; transform: translateY(-8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.clarify-header {
+  display: flex; align-items: center; gap: 8px;
+  margin-bottom: 10px;
+  font-size: 13px; color: #345042; font-weight: 600;
+}
+.clarify-header i { color: #4f7a66; font-size: 15px; }
+.clarify-reason { flex: 1; }
+.clarify-close {
+  background: none; border: none; color: #a89a82; cursor: pointer;
+  font-size: 14px; padding: 2px 6px; border-radius: 6px; transition: all .2s;
+}
+.clarify-close:hover { color: #c2604f; background: #fbe9e7; }
+.clarify-body { display: flex; flex-direction: column; gap: 10px; }
+.clarify-question { background: #fff; border-radius: 8px; padding: 8px 10px; border: 1px solid #e8dfd0; }
+.clarify-q-text { font-size: 12px; color: #5b5345; margin-bottom: 6px; font-weight: 500; }
+.clarify-options { display: flex; flex-wrap: wrap; gap: 6px; }
+.clarify-option {
+  padding: 5px 14px; font-size: 12px;
+  background: #faf8f3; border: 1px solid #d9ccb8;
+  border-radius: 16px; cursor: pointer; color: #5b5345;
+  transition: all .2s; white-space: nowrap;
+}
+.clarify-option:hover { border-color: #4f7a66; color: #345042; background: #eef4f0; }
+.clarify-option.selected {
+  background: #4f7a66; border-color: #4f7a66; color: #fff;
+  box-shadow: 0 2px 6px rgba(79, 122, 102, 0.3);
+}
+.clarify-footer { margin-top: 10px; text-align: right; }
+.clarify-confirm {
+  background: #4f7a66; color: #fff; border: none;
+  padding: 6px 22px; border-radius: 8px; font-size: 13px;
+  cursor: pointer; transition: all .2s; font-weight: 500;
+}
+.clarify-confirm:hover { background: #3d5f50; transform: translateY(-1px); box-shadow: 0 2px 8px rgba(79, 122, 102, 0.3); }
+
+/* ============ 滚动条（复用主样式） ============ */
+.agent-tool-args::-webkit-scrollbar, .agent-obs::-webkit-scrollbar { width: 4px; }
+.agent-tool-args::-webkit-scrollbar-thumb, .agent-obs::-webkit-scrollbar-thumb { background: #d9ccb8; border-radius: 4px; }

@@ -1,0 +1,20 @@
+{
+  "version": "1.0.0",
+  "createdAt": 1784605615000,
+  "semantic": {
+    "teacherId": "default",
+    "subjects": [],
+    "preferredStyle": "素养导向 · 情境教学",
+    "classProfiles": [],
+    "frequentTopics": [],
+    "lessonPrefs": {
+      "modules": ["教学目标", "重难点", "教学过程", "板书设计", "分层作业", "教学反思"],
+      "detailLevel": "详细",
+      "defaultLayers": 3,
+      "useLaTeX": true
+    },
+    "feedbackHistory": []
+  },
+  "episodic": [],
+  "working": null
+}

@@ -1,0 +1,84 @@
+{
+  "name": "edu-agent-teacher",
+  "version": "1.1.0",
+  "description": "教育智能体·教师端桌面应用",
+  "main": "electron/main.js",
+  "author": "百舸",
+  "license": "MIT",
+  "scripts": {
+    "start": "electron . --dev",
+    "start:prod": "electron .",
+    "build": "electron-builder --win",
+    "build:portable": "electron-builder --win portable",
+    "build:nsis": "electron-builder --win nsis",
+    "postinstall": "electron-builder install-app-deps"
+  },
+  "devDependencies": {
+    "electron": "^31.3.0",
+    "electron-builder": "^24.13.3"
+  },
+  "build": {
+    "appId": "com.baige.edu-agent-teacher",
+    "productName": "教育智能体教师端",
+    "copyright": "Copyright © 2026 百舸",
+    "publish": null,
+    "directories": {
+      "output": "dist",
+      "buildResources": "build"
+    },
+    "files": [
+      "electron/**/*",
+      "index.html",
+      "教育大模型logo.png",
+      "teacher-agent-sandbox/**"
+    ],
+    "extraResources": [
+      {
+        "from": "index.html",
+        "to": "www/index.html"
+      },
+      {
+        "from": "教育大模型logo.png",
+        "to": "www/教育大模型logo.png"
+      },
+      {
+        "from": "teacher-agent-sandbox",
+        "to": "www/teacher-agent-sandbox"
+      }
+    ],
+    "win": {
+      "icon": "build/icon.ico",
+      "target": [
+        {
+          "target": "nsis",
+          "arch": ["x64"]
+        },
+        {
+          "target": "portable",
+          "arch": ["x64"]
+        }
+      ],
+      "artifactName": "教育智能体教师端-${version}-${arch}.${ext}"
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": false,
+      "allowElevation": true,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "教育智能体教师端",
+      "installerIcon": "build/icon.ico",
+      "uninstallerIcon": "build/icon.ico",
+      "installerHeaderIcon": "build/icon.ico",
+      "installerLanguages": ["zh_CN"],
+      "language": "2052"
+    },
+    "portable": {
+      "artifactName": "教育智能体教师端-${version}-portable.exe"
+    }
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

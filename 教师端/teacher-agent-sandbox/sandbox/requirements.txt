@@ -1,0 +1,169 @@
+# ============================================================
+# 教师备课智能体 · 沙箱 Python 依赖清单
+# 对应 Dockerfile，用于服务端真实沙箱；浏览器端通过 Pyodide 加载等价包
+# 版本策略：统一使用 >= 约束，确保获得 bug 修复与安全更新
+# 平台限制：带"需要 X 二进制"注释的包，对应系统工具必须通过 apt 安装
+# ============================================================
+
+# ---- 1. 文档生成（备课核心产物）----
+python-pptx>=0.6.23          # PPT 课件 .pptx
+python-docx>=1.1.0           # Word 教案/学案 .docx
+docxtpl>=0.16.7              # Jinja2 模板渲染 Word（亦称 python-docx-template）
+python-docx-template>=0.16.7 # docxtpl 的长名别名（pip 会去重）
+openpyxl>=3.1.2              # Excel 量规/成绩表 .xlsx
+xlsxwriter>=3.1.9            # Excel 流式写入
+reportlab>=4.0.9            # PDF 试卷/报告 .pdf
+fpdf2>=2.7.7                # 轻量 PDF 生成
+weasyprint>=60.0            # HTML/CSS 转 PDF（需要 cairo/pango 系统库）
+docx2pdf>=0.0.8             # docx 转 PDF（需要 Microsoft Word 或 LibreOffice 后端）
+
+# ---- 2. 数据处理与分析 ----
+pandas>=2.1.4               # 学情数据处理
+numpy>=1.26.3               # 数值计算
+scipy>=1.11.4               # 统计检验
+statsmodels>=0.14.1         # 回归与时间序列
+scikit-learn>=1.4.0         # 聚类与分类
+
+# ---- 3. 可视化与图表 ----
+matplotlib>=3.8.2           # 成绩分布/雷达图
+seaborn>=0.13.2             # 统计可视化
+plotly>=5.19.0              # 交互式图表
+pyecharts>=2.0.5            # 百度 ECharts Python 封装
+wordcloud>=1.9.3            # 词云
+graphviz>=0.20.1            # Graphviz Python 绑定（需要 apt 安装 graphviz 二进制）
+networkx>=3.2.1             # 图论与网络分析
+
+# ---- 4. 文本处理与 NLP ----
+jieba>=0.42.1               # 中文分词（知识点抽取）
+hanlp>=2.1.0                # HanLP 中文 NLP（可选，模型较大）
+markdown>=3.5.2             # Markdown 解析
+markdown2>=2.4.13           # Markdown 转 HTML
+beautifulsoup4>=4.12.2      # 网页解析
+lxml>=5.1.0                 # XML/HTML 解析
+regex>=2023.12.25           # 增强 Unicode 正则
+pypinyin>=0.50.0            # 拼音转换
+zhon>=2.0.2                 # 中文常用字符集
+nltk>=3.8.1                 # 英文 NLP
+spacy>=3.7.2                # 工业级 NLP
+language-tool-python>=2.7.1 # 语法校对（需要 LanguageTool Java 服务）
+
+# ---- 5. PDF 读取与处理 ----
+pdfplumber>=0.10.0          # PDF 表格/文本提取
+pypdf>=4.0.0                # PDF 读写与合并
+PyPDF2>=3.0.1               # 兼容旧版 PDF API
+camelot-py>=0.11.0          # PDF 表格提取（需要 ghostscript 二进制）
+pdf2image>=1.17.0           # PDF 转图片（需要 poppler-utils 二进制）
+img2pdf>=0.5.1              # 图片合并为 PDF
+
+# ---- 6. 图片与多媒体 ----
+Pillow>=10.2.0              # 图片处理（公式转图片嵌入文档）
+cairosvg>=2.7.0             # SVG 转 PNG（需要 cairo 系统库）
+opencv-python-headless>=4.9.0.80  # 计算机视觉（无 GUI 版）
+qrcode>=7.4.2              # 二维码生成
+imageio>=2.33.1            # 图像读写
+moviepy>=1.0.3             # 视频剪辑（需要 ffmpeg 二进制）
+pydub>=0.25.1              # 音频处理（需要 ffmpeg 二进制）
+gtts>=2.5.1                # Google TTS
+pyttsx3>=2.90              # 离线 TTS
+SpeechRecognition>=3.10.1  # 语音识别
+
+# ---- 7. 联网搜索与网络请求 ----
+requests>=2.31.0            # 同步 HTTP
+httpx>=0.26.0               # 同步/异步 HTTP
+aiohttp>=3.9.3             # 异步 HTTP
+duckduckgo-search>=4.4.3    # DuckDuckGo 搜索
+feedparser>=6.0.11         # RSS/Atom 解析
+playwright>=1.41.0          # 浏览器自动化（需要执行 `playwright install chromium` 下载浏览器内核，或使用 apt 安装的 chromium）
+selenium>=4.17.0            # 浏览器自动化（需要浏览器驱动 chromedriver/geckodriver 与浏览器二进制）
+
+# ---- 8. AI/LLM 与智能体框架 ----
+openai>=1.12.0              # OpenAI 官方 SDK
+langchain>=0.1.9            # LangChain 框架
+langchain-community>=0.0.22 # LangChain 社区集成
+langchain-openai>=0.0.8     # LangChain OpenAI 集成
+langgraph>=0.0.40           # LangGraph 状态机
+llama-index>=0.10.12        # LlamaIndex RAG 框架
+chromadb>=0.4.22            # 向量数据库
+faiss-cpu>=1.7.4            # FAISS 向量检索（CPU 版）
+sentence-transformers>=2.4.0 # 句向量模型
+tiktoken>=0.6.0             # OpenAI 分词器
+dashscope>=1.14.0           # 阿里通义千问 SDK
+zhipuai>=2.0.1              # 智谱 GLM SDK
+anthropic>=0.21.3           # Anthropic Claude SDK
+
+# ---- 9. 模板引擎与排版 ----
+jinja2>=3.1.3               # 模板引擎
+pylatex>=1.4.2              # LaTeX 文档生成（需要 TeX 发行版 texlive-xetex 二进制）
+sympy>=1.12                 # 符号计算、公式推导、自动命题
+
+# ---- 10. 学科专用工具 ----
+manim>=0.18.0               # 数学动画
+rdkit>=2023.9.5             # 化学信息学
+music21>=9.1.0              # 音乐理论与符号化
+
+# ---- 11. 记忆与知识管理 ----
+redis>=5.0.1                # Redis 客户端（需要 redis-server 二进制）
+joblib>=1.3.2               # 持久化与并行
+sqlalchemy>=2.0.27          # ORM
+
+# ---- 12. 系统工具与安全 ----
+cryptography>=42.0.5        # 加密
+pydantic>=2.6.1             # 数据校验
+python-dotenv>=1.0.1        # .env 配置
+tqdm>=4.66.2                # 进度条
+rich>=13.7.0                # 终端美化
+apscheduler>=3.10.4         # 定时任务
+watchdog>=4.0.0             # 文件监听
+python-dateutil>=2.8.2      # 日期工具
+pyyaml>=6.0.1               # YAML 配置
+python-magic>=0.4.27        # 文件类型识别（需要 libmagic / apt: libmagic1）
+uuid6>=2023.5.2             # UUID v6/v7
+
+# ---- 13. Web 框架（API 服务）----
+fastapi>=0.109.2            # FastAPI 框架
+uvicorn[standard]>=0.27.1   # ASGI 服务器（含 uvloop/httptools）
+python-multipart>=0.0.9     # 表单/文件上传
+websockets>=12.0            # WebSocket
+
+# ============================================================
+# 系统级工具（通过 apt-get 安装，下方为清单，不通过 pip）
+# 在 Dockerfile 中通过 RUN apt-get install 集成安装
+# ============================================================
+# pandoc                       # Markdown / Word / PDF / HTML 文档转换
+# libreoffice                  # Office 文档格式互转（docx2pdf 后端）
+# wkhtmltopdf                  # HTML 转 PDF（weasyprint 的备用方案）
+# ghostscript                  # PDF 处理（camelot-py 依赖）
+# poppler-utils                # PDF 工具集（pdf2image、pdfplumber 依赖）
+# qpdf                         # PDF 结构化处理
+# mutool                       # MuPDF 工具
+# tesseract-ocr                # OCR 引擎
+# tesseract-ocr-chi-sim        # OCR 简体中文语言包
+# tesseract-ocr-chi-tra        # OCR 繁体中文语言包
+# tesseract-ocr-eng            # OCR 英文语言包
+# ffmpeg                       # 音视频转码（moviepy / pydub 依赖）
+# ffprobe                      # 音视频元数据探测（随 ffmpeg）
+# sox                          # 音频处理
+# lame                         # MP3 编码
+# imagemagick                  # 图像处理与格式转换
+# optipng                      # PNG 优化
+# jpegoptim                    # JPEG 优化
+# libwebp                      # WebP 支持
+# graphviz                     # 图形渲染（Python graphviz 绑定依赖）
+# plantuml                     # UML 图渲染
+# texlive-xetex                # LaTeX / XeLaTeX 引擎
+# texlive-lang-chinese         # TeX 中文支持（CJK 字体与宏包）
+# texlive-latex-extra          # LaTeX 扩展宏包
+# texlive-fonts-recommended    # TeX 推荐字体
+# texlive-science              # TeX 科学排版（pylatex 依赖）
+# latexmk                      # LaTeX 自动构建
+# chromium                     # 浏览器内核（playwright / selenium 依赖）
+# sqlite3                      # SQLite 数据库
+# redis-server                 # Redis 服务（记忆与缓存后端）
+# zip                          # 压缩工具
+# p7zip-full                   # 7z 压缩
+# curl                         # HTTP 命令行工具（健康检查）
+# wget                         # 下载工具
+# openssl                      # 加密工具
+# git                          # 版本控制
+# supervisor                   # 进程管理
+# nginx                        # 反向代理

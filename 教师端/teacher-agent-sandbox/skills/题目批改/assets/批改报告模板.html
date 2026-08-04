@@ -1,0 +1,993 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>批改报告</title>
+    <style>
+        /* ===== 全局样式 ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #4A90D9;
+            --primary-dark: #357ABD;
+            --primary-light: #E8F1FA;
+            --success: #52C41A;
+            --success-bg: #F6FFED;
+            --error: #FF4D4F;
+            --error-bg: #FFF2F0;
+            --warning: #FAAD14;
+            --warning-bg: #FFFBE6;
+            --gray: #8c8c8c;
+            --gray-light: #f5f5f5;
+            --gray-border: #e8e8e8;
+            --text-main: #262626;
+            --text-secondary: #595959;
+            --radius: 12px;
+            --shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+            --shadow-hover: 0 4px 16px rgba(0, 0, 0, 0.12);
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+                "PingFang SC", "Microsoft YaHei", "Helvetica Neue",
+                Helvetica, Arial, sans-serif;
+            background: #f0f2f5;
+            color: var(--text-main);
+            line-height: 1.8;
+            font-size: 15px;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 24px 20px 60px;
+        }
+
+        /* ===== 报告标题 ===== */
+        .report-header {
+            text-align: center;
+            padding: 32px 20px;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: #fff;
+            border-radius: var(--radius);
+            margin-bottom: 24px;
+            box-shadow: var(--shadow);
+        }
+
+        .report-header h1 {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 8px;
+            letter-spacing: 2px;
+        }
+
+        .report-header .subtitle {
+            font-size: 14px;
+            opacity: 0.85;
+        }
+
+        /* ===== 通用区块 ===== */
+        .section {
+            background: #fff;
+            border-radius: var(--radius);
+            padding: 24px;
+            margin-bottom: 20px;
+            box-shadow: var(--shadow);
+        }
+
+        .section-title {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--text-main);
+            margin-bottom: 20px;
+            padding-left: 12px;
+            border-left: 4px solid var(--primary);
+            display: flex;
+            align-items: center;
+        }
+
+        .section-title .icon {
+            margin-right: 8px;
+            font-size: 20px;
+        }
+
+        /* ===== 学生信息区 ===== */
+        .student-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 16px;
+        }
+
+        .info-item {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .info-label {
+            font-size: 13px;
+            color: var(--gray);
+            margin-bottom: 4px;
+        }
+
+        .info-value {
+            font-size: 15px;
+            font-weight: 500;
+            color: var(--text-main);
+        }
+
+        /* ===== 成绩总览卡片 ===== */
+        .score-overview {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 48px;
+            flex-wrap: wrap;
+            padding: 10px 0;
+        }
+
+        /* 总分大字显示 */
+        .score-display {
+            text-align: center;
+        }
+
+        .score-display .score-label {
+            font-size: 14px;
+            color: var(--gray);
+            margin-bottom: 8px;
+        }
+
+        .score-display .score-number {
+            font-size: 64px;
+            font-weight: 700;
+            color: var(--primary);
+            line-height: 1;
+        }
+
+        .score-display .score-total {
+            font-size: 20px;
+            color: var(--gray);
+            font-weight: 400;
+        }
+
+        .score-display .score-divider {
+            font-size: 20px;
+            color: var(--gray);
+            margin: 0 4px;
+        }
+
+        /* 得分率环形进度 */
+        .ring-progress {
+            position: relative;
+            width: 140px;
+            height: 140px;
+        }
+
+        .ring-progress svg {
+            transform: rotate(-90deg);
+        }
+
+        .ring-progress .ring-bg {
+            fill: none;
+            stroke: var(--gray-light);
+            stroke-width: 12;
+        }
+
+        .ring-progress .ring-fill {
+            fill: none;
+            stroke-width: 12;
+            stroke-linecap: round;
+            transition: stroke-dashoffset 0.8s ease;
+        }
+
+        .ring-progress .ring-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+
+        .ring-progress .ring-text .percent {
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--text-main);
+        }
+
+        .ring-progress .ring-text .percent-label {
+            font-size: 12px;
+            color: var(--gray);
+        }
+
+        /* 成绩等级徽章 */
+        .grade-badge {
+            display: inline-block;
+            padding: 6px 20px;
+            border-radius: 20px;
+            font-size: 16px;
+            font-weight: 600;
+            margin-top: 12px;
+        }
+
+        .grade-excellent { background: var(--success-bg); color: var(--success); }
+        .grade-good { background: var(--primary-light); color: var(--primary); }
+        .grade-medium { background: var(--warning-bg); color: var(--warning); }
+        .grade-pass { background: var(--warning-bg); color: #D48806; }
+        .grade-fail { background: var(--error-bg); color: var(--error); }
+
+        /* ===== 各题得分表格 ===== */
+        .score-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 14px;
+        }
+
+        .score-table th {
+            background: var(--primary-light);
+            color: var(--primary-dark);
+            font-weight: 600;
+            padding: 12px 16px;
+            text-align: left;
+            border-bottom: 2px solid var(--primary);
+        }
+
+        .score-table th:first-child { border-radius: 8px 0 0 0; }
+        .score-table th:last-child { border-radius: 0 8px 0 0; }
+
+        .score-table td {
+            padding: 12px 16px;
+            border-bottom: 1px solid var(--gray-border);
+            color: var(--text-secondary);
+        }
+
+        .score-table tr:hover td {
+            background: #fafafa;
+        }
+
+        .score-table .total-row td {
+            font-weight: 700;
+            color: var(--text-main);
+            background: var(--gray-light);
+            border-top: 2px solid var(--gray-border);
+        }
+
+        .tag {
+            display: inline-block;
+            padding: 2px 10px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: 500;
+        }
+
+        .tag-correct { background: var(--success-bg); color: var(--success); }
+        .tag-wrong { background: var(--error-bg); color: var(--error); }
+        .tag-partial { background: var(--warning-bg); color: var(--warning); }
+
+        /* ===== 逐题批改详情 ===== */
+        .question-detail {
+            border: 1px solid var(--gray-border);
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 16px;
+            transition: box-shadow 0.3s;
+        }
+
+        .question-detail:hover {
+            box-shadow: var(--shadow-hover);
+        }
+
+        .question-detail.correct { border-left: 4px solid var(--success); }
+        .question-detail.wrong { border-left: 4px solid var(--error); }
+        .question-detail.partial { border-left: 4px solid var(--warning); }
+
+        .question-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 16px;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .question-title {
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--text-main);
+        }
+
+        .question-score {
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        .question-score .obtained { color: var(--primary); }
+        .question-score .max { color: var(--gray); }
+
+        .detail-row {
+            display: flex;
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+
+        .detail-label {
+            min-width: 90px;
+            color: var(--gray);
+            font-weight: 500;
+            flex-shrink: 0;
+        }
+
+        .detail-content {
+            color: var(--text-secondary);
+            flex: 1;
+        }
+
+        .detail-content.error { color: var(--error); }
+        .detail-content.correct-text { color: var(--success); }
+
+        .deduction-list {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .deduction-list li {
+            padding: 4px 0;
+            padding-left: 20px;
+            position: relative;
+            color: var(--text-secondary);
+        }
+
+        .deduction-list li::before {
+            content: ">";
+            position: absolute;
+            left: 0;
+            color: var(--error);
+            font-weight: bold;
+        }
+
+        .error-type-badge {
+            display: inline-block;
+            padding: 2px 10px;
+            border-radius: 4px;
+            font-size: 12px;
+            margin-right: 6px;
+            background: var(--gray-light);
+            color: var(--text-secondary);
+        }
+
+        .teacher-comment {
+            background: var(--primary-light);
+            border-radius: 8px;
+            padding: 12px 16px;
+            margin-top: 12px;
+            font-size: 14px;
+            color: var(--primary-dark);
+        }
+
+        .teacher-comment::before {
+            content: "教师批注：";
+            font-weight: 600;
+        }
+
+        /* ===== 错误分布统计图表 ===== */
+        .error-chart {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .error-bar-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .error-bar-label {
+            width: 100px;
+            font-size: 14px;
+            color: var(--text-secondary);
+            text-align: right;
+            flex-shrink: 0;
+        }
+
+        .error-bar-track {
+            flex: 1;
+            height: 28px;
+            background: var(--gray-light);
+            border-radius: 14px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .error-bar-fill {
+            height: 100%;
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            padding-right: 12px;
+            color: #fff;
+            font-size: 13px;
+            font-weight: 600;
+            transition: width 0.6s ease;
+            min-width: 40px;
+        }
+
+        .bar-color-1 { background: linear-gradient(90deg, #FF6B6B, #FF4D4F); }
+        .bar-color-2 { background: linear-gradient(90deg, #FFA940, #FA8C16); }
+        .bar-color-3 { background: linear-gradient(90deg, #FFD666, #FAAD14); }
+        .bar-color-4 { background: linear-gradient(90deg, #69C0FF, #4A90D9); }
+        .bar-color-5 { background: linear-gradient(90deg, #B37FEB, #722ED1); }
+
+        .error-bar-count {
+            width: 60px;
+            font-size: 14px;
+            color: var(--text-secondary);
+            flex-shrink: 0;
+        }
+
+        /* ===== 总体评价区 ===== */
+        .overall-evaluation {
+            background: linear-gradient(135deg, #f8f9ff 0%, #eef2ff 100%);
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 16px;
+        }
+
+        .overall-evaluation .eval-label {
+            font-size: 14px;
+            color: var(--gray);
+            margin-bottom: 6px;
+        }
+
+        .overall-evaluation .eval-content {
+            font-size: 15px;
+            color: var(--text-main);
+            line-height: 1.8;
+        }
+
+        .problem-list, .suggestion-list {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .problem-list li, .suggestion-list li {
+            padding: 8px 0 8px 28px;
+            position: relative;
+            color: var(--text-secondary);
+            font-size: 14px;
+        }
+
+        .problem-list li::before {
+            content: "!";
+            position: absolute;
+            left: 0;
+            top: 8px;
+            width: 20px;
+            height: 20px;
+            line-height: 20px;
+            text-align: center;
+            background: var(--error-bg);
+            color: var(--error);
+            border-radius: 50%;
+            font-size: 12px;
+            font-weight: 700;
+        }
+
+        .suggestion-list li::before {
+            content: ">";
+            position: absolute;
+            left: 0;
+            top: 8px;
+            width: 20px;
+            height: 20px;
+            line-height: 20px;
+            text-align: center;
+            background: var(--success-bg);
+            color: var(--success);
+            border-radius: 50%;
+            font-size: 12px;
+            font-weight: 700;
+        }
+
+        .encouragement-box {
+            background: linear-gradient(135deg, #fff9e6 0%, #fff3cd 100%);
+            border-radius: 8px;
+            padding: 20px;
+            border: 1px dashed var(--warning);
+            text-align: center;
+        }
+
+        .encouragement-box .encouragement-label {
+            font-size: 14px;
+            color: #D48806;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .encouragement-box .encouragement-text {
+            font-size: 15px;
+            color: var(--text-main);
+            line-height: 1.8;
+        }
+
+        /* ===== 页脚 ===== */
+        .report-footer {
+            text-align: center;
+            padding: 20px;
+            color: var(--gray);
+            font-size: 13px;
+        }
+
+        /* ===== 响应式设计 ===== */
+        @media (max-width: 768px) {
+            .container {
+                padding: 16px 12px 40px;
+            }
+
+            .report-header h1 {
+                font-size: 22px;
+            }
+
+            .section {
+                padding: 16px;
+            }
+
+            .score-overview {
+                gap: 24px;
+            }
+
+            .score-display .score-number {
+                font-size: 48px;
+            }
+
+            .ring-progress {
+                width: 110px;
+                height: 110px;
+            }
+
+            .ring-progress .ring-text .percent {
+                font-size: 22px;
+            }
+
+            .score-table {
+                font-size: 13px;
+            }
+
+            .score-table th, .score-table td {
+                padding: 8px 10px;
+            }
+
+            .detail-row {
+                flex-direction: column;
+                margin-bottom: 6px;
+            }
+
+            .detail-label {
+                min-width: auto;
+                margin-bottom: 2px;
+            }
+
+            .error-bar-label {
+                width: 70px;
+                font-size: 12px;
+            }
+
+            .question-detail {
+                padding: 14px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .score-table {
+                font-size: 12px;
+            }
+
+            .score-table th, .score-table td {
+                padding: 6px 8px;
+            }
+
+            .score-display .score-number {
+                font-size: 40px;
+            }
+
+            .report-header {
+                padding: 20px 16px;
+            }
+
+            .report-header h1 {
+                font-size: 20px;
+                letter-spacing: 1px;
+            }
+        }
+
+        /* ===== 打印样式 ===== */
+        @media print {
+            body {
+                background: #fff;
+            }
+
+            .container {
+                max-width: 100%;
+                padding: 0;
+            }
+
+            .section {
+                box-shadow: none;
+                border: 1px solid var(--gray-border);
+                page-break-inside: avoid;
+            }
+
+            .report-header {
+                box-shadow: none;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+
+            .question-detail {
+                page-break-inside: avoid;
+            }
+
+            .ring-progress .ring-fill {
+                transition: none;
+            }
+
+            .error-bar-fill {
+                transition: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <!-- ===== 报告标题 ===== -->
+        <div class="report-header">
+            <h1>批改报告</h1>
+            <div class="subtitle">学生作业/试卷批改详细报告</div>
+        </div>
+
+        <!-- ===== 一、学生信息区 ===== -->
+        <div class="section">
+            <div class="section-title">
+                <span class="icon">[1]</span> 学生信息
+            </div>
+            <div class="student-info">
+                <div class="info-item">
+                    <span class="info-label">学生姓名</span>
+                    <span class="info-value">{{学生姓名}}</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">班级</span>
+                    <span class="info-value">{{班级}}</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">学科</span>
+                    <span class="info-value">{{学科}}</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">年级</span>
+                    <span class="info-value">{{年级}}</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">批改日期</span>
+                    <span class="info-value">{{批改日期}}</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">作业/试卷名称</span>
+                    <span class="info-value">{{作业名称}}</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== 二、成绩总览区 ===== -->
+        <div class="section">
+            <div class="section-title">
+                <span class="icon">[2]</span> 成绩总览
+            </div>
+            <div class="score-overview">
+                <!-- 总分大字显示 -->
+                <div class="score-display">
+                    <div class="score-label">总得分</div>
+                    <div>
+                        <span class="score-number">{{得分}}</span>
+                        <span class="score-divider">/</span>
+                        <span class="score-total">{{总分}}分</span>
+                    </div>
+                    <div class="grade-badge grade-excellent">{{成绩等级}}</div>
+                </div>
+                <!-- 得分率环形进度 -->
+                <div class="ring-progress">
+                    <svg width="140" height="140">
+                        <circle class="ring-bg" cx="70" cy="70" r="58"></circle>
+                        <circle class="ring-fill" cx="70" cy="70" r="58"
+                            stroke="#4A90D9"
+                            stroke-dasharray="364.4"
+                            stroke-dashoffset="{{364.4 * (1 - 得分率/100)}}"></circle>
+                    </svg>
+                    <div class="ring-text">
+                        <div class="percent">{{得分率}}%</div>
+                        <div class="percent-label">得分率</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== 三、各题得分表 ===== -->
+        <div class="section">
+            <div class="section-title">
+                <span class="icon">[3]</span> 各题得分明细
+            </div>
+            <table class="score-table">
+                <thead>
+                    <tr>
+                        <th>题号</th>
+                        <th>题型</th>
+                        <th>满分</th>
+                        <th>得分</th>
+                        <th>得分率</th>
+                        <th>结果</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>第1题</td>
+                        <td>{{题型}}</td>
+                        <td>{{满分}}</td>
+                        <td>{{得分}}</td>
+                        <td>{{得分率}}%</td>
+                        <td><span class="tag tag-correct">正确</span></td>
+                    </tr>
+                    <tr>
+                        <td>第2题</td>
+                        <td>{{题型}}</td>
+                        <td>{{满分}}</td>
+                        <td>{{得分}}</td>
+                        <td>{{得分率}}%</td>
+                        <td><span class="tag tag-wrong">错误</span></td>
+                    </tr>
+                    <tr>
+                        <td>第3题</td>
+                        <td>{{题型}}</td>
+                        <td>{{满分}}</td>
+                        <td>{{得分}}</td>
+                        <td>{{得分率}}%</td>
+                        <td><span class="tag tag-partial">部分正确</span></td>
+                    </tr>
+                    <!-- 更多题目按相同格式添加 -->
+                    <tr class="total-row">
+                        <td>合计</td>
+                        <td>—</td>
+                        <td>{{总分}}</td>
+                        <td>{{总得分}}</td>
+                        <td>{{总得分率}}%</td>
+                        <td>—</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- ===== 四、逐题批改详情 ===== -->
+        <div class="section">
+            <div class="section-title">
+                <span class="icon">[4]</span> 逐题批改详情
+            </div>
+
+            <!-- 第1题（正确示例） -->
+            <div class="question-detail correct">
+                <div class="question-header">
+                    <div class="question-title">第1题（{{题型}}）</div>
+                    <div class="question-score">
+                        <span class="obtained">{{得分}}</span>
+                        <span class="max"> / {{满分}}分</span>
+                    </div>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">题目</span>
+                    <span class="detail-content">{{题目内容}}</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">学生作答</span>
+                    <span class="detail-content correct-text">{{学生作答}}</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">正确答案</span>
+                    <span class="detail-content">{{正确答案}}</span>
+                </div>
+                <div class="teacher-comment">{{批注内容：答题正确，思路清晰}}</div>
+            </div>
+
+            <!-- 第2题（错误示例） -->
+            <div class="question-detail wrong">
+                <div class="question-header">
+                    <div class="question-title">第2题（{{题型}}）</div>
+                    <div class="question-score">
+                        <span class="obtained">{{得分}}</span>
+                        <span class="max"> / {{满分}}分</span>
+                    </div>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">题目</span>
+                    <span class="detail-content">{{题目内容}}</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">学生作答</span>
+                    <span class="detail-content error">{{学生作答}}</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">正确答案</span>
+                    <span class="detail-content">{{正确答案}}</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">扣分原因</span>
+                    <div class="detail-content">
+                        <ul class="deduction-list">
+                            <li>{{扣分原因1}}</li>
+                            <li>{{扣分原因2}}</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">错误类型</span>
+                    <div class="detail-content">
+                        <span class="error-type-badge">{{知识性错误}}</span>
+                    </div>
+                </div>
+                <div class="teacher-comment">{{批注内容}}</div>
+            </div>
+
+            <!-- 第3题（部分正确示例） -->
+            <div class="question-detail partial">
+                <div class="question-header">
+                    <div class="question-title">第3题（{{题型}}）</div>
+                    <div class="question-score">
+                        <span class="obtained">{{得分}}</span>
+                        <span class="max"> / {{满分}}分</span>
+                    </div>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">题目</span>
+                    <span class="detail-content">{{题目内容}}</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">学生作答</span>
+                    <span class="detail-content">{{学生作答}}</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">正确答案</span>
+                    <span class="detail-content">{{正确答案}}</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">扣分原因</span>
+                    <div class="detail-content">
+                        <ul class="deduction-list">
+                            <li>{{扣分原因1}}</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">错误类型</span>
+                    <div class="detail-content">
+                        <span class="error-type-badge">{{计算性错误}}</span>
+                    </div>
+                </div>
+                <div class="teacher-comment">{{批注内容}}</div>
+            </div>
+
+            <!-- 更多题目按相同格式添加 -->
+        </div>
+
+        <!-- ===== 五、错误分布统计 ===== -->
+        <div class="section">
+            <div class="section-title">
+                <span class="icon">[5]</span> 错误分布统计
+            </div>
+            <div class="error-chart">
+                <div class="error-bar-item">
+                    <div class="error-bar-label">知识性错误</div>
+                    <div class="error-bar-track">
+                        <div class="error-bar-fill bar-color-1" style="width: {{百分比}}%;">
+                            {{次数}}处
+                        </div>
+                    </div>
+                    <div class="error-bar-count">{{次数}}处 / {{占比}}%</div>
+                </div>
+                <div class="error-bar-item">
+                    <div class="error-bar-label">方法性错误</div>
+                    <div class="error-bar-track">
+                        <div class="error-bar-fill bar-color-2" style="width: {{百分比}}%;">
+                            {{次数}}处
+                        </div>
+                    </div>
+                    <div class="error-bar-count">{{次数}}处 / {{占比}}%</div>
+                </div>
+                <div class="error-bar-item">
+                    <div class="error-bar-label">计算性错误</div>
+                    <div class="error-bar-track">
+                        <div class="error-bar-fill bar-color-3" style="width: {{百分比}}%;">
+                            {{次数}}处
+                        </div>
+                    </div>
+                    <div class="error-bar-count">{{次数}}处 / {{占比}}%</div>
+                </div>
+                <div class="error-bar-item">
+                    <div class="error-bar-label">格式性错误</div>
+                    <div class="error-bar-track">
+                        <div class="error-bar-fill bar-color-4" style="width: {{百分比}}%;">
+                            {{次数}}处
+                        </div>
+                    </div>
+                    <div class="error-bar-count">{{次数}}处 / {{占比}}%</div>
+                </div>
+                <div class="error-bar-item">
+                    <div class="error-bar-label">审题性错误</div>
+                    <div class="error-bar-track">
+                        <div class="error-bar-fill bar-color-5" style="width: {{百分比}}%;">
+                            {{次数}}处
+                        </div>
+                    </div>
+                    <div class="error-bar-count">{{次数}}处 / {{占比}}%</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== 六、总体评价与建议 ===== -->
+        <div class="section">
+            <div class="section-title">
+                <span class="icon">[6]</span> 总体评价与建议
+            </div>
+
+            <!-- 总体评语 -->
+            <div class="overall-evaluation" style="margin-bottom: 20px;">
+                <div class="eval-label">总体评语</div>
+                <div class="eval-content">
+                    成绩等级：<strong>{{成绩等级}}</strong>（得分率{{得分率}}%）<br><br>
+                    {{总体评语内容}}
+                </div>
+            </div>
+
+            <!-- 主要问题 -->
+            <div style="margin-bottom: 20px;">
+                <div class="eval-label" style="margin-bottom: 10px; font-size: 15px; font-weight: 600; color: var(--text-main);">
+                    主要问题
+                </div>
+                <ul class="problem-list">
+                    <li>{{主要问题1}}：{{问题说明与改进方向}}</li>
+                    <li>{{主要问题2}}：{{问题说明与改进方向}}</li>
+                    <li>{{主要问题3}}：{{问题说明与改进方向}}</li>
+                </ul>
+            </div>
+
+            <!-- 改进建议 -->
+            <div style="margin-bottom: 20px;">
+                <div class="eval-label" style="margin-bottom: 10px; font-size: 15px; font-weight: 600; color: var(--text-main);">
+                    改进建议
+                </div>
+                <ul class="suggestion-list">
+                    <li>{{改进建议1}}</li>
+                    <li>{{改进建议2}}</li>
+                    <li>{{改进建议3}}</li>
+                </ul>
+            </div>
+
+            <!-- 鼓励寄语 -->
+            <div class="encouragement-box">
+                <div class="encouragement-label">老师寄语</div>
+                <div class="encouragement-text">
+                    {{鼓励性评语}}
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== 页脚 ===== -->
+        <div class="report-footer">
+            本报告由题目批改系统生成 | 批改日期：{{批改日期}} | 批改人：{{教师姓名}}
+        </div>
+
+    </div>
+</body>
+</html>

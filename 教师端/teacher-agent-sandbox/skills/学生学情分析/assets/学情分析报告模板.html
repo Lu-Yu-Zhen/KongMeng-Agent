@@ -1,0 +1,1126 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>学情诊断报告</title>
+    <style>
+        /* ========== 全局样式 ========== */
+        :root {
+            --primary: #4a90d9;
+            --primary-light: #e8f2fd;
+            --success: #52c41a;
+            --success-light: #f0f9eb;
+            --warning: #faad14;
+            --warning-light: #fffbe6;
+            --danger: #f5222d;
+            --danger-light: #fff1f0;
+            --text-main: #333333;
+            --text-secondary: #666666;
+            --text-light: #999999;
+            --border: #e8e8e8;
+            --bg-page: #f5f7fa;
+            --bg-card: #ffffff;
+            --shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+            --radius: 12px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Microsoft YaHei", "PingFang SC", "Helvetica Neue", Arial, sans-serif;
+            background: var(--bg-page);
+            color: var(--text-main);
+            line-height: 1.8;
+            font-size: 14px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* ========== 报告头部 ========== */
+        .report-header {
+            text-align: center;
+            padding: 40px 20px 30px;
+            background: linear-gradient(135deg, #4a90d9 0%, #6ab7e8 100%);
+            color: #fff;
+            border-radius: var(--radius);
+            margin-bottom: 24px;
+        }
+
+        .report-header h1 {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .report-header .subtitle {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+
+        /* ========== 基本信息栏 ========== */
+        .info-bar {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+            padding: 20px;
+            background: var(--bg-card);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            margin-bottom: 24px;
+        }
+
+        .info-item {
+            flex: 1;
+            min-width: 140px;
+        }
+
+        .info-item .label {
+            font-size: 12px;
+            color: var(--text-light);
+            margin-bottom: 4px;
+        }
+
+        .info-item .value {
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--text-main);
+        }
+
+        /* ========== 区块标题 ========== */
+        .section {
+            background: var(--bg-card);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            padding: 24px;
+            margin-bottom: 24px;
+        }
+
+        .section-title {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--text-main);
+            margin-bottom: 20px;
+            padding-left: 12px;
+            border-left: 4px solid var(--primary);
+        }
+
+        /* ========== 成绩概览卡片 ========== */
+        .score-overview {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .score-main-card {
+            background: linear-gradient(135deg, #4a90d9 0%, #6ab7e8 100%);
+            border-radius: var(--radius);
+            padding: 30px 20px;
+            text-align: center;
+            color: #fff;
+        }
+
+        .score-main-card .score-value {
+            font-size: 48px;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        .score-main-card .score-unit {
+            font-size: 16px;
+            opacity: 0.85;
+        }
+
+        .score-main-card .score-full {
+            font-size: 14px;
+            opacity: 0.8;
+            margin-top: 8px;
+        }
+
+        .score-main-card .score-rate {
+            display: inline-block;
+            margin-top: 12px;
+            padding: 4px 16px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 20px;
+            font-size: 14px;
+        }
+
+        .score-metrics {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+        }
+
+        .metric-card {
+            background: var(--bg-page);
+            border-radius: 8px;
+            padding: 16px;
+            text-align: center;
+            border: 1px solid var(--border);
+        }
+
+        .metric-card .metric-label {
+            font-size: 12px;
+            color: var(--text-secondary);
+            margin-bottom: 6px;
+        }
+
+        .metric-card .metric-value {
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .metric-card .metric-sub {
+            font-size: 11px;
+            color: var(--text-light);
+        }
+
+        .metric-card.status-pass {
+            border-color: var(--success);
+            background: var(--success-light);
+        }
+
+        .metric-card.status-pass .metric-value {
+            color: var(--success);
+        }
+
+        .metric-card.status-fail {
+            border-color: var(--danger);
+            background: var(--danger-light);
+        }
+
+        .metric-card.status-fail .metric-value {
+            color: var(--danger);
+        }
+
+        .metric-card.status-excellent {
+            border-color: var(--warning);
+            background: var(--warning-light);
+        }
+
+        .metric-card.status-excellent .metric-value {
+            color: var(--warning);
+        }
+
+        /* ========== 知识点掌握度（横向条形图） ========== */
+        .knowledge-bar-list {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+
+        .knowledge-bar-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .knowledge-bar-item .kb-label {
+            width: 140px;
+            font-size: 13px;
+            color: var(--text-secondary);
+            text-align: right;
+            flex-shrink: 0;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        .knowledge-bar-item .kb-track {
+            flex: 1;
+            height: 24px;
+            background: #f0f0f0;
+            border-radius: 12px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .knowledge-bar-item .kb-fill {
+            height: 100%;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            padding-right: 10px;
+            font-size: 12px;
+            color: #fff;
+            font-weight: 600;
+            min-width: 36px;
+            transition: width 0.6s ease;
+        }
+
+        .kb-fill.level-excellent { background: linear-gradient(90deg, #52c41a, #73d13d); }
+        .kb-fill.level-good { background: linear-gradient(90deg, #4a90d9, #6ab7e8); }
+        .kb-fill.level-normal { background: linear-gradient(90deg, #faad14, #ffc53d); }
+        .kb-fill.level-weak { background: linear-gradient(90deg, #fa8c16, #ffa940); }
+        .kb-fill.level-blind { background: linear-gradient(90deg, #f5222d, #ff4d4f); }
+
+        .knowledge-legend {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 16px;
+            padding-top: 16px;
+            border-top: 1px solid var(--border);
+            font-size: 12px;
+            color: var(--text-secondary);
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .legend-color {
+            width: 12px;
+            height: 12px;
+            border-radius: 3px;
+        }
+
+        /* ========== 能力雷达图 ========== */
+        .ability-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+            align-items: center;
+        }
+
+        .radar-chart-container {
+            display: flex;
+            justify-content: center;
+        }
+
+        .ability-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 13px;
+        }
+
+        .ability-table th {
+            background: var(--primary-light);
+            color: var(--primary);
+            padding: 10px 8px;
+            text-align: center;
+            font-weight: 600;
+            border-bottom: 2px solid var(--primary);
+        }
+
+        .ability-table td {
+            padding: 10px 8px;
+            text-align: center;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .ability-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .ability-table .weak {
+            color: var(--danger);
+            font-weight: 600;
+        }
+
+        .ability-table .strong {
+            color: var(--success);
+            font-weight: 600;
+        }
+
+        /* ========== 成绩趋势折线图 ========== */
+        .trend-chart-container {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 16px;
+        }
+
+        .trend-summary {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+            margin-top: 16px;
+        }
+
+        .trend-summary-item {
+            flex: 1;
+            min-width: 120px;
+            text-align: center;
+            padding: 12px;
+            background: var(--bg-page);
+            border-radius: 8px;
+        }
+
+        .trend-summary-item .ts-label {
+            font-size: 12px;
+            color: var(--text-secondary);
+            margin-bottom: 4px;
+        }
+
+        .trend-summary-item .ts-value {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--text-main);
+        }
+
+        .trend-summary-item .ts-value.up { color: var(--success); }
+        .trend-summary-item .ts-value.down { color: var(--danger); }
+        .trend-summary-item .ts-value.stable { color: var(--primary); }
+
+        /* ========== 薄弱点诊断卡片 ========== */
+        .weakness-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 16px;
+        }
+
+        .weakness-card {
+            border-radius: 8px;
+            padding: 16px;
+            border-left: 4px solid var(--danger);
+            background: var(--danger-light);
+            position: relative;
+        }
+
+        .weakness-card .wc-header {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 10px;
+        }
+
+        .weakness-card .wc-icon {
+            width: 24px;
+            height: 24px;
+            background: var(--danger);
+            color: #fff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+
+        .weakness-card .wc-title {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--text-main);
+        }
+
+        .weakness-card .wc-items {
+            list-style: none;
+        }
+
+        .weakness-card .wc-items li {
+            padding: 6px 0;
+            font-size: 13px;
+            color: var(--text-secondary);
+            border-bottom: 1px dashed var(--border);
+            cursor: pointer;
+        }
+
+        .weakness-card .wc-items li:last-child {
+            border-bottom: none;
+        }
+
+        .weakness-card .wc-items li:hover {
+            color: var(--danger);
+        }
+
+        .weakness-card .wc-items .item-rate {
+            color: var(--danger);
+            font-weight: 600;
+            margin-left: 4px;
+        }
+
+        .weakness-card .wc-detail {
+            display: none;
+            margin-top: 8px;
+            padding: 10px;
+            background: rgba(245, 34, 45, 0.05);
+            border-radius: 6px;
+            font-size: 12px;
+            color: var(--text-secondary);
+        }
+
+        .weakness-card .wc-items li.expanded + .wc-detail {
+            display: block;
+        }
+
+        .diagnosis-conclusion {
+            margin-top: 20px;
+            padding: 16px;
+            background: var(--primary-light);
+            border-radius: 8px;
+            border-left: 4px solid var(--primary);
+        }
+
+        .diagnosis-conclusion .dc-title {
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 8px;
+            font-size: 14px;
+        }
+
+        .diagnosis-conclusion .dc-content {
+            font-size: 13px;
+            color: var(--text-secondary);
+        }
+
+        /* ========== 教学建议卡片 ========== */
+        .suggestion-cards {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .suggestion-card {
+            border-radius: 8px;
+            padding: 16px;
+            background: var(--bg-page);
+            border: 1px solid var(--border);
+        }
+
+        .suggestion-card.sc-knowledge { border-left: 4px solid var(--danger); }
+        .suggestion-card.sc-ability { border-left: 4px solid var(--warning); }
+        .suggestion-card.sc-type { border-left: 4px solid var(--primary); }
+        .suggestion-card.sc-layer { border-left: 4px solid var(--success); }
+        .suggestion-card.sc-method { border-left: 4px solid #722ed1; }
+
+        .suggestion-card .sc-header {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 12px;
+        }
+
+        .suggestion-card .sc-title {
+            font-size: 15px;
+            font-weight: 600;
+            color: var(--text-main);
+        }
+
+        .suggestion-card .sc-list {
+            list-style: none;
+        }
+
+        .suggestion-card .sc-list li {
+            padding: 8px 0;
+            font-size: 13px;
+            color: var(--text-secondary);
+            border-bottom: 1px dashed var(--border);
+            padding-left: 16px;
+            position: relative;
+        }
+
+        .suggestion-card .sc-list li:last-child {
+            border-bottom: none;
+        }
+
+        .suggestion-card .sc-list li::before {
+            content: ">";
+            position: absolute;
+            left: 0;
+            color: var(--text-light);
+            font-weight: 700;
+        }
+
+        .suggestion-card .sc-list .highlight {
+            color: var(--danger);
+            font-weight: 600;
+        }
+
+        .suggestion-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 13px;
+            margin-top: 8px;
+        }
+
+        .suggestion-table th {
+            background: #f5f5f5;
+            padding: 8px;
+            text-align: left;
+            font-weight: 600;
+            color: var(--text-secondary);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .suggestion-table td {
+            padding: 8px;
+            border-bottom: 1px solid var(--border);
+            color: var(--text-secondary);
+        }
+
+        /* ========== 分层分析 ========== */
+        .layer-badge {
+            display: inline-block;
+            padding: 4px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 16px;
+        }
+
+        .layer-badge.excellent { background: var(--success-light); color: var(--success); }
+        .layer-badge.middle { background: var(--primary-light); color: var(--primary); }
+        .layer-badge.weak { background: var(--danger-light); color: var(--danger); }
+
+        .layer-info-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 13px;
+        }
+
+        .layer-info-table th {
+            background: var(--primary-light);
+            color: var(--primary);
+            padding: 10px;
+            text-align: left;
+            font-weight: 600;
+        }
+
+        .layer-info-table td {
+            padding: 10px;
+            border-bottom: 1px solid var(--border);
+            color: var(--text-secondary);
+        }
+
+        /* ========== 页脚 ========== */
+        .report-footer {
+            text-align: center;
+            padding: 24px;
+            color: var(--text-light);
+            font-size: 12px;
+            border-top: 1px solid var(--border);
+            margin-top: 24px;
+        }
+
+        /* ========== 响应式 ========== */
+        @media (max-width: 768px) {
+            .container { padding: 12px; }
+            .score-overview { grid-template-columns: 1fr; }
+            .ability-section { grid-template-columns: 1fr; }
+            .score-metrics { grid-template-columns: 1fr; }
+            .knowledge-bar-item .kb-label { width: 100px; font-size: 12px; }
+            .report-header h1 { font-size: 22px; }
+            .score-main-card .score-value { font-size: 36px; }
+        }
+
+        /* ========== 打印样式 ========== */
+        @media print {
+            body { background: #fff; font-size: 12px; }
+            .container { max-width: 100%; padding: 0; }
+            .section { box-shadow: none; border: 1px solid #ddd; page-break-inside: avoid; }
+            .report-header { background: #4a90d9 !important; -webkit-print-color-adjust: exact; }
+            .metric-card, .weakness-card, .suggestion-card { -webkit-print-color-adjust: exact; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <!-- ========== 报告头部 ========== -->
+        <div class="report-header">
+            <h1>学情诊断报告</h1>
+            <p class="subtitle">基于多维度数据分析生成 | 仅供教学参考</p>
+        </div>
+
+        <!-- ========== 基本信息栏 ========== -->
+        <div class="info-bar">
+            <div class="info-item">
+                <div class="label">学生姓名</div>
+                <div class="value">{{学生姓名}}</div>
+            </div>
+            <div class="info-item">
+                <div class="label">班级</div>
+                <div class="value">{{班级}}</div>
+            </div>
+            <div class="info-item">
+                <div class="label">学科</div>
+                <div class="value">{{学科}}</div>
+            </div>
+            <div class="info-item">
+                <div class="label">考试名称</div>
+                <div class="value">{{考试名称}}</div>
+            </div>
+            <div class="info-item">
+                <div class="label">分析日期</div>
+                <div class="value">{{分析日期}}</div>
+            </div>
+        </div>
+
+        <!-- ========== 成绩概览 ========== -->
+        <div class="section">
+            <h2 class="section-title">成绩概览</h2>
+            <div class="score-overview">
+                <!-- 总分大卡片 -->
+                <div class="score-main-card">
+                    <div class="score-value">{{实际得分}}</div>
+                    <div class="score-unit">分</div>
+                    <div class="score-full">满分 {{满分}} 分</div>
+                    <div class="score-rate">得分率 {{得分率}}%</div>
+                </div>
+                <!-- 关键指标网格 -->
+                <div class="score-metrics">
+                    <div class="metric-card {{及格状态样式}}">
+                        <div class="metric-label">及格状态</div>
+                        <div class="metric-value">{{及格/不及格}}</div>
+                    </div>
+                    <div class="metric-card {{优秀状态样式}}">
+                        <div class="metric-label">优秀状态</div>
+                        <div class="metric-value">{{优秀/非优秀}}</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-label">班级排名</div>
+                        <div class="metric-value">{{排名}}</div>
+                        <div class="metric-sub">共 {{总人数}} 人</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-label">每题平均分</div>
+                        <div class="metric-value">{{每题平均分}}</div>
+                        <div class="metric-sub">分/题</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ========== 成绩趋势 ========== -->
+        <div class="section">
+            <h2 class="section-title">成绩趋势分析</h2>
+            <div class="trend-chart-container">
+                <!-- SVG 折线图 -->
+                <svg width="700" height="280" viewBox="0 0 700 280" xmlns="http://www.w3.org/2000/svg">
+                    <!-- 背景 -->
+                    <rect x="0" y="0" width="700" height="280" fill="#fafafa" rx="8"/>
+
+                    <!-- 坐标轴 -->
+                    <line x1="60" y1="240" x2="660" y2="240" stroke="#d9d9d9" stroke-width="1.5"/>
+                    <line x1="60" y1="40" x2="60" y2="240" stroke="#d9d9d9" stroke-width="1.5"/>
+
+                    <!-- Y轴刻度 -->
+                    <text x="50" y="44" text-anchor="end" font-size="11" fill="#999">100</text>
+                    <text x="50" y="94" text-anchor="end" font-size="11" fill="#999">80</text>
+                    <text x="50" y="144" text-anchor="end" font-size="11" fill="#999">60</text>
+                    <text x="50" y="194" text-anchor="end" font-size="11" fill="#999">40</text>
+                    <text x="50" y="244" text-anchor="end" font-size="11" fill="#999">0</text>
+
+                    <!-- 网格线 -->
+                    <line x1="60" y1="40" x2="660" y2="40" stroke="#f0f0f0" stroke-width="1" stroke-dasharray="4,4"/>
+                    <line x1="60" y1="90" x2="660" y2="90" stroke="#f0f0f0" stroke-width="1" stroke-dasharray="4,4"/>
+                    <line x1="60" y1="140" x2="660" y2="140" stroke="#f0f0f0" stroke-width="1" stroke-dasharray="4,4"/>
+                    <line x1="60" y1="190" x2="660" y2="190" stroke="#f0f0f0" stroke-width="1" stroke-dasharray="4,4"/>
+
+                    <!-- 及格线标注 -->
+                    <line x1="60" y1="90" x2="660" y2="90" stroke="#faad14" stroke-width="1" stroke-dasharray="6,3" opacity="0.5"/>
+                    <text x="655" y="85" text-anchor="end" font-size="10" fill="#faad14">及格线</text>
+
+                    <!-- 示例折线（4个数据点：78, 85, 92, 85） -->
+                    <!-- 点1: (160, 145) -> 78分 -->
+                    <!-- 点2: (320, 127.5) -> 85分 -->
+                    <!-- 点3: (480, 110) -> 92分 -->
+                    <!-- 点4: (640, 127.5) -> 85分 -->
+
+                    <!-- 折线 -->
+                    <polyline points="160,145 320,127.5 480,110 640,127.5"
+                        fill="none" stroke="#4a90d9" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+
+                    <!-- 数据点 -->
+                    <circle cx="160" cy="145" r="5" fill="#fff" stroke="#4a90d9" stroke-width="2.5"/>
+                    <circle cx="320" cy="127.5" r="5" fill="#fff" stroke="#4a90d9" stroke-width="2.5"/>
+                    <circle cx="480" cy="110" r="5" fill="#fff" stroke="#4a90d9" stroke-width="2.5"/>
+                    <circle cx="640" cy="127.5" r="5" fill="#fff" stroke="#4a90d9" stroke-width="2.5"/>
+
+                    <!-- 数据标签 -->
+                    <text x="160" y="135" text-anchor="middle" font-size="12" fill="#333" font-weight="600">78</text>
+                    <text x="320" y="117" text-anchor="middle" font-size="12" fill="#333" font-weight="600">85</text>
+                    <text x="480" y="100" text-anchor="middle" font-size="12" fill="#333" font-weight="600">92</text>
+                    <text x="640" y="117" text-anchor="middle" font-size="12" fill="#333" font-weight="600">85</text>
+
+                    <!-- X轴标签 -->
+                    <text x="160" y="260" text-anchor="middle" font-size="11" fill="#666">摸底考试</text>
+                    <text x="320" y="260" text-anchor="middle" font-size="11" fill="#666">第一次月考</text>
+                    <text x="480" y="260" text-anchor="middle" font-size="11" fill="#666">期中考试</text>
+                    <text x="640" y="260" text-anchor="middle" font-size="11" fill="#666">期末考试</text>
+
+                    <!-- 趋势箭头标注 -->
+                    <text x="240" y="120" text-anchor="middle" font-size="11" fill="#52c41a">+7</text>
+                    <text x="400" y="102" text-anchor="middle" font-size="11" fill="#52c41a">+7</text>
+                    <text x="560" y="120" text-anchor="middle" font-size="11" fill="#f5222d">-7</text>
+                </svg>
+            </div>
+            <div class="trend-summary">
+                <div class="trend-summary-item">
+                    <div class="ts-label">历次平均分</div>
+                    <div class="ts-value">{{平均分}}</div>
+                </div>
+                <div class="trend-summary-item">
+                    <div class="ts-label">成绩标准差</div>
+                    <div class="ts-value stable">{{标准差}}</div>
+                </div>
+                <div class="trend-summary-item">
+                    <div class="ts-label">稳定性判定</div>
+                    <div class="ts-value stable">{{稳定性}}</div>
+                </div>
+                <div class="trend-summary-item">
+                    <div class="ts-label">最新趋势</div>
+                    <div class="ts-value up">{{进退步趋势}}</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ========== 知识掌握分析 ========== -->
+        <div class="section">
+            <h2 class="section-title">知识掌握分析</h2>
+            <div class="knowledge-bar-list">
+                <!-- 知识点1 -->
+                <div class="knowledge-bar-item">
+                    <div class="kb-label">{{知识点1}}</div>
+                    <div class="kb-track">
+                        <div class="kb-fill level-excellent" style="width: 100%;">100%</div>
+                    </div>
+                </div>
+                <!-- 知识点2 -->
+                <div class="knowledge-bar-item">
+                    <div class="kb-label">{{知识点2}}</div>
+                    <div class="kb-track">
+                        <div class="kb-fill level-good" style="width: 80%;">80%</div>
+                    </div>
+                </div>
+                <!-- 知识点3 -->
+                <div class="knowledge-bar-item">
+                    <div class="kb-label">{{知识点3}}</div>
+                    <div class="kb-track">
+                        <div class="kb-fill level-normal" style="width: 64%;">64%</div>
+                    </div>
+                </div>
+                <!-- 知识点4 -->
+                <div class="knowledge-bar-item">
+                    <div class="kb-label">{{知识点4}}</div>
+                    <div class="kb-track">
+                        <div class="kb-fill level-weak" style="width: 40%;">40%</div>
+                    </div>
+                </div>
+                <!-- 知识点5 -->
+                <div class="knowledge-bar-item">
+                    <div class="kb-label">{{知识点5}}</div>
+                    <div class="kb-track">
+                        <div class="kb-fill level-blind" style="width: 33%;">33%</div>
+                    </div>
+                </div>
+            </div>
+            <div class="knowledge-legend">
+                <div class="legend-item"><div class="legend-color" style="background:#52c41a;"></div>优秀（≥85%）</div>
+                <div class="legend-item"><div class="legend-color" style="background:#4a90d9;"></div>良好（70-84%）</div>
+                <div class="legend-item"><div class="legend-color" style="background:#faad14;"></div>一般（60-69%）</div>
+                <div class="legend-item"><div class="legend-color" style="background:#fa8c16;"></div>薄弱（40-59%）</div>
+                <div class="legend-item"><div class="legend-color" style="background:#f5222d;"></div>盲区（<40%）</div>
+            </div>
+        </div>
+
+        <!-- ========== 能力水平分析 ========== -->
+        <div class="section">
+            <h2 class="section-title">能力水平分析</h2>
+            <div class="ability-section">
+                <!-- SVG 能力雷达图 -->
+                <div class="radar-chart-container">
+                    <svg width="320" height="320" viewBox="0 0 320 320" xmlns="http://www.w3.org/2000/svg">
+                        <!-- 中心点 (160, 160), 半径 120 -->
+                        <!-- 六边形网格（4层） -->
+                        <polygon points="160,40 264,100 264,220 160,280 56,220 56,100"
+                            fill="none" stroke="#e8e8e8" stroke-width="1"/>
+                        <polygon points="160,70 238,115 238,205 160,250 82,205 82,115"
+                            fill="none" stroke="#e8e8e8" stroke-width="1"/>
+                        <polygon points="160,100 212,130 212,190 160,220 108,190 108,130"
+                            fill="none" stroke="#e8e8e8" stroke-width="1"/>
+                        <polygon points="160,130 186,145 186,175 160,190 134,175 134,145"
+                            fill="none" stroke="#e8e8e8" stroke-width="1"/>
+
+                        <!-- 轴线 -->
+                        <line x1="160" y1="160" x2="160" y2="40" stroke="#d9d9d9" stroke-width="1"/>
+                        <line x1="160" y1="160" x2="264" y2="100" stroke="#d9d9d9" stroke-width="1"/>
+                        <line x1="160" y1="160" x2="264" y2="220" stroke="#d9d9d9" stroke-width="1"/>
+                        <line x1="160" y1="160" x2="160" y2="280" stroke="#d9d9d9" stroke-width="1"/>
+                        <line x1="160" y1="160" x2="56" y2="220" stroke="#d9d9d9" stroke-width="1"/>
+                        <line x1="160" y1="160" x2="56" y2="100" stroke="#d9d9d9" stroke-width="1"/>
+
+                        <!-- 60% 及格线辅助线 -->
+                        <polygon points="160,88 234,131 234,189 160,232 86,189 86,131"
+                            fill="none" stroke="#faad14" stroke-width="1" stroke-dasharray="4,3" opacity="0.6"/>
+
+                        <!-- 示例数据多边形（识记100%, 理解80%, 应用64%, 分析75%, 综合46.7%, 评价33.3%） -->
+                        <!-- 识记: 100% -> (160, 40) -->
+                        <!-- 理解: 80% -> 中心到(264,100)的80% -> (160+0.8*104, 160-0.8*60) = (243.2, 112) -->
+                        <!-- 应用: 64% -> 中心到(264,220)的64% -> (160+0.64*104, 160+0.64*60) = (226.56, 198.4) -->
+                        <!-- 分析: 75% -> 中心到(160,280)的75% -> (160, 160+0.75*120) = (160, 250) -->
+                        <!-- 综合: 46.7% -> 中心到(56,220)的46.7% -> (160-0.467*104, 160+0.467*60) = (111.4, 188) -->
+                        <!-- 评价: 33.3% -> 中心到(56,100)的33.3% -> (160-0.333*104, 160-0.333*60) = (125.4, 140) -->
+                        <polygon points="160,40 243,112 227,198 160,250 111,188 125,140"
+                            fill="rgba(74, 144, 217, 0.2)" stroke="#4a90d9" stroke-width="2"/>
+
+                        <!-- 数据点 -->
+                        <circle cx="160" cy="40" r="4" fill="#52c41a"/>
+                        <circle cx="243" cy="112" r="4" fill="#4a90d9"/>
+                        <circle cx="227" cy="198" r="4" fill="#faad14"/>
+                        <circle cx="160" cy="250" r="4" fill="#4a90d9"/>
+                        <circle cx="111" cy="188" r="4" fill="#fa8c16"/>
+                        <circle cx="125" cy="140" r="4" fill="#f5222d"/>
+
+                        <!-- 标签 -->
+                        <text x="160" y="28" text-anchor="middle" font-size="12" fill="#333" font-weight="600">识记</text>
+                        <text x="160" y="18" text-anchor="middle" font-size="10" fill="#52c41a">100%</text>
+
+                        <text x="278" y="96" text-anchor="start" font-size="12" fill="#333" font-weight="600">理解</text>
+                        <text x="278" y="84" text-anchor="start" font-size="10" fill="#4a90d9">80%</text>
+
+                        <text x="278" y="228" text-anchor="start" font-size="12" fill="#333" font-weight="600">应用</text>
+                        <text x="278" y="240" text-anchor="start" font-size="10" fill="#faad14">64%</text>
+
+                        <text x="160" y="298" text-anchor="middle" font-size="12" fill="#333" font-weight="600">分析</text>
+                        <text x="160" y="312" text-anchor="middle" font-size="10" fill="#4a90d9">75%</text>
+
+                        <text x="42" y="228" text-anchor="end" font-size="12" fill="#333" font-weight="600">综合</text>
+                        <text x="42" y="240" text-anchor="end" font-size="10" fill="#fa8c16">47%</text>
+
+                        <text x="42" y="96" text-anchor="end" font-size="12" fill="#333" font-weight="600">评价</text>
+                        <text x="42" y="84" text-anchor="end" font-size="10" fill="#f5222d">33%</text>
+                    </svg>
+                </div>
+                <!-- 能力分析表 -->
+                <div>
+                    <table class="ability-table">
+                        <thead>
+                            <tr>
+                                <th>能力层级</th>
+                                <th>得分率</th>
+                                <th>参考标准</th>
+                                <th>评价</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>识记</td>
+                                <td class="strong">100%</td>
+                                <td>≥80%</td>
+                                <td>优秀</td>
+                            </tr>
+                            <tr>
+                                <td>理解</td>
+                                <td class="strong">80%</td>
+                                <td>≥75%</td>
+                                <td>良好</td>
+                            </tr>
+                            <tr>
+                                <td>应用</td>
+                                <td>64%</td>
+                                <td>≥70%</td>
+                                <td>一般</td>
+                            </tr>
+                            <tr>
+                                <td>分析</td>
+                                <td>75%</td>
+                                <td>≥60%</td>
+                                <td>良好</td>
+                            </tr>
+                            <tr>
+                                <td>综合</td>
+                                <td class="weak">47%</td>
+                                <td>≥50%</td>
+                                <td>薄弱</td>
+                            </tr>
+                            <tr>
+                                <td>评价</td>
+                                <td class="weak">33%</td>
+                                <td>≥45%</td>
+                                <td>盲区</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- ========== 薄弱点诊断 ========== -->
+        <div class="section">
+            <h2 class="section-title">薄弱点综合诊断</h2>
+            <div class="weakness-cards">
+                <!-- 薄弱知识点卡片 -->
+                <div class="weakness-card">
+                    <div class="wc-header">
+                        <div class="wc-icon">!</div>
+                        <div class="wc-title">薄弱知识点</div>
+                    </div>
+                    <ul class="wc-items">
+                        <li>{{知识点1}} <span class="item-rate">33%</span></li>
+                        <li>{{知识点2}} <span class="item-rate">40%</span></li>
+                        <li>{{知识点3}} <span class="item-rate">45%</span></li>
+                    </ul>
+                </div>
+                <!-- 薄弱能力卡片 -->
+                <div class="weakness-card">
+                    <div class="wc-header">
+                        <div class="wc-icon">!</div>
+                        <div class="wc-title">薄弱能力</div>
+                    </div>
+                    <ul class="wc-items">
+                        <li>综合能力 <span class="item-rate">47%</span></li>
+                        <li>评价能力 <span class="item-rate">33%</span></li>
+                    </ul>
+                </div>
+                <!-- 薄弱题型卡片 -->
+                <div class="weakness-card">
+                    <div class="wc-header">
+                        <div class="wc-icon">!</div>
+                        <div class="wc-title">薄弱题型</div>
+                    </div>
+                    <ul class="wc-items">
+                        <li>解答题 <span class="item-rate">52%</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="diagnosis-conclusion">
+                <div class="dc-title">综合诊断结论</div>
+                <div class="dc-content">
+                    综合以上分析，该生当前存在以下问题：知识层面存在 3 个薄弱点（其中 1 个为知识盲区），能力层面存在 2 个短板（综合与评价能力），题型层面存在 1 个薄弱项（解答题）。建议按照「先补救知识薄弱点，再强化能力短板，最后专项突破薄弱题型」的顺序进行针对性提升。
+                </div>
+            </div>
+        </div>
+
+        <!-- ========== 分层学生分析 ========== -->
+        <div class="section">
+            <h2 class="section-title">分层学生分析</h2>
+            <span class="layer-badge {{层次样式}}">{{学生层次}}</span>
+            <table class="layer-info-table">
+                <thead>
+                    <tr>
+                        <th>分析维度</th>
+                        <th>具体表现</th>
+                        <th>教学建议</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>知识掌握</td>
+                        <td>{{知识掌握描述}}</td>
+                        <td>{{知识教学建议}}</td>
+                    </tr>
+                    <tr>
+                        <td>能力分布</td>
+                        <td>{{能力分布描述}}</td>
+                        <td>{{能力教学建议}}</td>
+                    </tr>
+                    <tr>
+                        <td>题型表现</td>
+                        <td>{{题型表现描述}}</td>
+                        <td>{{题型教学建议}}</td>
+                    </tr>
+                    <tr>
+                        <td>学习状态</td>
+                        <td>{{学习状态描述}}</td>
+                        <td>{{状态教学建议}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- ========== 教学建议 ========== -->
+        <div class="section">
+            <h2 class="section-title">教学建议</h2>
+            <div class="suggestion-cards">
+                <!-- 知识补救建议 -->
+                <div class="suggestion-card sc-knowledge">
+                    <div class="sc-header">
+                        <span class="sc-title">知识补救建议</span>
+                    </div>
+                    <ul class="sc-list">
+                        <li><span class="highlight">{{知识点1}}</span>（掌握率33%，知识盲区）：安排 2-3 课时系统重学，从基础概念入手，配合 15-20 道基础练习巩固</li>
+                        <li><span class="highlight">{{知识点2}}</span>（掌握率40%，薄弱）：安排 1 课时专项复习，针对易错点讲解，配合 8-10 道针对性练习</li>
+                        <li><span class="highlight">{{知识点3}}</span>（掌握率45%，薄弱）：安排 1 课时专项复习，针对易错点讲解，配合 8-10 道针对性练习</li>
+                    </ul>
+                </div>
+                <!-- 能力训练建议 -->
+                <div class="suggestion-card sc-ability">
+                    <div class="sc-header">
+                        <span class="sc-title">能力训练建议</span>
+                    </div>
+                    <ul class="sc-list">
+                        <li><span class="highlight">综合能力</span>（得分率47%）：开展开放性探究活动，培养信息整合与创新表达能力，每周完成 2 道开放性综合题</li>
+                        <li><span class="highlight">评价能力</span>（得分率33%）：引导批判性思维训练，学习基于标准进行判断与论证，每周完成 1 道评价论述题</li>
+                    </ul>
+                </div>
+                <!-- 题型专项建议 -->
+                <div class="suggestion-card sc-type">
+                    <div class="sc-header">
+                        <span class="sc-title">题型专项建议</span>
+                    </div>
+                    <ul class="sc-list">
+                        <li><span class="highlight">解答题</span>（得分率52%）：每周进行 2 组解答题专项训练，每组 3-5 题，限时完成，重点训练解题步骤的完整性与逻辑性</li>
+                    </ul>
+                </div>
+                <!-- 分层教学建议 -->
+                <div class="suggestion-card sc-layer">
+                    <div class="sc-header">
+                        <span class="sc-title">分层教学建议</span>
+                    </div>
+                    <table class="suggestion-table">
+                        <tr>
+                            <th>策略维度</th>
+                            <th>具体建议</th>
+                        </tr>
+                        <tr>
+                            <td>教学目标</td>
+                            <td>{{目标描述}}</td>
+                        </tr>
+                        <tr>
+                            <td>教学内容</td>
+                            <td>{{内容描述}}</td>
+                        </tr>
+                        <tr>
+                            <td>能力培养</td>
+                            <td>{{能力培养方向}}</td>
+                        </tr>
+                        <tr>
+                            <td>学习方式</td>
+                            <td>{{学习方式建议}}</td>
+                        </tr>
+                        <tr>
+                            <td>关注重点</td>
+                            <td>{{关注重点}}</td>
+                        </tr>
+                    </table>
+                </div>
+                <!-- 学法指导建议 -->
+                <div class="suggestion-card sc-method">
+                    <div class="sc-header">
+                        <span class="sc-title">学法指导建议</span>
+                    </div>
+                    <ul class="sc-list">
+                        <li>审题方法：养成"三读审题法"，圈出关键词和限定条件，审题时间不少于答题时间的 1/5</li>
+                        <li>答题规范：解答题步骤完整、逻辑清晰，每完成一步进行自我检查</li>
+                        <li>错题管理：建立错题本，每周回顾一次，归纳错误类型与改进方法</li>
+                        <li>时间管理：按分值分配时间，预留 10-15 分钟检查时间，遇到难题先跳过</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- ========== 页脚 ========== -->
+        <div class="report-footer">
+            <p>报告生成日期：{{分析日期}} | 分析工具：学情分析技能</p>
+            <p>本报告基于多维度数据分析自动生成，仅供教学参考，请结合实际情况灵活运用</p>
+        </div>
+
+    </div>
+</body>
+</html>

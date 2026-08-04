@@ -1,0 +1,1131 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>易错点清单 - 重点及易错点分析</title>
+    <style>
+        /* ============================================================
+           全局样式与变量定义
+           ============================================================ */
+        :root {
+            /* 主题色 */
+            --primary: #2563eb;
+            --primary-light: #dbeafe;
+            --primary-dark: #1e40af;
+
+            /* 错因类型配色 */
+            --cc-color: #dc2626;   /* 概念混淆型 - 红色 */
+            --cc-bg: #fef2f2;
+            --mr-color: #ea580c;   /* 审题不清型 - 橙色 */
+            --mr-bg: #fff7ed;
+            --ce-color: #ca8a04;   /* 计算失误型 - 黄色 */
+            --ce-bg: #fefce8;
+            --ms-color: #7c3aed;   /* 思维定式型 - 紫色 */
+            --ms-bg: #f5f3ff;
+            --kf-color: #0891b2;   /* 知识遗忘型 - 青色 */
+            --kf-bg: #ecfeff;
+            --ne-color: #16a34a;   /* 表达不规范型 - 绿色 */
+            --ne-bg: #f0fdf4;
+
+            /* 中性色 */
+            --text-primary: #1e293b;
+            --text-secondary: #64748b;
+            --text-light: #94a3b8;
+            --border: #e2e8f0;
+            --bg-body: #f8fafc;
+            --bg-card: #ffffff;
+            --shadow: 0 1px 3px rgba(0,0,0,0.08), 0 1px 2px rgba(0,0,0,0.04);
+            --shadow-hover: 0 4px 12px rgba(0,0,0,0.10), 0 2px 4px rgba(0,0,0,0.06);
+            --radius: 10px;
+            --radius-sm: 6px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC",
+                         "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif;
+            background: var(--bg-body);
+            color: var(--text-primary);
+            line-height: 1.7;
+            font-size: 15px;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* ============================================================
+           头部区域
+           ============================================================ */
+        .header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: white;
+            padding: 40px 0 30px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 8px;
+            letter-spacing: 1px;
+        }
+
+        .header .subtitle {
+            font-size: 16px;
+            opacity: 0.9;
+            margin-bottom: 20px;
+        }
+
+        .header .meta-info {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            font-size: 14px;
+        }
+
+        .header .meta-info span {
+            background: rgba(255,255,255,0.15);
+            padding: 6px 16px;
+            border-radius: 20px;
+            backdrop-filter: blur(4px);
+        }
+
+        /* ============================================================
+           统计概览栏
+           ============================================================ */
+        .stats-bar {
+            background: var(--bg-card);
+            padding: 24px 40px;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 20px;
+            box-shadow: var(--shadow);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .stat-item {
+            text-align: center;
+            min-width: 100px;
+        }
+
+        .stat-item .stat-value {
+            font-size: 32px;
+            font-weight: 700;
+            color: var(--primary);
+            line-height: 1.2;
+        }
+
+        .stat-item .stat-label {
+            font-size: 13px;
+            color: var(--text-secondary);
+            margin-top: 4px;
+        }
+
+        /* ============================================================
+           筛选标签栏
+           ============================================================ */
+        .filter-bar {
+            background: var(--bg-card);
+            padding: 16px 40px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            flex-wrap: wrap;
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+        }
+
+        .filter-bar .filter-label {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--text-secondary);
+            margin-right: 8px;
+        }
+
+        .filter-btn {
+            padding: 6px 16px;
+            border: 2px solid var(--border);
+            border-radius: 20px;
+            background: white;
+            color: var(--text-secondary);
+            font-size: 13px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            white-space: nowrap;
+        }
+
+        .filter-btn:hover {
+            border-color: var(--primary);
+            color: var(--primary);
+            transform: translateY(-1px);
+        }
+
+        .filter-btn.active {
+            background: var(--primary);
+            border-color: var(--primary);
+            color: white;
+        }
+
+        .filter-btn .count-badge {
+            display: inline-block;
+            background: rgba(0,0,0,0.08);
+            padding: 1px 7px;
+            border-radius: 10px;
+            font-size: 11px;
+            margin-left: 4px;
+            font-weight: 600;
+        }
+
+        .filter-btn.active .count-badge {
+            background: rgba(255,255,255,0.25);
+        }
+
+        /* ============================================================
+           主内容区
+           ============================================================ */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 30px 40px 60px;
+        }
+
+        /* ============================================================
+           错因类型分类标题
+           ============================================================ */
+        .cause-section {
+            margin-bottom: 36px;
+        }
+
+        .cause-section-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 16px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--border);
+        }
+
+        .cause-section-header .cause-icon {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+
+        .cause-section-header h2 {
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        .cause-section-header .cause-count {
+            font-size: 13px;
+            color: var(--text-light);
+            font-weight: 400;
+        }
+
+        /* ============================================================
+           易错点卡片
+           ============================================================ */
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+            gap: 20px;
+        }
+
+        .error-card {
+            background: var(--bg-card);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            overflow: hidden;
+            transition: box-shadow 0.2s ease, transform 0.2s ease;
+            border-left: 4px solid var(--border);
+        }
+
+        .error-card:hover {
+            box-shadow: var(--shadow-hover);
+            transform: translateY(-2px);
+        }
+
+        /* 卡片左边框按错因类型着色 */
+        .error-card[data-cause="cc"] { border-left-color: var(--cc-color); }
+        .error-card[data-cause="mr"] { border-left-color: var(--mr-color); }
+        .error-card[data-cause="ce"] { border-left-color: var(--ce-color); }
+        .error-card[data-cause="ms"] { border-left-color: var(--ms-color); }
+        .error-card[data-cause="kf"] { border-left-color: var(--kf-color); }
+        .error-card[data-cause="ne"] { border-left-color: var(--ne-color); }
+
+        /* 卡片头部 */
+        .card-header {
+            padding: 16px 20px 12px;
+            cursor: pointer;
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 12px;
+        }
+
+        .card-header .card-title-area {
+            flex: 1;
+        }
+
+        .card-header .card-id {
+            font-size: 12px;
+            color: var(--text-light);
+            font-family: "SF Mono", "Consolas", monospace;
+            margin-bottom: 2px;
+        }
+
+        .card-header .card-title {
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--text-primary);
+            line-height: 1.5;
+        }
+
+        .card-header .card-toggle {
+            flex-shrink: 0;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            background: var(--bg-body);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.2s ease, background 0.2s ease;
+            font-size: 14px;
+            color: var(--text-secondary);
+        }
+
+        .error-card.expanded .card-toggle {
+            transform: rotate(180deg);
+            background: var(--primary-light);
+            color: var(--primary);
+        }
+
+        /* 错因类型标签 */
+        .cause-tag {
+            display: inline-block;
+            padding: 3px 10px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: 600;
+            margin-top: 8px;
+        }
+
+        .cause-tag[data-cause="cc"] {
+            background: var(--cc-bg);
+            color: var(--cc-color);
+        }
+        .cause-tag[data-cause="mr"] {
+            background: var(--mr-bg);
+            color: var(--mr-color);
+        }
+        .cause-tag[data-cause="ce"] {
+            background: var(--ce-bg);
+            color: var(--ce-color);
+        }
+        .cause-tag[data-cause="ms"] {
+            background: var(--ms-bg);
+            color: var(--ms-color);
+        }
+        .cause-tag[data-cause="kf"] {
+            background: var(--kf-bg);
+            color: var(--kf-color);
+        }
+        .cause-tag[data-cause="ne"] {
+            background: var(--ne-bg);
+            color: var(--ne-color);
+        }
+
+        /* 卡片详情区（可折叠） */
+        .card-details {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.35s ease;
+        }
+
+        .error-card.expanded .card-details {
+            max-height: 1200px;
+        }
+
+        .card-details-inner {
+            padding: 0 20px 20px;
+        }
+
+        /* 六要素每项 */
+        .detail-item {
+            padding: 12px 0;
+            border-top: 1px solid var(--border);
+        }
+
+        .detail-item:first-child {
+            border-top: none;
+        }
+
+        .detail-label {
+            font-size: 13px;
+            font-weight: 600;
+            margin-bottom: 4px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .detail-label .icon {
+            width: 18px;
+            height: 18px;
+            border-radius: 4px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 11px;
+            font-weight: 700;
+            color: white;
+            flex-shrink: 0;
+        }
+
+        /* 各要素图标配色 */
+        .detail-item.manifestation .icon { background: #ef4444; }
+        .detail-item.cause .icon { background: #f59e0b; }
+        .detail-item.correct .icon { background: #10b981; }
+        .detail-item.example .icon { background: #8b5cf6; }
+        .detail-item.strategy .icon { background: #3b82f6; }
+        .detail-item.variant .icon { background: #06b6d4; }
+
+        .detail-content {
+            font-size: 14px;
+            color: var(--text-secondary);
+            line-height: 1.7;
+            padding-left: 24px;
+        }
+
+        .detail-content code {
+            background: var(--bg-body);
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: "SF Mono", "Consolas", "Courier New", monospace;
+            font-size: 13px;
+            color: var(--primary-dark);
+        }
+
+        /* ============================================================
+           页脚
+           ============================================================ */
+        .footer {
+            text-align: center;
+            padding: 30px;
+            color: var(--text-light);
+            font-size: 13px;
+            border-top: 1px solid var(--border);
+        }
+
+        /* ============================================================
+           打印样式
+           ============================================================ */
+        @media print {
+            body {
+                background: white;
+                font-size: 12px;
+            }
+
+            .header {
+                padding: 20px;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+
+            .stats-bar {
+                padding: 16px;
+                box-shadow: none;
+                border: 1px solid #ccc;
+            }
+
+            .filter-bar {
+                display: none;
+            }
+
+            .container {
+                padding: 10px;
+                max-width: 100%;
+            }
+
+            .card-grid {
+                grid-template-columns: 1fr;
+                gap: 12px;
+            }
+
+            .error-card {
+                box-shadow: none;
+                border: 1px solid #ccc;
+                page-break-inside: avoid;
+            }
+
+            /* 打印时展开所有卡片 */
+            .card-details {
+                max-height: none !important;
+            }
+
+            .card-toggle {
+                display: none;
+            }
+
+            .cause-section {
+                page-break-inside: avoid;
+            }
+
+            .cause-section-header {
+                page-break-after: avoid;
+            }
+
+            .detail-content {
+                color: #333;
+            }
+        }
+
+        /* ============================================================
+           响应式
+           ============================================================ */
+        @media (max-width: 768px) {
+            .header h1 { font-size: 22px; }
+            .header .meta-info { gap: 10px; }
+
+            .stats-bar {
+                padding: 16px;
+                gap: 12px;
+            }
+
+            .stat-item .stat-value { font-size: 24px; }
+
+            .filter-bar {
+                padding: 12px 16px;
+            }
+
+            .container {
+                padding: 20px 16px 40px;
+            }
+
+            .card-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ============================================================
+         头部区域
+         ============================================================ -->
+    <div class="header">
+        <h1>易错点清单</h1>
+        <div class="subtitle">重点及易错点分析 - 易错点卡片展示</div>
+        <div class="meta-info">
+            <span>学科：数学</span>
+            <span>年级：九年级</span>
+            <span>知识范围：一元二次方程</span>
+            <span>生成日期：2026-07-12</span>
+        </div>
+    </div>
+
+    <!-- ============================================================
+         统计概览栏
+         ============================================================ -->
+    <div class="stats-bar">
+        <div class="stat-item">
+            <div class="stat-value" id="stat-total">10</div>
+            <div class="stat-label">易错点总数</div>
+        </div>
+        <div class="stat-item">
+            <div class="stat-value" id="stat-causes">5</div>
+            <div class="stat-label">错因类型</div>
+        </div>
+        <div class="stat-item">
+            <div class="stat-value" id="stat-cc">3</div>
+            <div class="stat-label">概念混淆型</div>
+        </div>
+        <div class="stat-item">
+            <div class="stat-value" id="stat-ce">4</div>
+            <div class="stat-label">计算失误型</div>
+        </div>
+        <div class="stat-item">
+            <div class="stat-value" id="stat-mr">1</div>
+            <div class="stat-label">审题不清型</div>
+        </div>
+        <div class="stat-item">
+            <div class="stat-value" id="stat-ms">1</div>
+            <div class="stat-label">思维定式型</div>
+        </div>
+        <div class="stat-item">
+            <div class="stat-value" id="stat-ne">1</div>
+            <div class="stat-label">表达不规范型</div>
+        </div>
+    </div>
+
+    <!-- ============================================================
+         筛选标签栏
+         ============================================================ -->
+    <div class="filter-bar">
+        <span class="filter-label">错因筛选：</span>
+        <button class="filter-btn active" data-filter="all">
+            全部 <span class="count-badge">10</span>
+        </button>
+        <button class="filter-btn" data-filter="cc">
+            概念混淆型 <span class="count-badge">3</span>
+        </button>
+        <button class="filter-btn" data-filter="mr">
+            审题不清型 <span class="count-badge">1</span>
+        </button>
+        <button class="filter-btn" data-filter="ce">
+            计算失误型 <span class="count-badge">4</span>
+        </button>
+        <button class="filter-btn" data-filter="ms">
+            思维定式型 <span class="count-badge">1</span>
+        </button>
+        <button class="filter-btn" data-filter="kf">
+            知识遗忘型 <span class="count-badge">0</span>
+        </button>
+        <button class="filter-btn" data-filter="ne">
+            表达不规范型 <span class="count-badge">1</span>
+        </button>
+    </div>
+
+    <!-- ============================================================
+         主内容区 - 易错点卡片
+         ============================================================ -->
+    <div class="container">
+
+        <!-- ====== 概念混淆型 ====== -->
+        <div class="cause-section" data-cause="cc">
+            <div class="cause-section-header">
+                <span class="cause-icon" style="background: var(--cc-color);"></span>
+                <h2>概念混淆型</h2>
+                <span class="cause-count">3个易错点</span>
+            </div>
+            <div class="card-grid">
+
+                <!-- 易错点 E001 -->
+                <div class="error-card" data-cause="cc">
+                    <div class="card-header" onclick="toggleCard(this)">
+                        <div class="card-title-area">
+                            <div class="card-id">E001</div>
+                            <div class="card-title">忽略二次项系数不为零的条件</div>
+                            <span class="cause-tag" data-cause="cc">概念混淆型</span>
+                        </div>
+                        <div class="card-toggle">&#9662;</div>
+                    </div>
+                    <div class="card-details">
+                        <div class="card-details-inner">
+                            <div class="detail-item manifestation">
+                                <div class="detail-label"><span class="icon">错</span>错误表现</div>
+                                <div class="detail-content">含参方程中未讨论二次项系数是否为零，直接按一元二次方程求解</div>
+                            </div>
+                            <div class="detail-item cause">
+                                <div class="detail-label"><span class="icon">因</span>错因分析</div>
+                                <div class="detail-content">对一元二次方程定义中"a&ne;0"的条件理解不透彻，缺乏分类讨论意识</div>
+                            </div>
+                            <div class="detail-item correct">
+                                <div class="detail-label"><span class="icon">正</span>正确理解</div>
+                                <div class="detail-content">一元二次方程的一般形式 <code>ax&sup2;+bx+c=0</code> 中，必须满足 <code>a&ne;0</code>；若a可能为0，需分类讨论</div>
+                            </div>
+                            <div class="detail-item example">
+                                <div class="detail-label"><span class="icon">例</span>典型错例</div>
+                                <div class="detail-content">解方程 <code>(k-1)x&sup2;+2x+1=0</code> 时，直接用求根公式，未讨论 k=1 的情况</div>
+                            </div>
+                            <div class="detail-item strategy">
+                                <div class="detail-label"><span class="icon">策</span>纠错策略</div>
+                                <div class="detail-content">强调定义中的隐含条件，建立"见参必讨论"的解题意识</div>
+                            </div>
+                            <div class="detail-item variant">
+                                <div class="detail-label"><span class="icon">练</span>变式训练</div>
+                                <div class="detail-content">设计多组含参方程，要求先判断方程类型再求解</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 易错点 E005 -->
+                <div class="error-card" data-cause="cc">
+                    <div class="card-header" onclick="toggleCard(this)">
+                        <div class="card-title-area">
+                            <div class="card-id">E005</div>
+                            <div class="card-title">因式分解法解方程时遗漏根</div>
+                            <span class="cause-tag" data-cause="cc">概念混淆型</span>
+                        </div>
+                        <div class="card-toggle">&#9662;</div>
+                    </div>
+                    <div class="card-details">
+                        <div class="card-details-inner">
+                            <div class="detail-item manifestation">
+                                <div class="detail-label"><span class="icon">错</span>错误表现</div>
+                                <div class="detail-content">方程 <code>(x-2)(x+3)=0</code>，只写出 x=2，漏掉 x=-3</div>
+                            </div>
+                            <div class="detail-item cause">
+                                <div class="detail-label"><span class="icon">因</span>错因分析</div>
+                                <div class="detail-content">对"两数之积为零"的条件理解不完整，只考虑了一个因式为零</div>
+                            </div>
+                            <div class="detail-item correct">
+                                <div class="detail-label"><span class="icon">正</span>正确理解</div>
+                                <div class="detail-content">若 AB=0，则 A=0 或 B=0，两个因式都要讨论，不能遗漏</div>
+                            </div>
+                            <div class="detail-item example">
+                                <div class="detail-label"><span class="icon">例</span>典型错例</div>
+                                <div class="detail-content">解方程 <code>x(x-5)=0</code> 时，只写出 x=5，漏掉 x=0</div>
+                            </div>
+                            <div class="detail-item strategy">
+                                <div class="detail-label"><span class="icon">策</span>纠错策略</div>
+                                <div class="detail-content">强调"或"的含义，通过口诀"因式为零各有根"加深记忆</div>
+                            </div>
+                            <div class="detail-item variant">
+                                <div class="detail-label"><span class="icon">练</span>变式训练</div>
+                                <div class="detail-content">设计三因式相乘的方程，训练不遗漏根的习惯</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 易错点 E008 -->
+                <div class="error-card" data-cause="cc">
+                    <div class="card-header" onclick="toggleCard(this)">
+                        <div class="card-title-area">
+                            <div class="card-id">E008</div>
+                            <div class="card-title">直接开平方法忽略正负两个根</div>
+                            <span class="cause-tag" data-cause="cc">概念混淆型</span>
+                        </div>
+                        <div class="card-toggle">&#9662;</div>
+                    </div>
+                    <div class="card-details">
+                        <div class="card-details-inner">
+                            <div class="detail-item manifestation">
+                                <div class="detail-label"><span class="icon">错</span>错误表现</div>
+                                <div class="detail-content">用直接开平方法解 <code>x&sup2;=9</code> 时，只写 x=3，漏掉 x=-3</div>
+                            </div>
+                            <div class="detail-item cause">
+                                <div class="detail-label"><span class="icon">因</span>错因分析</div>
+                                <div class="detail-content">对平方根概念理解不完整，混淆了平方根与算术平方根</div>
+                            </div>
+                            <div class="detail-item correct">
+                                <div class="detail-label"><span class="icon">正</span>正确理解</div>
+                                <div class="detail-content">正数有两个平方根，互为相反数；<code>x&sup2;=a (a&gt;0)</code> 则 <code>x=&plusmn;&radic;a</code></div>
+                            </div>
+                            <div class="detail-item example">
+                                <div class="detail-label"><span class="icon">例</span>典型错例</div>
+                                <div class="detail-content">解 <code>x&sup2;=25</code> 时，只写 x=5，漏掉 x=-5</div>
+                            </div>
+                            <div class="detail-item strategy">
+                                <div class="detail-label"><span class="icon">策</span>纠错策略</div>
+                                <div class="detail-content">强调"开平方"与"求算术平方根"的区别，通过对比加深理解</div>
+                            </div>
+                            <div class="detail-item variant">
+                                <div class="detail-label"><span class="icon">练</span>变式训练</div>
+                                <div class="detail-content">设计含隐含条件的题目，如 <code>x&sup2;+2x+1=4</code>，训练完整求解</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- ====== 计算失误型 ====== -->
+        <div class="cause-section" data-cause="ce">
+            <div class="cause-section-header">
+                <span class="cause-icon" style="background: var(--ce-color);"></span>
+                <h2>计算失误型</h2>
+                <span class="cause-count">4个易错点</span>
+            </div>
+            <div class="card-grid">
+
+                <!-- 易错点 E002 -->
+                <div class="error-card" data-cause="ce">
+                    <div class="card-header" onclick="toggleCard(this)">
+                        <div class="card-title-area">
+                            <div class="card-id">E002</div>
+                            <div class="card-title">求根公式中符号运用错误</div>
+                            <span class="cause-tag" data-cause="ce">计算失误型</span>
+                        </div>
+                        <div class="card-toggle">&#9662;</div>
+                    </div>
+                    <div class="card-details">
+                        <div class="card-details-inner">
+                            <div class="detail-item manifestation">
+                                <div class="detail-label"><span class="icon">错</span>错误表现</div>
+                                <div class="detail-content">套用求根公式时，将"-b"写成"b"，或将"4ac"写成"-4ac"</div>
+                            </div>
+                            <div class="detail-item cause">
+                                <div class="detail-label"><span class="icon">因</span>错因分析</div>
+                                <div class="detail-content">公式记忆不牢，对公式中各符号的含义理解不清</div>
+                            </div>
+                            <div class="detail-item correct">
+                                <div class="detail-label"><span class="icon">正</span>正确理解</div>
+                                <div class="detail-content">求根公式 <code>x=(-b&plusmn;&radic;(b&sup2;-4ac))/2a</code>，注意 b 前的负号和判别式中的减号</div>
+                            </div>
+                            <div class="detail-item example">
+                                <div class="detail-label"><span class="icon">例</span>典型错例</div>
+                                <div class="detail-content">解 <code>x&sup2;-5x+6=0</code> 时，写成 <code>x=(5&plusmn;&radic;(25-24))/2</code>，漏掉了 b 前的负号</div>
+                            </div>
+                            <div class="detail-item strategy">
+                                <div class="detail-label"><span class="icon">策</span>纠错策略</div>
+                                <div class="detail-content">推导公式来源，理解而非死记；做题时先写出 a、b、c 的值再代入</div>
+                            </div>
+                            <div class="detail-item variant">
+                                <div class="detail-label"><span class="icon">练</span>变式训练</div>
+                                <div class="detail-content">反复练习不同系数的方程，强调先标 a、b、c 再代入的步骤</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 易错点 E004 -->
+                <div class="error-card" data-cause="ce">
+                    <div class="card-header" onclick="toggleCard(this)">
+                        <div class="card-title-area">
+                            <div class="card-id">E004</div>
+                            <div class="card-title">韦达定理运用时符号错误</div>
+                            <span class="cause-tag" data-cause="ce">计算失误型</span>
+                        </div>
+                        <div class="card-toggle">&#9662;</div>
+                    </div>
+                    <div class="card-details">
+                        <div class="card-details-inner">
+                            <div class="detail-item manifestation">
+                                <div class="detail-label"><span class="icon">错</span>错误表现</div>
+                                <div class="detail-content">运用韦达定理时，将 <code>x&#8321;+x&#8322;=-b/a</code> 写成 b/a，或 <code>x&#8321;&middot;x&#8322;=c/a</code> 写成 -c/a</div>
+                            </div>
+                            <div class="detail-item cause">
+                                <div class="detail-label"><span class="icon">因</span>错因分析</div>
+                                <div class="detail-content">公式记忆偏差，对韦达定理中符号的含义理解有误</div>
+                            </div>
+                            <div class="detail-item correct">
+                                <div class="detail-label"><span class="icon">正</span>正确理解</div>
+                                <div class="detail-content">韦达定理：<code>x&#8321;+x&#8322;=-b/a</code>，<code>x&#8321;&middot;x&#8322;=c/a</code>，注意和的符号有负号</div>
+                            </div>
+                            <div class="detail-item example">
+                                <div class="detail-label"><span class="icon">例</span>典型错例</div>
+                                <div class="detail-content">已知方程 <code>x&sup2;+3x-1=0</code> 的两根为 x&#8321;、x&#8322;，求 <code>x&#8321;+x&#8322;</code> 时写成 3 而非 -3</div>
+                            </div>
+                            <div class="detail-item strategy">
+                                <div class="detail-label"><span class="icon">策</span>纠错策略</div>
+                                <div class="detail-content">通过具体方程验证韦达定理，加深对符号的理解</div>
+                            </div>
+                            <div class="detail-item variant">
+                                <div class="detail-label"><span class="icon">练</span>变式训练</div>
+                                <div class="detail-content">设计多组方程，先求根再验证韦达定理，强化记忆</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 易错点 E006 -->
+                <div class="error-card" data-cause="ce">
+                    <div class="card-header" onclick="toggleCard(this)">
+                        <div class="card-title-area">
+                            <div class="card-id">E006</div>
+                            <div class="card-title">配方法配方时常数项处理错误</div>
+                            <span class="cause-tag" data-cause="ce">计算失误型</span>
+                        </div>
+                        <div class="card-toggle">&#9662;</div>
+                    </div>
+                    <div class="card-details">
+                        <div class="card-details-inner">
+                            <div class="detail-item manifestation">
+                                <div class="detail-label"><span class="icon">错</span>错误表现</div>
+                                <div class="detail-content">配方时只在一边加常数，或加了常数后忘记在等号另一边也加</div>
+                            </div>
+                            <div class="detail-item cause">
+                                <div class="detail-label"><span class="icon">因</span>错因分析</div>
+                                <div class="detail-content">对配方法的原理理解不清，等式性质运用不当</div>
+                            </div>
+                            <div class="detail-item correct">
+                                <div class="detail-label"><span class="icon">正</span>正确理解</div>
+                                <div class="detail-content">配方时等式两边同时加上一次项系数一半的平方，保持等式平衡</div>
+                            </div>
+                            <div class="detail-item example">
+                                <div class="detail-label"><span class="icon">例</span>典型错例</div>
+                                <div class="detail-content">将 <code>x&sup2;+6x+1=0</code> 配方时，写成 <code>(x+3)&sup2;=8</code> 而非 <code>(x+3)&sup2;=8</code>（左边加9右边未加）</div>
+                            </div>
+                            <div class="detail-item strategy">
+                                <div class="detail-label"><span class="icon">策</span>纠错策略</div>
+                                <div class="detail-content">讲清配方原理，强调等式两边同时操作的重要性</div>
+                            </div>
+                            <div class="detail-item variant">
+                                <div class="detail-label"><span class="icon">练</span>变式训练</div>
+                                <div class="detail-content">从简单到复杂设计一组配方法练习，逐步提升难度</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 易错点 E010 -->
+                <div class="error-card" data-cause="ce">
+                    <div class="card-header" onclick="toggleCard(this)">
+                        <div class="card-title-area">
+                            <div class="card-id">E010</div>
+                            <div class="card-title">根的判别式计算中代值错误</div>
+                            <span class="cause-tag" data-cause="ce">计算失误型</span>
+                        </div>
+                        <div class="card-toggle">&#9662;</div>
+                    </div>
+                    <div class="card-details">
+                        <div class="card-details-inner">
+                            <div class="detail-item manifestation">
+                                <div class="detail-label"><span class="icon">错</span>错误表现</div>
+                                <div class="detail-content">计算 <code>&Delta;=b&sup2;-4ac</code> 时，a、b、c 的值代入错误</div>
+                            </div>
+                            <div class="detail-item cause">
+                                <div class="detail-label"><span class="icon">因</span>错因分析</div>
+                                <div class="detail-content">对一般形式 <code>ax&sup2;+bx+c=0</code> 中各项系数的识别不熟练</div>
+                            </div>
+                            <div class="detail-item correct">
+                                <div class="detail-label"><span class="icon">正</span>正确理解</div>
+                                <div class="detail-content">先化为一般形式，再按顺序标出 a、b、c 的值（含符号），最后代入</div>
+                            </div>
+                            <div class="detail-item example">
+                                <div class="detail-label"><span class="icon">例</span>典型错例</div>
+                                <div class="detail-content">方程 <code>2x&sup2;-3x+1=0</code> 中，将 b 写成 3 而非 -3</div>
+                            </div>
+                            <div class="detail-item strategy">
+                                <div class="detail-label"><span class="icon">策</span>纠错策略</div>
+                                <div class="detail-content">规范解题步骤：化一般式 &rarr; 标系数 &rarr; 代入公式</div>
+                            </div>
+                            <div class="detail-item variant">
+                                <div class="detail-label"><span class="icon">练</span>变式训练</div>
+                                <div class="detail-content">设计含负系数的方程，训练带符号代入的习惯</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- ====== 审题不清型 ====== -->
+        <div class="cause-section" data-cause="mr">
+            <div class="cause-section-header">
+                <span class="cause-icon" style="background: var(--mr-color);"></span>
+                <h2>审题不清型</h2>
+                <span class="cause-count">1个易错点</span>
+            </div>
+            <div class="card-grid">
+
+                <!-- 易错点 E003 -->
+                <div class="error-card" data-cause="mr">
+                    <div class="card-header" onclick="toggleCard(this)">
+                        <div class="card-title-area">
+                            <div class="card-id">E003</div>
+                            <div class="card-title">判别式运用时忽略前提条件</div>
+                            <span class="cause-tag" data-cause="mr">审题不清型</span>
+                        </div>
+                        <div class="card-toggle">&#9662;</div>
+                    </div>
+                    <div class="card-details">
+                        <div class="card-details-inner">
+                            <div class="detail-item manifestation">
+                                <div class="detail-label"><span class="icon">错</span>错误表现</div>
+                                <div class="detail-content">使用判别式判断根的情况时，未先确认方程是一元二次方程</div>
+                            </div>
+                            <div class="detail-item cause">
+                                <div class="detail-label"><span class="icon">因</span>错因分析</div>
+                                <div class="detail-content">审题不仔细，习惯性套用方法，忽略了使用判别式的前提是 a&ne;0</div>
+                            </div>
+                            <div class="detail-item correct">
+                                <div class="detail-label"><span class="icon">正</span>正确理解</div>
+                                <div class="detail-content">判别式 <code>&Delta;=b&sup2;-4ac</code> 仅在 a&ne;0 时有效；若 a=0，方程退化为一元一次方程</div>
+                            </div>
+                            <div class="detail-item example">
+                                <div class="detail-label"><span class="icon">例</span>典型错例</div>
+                                <div class="detail-content">判断方程 <code>(k&sup2;-4)x&sup2;+(k+2)x+1=0</code> 根的情况时，直接计算 &Delta;，未讨论 k=&plusmn;2</div>
+                            </div>
+                            <div class="detail-item strategy">
+                                <div class="detail-label"><span class="icon">策</span>纠错策略</div>
+                                <div class="detail-content">建立解题流程：先确认方程类型 &rarr; 再选择方法 &rarr; 最后计算</div>
+                            </div>
+                            <div class="detail-item variant">
+                                <div class="detail-label"><span class="icon">练</span>变式训练</div>
+                                <div class="detail-content">设计一组需要先分类讨论再使用判别式的综合题</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- ====== 思维定式型 ====== -->
+        <div class="cause-section" data-cause="ms">
+            <div class="cause-section-header">
+                <span class="cause-icon" style="background: var(--ms-color);"></span>
+                <h2>思维定式型</h2>
+                <span class="cause-count">1个易错点</span>
+            </div>
+            <div class="card-grid">
+
+                <!-- 易错点 E007 -->
+                <div class="error-card" data-cause="ms">
+                    <div class="card-header" onclick="toggleCard(this)">
+                        <div class="card-title-area">
+                            <div class="card-id">E007</div>
+                            <div class="card-title">实际问题中忽略根的实际意义</div>
+                            <span class="cause-tag" data-cause="ms">思维定式型</span>
+                        </div>
+                        <div class="card-toggle">&#9662;</div>
+                    </div>
+                    <div class="card-details">
+                        <div class="card-details-inner">
+                            <div class="detail-item manifestation">
+                                <div class="detail-label"><span class="icon">错</span>错误表现</div>
+                                <div class="detail-content">列方程解应用题时，求出两个根后未检验是否符合实际意义</div>
+                            </div>
+                            <div class="detail-item cause">
+                                <div class="detail-label"><span class="icon">因</span>错因分析</div>
+                                <div class="detail-content">缺乏检验意识，将纯数学运算与实际情境割裂</div>
+                            </div>
+                            <div class="detail-item correct">
+                                <div class="detail-label"><span class="icon">正</span>正确理解</div>
+                                <div class="detail-content">应用题中方程的根必须符合实际意义，如边长不能为负，人数必须为正整数</div>
+                            </div>
+                            <div class="detail-item example">
+                                <div class="detail-label"><span class="icon">例</span>典型错例</div>
+                                <div class="detail-content">求矩形边长时得出 x=-2，仍作为答案写出</div>
+                            </div>
+                            <div class="detail-item strategy">
+                                <div class="detail-label"><span class="icon">策</span>纠错策略</div>
+                                <div class="detail-content">养成"解完必验"的习惯，检验根是否满足实际条件</div>
+                            </div>
+                            <div class="detail-item variant">
+                                <div class="detail-label"><span class="icon">练</span>变式训练</div>
+                                <div class="detail-content">设计含多余解的应用题，训练筛选符合实际意义的根</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- ====== 表达不规范型 ====== -->
+        <div class="cause-section" data-cause="ne">
+            <div class="cause-section-header">
+                <span class="cause-icon" style="background: var(--ne-color);"></span>
+                <h2>表达不规范型</h2>
+                <span class="cause-count">1个易错点</span>
+            </div>
+            <div class="card-grid">
+
+                <!-- 易错点 E009 -->
+                <div class="error-card" data-cause="ne">
+                    <div class="card-header" onclick="toggleCard(this)">
+                        <div class="card-title-area">
+                            <div class="card-id">E009</div>
+                            <div class="card-title">分式方程转化后未检验增根</div>
+                            <span class="cause-tag" data-cause="ne">表达不规范型</span>
+                        </div>
+                        <div class="card-toggle">&#9662;</div>
+                    </div>
+                    <div class="card-details">
+                        <div class="card-details-inner">
+                            <div class="detail-item manifestation">
+                                <div class="detail-label"><span class="icon">错</span>错误表现</div>
+                                <div class="detail-content">将分式方程转化为一元二次方程求解后，未代入原方程检验增根</div>
+                            </div>
+                            <div class="detail-item cause">
+                                <div class="detail-label"><span class="icon">因</span>错因分析</div>
+                                <div class="detail-content">对分式方程增根产生的原因不理解，缺乏检验习惯</div>
+                            </div>
+                            <div class="detail-item correct">
+                                <div class="detail-label"><span class="icon">正</span>正确理解</div>
+                                <div class="detail-content">分式方程去分母后可能产生增根，必须将解代入原分式方程检验</div>
+                            </div>
+                            <div class="detail-item example">
+                                <div class="detail-label"><span class="icon">例</span>典型错例</div>
+                                <div class="detail-content">解方程 <code>1/(x-1)+2/(x+1)=1</code> 时，去分母后求解，未检验是否使分母为零</div>
+                            </div>
+                            <div class="detail-item strategy">
+                                <div class="detail-label"><span class="icon">策</span>纠错策略</div>
+                                <div class="detail-content">讲清增根产生原因，强调检验是解分式方程的必要步骤</div>
+                            </div>
+                            <div class="detail-item variant">
+                                <div class="detail-label"><span class="icon">练</span>变式训练</div>
+                                <div class="detail-content">设计会产生增根的题目，训练检验和取舍</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <!-- ============================================================
+         页脚
+         ============================================================ -->
+    <div class="footer">
+        <p>重点及易错点分析技能 - 易错点清单模板 | 生成日期：2026-07-12</p>
+        <p>本页面支持打印，打印时所有卡片将自动展开。点击卡片标题可展开/折叠详情。</p>
+    </div>
+
+    <!-- ============================================================
+         JavaScript 交互逻辑
+         ============================================================ -->
+    <script>
+        /**
+         * 卡片展开/折叠切换
+         * 点击卡片头部时，切换详情区域的显示状态
+         */
+        function toggleCard(headerElement) {
+            var card = headerElement.parentElement;
+            card.classList.toggle('expanded');
+        }
+
+        /**
+         * 错因类型筛选功能
+         * 点击筛选按钮时，按错因类型显示/隐藏对应区块
+         */
+        document.querySelectorAll('.filter-btn').forEach(function(btn) {
+            btn.addEventListener('click', function() {
+                // 更新按钮激活状态
+                document.querySelectorAll('.filter-btn').forEach(function(b) {
+                    b.classList.remove('active');
+                });
+                this.classList.add('active');
+
+                var filterValue = this.getAttribute('data-filter');
+                var sections = document.querySelectorAll('.cause-section');
+
+                sections.forEach(function(section) {
+                    if (filterValue === 'all') {
+                        section.style.display = '';
+                    } else {
+                        if (section.getAttribute('data-cause') === filterValue) {
+                            section.style.display = '';
+                        } else {
+                            section.style.display = 'none';
+                        }
+                    }
+                });
+            });
+        });
+
+        /**
+         * 页面加载完成后，默认展开第一个卡片作为演示
+         */
+        window.addEventListener('DOMContentLoaded', function() {
+            var firstCard = document.querySelector('.error-card');
+            if (firstCard) {
+                firstCard.classList.add('expanded');
+            }
+        });
+    </script>
+
+</body>
+</html>

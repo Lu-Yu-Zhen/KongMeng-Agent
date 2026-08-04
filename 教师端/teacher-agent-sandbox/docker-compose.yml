@@ -1,0 +1,148 @@
+# ============================================================
+# 教师备课智能体 · 沙箱 Docker Compose 编排
+# ------------------------------------------------------------
+# 用途: 定义多服务编排,一键启动完整沙箱环境
+# 服务: sandbox (Python+Node.js全栈) / redis / postgres (可选) / nginx (可选)
+#
+# 启动方式:
+#   docker compose up -d                        # 基础服务 (sandbox + redis)
+#   docker compose --profile full up -d         # 含 PostgreSQL
+#   docker compose --profile production up -d   # 含 Nginx 反向代理
+#   docker compose --profile full --profile production up -d  # 全量
+#
+# 端口映射:
+#   8000  FastAPI Python 沙箱
+#   8001  Node.js 沙箱
+#   6379  Redis
+#   5432  PostgreSQL (可选)
+#   80    Nginx (可选)
+# ============================================================
+
+version: '3.8'
+
+services:
+  # ----------------------------------------------------------------
+  # 沙箱主服务: Python + Node.js 全栈环境
+  # 由 supervisor 管理内部多个进程 (FastAPI / Node沙箱 / Redis / MCP)
+  # ----------------------------------------------------------------
+  sandbox:
+    build:
+      context: .
+      dockerfile: sandbox/Dockerfile
+    container_name: teacher-agent-sandbox
+    ports:
+      - "8000:8000"    # FastAPI Python 沙箱
+      - "8001:8001"    # Node.js 沙箱
+    volumes:
+      - ./sandbox/workspace:/sandbox/workspace
+      - ./sandbox/data:/sandbox/data
+      - ./sandbox/logs:/sandbox/logs
+    environment:
+      - REDIS_URL=redis://redis:6379
+      - PYTHON_SANDBOX_URL=http://localhost:8000
+      - NODE_SANDBOX_URL=http://localhost:8001
+      - TZ=Asia/Shanghai
+      - LANG=C.UTF-8
+      - LC_ALL=C.UTF-8
+      # 浏览器自动化
+      - CHROME_BIN=/usr/bin/chromium
+      - PUPPETEER_EXECUTABLE_PATH=/usr/bin/chromium
+      - PLAYWRIGHT_BROWSERS_PATH=/ms-playwright
+      # 数据库连接 (PostgreSQL 可选,需 --profile full 启动 postgres 服务)
+      - DATABASE_URL=postgresql://teacher:teacher_pass@postgres:5432/edu_agent
+      - SQLITE_PATH=/sandbox/data/sandbox.db
+    depends_on:
+      - redis
+    restart: unless-stopped
+    networks:
+      - edu-agent-net
+    healthcheck:
+      test: ["CMD", "curl", "-fsS", "http://localhost:8000/health"]
+      interval: 60s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+
+  # ----------------------------------------------------------------
+  # Redis: 记忆系统与缓存后端
+  # ----------------------------------------------------------------
+  redis:
+    image: redis:7-alpine
+    container_name: teacher-agent-redis
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis-data:/data
+    command: redis-server --appendonly yes --maxmemory 256mb --maxmemory-policy allkeys-lru
+    restart: unless-stopped
+    networks:
+      - edu-agent-net
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+
+  # ----------------------------------------------------------------
+  # PostgreSQL: 结构化数据存储 (可选服务)
+  # 启动: docker compose --profile full up -d
+  # ----------------------------------------------------------------
+  postgres:
+    image: postgres:16-alpine
+    container_name: teacher-agent-postgres
+    environment:
+      POSTGRES_DB: edu_agent
+      POSTGRES_USER: teacher
+      POSTGRES_PASSWORD: teacher_pass
+      POSTGRES_INITDB_ARGS: "--encoding=UTF-8 --locale=C"
+      TZ: Asia/Shanghai
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    restart: unless-stopped
+    networks:
+      - edu-agent-net
+    profiles:
+      - full    # 可选服务,使用 --profile full 启动
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U teacher -d edu_agent"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+
+  # ----------------------------------------------------------------
+  # Nginx: 反向代理与负载均衡 (生产环境可选)
+  # 启动: docker compose --profile production up -d
+  # 需要在 ./nginx/nginx.conf 配置反向代理规则
+  # ----------------------------------------------------------------
+  nginx:
+    image: nginx:alpine
+    container_name: teacher-agent-nginx
+    ports:
+      - "80:80"
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
+    depends_on:
+      - sandbox
+    restart: unless-stopped
+    networks:
+      - edu-agent-net
+    profiles:
+      - production    # 可选服务,使用 --profile production 启动
+
+# ----------------------------------------------------------------
+# 持久化数据卷
+# ----------------------------------------------------------------
+volumes:
+  redis-data:
+    driver: local
+  postgres-data:
+    driver: local
+
+# ----------------------------------------------------------------
+# 自定义网络
+# ----------------------------------------------------------------
+networks:
+  edu-agent-net:
+    driver: bridge
