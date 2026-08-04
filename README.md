@@ -40,7 +40,6 @@
 
 ```
 KongMeng-Agent/
-├── installers/                   # 官方安装包（学生端 / 教师端，下载即用）
 ├── 学生端/                        # 学生端桌面应用（KongMeng-Student）
 │   ├── index.html                 # 前端页面（UI + 交互逻辑）
 │   ├── main.js                    # Electron 主进程（窗口、IPC、文件读写）
