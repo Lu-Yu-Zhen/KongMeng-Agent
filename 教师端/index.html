@@ -2265,7 +2265,8 @@ function refreshAllDropdowns(){ refreshChatModelDropdown(); refreshGradingModelS
  * MiniMax：顶层 enable_search:true
  * GLM(智谱)：tools:[{type:'web_search',web_search:{enable:true}}]
  * Kimi(Moonshot)：tools:[{type:'builtin_function',function:{name:'$web_search'}}]
- * DeepSeek / 豆包(火山方舟)：标准 Chat Completions 不支持联网参数 */
+ * 豆包(火山方舟)：标准 Chat Completions 不支持，须走 Responses API + web_search tool
+ * DeepSeek(deepseek-v4-flash)：标准 Chat Completions 不支持，须走 Responses API(/v1/responses) + web_search tool */
 function getSearchCapability(modelId){
  const cfg=MODEL_CONFIG[modelId]; if(!cfg) return {mode:'none',label:'未知模型'};
  const ep=cfg.endpoint||'';
@@ -2274,6 +2275,8 @@ function getSearchCapability(modelId){
  if(ep.indexOf('open.bigmodel.cn')!==-1) return {mode:'tools-glm',label:'支持联网搜索'};
  if(ep.indexOf('api.moonshot.cn')!==-1) return {mode:'tools-kimi',label:'支持联网搜索'};
  if(ep.indexOf('volces.com')!==-1) return {mode:'responses-doubao',label:'支持联网搜索'};
+ /* DeepSeek 官方 API 仅 deepseek-v4-flash 支持联网搜索（Responses API），deepseek-v4-pro 暂不支持 */
+ if(cfg.model==='deepseek-v4-flash') return {mode:'responses-deepseek',label:'支持联网搜索'};
  return {mode:'none',label:'不支持联网，将基于模型自身知识生成'};
 }
 function applySearchToPayload(payload, cap){
@@ -2305,8 +2308,8 @@ async function callAIJson(prompt, systemInstruction, modelOverride, searchEnable
   if(wantSearch) applySearchToPayload(payload, cap);
   if(cfg.reasoning) payload.thinking={type:'disabled'};
  }
- /* 豆包 Responses API：chat/completions 不支持联网，须走 /api/v3/responses + web_search tool */
- if(wantSearch && cap.mode==='responses-doubao'){
+ /* 豆包 / DeepSeek Responses API：chat/completions 不支持联网，须走 /responses + web_search tool */
+ if(wantSearch && (cap.mode==='responses-doubao'||cap.mode==='responses-deepseek')){
   const responsesUrl=cfg.endpoint.replace(/\/chat\/completions$/,'/responses');
   const inputParts=[];
   messages.forEach(function(m){ if(m.role==='system') inputParts.push('[系统指令] '+m.content); else if(m.role==='user') inputParts.push(m.content); else if(m.role==='assistant') inputParts.push('[上一轮回答] '+String(m.content).substring(0,600)); });
@@ -2380,8 +2383,8 @@ async function* callAIStream(prompt, systemInstruction, messages, modelOverride,
  for(let attempt=0;attempt<3;attempt++){
  let finalMsg=all;
  if(imagesStripped){ finalMsg=all.filter(m=>!Array.isArray(m.content)); finalMsg.push({role:'user',content:prompt}); }
- /* 豆包 Responses API 联网分支（chat/completions 不支持联网搜索） */
- if(cap.mode==='responses-doubao'&&searchOn){
+ /* 豆包 / DeepSeek Responses API 联网分支（chat/completions 不支持联网搜索） */
+ if((cap.mode==='responses-doubao'||cap.mode==='responses-deepseek')&&searchOn){
   const responsesUrl=cfg.endpoint.replace(/\/chat\/completions$/,'/responses');
   const inputParts=[];
   finalMsg.forEach(function(m){ if(typeof m.content==='string'){ if(m.role==='system') inputParts.push('[系统指令] '+m.content); else if(m.role==='user') inputParts.push(m.content); else if(m.role==='assistant') inputParts.push('[上一轮回答] '+m.content.substring(0,600)); } });

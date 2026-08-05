@@ -5863,7 +5863,11 @@ ${allSubjectRoles}
             if (cfg.endpoint && cfg.endpoint.includes('open.bigmodel.cn')) {
                 return { supported: true, params: { tools: [{ type: 'web_search', web_search: { enable: true, search_result: false } }] }, provider: 'glm' };
             }
-            // DeepSeek、MiniMax、Doubao、Moonshot 等：API 不支持与 json_object 模式兼容的联网搜索
+            // DeepSeek 官方 API：仅 deepseek-v4-flash 支持联网搜索（Responses API /v1/responses + web_search tool），deepseek-v4-pro 暂不支持
+            if (cfg.model === 'deepseek-v4-flash') {
+                return { supported: true, params: { tools: [{ type: 'web_search' }] }, provider: 'deepseek' };
+            }
+            // MiniMax、Doubao、Moonshot 等：API 不支持与 json_object 模式兼容的联网搜索
             return { supported: false, params: null, provider: null };
         }
 
@@ -11024,6 +11028,54 @@ ${topic && topic !== 'auto' ? '知识点：' + topic : ''}${extraReqPrompt}
                 messages.push({ role: 'system', content: '请严格按照以下 JSON Schema 格式输出，只返回 JSON，不要包含其他文字：\n' + JSON.stringify(responseSchema, null, 2) });
             }
             messages.push({ role: 'user', content: prompt });
+
+            // DeepSeek 官方 API 联网搜索：chat/completions 不支持，须走 /v1/responses + web_search tool（仅 deepseek-v4-flash）
+            if (extraParams && cfg.endpoint && cfg.endpoint.indexOf('api.deepseek.com') !== -1) {
+                const responsesUrl = cfg.endpoint.replace(/\/chat\/completions$/, '/responses');
+                const inputParts = messages.map(function(m) {
+                    if (m.role === 'system') return '[系统指令] ' + m.content;
+                    if (m.role === 'assistant') return '[上一轮回答] ' + String(m.content).substring(0, 600);
+                    return m.content;
+                });
+                const rPayload = { model: model, input: inputParts.join('\n\n'), tools: [{ type: 'web_search' }] };
+                const rCtrl = new AbortController();
+                activeAbortController = rCtrl;
+                const rTimer = setTimeout(function() { try { rCtrl.abort(); } catch(e) {} }, 120000);
+                try {
+                    const rResp = await fetch(responsesUrl, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json', 'Authorization': 'Bearer ' + apiKey },
+                        body: JSON.stringify(rPayload),
+                        signal: rCtrl.signal
+                    }).catch(function(err) {
+                        if (err.name === 'AbortError') throw new Error('联网搜索请求超时（120秒），请检查网络后重试');
+                        throw err;
+                    });
+                    clearTimeout(rTimer);
+                    activeAbortController = null;
+                    if (rResp.ok) {
+                        const rData = await rResp.json();
+                        let text = rData.output_text || '';
+                        if (!text && rData.output && Array.isArray(rData.output)) {
+                            for (let oi = rData.output.length - 1; oi >= 0; oi--) {
+                                const item = rData.output[oi];
+                                if (item.type === 'message' && item.content && item.content.length) {
+                                    text = item.content.map(function(c) { return c.text || ''; }).join('');
+                                    if (text) break;
+                                }
+                            }
+                        }
+                        if (text && text.trim()) return text.trim();
+                    }
+                    // 参数错误(400/422)或搜索无结果 → 降级到无搜索的 chat/completions
+                } catch (re) {
+                    clearTimeout(rTimer);
+                    activeAbortController = null;
+                    if (re.message && re.message.indexOf('联网搜索请求超时') === 0) throw re;
+                    // 其他网络错误 → 降级到无搜索的 chat/completions
+                }
+                extraParams = null;
+            }
 
             const buildPayload = function(includeExtra) {
                 const p = {
