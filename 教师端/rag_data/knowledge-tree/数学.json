@@ -1,0 +1,3142 @@
+{
+  "subject": "数学",
+  "subject_en": "math",
+  "version": "普通高中课程标准（2017年版2020年修订）+ 人教版教材",
+  "grade_scope": "必修+选择性必修",
+  "nodes": [
+    {
+      "kp_id": "M-M1",
+      "name": "必修第一册",
+      "module": "必修第一册",
+      "grade": "高一",
+      "level": 1,
+      "children": [
+        {
+          "kp_id": "M-M1-C1",
+          "name": "第一章 集合与常用逻辑用语",
+          "chapter": "集合与常用逻辑用语",
+          "grade": "高一",
+          "level": 2,
+          "children": [
+            {
+              "kp_id": "M-M1-C1-S1",
+              "name": "1.1 集合的概念",
+              "section": "集合的概念",
+              "grade": "高一",
+              "level": 3,
+              "children": [
+                {
+                  "kp_id": "M-M1C1S1-KP1",
+                  "name": "集合与元素",
+                  "subject": "数学",
+                  "module": "必修第一册",
+                  "chapter": "集合与常用逻辑用语",
+                  "section": "集合的概念",
+                  "grade": "高一",
+                  "level": 4,
+                  "difficulty": 1,
+                  "importance": 3,
+                  "level_requirement": "理解",
+                  "exam_type": "单选题",
+                  "source": "人教版必修第一册",
+                  "text": "集合是数学中基本的刻画对象的概念。把研究对象统称为元素，把一些元素组成的总体叫做集合。元素的三个特性：确定性、互异性、无序性。集合的表示方法有列举法、描述法、图示法（Venn图）。常用数集记号：N自然数集、N*正整数集、Z整数集、Q有理数集、R实数集。"
+                },
+                {
+                  "kp_id": "M-M1C1S1-KP2",
+                  "name": "集合间的基本关系",
+                  "subject": "数学",
+                  "module": "必修第一册",
+                  "chapter": "集合与常用逻辑用语",
+                  "section": "集合的概念",
+                  "grade": "高一",
+                  "level": 4,
+                  "difficulty": 2,
+                  "importance": 4,
+                  "level_requirement": "理解",
+                  "exam_type": "单选题",
+                  "source": "人教版必修第一册",
+                  "text": "子集：若集合A的任意一个元素都是集合B的元素，则A是B的子集，记A⊆B。真子集：A⊆B且存在B中元素不属于A，记A⊂B。相等：A⊆B且B⊆A。空集是任何集合的子集，是任何非空集合的真子集。由n个元素组成的集合有2^n个子集，2^n-1个真子集。"
+                },
+                {
+                  "kp_id": "M-M1C1S1-KP3",
+                  "name": "集合的基本运算",
+                  "subject": "数学",
+                  "module": "必修第一册",
+                  "chapter": "集合与常用逻辑用语",
+                  "section": "集合的概念",
+                  "grade": "高一",
+                  "level": 4,
+                  "difficulty": 3,
+                  "importance": 5,
+                  "level_requirement": "掌握",
+                  "exam_type": "单选题、解答题",
+                  "source": "人教版必修第一册",
+                  "text": "交集A∩B={x|x∈A且x∈B}；并集A∪B={x|x∈A或x∈B}；补集在全集U中：∁UA={x|x∈U且x∉A}。运算性质：A∩A=A，A∪∅=A，德摩根律∁U(A∩B)=(∁UA)∪(∁UB)。常用于求参数范围、含参集合的讨论，需注意空集与边界端点取舍。"
+                }
+              ]
+            },
+            {
+              "kp_id": "M-M1-C1-S2",
+              "name": "1.2 集合间的基本关系",
+              "section": "集合间的基本关系",
+              "grade": "高一",
+              "level": 3,
+              "children": [
+                {
+                  "kp_id": "M-M1C1S2-KP1",
+                  "name": "子集与真子集",
+                  "subject": "数学",
+                  "module": "必修第一册",
+                  "chapter": "集合与常用逻辑用语",
+                  "section": "集合间的基本关系",
+                  "grade": "高一",
+                  "level": 4,
+                  "difficulty": 2,
+                  "importance": 4,
+                  "level_requirement": "理解",
+                  "exam_type": "单选题、填空题",
+                  "source": "人教版必修第一册",
+                  "text": "包含关系是指集合间的一种基本关系，用符号⊆和⊂表示。判断A⊆B的关键是验证A中每个元素都属于B。若集合A中含有n个元素，则A的子集个数为2^n，真子集个数为2^n-1，非空真子集个数为2^n-2。空集用∅表示，是任何集合的子集。"
+                },
+                {
+                  "kp_id": "M-M1C1S2-KP2",
+                  "name": "集合相等",
+                  "subject": "数学",
+                  "module": "必修第一册",
+                  "chapter": "集合与常用逻辑用语",
+                  "section": "集合间的基本关系",
+                  "grade": "高一",
+                  "level": 4,
+                  "difficulty": 2,
+                  "importance": 4,
+                  "level_requirement": "理解",
+                  "exam_type": "单选题、解答题",
+                  "source": "人教版必修第一册",
+                  "text": "若A⊆B且B⊆A，则称集合A与集合B相等，记作A=B。证明两个集合相等，通常需要分别证明彼此互为子集。由集合相等可建立方程或不等式求解参数。注意集合中元素的互异性在参数求解中的检验作用，避免重复元素。"
+                }
+              ]
+            },
+            {
+              "kp_id": "M-M1-C1-S3",
+              "name": "1.3 集合的基本运算",
+              "section": "集合的基本运算",
+              "grade": "高一",
+              "level": 3,
+              "children": [
+                {
+                  "kp_id": "M-M1C1S3-KP1",
+                  "name": "交集与并集",
+                  "subject": "数学",
+                  "module": "必修第一册",
+                  "chapter": "集合与常用逻辑用语",
+                  "section": "集合的基本运算",
+                  "grade": "高一",
+                  "level": 4,
+                  "difficulty": 3,
+                  "importance": 5,
+                  "level_requirement": "掌握",
+                  "exam_type": "单选题、解答题",
+                  "source": "人教版必修第一册",
+                  "text": "交集A∩B表示既属于A又属于B的元素构成的集合，即A∩B={x|x∈A且x∈B}。并集A∪B表示属于A或属于B的元素构成的集合，即A∪B={x|x∈A或x∈B}。运算性质包括交换律、结合律、分配律及吸收律A∩(A∪B)=A。结合数轴与Venn图可直观求交集并集。"
+                },
+                {
+                  "kp_id": "M-M1C1S3-KP2",
+                  "name": "补集与全集",
+                  "subject": "数学",
+                  "module": "必修第一册",
+                  "chapter": "集合与常用逻辑用语",
+                  "section": "集合的基本运算",
+                  "grade": "高一",
+                  "level": 4,
+                  "difficulty": 3,
+                  "importance": 5,
+                  "level_requirement": "掌握",
+                  "exam_type": "单选题、填空题",
+                  "source": "人教版必修第一册",
+                  "text": "如果一个集合含有我们所要研究问题中涉及的所有元素，就称这个集合为全集，记作U。补集∁UA={x|x∈U且x∉A}。德摩根律：∁U(A∩B)=(∁UA)∪(∁UB)，∁U(A∪B)=(∁UA)∩(∁UB)。若A⊆U，则A∪(∁UA)=U，A∩(∁UA)=∅。"
+                }
+              ]
+            },
+            {
+              "kp_id": "M-M1-C1-S4",
+              "name": "1.4 充分条件与必要条件",
+              "section": "充分条件与必要条件",
+              "grade": "高一",
+              "level": 3,
+              "children": [
+                {
+                  "kp_id": "M-M1C1S4-KP1",
+                  "name": "充分条件与必要条件",
+                  "subject": "数学",
+                  "module": "必修第一册",
+                  "chapter": "集合与常用逻辑用语",
+                  "section": "充分条件与必要条件",
+                  "grade": "高一",
+                  "level": 4,
+                  "difficulty": 3,
+                  "importance": 5,
+                  "level_requirement": "理解",
+                  "exam_type": "单选题",
+                  "source": "人教版必修第一册",
+                  "text": "若p则q为真命题，即p⇒q，则称p是q的充分条件，q是p的必要条件。若p⇒q且q⇒p，则p是q的充要条件，记p⇔q。判断充分、必要条件可借助集合的包含关系：命题对应集合A、B，若A⊆B则A是B的充分条件。"
+                },
+                {
+                  "kp_id": "M-M1C1S4-KP2",
+                  "name": "含充分必要条件求参数",
+                  "subject": "数学",
+                  "module": "必修第一册",
+                  "chapter": "集合与常用逻辑用语",
+                  "section": "充分条件与必要条件",
+                  "grade": "高一",
+                  "level": 4,
+                  "difficulty": 4,
+                  "importance": 5,
+                  "level_requirement": "掌握",
+                  "exam_type": "解答题",
+                  "source": "人教版必修第一册",
+                  "text": "利用集合间的包含关系将充分、必要条件问题转化为求参数范围问题。若p是q的充分不必要条件，则集合A真包含于集合B。求解时需对参数进行分类讨论，注意端点是否取等号，可用端点代入检验。此类问题常与不等式、函数定义域结合出现。"
+                }
+              ]
+            },
+            {
+              "kp_id": "M-M1-C1-S5",
+              "name": "1.5 全称量词与存在量词",
+              "section": "全称量词与存在量词",
+              "grade": "高一",
+              "level": 3,
+              "children": [
+                {
+                  "kp_id": "M-M1C1S5-KP1",
+                  "name": "全称量词命题与存在量词命题",
+                  "subject": "数学",
+                  "module": "必修第一册",
+                  "chapter": "集合与常用逻辑用语",
+                  "section": "全称量词与存在量词",
+                  "grade": "高一",
+                  "level": 4,
+                  "difficulty": 3,
+                  "importance": 4,
+                  "level_requirement": "理解",
+                  "exam_type": "单选题",
+                  "source": "人教版必修第一册",
+                  "text": "短语所有的、任意一个在逻辑中通常叫做全称量词，用符号∀表示，含有全称量词的命题叫全称量词命题。短语存在一个、至少有一个叫做存在量词，用符号∃表示，含有存在量词的命题叫存在量词命题。全称量词命题∀x∈M，p(x)要求对M中每个元素都成立。"
+                },
+                {
+                  "kp_id": "M-M1C1S5-KP2",
+                  "name": "命题的否定",
+                  "subject": "数学",
+                  "module": "必修第一册",
+                  "chapter": "集合与常用逻辑用语",
+                  "section": "全称量词与存在量词",
+                  "grade": "高一",
+                  "level": 4,
+                  "difficulty": 3,
+                  "importance": 4,
+                  "level_requirement": "掌握",
+                  "exam_type": "单选题、解答题",
+                  "source": "人教版必修第一册",
+                  "text": "全称量词命题的否定是存在量词命题：¬(∀x∈M，p(x))⇔∃x∈M，¬p(x)。存在量词命题的否定是全称量词命题：¬(∃x∈M，p(x))⇔∀x∈M，¬p(x)。否定命题时需同时改变量词并否定结论。判断含参命题真假常转化为求最值或参数范围问题。"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kp_id": "M-M1-C2",
+          "name": "第二章 一元二次函数、方程和不等式",
+          "chapter": "一元二次函数、方程和不等式",
+          "grade": "高一",
+          "level": 2,
+          "children": [
+            {
+              "kp_id": "M-M1-C2-S1",
+              "name": "2.1 等式性质与不等式性质",
+              "section": "等式性质与不等式性质",
+              "grade": "高一",
+              "level": 3,
+              "children": [
+                {
+                  "kp_id": "M-M1C2S1-KP1",
+                  "name": "不等式的性质",
+                  "subject": "数学",
+                  "module": "必修第一册",
+                  "chapter": "一元二次函数、方程和不等式",
+                  "section": "等式性质与不等式性质",
+                  "grade": "高一",
+                  "level": 4,
+                  "difficulty": 2,
+                  "importance": 4,
+                  "level_requirement": "理解",
+                  "exam_type": "单选题、填空题",
+                  "source": "人教版必修第一册",
+                  "text": "不等式的基本性质：对称性a>b⇔b<a；传递性a>b且b>c则a>c；可加性a>b则a+c>b+c；可乘性a>b且c>0则ac>bc，a>b且c<0则ac<bc。同向可加性：a>b且c>d则a+c>b+d。同向同正可乘性：a>b>0且c>d>0则ac>bd。"
+                },
+                {
+                  "kp_id": "M-M1C2S1-KP2",
+                  "name": "作差法比较大小",
+                  "subject": "数学",
+                  "module": "必修第一册",
+                  "chapter": "一元二次函数、方程和不等式",
+                  "section": "等式性质与不等式性质",
+                  "grade": "高一",
+                  "level": 4,
+                  "difficulty": 2,
+                  "importance": 4,
+                  "level_requirement": "理解",
+                  "exam_type": "解答题",
+                  "source": "人教版必修第一册",
+                  "text": "比较两个实数大小采用作差法：a-b>0则a>b；a-b=0则a=b；a-b<0则a<b。作差后需通过因式分解、配方等方法判断符号。求解取值范围时，可利用整体代换思想，先表示出目标表达式，再依据不等式的性质求解。"
+                }
+              ]
+            },
+            {
+              "kp_id": "M-M1-C2-S2",
+              "name": "2.2 基本不等式",
+              "section": "基本不等式",
+              "grade": "高一",
+              "level": 3,
+              "children": [
+                {
+                  "kp_id": "M-M1C2S2-KP1",
+                  "name": "基本不等式及其应用",
+                  "subject": "数学",
+                  "module": "必修第一册",
+                  "chapter": "一元二次函数、方程和不等式",
+                  "section": "基本不等式",
+                  "grade": "高一",
+                  "level": 4,
+                  "difficulty": 3,
+                  "importance": 5,
+                  "level_requirement": "掌握",
+                  "exam_type": "单选题、解答题",
+                  "source": "人教版必修第一册",
+                  "text": "基本不等式：当a>0，b>0时，√(ab)≤(a+b)/2，当且仅当a=b时取等号。其几何意义是半径不小于半弦。由基本不等式可得a+b≥2√(ab)。使用基本不等式求最值需满足一正、二定、三相等三个条件。常用于求最值、证明不等式。"
+                },
+                {
+                  "kp_id": "M-M1C2S2-KP2",
+                  "name": "利用基本不等式求最值",
+                  "subject": "数学",
+                  "module": "必修第一册",
+                  "chapter": "一元二次函数、方程和不等式",
+                  "section": "基本不等式",
+                  "grade": "高一",
+                  "level": 4,
+                  "difficulty": 4,
+                  "importance": 5,
+                  "level_requirement": "掌握",
+                  "exam_type": "解答题",
+                  "source": "人教版必修第一册",
+                  "text": "若x>0，则x+1/x≥2，当且仅当x=1时取等号。利用基本不等式求最值时，若和为定值则积有最大值，若积为定值则和有最小值。常见技巧有一正二定三相等、拆项、凑项、换元、乘1法（常数代换）等。注意检验取等号条件是否成立。"
+                }
+              ]
+            },
+            {
+              "kp_id": "M-M1-C2-S3",
+              "name": "2.3 二次函数与一元二次方程、不等式",
+              "section": "二次函数与一元二次方程、不等式",
+              "grade": "高一",
+              "level": 3,
+              "children": [
+                {
+                  "kp_id": "M-M1C2S3-KP1",
+                  "name": "一元二次不等式及其解法",
+                  "subject": "数学",
+                  "module": "必修第一册",
+                  "chapter": "一元二次函数、方程和不等式",
+                  "section": "二次函数与一元二次方程、不等式",
+                  "grade": "高一",
+                  "level": 4,
+                  "difficulty": 3,
+                  "importance": 5,
+                  "level_requirement": "掌握",
+                  "exam_type": "单选题、解答题",
+                  "source": "人教版必修第一册",
+                  "text": "一元二次不等式ax^2+bx+c>0（a>0）的解集与其对应方程ax^2+bx+c=0的根及判别式Δ=b^2-4ac有关。当Δ>0时，若x1<x2，则ax^2+bx+c>0的解集为{x|x<x1或x>x2}，<0的解集为{x|x1<x<x2}。当Δ=0时，>0的解集为{x|x≠x1}。当Δ<0时，>0的解集为R，<0的解集为∅。口诀：大于取两边，小于取中间。"
+                },
+                {
+                  "kp_id": "M-M1C2S3-KP2",
+                  "name": "含参一元二次不等式",
+                  "subject": "数学",
+                  "module": "必修第一册",
+                  "chapter": "一元二次函数、方程和不等式",
+                  "section": "二次函数与一元二次方程、不等式",
+                  "grade": "高一",
+                  "level": 4,
+                  "difficulty": 4,
+                  "importance": 5,
+                  "level_requirement": "掌握",
+                  "exam_type": "解答题",
+                  "source": "人教版必修第一册",
+                  "text": "解含参数的一元二次不等式需分类讨论：先讨论二次项系数的正负（决定开口方向），再讨论判别式Δ的正负（决定根的情况），再讨论两根的大小关系。分类讨论要做到不重不漏、层次分明。恒成立问题可转化为最值问题或用判别式法、分离参数法求解。"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kp_id": "M-M1-C3",
+          "name": "第三章 函数的概念与性质",
+          "chapter": "函数的概念与性质",
+          "grade": "高一",
+          "level": 2,
+          "children": [
+            {
+              "kp_id": "M-M1-C3-S1",
+              "name": "3.1 函数的概念及其表示",
+              "section": "函数的概念及其表示",
+              "grade": "高一",
+              "level": 3,
+              "children": [
+                {
+                  "kp_id": "M-M1C3S1-KP1",
+                  "name": "函数的概念",
+                  "subject": "数学",
+                  "module": "必修第一册",
+                  "chapter": "函数的概念与性质",
+                  "section": "函数的概念及其表示",
+                  "grade": "高一",
+                  "level": 4,
+                  "difficulty": 2,
+                  "importance": 4,
+                  "level_requirement": "理解",
+                  "exam_type": "单选题",
+                  "source": "人教版必修第一册",
+                  "text": "设A、B是非空的实数集，如果按照某种确定的对应关系f，使对于集合A中的任意一个数x，在集合B中都有唯一确定的数y和它对应，那么就称f为从集合A到集合B的一个函数，记作y=f(x)，x∈A。x叫做自变量，x的取值范围A叫做函数的定义域，y的取值范围叫做函数的值域。函数的三要素：定义域、对应关系、值域。"
+                },
+                {
+                  "kp_id": "M-M1C3S1-KP2",
+                  "name": "函数的表示法与求解析式",
+                  "subject": "数学",
+                  "module": "必修第一册",
+                  "chapter": "函数的概念与性质",
+                  "section": "函数的概念及其表示",
+                  "grade": "高一",
+                  "level": 4,
+                  "difficulty": 3,
+                  "importance": 4,
+                  "level_requirement": "掌握",
+                  "exam_type": "单选题、解答题",
+                  "source": "人教版必修第一册",
+                  "text": "函数的表示方法有解析法、列表法、图象法。求函数定义域需考虑分母不为零、偶次根式被开方数非负、对数的真数大于零、零次幂底数不为零等限制。求函数解析式的常用方法：待定系数法、换元法、配凑法、方程组法。分段函数在不同区间用不同表达式表示，处理时需注意区间端点归属。"
+                }
+              ]
+            },
+            {
+              "kp_id": "M-M1-C3-S2",
+              "name": "3.2 函数的基本性质",
+              "section": "函数的基本性质",
+              "grade": "高一",
+              "level": 3,
+              "children": [
+                {
+                  "kp_id": "M-M1C3S2-KP1",
+                  "name": "函数的单调性与最值",
+                  "subject": "数学",
+                  "module": "必修第一册",
+                  "chapter": "函数的概念与性质",
+                  "section": "函数的基本性质",
+                  "grade": "高一",
+                  "level": 4,
+                  "difficulty": 3,
+                  "importance": 5,
+                  "level_requirement": "掌握",
+                  "exam_type": "单选题、解答题",
+                  "source": "人教版必修第一册",
+                  "text": "设函数f(x)的定义域为D，区间I⊆D，如果任取x1，x2∈I，当x1<x2时，都有f(x1)<f(x2)，则称f(x)在区间I上单调递增；若都有f(x1)>f(x2)，则称单调递减。单调区间必须是定义域的子区间。最值是函数在定义域上的整体性质，最大值M满足f(x)≤M且存在x0使f(x0)=M。证明单调性常用作差法或导数法。"
+                },
+                {
+                  "kp_id": "M-M1C3S2-KP2",
+                  "name": "函数的奇偶性",
+                  "subject": "数学",
+                  "module": "必修第一册",
+                  "chapter": "函数的概念与性质",
+                  "section": "函数的基本性质",
+                  "grade": "高一",
+                  "level": 4,
+                  "difficulty": 3,
+                  "importance": 5,
+                  "level_requirement": "掌握",
+                  "exam_type": "单选题、解答题",
+                  "source": "人教版必修第一册",
+                  "text": "设函数f(x)的定义域为I，若∀x∈I，都有-x∈I，且f(-x)=f(x)，则称f(x)为偶函数，其图象关于y轴对称。若f(-x)=-f(x)，则称f(x)为奇函数，其图象关于原点对称。定义域必须关于原点对称是奇偶性的前提。奇函数在对称区间上的单调性相同，偶函数在对称区间上的单调性相反。奇函数若在x=0处有定义则f(0)=0。"
+                }
+              ]
+            },
+            {
+              "kp_id": "M-M1-C3-S3",
+              "name": "3.3 幂函数",
+              "section": "幂函数",
+              "grade": "高一",
+              "level": 3,
+              "children": [
+                {
+                  "kp_id": "M-M1C3S3-KP1",
+                  "name": "幂函数的定义与图象",
+                  "subject": "数学",
+                  "module": "必修第一册",
+                  "chapter": "函数的概念与性质",
+                  "section": "幂函数",
+                  "grade": "高一",
+                  "level": 4,
+                  "difficulty": 2,
+                  "importance": 3,
+                  "level_requirement": "理解",
+                  "exam_type": "单选题",
+                  "source": "人教版必修第一册",
+                  "text": "一般地，函数y=x^α叫做幂函数，其中x是自变量，α是常数。需注意幂函数的形式特点：系数为1，指数为常数，底数为x。常见幂函数y=x、y=x^2、y=x^3、y=x^(1/2)、y=x^(-1)的图象和性质需熟练掌握。幂函数图象都过点(1,1)。当α>0时幂函数在(0,+∞)上单调递增，当α<0时在(0,+∞)上单调递减。"
+                },
+                {
+                  "kp_id": "M-M1C3S3-KP2",
+                  "name": "幂函数性质的应用",
+                  "subject": "数学",
+                  "module": "必修第一册",
+                  "chapter": "函数的概念与性质",
+                  "section": "幂函数",
+                  "grade": "高一",
+                  "level": 4,
+                  "difficulty": 3,
+                  "importance": 3,
+                  "level_requirement": "理解",
+                  "exam_type": "单选题、填空题",
+                  "source": "人教版必修第一册",
+                  "text": "幂函数y=x^α的奇偶性、单调性由指数α决定。当α为有理数时，可写为α=m/n（m、n互质），通过m、n的奇偶性判断函数奇偶性：m、n同为奇数时为奇函数，m为偶数时为偶函数。利用幂函数的单调性可比较大小、求解不等式。幂函数在第一象限的图象特征与α的大小关系需要结合图象记忆。"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kp_id": "M-M1-C4",
+          "name": "第四章 指数函数与对数函数",
+          "chapter": "指数函数与对数函数",
+          "grade": "高一",
+          "level": 2,
+          "children": [
+            {
+              "kp_id": "M-M1-C4-S1",
+              "name": "4.1 指数",
+              "section": "指数",
+              "grade": "高一",
+              "level": 3,
+              "children": [
+                {
+                  "kp_id": "M-M1C4S1-KP1",
+                  "name": "根式与分数指数幂",
+                  "subject": "数学",
+                  "module": "必修第一册",
+                  "chapter": "指数函数与对数函数",
+                  "section": "指数",
+                  "grade": "高一",
+                  "level": 4,
+                  "difficulty": 2,
+                  "importance": 4,
+                  "level_requirement": "理解",
+                  "exam_type": "单选题、填空题",
+                  "source": "人教版必修第一册",
+                  "text": "n次方根：若x^n=a，则x叫a的n次方根，其中n>1且n∈N*。正数的偶次方根有两个且互为相反数，负数的偶次方根在实数范围内不存在；负数的奇次方根为一个负数。根式性质：(√[n]{a})^n=a，当n为奇数时√[n]{a^n}=a，当n为偶数时√[n]{a^n}=|a|。分数指数幂：a^(m/n)=√[n]{a^m}（a>0，m、n∈N*，n>1）。"
+                },
+                {
+                  "kp_id": "M-M1C4S1-KP2",
+                  "name": "指数幂的运算",
+                  "subject": "数学",
+                  "module": "必修第一册",
+                  "chapter": "指数函数与对数函数",
+                  "section": "指数",
+                  "grade": "高一",
+                  "level": 4,
+                  "difficulty": 3,
+                  "importance": 4,
+                  "level_requirement": "掌握",
+                  "exam_type": "填空题、解答题",
+                  "source": "人教版必修第一册",
+                  "text": "指数幂运算性质（a>0，b>0，r、s∈R）：a^r·a^s=a^(r+s)，(a^r)^s=a^(rs)，(ab)^r=a^r·b^r。0的正分数指数幂等于0，0的负分数指数幂无意义。化简求值时常将根式转化为分数指数幂，再利用运算性质化简。注意区分a^(m/n)与(a^m)^(1/n)的运算顺序。"
+                }
+              ]
+            },
+            {
+              "kp_id": "M-M1-C4-S2",
+              "name": "4.2 指数函数",
+              "section": "指数函数",
+              "grade": "高一",
+              "level": 3,
+              "children": [
+                {
+                  "kp_id": "M-M1C4S2-KP1",
+                  "name": "指数函数及其图象性质",
+                  "subject": "数学",
+                  "module": "必修第一册",
+                  "chapter": "指数函数与对数函数",
+                  "section": "指数函数",
+                  "grade": "高一",
+                  "level": 4,
+                  "difficulty": 3,
+                  "importance": 5,
+                  "level_requirement": "掌握",
+                  "exam_type": "单选题、解答题",
+                  "source": "人教版必修第一册",
+                  "text": "一般地，函数y=a^x（a>0且a≠1）叫做指数函数，定义域为R，值域为(0,+∞)。当a>1时，指数函数在R上单调递增；当0<a<1时，单调递减。指数函数的图象恒过定点(0,1)，且以x轴为渐近线。y=a^x与y=a^(-x)的图象关于y轴对称。底数越大，a>1时图象越靠近y轴。"
+                },
+                {
+                  "kp_id": "M-M1C4S2-KP2",
+                  "name": "指数函数的应用",
+                  "subject": "数学",
+                  "module": "必修第一册",
+                  "chapter": "指数函数与对数函数",
+                  "section": "指数函数",
+                  "grade": "高一",
+                  "level": 4,
+                  "difficulty": 4,
+                  "importance": 5,
+                  "level_requirement": "掌握",
+                  "exam_type": "解答题",
+                  "source": "人教版必修第一册",
+                  "text": "比较指数大小时，同底用单调性，不同底不同指数可借助中间值1或构造同底、同指。解指数不等式时利用单调性转化为代数不等式。求复合函数y=a^(f(x))的单调性，遵循同增异减原则。指数函数y=a^x与对数函数y=log_a x互为反函数，图象关于直线y=x对称。"
+                }
+              ]
+            },
+            {
+              "kp_id": "M-M1-C4-S3",
+              "name": "4.3 对数",
+              "section": "对数",
+              "grade": "高一",
+              "level": 3,
+              "children": [
+                {
+                  "kp_id": "M-M1C4S3-KP1",
+                  "name": "对数的概念",
+                  "subject": "数学",
+                  "module": "必修第一册",
+                  "chapter": "指数函数与对数函数",
+                  "section": "对数",
+                  "grade": "高一",
+                  "level": 4,
+                  "difficulty": 2,
+                  "importance": 4,
+                  "level_requirement": "理解",
+                  "exam_type": "单选题、填空题",
+                  "source": "人教版必修第一册",
+                  "text": "一般地，如果a^x=N（a>0且a≠1），那么数x叫做以a为底N的对数，记作x=log_a N，其中a叫做底数，N叫做真数。负数和0没有对数。loga1=0，logaa=1。常用对数lgN=log_10 N，自然对数lnN=log_e N，其中e≈2.71828。对数式与指数式互化：a^x=N⇔x=log_a N。"
+                },
+                {
+                  "kp_id": "M-M1C4S3-KP2",
+                  "name": "对数的运算性质",
+                  "subject": "数学",
+                  "module": "必修第一册",
+                  "chapter": "指数函数与对数函数",
+                  "section": "对数",
+                  "grade": "高一",
+                  "level": 4,
+                  "difficulty": 3,
+                  "importance": 5,
+                  "level_requirement": "掌握",
+                  "exam_type": "填空题、解答题",
+                  "source": "人教版必修第一册",
+                  "text": "对数运算性质（a>0且a≠1，M>0，N>0）：log_a(MN)=log_a M+log_a N；log_a(M/N)=log_a M-log_a N；log_a M^n=nlog_a M。换底公式：log_a b=log_c b/log_c a（c>0且c≠1）。常用推论：log_a b·log_b a=1。利用对数运算法则进行化简、求值、证明对数恒等式。"
+                }
+              ]
+            },
+            {
+              "kp_id": "M-M1-C4-S4",
+              "name": "4.4 对数函数",
+              "section": "对数函数",
+              "grade": "高一",
+              "level": 3,
+              "children": [
+                {
+                  "kp_id": "M-M1C4S4-KP1",
+                  "name": "对数函数及其图象性质",
+                  "subject": "数学",
+                  "module": "必修第一册",
+                  "chapter": "指数函数与对数函数",
+                  "section": "对数函数",
+                  "grade": "高一",
+                  "level": 4,
+                  "difficulty": 3,
+                  "importance": 5,
+                  "level_requirement": "掌握",
+                  "exam_type": "单选题、解答题",
+                  "source": "人教版必修第一册",
+                  "text": "一般地，函数y=log_a x（a>0且a≠1）叫做对数函数，定义域为(0,+∞)，值域为R。当a>1时在(0,+∞)上单调递增，当0<a<1时单调递减。对数函数图象恒过定点(1,0)，以y轴为渐近线。y=log_a x与y=log_(1/a) x的图象关于x轴对称。对数函数y=log_a x与指数函数y=a^x互为反函数。"
+                },
+                {
+                  "kp_id": "M-M1C4S4-KP2",
+                  "name": "对数函数的应用",
+                  "subject": "数学",
+                  "module": "必修第一册",
+                  "chapter": "指数函数与对数函数",
+                  "section": "对数函数",
+                  "grade": "高一",
+                  "level": 4,
+                  "difficulty": 4,
+                  "importance": 5,
+                  "level_requirement": "掌握",
+                  "exam_type": "解答题",
+                  "source": "人教版必修第一册",
+                  "text": "比较对数大小：同底用单调性，不同底借助中间值1或0，也可利用换底公式转化为同底。解对数不等式要注意真数大于0的前提，利用单调性去掉对数符号。求对数型复合函数y=log_a f(x)的单调性，先求定义域再按同增异减判断。形如log_a M=log_a N可化为M=N（M、N>0）。"
+                }
+              ]
+            },
+            {
+              "kp_id": "M-M1-C4-S5",
+              "name": "4.5 函数的零点与方程的解（函数的应用）",
+              "section": "函数的零点与方程的解",
+              "grade": "高一",
+              "level": 3,
+              "children": [
+                {
+                  "kp_id": "M-M1C4S5-KP1",
+                  "name": "函数零点与方程的解",
+                  "subject": "数学",
+                  "module": "必修第一册",
+                  "chapter": "指数函数与对数函数",
+                  "section": "函数的零点与方程的解",
+                  "grade": "高一",
+                  "level": 4,
+                  "difficulty": 3,
+                  "importance": 5,
+                  "level_requirement": "掌握",
+                  "exam_type": "单选题、解答题",
+                  "source": "人教版必修第一册",
+                  "text": "对于函数y=f(x)，使f(x)=0的实数x叫做函数的零点。函数y=f(x)的零点就是方程f(x)=0的实数根，也就是函数图象与x轴交点的横坐标。零点存在性定理：若函数f(x)在区间[a,b]上连续且f(a)·f(b)<0，则函数在区间(a,b)上至少有一个零点。零点个数问题常转化为两函数图象交点个数。"
+                },
+                {
+                  "kp_id": "M-M1C4S5-KP2",
+                  "name": "二分法求方程的近似解",
+                  "subject": "数学",
+                  "module": "必修第一册",
+                  "chapter": "指数函数与对数函数",
+                  "section": "函数的零点与方程的解",
+                  "grade": "高一",
+                  "level": 4,
+                  "difficulty": 3,
+                  "importance": 4,
+                  "level_requirement": "理解",
+                  "exam_type": "填空题、解答题",
+                  "source": "人教版必修第一册",
+                  "text": "二分法是通过不断把有解区间二等分，逐步逼近零点的近似解的方法。基本步骤：确定有解区间[a,b]使f(a)·f(b)<0，取中点c=(a+b)/2，计算f(c)，根据f(c)与0的大小关系确定新区间，不断缩小区间直至满足精度要求。二分法受精度、区间长度限制，需理解其思想与适用条件。"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kp_id": "M-M1-C5",
+          "name": "第五章 三角函数",
+          "chapter": "三角函数",
+          "grade": "高一",
+          "level": 2,
+          "children": [
+            {
+              "kp_id": "M-M1-C5-S1",
+              "name": "5.1 任意角和弧度制",
+              "section": "任意角和弧度制",
+              "grade": "高一",
+              "level": 3,
+              "children": [
+                {
+                  "kp_id": "M-M1C5S1-KP1",
+                  "name": "任意角与弧度制",
+                  "subject": "数学",
+                  "module": "必修第一册",
+                  "chapter": "三角函数",
+                  "section": "任意角和弧度制",
+                  "grade": "高一",
+                  "level": 4,
+                  "difficulty": 2,
+                  "importance": 4,
+                  "level_requirement": "理解",
+                  "exam_type": "单选题、填空题",
+                  "source": "人教版必修第一册",
+                  "text": "一条射线绕端点旋转，按逆时针方向旋转形成的角叫正角，顺时针方向形成的角叫负角，没有旋转的角叫零角。终边相同的角可表示为α+2kπ（k∈Z）。弧度制：把长度等于半径长的弧所对的圆心角叫做1弧度的角，360°=2πrad，180°=πrad。弧长公式l=αr，扇形面积公式S=(1/2)lr=(1/2)αr^2。"
+                },
+                {
+                  "kp_id": "M-M1C5S1-KP2",
+                  "name": "象限角与终边相同的角",
+                  "subject": "数学",
+                  "module": "必修第一册",
+                  "chapter": "三角函数",
+                  "section": "任意角和弧度制",
+                  "grade": "高一",
+                  "level": 4,
+                  "difficulty": 2,
+                  "importance": 4,
+                  "level_requirement": "理解",
+                  "exam_type": "单选题、填空题",
+                  "source": "人教版必修第一册",
+                  "text": "角的顶点与原点重合，角的始边与x轴的非负半轴重合，终边落在第几象限就称为第几象限角。终边在坐标轴上的角不属于任何象限。与角α终边相同的角的集合为{β|β=α+2kπ，k∈Z}。判断任意角所在象限是关键，常需将α化为0到2π之间的形式。"
+                }
+              ]
+            },
+            {
+              "kp_id": "M-M1-C5-S2",
+              "name": "5.2 三角函数的概念",
+              "section": "三角函数的概念",
+              "grade": "高一",
+              "level": 3,
+              "children": [
+                {
+                  "kp_id": "M-M1C5S2-KP1",
+                  "name": "任意角的三角函数",
+                  "subject": "数学",
+                  "module": "必修第一册",
+                  "chapter": "三角函数",
+                  "section": "三角函数的概念",
+                  "grade": "高一",
+                  "level": 4,
+                  "difficulty": 3,
+                  "importance": 5,
+                  "level_requirement": "掌握",
+                  "exam_type": "单选题、解答题",
+                  "source": "人教版必修第一册",
+                  "text": "设角α终边上一点P(x,y)，|OP|=r=√(x^2+y^2)，则sinα=y/r，cosα=x/r，tanα=y/x（x≠0）。三角函数符号由坐标符号决定：一全正、二正弦、三正切、四余弦。同角三角函数基本关系：sin^2α+cos^2α=1，tanα=sinα/cosα。可利用这两个关系进行化简、求值。"
+                },
+                {
+                  "kp_id": "M-M1C5S2-KP2",
+                  "name": "同角三角函数的基本关系",
+                  "subject": "数学",
+                  "module": "必修第一册",
+                  "chapter": "三角函数",
+                  "section": "三角函数的概念",
+                  "grade": "高一",
+                  "level": 4,
+                  "difficulty": 3,
+                  "importance": 5,
+                  "level_requirement": "掌握",
+                  "exam_type": "单选题、解答题",
+                  "source": "人教版必修第一册",
+                  "text": "由sin^2α+cos^2α=1和tanα=sinα/cosα，可在sinα、cosα、tanα三者之间相互转化。已知tanα求含sinα、cosα的齐次式的值，可分子分母同除以cosα化为关于tanα的式子。已知sinα+cosα的值，可平方利用sin^2α+cos^2α=1求sinα·cosα。注意根据角所在象限确定三角函数符号。"
+                }
+              ]
+            },
+            {
+              "kp_id": "M-M1-C5-S3",
+              "name": "5.3 诱导公式",
+              "section": "诱导公式",
+              "grade": "高一",
+              "level": 3,
+              "children": [
+                {
+                  "kp_id": "M-M1C5S3-KP1",
+                  "name": "诱导公式的应用",
+                  "subject": "数学",
+                  "module": "必修第一册",
+                  "chapter": "三角函数",
+                  "section": "诱导公式",
+                  "grade": "高一",
+                  "level": 4,
+                  "difficulty": 3,
+                  "importance": 5,
+                  "level_requirement": "掌握",
+                  "exam_type": "单选题、解答题",
+                  "source": "人教版必修第一册",
+                  "text": "诱导公式可实现任意角的三角函数向锐角三角函数转化。核心规律：奇变偶不变，符号看象限。公式如sin(π-α)=sinα，cos(π-α)=-cosα，sin(π+α)=-sinα，cos(π+α)=-cosα，sin(-α)=-sinα，cos(-α)=cosα，sin(π/2-α)=cosα，cos(π/2-α)=sinα等。化简求值时分步：化角为锐角、正负号判断。"
+                },
+                {
+                  "kp_id": "M-M1C5S3-KP2",
+                  "name": "三角恒等变形化简求值",
+                  "subject": "数学",
+                  "module": "必修第一册",
+                  "chapter": "三角函数",
+                  "section": "诱导公式",
+                  "grade": "高一",
+                  "level": 4,
+                  "difficulty": 4,
+                  "importance": 5,
+                  "level_requirement": "掌握",
+                  "exam_type": "解答题",
+                  "source": "人教版必修第一册",
+                  "text": "利用诱导公式与同角关系对三角函数式进行化简，核心是统一角、统一函数名称、统一运算形式。化简目标：项数尽量少、次数尽量低、尽量不含根号和分母。求值问题常先化简再代入，注意角的范围对符号的确定作用。处理含π/2±α等角的式子时要灵活运用奇变偶不变规律。"
+                }
+              ]
+            },
+            {
+              "kp_id": "M-M1-C5-S4",
+              "name": "5.4 三角函数的图象与性质",
+              "section": "三角函数的图象与性质",
+              "grade": "高一",
+              "level": 3,
+              "children": [
+                {
+                  "kp_id": "M-M1C5S4-KP1",
+                  "name": "正弦函数与余弦函数的图象和性质",
+                  "subject": "数学",
+                  "module": "必修第一册",
+                  "chapter": "三角函数",
+                  "section": "三角函数的图象与性质",
+                  "grade": "高一",
+                  "level": 4,
+                  "difficulty": 3,
+                  "importance": 5,
+                  "level_requirement": "掌握",
+                  "exam_type": "单选题、解答题",
+                  "source": "人教版必修第一册",
+                  "text": "正弦函数y=sinx定义域R，值域[-1,1]，周期为2π，是奇函数，在[-π/2+2kπ,π/2+2kπ]上单调递增，在[π/2+2kπ,3π/2+2kπ]上单调递减。余弦函数y=cosx定义域R，值域[-1,1]，周期为2π，是偶函数。五点法作图取五个关键点。正弦型函数y=Asin(ωx+φ)的周期、振幅、相位等需掌握。"
+                },
+                {
+                  "kp_id": "M-M1C5S4-KP2",
+                  "name": "正切函数的图象和性质",
+                  "subject": "数学",
+                  "module": "必修第一册",
+                  "chapter": "三角函数",
+                  "section": "三角函数的图象与性质",
+                  "grade": "高一",
+                  "level": 4,
+                  "difficulty": 3,
+                  "importance": 4,
+                  "level_requirement": "掌握",
+                  "exam_type": "单选题、解答题",
+                  "source": "人教版必修第一册",
+                  "text": "正切函数y=tanx的定义域为{x|x≠π/2+kπ，k∈Z}，值域为R，最小正周期为π，是奇函数。在(-π/2+kπ,π/2+kπ)上单调递增，无单调递减区间。正切曲线有无数条渐近线x=π/2+kπ。求单调区间、定义域时需特别注意kπ的整数性。"
+                }
+              ]
+            },
+            {
+              "kp_id": "M-M1-C5-S5",
+              "name": "5.5 三角恒等变换",
+              "section": "三角恒等变换",
+              "grade": "高一",
+              "level": 3,
+              "children": [
+                {
+                  "kp_id": "M-M1C5S5-KP1",
+                  "name": "两角和与差的三角函数公式",
+                  "subject": "数学",
+                  "module": "必修第一册",
+                  "chapter": "三角函数",
+                  "section": "三角恒等变换",
+                  "grade": "高一",
+                  "level": 4,
+                  "difficulty": 4,
+                  "importance": 5,
+                  "level_requirement": "掌握",
+                  "exam_type": "单选题、解答题",
+                  "source": "人教版必修第一册",
+                  "text": "两角和差公式：sin(α±β)=sinαcosβ±cosαsinβ；cos(α±β)=cosαcosβ∓sinαsinβ；tan(α±β)=(tanα±tanβ)/(1∓tanαtanβ)。asinα+bcosα=√(a^2+b^2)sin(α+φ)（辅助角公式）。这些公式是实现角的展开与合并、化简求值的重要工具。"
+                },
+                {
+                  "kp_id": "M-M1C5S5-KP2",
+                  "name": "二倍角公式与公式的灵活运用",
+                  "subject": "数学",
+                  "module": "必修第一册",
+                  "chapter": "三角函数",
+                  "section": "三角恒等变换",
+                  "grade": "高一",
+                  "level": 4,
+                  "difficulty": 4,
+                  "importance": 5,
+                  "level_requirement": "掌握",
+                  "exam_type": "解答题",
+                  "source": "人教版必修第一册",
+                  "text": "二倍角公式：sin2α=2sinαcosα；cos2α=cos^2α-sin^2α=2cos^2α-1=1-2sin^2α；tan2α=2tanα/(1-tan^2α)。由cos2α=2cos^2α-1可得降幂公式cos^2α=(1+cos2α)/2，sin^2α=(1-cos2α)/2。半角公式由此推出。灵活运用倍角、降幂、辅助角进行化简求值及证明三角恒等式。"
+                }
+              ]
+            },
+            {
+              "kp_id": "M-M1-C5-S6",
+              "name": "5.6 函数y=Asin(ωx+φ)与三角函数的应用",
+              "section": "函数y=Asin(ωx+φ)与三角函数的应用",
+              "grade": "高一",
+              "level": 3,
+              "children": [
+                {
+                  "kp_id": "M-M1C5S6-KP1",
+                  "name": "y=Asin(ωx+φ)的图象变换",
+                  "subject": "数学",
+                  "module": "必修第一册",
+                  "chapter": "三角函数",
+                  "section": "函数y=Asin(ωx+φ)与三角函数的应用",
+                  "grade": "高一",
+                  "level": 4,
+                  "difficulty": 4,
+                  "importance": 5,
+                  "level_requirement": "掌握",
+                  "exam_type": "单选题、解答题",
+                  "source": "人教版必修第一册",
+                  "text": "函数y=Asin(ωx+φ)（A>0，ω>0）中，A叫振幅，周期T=2π/ω，频率f=1/T=ω/2π，ωx+φ叫相位，φ叫初相。由y=sinx到y=Asin(ωx+φ)可通过平移和伸缩变换实现，变换顺序不同实施的变换不同。由图象求解析式需确定A、ω、φ三个参数，通常由最值定A，由周期定ω，由特殊点定φ。"
+                },
+                {
+                  "kp_id": "M-M1C5S6-KP2",
+                  "name": "三角函数的应用",
+                  "subject": "数学",
+                  "module": "必修第一册",
+                  "chapter": "三角函数",
+                  "section": "函数y=Asin(ωx+φ)与三角函数的应用",
+                  "grade": "高一",
+                  "level": 4,
+                  "difficulty": 3,
+                  "importance": 4,
+                  "level_requirement": "理解",
+                  "exam_type": "解答题",
+                  "source": "人教版必修第一册",
+                  "text": "三角函数模型广泛应用于简谐运动、潮汐变化、温度波动、交流电等周期现象。建立三角模型的一般步骤：分析实际问题→建立三角函数模型→求解→检验并解释。利用y=Asin(ωx+φ)刻画周期变化规律，需合理确定初始相位和周期。"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "kp_id": "M-M2",
+      "name": "必修第二册",
+      "module": "必修第二册",
+      "grade": "高一",
+      "level": 1,
+      "children": [
+        {
+          "kp_id": "M-M2-C6",
+          "name": "第六章 平面向量及其应用",
+          "chapter": "平面向量及其应用",
+          "grade": "高一",
+          "level": 2,
+          "children": [
+            {
+              "kp_id": "M-M2-C6-S1",
+              "name": "6.1 平面向量的概念",
+              "section": "平面向量的概念",
+              "grade": "高一",
+              "level": 3,
+              "children": [
+                {
+                  "kp_id": "M-M2C6S1-KP1",
+                  "name": "平面向量的概念及表示",
+                  "subject": "数学",
+                  "module": "必修第二册",
+                  "chapter": "平面向量及其应用",
+                  "section": "平面向量的概念",
+                  "grade": "高一",
+                  "level": 4,
+                  "difficulty": 2,
+                  "importance": 3,
+                  "level_requirement": "理解",
+                  "exam_type": "单选题",
+                  "source": "人教版必修第二册",
+                  "text": "既有大小又有方向的量叫做向量，只有大小没有方向的量叫数量。向量用有向线段表示，有向线段的长度表示向量的大小（模），箭头方向表示向量的方向。零向量模为0，方向任意；单位向量模为1。相等向量：方向相同且长度相等的向量。共线（平行）向量：方向相同或相反的非零向量。"
+                },
+                {
+                  "kp_id": "M-M2C6S1-KP2",
+                  "name": "向量的模与单位向量",
+                  "subject": "数学",
+                  "module": "必修第二册",
+                  "chapter": "平面向量及其应用",
+                  "section": "平面向量的概念",
+                  "grade": "高一",
+                  "level": 4,
+                  "difficulty": 2,
+                  "importance": 3,
+                  "level_requirement": "理解",
+                  "exam_type": "单选题、填空题",
+                  "source": "人教版必修第二册",
+                  "text": "向量a的模记为|a|，表示向量的大小。单位向量是模为1的向量，向量a同向的单位向量为a/|a|。零向量的方向是任意的。注意区分向量与数量，向量不能比较大小，但模可以比较大小。相等向量必共线，共线向量不一定相等。"
+                }
+              ]
+            },
+            {
+              "kp_id": "M-M2-C6-S2",
+              "name": "6.2 平面向量的运算",
+              "section": "平面向量的运算",
+              "grade": "高一",
+              "level": 3,
+              "children": [
+                {
+                  "kp_id": "M-M2C6S2-KP1",
+                  "name": "向量的线性运算",
+                  "subject": "数学",
+                  "module": "必修第二册",
+                  "chapter": "平面向量及其应用",
+                  "section": "平面向量的运算",
+                  "grade": "高一",
+                  "level": 4,
+                  "difficulty": 3,
+                  "importance": 5,
+                  "level_requirement": "掌握",
+                  "exam_type": "单选题、解答题",
+                  "source": "人教版必修第二册",
+                  "text": "向量加法遵循三角形法则和平行四边形法则。减法a-b=a+(-b)，减去一个向量等于加上它的相反向量。数乘λa当λ>0时方向与a相同，λ<0时方向相反，|λa|=|λ||a|。线性运算满足交换律、结合律、分配律。共线向量定理：向量a(a≠0)与b共线的充要条件是存在唯一实数λ使b=λa。"
+                },
+                {
+                  "kp_id": "M-M2C6S2-KP2",
+                  "name": "向量的数量积",
+                  "subject": "数学",
+                  "module": "必修第二册",
+                  "chapter": "平面向量及其应用",
+                  "section": "平面向量的运算",
+                  "grade": "高一",
+                  "level": 4,
+                  "difficulty": 4,
+                  "importance": 5,
+                  "level_requirement": "掌握",
+                  "exam_type": "单选题、解答题",
+                  "source": "人教版必修第二册",
+                  "text": "向量的数量积a·b=|a||b|cosθ（θ为a与b的夹角），结果是数量。性质：a⊥b⇔a·b=0；a·a=|a|^2；cosθ=(a·b)/(|a||b|)。运算律：交换律a·b=b·a，分配律(a+b)·c=a·c+b·c。向量垂直、求夹角、求模长都通过数量积实现。"
+                }
+              ]
+            },
+            {
+              "kp_id": "M-M2-C6-S3",
+              "name": "6.3 平面向量基本定理及坐标表示",
+              "section": "平面向量基本定理及坐标表示",
+              "grade": "高一",
+              "level": 3,
+              "children": [
+                {
+                  "kp_id": "M-M2C6S3-KP1",
+                  "name": "平面向量基本定理",
+                  "subject": "数学",
+                  "module": "必修第二册",
+                  "chapter": "平面向量及其应用",
+                  "section": "平面向量基本定理及坐标表示",
+                  "grade": "高一",
+                  "level": 4,
+                  "difficulty": 3,
+                  "importance": 4,
+                  "level_requirement": "理解",
+                  "exam_type": "单选题、解答题",
+                  "source": "人教版必修第二册",
+                  "text": "平面向量基本定理：如果e1、e2是同一平面内两个不共线向量，那么对这一平面内任一向量a，有且只有一对实数λ1、λ2，使a=λ1e1+λ2e2。不共线的e1、e2叫做表示这一平面内所有向量的一个基底。基底的选择不唯一，但任一向量用给定基底表示时系数唯一。"
+                },
+                {
+                  "kp_id": "M-M2C6S3-KP2",
+                  "name": "平面向量的坐标运算",
+                  "subject": "数学",
+                  "module": "必修第二册",
+                  "chapter": "平面向量及其应用",
+                  "section": "平面向量基本定理及坐标表示",
+                  "grade": "高一",
+                  "level": 4,
+                  "difficulty": 3,
+                  "importance": 5,
+                  "level_requirement": "掌握",
+                  "exam_type": "单选题、解答题",
+                  "source": "人教版必修第二册",
+                  "text": "设a=(x1,y1)，b=(x2,y2)，则a+b=(x1+x2,y1+y2)，a-b=(x1-x2,y1-y2)，λa=(λx1,λy1)，a·b=x1x2+y1y2。向量a=(x,y)的模|a|=√(x^2+y^2)。共线条件：a∥b⇔x1y2-x2y1=0。垂直条件：a⊥b⇔x1x2+y1y2=0。两点间距离公式、线段中点坐标公式由此推出。"
+                }
+              ]
+            },
+            {
+              "kp_id": "M-M2-C6-S4",
+              "name": "6.4 平面向量的应用",
+              "section": "平面向量的应用",
+              "grade": "高一",
+              "level": 3,
+              "children": [
+                {
+                  "kp_id": "M-M2C6S4-KP1",
+                  "name": "向量在平面几何中的应用",
+                  "subject": "数学",
+                  "module": "必修第二册",
+                  "chapter": "平面向量及其应用",
+                  "section": "平面向量的应用",
+                  "grade": "高一",
+                  "level": 4,
+                  "difficulty": 4,
+                  "importance": 4,
+                  "level_requirement": "掌握",
+                  "exam_type": "解答题",
+                  "source": "人教版必修第二册",
+                  "text": "利用向量方法证明几何问题：证明平行转化为向量共线，证明垂直转化为数量积为0，求长度转化为求模。平面几何的向量方法体现了数形结合思想。例如用向量证明平行四边形对角线互相平分、勾股定理等。坐标法通过建立坐标系将几何问题代数化。"
+                },
+                {
+                  "kp_id": "M-M2C6S4-KP2",
+                  "name": "向量在物理中的应用",
+                  "subject": "数学",
+                  "module": "必修第二册",
+                  "chapter": "平面向量及其应用",
+                  "section": "平面向量的应用",
+                  "grade": "高一",
+                  "level": 4,
+                  "difficulty": 3,
+                  "importance": 3,
+                  "level_requirement": "理解",
+                  "exam_type": "解答题",
+                  "source": "人教版必修第二册",
+                  "text": "力的合成与分解遵循平行四边形法则，位移、速度、加速度都是向量。求合力即求对应向量之和，求分力即向量分解。利用数量积可求力做的功W=F·s。向量在解决物理中的受力分析、运动合成与分解等问题中应用广泛。"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kp_id": "M-M2-C7",
+          "name": "第七章 复数",
+          "chapter": "复数",
+          "grade": "高一",
+          "level": 2,
+          "children": [
+            {
+              "kp_id": "M-M2-C7-S1",
+              "name": "7.1 复数的概念",
+              "section": "复数的概念",
+              "grade": "高一",
+              "level": 3,
+              "children": [
+                {
+                  "kp_id": "M-M2C7S1-KP1",
+                  "name": "复数的概念与几何意义",
+                  "subject": "数学",
+                  "module": "必修第二册",
+                  "chapter": "复数",
+                  "section": "复数的概念",
+                  "grade": "高一",
+                  "level": 4,
+                  "difficulty": 2,
+                  "importance": 4,
+                  "level_requirement": "理解",
+                  "exam_type": "单选题",
+                  "source": "人教版必修第二册",
+                  "text": "形如a+bi（a、b∈R）的数叫做复数，其中a叫实部，b叫虚部，i为虚数单位且i^2=-1。当b=0时为实数，当b≠0时为虚数，当a=0且b≠0时为纯虚数。复数z=a+bi对应复平面内点Z(a,b)，复数的模|z|=√(a^2+b^2)。复数相等：a+bi=c+di⇔a=c且b=d。"
+                },
+                {
+                  "kp_id": "M-M2C7S1-KP2",
+                  "name": "复数的四则运算",
+                  "subject": "数学",
+                  "module": "必修第二册",
+                  "chapter": "复数",
+                  "section": "复数的概念",
+                  "grade": "高一",
+                  "level": 4,
+                  "difficulty": 3,
+                  "importance": 4,
+                  "level_requirement": "掌握",
+                  "exam_type": "单选题、解答题",
+                  "source": "人教版必修第二册",
+                  "text": "复数加法：(a+bi)+(c+di)=(a+c)+(b+d)i；减法同理。乘法：(a+bi)(c+di)=(ac-bd)+(ad+bc)i。除法通过乘以共轭复数进行分母实数化：(a+bi)/(c+di)=(a+bi)(c-di)/(c^2+d^2)。共轭复数a+bi与a-bi。i的幂具有周期性：i^n除以4的余数决定取值。"
+                }
+              ]
+            },
+            {
+              "kp_id": "M-M2-C7-S2",
+              "name": "7.2 复数的四则运算",
+              "section": "复数的四则运算",
+              "grade": "高一",
+              "level": 3,
+              "children": [
+                {
+                  "kp_id": "M-M2C7S2-KP1",
+                  "name": "复数的运算与模",
+                  "subject": "数学",
+                  "module": "必修第二册",
+                  "chapter": "复数",
+                  "section": "复数的四则运算",
+                  "grade": "高一",
+                  "level": 4,
+                  "difficulty": 3,
+                  "importance": 4,
+                  "level_requirement": "掌握",
+                  "exam_type": "单选题、解答题",
+                  "source": "人教版必修第二册",
+                  "text": "复数的模满足运算性质：|z1z2|=|z1||z2|，|z1/z2|=|z1|/|z2|（z2≠0）。z·z(共轭)=|z|^2。利用共轭复数可化简复数的除法。求复数模的范围、轨迹问题常利用复平面几何意义。n次单位根、复数相等条件的应用是常见考点。"
+                },
+                {
+                  "kp_id": "M-M2C7S2-KP2",
+                  "name": "复数的几何意义及其应用",
+                  "subject": "数学",
+                  "module": "必修第二册",
+                  "chapter": "复数",
+                  "section": "复数的四则运算",
+                  "grade": "高一",
+                  "level": 4,
+                  "difficulty": 3,
+                  "importance": 4,
+                  "level_requirement": "理解",
+                  "exam_type": "单选题、解答题",
+                  "source": "人教版必修第二册",
+                  "text": "复数z=a+bi对应复平面内的点Z(a,b)和向量OZ。复数的模对应向量的模、点到原点的距离。|z-z0|=r表示以点z0为圆心、r为半径的圆。利用复数对应的几何意义可求复数对应点的轨迹、模的最值等。复数加法的几何意义对应向量加法。"
+                }
+              ]
+            },
+            {
+              "kp_id": "M-M2-C7-S3",
+              "name": "7.3 复数的三角表示",
+              "section": "复数的三角表示",
+              "grade": "高一",
+              "level": 3,
+              "children": [
+                {
+                  "kp_id": "M-M2C7S3-KP1",
+                  "name": "复数的三角形式",
+                  "subject": "数学",
+                  "module": "必修第二册",
+                  "chapter": "复数",
+                  "section": "复数的三角表示",
+                  "grade": "高一",
+                  "level": 4,
+                  "difficulty": 3,
+                  "importance": 3,
+                  "level_requirement": "了解",
+                  "exam_type": "单选题、填空题",
+                  "source": "人教版必修第二册",
+                  "text": "复数z=a+bi（r=|z|）的三角形式为z=r(cosθ+isinθ)，其中θ为辐角。辐角主值范围是(-π,π]。复数的三角形式的乘法模相乘、辐角相加：(r1(cosθ1+isinθ1))·(r2(cosθ2+isinθ2))=r1r2(cos(θ1+θ2)+isin(θ1+θ2))。除法模相除、辐角相减。"
+                },
+                {
+                  "kp_id": "M-M2C7S3-KP2",
+                  "name": "复数的乘方与开方",
+                  "subject": "数学",
+                  "module": "必修第二册",
+                  "chapter": "复数",
+                  "section": "复数的三角表示",
+                  "grade": "高一",
+                  "level": 4,
+                  "difficulty": 4,
+                  "importance": 3,
+                  "level_requirement": "了解",
+                  "exam_type": "填空题、解答题",
+                  "source": "人教版必修第二册",
+                  "text": "棣莫弗定理：Z^n=r^n(cos(nθ)+isin(nθ))。复数的n次方根有n个，分布在以原点为圆心、模为半径的圆上，相邻两根辐角相差2π/n。利用三角形式可简化复数的乘方、开方及求特殊角的复数运算。"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kp_id": "M-M2-C8",
+          "name": "第八章 立体几何初步",
+          "chapter": "立体几何初步",
+          "grade": "高一",
+          "level": 2,
+          "children": [
+            {
+              "kp_id": "M-M2-C8-S1",
+              "name": "8.1 基本立体图形",
+              "section": "基本立体图形",
+              "grade": "高一",
+              "level": 3,
+              "children": [
+                {
+                  "kp_id": "M-M2C8S1-KP1",
+                  "name": "多面体",
+                  "subject": "数学",
+                  "module": "必修第二册",
+                  "chapter": "立体几何初步",
+                  "section": "基本立体图形",
+                  "grade": "高一",
+                  "level": 4,
+                  "difficulty": 2,
+                  "importance": 4,
+                  "level_requirement": "理解",
+                  "exam_type": "单选题、填空题",
+                  "source": "人教版必修第二册",
+                  "text": "由若干个平面多边形围成的几何体叫多面体，围成多面体的各个多边形叫做面，相邻两个面的公共边叫做棱，棱与棱的公共点叫做顶点。棱柱：有两个面互相平行，其余各面都是四边形且每相邻两个四边形的公共边都互相平行。棱锥：有一个面是多边形，其余各面是有一个公共顶点的三角形。棱台由棱锥截得。"
+                },
+                {
+                  "kp_id": "M-M2C8S1-KP2",
+                  "name": "旋转体",
+                  "subject": "数学",
+                  "module": "必修第二册",
+                  "chapter": "立体几何初步",
+                  "section": "基本立体图形",
+                  "grade": "高一",
+                  "level": 4,
+                  "difficulty": 2,
+                  "importance": 4,
+                  "level_requirement": "理解",
+                  "exam_type": "单选题、填空题",
+                  "source": "人教版必修第二册",
+                  "text": "由平面图形绕平面内某条直线旋转一周形成的曲面围成的几何体叫旋转体。圆柱可以由矩形绕其一边旋转得到，圆锥由直角三角形绕其一条直角边旋转得到，圆台由直角梯形绕垂直于底的腰旋转得到，球由半圆绕直径旋转得到。球的大圆、小圆、球面、球体等概念需掌握。"
+                }
+              ]
+            },
+            {
+              "kp_id": "M-M2-C8-S2",
+              "name": "8.2 立体图形的直观图",
+              "section": "立体图形的直观图",
+              "grade": "高一",
+              "level": 3,
+              "children": [
+                {
+                  "kp_id": "M-M2C8S2-KP1",
+                  "name": "斜二测画法",
+                  "subject": "数学",
+                  "module": "必修第二册",
+                  "chapter": "立体几何初步",
+                  "section": "立体图形的直观图",
+                  "grade": "高一",
+                  "level": 4,
+                  "difficulty": 3,
+                  "importance": 3,
+                  "level_requirement": "理解",
+                  "exam_type": "单选题、填空题",
+                  "source": "人教版必修第二册",
+                  "text": "斜二测画法是画直观图的常用方法。规则：在平面直角坐标系中，与x轴平行的线段在直观图中长度不变方向不变；与y轴平行的线段在直观图中长度变为原来的一半，且与x轴成45°（或135°）角；与z轴平行的线段长度、方向不变。水平放置的平面图形的直观图面积为原图形面积的√2/4倍。"
+                },
+                {
+                  "kp_id": "M-M2C8S2-KP2",
+                  "name": "直观图与原图的关系",
+                  "subject": "数学",
+                  "module": "必修第二册",
+                  "chapter": "立体几何初步",
+                  "section": "立体图形的直观图",
+                  "grade": "高一",
+                  "level": 4,
+                  "difficulty": 3,
+                  "importance": 3,
+                  "level_requirement": "理解",
+                  "exam_type": "填空题、解答题",
+                  "source": "人教版必修第二册",
+                  "text": "由直观图还原原图形时，需将直观图中与x轴平行的线段长度不变，与x轴成45°的线段在原图中恢复为与y轴平行且长度加倍，以确定原图形。由直观图求原图形面积或由原图形求直观图面积，需注意面积倍数关系。"
+                }
+              ]
+            },
+            {
+              "kp_id": "M-M2-C8-S3",
+              "name": "8.3 简单几何体的表面积与体积",
+              "section": "简单几何体的表面积与体积",
+              "grade": "高一",
+              "level": 3,
+              "children": [
+                {
+                  "kp_id": "M-M2C8S3-KP1",
+                  "name": "柱、锥、台、球的表面积",
+                  "subject": "数学",
+                  "module": "必修第二册",
+                  "chapter": "立体几何初步",
+                  "section": "简单几何体的表面积与体积",
+                  "grade": "高一",
+                  "level": 4,
+                  "difficulty": 3,
+                  "importance": 5,
+                  "level_requirement": "掌握",
+                  "exam_type": "单选题、解答题",
+                  "source": "人教版必修第二册",
+                  "text": "圆柱侧面积S=2πrl，表面积S=2πrl+2πr^2。圆锥侧面积S=πrl，表面积S=πrl+πr^2。圆台侧面积S=π(R+r)l。球的表面积S=4πR^2。圆柱、圆锥、圆台侧面积可统一为S=πl(r上+r下)。求表面积需分清侧面积与全面积。"
+                },
+                {
+                  "kp_id": "M-M2C8S3-KP2",
+                  "name": "柱、锥、台、球的体积",
+                  "subject": "数学",
+                  "module": "必修第二册",
+                  "chapter": "立体几何初步",
+                  "section": "简单几何体的表面积与体积",
+                  "grade": "高一",
+                  "level": 4,
+                  "difficulty": 3,
+                  "importance": 5,
+                  "level_requirement": "掌握",
+                  "exam_type": "单选题、解答题",
+                  "source": "人教版必修第二册",
+                  "text": "柱体体积V=Sh（S为底面积，h为高）。锥体体积V=(1/3)Sh。台体体积V=(1/3)(S1+√(S1S2)+S2)h。球的体积V=(4/3)πR^3。球与柱、锥的切接问题常用到球心到截面距离、截面圆半径与球半径的关系。等体积法常用于求点面距离。"
+                }
+              ]
+            },
+            {
+              "kp_id": "M-M2-C8-S4",
+              "name": "8.4 空间点、直线、平面之间的位置关系",
+              "section": "空间点、直线、平面之间的位置关系",
+              "grade": "高一",
+              "level": 3,
+              "children": [
+                {
+                  "kp_id": "M-M2C8S4-KP1",
+                  "name": "平面的基本性质",
+                  "subject": "数学",
+                  "module": "必修第二册",
+                  "chapter": "立体几何初步",
+                  "section": "空间点、直线、平面之间的位置关系",
+                  "grade": "高一",
+                  "level": 4,
+                  "difficulty": 3,
+                  "importance": 5,
+                  "level_requirement": "掌握",
+                  "exam_type": "单选题、解答题",
+                  "source": "人教版必修第二册",
+                  "text": "平面的基本性质（公理）：公理1，如果一条直线上两点在一个平面内，那么这条直线在此平面内。公理2，过不在同一直线上的三点有且只有一个平面。公理3，如果两个不重合的平面有一个公共点，那么它们有且只有一条过该点的公共直线。推论：两相交直线确定一个平面，两平行直线确定一个平面。"
+                },
+                {
+                  "kp_id": "M-M2C8S4-KP2",
+                  "name": "空间中直线、平面的位置关系",
+                  "subject": "数学",
+                  "module": "必修第二册",
+                  "chapter": "立体几何初步",
+                  "section": "空间点、直线、平面之间的位置关系",
+                  "grade": "高一",
+                  "level": 4,
+                  "difficulty": 3,
+                  "importance": 4,
+                  "level_requirement": "掌握",
+                  "exam_type": "单选题、解答题",
+                  "source": "人教版必修第二册",
+                  "text": "空间中两条直线的位置关系：相交（共面）、平行（共面）、异面（不共面）。异面直线所成角范围是(0,π/2]。直线与平面的位置关系：在平面内、相交、平行。平面与平面的位置关系：平行、相交。共面、异面的判断需借助公理和定理。"
+                }
+              ]
+            },
+            {
+              "kp_id": "M-M2-C8-S5",
+              "name": "8.5 空间直线、平面的平行",
+              "section": "空间直线、平面的平行",
+              "grade": "高一",
+              "level": 3,
+              "children": [
+                {
+                  "kp_id": "M-M2C8S5-KP1",
+                  "name": "直线与平面平行的判定与性质",
+                  "subject": "数学",
+                  "module": "必修第二册",
+                  "chapter": "立体几何初步",
+                  "section": "空间直线、平面的平行",
+                  "grade": "高一",
+                  "level": 4,
+                  "difficulty": 4,
+                  "importance": 5,
+                  "level_requirement": "掌握",
+                  "exam_type": "单选题、解答题",
+                  "source": "人教版必修第二册",
+                  "text": "线面平行判定定理：平面外一条直线与此平面内的一条直线平行，则该直线与此平面平行。符号：a⊄α，b⊂α，a∥b⇒a∥α。线面平行性质定理：一条直线与一个平面平行，则过这条直线的任一平面与此平面的交线与该直线平行。证明线面平行关键是在平面内找一条与已知直线平行的直线。"
+                },
+                {
+                  "kp_id": "M-M2C8S5-KP2",
+                  "name": "平面与平面平行的判定与性质",
+                  "subject": "数学",
+                  "module": "必修第二册",
+                  "chapter": "立体几何初步",
+                  "section": "空间直线、平面的平行",
+                  "grade": "高一",
+                  "level": 4,
+                  "difficulty": 4,
+                  "importance": 5,
+                  "level_requirement": "掌握",
+                  "exam_type": "单选题、解答题",
+                  "source": "人教版必修第二册",
+                  "text": "面面平行判定定理：如果一个平面内的两条相交直线都与另一个平面平行，那么这两个平面平行。面面平行性质定理：如果两个平行平面同时与第三个平面相交，那么它们的交线平行。面面平行可推出线面平行、线线平行。平行关系的转化是立体几何证明的常见思路。"
+                }
+              ]
+            },
+            {
+              "kp_id": "M-M2-C8-S6",
+              "name": "8.6 空间直线、平面的垂直",
+              "section": "空间直线、平面的垂直",
+              "grade": "高一",
+              "level": 3,
+              "children": [
+                {
+                  "kp_id": "M-M2C8S6-KP1",
+                  "name": "直线与平面垂直的判定与性质",
+                  "subject": "数学",
+                  "module": "必修第二册",
+                  "chapter": "立体几何初步",
+                  "section": "空间直线、平面的垂直",
+                  "grade": "高一",
+                  "level": 4,
+                  "difficulty": 4,
+                  "importance": 5,
+                  "level_requirement": "掌握",
+                  "exam_type": "解答题",
+                  "source": "人教版必修第二册",
+                  "text": "线面垂直判定定理：一条直线与一个平面内的两条相交直线都垂直，则该直线与此平面垂直。符号：l⊥a，l⊥b，a⊂α，b⊂α，a∩b=P⇒l⊥α。线面垂直性质定理：垂直于同一个平面的两条直线平行。直线与平面垂直时，直线与平面内所有直线垂直。三垂线定理及其逆定理常用于解题。"
+                },
+                {
+                  "kp_id": "M-M2C8S6-KP2",
+                  "name": "平面与平面垂直的判定与性质",
+                  "subject": "数学",
+                  "module": "必修第二册",
+                  "chapter": "立体几何初步",
+                  "section": "空间直线、平面的垂直",
+                  "grade": "高一",
+                  "level": 4,
+                  "difficulty": 4,
+                  "importance": 5,
+                  "level_requirement": "掌握",
+                  "exam_type": "解答题",
+                  "source": "人教版必修第二册",
+                  "text": "面面垂直判定定理：一个平面过另一个平面的垂线，则这两个平面垂直。面面垂直性质定理：两个平面垂直，则一个平面内垂直于交线的直线垂直于另一个平面。二面角及其平面角的概念：二面角的平面角范围是[0,π]。求二面角大小需找出平面角。"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kp_id": "M-M2-C9",
+          "name": "第九章 统计",
+          "chapter": "统计",
+          "grade": "高一",
+          "level": 2,
+          "children": [
+            {
+              "kp_id": "M-M2-C9-S1",
+              "name": "9.1 随机抽样",
+              "section": "随机抽样",
+              "grade": "高一",
+              "level": 3,
+              "children": [
+                {
+                  "kp_id": "M-M2C9S1-KP1",
+                  "name": "简单随机抽样与分层随机抽样",
+                  "subject": "数学",
+                  "module": "必修第二册",
+                  "chapter": "统计",
+                  "section": "随机抽样",
+                  "grade": "高一",
+                  "level": 4,
+                  "difficulty": 2,
+                  "importance": 4,
+                  "level_requirement": "理解",
+                  "exam_type": "单选题、填空题",
+                  "source": "人教版必修第二册",
+                  "text": "简单随机抽样是从总体中逐个不放回地抽取样本，使每个个体被抽到的可能性相同，常用抽签法和随机数表法。分层随机抽样：当总体由差异明显的几部分组成时，按比例在各层中独立抽取。分层抽样的样本容量=每层个体数占总体的比例乘以样本容量。"
+                },
+                {
+                  "kp_id": "M-M2C9S1-KP2",
+                  "name": "样本与总体、系统抽样",
+                  "subject": "数学",
+                  "module": "必修第二册",
+                  "chapter": "统计",
+                  "section": "随机抽样",
+                  "grade": "高一",
+                  "level": 4,
+                  "difficulty": 3,
+                  "importance": 3,
+                  "level_requirement": "理解",
+                  "exam_type": "单选题、解答题",
+                  "source": "人教版必修第二册",
+                  "text": "总体是所要考察对象的全体，个体是组成总体的每一个对象，样本是抽取的一部分个体。抽样调查相比普查节省人力物力，但存在抽样误差。系统抽样：将总体编号后按一定间隔等距抽取样本，适用于总体容量较大的情形。"
+                }
+              ]
+            },
+            {
+              "kp_id": "M-M2-C9-S2",
+              "name": "9.2 用样本估计总体",
+              "section": "用样本估计总体",
+              "grade": "高一",
+              "level": 3,
+              "children": [
+                {
+                  "kp_id": "M-M2C9S2-KP1",
+                  "name": "频率分布直方图",
+                  "subject": "数学",
+                  "module": "必修第二册",
+                  "chapter": "统计",
+                  "section": "用样本估计总体",
+                  "grade": "高一",
+                  "level": 4,
+                  "difficulty": 3,
+                  "importance": 4,
+                  "level_requirement": "掌握",
+                  "exam_type": "单选题、解答题",
+                  "source": "人教版必修第二册",
+                  "text": "作频率分布直方图的步骤：求极差、决定组距与组数、将数据分组、列频率分布表、画频率分布直方图。频率分布直方图中每个小矩形面积等于该组的频率，所有小矩形面积之和为1。由直方图可估计总体的频率分布、求众数、中位数、平均数。小矩形的高=频率/组距。"
+                },
+                {
+                  "kp_id": "M-M2C9S2-KP2",
+                  "name": "用样本估计总体的数字特征",
+                  "subject": "数学",
+                  "module": "必修第二册",
+                  "chapter": "统计",
+                  "section": "用样本估计总体",
+                  "grade": "高一",
+                  "level": 4,
+                  "difficulty": 3,
+                  "importance": 5,
+                  "level_requirement": "掌握",
+                  "exam_type": "单选题、解答题",
+                  "source": "人教版必修第二册",
+                  "text": "集中趋势的度量：平均数、中位数、众数。离散程度的度量：极差、方差、标准差。方差s^2=(1/n)Σ(xi-x̄)^2，标准差为方差的算术平方根。方差、标准差越小，数据越集中、越稳定。数据x1,x2,...,xn平均数为x̄，则kx1+b,...,kxn+b的平均数为kx̄+b，方差变为k^2s^2。"
+                }
+              ]
+            },
+            {
+              "kp_id": "M-M2-C9-S3",
+              "name": "9.3 统计案例（数据的直观表示与分析）",
+              "section": "数据的直观表示与分析",
+              "grade": "高一",
+              "level": 3,
+              "children": [
+                {
+                  "kp_id": "M-M2C9S3-KP1",
+                  "name": "茎叶图、直方图与折线图的应用",
+                  "subject": "数学",
+                  "module": "必修第二册",
+                  "chapter": "统计",
+                  "section": "数据的直观表示与分析",
+                  "grade": "高一",
+                  "level": 4,
+                  "difficulty": 3,
+                  "importance": 3,
+                  "level_requirement": "理解",
+                  "exam_type": "单选题、解答题",
+                  "source": "人教版必修第二册",
+                  "text": "茎叶图既能保留原始数据又能直观显示数据分布，适用于数据量适中的情形。折线图用于反映数据随时间的变化趋势。根据数据特点选择恰当的统计图表，并能从图表中读取数据、分析总体特征。统计图表的正确解读是数据分析的重要能力。"
+                },
+                {
+                  "kp_id": "M-M2C9S3-KP2",
+                  "name": "统计案例的综合应用",
+                  "subject": "数学",
+                  "module": "必修第二册",
+                  "chapter": "统计",
+                  "section": "数据的直观表示与分析",
+                  "grade": "高一",
+                  "level": 4,
+                  "difficulty": 4,
+                  "importance": 3,
+                  "level_requirement": "理解",
+                  "exam_type": "解答题",
+                  "source": "人教版必修第二册",
+                  "text": "结合具体案例，综合运用抽样、整理数据、图表表示、数字特征计算等方法分析实际问题。通过样本估计总体，对数据进行合理解释并作出判断。注意区分平均数与中位数、方差与标准差等概念的实际意义。"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kp_id": "M-M2-C10",
+          "name": "第十章 概率",
+          "chapter": "概率",
+          "grade": "高一",
+          "level": 2,
+          "children": [
+            {
+              "kp_id": "M-M2-C10-S1",
+              "name": "10.1 随机事件与概率",
+              "section": "随机事件与概率",
+              "grade": "高一",
+              "level": 3,
+              "children": [
+                {
+                  "kp_id": "M-M2C10S1-KP1",
+                  "name": "随机事件与古典概型",
+                  "subject": "数学",
+                  "module": "必修第二册",
+                  "chapter": "概率",
+                  "section": "随机事件与概率",
+                  "grade": "高一",
+                  "level": 4,
+                  "difficulty": 3,
+                  "importance": 5,
+                  "level_requirement": "掌握",
+                  "exam_type": "单选题、解答题",
+                  "source": "人教版必修第二册",
+                  "text": "在条件S下，可能发生也可能不发生的事件叫随机事件，必然发生的是必然事件，不能发生的是不可能事件。古典概型满足两个特征：有限性和等可能性。古典概型中P(A)=事件A包含的基本事件数/总的基本事件数。样本空间是所有可能结果构成的集合。"
+                },
+                {
+                  "kp_id": "M-M2C10S1-KP2",
+                  "name": "概率的性质与互斥事件",
+                  "subject": "数学",
+                  "module": "必修第二册",
+                  "chapter": "概率",
+                  "section": "随机事件与概率",
+                  "grade": "高一",
+                  "level": 4,
+                  "difficulty": 3,
+                  "importance": 5,
+                  "level_requirement": "掌握",
+                  "exam_type": "单选题、解答题",
+                  "source": "人教版必修第二册",
+                  "text": "概率的基本性质：0≤P(A)≤1，必然事件概率为1，不可能事件概率为0。互斥事件：不可能同时发生的两个事件，有P(A∪B)=P(A)+P(B)。对立事件：A∩B=∅且A∪B=Ω，且P(A)+P(B)=1。五个事件之间的关系及概率加法公式是概率计算的基础。"
+                }
+              ]
+            },
+            {
+              "kp_id": "M-M2-C10-S2",
+              "name": "10.2 事件的相互独立性",
+              "section": "事件的相互独立性",
+              "grade": "高一",
+              "level": 3,
+              "children": [
+                {
+                  "kp_id": "M-M2C10S2-KP1",
+                  "name": "相互独立事件",
+                  "subject": "数学",
+                  "module": "必修第二册",
+                  "chapter": "概率",
+                  "section": "事件的相互独立性",
+                  "grade": "高一",
+                  "level": 4,
+                  "difficulty": 4,
+                  "importance": 5,
+                  "level_requirement": "掌握",
+                  "exam_type": "单选题、解答题",
+                  "source": "人教版必修第二册",
+                  "text": "若事件A发生与否不影响事件B发生的概率，则称A、B相互独立，有P(AB)=P(A)P(B)。相互独立事件的交事件概率等于各事件概率之积。注意区分互斥事件与相互独立事件：互斥强调不能同时发生，独立强调概率互不影响。多个独立事件同时发生的概率为各概率之积。"
+                },
+                {
+                  "kp_id": "M-M2C10S2-KP2",
+                  "name": "独立事件的综合应用",
+                  "subject": "数学",
+                  "module": "必修第二册",
+                  "chapter": "概率",
+                  "section": "事件的相互独立性",
+                  "grade": "高一",
+                  "level": 4,
+                  "difficulty": 4,
+                  "importance": 5,
+                  "level_requirement": "掌握",
+                  "exam_type": "解答题",
+                  "source": "人教版必修第二册",
+                  "text": "求相互独立事件至少有一个发生等的概率，常利用对立事件转化：P(A∪B)=1-P(¬A)P(¬B)。将复杂事件分解为独立事件的交或并，利用加法公式和乘法公式计算。实际应用中需判断事件是否独立，通常由题设条件或实际意义决定。"
+                }
+              ]
+            },
+            {
+              "kp_id": "M-M2-C10-S3",
+              "name": "10.3 频率与概率",
+              "section": "频率与概率",
+              "grade": "高一",
+              "level": 3,
+              "children": [
+                {
+                  "kp_id": "M-M2C10S3-KP1",
+                  "name": "频率与概率的关系",
+                  "subject": "数学",
+                  "module": "必修第二册",
+                  "chapter": "概率",
+                  "section": "频率与概率",
+                  "grade": "高一",
+                  "level": 4,
+                  "difficulty": 2,
+                  "importance": 3,
+                  "level_requirement": "理解",
+                  "exam_type": "单选题、填空题",
+                  "source": "人教版必修第二册",
+                  "text": "频率是某个事件在n次试验中发生的次数与试验次数的比值，随试验次数变化而波动。概率是事件发生的可能性大小的度量，是确定的常数。当试验次数增大时，频率稳定于概率附近，频率是概率的估计值。并非试验次数越多频率越接近概率，但总体上趋于稳定。"
+                },
+                {
+                  "kp_id": "M-M2C10S3-KP2",
+                  "name": "随机模拟与概率的应用",
+                  "subject": "数学",
+                  "module": "必修第二册",
+                  "chapter": "概率",
+                  "section": "频率与概率",
+                  "grade": "高一",
+                  "level": 4,
+                  "difficulty": 3,
+                  "importance": 3,
+                  "level_requirement": "理解",
+                  "exam_type": "解答题",
+                  "source": "人教版必修第二册",
+                  "text": "用随机数表或计算机进行随机模拟，可估计事件发生的概率，尤其是古典概型难以直接计算时。随机模拟的关键是保证样本的随机性和代表性。通过大量重复试验，用频率估计概率，可用于方案决策、风险评估等实际问题的定量分析。"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "kp_id": "M-X1",
+      "name": "选择性必修第一册",
+      "module": "选择性必修第一册",
+      "grade": "高二",
+      "level": 1,
+      "children": [
+        {
+          "kp_id": "M-X1-C1",
+          "name": "第一章 空间向量与立体几何",
+          "chapter": "空间向量与立体几何",
+          "grade": "高二",
+          "level": 2,
+          "children": [
+            {
+              "kp_id": "M-X1-C1-S1",
+              "name": "1.1 空间向量及其运算",
+              "section": "空间向量及其运算",
+              "grade": "高二",
+              "level": 3,
+              "children": [
+                {
+                  "kp_id": "M-X1C1S1-KP1",
+                  "name": "空间向量的概念与线性运算",
+                  "subject": "数学",
+                  "module": "选择性必修第一册",
+                  "chapter": "空间向量与立体几何",
+                  "section": "空间向量及其运算",
+                  "grade": "高二",
+                  "level": 4,
+                  "difficulty": 3,
+                  "importance": 4,
+                  "level_requirement": "理解",
+                  "exam_type": "单选题、填空题",
+                  "source": "人教版选择性必修第一册",
+                  "text": "空间向量与平面向量类似，既有大小又有方向。空间向量的加法、减法、数乘、共线定理、共面向量定理等与平面向量一致。共面向量定理：如果两个向量a、b不共线，那么向量p与向量a、b共面的充要条件是存在唯一有序实数对(x,y)使p=xa+yb。"
+                },
+                {
+                  "kp_id": "M-X1C1S1-KP2",
+                  "name": "空间向量的数量积",
+                  "subject": "数学",
+                  "module": "选择性必修第一册",
+                  "chapter": "空间向量与立体几何",
+                  "section": "空间向量及其运算",
+                  "grade": "高二",
+                  "level": 4,
+                  "difficulty": 3,
+                  "importance": 5,
+                  "level_requirement": "掌握",
+                  "exam_type": "单选题、解答题",
+                  "source": "人教版选择性必修第一册",
+                  "text": "空间向量a、b的数量积a·b=|a||b|cosθ，为实数。性质：a⊥b⇔a·b=0；|a|^2=a·a；cosθ=(a·b)/(|a||b|)。空间向量数量积满足交换律、分配律。利用数量积可求空间两向量的夹角、线段长度、证明两直线垂直。"
+                }
+              ]
+            },
+            {
+              "kp_id": "M-X1-C1-S2",
+              "name": "1.2 空间向量基本定理",
+              "section": "空间向量基本定理",
+              "grade": "高二",
+              "level": 3,
+              "children": [
+                {
+                  "kp_id": "M-X1C1S2-KP1",
+                  "name": "空间向量基本定理",
+                  "subject": "数学",
+                  "module": "选择性必修第一册",
+                  "chapter": "空间向量与立体几何",
+                  "section": "空间向量基本定理",
+                  "grade": "高二",
+                  "level": 4,
+                  "difficulty": 3,
+                  "importance": 4,
+                  "level_requirement": "理解",
+                  "exam_type": "单选题、解答题",
+                  "source": "人教版选择性必修第一册",
+                  "text": "空间向量基本定理：如果三个向量a、b、c不共面，那么对空间任一向量p，存在唯一有序实数组(x,y,z)使p=xa+yb+zc。不共面的三个向量a、b、c构成空间的一个基底。空间向量基本定理是空间向量坐标化的理论依据。"
+                },
+                {
+                  "kp_id": "M-X1C1S2-KP2",
+                  "name": "空间直角坐标系与空间向量",
+                  "subject": "数学",
+                  "module": "选择性必修第一册",
+                  "chapter": "空间向量与立体几何",
+                  "section": "空间向量基本定理",
+                  "grade": "高二",
+                  "level": 4,
+                  "difficulty": 3,
+                  "importance": 5,
+                  "level_requirement": "掌握",
+                  "exam_type": "单选题、解答题",
+                  "source": "人教版选择性必修第一册",
+                  "text": "过空间一点O作三条互相垂直的单位向量i、j、k，就建立了空间直角坐标系Oxyz。空间一点的坐标、空间向量的坐标表示由此确定。空间两点P1(x1,y1,z1)、P2(x2,y2,z2)的距离|P1P2|=√((x2-x1)^2+(y2-y1)^2+(z2-z1)^2)。"
+                }
+              ]
+            },
+            {
+              "kp_id": "M-X1-C1-S3",
+              "name": "1.3 空间向量及其运算的坐标表示",
+              "section": "空间向量及其运算的坐标表示",
+              "grade": "高二",
+              "level": 3,
+              "children": [
+                {
+                  "kp_id": "M-X1C1S3-KP1",
+                  "name": "空间向量的坐标运算",
+                  "subject": "数学",
+                  "module": "选择性必修第一册",
+                  "chapter": "空间向量与立体几何",
+                  "section": "空间向量及其运算的坐标表示",
+                  "grade": "高二",
+                  "level": 4,
+                  "difficulty": 3,
+                  "importance": 5,
+                  "level_requirement": "掌握",
+                  "exam_type": "单选题、解答题",
+                  "source": "人教版选择性必修第一册",
+                  "text": "设a=(x1,y1,z1)，b=(x2,y2,z2)，则a+b=(x1+x2,y1+y2,z1+z2)，a·b=x1x2+y1y2+z1z2，|a|=√(x1^2+y1^2+z1^2)。平行：a∥b⇔x1/x2=y1/y2=z1/z2（坐标对应成比例）。垂直：a⊥b⇔x1x2+y1y2+z1z2=0。夹角余弦cosθ=(x1x2+y1y2+z1z2)/(√(x1^2+y1^2+z1^2)√(x2^2+y2^2+z2^2))。"
+                },
+                {
+                  "kp_id": "M-X1C1S3-KP2",
+                  "name": "用坐标运算求空间角与距离",
+                  "subject": "数学",
+                  "module": "选择性必修第一册",
+                  "chapter": "空间向量与立体几何",
+                  "section": "空间向量及其运算的坐标表示",
+                  "grade": "高二",
+                  "level": 4,
+                  "difficulty": 4,
+                  "importance": 5,
+                  "level_requirement": "掌握",
+                  "exam_type": "解答题",
+                  "source": "人教版选择性必修第一册",
+                  "text": "通过空间向量坐标运算可直接求异面直线所成角、线面角、二面角及点到平面距离。建立合适的空间直角坐标系是解题关键，应使尽可能多的点落在坐标轴上。利用方向向量与法向量求角：线面角的正弦等于直线方向向量与平面法向量夹角余弦的绝对值。"
+                }
+              ]
+            },
+            {
+              "kp_id": "M-X1-C1-S4",
+              "name": "1.4 空间向量的应用",
+              "section": "空间向量的应用",
+              "grade": "高二",
+              "level": 3,
+              "children": [
+                {
+                  "kp_id": "M-X1C1S4-KP1",
+                  "name": "用空间向量证明平行与垂直",
+                  "subject": "数学",
+                  "module": "选择性必修第一册",
+                  "chapter": "空间向量与立体几何",
+                  "section": "空间向量的应用",
+                  "grade": "高二",
+                  "level": 4,
+                  "difficulty": 4,
+                  "importance": 5,
+                  "level_requirement": "掌握",
+                  "exam_type": "解答题",
+                  "source": "人教版选择性必修第一册",
+                  "text": "用向量方法证明线面平行：直线的方向向量与平面的法向量垂直。证明线面垂直：直线的方向向量与平面的法向量平行。证明面面平行：两平面的法向量平行。证明面面垂直：两平面的法向量垂直。利用向量运算将几何证明转化为代数运算，是空间向量应用的核心。"
+                },
+                {
+                  "kp_id": "M-X1C1S4-KP2",
+                  "name": "空间向量与立体几何的综合应用",
+                  "subject": "数学",
+                  "module": "选择性必修第一册",
+                  "chapter": "空间向量与立体几何",
+                  "section": "空间向量的应用",
+                  "grade": "高二",
+                  "level": 4,
+                  "difficulty": 5,
+                  "importance": 5,
+                  "level_requirement": "掌握",
+                  "exam_type": "解答题",
+                  "source": "人教版选择性必修第一册",
+                  "text": "综合运用空间向量解决立体几何中的存在性问题、最值问题、动点问题。设动点坐标，建立目标函数，利用方程或不等式求解。向量法步骤：建系、表示点的坐标、求向量、计算、得出结论。注意点的坐标正负、法向量方向的合理选择。"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kp_id": "M-X1-C2",
+          "name": "第二章 直线和圆的方程",
+          "chapter": "直线和圆的方程",
+          "grade": "高二",
+          "level": 2,
+          "children": [
+            {
+              "kp_id": "M-X1-C2-S1",
+              "name": "2.1 直线的倾斜角与斜率",
+              "section": "直线的倾斜角与斜率",
+              "grade": "高二",
+              "level": 3,
+              "children": [
+                {
+                  "kp_id": "M-X1C2S1-KP1",
+                  "name": "直线的倾斜角与斜率",
+                  "subject": "数学",
+                  "module": "选择性必修第一册",
+                  "chapter": "直线和圆的方程",
+                  "section": "直线的倾斜角与斜率",
+                  "grade": "高二",
+                  "level": 4,
+                  "difficulty": 2,
+                  "importance": 4,
+                  "level_requirement": "理解",
+                  "exam_type": "单选题、填空题",
+                  "source": "人教版选择性必修第一册",
+                  "text": "当直线l与x轴相交时，以x轴正半轴为基准，x轴正向与直线l向上方向之间所成的角α叫倾斜角，范围是[0°,180°)。倾斜角不等于90°时，倾斜角α的正切值tanα叫做斜率k。过两点P1(x1,y1)、P2(x2,y2)的斜率k=(y2-y1)/(x2-x1)。倾斜角为90°时斜率不存在。"
+                },
+                {
+                  "kp_id": "M-X1C2S1-KP2",
+                  "name": "两直线平行与垂直的判定",
+                  "subject": "数学",
+                  "module": "选择性必修第一册",
+                  "chapter": "直线和圆的方程",
+                  "section": "直线的倾斜角与斜率",
+                  "grade": "高二",
+                  "level": 4,
+                  "difficulty": 3,
+                  "importance": 4,
+                  "level_requirement": "掌握",
+                  "exam_type": "单选题、填空题",
+                  "source": "人教版选择性必修第一册",
+                  "text": "两条直线（斜率存在）平行：k1=k2且b1≠b2（不重合）。两条直线垂直：k1·k2=-1。当斜率不存在时需特殊讨论。利用斜率判定两直线位置关系是解析几何的基础。求参数使两直线平行或垂直时，注意讨论斜率不存在的情形。"
+                }
+              ]
+            },
+            {
+              "kp_id": "M-X1-C2-S2",
+              "name": "2.2 直线的方程",
+              "section": "直线的方程",
+              "grade": "高二",
+              "level": 3,
+              "children": [
+                {
+                  "kp_id": "M-X1C2S2-KP1",
+                  "name": "直线的五种形式方程",
+                  "subject": "数学",
+                  "module": "选择性必修第一册",
+                  "chapter": "直线和圆的方程",
+                  "section": "直线的方程",
+                  "grade": "高二",
+                  "level": 4,
+                  "difficulty": 3,
+                  "importance": 5,
+                  "level_requirement": "掌握",
+                  "exam_type": "单选题、解答题",
+                  "source": "人教版选择性必修第一册",
+                  "text": "直线的方程形式：点斜式y-y1=k(x-x1)；斜截式y=kx+b；两点式(y-y1)/(y2-y1)=(x-x1)/(x2-x1)；截距式x/a+y/b=1；一般式Ax+By+C=0（A、B不同时为0）。斜率为k的直线一般式可化为y=kx+b。选择适当形式求直线方程，注意各种形式的适用条件。"
+                },
+                {
+                  "kp_id": "M-X1C2S2-KP2",
+                  "name": "直线方程的综合应用",
+                  "subject": "数学",
+                  "module": "选择性必修第一册",
+                  "chapter": "直线和圆的方程",
+                  "section": "直线的方程",
+                  "grade": "高二",
+                  "level": 4,
+                  "difficulty": 4,
+                  "importance": 4,
+                  "level_requirement": "掌握",
+                  "exam_type": "解答题",
+                  "source": "人教版选择性必修第一册",
+                  "text": "根据条件灵活选择直线方程形式，如已知斜率和一点用点斜式，求截距用截距式。直线过定点问题的处理：将含参数方程整理后令参数项系数和常数项分别为0。对称问题（点关于直线对称、直线关于直线对称）是常考题型，需熟练运用中点坐标公式和垂直关系。"
+                }
+              ]
+            },
+            {
+              "kp_id": "M-X1-C2-S3",
+              "name": "2.3 直线的交点坐标与距离公式",
+              "section": "直线的交点坐标与距离公式",
+              "grade": "高二",
+              "level": 3,
+              "children": [
+                {
+                  "kp_id": "M-X1C2S3-KP1",
+                  "name": "两直线的交点与距离公式",
+                  "subject": "数学",
+                  "module": "选择性必修第一册",
+                  "chapter": "直线和圆的方程",
+                  "section": "直线的交点坐标与距离公式",
+                  "grade": "高二",
+                  "level": 4,
+                  "difficulty": 3,
+                  "importance": 5,
+                  "level_requirement": "掌握",
+                  "exam_type": "单选题、解答题",
+                  "source": "人教版选择性必修第一册",
+                  "text": "两直线交点坐标是联立两直线方程所得方程组的解。两点间距离公式|P1P2|=√((x2-x1)^2+(y2-y1)^2)。点到直线距离公式点P(x0,y0)到直线Ax+By+C=0的距离d=|Ax0+By0+C|/√(A^2+B^2)。两平行线Ax+By+C1=0与Ax+By+C2=0间的距离d=|C1-C2|/√(A^2+B^2)。"
+                },
+                {
+                  "kp_id": "M-X1C2S3-KP2",
+                  "name": "距离公式的应用",
+                  "subject": "数学",
+                  "module": "选择性必修第一册",
+                  "chapter": "直线和圆的方程",
+                  "section": "直线的交点坐标与距离公式",
+                  "grade": "高二",
+                  "level": 4,
+                  "difficulty": 4,
+                  "importance": 4,
+                  "level_requirement": "掌握",
+                  "exam_type": "单选题、解答题",
+                  "source": "人教版选择性必修第一册",
+                  "text": "利用点到直线距离公式求最值，如求圆上点到直线距离的最值、三角形面积的最值。利用两平行线距离公式求距离恒定的直线。求角平分线、对称轴等问题常结合距离相等条件。三角形面积可用底乘高，高为点到直线的距离。"
+                }
+              ]
+            },
+            {
+              "kp_id": "M-X1-C2-S4",
+              "name": "2.4 圆的方程",
+              "section": "圆的方程",
+              "grade": "高二",
+              "level": 3,
+              "children": [
+                {
+                  "kp_id": "M-X1C2S4-KP1",
+                  "name": "圆的标准方程与一般方程",
+                  "subject": "数学",
+                  "module": "选择性必修第一册",
+                  "chapter": "直线和圆的方程",
+                  "section": "圆的方程",
+                  "grade": "高二",
+                  "level": 4,
+                  "difficulty": 3,
+                  "importance": 5,
+                  "level_requirement": "掌握",
+                  "exam_type": "单选题、解答题",
+                  "source": "人教版选择性必修第一册",
+                  "text": "圆的标准方程：(x-a)^2+(y-b)^2=r^2，圆心(a,b)，半径r。圆的一般方程：x^2+y^2+Dx+Ey+F=0，当D^2+E^2-4F>0时表示圆，圆心(-D/2,-E/2)，半径r=√(D^2+E^2-4F)/2。求圆的方程常用待定系数法。点与圆的位置关系可由点到圆心距离与半径比较确定。"
+                },
+                {
+                  "kp_id": "M-X1C2S4-KP2",
+                  "name": "圆的方程的应用",
+                  "subject": "数学",
+                  "module": "选择性必修第一册",
+                  "chapter": "直线和圆的方程",
+                  "section": "圆的方程",
+                  "grade": "高二",
+                  "level": 4,
+                  "difficulty": 4,
+                  "importance": 4,
+                  "level_requirement": "掌握",
+                  "exam_type": "解答题",
+                  "source": "人教版选择性必修第一册",
+                  "text": "求圆的标准方程常用几何法：圆心必在弦的垂直平分线上，圆经过两点则圆心在两点中垂线上。由圆上三点确定圆，用三点坐标代入待定系数。求与圆相关的轨迹问题时，常利用圆的定义（到定点距离等于定长）。参数方程x=a+rcosθ，y=b+rsinθ在求最值中常用。"
+                }
+              ]
+            },
+            {
+              "kp_id": "M-X1-C2-S5",
+              "name": "2.5 直线与圆、圆与圆的位置关系",
+              "section": "直线与圆、圆与圆的位置关系",
+              "grade": "高二",
+              "level": 3,
+              "children": [
+                {
+                  "kp_id": "M-X1C2S5-KP1",
+                  "name": "直线与圆的位置关系",
+                  "subject": "数学",
+                  "module": "选择性必修第一册",
+                  "chapter": "直线和圆的方程",
+                  "section": "直线与圆、圆与圆的位置关系",
+                  "grade": "高二",
+                  "level": 4,
+                  "difficulty": 4,
+                  "importance": 5,
+                  "level_requirement": "掌握",
+                  "exam_type": "单选题、解答题",
+                  "source": "人教版选择性必修第一册",
+                  "text": "直线与圆的位置关系有相离、相切、相交三种，由圆心到直线的距离d与半径r的关系判定：d>r相离，d=r相切，d<r相交。也可通过联立方程组判别式判定。弦长公式：l=2√(r^2-d^2)。过圆上一点的切线方程、弦的中点问题常用垂径定理。"
+                },
+                {
+                  "kp_id": "M-X1C2S5-KP2",
+                  "name": "圆与圆的位置关系",
+                  "subject": "数学",
+                  "module": "选择性必修第一册",
+                  "chapter": "直线和圆的方程",
+                  "section": "直线与圆、圆与圆的位置关系",
+                  "grade": "高二",
+                  "level": 4,
+                  "difficulty": 4,
+                  "importance": 4,
+                  "level_requirement": "掌握",
+                  "exam_type": "单选题、解答题",
+                  "source": "人教版选择性必修第一册",
+                  "text": "两圆的位置关系由圆心距d与两半径R、r的关系确定：d>R+r外离，d=R+r外切，|R-r|<d<R+r相交，d=|R-r|内切，d<|R-r|内含。两圆相交时公共弦所在直线方程由两圆方程相减得到。相切时切点、连心线共线。"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kp_id": "M-X1-C3",
+          "name": "第三章 圆锥曲线的方程",
+          "chapter": "圆锥曲线的方程",
+          "grade": "高二",
+          "level": 2,
+          "children": [
+            {
+              "kp_id": "M-X1-C3-S1",
+              "name": "3.1 椭圆",
+              "section": "椭圆",
+              "grade": "高二",
+              "level": 3,
+              "children": [
+                {
+                  "kp_id": "M-X1C3S1-KP1",
+                  "name": "椭圆的定义与标准方程",
+                  "subject": "数学",
+                  "module": "选择性必修第一册",
+                  "chapter": "圆锥曲线的方程",
+                  "section": "椭圆",
+                  "grade": "高二",
+                  "level": 4,
+                  "difficulty": 3,
+                  "importance": 5,
+                  "level_requirement": "掌握",
+                  "exam_type": "单选题、解答题",
+                  "source": "人教版选择性必修第一册",
+                  "text": "平面内到两个定点F1、F2的距离之和等于常数（大于|F1F2|）的点的轨迹叫椭圆，两定点叫焦点，焦距2c，长轴2a，短轴2b，满足a^2=b^2+c^2。椭圆标准方程：焦点在x轴上为x^2/a^2+y^2/b^2=1，焦点在y轴上为y^2/a^2+x^2/b^2=1（a>b>0）。"
+                },
+                {
+                  "kp_id": "M-X1C3S1-KP2",
+                  "name": "椭圆的几何性质",
+                  "subject": "数学",
+                  "module": "选择性必修第一册",
+                  "chapter": "圆锥曲线的方程",
+                  "section": "椭圆",
+                  "grade": "高二",
+                  "level": 4,
+                  "difficulty": 4,
+                  "importance": 5,
+                  "level_requirement": "掌握",
+                  "exam_type": "单选题、解答题",
+                  "source": "人教版选择性必修第一册",
+                  "text": "椭圆的几何性质：范围、对称性（关于x轴、y轴、原点对称）、顶点、离心率e=c/a（0<e<1）。离心率越大椭圆越扁，越接近0越接近圆。焦点三角形问题常用椭圆定义和余弦定理。直线与椭圆的联立、弦长、中点弦问题常结合韦达定理。"
+                }
+              ]
+            },
+            {
+              "kp_id": "M-X1-C3-S2",
+              "name": "3.2 双曲线",
+              "section": "双曲线",
+              "grade": "高二",
+              "level": 3,
+              "children": [
+                {
+                  "kp_id": "M-X1C3S2-KP1",
+                  "name": "双曲线的定义与标准方程",
+                  "subject": "数学",
+                  "module": "选择性必修第一册",
+                  "chapter": "圆锥曲线的方程",
+                  "section": "双曲线",
+                  "grade": "高二",
+                  "level": 4,
+                  "difficulty": 3,
+                  "importance": 5,
+                  "level_requirement": "掌握",
+                  "exam_type": "单选题、解答题",
+                  "source": "人教版选择性必修第一册",
+                  "text": "平面内到两个定点F1、F2的距离之差的绝对值等于常数（小于|F1F2|且大于0）的点的轨迹叫双曲线。双曲线标准方程：焦点在x轴为x^2/a^2-y^2/b^2=1（a>0，b>0），满足c^2=a^2+b^2。实轴长2a，虚轴长2b，焦距2c。定义中差的绝对值保证了双曲线两支。"
+                },
+                {
+                  "kp_id": "M-X1C3S2-KP2",
+                  "name": "双曲线的几何性质与渐近线",
+                  "subject": "数学",
+                  "module": "选择性必修第一册",
+                  "chapter": "圆锥曲线的方程",
+                  "section": "双曲线",
+                  "grade": "高二",
+                  "level": 4,
+                  "difficulty": 4,
+                  "importance": 5,
+                  "level_requirement": "掌握",
+                  "exam_type": "单选题、解答题",
+                  "source": "人教版选择性必修第一册",
+                  "text": "双曲线离心率e=c/a>1，e越大开口越开阔。渐近线方程：焦点在x轴时y=±(b/a)x，焦点在y轴时y=±(a/b)x。等轴双曲线的离心率为√2，渐近线互相垂直。利用渐近线、离心率、实虚轴关系可确定双曲线方程。共渐近线的双曲线系方程需掌握。"
+                }
+              ]
+            },
+            {
+              "kp_id": "M-X1-C3-S3",
+              "name": "3.3 抛物线",
+              "section": "抛物线",
+              "grade": "高二",
+              "level": 3,
+              "children": [
+                {
+                  "kp_id": "M-X1C3S3-KP1",
+                  "name": "抛物线的定义与标准方程",
+                  "subject": "数学",
+                  "module": "选择性必修第一册",
+                  "chapter": "圆锥曲线的方程",
+                  "section": "抛物线",
+                  "grade": "高二",
+                  "level": 4,
+                  "difficulty": 3,
+                  "importance": 5,
+                  "level_requirement": "掌握",
+                  "exam_type": "单选题、解答题",
+                  "source": "人教版选择性必修第一册",
+                  "text": "平面内到一个定点F和一条定直线l（F不在l上）的距离相等的点的轨迹叫抛物线，点F叫焦点，直线l叫准线。标准方程y^2=2px（p>0）焦点(p/2,0)，准线x=-p/2。四种标准形式（开口方向不同）需区别记忆。p表示焦点到准线的距离。"
+                },
+                {
+                  "kp_id": "M-X1C3S3-KP2",
+                  "name": "抛物线的几何性质与应用",
+                  "subject": "数学",
+                  "module": "选择性必修第一册",
+                  "chapter": "圆锥曲线的方程",
+                  "section": "抛物线",
+                  "grade": "高二",
+                  "level": 4,
+                  "difficulty": 4,
+                  "importance": 5,
+                  "level_requirement": "掌握",
+                  "exam_type": "单选题、解答题",
+                  "source": "人教版选择性必修第一册",
+                  "text": "抛物线是轴对称图形，对称轴为坐标轴，顶点在原点，无中心对称。抛物线上任一点到焦点的距离等于到准线的距离（焦半径）。过焦点的弦长与通径：通径为2p。利用抛物线的定义可将点到焦点距离问题转化为点到准线距离问题，简化计算。直线与抛物线联立常用韦达定理。"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "kp_id": "M-X2",
+      "name": "选择性必修第二册",
+      "module": "选择性必修第二册",
+      "grade": "高二",
+      "level": 1,
+      "children": [
+        {
+          "kp_id": "M-X2-C1",
+          "name": "第四章 数列",
+          "chapter": "数列",
+          "grade": "高二",
+          "level": 2,
+          "children": [
+            {
+              "kp_id": "M-X2-C1-S1",
+              "name": "4.1 数列的概念",
+              "section": "数列的概念",
+              "grade": "高二",
+              "level": 3,
+              "children": [
+                {
+                  "kp_id": "M-X2C1S1-KP1",
+                  "name": "数列的概念与通项公式",
+                  "subject": "数学",
+                  "module": "选择性必修第二册",
+                  "chapter": "数列",
+                  "section": "数列的概念",
+                  "grade": "高二",
+                  "level": 4,
+                  "difficulty": 2,
+                  "importance": 4,
+                  "level_requirement": "理解",
+                  "exam_type": "单选题、填空题",
+                  "source": "人教版选择性必修第二册",
+                  "text": "按确定的顺序排列的一列数叫做数列，数列中的每一个数叫做这个数列的项。第n位上的数叫第n项，记作a_n。数列可看作定义域为正整数集N*或其有限子集的一种特殊函数。通项公式是表示数列{a_n}的第n项a_n与序号n之间关系的表达式。已知前n项和S_n求通项：a1=S1，a_n=S_n-S_(n-1)（n≥2）。"
+                },
+                {
+                  "kp_id": "M-X2C1S1-KP2",
+                  "name": "数列的递推公式与单调性",
+                  "subject": "数学",
+                  "module": "选择性必修第二册",
+                  "chapter": "数列",
+                  "section": "数列的概念",
+                  "grade": "高二",
+                  "level": 4,
+                  "difficulty": 3,
+                  "importance": 4,
+                  "level_requirement": "掌握",
+                  "exam_type": "单选题、解答题",
+                  "source": "人教版选择性必修第二册",
+                  "text": "递推公式是用数列中已知项表示后一项的式子，如a_(n+1)=f(a_n)，是给出数列的另一种方法，需结合初始条件确定整个数列。数列的单调性：若a_(n+1)>a_n对一切n∈N*成立，则数列递增；若a_(n+1)<a_n，则递减。判断数列单调性可用作差法或作商法，也可借助通项所对应函数的单调性。"
+                }
+              ]
+            },
+            {
+              "kp_id": "M-X2-C1-S2",
+              "name": "4.2 等差数列",
+              "section": "等差数列",
+              "grade": "高二",
+              "level": 3,
+              "children": [
+                {
+                  "kp_id": "M-X2C1S2-KP1",
+                  "name": "等差数列的定义与通项公式",
+                  "subject": "数学",
+                  "module": "选择性必修第二册",
+                  "chapter": "数列",
+                  "section": "等差数列",
+                  "grade": "高二",
+                  "level": 4,
+                  "difficulty": 3,
+                  "importance": 5,
+                  "level_requirement": "掌握",
+                  "exam_type": "单选题、解答题",
+                  "source": "人教版选择性必修第二册",
+                  "text": "如果一个数列从第2项起，每一项与它前一项的差都等于同一个常数d，那么这个数列叫做等差数列，常数d叫公差。通项公式a_n=a1+(n-1)d。等差中项：A=(a+b)/2，则a、A、b成等差数列。若m+n=p+q，则a_m+a_n=a_p+a_q。已知a_m、d可求通项，公差d可正可负可为零。"
+                },
+                {
+                  "kp_id": "M-X2C1S2-KP2",
+                  "name": "等差数列的前n项和",
+                  "subject": "数学",
+                  "module": "选择性必修第二册",
+                  "chapter": "数列",
+                  "section": "等差数列",
+                  "grade": "高二",
+                  "level": 4,
+                  "difficulty": 4,
+                  "importance": 5,
+                  "level_requirement": "掌握",
+                  "exam_type": "单选题、解答题",
+                  "source": "人教版选择性必修第二册",
+                  "text": "等差数列前n项和公式：S_n=n(a1+a_n)/2=na1+n(n-1)d/2。S_n是关于n的二次函数（d≠0时），可表示为S_n=An^2+Bn。S_n的最值问题可转化为二次函数最值或利用a_n的符号变化求解。等差数列的S_n、S_2n-S_n、S_3n-S_2n也成等差数列。裂项求和、倒序相加法可用于求前n项和。"
+                }
+              ]
+            },
+            {
+              "kp_id": "M-X2-C1-S3",
+              "name": "4.3 等比数列",
+              "section": "等比数列",
+              "grade": "高二",
+              "level": 3,
+              "children": [
+                {
+                  "kp_id": "M-X2C1S3-KP1",
+                  "name": "等比数列的定义与通项公式",
+                  "subject": "数学",
+                  "module": "选择性必修第二册",
+                  "chapter": "数列",
+                  "section": "等比数列",
+                  "grade": "高二",
+                  "level": 4,
+                  "difficulty": 3,
+                  "importance": 5,
+                  "level_requirement": "掌握",
+                  "exam_type": "单选题、解答题",
+                  "source": "人教版选择性必修第二册",
+                  "text": "如果一个数列从第2项起，每一项与它前一项的比值都等于同一个常数q（q≠0），那么这个数列叫做等比数列，常数q叫公比。通项公式a_n=a1·q^(n-1)。等比中项：G^2=ab（G≠0），则a、G、b成等比数列。若m+n=p+q，则a_m·a_n=a_p·a_q。等比数列的每一项都不为零。"
+                },
+                {
+                  "kp_id": "M-X2C1S3-KP2",
+                  "name": "等比数列的前n项和",
+                  "subject": "数学",
+                  "module": "选择性必修第二册",
+                  "chapter": "数列",
+                  "section": "等比数列",
+                  "grade": "高二",
+                  "level": 4,
+                  "difficulty": 4,
+                  "importance": 5,
+                  "level_requirement": "掌握",
+                  "exam_type": "单选题、解答题",
+                  "source": "人教版选择性必修第二册",
+                  "text": "等比数列前n项和公式：当q=1时S_n=na1；当q≠1时S_n=a1(1-q^n)/(1-q)。求S_n时必须分q=1和q≠1讨论。错位相减法是推导求和公式的方法，也是求等差×等比型数列前n项和的常用方法。等比数列的S_n、S_2n-S_n、S_3n-S_2n也成等比数列。"
+                }
+              ]
+            },
+            {
+              "kp_id": "M-X2-C1-S4",
+              "name": "4.4 数学归纳法",
+              "section": "数学归纳法",
+              "grade": "高二",
+              "level": 3,
+              "children": [
+                {
+                  "kp_id": "M-X2C1S4-KP1",
+                  "name": "数学归纳法的原理与步骤",
+                  "subject": "数学",
+                  "module": "选择性必修第二册",
+                  "chapter": "数列",
+                  "section": "数学归纳法",
+                  "grade": "高二",
+                  "level": 4,
+                  "difficulty": 4,
+                  "importance": 4,
+                  "level_requirement": "掌握",
+                  "exam_type": "解答题",
+                  "source": "人教版选择性必修第二册",
+                  "text": "数学归纳法是证明与正整数n有关的命题的常用方法。原理：先证明当n取第一个值n0时命题成立（归纳奠基），再假设n=k（k≥n0）时命题成立，证明n=k+1时命题也成立（归纳递推），两步缺一不可。第一步是基础，第二步是递推的依据。"
+                },
+                {
+                  "kp_id": "M-X2C1S4-KP2",
+                  "name": "数学归纳法的应用",
+                  "subject": "数学",
+                  "module": "选择性必修第二册",
+                  "chapter": "数列",
+                  "section": "数学归纳法",
+                  "grade": "高二",
+                  "level": 4,
+                  "difficulty": 4,
+                  "importance": 4,
+                  "level_requirement": "掌握",
+                  "exam_type": "解答题",
+                  "source": "人教版选择性必修第二册",
+                  "text": "数学归纳法常用于证明数列通项公式、恒等式、不等式及整除性问题。应用时关键在归纳递推一步，需正确利用归纳假设，将n=k时的结论推导到n=k+1。有时需将命题强化或用第二数学归纳法。证明数列不等式时可能结合放缩法、比较法。"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kp_id": "M-X2-C2",
+          "name": "第五章 一元函数的导数及其应用",
+          "chapter": "一元函数的导数及其应用",
+          "grade": "高二",
+          "level": 2,
+          "children": [
+            {
+              "kp_id": "M-X2-C2-S1",
+              "name": "5.1 导数的概念及其意义",
+              "section": "导数的概念及其意义",
+              "grade": "高二",
+              "level": 3,
+              "children": [
+                {
+                  "kp_id": "M-X2C2S1-KP1",
+                  "name": "平均变化率与瞬时变化率",
+                  "subject": "数学",
+                  "module": "选择性必修第二册",
+                  "chapter": "一元函数的导数及其应用",
+                  "section": "导数的概念及其意义",
+                  "grade": "高二",
+                  "level": 4,
+                  "difficulty": 3,
+                  "importance": 5,
+                  "level_requirement": "掌握",
+                  "exam_type": "单选题、解答题",
+                  "source": "人教版选择性必修第二册",
+                  "text": "函数y=f(x)在区间[x1,x2]上的平均变化率为Δy/Δx=(f(x2)-f(x1))/(x2-x1)，表示割线斜率。当Δx趋近于0时，平均变化率趋近于某一确定值，即瞬时变化率。导数f'(x0)就是函数在x0处的瞬时变化率，即f'(x0)=lim(Δx→0)(f(x0+Δx)-f(x0))/Δx。导数的几何意义是曲线在切点处切线的斜率。"
+                },
+                {
+                  "kp_id": "M-X2C2S1-KP2",
+                  "name": "导数的概念与几何意义",
+                  "subject": "数学",
+                  "module": "选择性必修第二册",
+                  "chapter": "一元函数的导数及其应用",
+                  "section": "导数的概念及其意义",
+                  "grade": "高二",
+                  "level": 4,
+                  "difficulty": 4,
+                  "importance": 5,
+                  "level_requirement": "掌握",
+                  "exam_type": "单选题、解答题",
+                  "source": "人教版选择性必修第二册",
+                  "text": "函数y=f(x)在x0处的导数f'(x0)表示曲线y=f(x)在点(x0,f(x0))处切线的斜率，切线方程为y-f(x0)=f'(x0)(x-x0)。导数存在的条件是该极限存在。若函数在x0处可导则一定连续，但连续不一定可导。利用导数的几何意义可求切线方程、求参数、求距离最值。"
+                }
+              ]
+            },
+            {
+              "kp_id": "M-X2-C2-S2",
+              "name": "5.2 导数的运算",
+              "section": "导数的运算",
+              "grade": "高二",
+              "level": 3,
+              "children": [
+                {
+                  "kp_id": "M-X2C2S2-KP1",
+                  "name": "基本初等函数的导数公式",
+                  "subject": "数学",
+                  "module": "选择性必修第二册",
+                  "chapter": "一元函数的导数及其应用",
+                  "section": "导数的运算",
+                  "grade": "高二",
+                  "level": 4,
+                  "difficulty": 3,
+                  "importance": 5,
+                  "level_requirement": "掌握",
+                  "exam_type": "单选题、填空题",
+                  "source": "人教版选择性必修第二册",
+                  "text": "基本初等函数导数公式：C'=0；(x^α)'=αx^(α-1)；(sinx)'=cosx；(cosx)'=-sinx；(a^x)'=a^x·lna；(e^x)'=e^x；(log_a x)'=1/(xlna)；(lnx)'=1/x。导数运算法则：(u±v)'=u'±v'；(uv)'=u'v+uv'；(u/v)'=(u'v-uv')/v^2。复合函数求导遵循链式法则。"
+                },
+                {
+                  "kp_id": "M-X2C2S2-KP2",
+                  "name": "导数的四则运算法则与复合函数求导",
+                  "subject": "数学",
+                  "module": "选择性必修第二册",
+                  "chapter": "一元函数的导数及其应用",
+                  "section": "导数的运算",
+                  "grade": "高二",
+                  "level": 4,
+                  "difficulty": 4,
+                  "importance": 5,
+                  "level_requirement": "掌握",
+                  "exam_type": "单选题、解答题",
+                  "source": "人教版选择性必修第二册",
+                  "text": "利用导数四则运算法则求导，注意积的导数不是导数的积，商的导数公式需牢记。复合函数y=f(g(x))的导数y'=f'(g(x))·g'(x)，即外层函数导数乘以内层函数导数。求导前可先化简函数形式，如将有理式化为整式、将根式化为分数指数幂再求导。求导运算是导数应用的基石。"
+                }
+              ]
+            },
+            {
+              "kp_id": "M-X2-C2-S3",
+              "name": "5.3 导数在研究函数中的应用",
+              "section": "导数在研究函数中的应用",
+              "grade": "高二",
+              "level": 3,
+              "children": [
+                {
+                  "kp_id": "M-X2C2S3-KP1",
+                  "name": "函数的单调性与导数",
+                  "subject": "数学",
+                  "module": "选择性必修第二册",
+                  "chapter": "一元函数的导数及其应用",
+                  "section": "导数在研究函数中的应用",
+                  "grade": "高二",
+                  "level": 4,
+                  "difficulty": 4,
+                  "importance": 5,
+                  "level_requirement": "掌握",
+                  "exam_type": "单选题、解答题",
+                  "source": "人教版选择性必修第二册",
+                  "text": "在区间(a,b)内，若f'(x)>0则f(x)在此区间上单调递增，若f'(x)<0则单调递减。求函数单调区间步骤：求定义域、求f'(x)、解f'(x)>0或f'(x)<0、结合定义域确定单调区间。已知单调性求参数范围，可转化为f'(x)≥0或f'(x)≤0恒成立问题，注意端点单独检验。f'(x0)=0是可导函数在x0处取极值的必要条件而非充分条件。"
+                },
+                {
+                  "kp_id": "M-X2C2S3-KP2",
+                  "name": "函数的极值与最值",
+                  "subject": "数学",
+                  "module": "选择性必修第二册",
+                  "chapter": "一元函数的导数及其应用",
+                  "section": "导数在研究函数中的应用",
+                  "grade": "高二",
+                  "level": 4,
+                  "difficulty": 5,
+                  "importance": 5,
+                  "level_requirement": "掌握",
+                  "exam_type": "解答题",
+                  "source": "人教版选择性必修第二册",
+                  "text": "求可导函数极值：先求f'(x)=0的根，再检验根两侧f'(x)的符号变化，左侧正右侧负为极大值，左侧负右侧正为极小值。求函数在闭区间[a,b]上的最值：比较各极值与端点值f(a)、f(b)的大小。利用导数解决不等式恒成立、方程根的个数、生活中的最优问题等，常分离参数后求函数最值。"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "kp_id": "M-X3",
+      "name": "选择性必修第三册",
+      "module": "选择性必修第三册",
+      "grade": "高二",
+      "level": 1,
+      "children": [
+        {
+          "kp_id": "M-X3-C1",
+          "name": "第六章 计数原理",
+          "chapter": "计数原理",
+          "grade": "高二",
+          "level": 2,
+          "children": [
+            {
+              "kp_id": "M-X3-C1-S1",
+              "name": "6.1 分类加法计数原理与分步乘法计数原理",
+              "section": "分类加法计数原理与分步乘法计数原理",
+              "grade": "高二",
+              "level": 3,
+              "children": [
+                {
+                  "kp_id": "M-X3C1S1-KP1",
+                  "name": "分类加法计数原理",
+                  "subject": "数学",
+                  "module": "选择性必修第三册",
+                  "chapter": "计数原理",
+                  "section": "分类加法计数原理与分步乘法计数原理",
+                  "grade": "高二",
+                  "level": 4,
+                  "difficulty": 3,
+                  "importance": 4,
+                  "level_requirement": "掌握",
+                  "exam_type": "单选题、填空题",
+                  "source": "人教版选择性必修第三册",
+                  "text": "分类加法计数原理：完成一件事有n类不同方案，在第1类方案中有m1种不同方法，第2类中有m2种方法，……，第n类中有mn种方法，那么完成这件事共有N=m1+m2+...+mn种不同方法。关键是分类要做到不重不漏，各类方法相互独立。"
+                },
+                {
+                  "kp_id": "M-X3C1S1-KP2",
+                  "name": "分步乘法计数原理",
+                  "subject": "数学",
+                  "module": "选择性必修第三册",
+                  "chapter": "计数原理",
+                  "section": "分类加法计数原理与分步乘法计数原理",
+                  "grade": "高二",
+                  "level": 4,
+                  "difficulty": 3,
+                  "importance": 4,
+                  "level_requirement": "掌握",
+                  "exam_type": "单选题、填空题",
+                  "source": "人教版选择性必修第三册",
+                  "text": "分步乘法计数原理：完成一件事需要n个步骤，做第1步有m1种方法，做第2步有m2种方法，……，做第n步有mn种方法，那么完成这件事共有N=m1×m2×...×mn种不同方法。关键是各步骤相互依存，缺一不可。综合应用两个计数原理时，一般先分类再分步。"
+                }
+              ]
+            },
+            {
+              "kp_id": "M-X3-C1-S2",
+              "name": "6.2 排列与组合",
+              "section": "排列与组合",
+              "grade": "高二",
+              "level": 3,
+              "children": [
+                {
+                  "kp_id": "M-X3C1S2-KP1",
+                  "name": "排列与排列数公式",
+                  "subject": "数学",
+                  "module": "选择性必修第三册",
+                  "chapter": "计数原理",
+                  "section": "排列与组合",
+                  "grade": "高二",
+                  "level": 4,
+                  "difficulty": 4,
+                  "importance": 5,
+                  "level_requirement": "掌握",
+                  "exam_type": "单选题、解答题",
+                  "source": "人教版选择性必修第三册",
+                  "text": "从n个不同元素中取出m(m≤n)个元素，按照一定顺序排成一列，叫做从n个元素中取出m个元素的一个排列。排列数公式A(n,m)=n(n-1)...(n-m+1)=n!/(n-m)!。当m=n时，全排列A(n,n)=n!。规定0!=1。元素顺序不同则排列不同，这是排列与组合的本质区别。"
+                },
+                {
+                  "kp_id": "M-X3C1S2-KP2",
+                  "name": "组合与组合数公式",
+                  "subject": "数学",
+                  "module": "选择性必修第三册",
+                  "chapter": "计数原理",
+                  "section": "排列与组合",
+                  "grade": "高二",
+                  "level": 4,
+                  "difficulty": 4,
+                  "importance": 5,
+                  "level_requirement": "掌握",
+                  "exam_type": "单选题、解答题",
+                  "source": "人教版选择性必修第三册",
+                  "text": "从n个不同元素中取出m个元素合成一组，叫做组合。组合数C(n,m)=A(n,m)/m!=n!/[m!(n-m)!]。组合数性质：C(n,m)=C(n,n-m)；C(n,m)+C(n,m-1)=C(n+1,m)。排列与组合的关系：A(n,m)=C(n,m)·m!。解排列组合综合题需先分类后分步，注意特殊元素、特殊位置优先处理，正难则反可用总的减去不符合条件的。"
+                }
+              ]
+            },
+            {
+              "kp_id": "M-X3-C1-S3",
+              "name": "6.3 二项式定理",
+              "section": "二项式定理",
+              "grade": "高二",
+              "level": 3,
+              "children": [
+                {
+                  "kp_id": "M-X3C1S3-KP1",
+                  "name": "二项式定理",
+                  "subject": "数学",
+                  "module": "选择性必修第三册",
+                  "chapter": "计数原理",
+                  "section": "二项式定理",
+                  "grade": "高二",
+                  "level": 4,
+                  "difficulty": 4,
+                  "importance": 5,
+                  "level_requirement": "掌握",
+                  "exam_type": "单选题、填空题",
+                  "source": "人教版选择性必修第三册",
+                  "text": "二项式定理：(a+b)^n=C(n,0)a^n+C(n,1)a^(n-1)b+...+C(n,r)a^(n-r)b^r+...+C(n,n)b^n。通项公式T_(r+1)=C(n,r)a^(n-r)b^r（r=0,1,...,n），是展开式第r+1项。二项式系数是C(n,r)，与项的系数（含字母系数）不同。利用通项公式可求特定项。"
+                },
+                {
+                  "kp_id": "M-X3C1S3-KP2",
+                  "name": "二项式系数的性质",
+                  "subject": "数学",
+                  "module": "选择性必修第三册",
+                  "chapter": "计数原理",
+                  "section": "二项式定理",
+                  "grade": "高二",
+                  "level": 4,
+                  "difficulty": 4,
+                  "importance": 5,
+                  "level_requirement": "掌握",
+                  "exam_type": "单选题、填空题",
+                  "source": "人教版选择性必修第三册",
+                  "text": "二项式系数性质：对称性C(n,k)=C(n,n-k)；增减性与最大值，当n为偶数时中间项C(n,n/2)最大，当n为奇数时中间两项最大；各二项式系数之和C(n,0)+C(n,1)+...+C(n,n)=2^n；奇数项系数之和等于偶数项系数之和。赋值法是求二项展开式系数和问题的重要方法，如令x=1、x=-1。"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kp_id": "M-X3-C2",
+          "name": "第七章 随机变量及其分布",
+          "chapter": "随机变量及其分布",
+          "grade": "高二",
+          "level": 2,
+          "children": [
+            {
+              "kp_id": "M-X3-C2-S1",
+              "name": "7.1 条件概率与全概率公式",
+              "section": "条件概率与全概率公式",
+              "grade": "高二",
+              "level": 3,
+              "children": [
+                {
+                  "kp_id": "M-X3C2S1-KP1",
+                  "name": "条件概率",
+                  "subject": "数学",
+                  "module": "选择性必修第三册",
+                  "chapter": "随机变量及其分布",
+                  "section": "条件概率与全概率公式",
+                  "grade": "高二",
+                  "level": 4,
+                  "difficulty": 4,
+                  "importance": 5,
+                  "level_requirement": "掌握",
+                  "exam_type": "单选题、解答题",
+                  "source": "人教版选择性必修第三册",
+                  "text": "条件概率P(B|A)表示在事件A发生的条件下事件B发生的概率，P(B|A)=P(AB)/P(A)（P(A)>0）。条件概率可通过缩小样本空间计算。乘法公式：P(AB)=P(A)P(B|A)。全概率公式：P(B)=ΣP(Ai)P(B|Ai)，其中A1,A2,...,An构成完备事件组。贝叶斯公式用于已知结果求原因概率。"
+                },
+                {
+                  "kp_id": "M-X3C2S1-KP2",
+                  "name": "全概率公式与贝叶斯公式",
+                  "subject": "数学",
+                  "module": "选择性必修第三册",
+                  "chapter": "随机变量及其分布",
+                  "section": "条件概率与全概率公式",
+                  "grade": "高二",
+                  "level": 4,
+                  "difficulty": 5,
+                  "importance": 4,
+                  "level_requirement": "掌握",
+                  "exam_type": "解答题",
+                  "source": "人教版选择性必修第三册",
+                  "text": "全概率公式将复杂事件B的概率分解为在各互斥条件下条件概率的加权和，权重为各条件发生的概率。贝叶斯公式P(Ai|B)=P(Ai)P(B|Ai)/ΣP(Aj)P(B|Aj)，用于已知试验结果求某原因发生的概率，体现逆向概率思想。识别完备事件组是应用全概率公式的关键。"
+                }
+              ]
+            },
+            {
+              "kp_id": "M-X3-C2-S2",
+              "name": "7.2 离散型随机变量及其分布列",
+              "section": "离散型随机变量及其分布列",
+              "grade": "高二",
+              "level": 3,
+              "children": [
+                {
+                  "kp_id": "M-X3C2S2-KP1",
+                  "name": "离散型随机变量及其分布列",
+                  "subject": "数学",
+                  "module": "选择性必修第三册",
+                  "chapter": "随机变量及其分布",
+                  "section": "离散型随机变量及其分布列",
+                  "grade": "高二",
+                  "level": 4,
+                  "difficulty": 4,
+                  "importance": 5,
+                  "level_requirement": "掌握",
+                  "exam_type": "单选题、解答题",
+                  "source": "人教版选择性必修第三册",
+                  "text": "把随机试验的结果用变量表示，取值为有限个或可列无限个的随机变量叫离散型随机变量。离散型随机变量X的分布列是X取各可能值xi的概率P(X=xi)=pi的表格。分布列性质：pi≥0且Σpi=1。求分布列的一般步骤：确定X的所有取值、逐个求概率、列表检验。"
+                },
+                {
+                  "kp_id": "M-X3C2S2-KP2",
+                  "name": "离散型随机变量的分布列的求法",
+                  "subject": "数学",
+                  "module": "选择性必修第三册",
+                  "chapter": "随机变量及其分布",
+                  "section": "离散型随机变量及其分布列",
+                  "grade": "高二",
+                  "level": 4,
+                  "difficulty": 5,
+                  "importance": 5,
+                  "level_requirement": "掌握",
+                  "exam_type": "解答题",
+                  "source": "人教版选择性必修第三册",
+                  "text": "求离散型随机变量分布列时，需先弄清随机变量的所有可能取值及每个取值对应的事件，再结合古典概型、排列组合、独立事件等知识求概率。注意检查概率之和是否为1。0-1分布（两点分布）：P(X=0)=1-p，P(X=1)=p。分布列是求期望与方差的基础。"
+                }
+              ]
+            },
+            {
+              "kp_id": "M-X3-C2-S3",
+              "name": "7.3 离散型随机变量的数字特征",
+              "section": "离散型随机变量的数字特征",
+              "grade": "高二",
+              "level": 3,
+              "children": [
+                {
+                  "kp_id": "M-X3C2S3-KP1",
+                  "name": "离散型随机变量的均值",
+                  "subject": "数学",
+                  "module": "选择性必修第三册",
+                  "chapter": "随机变量及其分布",
+                  "section": "离散型随机变量的数字特征",
+                  "grade": "高二",
+                  "level": 4,
+                  "difficulty": 4,
+                  "importance": 5,
+                  "level_requirement": "掌握",
+                  "exam_type": "单选题、解答题",
+                  "source": "人教版选择性必修第三册",
+                  "text": "离散型随机变量X的均值（期望）E(X)=Σxi·pi，反映X取值的平均水平。期望性质：E(aX+b)=aE(X)+b；若X、Y相互独立，则E(XY)=E(X)E(Y)。两点分布的期望E(X)=p。均值的大小反映随机变量取值集中的中心位置。"
+                },
+                {
+                  "kp_id": "M-X3C2S3-KP2",
+                  "name": "离散型随机变量的方差",
+                  "subject": "数学",
+                  "module": "选择性必修第三册",
+                  "chapter": "随机变量及其分布",
+                  "section": "离散型随机变量的数字特征",
+                  "grade": "高二",
+                  "level": 4,
+                  "difficulty": 4,
+                  "importance": 5,
+                  "level_requirement": "掌握",
+                  "exam_type": "单选题、解答题",
+                  "source": "人教版选择性必修第三册",
+                  "text": "方差D(X)=Σ(xi-E(X))^2·pi，反映X取值的离散程度，标准差为√D(X)。方差性质：D(aX+b)=a^2D(X)。方差越大，取值越分散，波动越大。实际决策中，均值相同时选方差小的方案，体现风险规避。利用E(X^2)=E(X)^2+D(X)可简化计算。"
+                }
+              ]
+            },
+            {
+              "kp_id": "M-X3-C2-S4",
+              "name": "7.4 二项分布与超几何分布",
+              "section": "二项分布与超几何分布",
+              "grade": "高二",
+              "level": 3,
+              "children": [
+                {
+                  "kp_id": "M-X3C2S4-KP1",
+                  "name": "二项分布",
+                  "subject": "数学",
+                  "module": "选择性必修第三册",
+                  "chapter": "随机变量及其分布",
+                  "section": "二项分布与超几何分布",
+                  "grade": "高二",
+                  "level": 4,
+                  "difficulty": 4,
+                  "importance": 5,
+                  "level_requirement": "掌握",
+                  "exam_type": "单选题、解答题",
+                  "source": "人教版选择性必修第三册",
+                  "text": "n重伯努利试验：在相同条件下重复做n次，每次试验结果只有两种可能且相互独立。若X~B(n,p)，则P(X=k)=C(n,k)p^k(1-p)^(n-k)，k=0,1,...,n。二项分布的期望E(X)=np，方差D(X)=np(1-p)。判断是否服从二项分布，需确认每次试验独立且成功率不变。"
+                },
+                {
+                  "kp_id": "M-X3C2S4-KP2",
+                  "name": "超几何分布",
+                  "subject": "数学",
+                  "module": "选择性必修第三册",
+                  "chapter": "随机变量及其分布",
+                  "section": "二项分布与超几何分布",
+                  "grade": "高二",
+                  "level": 4,
+                  "difficulty": 4,
+                  "importance": 5,
+                  "level_requirement": "掌握",
+                  "exam_type": "单选题、解答题",
+                  "source": "人教版选择性必修第三册",
+                  "text": "若X服从超几何分布，即从含M个特殊元素的N个总体中不放回抽取n个，抽到特殊元素的个数X满足P(X=k)=C(M,k)C(N-M,n-k)/C(N,n)。超几何分布的期望E(X)=nM/N。超几何分布对应不放回抽样，二项分布对应有放回抽样，当总体容量很大时二者近似。"
+                }
+              ]
+            },
+            {
+              "kp_id": "M-X3-C2-S5",
+              "name": "7.5 正态分布",
+              "section": "正态分布",
+              "grade": "高二",
+              "level": 3,
+              "children": [
+                {
+                  "kp_id": "M-X3C2S5-KP1",
+                  "name": "正态分布与正态曲线",
+                  "subject": "数学",
+                  "module": "选择性必修第三册",
+                  "chapter": "随机变量及其分布",
+                  "section": "正态分布",
+                  "grade": "高二",
+                  "level": 4,
+                  "difficulty": 4,
+                  "importance": 5,
+                  "level_requirement": "掌握",
+                  "exam_type": "单选题、填空题",
+                  "source": "人教版选择性必修第三册",
+                  "text": "正态分布X~N(μ,σ^2)，μ为均值，σ为标准差。正态曲线关于直线x=μ对称，在x=μ处取得最大值，曲线与x轴之间的面积为1。σ越大曲线越矮胖，σ越小曲线越瘦高。3σ原则：P(μ-σ<X<μ+σ)≈0.6827，P(μ-2σ<X<μ+2σ)≈0.9545，P(μ-3σ<X<μ+3σ)≈0.9973。"
+                },
+                {
+                  "kp_id": "M-X3C2S5-KP2",
+                  "name": "正态分布的应用",
+                  "subject": "数学",
+                  "module": "选择性必修第三册",
+                  "chapter": "随机变量及其分布",
+                  "section": "正态分布",
+                  "grade": "高二",
+                  "level": 4,
+                  "difficulty": 4,
+                  "importance": 4,
+                  "level_requirement": "掌握",
+                  "exam_type": "解答题",
+                  "source": "人教版选择性必修第三册",
+                  "text": "利用正态曲线的对称性和3σ原则求概率、判断产品是否合格。若X~N(μ,σ^2)，则P(X<a)可通过对称性转化为标准形式。实际问题中，考试成绩、测量误差等常近似服从正态分布。求解正态分布概率题需画出草图，利用对称区间面积等于1的性质。"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kp_id": "M-X3-C3",
+          "name": "第八章 成对数据的统计分析",
+          "chapter": "成对数据的统计分析",
+          "grade": "高二",
+          "level": 2,
+          "children": [
+            {
+              "kp_id": "M-X3-C3-S1",
+              "name": "8.1 成对数据的相关关系",
+              "section": "成对数据的相关关系",
+              "grade": "高二",
+              "level": 3,
+              "children": [
+                {
+                  "kp_id": "M-X3C3S1-KP1",
+                  "name": "相关关系与散点图",
+                  "subject": "数学",
+                  "module": "选择性必修第三册",
+                  "chapter": "成对数据的统计分析",
+                  "section": "成对数据的相关关系",
+                  "grade": "高二",
+                  "level": 4,
+                  "difficulty": 3,
+                  "importance": 4,
+                  "level_requirement": "理解",
+                  "exam_type": "单选题、填空题",
+                  "source": "人教版选择性必修第三册",
+                  "text": "相关关系是变量之间的一种不确定的依存关系，区别于确定的函数关系。散点图是刻画成对数据关系的直观工具，点大致沿直线分布则具有线性相关。正相关：一个变量增大时另一个也增大；负相关：一个增大时另一个减小。相关关系不一定是因果关系。"
+                },
+                {
+                  "kp_id": "M-X3C3S1-KP2",
+                  "name": "样本相关系数",
+                  "subject": "数学",
+                  "module": "选择性必修第三册",
+                  "chapter": "成对数据的统计分析",
+                  "section": "成对数据的相关关系",
+                  "grade": "高二",
+                  "level": 4,
+                  "difficulty": 4,
+                  "importance": 4,
+                  "level_requirement": "掌握",
+                  "exam_type": "单选题、解答题",
+                  "source": "人教版选择性必修第三册",
+                  "text": "样本相关系数r用于定量刻画两个变量线性相关的强弱与方向，r∈[-1,1]。r>0正相关，r<0负相关，|r|越接近1线性相关越强，|r|越接近0线性相关越弱。r=1或-1时完全正（负）相关。r的计算公式为r=Σ(xi-x̄)(yi-ȳ)/(√(Σ(xi-x̄)^2)√(Σ(yi-ȳ)^2))。"
+                }
+              ]
+            },
+            {
+              "kp_id": "M-X3-C3-S2",
+              "name": "8.2 一元线性回归模型及其应用",
+              "section": "一元线性回归模型及其应用",
+              "grade": "高二",
+              "level": 3,
+              "children": [
+                {
+                  "kp_id": "M-X3C3S2-KP1",
+                  "name": "一元线性回归模型",
+                  "subject": "数学",
+                  "module": "选择性必修第三册",
+                  "chapter": "成对数据的统计分析",
+                  "section": "一元线性回归模型及其应用",
+                  "grade": "高二",
+                  "level": 4,
+                  "difficulty": 4,
+                  "importance": 5,
+                  "level_requirement": "掌握",
+                  "exam_type": "单选题、解答题",
+                  "source": "人教版选择性必修第三册",
+                  "text": "一元线性回归模型y=bx+a+ε，其中ε为随机误差。利用最小二乘法估计回归系数：b̂=Σ(xi-x̄)(yi-ȳ)/Σ(xi-x̄)^2，â=ȳ-b̂x̄。回归直线ŷ=b̂x+â恒过样本中心点(x̄,ȳ)。回归直线斜率的正负与相关系数r的符号一致。利用回归方程可进行预测。"
+                },
+                {
+                  "kp_id": "M-X3C3S2-KP2",
+                  "name": "回归模型的应用与残差分析",
+                  "subject": "数学",
+                  "module": "选择性必修第三册",
+                  "chapter": "成对数据的统计分析",
+                  "section": "一元线性回归模型及其应用",
+                  "grade": "高二",
+                  "level": 4,
+                  "difficulty": 5,
+                  "importance": 4,
+                  "level_requirement": "掌握",
+                  "exam_type": "解答题",
+                  "source": "人教版选择性必修第三册",
+                  "text": "残差是yi-ŷi，残差图上的点应大致均匀分布在横轴两侧。决定系数R^2反映模型拟合效果，R^2越接近1拟合越好。当数据呈现非线性关系时，可通过取对数、换元等转化为线性回归问题。建立回归模型的步骤：画散点图判断相关性、求回归方程、进行残差检验、预测。"
+                }
+              ]
+            },
+            {
+              "kp_id": "M-X3-C3-S3",
+              "name": "8.3 列联表与独立性检验",
+              "section": "列联表与独立性检验",
+              "grade": "高二",
+              "level": 3,
+              "children": [
+                {
+                  "kp_id": "M-X3C3S3-KP1",
+                  "name": "2×2列联表",
+                  "subject": "数学",
+                  "module": "选择性必修第三册",
+                  "chapter": "成对数据的统计分析",
+                  "section": "列联表与独立性检验",
+                  "grade": "高二",
+                  "level": 4,
+                  "difficulty": 4,
+                  "importance": 5,
+                  "level_requirement": "掌握",
+                  "exam_type": "单选题、解答题",
+                  "source": "人教版选择性必修第三册",
+                  "text": "2×2列联表用于整理两个分类变量的数据，行和列分别表示两个变量的两个水平。通过列联表可直观比较不同类别中某事件发生的频率。判断两个分类变量是否有关联，需先看对应频率的差异，再通过独立性检验进行统计推断。"
+                },
+                {
+                  "kp_id": "M-X3C3S3-KP2",
+                  "name": "独立性检验",
+                  "subject": "数学",
+                  "module": "选择性必修第三册",
+                  "chapter": "成对数据的统计分析",
+                  "section": "列联表与独立性检验",
+                  "grade": "高二",
+                  "level": 4,
+                  "difficulty": 5,
+                  "importance": 5,
+                  "level_requirement": "掌握",
+                  "exam_type": "解答题",
+                  "source": "人教版选择性必修第三册",
+                  "text": "独立性检验基于χ^2统计量，χ^2=n(ad-bc)^2/[(a+b)(c+d)(a+c)(b+d)]（n为样本容量）。根据χ^2值与临界值比较作出判断：χ^2越大，两变量有关联的可能性越大。如χ^2≥6.635时可认为有99%的把握认为有关联。独立性检验给出的是统计推断，需注意小概率事件准则的理解。"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

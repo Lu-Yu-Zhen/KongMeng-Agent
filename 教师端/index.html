@@ -469,7 +469,7 @@
  <!-- 功能标签 -->
  <div class="flex items-center gap-1">
  <button onclick="switchTab('prepare')" id="tab-prepare" class="tab-btn relative px-5 py-2 text-sm font-semibold transition-all duration-200 text-jade-700 border-b-2 border-jade-600">
- <i class="fa-solid fa-chalkboard-user mr-1.5"></i>备课
+ <i class="fa-solid fa-chalkboard-user mr-1.5"></i>Work
  </button>
  <button onclick="switchTab('studentq')" id="tab-studentq" class="tab-btn relative px-5 py-2 text-sm font-medium transition-all duration-200 text-ink-400 border-b-2 border-transparent hover:text-ink-700">
  <i class="fa-solid fa-comments mr-1.5"></i>学生提问
@@ -876,7 +876,10 @@
  <p id="gradingSubTitle" class="text-xs text-ink-400">上传试卷答案，AI 智能批改</p>
  </div>
  </div>
+ <div class="flex items-center gap-1.5">
+ <button onclick="toggleGradingHistory()" class="text-xs text-ink-400 hover:text-jade-600 px-2 py-1 hover:bg-jade-50 rounded-md transition flex items-center gap-1" title="查看批改历史记录"><i class="fa-solid fa-clock-rotate-left"></i>历史</button>
  <button onclick="resetGradingForm()" class="text-xs text-ink-400 hover:text-rose-500 px-2 py-1 hover:bg-rose-50 rounded-md transition"><i class="fa-solid fa-rotate-left mr-1"></i>重置</button>
+ </div>
  </div>
  <div class="px-3 py-2 border-b border-ink-200 bg-ink-50/50 flex items-center gap-2.5" id="gradingModelRow">
  <div class="relative flex-1" id="gradingModelDropdownContainer">
@@ -1100,7 +1103,10 @@
  <div class="w-9 h-9 bg-jade-50 flex items-center justify-center text-jade-600 rounded-xl"><i class="fa-solid fa-layer-group"></i></div>
  <div><h2 class="text-sm font-semibold text-ink-900 font-display">智能组卷</h2><p class="text-xs text-ink-400">AI 生成题库 · 教师挑选 · 右侧排版</p></div>
  </div>
+ <div class="flex items-center gap-2">
+ <button onclick="togglePaperHistory()" class="text-xs text-ink-400 hover:text-jade-600 px-2 py-1 hover:bg-jade-50 rounded-md transition flex items-center gap-1" title="查看组卷历史记录"><i class="fa-solid fa-clock-rotate-left"></i>历史</button>
  <span id="paperPoolStat" class="text-[10px] text-ink-400">题池 0 · 已选 0</span>
+ </div>
  </div>
  <div class="p-3 border-b border-ink-200 space-y-2.5">
  <div class="grid grid-cols-2 gap-2">
@@ -1173,6 +1179,8 @@
  <select id="anaClass" onchange="renderAnalytics()" class="w-full text-xs text-ink-700 font-medium"><option>高三（1）班</option><option>高三（2）班</option><option>高三（3）班</option></select></div>
  <div class="field px-3 py-1.5"><label class="text-[10px] text-ink-400 block leading-none mb-0.5">考试</label>
  <select id="anaExam" onchange="renderAnalytics()" class="w-full text-xs text-ink-700 font-medium"><option>2026届三模</option><option>2026届二模</option><option>2026届一模</option></select></div>
+ <div class="field px-3 py-1.5"><label class="text-[10px] text-ink-400 block leading-none mb-0.5">其他要求 <span class="text-[9px] text-ink-300 font-normal">（可选）</span></label>
+ <input type="text" id="anaExtraReq" placeholder="如：重点分析物理薄弱学生、关注临界生…" class="w-full text-xs text-ink-700"></div>
  <button onclick="generateAnalyticsReport()" id="anaAiBtn" class="w-full py-2.5 bg-jade-600 hover:bg-jade-700 text-white rounded-xl text-xs font-semibold transition flex items-center justify-center gap-2"><i class="fa-solid fa-wand-magic-sparkles"></i>AI 深度学情诊断</button>
  <div id="anaStatsRow" class="grid grid-cols-2 gap-2"></div>
  </div>
@@ -1275,8 +1283,16 @@ function addOrUpdateModel(){
  const sel=document.getElementById('settingsModelSelect'), inp=document.getElementById('settingsApiKey');
  const id=sel.value, key=inp.value.trim();
  if(!id){alert('请先选择模型');return;} if(!key){alert('请输入 API Key');return;}
+ /* 本地缓存明文 Key（前端 Chat 运行时需明文调用 LLM），同时同步到后端加密存储 */
  const m=getConfiguredChatModels(); m[id]=key; setConfiguredChatModels(m);
  sel.value=''; inp.value='';
+ const cfg=MODEL_CONFIG[id]||{};
+ const backend=window.AgentBackend;
+ if(backend && backend.saveModel){
+  backend.saveModel({name:id, provider:cfg.type||'openai', model:cfg.model||'', baseUrl:'', endpoint:cfg.endpoint||'', apiKey:key, isDefault:false})
+   .then(function(r){ if(r && r.ok===false) console.warn('[model] 后端保存失败:', r.error); })
+   .catch(function(e){ console.warn('[model] 后端保存异常:', e); });
+ }
  refreshAllDropdowns(); refreshConfiguredList(); updateConnectionStatus();
 }
 function updateSettingsModelOptions(){
@@ -1287,21 +1303,42 @@ function updateSettingsModelOptions(){
 function removeConfiguredModel(id){
  const m=getConfiguredChatModels(); delete m[id]; setConfiguredChatModels(m);
  if(getSelectedChatModel()===id) localStorage.removeItem(CHAT_SELECTED_KEY);
+ const backend=window.AgentBackend;
+ if(backend && backend.deleteModel){ backend.deleteModel(id).catch(function(){}); }
  refreshAllDropdowns(); refreshConfiguredList(); updateConnectionStatus();
 }
 function clearAllConfigured(){
  showConfirmDialog('确认清空？','确定要清空所有已配置的智能体吗？',function(){
- setConfiguredChatModels({}); localStorage.removeItem(CHAT_SELECTED_KEY);
- refreshAllDropdowns(); refreshConfiguredList(); updateConnectionStatus();
+  const m=getConfiguredChatModels();
+  const backend=window.AgentBackend;
+  Object.keys(m).forEach(function(id){ if(backend && backend.deleteModel) backend.deleteModel(id).catch(function(){}); });
+  setConfiguredChatModels({}); localStorage.removeItem(CHAT_SELECTED_KEY);
+  refreshAllDropdowns(); refreshConfiguredList(); updateConnectionStatus();
  });
 }
 function refreshConfiguredList(){
  const c=document.getElementById('configuredModelsInner'); if(!c) return;
- const m=getConfiguredChatModels(); const ids=Object.keys(m).filter(function(id){return MODEL_CONFIG[id];});
- if(ids.length===0){ c.innerHTML='<p class="text-[11px] text-ink-300 italic text-center py-2">暂无配置，请在上方添加</p>'; return; }
- c.innerHTML=ids.map(id=>{ const cfg=MODEL_CONFIG[id]; const name=cfg?cfg.name:id;
- return '<div class="flex items-center justify-between py-1 px-2 hover:bg-ink-50 rounded-md"><span class="text-[11px] text-ink-700 font-medium">'+name+'</span><button onclick="removeConfiguredModel(\''+id+'\')" class="text-[9px] text-ink-400 hover:text-rose-500"><i class="fa-solid fa-xmark"></i></button></div>';
- }).join('');
+ const render=function(ids){
+  if(ids.length===0){ c.innerHTML='<p class="text-[11px] text-ink-300 italic text-center py-2">暂无配置，请在上方添加</p>'; return; }
+  c.innerHTML=ids.map(function(id){ const cfg=MODEL_CONFIG[id]; const name=cfg?cfg.name:id;
+   return '<div class="flex items-center justify-between py-1 px-2 hover:bg-ink-50 rounded-md"><span class="text-[11px] text-ink-700 font-medium">'+name+'</span><button onclick="removeConfiguredModel(\''+id+'\')" class="text-[9px] text-ink-400 hover:text-rose-500"><i class="fa-solid fa-xmark"></i></button></div>';
+  }).join('');
+ };
+ /* 本地兜底（前端 Chat 运行时明文 Key 为准） */
+ const local=Object.keys(getConfiguredChatModels()).filter(function(id){return MODEL_CONFIG[id];});
+ render(local);
+ /* 尝试从后端拉取，取并集刷新（后端不可用时保持本地渲染） */
+ const backend=window.AgentBackend;
+ if(!backend || !backend.checkAvailable || !backend.listModels) return;
+ backend.checkAvailable().then(function(ok){
+  if(!ok) return;
+  return backend.listModels();
+ }).then(function(r){
+  if(!r || !r.ok || !Array.isArray(r.models)) return;
+  const ids=(r.models||[]).map(function(x){return x && x.name;}).filter(function(id){return id && MODEL_CONFIG[id];});
+  const merged=ids.concat(local.filter(function(id){return ids.indexOf(id)<0;}));
+  render(merged);
+ }).catch(function(){ /* 后端不可用，保持本地渲染 */ });
 }
 function updateConnectionStatus(){
  const m=getSelectedChatModel(); const ok=m? !!getChatApiKey(m):false;
@@ -2265,8 +2302,8 @@ function refreshAllDropdowns(){ refreshChatModelDropdown(); refreshGradingModelS
  * MiniMax：顶层 enable_search:true
  * GLM(智谱)：tools:[{type:'web_search',web_search:{enable:true}}]
  * Kimi(Moonshot)：tools:[{type:'builtin_function',function:{name:'$web_search'}}]
- * 豆包(火山方舟)：标准 Chat Completions 不支持，须走 Responses API + web_search tool
- * DeepSeek(deepseek-v4-flash)：标准 Chat Completions 不支持，须走 Responses API(/v1/responses) + web_search tool */
+ * DeepSeek：Responses API（POST https://api.deepseek.com/responses）+ tools:[{type:'web_search'}]（服务端执行），仅 deepseek-v4-flash 支持
+ * 豆包(火山方舟)：Responses API /api/v3/responses + web_search tool */
 function getSearchCapability(modelId){
  const cfg=MODEL_CONFIG[modelId]; if(!cfg) return {mode:'none',label:'未知模型'};
  const ep=cfg.endpoint||'';
@@ -2275,9 +2312,17 @@ function getSearchCapability(modelId){
  if(ep.indexOf('open.bigmodel.cn')!==-1) return {mode:'tools-glm',label:'支持联网搜索'};
  if(ep.indexOf('api.moonshot.cn')!==-1) return {mode:'tools-kimi',label:'支持联网搜索'};
  if(ep.indexOf('volces.com')!==-1) return {mode:'responses-doubao',label:'支持联网搜索'};
- /* DeepSeek 官方 API 仅 deepseek-v4-flash 支持联网搜索（Responses API），deepseek-v4-pro 暂不支持 */
- if(cfg.model==='deepseek-v4-flash') return {mode:'responses-deepseek',label:'支持联网搜索'};
+ if(ep.indexOf('api.deepseek.com')!==-1){
+  /* DeepSeek 官方文档：联网搜索仅 Responses API 支持，且仅 deepseek-v4-flash */
+  if((cfg.model||'')==='deepseek-v4-flash') return {mode:'responses-deepseek',label:'支持联网搜索'};
+  return {mode:'none',label:'该模型暂不支持联网（仅 DeepSeek-V4-Flash 支持）'};
+ }
  return {mode:'none',label:'不支持联网，将基于模型自身知识生成'};
+}
+/* Responses API 端点（DeepSeek 为 /responses，豆包为 /api/v3/responses） */
+function getResponsesUrl(cfg, cap){
+ if(cap.mode==='responses-deepseek') return 'https://api.deepseek.com/responses';
+ return (cfg.endpoint||'').replace(/\/chat\/completions$/,'/responses');
 }
 function applySearchToPayload(payload, cap){
  if(cap.mode==='param'){ payload.enable_search=true; }
@@ -2308,13 +2353,13 @@ async function callAIJson(prompt, systemInstruction, modelOverride, searchEnable
   if(wantSearch) applySearchToPayload(payload, cap);
   if(cfg.reasoning) payload.thinking={type:'disabled'};
  }
- /* 豆包 / DeepSeek Responses API：chat/completions 不支持联网，须走 /responses + web_search tool */
+ /* 豆包/DeepSeek Responses API：chat/completions 不支持联网，须走 Responses API + web_search tool */
  if(wantSearch && (cap.mode==='responses-doubao'||cap.mode==='responses-deepseek')){
-  const responsesUrl=cfg.endpoint.replace(/\/chat\/completions$/,'/responses');
+  const responsesUrl=getResponsesUrl(cfg, cap);
   const inputParts=[];
   messages.forEach(function(m){ if(m.role==='system') inputParts.push('[系统指令] '+m.content); else if(m.role==='user') inputParts.push(m.content); else if(m.role==='assistant') inputParts.push('[上一轮回答] '+String(m.content).substring(0,600)); });
   const rPayload={ model:cfg.model, input:inputParts.join('\n\n'), tools:[{type:'web_search'}], stream:false };
-  const rCtrl=new AbortController(); const rTimer=setTimeout(function(){rCtrl.abort();},90000);
+  const rCtrl=new AbortController(); const rTimer=setTimeout(function(){rCtrl.abort();},300000);
   try{
    const rResp=await fetch(responsesUrl,{method:'POST',headers:{'Content-Type':'application/json','Authorization':'Bearer '+apiKey},body:JSON.stringify(rPayload),signal:rCtrl.signal});
    clearTimeout(rTimer);
@@ -2326,10 +2371,10 @@ async function callAIJson(prompt, systemInstruction, modelOverride, searchEnable
    }
    if(rResp.status===400||rResp.status===422){ /* Responses API 不支持，降级到 chat/completions（无搜索） */ }
    else throw new Error('API 错误 '+rResp.status+': '+await rResp.text());
-  }catch(re){ clearTimeout(rTimer); if(re.name==='AbortError') throw new Error('请求超时（90秒）'); if(re.message&&re.message.indexOf('API 错误')===0) throw re; /* 其他错误降级 */ }
+  }catch(re){ clearTimeout(rTimer); if(re.name==='AbortError') throw new Error('请求超时（300秒）'); if(re.message&&re.message.indexOf('API 错误')===0) throw re; /* 其他错误降级 */ }
  }
  let delay=1000;
- const reqTimeout=wantSearch?90000:45000;
+ const reqTimeout=wantSearch?360000:300000;
  for(let attempt=0;attempt<3;attempt++){
  const ctrl=new AbortController();
  const timer=setTimeout(function(){ctrl.abort();},reqTimeout);
@@ -2383,13 +2428,13 @@ async function* callAIStream(prompt, systemInstruction, messages, modelOverride,
  for(let attempt=0;attempt<3;attempt++){
  let finalMsg=all;
  if(imagesStripped){ finalMsg=all.filter(m=>!Array.isArray(m.content)); finalMsg.push({role:'user',content:prompt}); }
- /* 豆包 / DeepSeek Responses API 联网分支（chat/completions 不支持联网搜索） */
+ /* 豆包/DeepSeek Responses API 联网分支（chat/completions 不支持联网搜索） */
  if((cap.mode==='responses-doubao'||cap.mode==='responses-deepseek')&&searchOn){
-  const responsesUrl=cfg.endpoint.replace(/\/chat\/completions$/,'/responses');
+  const responsesUrl=getResponsesUrl(cfg, cap);
   const inputParts=[];
   finalMsg.forEach(function(m){ if(typeof m.content==='string'){ if(m.role==='system') inputParts.push('[系统指令] '+m.content); else if(m.role==='user') inputParts.push(m.content); else if(m.role==='assistant') inputParts.push('[上一轮回答] '+m.content.substring(0,600)); } });
   const rPayload={ model:cfg.model, input:inputParts.join('\n\n'), tools:[{type:'web_search'}], stream:false };
-  const rCtrl=new AbortController(); const rTimer=setTimeout(function(){rCtrl.abort();},180000);
+  const rCtrl=new AbortController(); const rTimer=setTimeout(function(){rCtrl.abort();},300000);
   try{
    const rResp=await fetch(responsesUrl,{method:'POST',headers:{'Content-Type':'application/json','Authorization':'Bearer '+apiKey},body:JSON.stringify(rPayload),signal:rCtrl.signal});
    clearTimeout(rTimer);
@@ -2401,7 +2446,7 @@ async function* callAIStream(prompt, systemInstruction, messages, modelOverride,
    }
    if(rResp.status===400||rResp.status===422){ searchOn=false; /* 降级到 chat/completions 无搜索 */ }
    else { const err=await rResp.text(); throw new Error('API 错误 '+rResp.status+': '+err); }
-  }catch(re){ clearTimeout(rTimer); if(re.name==='AbortError') throw new Error('请求超时（180秒）'); if(re.message&&re.message.indexOf('API 错误')===0) throw re; searchOn=false; }
+  }catch(re){ clearTimeout(rTimer); if(re.name==='AbortError') throw new Error('请求超时（300秒）'); if(re.message&&re.message.indexOf('API 错误')===0) throw re; searchOn=false; }
  }
  const isDashScope=cfg.endpoint.indexOf('dashscope.aliyuncs.com')!==-1;
  const dsEndpoint='https://dashscope.aliyuncs.com/api/v1/services/aigc/text-generation/generation';
@@ -2417,7 +2462,7 @@ async function* callAIStream(prompt, systemInstruction, messages, modelOverride,
   if(cfg.reasoning) payload.thinking={type:'disabled'};
   if(searchOn) applySearchToPayload(payload, cap);
  }
- const reqTimeout=searchOn?120000:60000;
+ const reqTimeout=searchOn?420000:360000;
  const ctrl=new AbortController(); const to=setTimeout(()=>ctrl.abort(),reqTimeout);
  let resp;
  try{ resp=await fetch(apiUrl,{method:'POST',headers:{'Content-Type':'application/json','Authorization':'Bearer '+apiKey},body:JSON.stringify(payload),signal:ctrl.signal}); clearTimeout(to); }
@@ -2427,7 +2472,7 @@ async function* callAIStream(prompt, systemInstruction, messages, modelOverride,
  let hitLengthLimit=false; let yieldedText='';
  while(true){
   let readResult;
-  try{ readResult=await Promise.race([reader.read(),new Promise((_,rej)=>setTimeout(()=>rej(new Error('stall')),120000))]); }catch(_){ try{reader.cancel();}catch(_){} break; }
+  try{ readResult=await Promise.race([reader.read(),new Promise((_,rej)=>setTimeout(()=>rej(new Error('stall')),420000))]); }catch(_){ try{reader.cancel();}catch(_){} break; }
   const {done,value}=readResult; if(done)break; buf+=dec.decode(value,{stream:true});
   const lines=buf.split('\n'); buf=lines.pop()||'';
   for(const line of lines){ const t=line.trim(); if(!t||!t.startsWith('data: '))continue; const data=t.slice(6); if(data==='[DONE]'){ try{reader.cancel();}catch(_){} break; }
@@ -2456,7 +2501,7 @@ async function* callAIStream(prompt, systemInstruction, messages, modelOverride,
     contPayload={ model:cfg.model, messages:contMsgs, stream:true, temperature:0.5, max_tokens:8192 };
     if(cfg.reasoning) contPayload.thinking={type:'disabled'};
    }
-   const contCtrl=new AbortController(); const contTo=setTimeout(()=>contCtrl.abort(),180000);
+   const contCtrl=new AbortController(); const contTo=setTimeout(()=>contCtrl.abort(),420000);
    let contResp;
    try{ contResp=await fetch(contApiUrl,{method:'POST',headers:{'Content-Type':'application/json','Authorization':'Bearer '+apiKey},body:JSON.stringify(contPayload),signal:contCtrl.signal}); clearTimeout(contTo); }
    catch(e2){ clearTimeout(contTo); break; }
@@ -2464,7 +2509,7 @@ async function* callAIStream(prompt, systemInstruction, messages, modelOverride,
    const contReader=contResp.body.getReader(); const contDec=new TextDecoder(); let contBuf=''; let contHitLimit=false; let contBreak=false;
    while(true){
     let cr2;
-    try{ cr2=await Promise.race([contReader.read(),new Promise((_,rej2)=>setTimeout(()=>rej2(new Error('stall')),120000))]); }catch(_){ try{contReader.cancel();}catch(_){} break; }
+    try{ cr2=await Promise.race([contReader.read(),new Promise((_,rej2)=>setTimeout(()=>rej2(new Error('stall')),360000))]); }catch(_){ try{contReader.cancel();}catch(_){} break; }
     const {done:cd2,value:cv2}=cr2; if(cd2)break; contBuf+=contDec.decode(cv2,{stream:true});
     const cl2=contBuf.split('\n'); contBuf=cl2.pop()||'';
     for(const contLine2 of cl2){ const ct3=contLine2.trim(); if(!ct3||!ct3.startsWith('data: '))continue; const cData2=ct3.slice(6); if(cData2==='[DONE]'){ try{contReader.cancel();}catch(_){} contBreak=true; break; }
@@ -2678,7 +2723,10 @@ function setBeikeSendBtn(state){
 function stopBeikeGeneration(){
  beikeStreamAbortFlag=true;
  if(beikeChatMode==='agent' && window.AgentCore && AgentCore.running){
+  /* Agent 模式：中止任务（含同步向后端发送取消请求），
+     发送键状态由任务结束回调统一恢复，避免"点了没停却提前切回发送键"的误判 */
   AgentCore.stop();
+  return;
  }
  setBeikeSendBtn('send');
 }
@@ -2801,28 +2849,82 @@ function regenerateMsg(msgId){
  inp.value=userText;
  sendBeikeFollowup();
 }
-/* 更新备课参考信息列表（搜索来源） */
+/* ---- 参考信息面板：技能/插件 + 联网搜索（深读网页）---- */
+var beikeSkillsUsed=[];
+/* 记录一次技能/插件调用（去重），并刷新面板 */
+function markBeikeSkillUsed(name, icon, kind){
+ if(!name) return;
+ if(beikeSkillsUsed.some(function(s){return s.name===name;})) return;
+ beikeSkillsUsed.push({name:name, icon:icon||'fa-puzzle-piece', kind:kind||'技能'});
+ updateBeikeRefList(beikeRefs);
+}
+/* 域名首字符圆形图标（仿搜索结果站点图标，离线可用） */
+function _siteIcon(url){
+ var host='', label='?';
+ try{ host=new URL(url).hostname.replace(/^www\./,''); label=host.charAt(0).toUpperCase(); }catch(_){}
+ var colors=['#b91c1c','#1d4ed8','#0f766e','#a16207','#7c3aed','#be185d','#0369a1'];
+ var h=0; for(var i=0;i<host.length;i++) h=(h*31+host.charCodeAt(i))>>>0;
+ var c=colors[h%colors.length];
+ var zh=host.match(/[\u4e00-\u9fa5]/); if(zh) label=zh[0];
+ return '<span class="inline-flex items-center justify-center w-4 h-4 rounded-sm text-white text-[9px] font-bold shrink-0" style="background:'+c+'">'+escapeHtml(label)+'</span>';
+}
+/* 更新备课参考信息列表：技能区 + 联网搜索区 */
 function updateBeikeRefList(refs){
  var el=document.getElementById('beikeRefList');
  if(!el) return;
- if(!refs||!refs.length){
+ if((!refs||!refs.length)&&!beikeSkillsUsed.length){
   el.innerHTML='<p class="text-[11px] text-ink-300 text-center py-3">暂无参考</p>';
   return;
  }
- el.innerHTML=refs.map(function(r,i){
-  var title=r.title||r.site_name||r.name||r.heading||'';
-  var url=r.url||r.link||r.href||r.orig_url||'';
-  if(!title&&url){ try{ title=new URL(url).hostname.replace('www.',''); }catch(_){} }
-  if(!title) title='参考 '+(i+1);
-  return '<div onclick="openRefInNewTab(\''+escapeHtml(url)+'\')" class="block px-2.5 py-2 rounded-lg hover:bg-jade-50 transition group cursor-pointer">'
-   +'<div class="flex items-start gap-2">'
-   +'<i class="fa-solid fa-link text-jade-500 text-[9px] mt-0.5 shrink-0"></i>'
-   +'<div class="flex-1 min-w-0">'
-   +'<p class="text-[11px] font-medium text-ink-700 group-hover:text-jade-700 transition line-clamp-2">'+escapeHtml(title)+'</p>'
-   +'</div>'
-   +'<i class="fa-solid fa-arrow-up-right-from-square text-[8px] text-ink-300 group-hover:text-jade-500 mt-0.5 shrink-0 transition"></i>'
-   +'</div></div>';
- }).join('');
+ var html='';
+ /* 技能/插件区 */
+ if(beikeSkillsUsed.length){
+  html+='<p class="text-[10px] font-semibold text-ink-400 px-1 pt-1 pb-1">技能</p>';
+  html+=beikeSkillsUsed.map(function(s){
+   return '<div class="flex items-center gap-2 px-2.5 py-1.5 rounded-lg bg-jade-50/60 border border-jade-100">'
+    +'<i class="fa-solid '+s.icon+' text-jade-600 text-[11px]"></i>'
+    +'<span class="text-[11px] text-ink-700 font-medium">'+escapeHtml(s.name)+'</span>'
+    +'<span class="text-[9px] text-ink-300 ml-auto">'+escapeHtml(s.kind)+'</span>'
+    +'</div>';
+  }).join('');
+ }
+ /* 联网搜索区 */
+ if(refs&&refs.length){
+  html+='<p class="text-[10px] font-semibold text-ink-400 px-1 pt-2.5 pb-1">联网搜索</p>';
+  html+=refs.map(function(r,i){
+   var title=r.title||r.site_name||r.name||r.heading||'';
+   var url=r.url||r.link||r.href||r.orig_url||'';
+   if(!title&&url){ try{ title=new URL(url).hostname.replace('www.',''); }catch(_){} }
+   if(!title) title='参考 '+(i+1);
+   var readBadge=r.read?'<span class="text-[8px] text-jade-700 bg-jade-100 rounded px-1 py-px ml-1 shrink-0">已读</span>':'';
+   var snippet=(r.read&&r.snippet)?'<p class="text-[10px] text-ink-400 mt-0.5 line-clamp-2">'+escapeHtml(r.snippet)+'</p>':'';
+   return '<div onclick="openRefInNewTab(\''+escapeHtml(url)+'\')" class="block px-2.5 py-2 rounded-lg hover:bg-jade-50 transition group cursor-pointer">'
+    +'<div class="flex items-start gap-2">'
+    +_siteIcon(url)
+    +'<div class="flex-1 min-w-0">'
+    +'<p class="text-[11px] font-medium text-ink-700 group-hover:text-jade-700 transition line-clamp-2">'+escapeHtml(title)+readBadge+'</p>'
+    +snippet
+    +'</div>'
+    +'<i class="fa-solid fa-arrow-up-right-from-square text-[8px] text-ink-300 group-hover:text-jade-500 mt-0.5 shrink-0 transition"></i>'
+    +'</div></div>';
+  }).join('');
+ }
+ el.innerHTML=html;
+}
+/* 深读：流式回答完成后，打开 Top3 链接读取网页正文，面板标记「已读」并展示摘要 */
+function deepReadBeikeRefs(refs){
+ if(!refs||!refs.length||!window.AgentWebSearch||!AgentWebSearch.fetchPage) return;
+ var top=refs.filter(function(r){return r.url&&r.url.indexOf('http')===0&&!r.read;}).slice(0,3);
+ top.forEach(function(r){
+  AgentWebSearch.fetchPage(r.url,1200).then(function(res){
+   if(res&&res.ok&&res.data&&res.data.content&&res.data.content.length>80){
+    r.read=true;
+    r.snippet=res.data.content.replace(/\s+/g,' ').slice(0,120);
+    updateBeikeRefList(beikeRefs);
+    saveBeikeSidebarState();
+   }
+  }).catch(function(){});
+ });
 }
 function openRefInNewTab(url){
  if(!url||url==='#'){ showToast('无可用链接'); return; }
@@ -2877,6 +2979,11 @@ async function streamToBox(boxId, prompt, systemInstruction, history, images, on
  if(contentRefs.length>0){ searchRefs=searchRefs.concat(contentRefs); }
  beikeRefs=searchRefs.slice();
  updateBeikeRefList(beikeRefs);
+ /* 深读 Top3 网页正文（面板标记「已读」+ 摘要），不阻塞回答展示 */
+ if(searchRefs.length){
+  markBeikeSkillUsed('联网搜索','fa-globe','插件');
+  deepReadBeikeRefs(searchRefs);
+ }
  inner.innerHTML=renderMarkdown(displayAcc); box.scrollTop=box.scrollHeight;
  /* 显示操作按钮（流式输出完成） */
  showMsgActions(inner);
@@ -3045,12 +3152,14 @@ function saveBeikeSidebarState(){
  recs[ridx].todos=beikeTodos;
  recs[ridx].artifacts=beikeArtifacts;
  recs[ridx].refs=beikeRefs;
+ recs[ridx].skillsUsed=beikeSkillsUsed;
  localStorage.setItem(BEIKE_HISTORY_KEY,JSON.stringify(recs));
 }
 function restoreBeikeSidebar(rec){
  beikeTodos=(rec&&rec.todos)||[];
  beikeArtifacts=(rec&&rec.artifacts)||[];
  beikeRefs=(rec&&rec.refs)||[];
+ beikeSkillsUsed=(rec&&rec.skillsUsed)||[];
  renderBeikeTodos();
  renderBeikeArtifacts();
  updateBeikeRefList(beikeRefs);
@@ -3104,12 +3213,52 @@ function cleanHistoryForAI(hist){
   return m;
  });
 }
+/* 把本轮上传的附件文件名拼进用户消息，让模型知道"本轮带了哪些文件"。
+ * 返回 { content, files }；files 为附件文件名数组（用于保存到历史）。 */
+function buildBeikeUserMsg(text){
+ var files=(richAttachments['beike']||[]).map(function(f){return f&&f.name?f.name:'';}).filter(Boolean);
+ var content=text||'';
+ if(files.length){
+  content+='\n\n【本轮上传的文件】\n'+files.map(function(n){return '- '+n;}).join('\n');
+ }
+ return { content:content, files:files };
+}
+/* 保证历史至少保留 10 轮（用户+助手=1轮），溢出时优先遗忘最旧的轮次。
+ * 返回裁剪后的历史数组。 */
+function trimBeikeHistory(hist){
+ if(!hist||!hist.length) return hist;
+ var MIN_ROUNDS=10, MIN_MSGS=MIN_ROUNDS*2;
+ if(hist.length<=MIN_MSGS) return hist;
+ return hist.slice(-MIN_MSGS);
+}
 function sendSuggest(text){
  var inp=document.getElementById('beikeInput');
  if(inp){ inp.value=text; }
  sendBeikeFollowup();
 }
+/* 判断是否为纯对话消息（未点名任何产物需求）：纯对话直接走流式问答，不触发产物工作流 */
+function isPureChatMessage(q){
+ if(!q) return true;
+ var t=String(q).trim();
+ if(!t) return true;
+ /* 明确点名产物/生成类诉求 → 走智能体工作流 */
+ var productKw=['教案','教学设计','课件','ppt','PPT','习题','练习','试卷','组卷','命题','作业','评语','学情','成绩分析','成绩单','教研','评课','听评课','通知','告家长书','工作计划','工作总结','述职','发言稿','致辞','会议纪要','会议记录','班会','评优','职称','申报','动画','演示','精讲','重难点','报表','文档','生成','制作','写一份','写一篇','写个','设计一份','设计一个','做一份','做一个','备一','备课'];
+ for(var i=0;i<productKw.length;i++){ if(t.indexOf(productKw[i])>=0) return false; }
+ /* 短消息、疑问句、问候 → 纯对话 */
+ if(t.length<=40) return true;
+ if(/[吗呢吧啊呀？?嘛哈咯哦~～!！。]$/.test(t)) return true;
+ return false;
+}
 function sendBeikeFollowup() {
+ try {
+  _sendBeikeFollowupImpl();
+ } catch(e) {
+  console.error('[sendBeikeFollowup]', e);
+  try { setBeikeSendBtn('send'); } catch(_){}
+  try { appendMsg('beikeMessages','assistant','<span class="text-rose-500 text-xs"><i class="fa-solid fa-circle-exclamation mr-1"></i>发送处理出错：'+escapeHtml((e&&e.message)||String(e))+'</span>'); } catch(_){}
+ }
+}
+function _sendBeikeFollowupImpl() {
  const inp = document.getElementById('beikeInput');
  const q = inp.value.trim();
  if (!q) return;
@@ -3128,16 +3277,19 @@ function sendBeikeFollowup() {
   saveBeikeHistoryRecord(q, document.getElementById('beikeGrade').value, getTeacherSubjectAndTextbook(), document.getElementById('beikeMessages').innerHTML, []);
   showBeikeRightPanel();
  }
- /* Agent 模式：走 AgentCore.run 的 ReAct 循环 */
- if(beikeChatMode==='agent' && window.AgentCore){
-  beikeHistory.push({ role: 'user', content: q });
+ /* Agent 模式：走 AgentCore.run 的 ReAct 循环（纯对话消息除外——直接走 Chat 流式问答） */
+ if(beikeChatMode==='agent' && window.AgentCore && !isPureChatMessage(q)){
+  var um=buildBeikeUserMsg(q);
+  beikeHistory.push({ role: 'user', content: um.content });
   /* 显示 Agent 工作区 */
   var agentArea = document.getElementById('agentWorkspace');
   if(agentArea) agentArea.style.display='block';
   /* 调用 AgentCore.run */
-  AgentCore.run(q, {
+  AgentCore.run(um.content, {
     subject: document.getElementById('beikeGrade') ? document.getElementById('beikeGrade').value : '',
     topic: q,
+    history: trimBeikeHistory(cleanHistoryForAI(beikeHistory.slice())),
+    uploadedFiles: um.files,
     onUpdate: function(text){
       /* 更新当前教案记录 */
       var recs=getBeikeHistoryRecords();
@@ -3168,9 +3320,11 @@ function sendBeikeFollowup() {
   return;
  }
  /* Chat 模式：走流式对话 */
- streamToBox('beikeMessages', q, getActiveSys(), cleanHistoryForAI(beikeHistory.slice()), null, function (acc) {
-  beikeHistory.push({ role: 'user', content: q });
+ var cui=buildBeikeUserMsg(q);
+ streamToBox('beikeMessages', cui.content, getActiveSys(), trimBeikeHistory(cleanHistoryForAI(beikeHistory.slice())), null, function (acc) {
+  beikeHistory.push({ role: 'user', content: cui.content });
   beikeHistory.push({ role: 'assistant', content: acc });
+  beikeHistory=trimBeikeHistory(beikeHistory);
   /* 更新当前教案记录 */
   var recs=getBeikeHistoryRecords();
   var ridx=recs.findIndex(function(r){return r.id===currentBeikeRecordId;});
@@ -3215,7 +3369,7 @@ function clearBeikeChat() {
  beikeHistory = [];
  currentBeikeRecordId=null;
  richAttachments['beike'] = [];
- beikeTodos=[]; beikeArtifacts=[]; beikeRefs=[];
+ beikeTodos=[]; beikeArtifacts=[]; beikeRefs=[]; beikeSkillsUsed=[];
  renderBeikeTodos(); renderBeikeArtifacts(); updateBeikeRefList([]);
  const ba = document.getElementById('beikeAttachments');
  if (ba) ba.innerHTML = '';
@@ -3619,14 +3773,18 @@ function deleteBeikeHistoryRecord(id){
  records=records.filter(function(x){return x.id!==id;});
  localStorage.setItem(BEIKE_HISTORY_KEY,JSON.stringify(records));
  renderBeikeHistoryList();
- /* 清空当前聊天区和对话历史 */
- beikeHistory=[];
- var m=document.getElementById('beikeMessages');
- if(m) m.innerHTML='';
- updateBeikeEmptyState();
- /* 隐藏右侧侧边栏 */
- var panel=document.getElementById('beikeRightPanel');
- if(panel) panel.classList.add('collapsed');
+ /* 仅当删除的是「当前正在查看的记录」时，才清空聊天区回到初始状态；
+    删除其他历史记录只刷新列表，不影响当前页面内容 */
+ if(id===currentBeikeRecordId){
+  currentBeikeRecordId=null;
+  beikeHistory=[];
+  var m=document.getElementById('beikeMessages');
+  if(m) m.innerHTML='';
+  updateBeikeEmptyState();
+  /* 隐藏右侧侧边栏 */
+  var panel=document.getElementById('beikeRightPanel');
+  if(panel) panel.classList.add('collapsed');
+ }
  showToast('记录已删除');
 }
 function clearBeikeHistory(){
@@ -4411,10 +4569,16 @@ async function handleGradingSubmit(){
  /* 添加导出按钮 */
  var exportBar=document.createElement('div');
  exportBar.className='flex items-center gap-2 mt-4 pt-3 border-t border-ink-100';
- exportBar.innerHTML='<button onclick="exportGradingResult()" class="px-4 py-1.5 text-xs font-medium text-jade-700 bg-jade-50 border border-jade-200 rounded-lg hover:bg-jade-100 transition flex items-center gap-1.5"><i class="fa-solid fa-file-export"></i>导出文档</button>';
+ exportBar.innerHTML='<button onclick="exportGradingReportDocx()" class="px-4 py-1.5 text-xs font-medium text-white bg-jade-600 rounded-lg hover:bg-jade-700 transition flex items-center gap-1.5"><i class="fa-solid fa-file-word"></i>导出批改报告</button>'
+  +'<button onclick="exportGradingResult()" class="px-4 py-1.5 text-xs font-medium text-jade-700 bg-jade-50 border border-jade-200 rounded-lg hover:bg-jade-100 transition flex items-center gap-1.5"><i class="fa-solid fa-print"></i>打印 / PDF</button>';
  resultBox.appendChild(exportBar);
  /* 缓存批改结果供导出使用 */
  window._lastGradingResult=acc;
+ /* 保存批改历史记录 */
+ try{
+  var gRec={id:'g_'+Date.now(), time:Date.now(), type:gradingType, typeLabel:typeLabel, subject:subj, remark:remark||'', summary:(acc.match(/总分[^\n]*/)||[''])[0]||typeLabel+'批改完成', result:acc};
+  addGradingHistory(gRec);
+ }catch(e){}
  /* 同步到智能体记忆：批改结果 → 备课时参考学生薄弱点 */
  if(window.AgentMemory&&acc){
   var _gradeSummary=(acc.match(/总分[^\n]*/)||[''])[0].slice(0,60);
@@ -4422,6 +4586,24 @@ async function handleGradingSubmit(){
  }
  }catch(e){ resultBox.innerHTML='<div class="text-center py-16"><i class="fa-solid fa-circle-exclamation text-3xl text-rose-400 mb-3"></i><p class="text-sm text-rose-500">'+e.message+'</p></div>'; }
  finally{ btn.disabled=false; selectGradingType(gradingType); }
+}
+/* 导出批改报告为 Word 文档（docx）：优先走沙箱 genWord（真实 .docx，存入产物区可下载），失败回退 HTML 打印版 */
+async function exportGradingReportDocx(){
+ var md=window._lastGradingResult;
+ if(!md){ showToast('暂无可导出的批改结果'); return; }
+ try{
+  if(window.AgentSandbox && typeof AgentSandbox.genWord==='function'){
+   showToast('正在生成批改报告 Word 文档…');
+   var fname='批改报告_'+new Date().toLocaleDateString('zh-CN').replace(/\//g,'');
+   var r=await AgentSandbox.genWord({filename:fname, title:'AI 批改报告', meta:'生成时间：'+new Date().toLocaleString('zh-CN'), content:md});
+   if(r&&r.ok){
+    showToast('批改报告已生成，可在产物区下载：'+((r.data&&r.data.path)||fname+'.docx'));
+    return;
+   }
+   console.warn('[grading] genWord 失败，回退 HTML 导出', r&&r.error);
+  }
+ }catch(e){ console.warn('[grading] 导出 Word 异常，回退 HTML 导出', e); }
+ exportGradingResult();
 }
 /* 导出批改结果为 HTML 文档 */
 function exportGradingResult(){
@@ -4568,6 +4750,11 @@ async function generatePaper(){
  if(!data.questions||!Array.isArray(data.questions)||data.questions.length===0) throw new Error('未生成题目，请调整参数后重试');
  paperPool=(data.questions||[]).map((q,i)=>({...q,_id:'p'+Date.now()+'_'+i,_sel:false}));
  renderPaperPool();
+ /* 保存组卷历史记录 */
+ try{
+  var pRec={id:'p_'+Date.now(), time:Date.now(), subject:subj, topic:topic||'', difficulty:diff, single:nS, multi:nM, fill:nF, solve:nV, questions:paperPool.map(function(q){ return Object.assign({},q); })};
+  addPaperHistory(pRec);
+ }catch(e){}
  }catch(e){ var errMsg=e.message||'未知错误'; if(errMsg.indexOf('Failed to fetch')!==-1||errMsg.indexOf('NetworkError')!==-1){ errMsg='网络请求失败，请确保通过 http://localhost:8766 访问页面（不要直接双击打开文件）'; } pool.innerHTML='<div class="text-center py-10"><i class="fa-solid fa-circle-exclamation text-2xl text-rose-400 mb-2"></i><p class="text-xs text-rose-500 max-w-xs mx-auto">'+escapeHtml(errMsg)+'</p><button onclick="generatePaper()" class="mt-3 text-xs text-ink-600 underline">重试</button></div>'; }
  finally{ btn.disabled=false; btn.innerHTML='<i class="fa-solid fa-bolt"></i>生成题库'; }
 }
@@ -5396,6 +5583,14 @@ function updateAnaSwitchThumb(){
   thumb.style.left=elSubject.offsetLeft+'px'; thumb.style.width=elSubject.offsetWidth+'px';
  }
 }
+/* 模拟段/市/省排名：段排=当前段内名次，市排/省排按全市/全省规模等比放大 */
+function computeRanks(idx, n){
+ var seg=idx+1;
+ /* 段规模约等于当前展示人数；市/省为更大范围，排名数字随范围增大 */
+ var city=Math.max(seg, Math.round(seg*5000/Math.max(1,n)));
+ var prov=Math.max(city, Math.round(seg*100000/Math.max(1,n)));
+ return {seg:seg, city:city, prov:prov};
+}
 function renderAnalytics(){
  const d=getAnaData(); const sub=getTeacherSubjectName();
  const sr=document.getElementById('anaStatsRow');
@@ -5438,14 +5633,19 @@ function renderAnalytics(){
     html+='<th class="py-2 px-2 text-left text-[10px] font-semibold text-ink-500 whitespace-nowrap">姓名</th>';
     modules.forEach(function(m){ html+='<th class="py-2 px-1.5 text-center text-[9px] font-semibold text-ink-500 whitespace-nowrap">'+escapeHtml(m)+'</th>'; });
     html+='<th class="py-2 px-2 text-right text-[10px] font-semibold text-ink-500 whitespace-nowrap">'+escapeHtml(sub)+'分</th>';
+    html+='<th class="py-2 px-2 text-center text-[10px] font-semibold text-ink-500 whitespace-nowrap">段排</th>';
+    html+='<th class="py-2 px-2 text-center text-[10px] font-semibold text-ink-500 whitespace-nowrap">市排</th>';
     html+='</tr></thead><tbody>';
     subScores.forEach(function(s,i){
      var mscores=modules.map(function(m){return s.modules[m]||0;});
      var bg=i<3?'bg-jade-50/40':'';
+     var rk=computeRanks(i,subScores.length);
      html+='<tr class="border-b border-ink-100 '+bg+' cursor-pointer hover:bg-jade-50/60 transition" onclick="openStuDetail(\''+escapeHtml(s.name)+'\')">';
      html+='<td class="py-1.5 px-2 text-ink-700 whitespace-nowrap"><span class="inline-flex items-center gap-1.5"><span class="w-4 h-4 rounded-full '+(i===0?'bg-tan-500 text-white':i===1?'bg-ink-400 text-white':i===2?'bg-tan-300 text-ink-800':'bg-ink-100 text-ink-500')+' text-[9px] flex items-center justify-center font-bold">'+(i+1)+'</span>'+escapeHtml(s.name)+'</span></td>';
      modules.forEach(function(m,j){ html+='<td class="py-1.5 px-1.5 text-center text-ink-600">'+(mscores[j]||0)+'</td>'; });
      html+='<td class="py-1.5 px-2 text-right font-semibold text-ink-900">'+s.s+'</td>';
+     html+='<td class="py-1.5 px-2 text-center text-ink-600">'+rk.seg+'</td>';
+     html+='<td class="py-1.5 px-2 text-center text-ink-600">'+rk.city+'</td>';
      html+='</tr>';
     });
     html+='</tbody></table>';
@@ -5511,13 +5711,20 @@ function renderAnalytics(){
    html+='<th class="py-2 px-2 text-left text-[10px] font-semibold text-ink-500 whitespace-nowrap sticky left-0 bg-ink-50/80">姓名</th>';
    allSubjects.forEach(function(sb){ html+='<th class="py-2 px-1.5 text-center text-[9px] font-semibold text-ink-500 whitespace-nowrap">'+escapeHtml(sb)+'</th>'; });
    html+='<th class="py-2 px-2 text-right text-[10px] font-semibold text-ink-500 whitespace-nowrap">总分</th>';
+   html+='<th class="py-2 px-2 text-center text-[10px] font-semibold text-ink-500 whitespace-nowrap">段排</th>';
+   html+='<th class="py-2 px-2 text-center text-[10px] font-semibold text-ink-500 whitespace-nowrap">市排</th>';
+   html+='<th class="py-2 px-2 text-center text-[10px] font-semibold text-ink-500 whitespace-nowrap">省排</th>';
    html+='</tr></thead><tbody>';
    stuAllScores.forEach(function(s,i){
     var bg=i<3?'bg-jade-50/40':'';
+    var rk=computeRanks(i,stuAllScores.length);
     html+='<tr class="border-b border-ink-100 '+bg+' cursor-pointer hover:bg-jade-50/60 transition" onclick="openStuDetail(\''+escapeHtml(s.name)+'\')">';
     html+='<td class="py-1.5 px-2 text-ink-700 whitespace-nowrap sticky left-0 '+(bg||'bg-white')+'"><span class="inline-flex items-center gap-1.5"><span class="w-4 h-4 rounded-full '+(i===0?'bg-tan-500 text-white':i===1?'bg-ink-400 text-white':i===2?'bg-tan-300 text-ink-800':'bg-ink-100 text-ink-500')+' text-[9px] flex items-center justify-center font-bold">'+(i+1)+'</span>'+escapeHtml(s.name)+'</span></td>';
     allSubjects.forEach(function(sb){ html+='<td class="py-1.5 px-1.5 text-center text-ink-600">'+(s.subScores[sb]||0)+'</td>'; });
     html+='<td class="py-1.5 px-2 text-right font-semibold text-ink-900">'+s.total+'</td>';
+    html+='<td class="py-1.5 px-2 text-center text-ink-600">'+rk.seg+'</td>';
+    html+='<td class="py-1.5 px-2 text-center text-ink-600">'+rk.city+'</td>';
+    html+='<td class="py-1.5 px-2 text-center text-ink-600">'+rk.prov+'</td>';
     html+='</tr>';
    });
    html+='</tbody></table>';
@@ -6222,6 +6429,12 @@ async function generateAnalyticsReport(){
 
  var sys='你是一位资深高中教学分析师与年级组长，请根据以下班级学情数据进行深度分析并生成报告。你要充分利用提供的表格数据（总分、各科得分、单科各模块得分）进行综合阐述，并针对具体学生展开个案分析（偏科学生、得分率低的学生、本学科为强项的学生）。\n\n报告要求：\n1. 用 Markdown 格式输出\n2. 开头写"以下是为您生成的报告（供参考）："，不要有任何打招呼或问候的文字\n3. 包含：整体判断、数据综合分析（引用具体表格数据和分数）、薄弱环节定位、学生个案分析（点名分析具体学生）、分层教学建议、下一步教学重点\n4. 语言精炼可执行，避免空话套话\n5. 每个分析都要引用具体数据支撑';
 
+ /* 可选的其他要求（教师填写的额外关注点） */
+ var extraReq=(document.getElementById('anaExtraReq')||{}).value||'';
+ if(extraReq && extraReq.trim()){
+  sys+='\n\n【教师额外要求】'+extraReq.trim()+'：请在报告中重点回应此要求，例如对指定学生/科目/临界生进行专项分析。';
+ }
+
  var prompt='以下是当前页面的学情数据，请基于这些数据进行深度分析：\n\n'+dataParts.join('\n')+'\n\n请生成详细的学情分析报告。';
  try{
   let acc=''; let pendingRender=false; let lastLen=0; let streamDone=false;
@@ -6346,6 +6559,7 @@ window.addEventListener('load',function(){
 <script src="teacher-agent-sandbox/js/workflow-prompts.js"></script>
 <script src="teacher-agent-sandbox/js/langgraph-workflow.js"></script>
 <script src="teacher-agent-sandbox/js/sub-workflows.js"></script>
+<script src="teacher-agent-sandbox/js/backend-client.js"></script>
 <script src="teacher-agent-sandbox/js/agent-core.js"></script>
 <script src="teacher-agent-sandbox/js/ui-controller.js"></script>
 
@@ -6633,8 +6847,186 @@ window.addEventListener('load',function(){
  </div>
 </div>
 
-<!-- 孔孟大模型 悬浮球（左键对话 / 右键设置 / 拖到边缘自动隐藏） -->
-<script>window.KM_FLOAT_CONFIG = { logo: '教育大模型logo.png' };</script>
+<!-- ========== 题目批改 历史记录面板（侧边横推） ========== -->
+<div id="gradingHistoryOverlay" class="hidden fixed inset-0 z-40" onclick="closeGradingHistory(event)">
+ <div id="gradingHistoryPanel" class="absolute left-0 top-0 h-full w-[22%] min-w-[300px] max-w-[360px] bg-white shadow-2xl border-r border-ink-100 flex flex-col" style="transform: translateX(-100%); transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);" onclick="event.stopPropagation()">
+  <div class="p-4 border-b border-ink-100 flex items-center justify-between bg-white shrink-0">
+   <div class="flex items-center gap-2">
+    <div class="w-7 h-7 rounded-full bg-jade-50 flex items-center justify-center text-jade-600"><i class="fa-solid fa-clock-rotate-left text-xs"></i></div>
+    <h3 class="text-sm font-semibold text-ink-800">批改历史</h3>
+    <span id="gradingHistoryCount" class="text-[10px] text-jade-400 font-medium">0</span>
+   </div>
+   <div class="flex items-center gap-1.5">
+    <button onclick="clearGradingHistory()" class="text-[11px] text-ink-400 hover:text-rose-500 px-2 py-1 rounded-md hover:bg-rose-50 transition-all">清空全部</button>
+    <button onclick="closeGradingHistory()" class="text-ink-400 hover:text-jade-600 w-7 h-7 rounded-md hover:bg-jade-50 flex items-center justify-center transition-all"><i class="fa-solid fa-xmark"></i></button>
+   </div>
+  </div>
+  <div id="gradingHistoryList" class="flex-1 overflow-y-auto p-3 space-y-2 settings-scroll">
+   <div class="text-center py-8 text-ink-300"><i class="fa-solid fa-pen-to-square text-3xl mb-2 opacity-40"></i><p class="text-xs">暂无批改历史</p></div>
+  </div>
+ </div>
+</div>
+
+<!-- ========== 智能组卷 历史记录面板（侧边横推） ========== -->
+<div id="paperHistoryOverlay" class="hidden fixed inset-0 z-40" onclick="closePaperHistory(event)">
+ <div id="paperHistoryPanel" class="absolute left-0 top-0 h-full w-[22%] min-w-[300px] max-w-[360px] bg-white shadow-2xl border-r border-ink-100 flex flex-col" style="transform: translateX(-100%); transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);" onclick="event.stopPropagation()">
+  <div class="p-4 border-b border-ink-100 flex items-center justify-between bg-white shrink-0">
+   <div class="flex items-center gap-2">
+    <div class="w-7 h-7 rounded-full bg-jade-50 flex items-center justify-center text-jade-600"><i class="fa-solid fa-clock-rotate-left text-xs"></i></div>
+    <h3 class="text-sm font-semibold text-ink-800">组卷历史</h3>
+    <span id="paperHistoryCount" class="text-[10px] text-jade-400 font-medium">0</span>
+   </div>
+   <div class="flex items-center gap-1.5">
+    <button onclick="clearPaperHistory()" class="text-[11px] text-ink-400 hover:text-rose-500 px-2 py-1 rounded-md hover:bg-rose-50 transition-all">清空全部</button>
+    <button onclick="closePaperHistory()" class="text-ink-400 hover:text-jade-600 w-7 h-7 rounded-md hover:bg-jade-50 flex items-center justify-center transition-all"><i class="fa-solid fa-xmark"></i></button>
+   </div>
+  </div>
+  <div id="paperHistoryList" class="flex-1 overflow-y-auto p-3 space-y-2 settings-scroll">
+   <div class="text-center py-8 text-ink-300"><i class="fa-solid fa-layer-group text-3xl mb-2 opacity-40"></i><p class="text-xs">暂无组卷历史</p></div>
+  </div>
+ </div>
+</div>
+
+<!-- ========== 孔孟大模型 悬浮球 ========== -->
+<script>
+/* ============================================================
+ * 题目批改 / 智能组卷 历史记录（侧边横推，参照学生端实现）
+ * 数据经 localStorage（Electron 下自动落盘到 data 对应模块）
+ * ============================================================ */
+var GRADING_HISTORY_KEY='ai_teacher_grading_history';
+var PAPER_HISTORY_KEY='ai_teacher_paper_history';
+
+function fmtHistoryTime(ts){
+ try{ var d=new Date(ts); var p=function(n){return (n<10?'0':'')+n;}; return d.getFullYear()+'-'+p(d.getMonth()+1)+'-'+p(d.getDate())+' '+p(d.getHours())+':'+p(d.getMinutes()); }catch(e){ return ''; }
+}
+function stripMd(s){ return String(s||'').replace(/[#*`>|]/g,' ').replace(/\s+/g,' ').trim(); }
+
+/* ---------------- 批改历史 ---------------- */
+function getGradingHistory(){ try{ return JSON.parse(localStorage.getItem(GRADING_HISTORY_KEY))||[]; }catch(e){ return []; } }
+function saveGradingHistory(list){ try{ localStorage.setItem(GRADING_HISTORY_KEY, JSON.stringify(list)); }catch(e){} }
+function addGradingHistory(rec){ var list=getGradingHistory(); list.unshift(rec); if(list.length>50) list=list.slice(0,50); saveGradingHistory(list); renderGradingHistoryList(); }
+function toggleGradingHistory(){
+ var overlay=document.getElementById('gradingHistoryOverlay'), panel=document.getElementById('gradingHistoryPanel');
+ if(!overlay||!panel) return;
+ if(overlay.classList.contains('hidden')){
+  overlay.classList.remove('hidden'); renderGradingHistoryList();
+  void overlay.offsetHeight;
+  setTimeout(function(){ panel.style.transform='translateX(0)'; },20);
+ } else { closeGradingHistory(); }
+}
+function closeGradingHistory(event){
+ if(event && event.target && event.target.id!=='gradingHistoryOverlay') return;
+ var overlay=document.getElementById('gradingHistoryOverlay'), panel=document.getElementById('gradingHistoryPanel');
+ if(!overlay||!panel) return;
+ panel.style.transform='translateX(-100%)';
+ setTimeout(function(){ overlay.classList.add('hidden'); },300);
+}
+function renderGradingHistoryList(){
+ var list=document.getElementById('gradingHistoryList'); if(!list) return;
+ var recs=getGradingHistory();
+ var countEl=document.getElementById('gradingHistoryCount'); if(countEl) countEl.textContent=recs.length;
+ if(!recs.length){ list.innerHTML='<div class="text-center py-8 text-ink-300"><i class="fa-solid fa-pen-to-square text-3xl mb-2 opacity-40"></i><p class="text-xs">暂无批改历史</p></div>'; return; }
+ list.innerHTML=recs.map(function(r){
+  var title=(r.typeLabel||'批改')+' · '+(r.subject||'');
+  var summary=stripMd(r.summary||r.result||'').slice(0,60);
+  return '<div class="group bg-white border border-ink-100 rounded-xl p-3 hover:border-jade-300 hover:shadow-sm transition-all cursor-pointer" onclick="loadGradingHistoryRecord(\''+r.id+'\')">'
+   +'<div class="flex items-center justify-between mb-1"><span class="text-[11px] font-semibold text-ink-700">'+escapeHtml(title)+'</span><span class="text-[10px] text-ink-300">'+fmtHistoryTime(r.time)+'</span></div>'
+   +(summary?'<p class="text-[11px] text-ink-400 leading-relaxed line-clamp-2 mb-1.5">'+escapeHtml(summary)+'</p>':'')
+   +'<div class="flex items-center gap-2"><button onclick="event.stopPropagation();deleteGradingHistoryRecord(\''+r.id+'\')" class="text-[10px] text-ink-300 hover:text-rose-500 transition"><i class="fa-solid fa-trash-can mr-0.5"></i>删除</button></div>'
+   +'</div>';
+ }).join('');
+}
+function loadGradingHistoryRecord(id){
+ var recs=getGradingHistory(); var rec=recs.find(function(r){ return r.id===id; });
+ if(!rec){ showToast('记录不存在或已删除'); return; }
+ var resultBox=document.getElementById('gradingResult'); if(!resultBox) return;
+ /* 恢复批改结果到右侧展示区 */
+ resultBox.innerHTML='<div id="gradingStream" class="text-sm text-ink-700 leading-relaxed">'+renderMarkdown(rec.result||'')+'</div>';
+ window._lastGradingResult=rec.result||'';
+ var exportBar=document.createElement('div');
+ exportBar.className='flex items-center gap-2 mt-4 pt-3 border-t border-ink-100';
+ exportBar.innerHTML='<button onclick="exportGradingResult()" class="px-4 py-1.5 text-xs font-medium text-jade-700 bg-jade-50 border border-jade-200 rounded-lg hover:bg-jade-100 transition flex items-center gap-1.5"><i class="fa-solid fa-file-export"></i>导出文档</button>';
+ resultBox.appendChild(exportBar);
+ closeGradingHistory();
+ showToast('已加载历史批改记录');
+}
+function deleteGradingHistoryRecord(id){
+ var list=getGradingHistory().filter(function(r){ return r.id!==id; });
+ saveGradingHistory(list); renderGradingHistoryList();
+}
+function clearGradingHistory(){
+ if(!getGradingHistory().length){ showToast('暂无历史记录'); return; }
+ showConfirmDialog('确认清空？','确定要清空所有批改历史记录吗？此操作不可恢复',function(){ saveGradingHistory([]); renderGradingHistoryList(); });
+}
+
+/* ---------------- 组卷历史 ---------------- */
+function getPaperHistory(){ try{ return JSON.parse(localStorage.getItem(PAPER_HISTORY_KEY))||[]; }catch(e){ return []; } }
+function savePaperHistory(list){ try{ localStorage.setItem(PAPER_HISTORY_KEY, JSON.stringify(list)); }catch(e){} }
+function addPaperHistory(rec){ var list=getPaperHistory(); list.unshift(rec); if(list.length>50) list=list.slice(0,50); savePaperHistory(list); renderPaperHistoryList(); }
+function togglePaperHistory(){
+ var overlay=document.getElementById('paperHistoryOverlay'), panel=document.getElementById('paperHistoryPanel');
+ if(!overlay||!panel) return;
+ if(overlay.classList.contains('hidden')){
+  overlay.classList.remove('hidden'); renderPaperHistoryList();
+  void overlay.offsetHeight;
+  setTimeout(function(){ panel.style.transform='translateX(0)'; },20);
+ } else { closePaperHistory(); }
+}
+function closePaperHistory(event){
+ if(event && event.target && event.target.id!=='paperHistoryOverlay') return;
+ var overlay=document.getElementById('paperHistoryOverlay'), panel=document.getElementById('paperHistoryPanel');
+ if(!overlay||!panel) return;
+ panel.style.transform='translateX(-100%)';
+ setTimeout(function(){ overlay.classList.add('hidden'); },300);
+}
+function renderPaperHistoryList(){
+ var list=document.getElementById('paperHistoryList'); if(!list) return;
+ var recs=getPaperHistory();
+ var countEl=document.getElementById('paperHistoryCount'); if(countEl) countEl.textContent=recs.length;
+ if(!recs.length){ list.innerHTML='<div class="text-center py-8 text-ink-300"><i class="fa-solid fa-layer-group text-3xl mb-2 opacity-40"></i><p class="text-xs">暂无组卷历史</p></div>'; return; }
+ list.innerHTML=recs.map(function(r){
+  var diffLabel={easy:'基础巩固',medium:'能力提升',hard:'挑战拔高'}[r.difficulty]||r.difficulty||'';
+  var qCount=(r.questions||[]).length;
+  var title=(r.topic||'组卷')+' · '+qCount+'题';
+  return '<div class="group bg-white border border-ink-100 rounded-xl p-3 hover:border-jade-300 hover:shadow-sm transition-all cursor-pointer" onclick="loadPaperHistoryRecord(\''+r.id+'\')">'
+   +'<div class="flex items-center justify-between mb-1"><span class="text-[11px] font-semibold text-ink-700">'+escapeHtml(title)+'</span><span class="text-[10px] text-ink-300">'+fmtHistoryTime(r.time)+'</span></div>'
+   +'<p class="text-[11px] text-ink-400 mb-1.5">'+(r.subject?escapeHtml(r.subject)+' · ':'')+(diffLabel?escapeHtml(diffLabel):'')+' · 单选'+(r.single||0)+' 多选'+(r.multi||0)+' 填空'+(r.fill||0)+' 解答'+(r.solve||0)+'</p>'
+   +'<div class="flex items-center gap-2"><button onclick="event.stopPropagation();deletePaperHistoryRecord(\''+r.id+'\')" class="text-[10px] text-ink-300 hover:text-rose-500 transition"><i class="fa-solid fa-trash-can mr-0.5"></i>删除</button></div>'
+   +'</div>';
+ }).join('');
+}
+function loadPaperHistoryRecord(id){
+ var recs=getPaperHistory(); var rec=recs.find(function(r){ return r.id===id; });
+ if(!rec){ showToast('记录不存在或已删除'); return; }
+ /* 恢复题池 */
+ if(window.paperPool===undefined) window.paperPool=[];
+ paperPool=JSON.parse(JSON.stringify(rec.questions||[]));
+ paperSelected=[];
+ renderPaperPool();
+ if(typeof renderPaperPreview==='function') renderPaperPreview();
+ /* 回填参数 */
+ try{
+  if(rec.topic){ var tp=document.getElementById('paperTopic'); if(tp) tp.value=rec.topic; }
+  if(rec.difficulty){ var df=document.getElementById('paperDifficulty'); if(df) df.value=rec.difficulty; }
+ }catch(e){}
+ closePaperHistory();
+ showToast('已加载历史组卷（'+paperPool.length+' 题）');
+}
+function deletePaperHistoryRecord(id){
+ var list=getPaperHistory().filter(function(r){ return r.id!==id; });
+ savePaperHistory(list); renderPaperHistoryList();
+}
+function clearPaperHistory(){
+ if(!getPaperHistory().length){ showToast('暂无历史记录'); return; }
+ showConfirmDialog('确认清空？','确定要清空所有组卷历史记录吗？此操作不可恢复',function(){ savePaperHistory([]); renderPaperHistoryList(); });
+}
+</script>
+<script>
+ /* 悬浮球配置：logo 使用教师端 logo，颜色跟随主题 */
+ window.KM_FLOAT_CONFIG = {
+  logo: './教育大模型logo.png'
+ };
+</script>
 <script src="./悬浮球.js"></script>
 
 </body>

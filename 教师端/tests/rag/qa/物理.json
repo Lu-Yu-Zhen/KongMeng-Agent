@@ -1,0 +1,405 @@
+{
+  "subject": "物理",
+  "items": [
+    {
+      "query": "质点的概念与条件。",
+      "subject": "物理",
+      "expected_kp": "P-P1C1S1-KP1",
+      "expected_source": "人教版必修第一册",
+      "difficulty": 2,
+      "negative": false
+    },
+    {
+      "query": "路程与位移的区别。",
+      "subject": "物理",
+      "expected_kp": "P-P1C1S2-KP2",
+      "expected_source": "人教版必修第一册",
+      "difficulty": 2,
+      "negative": false
+    },
+    {
+      "query": "平均速度与瞬时速度的区别。",
+      "subject": "物理",
+      "expected_kp": "P-P1C1S3-KP2",
+      "expected_source": "人教版必修第一册",
+      "difficulty": 3,
+      "negative": false
+    },
+    {
+      "query": "加速度的物理意义。",
+      "subject": "物理",
+      "expected_kp": "P-P1C1S4-KP1",
+      "expected_source": "人教版必修第一册",
+      "difficulty": 3,
+      "negative": false
+    },
+    {
+      "query": "匀变速直线运动的v-t图像分析。",
+      "subject": "物理",
+      "expected_kp": "P-P1C2S2-KP2",
+      "expected_source": "人教版必修第一册",
+      "difficulty": 3,
+      "negative": false
+    },
+    {
+      "query": "自由落体运动的规律。",
+      "subject": "物理",
+      "expected_kp": "P-P1C2S4-KP2",
+      "expected_source": "人教版必修第一册",
+      "difficulty": 3,
+      "negative": false
+    },
+    {
+      "query": "胡克定律的内容与应用。",
+      "subject": "物理",
+      "expected_kp": "P-P1C3S1-KP3",
+      "expected_source": "人教版必修第一册",
+      "difficulty": 3,
+      "negative": false
+    },
+    {
+      "query": "静摩擦力的特点。",
+      "subject": "物理",
+      "expected_kp": "P-P1C3S2-KP2",
+      "expected_source": "人教版必修第一册",
+      "difficulty": 3,
+      "negative": false
+    },
+    {
+      "query": "牛顿第三定律的内容。",
+      "subject": "物理",
+      "expected_kp": "P-P1C3S3-KP2",
+      "expected_source": "人教版必修第一册",
+      "difficulty": 2,
+      "negative": false
+    },
+    {
+      "query": "力的分解方法。",
+      "subject": "物理",
+      "expected_kp": "P-P1C3S4-KP2",
+      "expected_source": "人教版必修第一册",
+      "difficulty": 3,
+      "negative": false
+    },
+    {
+      "query": "牛顿第一定律与惯性。",
+      "subject": "物理",
+      "expected_kp": "P-P1C4S1-KP1",
+      "expected_source": "人教版必修第一册",
+      "difficulty": 3,
+      "negative": false
+    },
+    {
+      "query": "牛顿第二定律及其应用。",
+      "subject": "物理",
+      "expected_kp": "P-P1C4S3-KP1",
+      "expected_source": "人教版必修第一册",
+      "difficulty": 4,
+      "negative": false
+    },
+    {
+      "query": "超重与失重的判断。",
+      "subject": "物理",
+      "expected_kp": "P-P1C4S6-KP1",
+      "expected_source": "人教版必修第一册",
+      "difficulty": 3,
+      "negative": false
+    },
+    {
+      "query": "平抛运动的规律。",
+      "subject": "物理",
+      "expected_kp": "P-P2C1S3-KP1",
+      "expected_source": "人教版必修第二册",
+      "difficulty": 3,
+      "negative": false
+    },
+    {
+      "query": "向心力的来源分析。",
+      "subject": "物理",
+      "expected_kp": "P-P2C2S2-KP2",
+      "expected_source": "人教版必修第二册",
+      "difficulty": 3,
+      "negative": false
+    },
+    {
+      "query": "万有引力定律的内容。",
+      "subject": "物理",
+      "expected_kp": "P-P2C3S2-KP1",
+      "expected_source": "人教版必修第二册",
+      "difficulty": 3,
+      "negative": false
+    },
+    {
+      "query": "功的计算方法。",
+      "subject": "物理",
+      "expected_kp": "P-P2C4S1-KP1",
+      "expected_source": "人教版必修第二册",
+      "difficulty": 3,
+      "negative": false
+    },
+    {
+      "query": "动能定理的表述与应用。",
+      "subject": "物理",
+      "expected_kp": "P-P2C4S3-KP2",
+      "expected_source": "人教版必修第二册",
+      "difficulty": 4,
+      "negative": false
+    },
+    {
+      "query": "机械能守恒定律的适用条件。",
+      "subject": "物理",
+      "expected_kp": "P-P2C4S4-KP2",
+      "expected_source": "人教版必修第二册",
+      "difficulty": 4,
+      "negative": false
+    },
+    {
+      "query": "库仑定律的内容。",
+      "subject": "物理",
+      "expected_kp": "P-P3C1S2-KP1",
+      "expected_source": "人教版必修第三册",
+      "difficulty": 3,
+      "negative": false
+    },
+    {
+      "query": "电场强度的定义。",
+      "subject": "物理",
+      "expected_kp": "P-P3C1S3-KP2",
+      "expected_source": "人教版必修第三册",
+      "difficulty": 3,
+      "negative": false
+    },
+    {
+      "query": "电势能与电势的关系。",
+      "subject": "物理",
+      "expected_kp": "P-P3C2S1-KP2",
+      "expected_source": "人教版必修第三册",
+      "difficulty": 3,
+      "negative": false
+    },
+    {
+      "query": "电容的物理意义。",
+      "subject": "物理",
+      "expected_kp": "P-P3C2S4-KP2",
+      "expected_source": "人教版必修第三册",
+      "difficulty": 3,
+      "negative": false
+    },
+    {
+      "query": "电阻与欧姆定律。",
+      "subject": "物理",
+      "expected_kp": "P-P3C3S2-KP1",
+      "expected_source": "人教版必修第三册",
+      "difficulty": 3,
+      "negative": false
+    },
+    {
+      "query": "焦耳定律的内容。",
+      "subject": "物理",
+      "expected_kp": "P-P3C4S1-KP2",
+      "expected_source": "人教版必修第三册",
+      "difficulty": 2,
+      "negative": false
+    },
+    {
+      "query": "磁感应强度的定义。",
+      "subject": "物理",
+      "expected_kp": "P-P3C5S2-KP1",
+      "expected_source": "人教版必修第三册",
+      "difficulty": 3,
+      "negative": false
+    },
+    {
+      "query": "动量守恒定律的条件。",
+      "subject": "物理",
+      "expected_kp": "P-P4C1S3-KP1",
+      "expected_source": "人教版选择性必修第一册",
+      "difficulty": 4,
+      "negative": false
+    },
+    {
+      "query": "简谐运动的特征。",
+      "subject": "物理",
+      "expected_kp": "P-P4C2S1-KP2",
+      "expected_source": "人教版选择性必修第一册",
+      "difficulty": 3,
+      "negative": false
+    },
+    {
+      "query": "全反射的条件与现象。",
+      "subject": "物理",
+      "expected_kp": "P-P4C4S2-KP1",
+      "expected_source": "人教版选择性必修第一册",
+      "difficulty": 4,
+      "negative": false
+    },
+    {
+      "query": "法拉第电磁感应定律。",
+      "subject": "物理",
+      "expected_kp": "P-P5C2S2-KP1",
+      "expected_source": "人教版选择性必修第二册",
+      "difficulty": 4,
+      "negative": false
+    },
+    {
+      "query": "匀变速直线运动与自由落体运动综合。",
+      "subject": "物理",
+      "expected_kp": "P-P1C2S4-KP2",
+      "expected_source": "人教版必修第一册",
+      "difficulty": 4,
+      "negative": false
+    },
+    {
+      "query": "牛顿运动定律与超重失重综合。",
+      "subject": "物理",
+      "expected_kp": "P-P1C4S6-KP1",
+      "expected_source": "人教版必修第一册",
+      "difficulty": 4,
+      "negative": false
+    },
+    {
+      "query": "平抛运动与圆周运动综合应用。",
+      "subject": "物理",
+      "expected_kp": "P-P2C1S3-KP1",
+      "expected_source": "人教版必修第二册",
+      "difficulty": 4,
+      "negative": false
+    },
+    {
+      "query": "万有引力与卫星运行规律综合。",
+      "subject": "物理",
+      "expected_kp": "P-P2C3S4-KP2",
+      "expected_source": "人教版必修第二册",
+      "difficulty": 4,
+      "negative": false
+    },
+    {
+      "query": "功、动能定理与机械能守恒综合。",
+      "subject": "物理",
+      "expected_kp": "P-P2C4S4-KP1",
+      "expected_source": "人教版必修第二册",
+      "difficulty": 5,
+      "negative": false
+    },
+    {
+      "query": "静电场中电场、电势与电势差综合。",
+      "subject": "物理",
+      "expected_kp": "P-P3C2S2-KP1",
+      "expected_source": "人教版必修第三册",
+      "difficulty": 4,
+      "negative": false
+    },
+    {
+      "query": "欧姆定律与闭合电路综合。",
+      "subject": "物理",
+      "expected_kp": "P-P3C4S2-KP1",
+      "expected_source": "人教版必修第三册",
+      "difficulty": 4,
+      "negative": false
+    },
+    {
+      "query": "动量定理与动量守恒综合应用。",
+      "subject": "物理",
+      "expected_kp": "P-P4C1S3-KP1",
+      "expected_source": "人教版选择性必修第一册",
+      "difficulty": 4,
+      "negative": false
+    },
+    {
+      "query": "简谐运动与单摆综合。",
+      "subject": "物理",
+      "expected_kp": "P-P4C2S4-KP1",
+      "expected_source": "人教版选择性必修第一册",
+      "difficulty": 4,
+      "negative": false
+    },
+    {
+      "query": "波的干涉与衍射综合。",
+      "subject": "物理",
+      "expected_kp": "P-P4C3S3-KP2",
+      "expected_source": "人教版选择性必修第一册",
+      "difficulty": 4,
+      "negative": false
+    },
+    {
+      "query": "光的折射与全反射综合。",
+      "subject": "物理",
+      "expected_kp": "P-P4C4S1-KP1",
+      "expected_source": "人教版选择性必修第一册",
+      "difficulty": 4,
+      "negative": false
+    },
+    {
+      "query": "安培力与洛伦兹力综合。",
+      "subject": "物理",
+      "expected_kp": "P-P5C1S1-KP1",
+      "expected_source": "人教版选择性必修第二册",
+      "difficulty": 4,
+      "negative": false
+    },
+    {
+      "query": "楞次定律与法拉第电磁感应综合。",
+      "subject": "物理",
+      "expected_kp": "P-P5C2S1-KP1",
+      "expected_source": "人教版选择性必修第二册",
+      "difficulty": 5,
+      "negative": false
+    },
+    {
+      "query": "热力学第一定律与能量守恒综合。",
+      "subject": "物理",
+      "expected_kp": "P-P6C3S2-KP1",
+      "expected_source": "人教版选择性必修第三册",
+      "difficulty": 4,
+      "negative": false
+    },
+    {
+      "query": "光电效应与光的波粒二象性综合。",
+      "subject": "物理",
+      "expected_kp": "P-P6C4S2-KP1",
+      "expected_source": "人教版选择性必修第三册",
+      "difficulty": 4,
+      "negative": false
+    },
+    {
+      "query": "化学反应的催化机理。",
+      "subject": "物理",
+      "expected_kp": "",
+      "expected_source": "",
+      "difficulty": 2,
+      "negative": true
+    },
+    {
+      "query": "英语语法的被动结构。",
+      "subject": "物理",
+      "expected_kp": "",
+      "expected_source": "",
+      "difficulty": 2,
+      "negative": true
+    },
+    {
+      "query": "数学微积分的几何意义。",
+      "subject": "物理",
+      "expected_kp": "",
+      "expected_source": "",
+      "difficulty": 2,
+      "negative": true
+    },
+    {
+      "query": "生物光合作用的能量转化。",
+      "subject": "物理",
+      "expected_kp": "",
+      "expected_source": "",
+      "difficulty": 2,
+      "negative": true
+    },
+    {
+      "query": "地理板块运动的力学机制。",
+      "subject": "物理",
+      "expected_kp": "",
+      "expected_source": "",
+      "difficulty": 2,
+      "negative": true
+    }
+  ]
+}

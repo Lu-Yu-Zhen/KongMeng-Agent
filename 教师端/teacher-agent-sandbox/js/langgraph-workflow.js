@@ -156,21 +156,12 @@
    * @returns {Promise<boolean>} 是否成功加载
    */
   async function tryLoadLangGraph() {
-    if (_langGraphLoaded !== null) return _langGraphLoaded;
-    try {
-      // 尝试从 CDN 加载 @langchain/langgraph
-      var mod = await import('https://esm.sh/@langchain/langgraph@0.2.18');
-      if (mod && mod.StateGraph) {
-        global._realLangGraph = mod;
-        _useRealLangGraph = true;
-        _langGraphLoaded = true;
-        console.log('[LangGraph] 已加载 @langchain/langgraph (CDN)');
-        return true;
-      }
-    } catch (e) {
-      console.log('[LangGraph] CDN 加载失败，使用内置兼容实现:', e.message);
-    }
+    // 刻意不从 CDN 加载真实 @langchain/langgraph：真库 StateGraph 的 API（Annotation/reducer）
+    // 与本文件自研的 invoke(initialState, {maxSteps, onStep}) 约定及 {channels:WORKFLOW_STATE}
+    // schema 不兼容，加载成功反而会使工作流抛错失效（"在线坏、离线好"）。
+    // 统一锁定内置实现；接入真 LangGraph 需按 Annotation/reducer 重写（后续专项）。
     _langGraphLoaded = false;
+    _useRealLangGraph = false;
     return false;
   }
 
@@ -276,7 +267,16 @@
 
       var intent = null;
       try {
-        var raw = await callLLM(classifyPrompt, '你是高级意图识别器，只输出JSON。');
+        // 失败重试一次，避免单次 LLM 抖动就降级到技能匹配、吞掉多产物需求
+        var raw = null;
+        for (var attempt = 0; attempt < 2; attempt++) {
+          try {
+            raw = await callLLM(classifyPrompt, '你是高级意图识别器，只输出JSON。');
+            if (raw) break;
+          } catch (ee) {
+            if (attempt === 1) throw ee;
+          }
+        }
         var result = _parseJSON(raw);
         if (result) {
           intent = {

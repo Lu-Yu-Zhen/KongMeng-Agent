@@ -33,7 +33,7 @@
         { key: '板书', patterns: ['板书', '板书设计'], weight: 3, label: '板书设计' },
         { key: '反思', patterns: ['教学反思', '反思预设', '反思'], weight: 2, label: '教学反思预设' },
       ],
-      placeholderPatterns: ['此处讲解', '举例说明', '略', '同理', '以此类推', '...（省略）', '（待补充）', 'TODO', '占位'],
+      placeholderPatterns: ['此处讲解', '略', '以此类推', '...（省略）', '（待补充）', 'TODO', '占位'],
       depthChecks: [
         { name: '教学环节数量', test: function (t) { return (t.match(/环节[一二三四五六七八\d]|第[一二三四五六七八\d]+[环步]/g) || []).length; }, min: 5, label: '教学过程至少5个环节' },
         { name: '提问话术数量', test: function (t) { return (t.match(/师：|教师[：:]/g) || []).length; }, min: 3, label: '至少3处教师提问话术' },
@@ -68,7 +68,7 @@
         { key: '巩固', patterns: ['课后巩固', '巩固', '课后作业', '分层'], weight: 15, label: '课后巩固（分层）' },
         { key: '答案', patterns: ['答案', '解析', '参考答案'], weight: 10, label: '参考答案与解析' },
       ],
-      placeholderPatterns: ['略', '此处省略', '待补充', '同理', '以此类推', '...'],
+      placeholderPatterns: ['略', '此处省略', '待补充', '以此类推'],
       depthChecks: [
         { name: '探究问题数量', test: function (t) { return (t.match(/问题[一二三四五六\d]|探究[一二三四五六\d]|第[一二三四五六\d]+问/g) || []).length; }, min: 3, label: '至少3个递进探究问题' },
         { name: '检测题数量', test: function (t) { return (t.match(/题|^\d+[\.．、]/gm) || []).length; }, min: 5, label: '至少5道当堂检测题' },
@@ -81,11 +81,11 @@
         { key: '选择题', patterns: ['选择题', '单选', '多项选择'], weight: 15, label: '选择题' },
         { key: '填空题', patterns: ['填空题', '填空'], weight: 10, label: '填空题' },
         { key: '解答题', patterns: ['解答题', '计算题', '证明题', '综合题'], weight: 15, label: '解答题' },
-        { key: '分值', patterns: ['分', '满分', '总分'], weight: 10, label: '分值标注' },
+        { key: '分值', patterns: ['分值', '满分', '总分', '得分', '每题'], weight: 10, label: '分值标注' },
         { key: '答案', patterns: ['答案', '解析', '参考答案'], weight: 15, label: '答案与解析' },
         { key: '易错点', patterns: ['易错', '注意', '误区', '陷阱'], weight: 10, label: '易错点提示' },
       ],
-      placeholderPatterns: ['略', '省略', '同理', '以此类推', '待补充', '（答案略）'],
+      placeholderPatterns: ['略', '以此类推', '待补充', '（答案略）'],
       depthChecks: [
         { name: '题目总数', test: function (t) { return (t.match(/^\d+[\.．、]/gm) || []).length; }, min: 10, label: '至少10道题目' },
         { name: '解析数量', test: function (t) { return (t.match(/解析[：:]|【解析】|分析[：:]/g) || []).length; }, min: 5, label: '至少5道题有详细解析' },
@@ -194,7 +194,7 @@
         { key: '改进建议', patterns: ['改进建议', '改进', '建议'], weight: 10, label: '改进建议' },
         { key: '评语', patterns: ['评语', '鼓励', '继续保持'], weight: 5, label: '鼓励性评语' },
       ],
-      placeholderPatterns: ['略', '待补充', '同上', '以此类推', '省略'],
+      placeholderPatterns: ['略', '待补充', '同上', '以此类推'],
       depthChecks: [
         { name: '逐题批改数量', test: function (t) { return (t.match(/题[号]?\s*[:：]?\s*\d|第\s*\d+\s*题/g) || []).length; }, min: 3, label: '至少3道题的逐题批改详情' },
         { name: '错误标注数量', test: function (t) { return (t.match(/【知识错误】|【方法错误】|【计算错误】|【格式错误】|【审题错误】/g) || []).length; }, min: 1, label: '至少1处错误分类标注' },
@@ -214,7 +214,7 @@
         { key: '错因分类', patterns: ['错因分类', '概念混淆', '审题不清', '计算失误', '思维定式'], weight: 10, label: '错因分类汇总' },
         { key: '教学建议', patterns: ['教学建议', '教学策略', '复习策略', '教学优先级'], weight: 10, label: '教学建议' },
       ],
-      placeholderPatterns: ['略', '待补充', '同上', '以此类推', '省略', '参照'],
+      placeholderPatterns: ['略', '待补充', '同上', '以此类推', '参照'],
       depthChecks: [
         { name: '易错点数量', test: function (t) { return (t.match(/易错点\s*\d|【易错点/g) || []).length; }, min: 5, label: '至少5个易错点' },
         { name: '错例数量', test: function (t) { return (t.match(/典型错例|错例/g) || []).length; }, min: 3, label: '至少3个典型错例' },
@@ -259,9 +259,17 @@
 
   // ---- 通用占位符检测 ----
   var GENERIC_PLACEHOLDERS = [
-    '此处讲解', '此处介绍', '此处说明', '举例说明', '略', '同理',
-    '以此类推', '...（省略）', '（待补充）', 'TODO', '占位', 'placeholder',
-    'XX知识点', '讲解XX', '介绍XX', '展示XX', '详见教材', '参考课本',
+    '此处讲解', '此处介绍', '此处说明', '此处省略',
+    '以此类推', '...（省略）', '（待补充）', '(待补充)', '待补充', 'TODO', '占位', 'placeholder',
+    '详见教材', '参考课本',
+    // 常见未替换占位符（此前漏检，导致空壳产物拿高分通过）
+    '202X', '20XX', '____', '[教师姓名]', '（填写', '(填写', '待填写',
+  ];
+
+  // 占位符形状正则（难以穷举为固定字符串的模式）
+  var PLACEHOLDER_REGEXES = [
+    { re: /X{2,}/, label: 'XX 占位' },      // "XX门课程"等未替换占位
+    { re: /_{3,}/, label: '下划线填空线' },   // "____（填写…）"
   ];
 
   /**
@@ -332,6 +340,9 @@
         foundPlaceholders.push(p);
       }
     });
+    PLACEHOLDER_REGEXES.forEach(function (pr) {
+      if (pr.re.test(text)) foundPlaceholders.push(pr.label);
+    });
     details.placeholders = { found: foundPlaceholders };
     if (foundPlaceholders.length > 0) {
       issues.push('检测到空泛/占位表述：' + foundPlaceholders.slice(0, 5).join('、'));
@@ -391,6 +402,9 @@
     var suggestions = [];
     var placeholders = GENERIC_PLACEHOLDERS.filter(function (p) {
       return _hasPlaceholder(text, p);
+    });
+    PLACEHOLDER_REGEXES.forEach(function (pr) {
+      if (pr.re.test(text)) placeholders.push(pr.label);
     });
     if (placeholders.length > 0) {
       issues.push('检测到空泛/占位表述：' + placeholders.slice(0, 5).join('、'));

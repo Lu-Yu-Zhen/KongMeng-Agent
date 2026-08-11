@@ -1,0 +1,404 @@
+{
+  "items": [
+    {
+      "query": "生产力包括哪些基本要素，其中什么是最活跃的因素？",
+      "subject": "思想政治",
+      "expected_kp": "P-M1C1S1-KP1",
+      "expected_source": "人教版必修1第一课",
+      "difficulty": 2,
+      "negative": false
+    },
+    {
+      "query": "划分阶级的根本依据是什么？",
+      "subject": "思想政治",
+      "expected_kp": "P-M1C1S1-KP2",
+      "expected_source": "人教版必修1第一课",
+      "difficulty": 3,
+      "negative": false
+    },
+    {
+      "query": "生产关系一定要适合生产力状况的规律在人类社会发展中起什么作用？",
+      "subject": "思想政治",
+      "expected_kp": "P-M1C1S1-KP3",
+      "expected_source": "人教版必修1第一课",
+      "difficulty": 3,
+      "negative": false
+    },
+    {
+      "query": "空想社会主义的主要代表人物有哪些？",
+      "subject": "思想政治",
+      "expected_kp": "P-M1C1S2-KP1",
+      "expected_source": "人教版必修1第一课",
+      "difficulty": 2,
+      "negative": false
+    },
+    {
+      "query": "科学社会主义的两大理论基石分别是什么？",
+      "subject": "思想政治",
+      "expected_kp": "P-M1C1S2-KP2",
+      "expected_source": "人教版必修1第一课",
+      "difficulty": 3,
+      "negative": false
+    },
+    {
+      "query": "近代中国的基本国情和主要矛盾是什么？",
+      "subject": "思想政治",
+      "expected_kp": "P-M1C2S1-KP1",
+      "expected_source": "人教版必修1第二课",
+      "difficulty": 2,
+      "negative": false
+    },
+    {
+      "query": "社会主义改造的实质与基本任务是什么？",
+      "subject": "思想政治",
+      "expected_kp": "P-M1C2S2-KP1",
+      "expected_source": "人教版必修1第二课",
+      "difficulty": 3,
+      "negative": false
+    },
+    {
+      "query": "商品的两个基本因素分别是什么？",
+      "subject": "思想政治",
+      "expected_kp": "P-M2C1S1-KP1",
+      "expected_source": "人教版必修2第一课",
+      "difficulty": 2,
+      "negative": false
+    },
+    {
+      "query": "为什么必须坚持公有制为主体？",
+      "subject": "思想政治",
+      "expected_kp": "P-M2C1S1-KP2",
+      "expected_source": "人教版必修2第一课",
+      "difficulty": 3,
+      "negative": false
+    },
+    {
+      "query": "市场调节与市场机制是如何发挥作用的？",
+      "subject": "思想政治",
+      "expected_kp": "P-M2C1S2-KP1",
+      "expected_source": "人教版必修2第一课",
+      "difficulty": 3,
+      "negative": false
+    },
+    {
+      "query": "价值规律的基本内容和表现形式是什么？",
+      "subject": "思想政治",
+      "expected_kp": "P-M2C1S2-KP2",
+      "expected_source": "人教版必修2第一课",
+      "difficulty": 3,
+      "negative": false
+    },
+    {
+      "query": "新发展理念的内涵具体包括哪几个方面？",
+      "subject": "思想政治",
+      "expected_kp": "P-M2C2S1-KP1",
+      "expected_source": "人教版必修2第二课",
+      "difficulty": 2,
+      "negative": false
+    },
+    {
+      "query": "实现高质量发展对我国经济发展有什么意义？",
+      "subject": "思想政治",
+      "expected_kp": "P-M2C2S2-KP1",
+      "expected_source": "人教版必修2第二课",
+      "difficulty": 3,
+      "negative": false
+    },
+    {
+      "query": "中国共产党的成立具有怎样的历史意义？",
+      "subject": "思想政治",
+      "expected_kp": "P-M3C1S1-KP2",
+      "expected_source": "人教版必修3第一课",
+      "difficulty": 3,
+      "negative": false
+    },
+    {
+      "query": "全过程人民民主的实质是什么？",
+      "subject": "思想政治",
+      "expected_kp": "P-M3C2S1-KP2",
+      "expected_source": "人教版必修3第四课",
+      "difficulty": 3,
+      "negative": false
+    },
+    {
+      "query": "国家具有哪些基本职能？",
+      "subject": "思想政治",
+      "expected_kp": "P-M3C2S2-KP1",
+      "expected_source": "人教版必修3第四课",
+      "difficulty": 2,
+      "negative": false
+    },
+    {
+      "query": "人民代表大会制度在我国政治制度体系中处于怎样的地位？",
+      "subject": "思想政治",
+      "expected_kp": "P-M3C2S2-KP2",
+      "expected_source": "人教版必修3第五课",
+      "difficulty": 3,
+      "negative": false
+    },
+    {
+      "query": "哲学的基本问题是什么？",
+      "subject": "思想政治",
+      "expected_kp": "P-M4C1S1-KP2",
+      "expected_source": "人教版必修4第二课",
+      "difficulty": 2,
+      "negative": false
+    },
+    {
+      "query": "唯心主义有哪两种基本形态？",
+      "subject": "思想政治",
+      "expected_kp": "P-M4C1S2-KP2",
+      "expected_source": "人教版必修4第二课",
+      "difficulty": 2,
+      "negative": false
+    },
+    {
+      "query": "联系的观点强调事物之间具有怎样的关系？",
+      "subject": "思想政治",
+      "expected_kp": "P-M4C2S1-KP1",
+      "expected_source": "人教版必修4第三课",
+      "difficulty": 2,
+      "negative": false
+    },
+    {
+      "query": "整体与部分的关系是怎样的？",
+      "subject": "思想政治",
+      "expected_kp": "P-M4C2S1-KP2",
+      "expected_source": "人教版必修4第三课",
+      "difficulty": 2,
+      "negative": false
+    },
+    {
+      "query": "量变与质变之间存在怎样的辩证关系？",
+      "subject": "思想政治",
+      "expected_kp": "P-M4C2S2-KP2",
+      "expected_source": "人教版必修4第三课",
+      "difficulty": 3,
+      "negative": false
+    },
+    {
+      "query": "矛盾分析方法的基本要求有哪些？",
+      "subject": "思想政治",
+      "expected_kp": "P-M4C2S3-KP2",
+      "expected_source": "人教版必修4第三课",
+      "difficulty": 3,
+      "negative": false
+    },
+    {
+      "query": "国体与政体之间的关系是什么？",
+      "subject": "思想政治",
+      "expected_kp": "P-M5C1S1-KP2",
+      "expected_source": "人教版选择性必修1第一课",
+      "difficulty": 3,
+      "negative": false
+    },
+    {
+      "query": "民主共和制与君主立宪制有何区别？",
+      "subject": "思想政治",
+      "expected_kp": "P-M5C1S2-KP2",
+      "expected_source": "人教版选择性必修1第一课",
+      "difficulty": 3,
+      "negative": false
+    },
+    {
+      "query": "经济全球化对世界经济发展有什么影响？",
+      "subject": "思想政治",
+      "expected_kp": "P-M5C2S1-KP2",
+      "expected_source": "人教版选择性必修1第二课",
+      "difficulty": 3,
+      "negative": false
+    },
+    {
+      "query": "为什么国家利益是国际关系的决定性因素？",
+      "subject": "思想政治",
+      "expected_kp": "P-M5C2S2-KP2",
+      "expected_source": "人教版选择性必修1第二课",
+      "difficulty": 3,
+      "negative": false
+    },
+    {
+      "query": "民事活动应当遵循哪些基本原则？",
+      "subject": "思想政治",
+      "expected_kp": "P-M6C1S1-KP2",
+      "expected_source": "人教版选择性必修2第一课",
+      "difficulty": 2,
+      "negative": false
+    },
+    {
+      "query": "合同的订立过程与生效要件有哪些？",
+      "subject": "思想政治",
+      "expected_kp": "P-M6C2S1-KP2",
+      "expected_source": "人教版选择性必修2第三课",
+      "difficulty": 3,
+      "negative": false
+    },
+    {
+      "query": "判断与推理在逻辑思维中起什么作用？",
+      "subject": "思想政治",
+      "expected_kp": "P-M7C2S2-KP2",
+      "expected_source": "人教版选择性必修3第二课",
+      "difficulty": 3,
+      "negative": false
+    },
+    {
+      "query": "结合生产力与生产关系、经济基础与上层建筑的矛盾运动，说明人类社会发展的根本规律",
+      "subject": "思想政治",
+      "expected_kp": "P-M1C1S1-KP3",
+      "expected_source": "人教版必修1第一课",
+      "difficulty": 4,
+      "negative": false
+    },
+    {
+      "query": "从商品的价值规律到社会主义市场经济体制，分析我国经济运行的基本规律",
+      "subject": "思想政治",
+      "expected_kp": "P-M2C1S2-KP2",
+      "expected_source": "人教版必修2第一课",
+      "difficulty": 4,
+      "negative": false
+    },
+    {
+      "query": "中国共产党领导、人民民主专政与全过程人民民主三者之间有什么关系",
+      "subject": "思想政治",
+      "expected_kp": "P-M3C2S1-KP2",
+      "expected_source": "人教版必修3第四课",
+      "difficulty": 4,
+      "negative": false
+    },
+    {
+      "query": "联系的观点、发展的观点与矛盾的观点在唯物辩证法中各占什么地位",
+      "subject": "思想政治",
+      "expected_kp": "P-M4C2S3-KP1",
+      "expected_source": "人教版必修4第三课",
+      "difficulty": 4,
+      "negative": false
+    },
+    {
+      "query": "从空想社会主义到科学社会主义，阐明社会主义理论由空想走向科学的发展脉络",
+      "subject": "思想政治",
+      "expected_kp": "P-M1C1S2-KP2",
+      "expected_source": "人教版必修1第一课",
+      "difficulty": 4,
+      "negative": false
+    },
+    {
+      "query": "新发展理念、创新驱动发展与高质量发展如何共同推动经济转型升级",
+      "subject": "思想政治",
+      "expected_kp": "P-M2C2S1-KP1",
+      "expected_source": "人教版必修2第二课",
+      "difficulty": 4,
+      "negative": false
+    },
+    {
+      "query": "新民主主义革命与社会主义改造在实现人民当家作主过程中分别发挥了什么作用",
+      "subject": "思想政治",
+      "expected_kp": "P-M1C2S2-KP1",
+      "expected_source": "人教版必修1第二课",
+      "difficulty": 4,
+      "negative": false
+    },
+    {
+      "query": "从国家的本质、国体与政体的关系，到国家利益对国际关系的决定作用，说明政治生活的内在逻辑",
+      "subject": "思想政治",
+      "expected_kp": "P-M5C2S2-KP2",
+      "expected_source": "人教版选择性必修1第二课",
+      "difficulty": 4,
+      "negative": false
+    },
+    {
+      "query": "民法基本原则如何贯穿于民事法律关系、人身权和合同履行之中",
+      "subject": "思想政治",
+      "expected_kp": "P-M6C1S1-KP2",
+      "expected_source": "人教版选择性必修2第一课",
+      "difficulty": 4,
+      "negative": false
+    },
+    {
+      "query": "思维的特征、抽象思维与逻辑思维如何在形式逻辑基本规律中得到体现",
+      "subject": "思想政治",
+      "expected_kp": "P-M7C2S1-KP1",
+      "expected_source": "人教版选择性必修3第二课",
+      "difficulty": 4,
+      "negative": false
+    },
+    {
+      "query": "坚持公有制为主体与多种所有制经济共同发展对我国市场经济建设有什么意义",
+      "subject": "思想政治",
+      "expected_kp": "P-M2C1S1-KP2",
+      "expected_source": "人教版必修2第一课",
+      "difficulty": 4,
+      "negative": false
+    },
+    {
+      "query": "哲学基本问题贯穿唯物主义与唯心主义的对立，请结合哲学与世界观方法论加以说明",
+      "subject": "思想政治",
+      "expected_kp": "P-M4C1S1-KP2",
+      "expected_source": "人教版必修4第二课",
+      "difficulty": 4,
+      "negative": false
+    },
+    {
+      "query": "从近代中国的基本国情到中国共产党成立，再到新中国的成立，说明这一历史进程的逻辑",
+      "subject": "思想政治",
+      "expected_kp": "P-M3C1S1-KP2",
+      "expected_source": "人教版必修3第一课",
+      "difficulty": 4,
+      "negative": false
+    },
+    {
+      "query": "合同的订立、违约责任与免责事由如何共同规范市场经济中的交易行为",
+      "subject": "思想政治",
+      "expected_kp": "P-M6C2S2-KP1",
+      "expected_source": "人教版选择性必修2第三课",
+      "difficulty": 4,
+      "negative": false
+    },
+    {
+      "query": "在和平与发展是时代主题的背景下，经济全球化与国际关系的基本形式如何相互影响",
+      "subject": "思想政治",
+      "expected_kp": "P-M5C2S1-KP1",
+      "expected_source": "人教版选择性必修1第二课",
+      "difficulty": 4,
+      "negative": false
+    },
+    {
+      "query": "牛顿运动定律与唯物辩证法中「运动」概念的异同，在物理学上如何理解",
+      "subject": "思想政治",
+      "expected_kp": "",
+      "expected_source": "",
+      "difficulty": 3,
+      "negative": true
+    },
+    {
+      "query": "化学中的平衡与政治经济学中「平衡」含义的区别是什么",
+      "subject": "思想政治",
+      "expected_kp": "",
+      "expected_source": "",
+      "difficulty": 2,
+      "negative": true
+    },
+    {
+      "query": "历史地理中「国家」疆域的变迁与思想政治所讲「国家的本质」有何差别",
+      "subject": "思想政治",
+      "expected_kp": "",
+      "expected_source": "",
+      "difficulty": 2,
+      "negative": true
+    },
+    {
+      "query": "数学中集合的「矛盾关系」与哲学中的矛盾概念应如何区分",
+      "subject": "思想政治",
+      "expected_kp": "",
+      "expected_source": "",
+      "difficulty": 3,
+      "negative": true
+    },
+    {
+      "query": "心理学中「意识」概念与思想政治所讲「思维与意识」的关系有何不同",
+      "subject": "思想政治",
+      "expected_kp": "",
+      "expected_source": "",
+      "difficulty": 3,
+      "negative": true
+    }
+  ]
+}

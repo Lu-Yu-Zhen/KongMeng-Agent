@@ -355,19 +355,26 @@
         size: size,
         createdAt: Date.now(), meta: meta || {},
       };
+      let persisted = true;
       try {
         const store = await _tx('readwrite');
         await new Promise((res, rej) => {
           const r = store.put(rec);
           r.onsuccess = res; r.onerror = () => rej(r.error);
         });
-      } catch (e) { /* 索引失败则内存兜底 */ }
+      } catch (e) {
+        // IndexedDB 写入失败（配额满/隐私模式等）：内存兜底本会话可用，并标记 volatile
+        persisted = false;
+        if (!this._memFiles) this._memFiles = new Map();
+        this._memFiles.set(path, rec);
+        console.warn('[sandbox] IndexedDB 写入失败，文件仅存于内存（刷新后丢失），请尽快下载：', e && e.message);
+      }
       // 通知 UI 新增产物
       if (global.AgentSandboxUI && global.AgentSandboxUI.onArtifact) {
         global.AgentSandboxUI.onArtifact({ path, type: rec.type, size: rec.size });
       }
       if (global.AgentMemory && global.AgentMemory.addArtifact) global.AgentMemory.addArtifact(path);
-      return { ok: true, data: { path, size: rec.size } };
+      return { ok: true, volatile: !persisted, data: { path, size: rec.size } };
     },
 
     /** Electron 模式写入文件 */
@@ -635,7 +642,12 @@
       if (this._isElectron() && global.electronAPI && global.electronAPI.readResource) {
         try {
           const r = await global.electronAPI.readResource(rel);
-          return r && r.ok ? r.content : null;
+          // preload 返回 {ok, data:{content}}；兼容旧的 {ok, content} 形状
+          if (r && r.ok) {
+            if (r.data && typeof r.data.content === 'string') return r.data.content;
+            if (typeof r.content === 'string') return r.content;
+          }
+          return null;
         } catch (e) { return null; }
       }
       try {
@@ -850,10 +862,29 @@
         if (s.rows) s.rows = s.rows.map(function (r) { return r.map(function (c) { return self._latexToUnicode(String(c == null ? '' : c)); }); });
         const slide = pptx.addSlide();
         slide.background = { color: BG };
-        if (s.type === 'cover') {
-          slide.addText(s.title || '课件', { x: 0.5, y: 2.4, w: 12, h: 1.2, fontSize: 40, color: JADE, bold: true, align: 'center', fontFace: 'Microsoft YaHei' });
-          if (s.subtitle) slide.addText(s.subtitle, { x: 0.5, y: 3.8, w: 12, h: 0.8, fontSize: 20, color: INK, align: 'center', fontFace: 'Microsoft YaHei' });
+        if (s.type === 'cover' || s.type === 'title') {
+          slide.background = { color: INK };
+          slide.addText(s.title || '课件', { x: 0.5, y: 2.2, w: 12, h: 1.2, fontSize: 40, color: 'FFFFFF', bold: true, align: 'center', fontFace: 'Microsoft YaHei' });
+          if (s.subtitle) slide.addText(s.subtitle, { x: 0.5, y: 3.7, w: 12, h: 0.8, fontSize: 20, color: 'D9D2C5', align: 'center', fontFace: 'Microsoft YaHei' });
           slide.addShape(pptx.ShapeType.rect, { x: 5.6, y: 4.8, w: 2.1, h: 0.06, fill: { color: TAN } });
+        } else if (s.type === 'summary' || s.type === 'end') {
+          // 小结/作业页：带底部强调色带，正文聚焦
+          slide.addText(s.title || '', { x: 0.5, y: 0.3, w: 12, h: 0.8, fontSize: 30, color: JADE, bold: true, fontFace: 'Microsoft YaHei' });
+          slide.addShape(pptx.ShapeType.rect, { x: 0.5, y: 1.15, w: 1.6, h: 0.05, fill: { color: TAN } });
+          if (s.bullets) {
+            const rows = s.bullets.map((b) => ({ text: b, options: { bullet: { code: '2713' }, fontSize: 20, color: INK, fontFace: 'Microsoft YaHei', breakLine: true } }));
+            slide.addText(rows, { x: 0.6, y: 1.5, w: 12, h: 5.2, valign: 'top' });
+          }
+          slide.addShape(pptx.ShapeType.rect, { x: 0.5, y: 6.9, w: 12.3, h: 0.12, fill: { color: s.type === 'end' ? TAN : JADE } });
+        } else if (s.type === 'chart') {
+          // 图表页：用 canvas 渲染简单图表并嵌入，实现图文并茂
+          slide.addText(s.title || '图表', { x: 0.5, y: 0.3, w: 12, h: 0.8, fontSize: 28, color: JADE, bold: true, fontFace: 'Microsoft YaHei' });
+          slide.addShape(pptx.ShapeType.rect, { x: 0.5, y: 1.15, w: 1.6, h: 0.05, fill: { color: TAN } });
+          if (s.bullets && s.bullets.length) slide.addText(s.bullets[0], { x: 0.6, y: 1.3, w: 12, h: 0.6, fontSize: 15, color: INK, fontFace: 'Microsoft YaHei' });
+          try {
+            const dataUrl = self._pptChartDataUrl(s.chartType || 'bar', s.chartLabels, s.chartValues, s.title);
+            if (dataUrl) slide.addImage({ data: dataUrl, x: 1.2, y: 2.0, w: 10.9, h: 4.6 });
+          } catch (e) { /* 图表失败则不嵌图，保留标题 */ }
         } else if (s.type === 'table') {
           // 表格幻灯片：headers + rows
           slide.addText(s.title || '', { x: 0.5, y: 0.3, w: 12, h: 0.8, fontSize: 28, color: JADE, bold: true, fontFace: 'Microsoft YaHei' });
@@ -923,6 +954,99 @@
       }).join('\n\n---\n\n');
       await this.writeFile(filePath, blob, { type: 'application/vnd.openxmlformats-officedocument.presentationml.presentation', previewText });
       return { ok: true, data: { path: filePath, filename, slides: slides.length } };
+    },
+
+    /** 用离屏 canvas 渲染简单图表（bar/line/pie），返回 PNG dataURL，供 PPT 图文并茂嵌入 */
+    _pptChartDataUrl(type, labels, values, title) {
+      try {
+        const W = 1200, H = 560;
+        const cv = document.createElement('canvas');
+        cv.width = W; cv.height = H;
+        const ctx = cv.getContext('2d');
+        if (!ctx) return null;
+        const JADE = '#4F7A66', TAN = '#A8814E', INK = '#403A30', LIGHT = '#F3EEE4';
+        ctx.fillStyle = '#FFFFFF'; ctx.fillRect(0, 0, W, H);
+        ctx.fillStyle = INK; ctx.font = 'bold 34px "Microsoft YaHei", sans-serif';
+        ctx.textAlign = 'center';
+        ctx.fillText(title || '数据图表', W / 2, 52);
+        const labs = (labels && labels.length) ? labels : ['基础', '提升', '拓展'];
+        const vals = (values && values.length) ? values.map(Number) : [35, 45, 20];
+        const t = String(type || 'bar').toLowerCase();
+        if (t === 'pie') {
+          const total = vals.reduce(function (a, b) { return a + (isFinite(b) ? +b : 0); }, 0) || 1;
+          const colors = [JADE, TAN, '#8FAE9B', '#C9B18A', '#5B7A6B'];
+          let ang = -Math.PI / 2;
+          const cx = W / 2, cy = H / 2 + 20, r = 190;
+          vals.forEach(function (v, i) {
+            const a = (v / total) * Math.PI * 2;
+            ctx.beginPath(); ctx.moveTo(cx, cy);
+            ctx.arc(cx, cy, r, ang, ang + a);
+            ctx.closePath();
+            ctx.fillStyle = colors[i % colors.length]; ctx.fill();
+            ang += a;
+          });
+          ctx.fillStyle = '#FFFFFF'; ctx.beginPath(); ctx.arc(cx, cy, 90, 0, Math.PI * 2); ctx.fill();
+          ctx.fillStyle = INK; ctx.font = '28px "Microsoft YaHei", sans-serif'; ctx.textAlign = 'center';
+          ctx.fillText('占比分布', cx, cy + 10);
+          // 图例
+          let ly = H - 120;
+          labs.forEach(function (lb, i) {
+            ctx.fillStyle = colors[i % colors.length];
+            ctx.fillRect(W / 2 - 200, ly, 26, 26);
+            ctx.fillStyle = INK; ctx.textAlign = 'left';
+            ctx.fillText(String(lb) + '  ' + vals[i] + '%', W / 2 - 160, ly + 24);
+            ly += 44;
+          });
+        } else {
+          const padL = 90, padB = 90, padT = 90, padR = 40;
+          const max = Math.max.apply(null, vals.map(Math.abs).concat([1]));
+          const plotW = W - padL - padR, plotH = H - padT - padB;
+          // 网格
+          ctx.strokeStyle = '#E4E0D6'; ctx.lineWidth = 2;
+          for (let g = 0; g <= 4; g++) {
+            const y = padT + (plotH / 4) * g;
+            ctx.beginPath(); ctx.moveTo(padL, y); ctx.lineTo(W - padR, y); ctx.stroke();
+          }
+          // 轴线
+          ctx.strokeStyle = '#B8B0A2'; ctx.lineWidth = 3;
+          ctx.beginPath(); ctx.moveTo(padL, padT); ctx.lineTo(padL, H - padB); ctx.lineTo(W - padR, H - padB); ctx.stroke();
+          if (t === 'bar') {
+            const bw = plotW / Math.max(labs.length, 1) * 0.55;
+            const step = plotW / Math.max(labs.length, 1);
+            vals.forEach(function (v, i) {
+              const h = (Math.abs(v) / max) * plotH;
+              const x = padL + step * i + (step - bw) / 2;
+              const y = H - padB - h;
+              ctx.fillStyle = i % 2 ? TAN : JADE;
+              ctx.fillRect(x, y, bw, h);
+              ctx.fillStyle = INK; ctx.font = '26px "Microsoft YaHei", sans-serif'; ctx.textAlign = 'center';
+              ctx.fillText(String(v), x + bw / 2, y - 12);
+              ctx.fillText(String(labs[i] || ''), x + bw / 2, H - padB + 34);
+            });
+          } else {
+            // line
+            const step = plotW / (Math.max(vals.length, 1) - 1 || 1);
+            ctx.strokeStyle = JADE; ctx.lineWidth = 5; ctx.lineJoin = 'round';
+            ctx.beginPath();
+            vals.forEach(function (v, i) {
+              const x = padL + step * i;
+              const y = H - padB - (Math.abs(v) / max) * plotH;
+              if (i === 0) ctx.moveTo(x, y); else ctx.lineTo(x, y);
+            });
+            ctx.stroke();
+            vals.forEach(function (v, i) {
+              const x = padL + step * i;
+              const y = H - padB - (Math.abs(v) / max) * plotH;
+              ctx.fillStyle = '#FFFFFF'; ctx.strokeStyle = JADE; ctx.lineWidth = 3;
+              ctx.beginPath(); ctx.arc(x, y, 8, 0, Math.PI * 2); ctx.fill(); ctx.stroke();
+              ctx.fillStyle = INK; ctx.font = '26px "Microsoft YaHei", sans-serif'; ctx.textAlign = 'center';
+              ctx.fillText(String(v), x, y - 18);
+              ctx.fillText(String((labs && labs[i]) || ''), x, H - padB + 34);
+            });
+          }
+        }
+        return cv.toDataURL('image/png');
+      } catch (e) { console.warn('[sandbox] PPT 图表渲染失败', e); return null; }
     },
 
     /** 生成 Word 文档(.docx)：服务器优先 → 浏览器降级 */
@@ -1004,6 +1128,7 @@
 
     /** HTML 表格字符串转 docx Table */
     _htmlTableToDocx(html, docxLib) {
+      const self = this;
       const { Table, TableRow, TableCell, Paragraph, TextRun, WidthType, BorderStyle } = docxLib;
       try {
         const trs = [];

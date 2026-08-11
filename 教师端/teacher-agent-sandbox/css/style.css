@@ -8,14 +8,18 @@
 
 /* ============ 智能体运行卡片 ============ */
 .agent-run { position: relative; }
+/* 主任务（一级）：醒目、无缩进、字号最大，与子任务形成明确层级 */
 .agent-run-head {
   display: flex; align-items: center; gap: 8px;
-  padding: 6px 10px; margin-bottom: 10px;
-  background: linear-gradient(90deg, #eef4f0 0%, #faf8f3 100%);
-  border-left: 3px solid #4f7a66;
-  border-radius: 6px;
-  font-size: 12px; color: #5b5345;
+  padding: 11px 14px; margin-bottom: 8px;
+  background: linear-gradient(90deg, #e7f0ea 0%, #faf8f3 100%);
+  border-left: 4px solid #4f7a66;
+  border-radius: 7px;
+  font-size: 15px; font-weight: 700; color: #2f2a22;
+  box-shadow: 0 2px 5px rgba(79,122,102,.12);
 }
+/* 一级标题文本：加粗放大，与子级拉开字号差 */
+.agent-run-head .agent-status-text { font-size: 15px; font-weight: 800; letter-spacing: .2px; }
 .agent-status-dot {
   width: 8px; height: 8px; border-radius: 50%;
   background: #4f7a66;
@@ -35,17 +39,62 @@
   100% { box-shadow: 0 0 0 0 rgba(79,122,102,0); }
 }
 
-/* ============ 简化步骤行 ============ */
-.agent-steps { display: flex; flex-direction: column; gap: 6px; margin-bottom: 10px; }
+/* ============ 简化步骤行（子一级：相对主任务更小、更缩进） ============ */
+.agent-steps {
+  display: flex; flex-direction: column; gap: 6px; margin-bottom: 10px;
+  /* 子一级：相对主任务明显缩进 + 左侧引导线，突出层级 */
+  padding-left: 10px; margin-left: 6px;
+}
+
+/* ============ 阶段分组（可折叠头 + 左侧竖线子步骤体） ============ */
+.agent-step-group {
+  position: relative;
+  border-radius: 7px;
+  background: rgba(250, 248, 243, 0.28);
+  border: 1px solid rgba(232, 223, 208, 0.4);
+  overflow: hidden;
+}
+/* 阶段头：二级，点击折叠 */
+.agent-step-group-head {
+  display: flex; align-items: center; gap: 6px;
+  padding: 6px 10px;
+  cursor: pointer;
+  background: linear-gradient(90deg, rgba(231, 240, 234, 0.55) 0%, rgba(250, 248, 243, 0.3) 100%);
+  border-left: 3px solid #4f7a66;
+  font-size: 12.5px; font-weight: 600; color: #345042;
+  transition: background .2s;
+}
+.agent-step-group-head:hover { background: rgba(231, 240, 234, 0.85); }
+.agent-step-group-head .agent-step-icon { background: rgba(79, 122, 102, 0.15); color: #345042; }
+.agent-step-group-head .agent-step-count {
+  font-size: 10px; color: #a89a82; background: rgba(0,0,0,0.04);
+  padding: 0 6px; border-radius: 8px; line-height: 18px;
+}
+.agent-step-group-head .agent-step-toggle { font-size: 11px; }
+/* 阶段体：含左侧时间线竖线，子步骤收纳其下 */
+.agent-step-group-body {
+  display: flex; flex-direction: column; gap: 3px;
+  padding-left: 22px; margin: 4px 6px 6px 14px;
+  border-left: 2px solid rgba(79, 122, 102, 0.2);
+  max-height: 1200px; overflow: hidden;
+  transition: max-height .25s ease, opacity .2s ease;
+}
+.agent-step-group-body.closed {
+  max-height: 0 !important; opacity: 0;
+  margin-top: 0; margin-bottom: 0; padding-bottom: 0; border-left: none;
+}
+
 .agent-step-row {
-  border-radius: 8px; overflow: hidden;
-  background: rgba(250, 248, 243, 0.5);
-  border: 1px solid rgba(232, 223, 208, 0.6);
+  border-radius: 6px; overflow: hidden;
+  background: rgba(250, 248, 243, 0.35);
+  border: 1px solid rgba(232, 223, 208, 0.45);
+  /* 子一级：整体字号与视觉权重均弱于主任务标题 */
+  font-size: 11px;
 }
 /* 执行中的步骤行：左侧脉冲指示条 + 轻微背景流动 */
 .agent-step-row.executing {
   border-color: rgba(79, 122, 102, 0.35);
-  background: linear-gradient(90deg, rgba(238,244,240,0.6) 0%, rgba(250,248,243,0.5) 50%, rgba(238,244,240,0.6) 100%);
+  background: linear-gradient(90deg, rgba(238,244,240,0.6) 0%, rgba(250,248,243,0.45) 50%, rgba(238,244,240,0.6) 100%);
   background-size: 200% 100%;
   animation: stepRowShimmer 2.5s ease-in-out infinite;
   position: relative;
@@ -64,14 +113,14 @@
   50% { opacity: 0.4; }
 }
 .agent-step-main {
-  display: flex; align-items: center; gap: 8px;
-  padding: 7px 10px; font-size: 12.5px; color: #5b5345;
+  display: flex; align-items: center; gap: 6px;
+  padding: 5px 8px; font-size: 11px; color: #6b6356;
 }
 .agent-step-icon {
-  width: 22px; height: 22px; flex-shrink: 0;
+  width: 18px; height: 18px; flex-shrink: 0;
   display: flex; align-items: center; justify-content: center;
   background: rgba(79, 122, 102, 0.1); color: #4f7a66; border-radius: 5px;
-  font-size: 10px;
+  font-size: 9px;
 }
 /* 执行中的图标：脉冲背景 */
 .agent-step-row.executing .agent-step-icon {
@@ -120,18 +169,21 @@
 }
 .agent-step-result-wrap .agent-detail-result pre { margin: 4px 0 0; }
 
-/* ============ 思考步骤行（实时显示智能体推理过程） ============ */
+/* ============ 思考步骤行（实时显示智能体推理过程，子一级·更弱化） ============ */
 .agent-step-row.thinking {
-  border-color: rgba(168, 129, 78, 0.25);
-  background: rgba(243, 238, 228, 0.4);
+  border-color: rgba(168, 129, 78, 0.16);
+  background: rgba(243, 238, 228, 0.22);
+  border-style: dashed;
 }
+.agent-step-row.thinking .agent-step-main { padding: 3px 8px; }
 .agent-step-row.thinking .agent-step-icon {
-  background: rgba(168, 129, 78, 0.12);
+  background: rgba(168, 129, 78, 0.08);
   color: #a8814e;
 }
 .agent-step-row.thinking .agent-step-text {
-  color: #8a7c6a;
+  color: #9a8c78;
   font-style: italic;
+  font-size: 10px;
 }
 .agent-step-row.thinking .agent-step-status.thinking {
   background: #f3eee4; color: #a8814e;

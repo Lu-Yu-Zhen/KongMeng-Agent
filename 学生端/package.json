@@ -39,7 +39,6 @@
         "extraFiles": [
             "index.html",
             "logo.png",
-            "悬浮球.js",
             {
                 "from": "textbooks",
                 "to": "textbooks"

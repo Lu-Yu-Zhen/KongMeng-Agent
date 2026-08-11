@@ -126,6 +126,31 @@
     return typeof s === 'string' ? s.length : JSON.stringify(s).length;
   }
 
+  /**
+   * 解析可用模型链（主选在前，其余已配置模型按序补齐），用于超时后自动降级回退。
+   * 返回形如 ['qwen3-max', 'deepseek-r1', ...] 的模型 id 列表；无任何配置时返回 [主选]。
+   */
+  function _resolveModelChain() {
+    const chain = [];
+    const push = (id) => { if (id && chain.indexOf(id) < 0) chain.push(id); };
+    const sel = (typeof global.getSelectedChatModel === 'function') ? global.getSelectedChatModel() : '';
+    push(sel);
+    let configured = {};
+    try {
+      if (typeof global.getConfiguredChatModels === 'function') configured = global.getConfiguredChatModels() || {};
+    } catch (e) { configured = {}; }
+    Object.keys(configured || {}).forEach(push);
+    return chain;
+  }
+
+  /** 判断某个 LLM 调用错误是否属于"超时/网络"类（可触发换模型重试） */
+  function _isRetryableLLMError(e) {
+    if (!e) return false;
+    if (e.name === 'AbortError') return true;
+    const msg = String((e && e.message) || e);
+    return msg.indexOf('超时') >= 0 || msg.indexOf('timeout') >= 0 || msg.indexOf('stall') >= 0 || msg.indexOf('网络') >= 0;
+  }
+
   const AgentCore = {
     running: false,
     abort: false,
@@ -133,6 +158,8 @@
     _convoHistory: [],
     // 当前等待澄清的状态
     _pendingClarify: null,
+    // 当前后端异步任务的 taskId（用于停止时同步取消后端线程）
+    _backendTaskId: null,
 
     /** 清空对话记忆（新会话/清除聊天时调用） */
     resetMemory() {
@@ -157,7 +184,20 @@
       const skills = global.AgentSkills;
 
       const userInput = (typeof task === 'string' ? task : (task && task.text)) || '';
-      const ctx = (typeof task === 'object' ? task : {}) || {};
+      // task 对象本身可携带上下文；同时 UI 以 run(文本, {subject,grade,topic,...}) 调用时
+      // 上下文落在 opts 位。合并两个来源，避免学科/年级/课题被丢弃（否则恒为"未指定"）。
+      const taskObj = (typeof task === 'object' && task) ? task : {};
+      const ctx = Object.assign({}, taskObj, {
+        subject: taskObj.subject || opts.subject || '',
+        grade: taskObj.grade || opts.grade || '',
+        topic: taskObj.topic || opts.topic || '',
+      });
+      // 若调用方传入了历史（Chat/Agent 跨轮上下文），以此作为本轮对话记忆起点
+      if (Array.isArray(opts.history) && opts.history.length) {
+        this._convoHistory = opts.history.slice();
+      }
+      // 记录本轮上传/生成的文件名，供上下文注入与记忆归档
+      this._roundFiles = Array.isArray(opts.uploadedFiles) ? opts.uploadedFiles.slice() : [];
       // 开启工作记忆
       if (memory) memory.startTask({ subject: ctx.subject, topic: ctx.topic, grade: ctx.grade, userIntent: userInput });
       // 暴露当前上下文给工具（如联网搜索注入学科/年级提高精准度）
@@ -167,19 +207,55 @@
 
       let result = null;
       try {
+        // 优先使用 Python 后端（前后端分离：意图路由/追问/内容生成在后端完成）
+        // 后端不可用时自动降级到前端 LangGraph / ReAct 工作流（原工作流保留不动）
+        if (global.AgentBackend) {
+          try {
+            const backendOk = await global.AgentBackend.checkAvailable();
+            if (backendOk) {
+              if (ui && ui.onStart) ui.onStart({ task: userInput, skill: null, mode: 'backend' });
+              if (ui && ui.onThought) ui.onThought('已连接本地智能体后端（Python 工作流），正在执行意图识别与任务路由…');
+              result = await this._runBackend(userInput, ctx, opts);
+              if (result && result.ok) {
+                // 记录后端模式的对话记忆（此前仅 LangGraph/ReAct 记录，后端模式跨轮上下文丢失）
+                try {
+                  this._convoHistory.push({ role: 'user', content: userInput });
+                  this._convoHistory.push({ role: 'assistant', content: result.answer || '' });
+                  this._saveMemory(this._convoHistory);
+                } catch (e) { /* 记忆失败不影响本次结果 */ }
+                return result;
+              }
+              // 用户已中止 → 不再降级续跑，直接返回中止结果（原逻辑会重置 abort 继续跑，导致"停不下来"）
+              if (this.abort || (result && result.aborted)) {
+                return { ok: false, aborted: true, error: '任务已中止' };
+              }
+              // 后端执行失败且未生成内容 → 降级前端工作流
+              console.warn('[agent] 后端工作流降级到前端工作流:', result && result.error);
+              if (ui && ui.onThought) ui.onThought('后端执行异常（' + (result && result.error) + '），切换前端工作流重试', 0);
+            } else {
+              if (ui && ui.onThought) ui.onThought('本地后端未启动，使用前端内置工作流执行。可在教师端目录运行 python backend/server.py 启用后端。', 0);
+            }
+          } catch (e) {
+            console.warn('[agent] 后端探测异常，走前端工作流:', e);
+          }
+        }
         // 优先使用 LangGraph 工作流（多阶段、带质量验证与精炼循环）
         if (global.LangGraphWorkflow && global.QualityValidator && global.WorkflowPrompts) {
+          if (this.abort) return { ok: false, aborted: true, error: '任务已中止' };
           if (ui && ui.onStart) ui.onStart({ task: userInput, skill: null, mode: 'langgraph' });
           result = await this._runLangGraph(userInput, ctx, opts);
           // 如果 LangGraph 执行成功，直接返回
           if (result && result.ok) return result;
+          // 用户已中止 → 不再降级到 ReAct
+          if (this.abort || (result && result.aborted)) {
+            return { ok: false, aborted: true, error: '任务已中止' };
+          }
           // 如果 LangGraph 失败且未生成任何内容，降级到 ReAct 循环
           console.warn('[agent] LangGraph 工作流降级到 ReAct:', result && result.error);
           if (ui && ui.onThought) ui.onThought('LangGraph 工作流异常，切换到 ReAct 模式重试', 0);
-          // 重置中止标志
-          this.abort = false;
         }
         // ReAct 循环（兜底）
+        if (this.abort) return { ok: false, aborted: true, error: '任务已中止' };
         result = await this._reactLoop(userInput, ctx, opts);
         return result;
       } catch (e) {
@@ -216,19 +292,42 @@
       const skills = global.AgentSkills;
       const sandbox = global.AgentSandbox;
 
-      // LLM 调用桥接函数
+      // LLM 调用桥接函数（含"超时→自动切换到备用模型"的降级回退）
       const callLLM = async (prompt, sysPrompt) => {
         if (typeof global.callAIJson !== 'function') {
           throw new Error('LLM 引擎未就绪(callAIJson 缺失)');
         }
-        return await global.callAIJson(prompt, sysPrompt || '', global.AgentSandboxOpts && global.AgentSandboxOpts.modelOverride);
+        const chain = _resolveModelChain();
+        let lastErr = null;
+        for (const m of chain) {
+          try {
+            return await global.callAIJson(prompt, sysPrompt || '', m, undefined);
+          } catch (e) {
+            lastErr = e;
+            if (!_isRetryableLLMError(e)) throw e; // 非超时类错误直接抛出，不换模型
+            if (ui && ui.onThought) ui.onThought('模型「' + m + '」响应超时，自动切换到备用模型继续生成…', 0);
+          }
+        }
+        throw lastErr || new Error('所有模型调用均失败');
       };
 
-      // 流式 LLM 调用桥接函数
+      // 流式 LLM 调用桥接函数（含跨模型降级回退）
       const callLLMStream = (typeof global.callAIStream === 'function') ? (async function* (prompt, sysPrompt) {
-        for await (const chunk of global.callAIStream(prompt, sysPrompt || '', [], null, null)) {
-          yield chunk;
+        const chain = _resolveModelChain();
+        let lastErr = null;
+        for (const m of chain) {
+          try {
+            for await (const chunk of global.callAIStream(prompt, sysPrompt || '', [], m, null)) {
+              yield chunk;
+            }
+            return; // 当前模型成功流完
+          } catch (e) {
+            lastErr = e;
+            if (!_isRetryableLLMError(e)) throw e;
+            if (ui && ui.onThought) ui.onThought('模型「' + m + '」响应超时，自动切换到备用模型继续生成…', 0);
+          }
         }
+        throw lastErr || new Error('所有模型调用均失败');
       }) : null;
 
       try {
@@ -242,6 +341,8 @@
           ui: ui,
           sandbox: sandbox,
           waitClarify: () => this.waitClarify(),
+          // 中止检查：子工作流生成/精炼循环据此提前退出，避免停止后仍跑满
+          isAborted: () => this.abort,
         });
 
         // 初始状态
@@ -322,8 +423,369 @@
       }
     },
 
-    /** 中止当前任务 */
-    stop() { this.abort = true; },
+    /**
+     * 后端工作流执行（前后端分离主路径）
+     * 调用本地 Python 后端：意图路由 → 多轮追问 → 内容生成 → 前端文档落盘。
+     * 追问复用现有澄清选择题 UI；产物按 export 类型调前端文档工具生成文件。
+     */
+    async _runBackend(userInput, ctx, opts) {
+      // 优先走异步任务 + SSE 进度（后端后台执行，实时展示阶段进度）
+      // 异步路径失败或需追问走同步 continue 时，降级到 _runBackendSync
+      try {
+        const backend = global.AgentBackend;
+        if (backend && backend.submitWorkflowAsync) {
+          const taskRes = await backend.submitWorkflowAsync(userInput, {
+            history: this._convoHistory.slice(),
+            sessionId: 0,
+            topic: ctx.topic || '',
+            memoryKeyword: ctx.topic || userInput,
+            uploadedFiles: (this._roundFiles || []).concat(ctx.uploadedFiles || []),
+          });
+          if (taskRes && taskRes.ok && taskRes.taskId) {
+            const r = await this._runBackendAsync(taskRes.taskId, userInput, ctx, opts);
+            if (r && r.backend) return r;
+          }
+        }
+      } catch (e) {
+        console.warn('[agent] 异步后端执行异常，降级同步:', e);
+      }
+      return this._runBackendSync(userInput, ctx, opts);
+    },
+
+    /** 提取：后端返回单个产物 → 前端文档工具落盘（保证可下载/预览） */
+    async _persistProduct(prod, ctx, ui, tools) {
+      if (!prod || !prod.content || !tools) return null;
+      const ext = prod.export || 'md';
+      const topic = (ctx.topic || '').replace(/[\\/:*?"<>|]/g, '').slice(0, 20) || '内容';
+      const safeName = String(prod.name || '产物').replace(/[\\/:*?"<>|]/g, '');
+      const filename = safeName + '_' + topic + '.' + ext;
+      const call = (name, args) => {
+        if (ui && ui.onToolCall) ui.onToolCall({ name: name, args: args, step: 1 });
+        return tools.invoke(name, args, { timeout: 60000 }).then(function (r) {
+          if (ui && ui.onToolResult) ui.onToolResult({ name: name, ok: !!(r && r.ok), result: r && r.data, error: r && r.error, step: 1 });
+          return r;
+        });
+      };
+      try {
+        if (ext === 'pptx') {
+          let slides = null;
+          try { const p = JSON.parse(prod.content); if (Array.isArray(p)) slides = p; } catch (e) { /* 非 JSON */ }
+          if (!slides) slides = [{ type: 'content', title: topic, bullets: String(prod.content).split('\n').filter(Boolean).slice(0, 12) }];
+          const r = await call('gen_ppt', { filename: filename, slides: slides });
+          return r && r.ok ? { path: (r.data && r.data.path) || filename, filename: filename, type: prod.name } : null;
+        }
+        if (ext === 'xlsx') {
+          const rows = this._parseMdTable(prod.content);
+          if (!rows.length) rows.push(['内容'], [String(prod.content).slice(0, 500)]);
+          const r = await call('gen_excel', { filename: filename, rows: rows, sheetName: safeName });
+          return r && r.ok ? { path: (r.data && r.data.path) || filename, filename: filename, type: prod.name } : null;
+        }
+        if (ext === 'md') {
+          const r = await call('write_file', { path: '产物/' + filename, content: prod.content });
+          return r && r.ok ? { path: (r.data && r.data.path) || ('产物/' + filename), filename: filename, type: prod.name } : null;
+        }
+        const r = await call('gen_word', { filename: filename, title: topic, content: prod.content });
+        return r && r.ok ? { path: (r.data && r.data.path) || filename, filename: filename, type: prod.name } : null;
+      } catch (e) {
+        console.warn('[agent] 后端产物落盘失败', prod.name, e);
+        return null;
+      }
+    },
+
+    /** 提取：后端追问 → 选择题 UI 收集答案 */
+    async _collectBackendAnswers(questions) {
+      const ui = global.AgentSandboxUI;
+      if (!ui || !ui.onClarify || !questions || !questions.length) return {};
+      const clar = {
+        reason: '后端智能体需要确认关键信息以精准生成',
+        questions: questions.map(function (q, i) {
+          return {
+            q: q.question || ('请补充：' + (q.field || '信息')),
+            options: (q.options && q.options.length) ? q.options.slice() : [],
+            multi: q.multiSelect === true,
+          };
+        }),
+      };
+      await ui.onClarify(clar);
+      const selections = await this.waitClarify();
+      if (!selections || !Array.isArray(selections)) return {};
+      const answers = {};
+      questions.forEach(function (q, idx) {
+        const v = selections[idx];
+        if (v == null) return;
+        answers[q.field || ('q' + idx)] = (typeof v === 'object') ? (v.value || v.text || '') : v;
+      });
+      return answers;
+    },
+
+    /** 异步后端路径：订阅 SSE 进度 → 完成后用前端工具落盘产物 */
+    async _runBackendAsync(taskId, userInput, ctx, opts) {
+      const ui = global.AgentSandboxUI;
+      const memory = global.AgentMemory;
+      const tools = global.AgentTools;
+      const backend = global.AgentBackend;
+      let stopWatch = null;
+      let finalRes = null;
+
+      try {
+        if (ui && ui.onPlan) ui.onPlan(['连接后端工作流', '意图识别与任务路由', '生成产物并质量校验', '文档落盘与结果汇总']);
+
+        // 记录当前后端任务 id，供 stop() 同步取消后端线程
+        this._backendTaskId = taskId;
+
+        // 订阅 SSE 进度
+        const stageDone = new Promise((resolve) => {
+          let resolved = false;
+          const doneResolve = () => {
+            if (resolved) return;
+            resolved = true;
+            clearInterval(abortTimer);
+            if (stopWatch) { try { stopWatch(); } catch (e) {} }
+            resolve();
+          };
+          // 主动监听前端中止：stop() 后无需等待后端响应即可结束等待，避免 UI 长期挂起
+          const abortTimer = setInterval(() => {
+            if (this.abort) {
+              finalRes = { ok: false, error: '任务已取消', aborted: true };
+              doneResolve();
+            }
+          }, 400);
+          stopWatch = backend.watchTask(taskId, function (evt) {
+            try {
+              if (evt.type === 'stage' && ui && ui.onStep) {
+                ui.onStep({ stage: evt.stage, label: evt.message || evt.stage });
+              } else if (evt.type === 'progress' && ui && ui.onThought) {
+                ui.onThought((evt.message || '') + '（' + (evt.progress || 0) + '%）', 0);
+              } else if (evt.type === 'done' && evt.result) {
+                finalRes = evt.result;
+                doneResolve();
+              } else if (evt.type === 'error') {
+                finalRes = { ok: false, error: evt.error || '后端执行失败' };
+                doneResolve();
+              } else if (evt.type === 'cancel') {
+                finalRes = { ok: false, error: '任务已取消', aborted: true };
+                doneResolve();
+              }
+            } catch (e) { /* 忽略 */ }
+          });
+          // 超时兜底：600 秒后仍未结束则强制结束，降级同步（后端任务超时为 900 秒，保证长任务不被提前切断）
+          setTimeout(doneResolve, 600000);
+        });
+
+        await stageDone;
+        this._backendTaskId = null;
+        if (stopWatch) stopWatch();
+
+        // 若 SSE 未捕获到结果，轮询一次兜底
+        if (!finalRes) {
+          const st = await backend.getTaskStatus(taskId);
+          if (st && st.ok && st.task) {
+            const t = st.task;
+            if (t.status === 'success') finalRes = t.result || {};
+            else if (t.status === 'cancelled') finalRes = { ok: false, error: '任务已取消', aborted: true };
+            else if (t.status === 'failed') finalRes = { ok: false, error: (t.error) || '后端执行失败' };
+          }
+        }
+        if (!finalRes) finalRes = { ok: false, error: '后端任务未返回结果' };
+
+        // 需要追问 → 降级到同步路径处理（同步 continue 完成追问与生成）
+        if (finalRes.pending) {
+          return { backend: false }; // 触发降级
+        }
+        if (!finalRes.ok) {
+          return { ok: false, error: finalRes.error || '后端执行失败', backend: true };
+        }
+
+        // 产物落盘（前端工具，保证可下载）
+        const artifacts = [];
+        const products = finalRes.products || [];
+        // 参考信息面板：记录后端工作流调用的产物技能
+        if (typeof global.markBeikeSkillUsed === 'function') {
+          products.forEach(function (p) { global.markBeikeSkillUsed(p.name, 'fa-wand-magic-sparkles', '技能'); });
+        }
+        for (let i = 0; i < products.length; i++) {
+          if (this.abort) throw new Error('任务已中止');
+          const art = await this._persistProduct(products[i], ctx, ui, tools);
+          if (art) artifacts.push(art);
+        }
+
+        // 最终回答
+        let answer = finalRes.answer || '';
+        if (!answer && products.length) {
+          answer = '已为您生成 ' + products.length + ' 个产物：' + products.map(function (p) { return p.name; }).join('、') + '，请到任务产物区下载查看。';
+        }
+        if (!answer) answer = '后端工作流执行完成。';
+
+        // 记忆
+        if (memory && memory.endTask) memory.endTask('success', answer, artifacts.map(function (a) { return a.path; }).join(','));
+
+        return { ok: true, answer: answer, step: 0, backend: true, artifacts: artifacts, products: products };
+      } catch (e) {
+        if (stopWatch) stopWatch();
+        this._backendTaskId = null;
+        if (this.abort) {
+          if (memory && memory.endTask) memory.endTask('failed', '用户中止', '');
+          return { ok: false, error: '任务已中止', aborted: true };
+        }
+        console.warn('[agent] 异步后端失败，降级同步:', e);
+        return { backend: false };
+      }
+    },
+
+    async _runBackendSync(userInput, ctx, opts) {
+      const ui = global.AgentSandboxUI;
+      const memory = global.AgentMemory;
+      const tools = global.AgentTools;
+      const backend = global.AgentBackend;
+
+      // 多轮追问：答案收集（field → 值），与后端 pending_questions 对应
+      const collectAnswers = async (questions) => {
+        if (!ui || !ui.onClarify || !questions || !questions.length) return {};
+        const clar = {
+          reason: '后端智能体需要确认关键信息以精准生成',
+          questions: questions.map(function (q, i) {
+            return {
+              q: q.question || ('请补充：' + (q.field || '信息')),
+              options: (q.options && q.options.length) ? q.options.slice() : [],
+              multi: q.multiSelect === true,
+            };
+          }),
+        };
+        await ui.onClarify(clar);
+        const selections = await this.waitClarify();
+        if (!selections || !Array.isArray(selections)) return {};
+        const answers = {};
+        questions.forEach(function (q, idx) {
+          const v = selections[idx];
+          if (v == null) return;
+          answers[q.field || ('q' + idx)] = (typeof v === 'object') ? (v.value || v.text || '') : v;
+        });
+        return answers;
+      };
+
+      // 产物落盘：按 export 类型映射到前端文档工具
+      const persistProduct = async (prod) => {
+        if (!prod || !prod.content || !tools) return null;
+        const ext = prod.export || 'md';
+        const topic = (ctx.topic || '').replace(/[\\/:*?"<>|]/g, '').slice(0, 20) || '内容';
+        const safeName = String(prod.name || '产物').replace(/[\\/:*?"<>|]/g, '');
+        const filename = safeName + '_' + topic + '.' + ext;
+        const call = (name, args) => {
+          if (ui && ui.onToolCall) ui.onToolCall({ name: name, args: args, step: 1 });
+          return tools.invoke(name, args, { timeout: 60000 }).then(function (r) {
+            if (ui && ui.onToolResult) ui.onToolResult({ name: name, ok: !!(r && r.ok), result: r && r.data, error: r && r.error, step: 1 });
+            return r;
+          });
+        };
+        try {
+          if (ext === 'pptx') {
+            // PPT：content 可能是 JSON slides 数组或 Markdown
+            let slides = null;
+            try { const p = JSON.parse(prod.content); if (Array.isArray(p)) slides = p; } catch (e) { /* 非 JSON */ }
+            if (!slides) slides = [{ type: 'content', title: topic, bullets: String(prod.content).split('\n').filter(Boolean).slice(0, 12) }];
+            const r = await call('gen_ppt', { filename: filename, slides: slides });
+            return r && r.ok ? { path: (r.data && r.data.path) || filename, filename: filename, type: prod.name } : null;
+          }
+          if (ext === 'xlsx') {
+            // Excel：从 Markdown 表格解析 rows
+            const rows = this._parseMdTable(prod.content);
+            if (!rows.length) rows.push(['内容'], [String(prod.content).slice(0, 500)]);
+            const r = await call('gen_excel', { filename: filename, rows: rows, sheetName: safeName });
+            return r && r.ok ? { path: (r.data && r.data.path) || filename, filename: filename, type: prod.name } : null;
+          }
+          if (ext === 'md') {
+            // Markdown 类产物 → write_file 落盘到「产物/」目录
+            const r = await call('write_file', { path: '产物/' + filename, content: prod.content });
+            return r && r.ok ? { path: (r.data && r.data.path) || ('产物/' + filename), filename: filename, type: prod.name } : null;
+          }
+          // 默认 docx → gen_word
+          const r = await call('gen_word', { filename: filename, title: topic, content: prod.content });
+          return r && r.ok ? { path: (r.data && r.data.path) || filename, filename: filename, type: prod.name } : null;
+        } catch (e) {
+          console.warn('[agent] 后端产物落盘失败', prod.name, e);
+          return null;
+        }
+      };
+
+      try {
+        if (ui && ui.onPlan) ui.onPlan(['连接后端工作流', '意图识别与任务路由', '生成产物并质量校验', '文档落盘与结果汇总']);
+
+        // 第一轮
+        let res = await backend.runWorkflow(userInput, this._convoHistory.slice());
+        let clarifyRound = 0;
+        const maxClarify = 3;
+
+        // 追问循环：后端返回 pending_questions 时用选择题 UI 收集答案
+        while (res && res.ok && res.pendingQuestions && res.pendingQuestions.length && clarifyRound < maxClarify) {
+          if (this.abort) throw new Error('任务已中止');
+          clarifyRound++;
+          const answers = await collectAnswers(res.pendingQuestions);
+          if (!Object.keys(answers).length) break;
+          res = await backend.continueWorkflow(userInput, this._convoHistory.slice(), answers, res.state);
+        }
+
+        if (!res || !res.ok) {
+          return { ok: false, error: (res && res.error) || '后端执行失败' };
+        }
+
+        // 生成产物并落盘
+        const artifacts = [];
+        const products = res.products || [];
+        // 参考信息面板：记录后端工作流调用的产物技能
+        if (typeof global.markBeikeSkillUsed === 'function') {
+          products.forEach(function (p) { global.markBeikeSkillUsed(p.name, 'fa-wand-magic-sparkles', '技能'); });
+        }
+        for (let i = 0; i < products.length; i++) {
+          if (this.abort) throw new Error('任务已中止');
+          const art = await persistProduct(products[i]);
+          if (art) artifacts.push(art);
+        }
+
+        // 最终回答
+        const final = res.final || {};
+        let answer = final.summary || '';
+        if (!answer && products.length) {
+          answer = '已为您生成 ' + products.length + ' 个产物：' + products.map(function (p) { return p.name; }).join('、') + '，请到任务产物区下载查看。';
+        }
+        if (!answer) answer = '后端工作流执行完成。';
+
+        // 记忆
+        if (memory && memory.endTask) memory.endTask('success', answer, artifacts.map(function (a) { return a.path; }).join(','));
+
+        return { ok: true, answer: answer, step: 0, backend: true, artifacts: artifacts, products: products };
+      } catch (e) {
+        if (this.abort) {
+          if (memory && memory.endTask) memory.endTask('failed', '用户中止', '');
+          return { ok: false, error: '任务已中止', aborted: true };
+        }
+        return { ok: false, error: (e && e.message) || String(e), backend: true };
+      }
+    },
+
+    /** 从 Markdown 表格解析为二维数组 */
+    _parseMdTable(md) {
+      const rows = [];
+      String(md || '').split('\n').forEach(function (line) {
+        if (line.trim().indexOf('|') < 0) return;
+        if (/^\|[\s\-:|]+$/.test(line.trim())) return; // 跳过分隔行
+        const cells = line.split('|').map(function (c) { return c.trim(); });
+        if (cells.length && cells[0] === '') cells.shift();
+        if (cells.length && cells[cells.length - 1] === '') cells.pop();
+        if (cells.length) rows.push(cells);
+      });
+      return rows;
+    },
+
+    /** 中止当前任务：前端置位 abort，并同步向后端发送取消请求，真正终止后端线程 */
+    stop() {
+      this.abort = true;
+      if (this._backendTaskId && global.AgentBackend && typeof global.AgentBackend.cancelTask === 'function') {
+        const tid = this._backendTaskId;
+        try {
+          global.AgentBackend.cancelTask(tid).catch(function () { /* 忽略取消失败 */ });
+        } catch (e) { /* 忽略 */ }
+      }
+    },
 
     /** 构造系统提示（注入工具/技能/记忆/规则） */
     _buildSystemPrompt(ctx) {
@@ -339,6 +801,11 @@
       }
       parts.push('注：记忆已自动注入上方上下文，无需调用 memory.recall 工具。');
       parts.push('## 当前上下文\n' + (ctx.subject ? '学科：' + ctx.subject + '\n' : '') + (ctx.grade ? '年级：' + ctx.grade + '\n' : '') + (ctx.topic ? '课题：' + ctx.topic + '\n' : ''));
+      // 本轮上传/生成的文件：注入上下文，让模型知道本轮可用的文件
+      const roundFiles = (this._roundFiles && this._roundFiles.length) ? this._roundFiles : (ctx.uploadedFiles || []);
+      if (roundFiles.length) {
+        parts.push('## 本轮文件\n' + roundFiles.map(function (f) { return '- ' + f; }).join('\n') + '\n（如需基于这些文件分析/生成，可引用其文件名。生成的文档产物会保存到产物区。）');
+      }
       return parts.join('\n\n');
     },
 
@@ -368,6 +835,10 @@
       if (ui && ui.onStart) ui.onStart({ task: userInput, skill: activeSkill });
       // 技能匹配步骤行（须在 onStart 创建运行卡片之后渲染）
       if (activeSkill && ui && ui.onSkillMatched) ui.onSkillMatched(activeSkill);
+      // 参考信息面板：记录匹配到的技能
+      if (activeSkill && typeof global.markBeikeSkillUsed === 'function') {
+        global.markBeikeSkillUsed(activeSkill.name || activeSkill.id, activeSkill.icon, '技能');
+      }
 
       let toolCalls = 0;
       let step = 0;
@@ -578,7 +1049,8 @@
       return msg;
     },
 
-    /** 上下文窗口裁剪：保留系统提示 + 最近对话，总计不超过上文限制 */
+    /** 上下文窗口裁剪：保留系统提示 + 最近对话，总计不超过上文限制。
+     *  同时保证至少保留 MIN_ROUNDS 轮（用户+助手=1轮）对话，溢出时优先遗忘最旧的轮次。 */
     _trimContext(convo, sysPrompt) {
       const sysLen = _charLen(sysPrompt);
       const budget = CONTEXT_WINDOW.prevLimit - sysLen - 2000; // 预留 2K 给本轮输出指令
@@ -592,12 +1064,25 @@
         kept.unshift(convo[i]);
         used += len;
       }
+      // 兜底：若按字符预算裁剪后不足 MIN_ROUNDS 轮，强制保留最近 MIN_ROUNDS 轮（溢出遗忘最旧）
+      const MIN_ROUNDS = 10;
+      const MIN_MSGS = MIN_ROUNDS * 2;
+      if (kept.length < MIN_MSGS && convo.length >= MIN_MSGS) {
+        return convo.slice(-MIN_MSGS);
+      }
       return kept;
     },
 
-    /** 保存对话记忆（跨轮持久化，截断到上下文窗口内） */
+    /** 保存对话记忆（跨轮持久化，保证至少 10 轮，溢出遗忘最旧轮次） */
     _saveMemory(convo) {
-      // 只保留最近 CONTEXT_WINDOW.prevLimit 字符的对话
+      const MIN_ROUNDS = 10;
+      const MIN_MSGS = MIN_ROUNDS * 2;
+      // 至少保留最近 MIN_ROUNDS 轮（用户+助手），确保长任务上下文不丢失
+      if (convo.length > MIN_MSGS) {
+        this._convoHistory = convo.slice(-MIN_MSGS);
+        return;
+      }
+      // 其次按字符预算裁剪（保留更早但更长的关键内容）
       const sysPlaceholder = 2000; // 系统提示的预估长度
       const budget = CONTEXT_WINDOW.prevLimit - sysPlaceholder;
       const kept = [];
@@ -608,7 +1093,11 @@
         kept.unshift(convo[i]);
         used += len;
       }
-      this._convoHistory = kept;
+      if (kept.length >= MIN_MSGS || convo.length < MIN_MSGS) {
+        this._convoHistory = (kept.length >= MIN_MSGS) ? kept : convo;
+      } else {
+        this._convoHistory = convo.slice(-MIN_MSGS);
+      }
     },
 
     /* ============ 工具执行优化：缓存 + 观察压缩 ============ */
@@ -731,17 +1220,37 @@
         const tag = m.role === 'assistant' ? '【智能体】' : (m.role === 'tool' ? '【工具返回】' : '【教师/系统】');
         return tag + '：\n' + (typeof m.content === 'string' ? m.content : JSON.stringify(m.content));
       }).join('\n\n');
-      return await global.callAIJson(historyText, sysPrompt, global.AgentSandboxOpts && global.AgentSandboxOpts.modelOverride);
+      const chain = _resolveModelChain();
+      let lastErr = null;
+      for (const m of chain) {
+        try {
+          return await global.callAIJson(historyText, sysPrompt, m);
+        } catch (e) {
+          lastErr = e;
+          if (!_isRetryableLLMError(e)) throw e;
+        }
+      }
+      throw lastErr || new Error('所有模型调用均失败');
     },
 
     /** 一次性问答（无工具，纯对话，供简单场景） */
     async chat(prompt, sysPrompt, onChunk) {
       if (typeof global.callAIStream === 'function') {
-        let acc = '';
-        for await (const chunk of global.callAIStream(prompt, sysPrompt, [], null, null)) {
-          if (chunk && !chunk.startsWith('\u0001')) { acc += chunk; if (onChunk) onChunk(chunk); }
+        const chain = _resolveModelChain();
+        let lastErr = null;
+        for (const m of chain) {
+          try {
+            let acc = '';
+            for await (const chunk of global.callAIStream(prompt, sysPrompt, [], m, null)) {
+              if (chunk && !chunk.startsWith('\u0001')) { acc += chunk; if (onChunk) onChunk(chunk); }
+            }
+            return acc;
+          } catch (e) {
+            lastErr = e;
+            if (!_isRetryableLLMError(e)) throw e;
+          }
         }
-        return acc;
+        throw lastErr || new Error('所有模型调用均失败');
       }
       throw new Error('流式引擎未就绪(callAIStream 缺失)');
     },

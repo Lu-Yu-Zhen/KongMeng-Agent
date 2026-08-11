@@ -1,0 +1,405 @@
+{
+  "subject": "英语",
+  "items": [
+    {
+      "query": "可数名词与不可数名词的用法。",
+      "subject": "英语",
+      "expected_kp": "E-M1C1S1-KP1",
+      "expected_source": "人教版高中英语必修",
+      "difficulty": 2,
+      "negative": false
+    },
+    {
+      "query": "名词所有格的构成与用法。",
+      "subject": "英语",
+      "expected_kp": "E-M1C1S1-KP2",
+      "expected_source": "人教版高中英语必修",
+      "difficulty": 2,
+      "negative": false
+    },
+    {
+      "query": "不定代词的用法辨析。",
+      "subject": "英语",
+      "expected_kp": "E-M1C1S2-KP2",
+      "expected_source": "人教版高中英语必修",
+      "difficulty": 3,
+      "negative": false
+    },
+    {
+      "query": "形容词比较级与最高级的构成。",
+      "subject": "英语",
+      "expected_kp": "E-M1C2S1-KP1",
+      "expected_source": "人教版高中英语必修",
+      "difficulty": 2,
+      "negative": false
+    },
+    {
+      "query": "时态一致原则的运用。",
+      "subject": "英语",
+      "expected_kp": "E-M1C3S2-KP1",
+      "expected_source": "人教版高中英语必修",
+      "difficulty": 3,
+      "negative": false
+    },
+    {
+      "query": "被动语态的构成与用法。",
+      "subject": "英语",
+      "expected_kp": "E-M1C3S2-KP2",
+      "expected_source": "人教版高中英语必修",
+      "difficulty": 3,
+      "negative": false
+    },
+    {
+      "query": "动词不定式在句中的功能。",
+      "subject": "英语",
+      "expected_kp": "E-M1C4S1-KP1",
+      "expected_source": "人教版高中英语选择性必修",
+      "difficulty": 3,
+      "negative": false
+    },
+    {
+      "query": "动名词的用法及与不定式的区别。",
+      "subject": "英语",
+      "expected_kp": "E-M1C4S1-KP2",
+      "expected_source": "人教版高中英语选择性必修",
+      "difficulty": 3,
+      "negative": false
+    },
+    {
+      "query": "分词作状语与独立主格结构。",
+      "subject": "英语",
+      "expected_kp": "E-M1C4S2-KP2",
+      "expected_source": "人教版高中英语选择性必修",
+      "difficulty": 4,
+      "negative": false
+    },
+    {
+      "query": "常见情态动词的用法。",
+      "subject": "英语",
+      "expected_kp": "E-M1C5S1-KP1",
+      "expected_source": "人教版高中英语选择性必修",
+      "difficulty": 3,
+      "negative": false
+    },
+    {
+      "query": "情态动词+have done的用法。",
+      "subject": "英语",
+      "expected_kp": "E-M1C5S2-KP1",
+      "expected_source": "人教版高中英语选择性必修",
+      "difficulty": 4,
+      "negative": false
+    },
+    {
+      "query": "与过去事实相反的虚拟语气。",
+      "subject": "英语",
+      "expected_kp": "E-M1C6S1-KP2",
+      "expected_source": "人教版高中英语选择性必修",
+      "difficulty": 4,
+      "negative": false
+    },
+    {
+      "query": "名词性从句与固定句式中的虚拟语气。",
+      "subject": "英语",
+      "expected_kp": "E-M1C6S2-KP2",
+      "expected_source": "人教版高中英语选择性必修",
+      "difficulty": 4,
+      "negative": false
+    },
+    {
+      "query": "定语从句关系代词的选择。",
+      "subject": "英语",
+      "expected_kp": "E-M1C7S1-KP1",
+      "expected_source": "人教版高中英语选择性必修",
+      "difficulty": 3,
+      "negative": false
+    },
+    {
+      "query": "名词性从句的类型与用法。",
+      "subject": "英语",
+      "expected_kp": "E-M1C7S2-KP1",
+      "expected_source": "人教版高中英语选择性必修",
+      "difficulty": 3,
+      "negative": false
+    },
+    {
+      "query": "状语从句的类型与连接词。",
+      "subject": "英语",
+      "expected_kp": "E-M1C7S2-KP2",
+      "expected_source": "人教版高中英语选择性必修",
+      "difficulty": 3,
+      "negative": false
+    },
+    {
+      "query": "完全倒装与部分倒装的区别。",
+      "subject": "英语",
+      "expected_kp": "E-M1C8S1-KP1",
+      "expected_source": "人教版高中英语选择性必修",
+      "difficulty": 4,
+      "negative": false
+    },
+    {
+      "query": "强调句的构成与用法。",
+      "subject": "英语",
+      "expected_kp": "E-M1C8S2-KP1",
+      "expected_source": "人教版高中英语选择性必修",
+      "difficulty": 3,
+      "negative": false
+    },
+    {
+      "query": "听力理解策略与技巧。",
+      "subject": "英语",
+      "expected_kp": "E-M2C1S1-KP1",
+      "expected_source": "人教版高中英语必修",
+      "difficulty": 3,
+      "negative": false
+    },
+    {
+      "query": "阅读理解主旨大意题的解题方法。",
+      "subject": "英语",
+      "expected_kp": "E-M2C2S1-KP1",
+      "expected_source": "人教版高中英语必修",
+      "difficulty": 3,
+      "negative": false
+    },
+    {
+      "query": "阅读理解推理判断与词义猜测。",
+      "subject": "英语",
+      "expected_kp": "E-M2C2S1-KP2",
+      "expected_source": "人教版高中英语必修",
+      "difficulty": 3,
+      "negative": false
+    },
+    {
+      "query": "完形填空的解题策略。",
+      "subject": "英语",
+      "expected_kp": "E-M2C2S2-KP1",
+      "expected_source": "人教版高中英语必修",
+      "difficulty": 3,
+      "negative": false
+    },
+    {
+      "query": "语篇填空无提示词的解题思路。",
+      "subject": "英语",
+      "expected_kp": "E-M2C3S1-KP2",
+      "expected_source": "人教版高中英语必修",
+      "difficulty": 3,
+      "negative": false
+    },
+    {
+      "query": "书面表达应用文写作规范。",
+      "subject": "英语",
+      "expected_kp": "E-M2C3S2-KP1",
+      "expected_source": "人教版高中英语选择性必修",
+      "difficulty": 3,
+      "negative": false
+    },
+    {
+      "query": "读后续写的语言与结尾处理。",
+      "subject": "英语",
+      "expected_kp": "E-M2C3S3-KP2",
+      "expected_source": "人教版高中英语选择性必修",
+      "difficulty": 4,
+      "negative": false
+    },
+    {
+      "query": "说明文的类型与说明方法。",
+      "subject": "英语",
+      "expected_kp": "E-M3C1S2-KP1",
+      "expected_source": "人教版高中英语必修",
+      "difficulty": 3,
+      "negative": false
+    },
+    {
+      "query": "议论文的三要素。",
+      "subject": "英语",
+      "expected_kp": "E-M3C2S1-KP1",
+      "expected_source": "人教版高中英语选择性必修",
+      "difficulty": 3,
+      "negative": false
+    },
+    {
+      "query": "语言能力的构成要素。",
+      "subject": "英语",
+      "expected_kp": "E-M4C1S1-KP1",
+      "expected_source": "普通高中英语课程标准",
+      "difficulty": 2,
+      "negative": false
+    },
+    {
+      "query": "文化意识的内涵。",
+      "subject": "英语",
+      "expected_kp": "E-M4C1S2-KP1",
+      "expected_source": "普通高中英语课程标准",
+      "difficulty": 2,
+      "negative": false
+    },
+    {
+      "query": "学习策略与自我管理能力。",
+      "subject": "英语",
+      "expected_kp": "E-M4C2S2-KP2",
+      "expected_source": "普通高中英语课程标准",
+      "difficulty": 3,
+      "negative": false
+    },
+    {
+      "query": "名词与代词的用法综合辨析。",
+      "subject": "英语",
+      "expected_kp": "E-M1C1S1-KP1",
+      "expected_source": "人教版高中英语必修",
+      "difficulty": 3,
+      "negative": false
+    },
+    {
+      "query": "时态与语态的综合运用。",
+      "subject": "英语",
+      "expected_kp": "E-M1C3S2-KP2",
+      "expected_source": "人教版高中英语必修",
+      "difficulty": 4,
+      "negative": false
+    },
+    {
+      "query": "非谓语动词不定式、动名词与分词辨析。",
+      "subject": "英语",
+      "expected_kp": "E-M1C4S1-KP1",
+      "expected_source": "人教版高中英语选择性必修",
+      "difficulty": 4,
+      "negative": false
+    },
+    {
+      "query": "虚拟语气在条件句与从句中的综合运用。",
+      "subject": "英语",
+      "expected_kp": "E-M1C6S1-KP2",
+      "expected_source": "人教版高中英语选择性必修",
+      "difficulty": 4,
+      "negative": false
+    },
+    {
+      "query": "定语从句关系代词与关系副词的选择综合。",
+      "subject": "英语",
+      "expected_kp": "E-M1C7S1-KP1",
+      "expected_source": "人教版高中英语选择性必修",
+      "difficulty": 4,
+      "negative": false
+    },
+    {
+      "query": "听力策略与口语交际综合运用。",
+      "subject": "英语",
+      "expected_kp": "E-M2C1S1-KP1",
+      "expected_source": "人教版高中英语必修",
+      "difficulty": 3,
+      "negative": false
+    },
+    {
+      "query": "阅读理解主旨大意与推理判断综合技巧。",
+      "subject": "英语",
+      "expected_kp": "E-M2C2S1-KP1",
+      "expected_source": "人教版高中英语必修",
+      "difficulty": 4,
+      "negative": false
+    },
+    {
+      "query": "完形填空与语篇填空综合解题。",
+      "subject": "英语",
+      "expected_kp": "E-M2C2S2-KP1",
+      "expected_source": "人教版高中英语必修",
+      "difficulty": 4,
+      "negative": false
+    },
+    {
+      "query": "书面表达与读后续写的综合写作能力。",
+      "subject": "英语",
+      "expected_kp": "E-M2C3S2-KP1",
+      "expected_source": "人教版高中英语选择性必修",
+      "difficulty": 4,
+      "negative": false
+    },
+    {
+      "query": "记叙文与说明文阅读综合技巧。",
+      "subject": "英语",
+      "expected_kp": "E-M3C1S2-KP1",
+      "expected_source": "人教版高中英语必修",
+      "difficulty": 3,
+      "negative": false
+    },
+    {
+      "query": "议论文的观点与论证方法综合。",
+      "subject": "英语",
+      "expected_kp": "E-M3C2S1-KP2",
+      "expected_source": "人教版高中英语选择性必修",
+      "difficulty": 4,
+      "negative": false
+    },
+    {
+      "query": "语言能力与文化意识综合培养。",
+      "subject": "英语",
+      "expected_kp": "E-M4C1S1-KP1",
+      "expected_source": "普通高中英语课程标准",
+      "difficulty": 3,
+      "negative": false
+    },
+    {
+      "query": "思维品质与学习能力综合提升。",
+      "subject": "英语",
+      "expected_kp": "E-M4C2S1-KP1",
+      "expected_source": "普通高中英语课程标准",
+      "difficulty": 3,
+      "negative": false
+    },
+    {
+      "query": "情态动词与虚拟语气综合运用。",
+      "subject": "英语",
+      "expected_kp": "E-M1C5S1-KP1",
+      "expected_source": "人教版高中英语选择性必修",
+      "difficulty": 4,
+      "negative": false
+    },
+    {
+      "query": "倒装句与强调句综合运用。",
+      "subject": "英语",
+      "expected_kp": "E-M1C8S2-KP1",
+      "expected_source": "人教版高中英语选择性必修",
+      "difficulty": 4,
+      "negative": false
+    },
+    {
+      "query": "中文古诗词的直译与意译方法。",
+      "subject": "英语",
+      "expected_kp": "",
+      "expected_source": "",
+      "difficulty": 2,
+      "negative": true
+    },
+    {
+      "query": "数学公式的标准英语读法。",
+      "subject": "英语",
+      "expected_kp": "",
+      "expected_source": "",
+      "difficulty": 2,
+      "negative": true
+    },
+    {
+      "query": "物理实验报告的英语写作。",
+      "subject": "英语",
+      "expected_kp": "",
+      "expected_source": "",
+      "difficulty": 2,
+      "negative": true
+    },
+    {
+      "query": "化学元素名称的英语记忆法。",
+      "subject": "英语",
+      "expected_kp": "",
+      "expected_source": "",
+      "difficulty": 2,
+      "negative": true
+    },
+    {
+      "query": "编程语言Python的语法规则。",
+      "subject": "英语",
+      "expected_kp": "",
+      "expected_source": "",
+      "difficulty": 2,
+      "negative": true
+    }
+  ]
+}

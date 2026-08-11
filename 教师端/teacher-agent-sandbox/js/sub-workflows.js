@@ -99,6 +99,10 @@
     var error = null;
 
     for (;;) {
+      // 中止检查：用户点停止后提前退出，不再继续生成/精炼
+      if (deps && typeof deps.isAborted === 'function' && deps.isAborted()) {
+        return { ok: false, content: content, slides: slides, validation: validation, refinementCount: refinementCount, artifacts: [], error: '任务已中止' };
+      }
       // ---- 生成 ----
       if (refinementCount === 0) {
         if (ui && ui.onThought) ui.onThought('【' + meta.name + '】正在调用大模型生成' + meta.docType + '内容，融入课标要求、真题考法和班级学情数据…');
@@ -149,6 +153,15 @@
   // 生成阶段
   // ================================================================
 
+  /** 依据产物类型生成推荐结构大纲（{outline} 注入用，避免大纲段空白导致结构松散） */
+  function _defaultOutline(meta, topic) {
+    var t = topic || '本课题';
+    if (meta && meta.slides) {
+      return '建议页面结构：封面（《' + t + '》标题/授课人）→ 学习目标 → 知识讲授（概念/定理表述+要点）→ 例题精讲（完整解答步骤）→ 变式练习 → 要点归纳小结 → 作业布置/结束页。每页需有明确标题与具体要点内容，避免空泛。';
+    }
+    return '建议结构：教学目标（核心素养维度）→ 学情分析 → 教学重点与难点（附突破策略）→ 教学过程（情境导入/新知探究/例题精讲/变式训练/课堂小结，含教师提问话术与学生预设回答）→ 板书设计 → 分层作业 → 教学反思。各部分需展开具体内容。';
+  }
+
   /**
    * 首次生成内容
    * @returns {Promise<{content:string, slides:Array|null, error:string|null}>}
@@ -160,7 +173,7 @@
       topic: ctx.topic || '',
       subject: ctx.subject || '',
       grade: ctx.grade || '',
-      outline: '',
+      outline: _defaultOutline(meta, ctx.topic),
       researchData: (shared && shared.researchData) ? String(shared.researchData).slice(0, 3000) : '（暂无联网资料，基于教学经验生成）',
       studentAnalysis: (shared && shared.studentData) ? String(shared.studentData).slice(0, 2000) : '（暂无学情数据）',
       studentData: (shared && shared.studentData) ? String(shared.studentData).slice(0, 2000) : '（暂无班级学情数据）',
@@ -190,6 +203,11 @@
       return { content: text, slides: slides, error: null };
     }
 
+    // ---- 教案子工作流：分节并行生成（避免单次超长输出导致的超时/卡顿，提升速度与完整性） ----
+    if (meta.id === 'lesson-plan') {
+      return await _generateLessonPlan(meta, shared, deps, vars);
+    }
+
     // ---- 文本类（Markdown）子工作流：优先流式 ----
     if (meta.text) {
       var sysPrompt = '你是高中教研专家，生成高质量教学文档。所有内容必须具体可操作，禁止空泛表述。数学公式用 LaTeX 语法。';
@@ -209,6 +227,90 @@
     }
 
     return { content: '', slides: null, error: '未匹配到生成方式: ' + meta.id };
+  }
+
+  /**
+   * 教案分节并行生成。
+   * 将教案拆为 4 个独立分节，并行调用 LLM（每节约 700-900 字，单次生成快、不易超时），
+   * 再按固定顺序组装为完整 Markdown 教案。相比单次生成超长文档，
+   * 显著降低超时概率、提升整体速度，并保证各必备章节完整（质量验证一次通过）。
+   */
+  async function _generateLessonPlan(meta, shared, deps, vars) {
+    var ctx = (shared && shared.ctx) || {};
+    var sys = '你是资深高中教研专家，擅长编写结构完整、内容具体可操作的教案片段。'
+      + '所有内容必须具体可操作，禁止"此处讲解""举例说明""略"等空泛表述。'
+      + '数学公式用 LaTeX（行内 $...$，块级 $$...$$）。只输出纯 Markdown 正文，不要任何解释或代码块标记。';
+
+    var base = '课题：《' + (ctx.topic || '未指定') + '》\n'
+      + '学科：' + (ctx.subject || '未指定') + '，年级：' + (ctx.grade || '未指定') + '\n\n'
+      + '课标与考法资料：\n' + (vars.researchData || '（暂无联网资料，基于教学经验生成）') + '\n\n'
+      + '学情分析：\n' + (vars.studentAnalysis || '（暂无学情数据）') + '\n\n';
+
+    var s1 = base + '请编写教案的开篇部分，必须严格包含以下小节（用 ## 作为二级标题）：\n'
+      + '1. ## 课标依据与教材分析\n2. ## 学情分析\n3. ## 教学目标（核心素养四维度：数学抽象/逻辑推理/数学建模/直观想象等，用可观察可测量的行为动词，如"能够…"）\n'
+      + '4. ## 教学重点与难点（各附突破策略）\n'
+      + '该分节正文不少于 700 字。';
+
+    var s2 = base + '请编写教案"教学过程"的前两个教学环节，用 ## 教学过程 作为总标题，用 ### 环节名称 作为子标题：\n'
+      + '### 环节一：情境导入（附具体情境材料与导入语原话）\n### 环节二：新知探究（附概念/定理的完整表述、关键设问）\n'
+      + '每个环节必须写清：【教师活动】含具体提问话术（用"师："标注）、【学生活动】含预设回答（用"生："标注）、【设计意图】、【时间分配】。'
+      + '该分节正文不少于 700 字。';
+
+    var s3 = base + '请继续编写教案"教学过程"的后三个教学环节，用 ### 环节名称 作为子标题：\n'
+      + '### 环节三：例题精讲\n### 环节四：变式训练\n### 环节五：课堂小结\n'
+      + '每个环节必须写清：【教师活动】含具体提问话术（用"师："标注）、【学生活动】含预设回答（用"生："标注）、【设计意图】、【时间分配】。'
+      + '例题精讲环节须给出完整题干与分步规范解答。该分节正文不少于 800 字。';
+
+    var s4 = base + '请编写教案的收尾部分，必须严格包含以下小节（用 ## 作为二级标题）：\n'
+      + '1. ## 例题与变式（完整题干+分步解答，至少2道例题，数学公式用 LaTeX）\n'
+      + '2. ## 分层作业（基础/提升/拓展三层，各给出具体题目）\n'
+      + '3. ## 板书设计（结构化呈现，用缩进或列表）\n'
+      + '4. ## 教学反思预设\n'
+      + '该分节正文不少于 700 字。';
+
+    var tasks = [
+      { key: 'h', prompt: s1 },
+      { key: 'p1', prompt: s2 },
+      { key: 'p2', prompt: s3 },
+      { key: 't', prompt: s4 },
+    ];
+
+    // 并行调用 4 个分节（每个请求独立、短小，避免超时）
+    var results = await Promise.all(tasks.map(function (t) {
+      return _callTextLLM(t.prompt, sys, deps).then(function (txt) { return { key: t.key, text: txt }; });
+    }));
+
+    var empty = results.filter(function (r) { return !r.text; });
+    if (empty.length === tasks.length) {
+      return { content: '', slides: null, error: '教案分节生成失败：模型未返回有效内容（可能超时）' };
+    }
+
+    // 固定顺序组装（标题在分节内已含，直接拼接）
+    var order = { h: '', p1: '\n\n', p2: '\n\n', t: '\n\n' };
+    var assembled = results.slice().sort(function (a, b) {
+      return ['h', 'p1', 'p2', 't'].indexOf(a.key) - ['h', 'p1', 'p2', 't'].indexOf(b.key);
+    }).map(function (r) { return (order[r.key] || '\n\n') + String(r.text || '').trim(); }).join('');
+
+    if (!assembled.trim()) return { content: '', slides: null, error: '教案分节生成为空' };
+    return { content: assembled, slides: null, error: null };
+  }
+
+  /**
+   * 调用文本型 LLM 并返回纯文本（优先流式，回退 callLLM 解包）
+   */
+  async function _callTextLLM(prompt, sysPrompt, deps) {
+    if (deps.callLLMStream) {
+      var acc = '';
+      for await (var chunk of deps.callLLMStream(prompt, sysPrompt)) {
+        if (chunk && !chunk.startsWith('\u0001')) acc += chunk;
+      }
+      return acc;
+    }
+    if (deps.callLLM) {
+      var raw = await deps.callLLM(prompt, sysPrompt + '。你的输出必须为JSON对象，格式为 {"content":"<完整分节Markdown>"}，不要输出其他字段。');
+      return _unwrapContent(raw);
+    }
+    return '';
   }
 
   /**
@@ -334,15 +436,29 @@
           if (ui && ui.onToolResult) ui.onToolResult({ name: 'write_file', ok: false, error: error, step: 1 });
         }
       } else if (meta.slides) {
-        // PPT → gen_ppt
-        if (ui && ui.onToolCall) ui.onToolCall({ name: 'gen_ppt', args: { filename: filename, slideCount: slides ? slides.length : 0 }, step: 1 });
-        var pr = await tools.invoke('gen_ppt', { filename: filename, slides: slides || [] }, { timeout: 60000 });
-        if (pr && pr.ok) {
-          artifacts.push({ path: (pr.data && pr.data.path) || filename, filename: filename, type: meta.docType });
-          if (ui && ui.onToolResult) ui.onToolResult({ name: 'gen_ppt', ok: true, result: pr.data, step: 1 });
+        // PPT → gen_ppt；slides 解析为空时回退 Markdown 落盘，避免生成 0 页空 PPTX
+        if (!slides || !slides.length) {
+          var mdName = String(filename).replace(/\.pptx?$/i, '') + '.md';
+          var mdPath = '产物/' + mdName;
+          if (ui && ui.onToolCall) ui.onToolCall({ name: 'write_file', args: { path: mdPath }, step: 1 });
+          var mdResult = await tools.invoke('write_file', { path: mdPath, content: content }, { timeout: 30000 });
+          if (mdResult && mdResult.ok) {
+            artifacts.push({ path: (mdResult.data && mdResult.data.path) || mdPath, filename: mdName, type: meta.docType });
+            if (ui && ui.onToolResult) ui.onToolResult({ name: 'write_file', ok: true, result: mdResult.data, step: 1 });
+          } else {
+            error = (mdResult && mdResult.error) || 'PPT 解析失败且 Markdown 回退落盘失败';
+            if (ui && ui.onToolResult) ui.onToolResult({ name: 'write_file', ok: false, error: error, step: 1 });
+          }
         } else {
-          error = (pr && pr.error) || 'PPT生成失败';
-          if (ui && ui.onToolResult) ui.onToolResult({ name: 'gen_ppt', ok: false, error: error, step: 1 });
+          if (ui && ui.onToolCall) ui.onToolCall({ name: 'gen_ppt', args: { filename: filename, slideCount: slides.length }, step: 1 });
+          var pr = await tools.invoke('gen_ppt', { filename: filename, slides: slides }, { timeout: 60000 });
+          if (pr && pr.ok) {
+            artifacts.push({ path: (pr.data && pr.data.path) || filename, filename: filename, type: meta.docType });
+            if (ui && ui.onToolResult) ui.onToolResult({ name: 'gen_ppt', ok: true, result: pr.data, step: 1 });
+          } else {
+            error = (pr && pr.error) || 'PPT生成失败';
+            if (ui && ui.onToolResult) ui.onToolResult({ name: 'gen_ppt', ok: false, error: error, step: 1 });
+          }
         }
       } else if (meta.assessment) {
         // 评价量规 → gen_excel（从 Markdown 表格解析 rows）
@@ -462,8 +578,17 @@
   function _parseSlides(raw) {
     if (!raw) return null;
     var parsed = _parseJSON(raw);
-    if (parsed && Array.isArray(parsed)) {
-      return parsed.filter(function (s) { return s && (s.title || s.bullets); });
+    // 接受顶层数组，或 {slides|data|list|pages:[...]} 包裹形式
+    // （json_object 端点强制输出对象时，模型常包一层，只认顶层数组会解析失败）
+    var arr = null;
+    if (Array.isArray(parsed)) {
+      arr = parsed;
+    } else if (parsed && typeof parsed === 'object') {
+      arr = parsed.slides || parsed.data || parsed.list || parsed.pages || null;
+    }
+    if (arr && Array.isArray(arr)) {
+      var filtered = arr.filter(function (s) { return s && (s.title || s.bullets || s.content); });
+      return filtered.length ? filtered : null;
     }
     return null;
   }
