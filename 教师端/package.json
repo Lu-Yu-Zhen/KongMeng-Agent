@@ -1,6 +1,6 @@
 {
   "name": "edu-agent-teacher",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "教育智能体·教师端桌面应用",
   "main": "electron/main.js",
   "author": "百舸",
@@ -29,8 +29,17 @@
     "files": [
       "electron/**/*",
       "index.html",
+      "悬浮球.js",
       "教育大模型logo.png",
-      "teacher-agent-sandbox/**"
+      "!**/__pycache__/**",
+      "!**/*.log",
+      "!dist/**",
+      "!dist_backup_*/**",
+      "!备课产物/**",
+      "!输出/**",
+      "!tests/**",
+      "!data/**",
+      "!_agent_layout_test.html"
     ],
     "extraResources": [
       {
@@ -38,16 +47,26 @@
         "to": "www/index.html"
       },
       {
-        "from": "教育大模型logo.png",
-        "to": "www/教育大模型logo.png"
-      },
-      {
         "from": "悬浮球.js",
         "to": "www/悬浮球.js"
       },
       {
+        "from": "教育大模型logo.png",
+        "to": "www/教育大模型logo.png"
+      },
+      {
         "from": "teacher-agent-sandbox",
-        "to": "www/teacher-agent-sandbox"
+        "to": "www/teacher-agent-sandbox",
+        "filter": ["**/*", "!**/__pycache__/**", "!**/*.log"]
+      },
+      {
+        "from": "backend",
+        "to": "backend",
+        "filter": ["**/*", "!**/__pycache__/**", "!**/*.log", "!data/**"]
+      },
+      {
+        "from": "workflow.py",
+        "to": "workflow.py"
       }
     ],
     "win": {

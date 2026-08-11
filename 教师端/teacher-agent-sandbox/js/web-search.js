@@ -729,6 +729,11 @@
           results: results,
           query: searchQuery,
           pagesFetched: pageContents.length,
+          // 实际打开并读取了正文的网页（参考信息面板「已读」标记数据源）
+          pages: pageContents.map(function (p) {
+            return { title: p.title, url: p.url, source: p.source, read: true,
+                     snippet: String(p.content || '').replace(/\s+/g, ' ').slice(0, 120) };
+          }),
         },
       };
     },

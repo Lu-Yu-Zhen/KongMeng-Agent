@@ -1,0 +1,405 @@
+{
+  "subject": "语文",
+  "items": [
+    {
+      "query": "散文行文思路分析，作者常以什么作为贯穿全文的线索？",
+      "subject": "语文",
+      "expected_kp": "YW-M1C1S1-KP1",
+      "expected_source": "人教版统编版必修上册",
+      "difficulty": 3,
+      "negative": false
+    },
+    {
+      "query": "如何赏析散文的语言特点与表达效果？",
+      "subject": "语文",
+      "expected_kp": "YW-M1C1S2-KP3",
+      "expected_source": "人教版统编版必修上册",
+      "difficulty": 3,
+      "negative": false
+    },
+    {
+      "query": "小说情节梳理的方法与答题要点。",
+      "subject": "语文",
+      "expected_kp": "YW-M1C2S1-KP5",
+      "expected_source": "人教版统编版必修下册",
+      "difficulty": 2,
+      "negative": false
+    },
+    {
+      "query": "阅读小说时如何分析人物形象？",
+      "subject": "语文",
+      "expected_kp": "YW-M1C2S2-KP7",
+      "expected_source": "人教版统编版必修下册",
+      "difficulty": 3,
+      "negative": false
+    },
+    {
+      "query": "小说中环境描写的作用有哪些？",
+      "subject": "语文",
+      "expected_kp": "YW-M1C2S2-KP8",
+      "expected_source": "人教版统编版必修下册",
+      "difficulty": 2,
+      "negative": false
+    },
+    {
+      "query": "现代诗歌意象解读的基本方法。",
+      "subject": "语文",
+      "expected_kp": "YW-M1C3S1-KP9",
+      "expected_source": "人教版统编版必修上册",
+      "difficulty": 3,
+      "negative": false
+    },
+    {
+      "query": "现代诗歌常用的表现手法有哪些？",
+      "subject": "语文",
+      "expected_kp": "YW-M1C3S2-KP12",
+      "expected_source": "人教版统编版必修上册",
+      "difficulty": 3,
+      "negative": false
+    },
+    {
+      "query": "戏剧冲突分析的角度与要点。",
+      "subject": "语文",
+      "expected_kp": "YW-M1C4S1-KP13",
+      "expected_source": "人教版统编版必修下册",
+      "difficulty": 3,
+      "negative": false
+    },
+    {
+      "query": "文言实词词义的推断方法有哪些？",
+      "subject": "语文",
+      "expected_kp": "YW-M2C1S1-KP17",
+      "expected_source": "人教版统编版选择性必修中册",
+      "difficulty": 4,
+      "negative": false
+    },
+    {
+      "query": "常用的文言虚词的用法与意义归纳。",
+      "subject": "语文",
+      "expected_kp": "YW-M2C1S2-KP19",
+      "expected_source": "人教版统编版选择性必修中册",
+      "difficulty": 4,
+      "negative": false
+    },
+    {
+      "query": "文言特殊句式有哪些类型？",
+      "subject": "语文",
+      "expected_kp": "YW-M2C1S2-KP20",
+      "expected_source": "人教版统编版选择性必修中册",
+      "difficulty": 3,
+      "negative": false
+    },
+    {
+      "query": "古代诗歌意象的常见类型与内涵。",
+      "subject": "语文",
+      "expected_kp": "YW-M2C2S1-KP23",
+      "expected_source": "人教版统编版选择性必修上册",
+      "difficulty": 3,
+      "negative": false
+    },
+    {
+      "query": "鉴赏古代诗歌表达技巧的答题思路。",
+      "subject": "语文",
+      "expected_kp": "YW-M2C2S2-KP26",
+      "expected_source": "人教版统编版选择性必修上册",
+      "difficulty": 4,
+      "negative": false
+    },
+    {
+      "query": "如何把握古代诗歌的情感主旨？",
+      "subject": "语文",
+      "expected_kp": "YW-M2C2S3-KP27",
+      "expected_source": "人教版统编版选择性必修上册",
+      "difficulty": 3,
+      "negative": false
+    },
+    {
+      "query": "成语运用辨析的常见错误类型。",
+      "subject": "语文",
+      "expected_kp": "YW-M3C1S1-KP34",
+      "expected_source": "人教版统编版必修上册",
+      "difficulty": 3,
+      "negative": false
+    },
+    {
+      "query": "语序不当病句的辨析方法。",
+      "subject": "语文",
+      "expected_kp": "YW-M3C2S1-KP37",
+      "expected_source": "人教版统编版必修上册",
+      "difficulty": 3,
+      "negative": false
+    },
+    {
+      "query": "搭配不当病句的类型与辨析。",
+      "subject": "语文",
+      "expected_kp": "YW-M3C2S1-KP38",
+      "expected_source": "人教版统编版必修上册",
+      "difficulty": 3,
+      "negative": false
+    },
+    {
+      "query": "语段补写题目的解题思路。",
+      "subject": "语文",
+      "expected_kp": "YW-M3C4S2-KP49",
+      "expected_source": "人教版统编版必修上册",
+      "difficulty": 4,
+      "negative": false
+    },
+    {
+      "query": "压缩语段的常见方法与原则。",
+      "subject": "语文",
+      "expected_kp": "YW-M3C4S2-KP50",
+      "expected_source": "人教版统编版必修上册",
+      "difficulty": 3,
+      "negative": false
+    },
+    {
+      "query": "漫画寓意解读的步骤与方法。",
+      "subject": "语文",
+      "expected_kp": "YW-M3C5S2-KP53",
+      "expected_source": "人教版统编版必修下册",
+      "difficulty": 3,
+      "negative": false
+    },
+    {
+      "query": "记叙文的六要素分别是什么？",
+      "subject": "语文",
+      "expected_kp": "YW-M4C1S1-KP55",
+      "expected_source": "人教版统编版必修上册",
+      "difficulty": 2,
+      "negative": false
+    },
+    {
+      "query": "议论文中论证方法的运用技巧。",
+      "subject": "语文",
+      "expected_kp": "YW-M4C2S2-KP63",
+      "expected_source": "人教版统编版必修上册",
+      "difficulty": 3,
+      "negative": false
+    },
+    {
+      "query": "材料作文审题的关键步骤。",
+      "subject": "语文",
+      "expected_kp": "YW-M4C3S1-KP64",
+      "expected_source": "人教版统编版必修上册",
+      "difficulty": 3,
+      "negative": false
+    },
+    {
+      "query": "任务驱动型作文的特点是什么？",
+      "subject": "语文",
+      "expected_kp": "YW-M4C4S1-KP68",
+      "expected_source": "人教版统编版选择性必修中册",
+      "difficulty": 3,
+      "negative": false
+    },
+    {
+      "query": "《红楼梦》的基本概况与思想内容。",
+      "subject": "语文",
+      "expected_kp": "YW-M5C1S1-KP72",
+      "expected_source": "人教版统编版必修下册",
+      "difficulty": 2,
+      "negative": false
+    },
+    {
+      "query": "整本书阅读的方法与策略。",
+      "subject": "语文",
+      "expected_kp": "YW-M5C2S1-KP77",
+      "expected_source": "人教版统编版选择性必修上册",
+      "difficulty": 3,
+      "negative": false
+    },
+    {
+      "query": "语言建构与运用素养的内涵。",
+      "subject": "语文",
+      "expected_kp": "YW-M6C1S1-KP82",
+      "expected_source": "普通高中语文课程标准（2017年版2020年修订）",
+      "difficulty": 2,
+      "negative": false
+    },
+    {
+      "query": "思辨性阅读与表达能力的培养。",
+      "subject": "语文",
+      "expected_kp": "YW-M6C2S1-KP86",
+      "expected_source": "普通高中语文课程标准（2017年版2020年修订）",
+      "difficulty": 3,
+      "negative": false
+    },
+    {
+      "query": "文学鉴赏中的审美能力如何培养？",
+      "subject": "语文",
+      "expected_kp": "YW-M6C3S1-KP89",
+      "expected_source": "普通高中语文课程标准（2017年版2020年修订）",
+      "difficulty": 3,
+      "negative": false
+    },
+    {
+      "query": "语文学科中传统文化传承的实现途径。",
+      "subject": "语文",
+      "expected_kp": "YW-M6C4S1-KP93",
+      "expected_source": "普通高中语文课程标准（2017年版2020年修订）",
+      "difficulty": 3,
+      "negative": false
+    },
+    {
+      "query": "散文的情感主旨与小说人物形象塑造在阅读分析中的联系。",
+      "subject": "语文",
+      "expected_kp": "YW-M1C1S2-KP4",
+      "expected_source": "人教版统编版必修上册",
+      "difficulty": 4,
+      "negative": false
+    },
+    {
+      "query": "小说环境描写与人物形象刻画之间的作用关系。",
+      "subject": "语文",
+      "expected_kp": "YW-M1C2S2-KP8",
+      "expected_source": "人教版统编版必修下册",
+      "difficulty": 2,
+      "negative": false
+    },
+    {
+      "query": "现代诗歌意象解读与表现手法赏析的综合运用。",
+      "subject": "语文",
+      "expected_kp": "YW-M1C3S2-KP12",
+      "expected_source": "人教版统编版必修上册",
+      "difficulty": 4,
+      "negative": false
+    },
+    {
+      "query": "文言实词虚词与文言特殊句式综合考查的应对。",
+      "subject": "语文",
+      "expected_kp": "YW-M2C1S2-KP19",
+      "expected_source": "人教版统编版选择性必修中册",
+      "difficulty": 4,
+      "negative": false
+    },
+    {
+      "query": "古代诗歌的语言、意象与表达技巧整体鉴赏。",
+      "subject": "语文",
+      "expected_kp": "YW-M2C2S2-KP26",
+      "expected_source": "人教版统编版选择性必修上册",
+      "difficulty": 4,
+      "negative": false
+    },
+    {
+      "query": "病句中语序不当与搭配不当的综合辨析。",
+      "subject": "语文",
+      "expected_kp": "YW-M3C2S1-KP37",
+      "expected_source": "人教版统编版必修上册",
+      "difficulty": 3,
+      "negative": false
+    },
+    {
+      "query": "语句衔接排序与补写句子的综合解题技巧。",
+      "subject": "语文",
+      "expected_kp": "YW-M3C4S2-KP49",
+      "expected_source": "人教版统编版必修上册",
+      "difficulty": 4,
+      "negative": false
+    },
+    {
+      "query": "议论文论点、论据与论证方法的整体安排。",
+      "subject": "语文",
+      "expected_kp": "YW-M4C2S1-KP59",
+      "expected_source": "人教版统编版必修上册",
+      "difficulty": 4,
+      "negative": false
+    },
+    {
+      "query": "材料作文审题、立意与行文构思的完整流程。",
+      "subject": "语文",
+      "expected_kp": "YW-M4C3S2-KP66",
+      "expected_source": "人教版统编版必修上册",
+      "difficulty": 4,
+      "negative": false
+    },
+    {
+      "query": "名著阅读方法与具体人物艺术形象鉴赏的结合。",
+      "subject": "语文",
+      "expected_kp": "YW-M5C2S1-KP77",
+      "expected_source": "人教版统编版选择性必修上册",
+      "difficulty": 4,
+      "negative": false
+    },
+    {
+      "query": "小说情节梳理与环境描写作用的综合考查。",
+      "subject": "语文",
+      "expected_kp": "YW-M1C2S2-KP8",
+      "expected_source": "人教版统编版必修下册",
+      "difficulty": 3,
+      "negative": false
+    },
+    {
+      "query": "任务驱动型作文情境落实与深度论述的拓展。",
+      "subject": "语文",
+      "expected_kp": "YW-M4C4S2-KP70",
+      "expected_source": "人教版统编版选择性必修中册",
+      "difficulty": 4,
+      "negative": false
+    },
+    {
+      "query": "语言建构与运用能力在写作中的具体体现。",
+      "subject": "语文",
+      "expected_kp": "YW-M6C1S1-KP82",
+      "expected_source": "普通高中语文课程标准（2017年版2020年修订）",
+      "difficulty": 3,
+      "negative": false
+    },
+    {
+      "query": "文学鉴赏中的审美体验与形象思维如何相互促进。",
+      "subject": "语文",
+      "expected_kp": "YW-M6C3S1-KP89",
+      "expected_source": "普通高中语文课程标准（2017年版2020年修订）",
+      "difficulty": 4,
+      "negative": false
+    },
+    {
+      "query": "小说人物分析与戏剧人物语言特点的比较研究。",
+      "subject": "语文",
+      "expected_kp": "YW-M1C2S2-KP7",
+      "expected_source": "人教版统编版必修下册",
+      "difficulty": 4,
+      "negative": false
+    },
+    {
+      "query": "英语时态在汉语写作中的对应表达。",
+      "subject": "语文",
+      "expected_kp": "",
+      "expected_source": "",
+      "difficulty": 2,
+      "negative": true
+    },
+    {
+      "query": "用数学集合运算描述语文成语分类问题。",
+      "subject": "语文",
+      "expected_kp": "",
+      "expected_source": "",
+      "difficulty": 2,
+      "negative": true
+    },
+    {
+      "query": "物理加速度公式在文学比喻中的运用。",
+      "subject": "语文",
+      "expected_kp": "",
+      "expected_source": "",
+      "difficulty": 2,
+      "negative": true
+    },
+    {
+      "query": "化学元素周期表的记忆口诀。",
+      "subject": "语文",
+      "expected_kp": "",
+      "expected_source": "",
+      "difficulty": 2,
+      "negative": true
+    },
+    {
+      "query": "地理经纬度与古诗意象的关联分析。",
+      "subject": "语文",
+      "expected_kp": "",
+      "expected_source": "",
+      "difficulty": 2,
+      "negative": true
+    }
+  ]
+}

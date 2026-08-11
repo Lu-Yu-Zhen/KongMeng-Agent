@@ -1,3 +1,20 @@
 *.log
 .DS_Store
 Thumbs.db
+
+# 密钥与本地配置：严禁提交
+.env
+.env.*
+!.env.example
+tests/_run_real.py
+**/api_key*
+**/secret*
+
+# Python 缓存
+__pycache__/
+*.pyc
+
+# 本地数据与产物（含用户数据/生成物，勿随仓库分发）
+backend/data/
+备课产物/
+输出/

@@ -1,0 +1,404 @@
+{
+  "items": [
+    {
+      "query": "天体系统按层次可分为哪些等级",
+      "subject": "地理",
+      "expected_kp": "G-B1C1S1-KP1",
+      "expected_source": "人教版必修第一册",
+      "difficulty": 1,
+      "negative": false
+    },
+    {
+      "query": "地球存在生命需要哪些外部和自身条件",
+      "subject": "地理",
+      "expected_kp": "G-B1C1S1-KP2",
+      "expected_source": "人教版必修第一册",
+      "difficulty": 2,
+      "negative": false
+    },
+    {
+      "query": "太阳辐射对地球和人类活动有哪些影响",
+      "subject": "地理",
+      "expected_kp": "G-B1C1S2-KP1",
+      "expected_source": "人教版必修第一册",
+      "difficulty": 1,
+      "negative": false
+    },
+    {
+      "query": "太阳黑子和耀斑等太阳活动对地球的影响",
+      "subject": "地理",
+      "expected_kp": "G-B1C1S2-KP2",
+      "expected_source": "人教版必修第一册",
+      "difficulty": 2,
+      "negative": false
+    },
+    {
+      "query": "化石和地层如何用于确定地质年代",
+      "subject": "地理",
+      "expected_kp": "G-B1C1S3-KP1",
+      "expected_source": "人教版必修第一册",
+      "difficulty": 2,
+      "negative": false
+    },
+    {
+      "query": "如何利用地震波划分地球的内部圈层结构",
+      "subject": "地理",
+      "expected_kp": "G-B1C1S4-KP1",
+      "expected_source": "人教版必修第一册",
+      "difficulty": 2,
+      "negative": false
+    },
+    {
+      "query": "对流层、平流层和高层大气各有什么特点",
+      "subject": "地理",
+      "expected_kp": "G-B1C2S1-KP2",
+      "expected_source": "人教版必修第一册",
+      "difficulty": 2,
+      "negative": false
+    },
+    {
+      "query": "大气受热过程与大气对地面的保温作用",
+      "subject": "地理",
+      "expected_kp": "G-B1C2S2-KP1",
+      "expected_source": "人教版必修第一册",
+      "difficulty": 2,
+      "negative": false
+    },
+    {
+      "query": "大气热力环流的形成原理及海陆风表现",
+      "subject": "地理",
+      "expected_kp": "G-B1C2S2-KP2",
+      "expected_source": "人教版必修第一册",
+      "difficulty": 2,
+      "negative": false
+    },
+    {
+      "query": "海陆间大循环的主要环节及其重要性",
+      "subject": "地理",
+      "expected_kp": "G-B1C3S1-KP1",
+      "expected_source": "人教版必修第一册",
+      "difficulty": 2,
+      "negative": false
+    },
+    {
+      "query": "世界大洋海水盐度分布的一般规律",
+      "subject": "地理",
+      "expected_kp": "G-B1C3S2-KP2",
+      "expected_source": "人教版必修第一册",
+      "difficulty": 2,
+      "negative": false
+    },
+    {
+      "query": "暖流和寒流对沿岸气候分别有何影响",
+      "subject": "地理",
+      "expected_kp": "G-B1C3S3-KP2",
+      "expected_source": "人教版必修第一册",
+      "difficulty": 2,
+      "negative": false
+    },
+    {
+      "query": "喀斯特地貌中溶洞石钟乳石笋的形成过程",
+      "subject": "地理",
+      "expected_kp": "G-B1C4S1-KP1",
+      "expected_source": "人教版必修第一册",
+      "difficulty": 2,
+      "negative": false
+    },
+    {
+      "query": "河流上游V形谷与入海三角洲地貌的形成",
+      "subject": "地理",
+      "expected_kp": "G-B1C4S1-KP2",
+      "expected_source": "人教版必修第一册",
+      "difficulty": 2,
+      "negative": false
+    },
+    {
+      "query": "等高线地形图中山顶山谷山脊的正确判读",
+      "subject": "地理",
+      "expected_kp": "G-B1C4S2-KP2",
+      "expected_source": "人教版必修第一册",
+      "difficulty": 2,
+      "negative": false
+    },
+    {
+      "query": "土壤形成的主要因素有哪些",
+      "subject": "地理",
+      "expected_kp": "G-B1C5S2-KP2",
+      "expected_source": "人教版必修第一册",
+      "difficulty": 3,
+      "negative": false
+    },
+    {
+      "query": "洪涝灾害的主要成因有哪些",
+      "subject": "地理",
+      "expected_kp": "G-B1C6S1-KP1",
+      "expected_source": "人教版必修第一册",
+      "difficulty": 2,
+      "negative": false
+    },
+    {
+      "query": "地震震级与烈度的区别和影响因素",
+      "subject": "地理",
+      "expected_kp": "G-B1C6S2-KP1",
+      "expected_source": "人教版必修第一册",
+      "difficulty": 2,
+      "negative": false
+    },
+    {
+      "query": "遥感技术如何应用于防灾减灾监测",
+      "subject": "地理",
+      "expected_kp": "G-B1C6S3-KP2",
+      "expected_source": "人教版必修第一册",
+      "difficulty": 2,
+      "negative": false
+    },
+    {
+      "query": "影响人口分布的主要自然和人文因素",
+      "subject": "地理",
+      "expected_kp": "G-B2C1S1-KP2",
+      "expected_source": "人教版必修第二册",
+      "difficulty": 2,
+      "negative": false
+    },
+    {
+      "query": "影响人口迁移的主要因素及经济因素的作用",
+      "subject": "地理",
+      "expected_kp": "G-B2C1S2-KP2",
+      "expected_source": "人教版必修第二册",
+      "difficulty": 2,
+      "negative": false
+    },
+    {
+      "query": "区域资源环境承载力的含义及影响因素",
+      "subject": "地理",
+      "expected_kp": "G-B2C1S3-KP1",
+      "expected_source": "人教版必修第二册",
+      "difficulty": 3,
+      "negative": false
+    },
+    {
+      "query": "城镇内部住宅区商业区工业区的空间分布",
+      "subject": "地理",
+      "expected_kp": "G-B2C2S1-KP2",
+      "expected_source": "人教版必修第二册",
+      "difficulty": 2,
+      "negative": false
+    },
+    {
+      "query": "衡量城镇化水平的主要标志有哪些",
+      "subject": "地理",
+      "expected_kp": "G-B2C2S2-KP1",
+      "expected_source": "人教版必修第二册",
+      "difficulty": 2,
+      "negative": false
+    },
+    {
+      "query": "农业区位因素中的自然因素和人文因素",
+      "subject": "地理",
+      "expected_kp": "G-B2C3S1-KP1",
+      "expected_source": "人教版必修第二册",
+      "difficulty": 2,
+      "negative": false
+    },
+    {
+      "query": "工业区位选择考虑的主要因素有哪些",
+      "subject": "地理",
+      "expected_kp": "G-B2C3S2-KP1",
+      "expected_source": "人教版必修第二册",
+      "difficulty": 2,
+      "negative": false
+    },
+    {
+      "query": "交通运输如何促进区域经济发展",
+      "subject": "地理",
+      "expected_kp": "G-B2C4S2-KP1",
+      "expected_source": "人教版必修第二册",
+      "difficulty": 2,
+      "negative": false
+    },
+    {
+      "query": "可持续发展内涵中的生态经济社会三方面",
+      "subject": "地理",
+      "expected_kp": "G-B2C5S2-KP1",
+      "expected_source": "人教版必修第二册",
+      "difficulty": 2,
+      "negative": false
+    },
+    {
+      "query": "地球自转的角速度和线速度分布规律",
+      "subject": "地理",
+      "expected_kp": "G-SX1C1S1-KP1",
+      "expected_source": "人教版选择性必修1",
+      "difficulty": 2,
+      "negative": false
+    },
+    {
+      "query": "冷锋过境时天气如何变化",
+      "subject": "地理",
+      "expected_kp": "G-SX1C3S1-KP1",
+      "expected_source": "人教版选择性必修1",
+      "difficulty": 2,
+      "negative": false
+    },
+    {
+      "query": "昼夜长短与正午太阳高度的周年变化规律",
+      "subject": "地理",
+      "expected_kp": "G-SX1C1S2-KP2",
+      "expected_source": "人教版选择性必修1",
+      "difficulty": 3,
+      "negative": false
+    },
+    {
+      "query": "大气受热过程与全球变暖温室效应的关系",
+      "subject": "地理",
+      "expected_kp": "G-B1C2S2-KP1",
+      "expected_source": "人教版必修第一册",
+      "difficulty": 3,
+      "negative": false
+    },
+    {
+      "query": "水循环的地理意义及人类活动对其影响",
+      "subject": "地理",
+      "expected_kp": "G-B1C3S1-KP2",
+      "expected_source": "人教版必修第一册",
+      "difficulty": 3,
+      "negative": false
+    },
+    {
+      "query": "内力作用与外力作用如何共同塑造地表形态",
+      "subject": "地理",
+      "expected_kp": "G-SX1C2S1-KP2",
+      "expected_source": "人教版选择性必修1",
+      "difficulty": 3,
+      "negative": false
+    },
+    {
+      "query": "气候水热条件如何决定植被类型分布",
+      "subject": "地理",
+      "expected_kp": "G-B1C5S1-KP1",
+      "expected_source": "人教版必修第一册",
+      "difficulty": 3,
+      "negative": false
+    },
+    {
+      "query": "气压带和风带如何影响不同气候类型的形成",
+      "subject": "地理",
+      "expected_kp": "G-SX1C3S2-KP2",
+      "expected_source": "人教版选择性必修1",
+      "difficulty": 3,
+      "negative": false
+    },
+    {
+      "query": "寒暖流交汇如何形成世界著名大渔场",
+      "subject": "地理",
+      "expected_kp": "G-SX1C4S2-KP3",
+      "expected_source": "人教版选择性必修1",
+      "difficulty": 3,
+      "negative": false
+    },
+    {
+      "query": "农村人口迁往城镇如何推动城镇化水平提高",
+      "subject": "地理",
+      "expected_kp": "G-B2C2S2-KP1",
+      "expected_source": "人教版必修第二册",
+      "difficulty": 3,
+      "negative": false
+    },
+    {
+      "query": "农业与工业区位因素随科技发展发生的变化",
+      "subject": "地理",
+      "expected_kp": "G-B2C3S1-KP2",
+      "expected_source": "人教版必修第二册",
+      "difficulty": 3,
+      "negative": false
+    },
+    {
+      "query": "交通运输布局对城镇分布的重要影响",
+      "subject": "地理",
+      "expected_kp": "G-B2C4S2-KP2",
+      "expected_source": "人教版必修第二册",
+      "difficulty": 3,
+      "negative": false
+    },
+    {
+      "query": "自然资源对资源型区域发展的支撑与制约",
+      "subject": "地理",
+      "expected_kp": "G-SX2C2S1-KP2",
+      "expected_source": "人教版选择性必修2",
+      "difficulty": 3,
+      "negative": false
+    },
+    {
+      "query": "黄河流域水资源调配与生态保护的发展实践",
+      "subject": "地理",
+      "expected_kp": "G-SX2C3S1-KP2",
+      "expected_source": "人教版选择性必修2",
+      "difficulty": 3,
+      "negative": false
+    },
+    {
+      "query": "主体功能区建设如何推动区域协调发展",
+      "subject": "地理",
+      "expected_kp": "G-B2C5S3-KP1",
+      "expected_source": "人教版必修第二册",
+      "difficulty": 3,
+      "negative": false
+    },
+    {
+      "query": "全球气候变化中二氧化碳排放与碳循环的关系",
+      "subject": "地理",
+      "expected_kp": "G-SX3C4S2-KP1",
+      "expected_source": "人教版选择性必修3",
+      "difficulty": 3,
+      "negative": false
+    },
+    {
+      "query": "可再生与非可再生资源的属性及可持续利用",
+      "subject": "地理",
+      "expected_kp": "G-SX3C1S2-KP1",
+      "expected_source": "人教版选择性必修3",
+      "difficulty": 3,
+      "negative": false
+    },
+    {
+      "query": "光合作用光反应阶段发生在类囊体薄膜上",
+      "subject": "地理",
+      "expected_kp": "",
+      "expected_source": "",
+      "difficulty": 1,
+      "negative": true
+    },
+    {
+      "query": "DNA双螺旋结构中碱基互补配对的原则",
+      "subject": "地理",
+      "expected_kp": "",
+      "expected_source": "",
+      "difficulty": 1,
+      "negative": true
+    },
+    {
+      "query": "太平天国运动中天朝田亩制度的基本内容",
+      "subject": "地理",
+      "expected_kp": "",
+      "expected_source": "",
+      "difficulty": 1,
+      "negative": true
+    },
+    {
+      "query": "化学平衡常数表达式与温度的关系",
+      "subject": "地理",
+      "expected_kp": "",
+      "expected_source": "",
+      "difficulty": 1,
+      "negative": true
+    },
+    {
+      "query": "人体内环境渗透压与酸碱度的稳态调节",
+      "subject": "地理",
+      "expected_kp": "",
+      "expected_source": "",
+      "difficulty": 1,
+      "negative": true
+    }
+  ]
+}

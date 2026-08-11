@@ -142,6 +142,13 @@
       function buildDataContext() {
         var lines = [];
         var end = detectEnd();
+        // 排除敏感键（API Key / token 等），防止密钥随上下文外发给第三方模型
+        function isSensitiveKey(key) {
+          var k = String(key || '').toLowerCase();
+          if (k === 'ai_teacher_chat_models') return true; // 存放各家模型 API Key
+          if (/(key|token|secret|password|credential|authorization)/.test(k)) return true;
+          return false;
+        }
         try {
           if (end === 'student') {
             // 学生端：data 文件夹下各 json 文件
@@ -169,6 +176,7 @@
               if (key) keys.push(key);
             }
             keys.forEach(function (key) {
+              if (isSensitiveKey(key)) return;
               try {
                 var v = localStorage.getItem(key);
                 if (v && typeof v === 'string' && v.length) {
@@ -184,6 +192,7 @@
               if (key2) keys2.push(key2);
             }
             keys2.forEach(function (key) {
+              if (isSensitiveKey(key)) return;
               try {
                 var v2 = localStorage.getItem(key);
                 if (v2 && typeof v2 === 'string' && v2.length) lines.push('【' + key + '】\n' + v2.slice(0, 1500));

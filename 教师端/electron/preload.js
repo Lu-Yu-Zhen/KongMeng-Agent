@@ -44,9 +44,11 @@ const KEY_MODULE_MAP = {
   'ai_teacher_grading_selected': '题目批改',
   'ai_teacher_grading_subject': '题目批改',
   'ai_teacher_grading_assignments': '题目批改',
+  'ai_teacher_grading_history': '题目批改',
   // ---- 智能组卷模块 ----
   'ai_teacher_paper_selected': '智能组卷',
   'paper_search_enabled': '智能组卷',
+  'ai_teacher_paper_history': '智能组卷',
   // ---- 学生学情分析模块 ----
   'ai_teacher_imported_exams': '学生学情分析',
 };
@@ -195,6 +197,14 @@ try {
 }
 
 // ==================== 暴露 electronAPI ====================
+// 本地访问令牌：后端启用 X-Agent-Token 校验时，前端请求需携带此令牌。
+// 令牌由主进程随机生成并经环境变量注入，仅本机渲染进程可见。
+try {
+  window.__AGENT_BACKEND_TOKEN__ = process.env.AGENT_API_TOKEN || '';
+} catch (e) {
+  window.__AGENT_BACKEND_TOKEN__ = '';
+}
+
 window.electronAPI = {
   isElectron: true,
   dataRoot: dataRoot,

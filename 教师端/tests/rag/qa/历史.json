@@ -1,0 +1,404 @@
+{
+  "items": [
+    {
+      "query": "夏朝的建立对我国古代国家产生有何标志意义",
+      "subject": "历史",
+      "expected_kp": "H-B1-A-S1-KP2",
+      "expected_source": "统编版《中外历史纲要上》",
+      "difficulty": 1,
+      "negative": false
+    },
+    {
+      "query": "西周分封制实行封建亲戚以藩屏周的主要目的",
+      "subject": "历史",
+      "expected_kp": "H-B1-A-S2-KP1",
+      "expected_source": "统编版《中外历史纲要上》",
+      "difficulty": 2,
+      "negative": false
+    },
+    {
+      "query": "商鞅变法奖励耕战等内容对秦国发展的作用",
+      "subject": "历史",
+      "expected_kp": "H-B1-B-S1-KP2",
+      "expected_source": "统编版《中外历史纲要上》",
+      "difficulty": 2,
+      "negative": false
+    },
+    {
+      "query": "秦统一六国的历史意义与影响",
+      "subject": "历史",
+      "expected_kp": "H-B1-B-S2-KP1",
+      "expected_source": "统编版《中外历史纲要上》",
+      "difficulty": 2,
+      "negative": false
+    },
+    {
+      "query": "秦朝确立的三公九卿制分别掌管哪些权力",
+      "subject": "历史",
+      "expected_kp": "H-B1-B-S2-KP2",
+      "expected_source": "统编版《中外历史纲要上》",
+      "difficulty": 2,
+      "negative": false
+    },
+    {
+      "query": "汉初实行休养生息政策与文景之治的出现",
+      "subject": "历史",
+      "expected_kp": "H-B1-B-S3-KP1",
+      "expected_source": "统编版《中外历史纲要上》",
+      "difficulty": 2,
+      "negative": false
+    },
+    {
+      "query": "汉武帝颁布推恩令加强中央集权的措施",
+      "subject": "历史",
+      "expected_kp": "H-B1-B-S3-KP2",
+      "expected_source": "统编版《中外历史纲要上》",
+      "difficulty": 2,
+      "negative": false
+    },
+    {
+      "query": "北魏孝文帝改革迁都洛阳与促进民族交融的措施",
+      "subject": "历史",
+      "expected_kp": "H-B1-C-S1-KP2",
+      "expected_source": "统编版《中外历史纲要上》",
+      "difficulty": 2,
+      "negative": false
+    },
+    {
+      "query": "隋朝创立科举制的背景及其历史意义",
+      "subject": "历史",
+      "expected_kp": "H-B1-C-S2-KP1",
+      "expected_source": "统编版《中外历史纲要上》",
+      "difficulty": 2,
+      "negative": false
+    },
+    {
+      "query": "安史之乱为什么是唐朝由盛转衰的转折点",
+      "subject": "历史",
+      "expected_kp": "H-B1-C-S2-KP3",
+      "expected_source": "统编版《中外历史纲要上》",
+      "difficulty": 2,
+      "negative": false
+    },
+    {
+      "query": "王安石变法推行青苗法募役法等新法的目的",
+      "subject": "历史",
+      "expected_kp": "H-B1-D-S1-KP2",
+      "expected_source": "统编版《中外历史纲要上》",
+      "difficulty": 2,
+      "negative": false
+    },
+    {
+      "query": "元朝实行行省制度对地方治理的意义",
+      "subject": "历史",
+      "expected_kp": "H-B1-D-S2-KP1",
+      "expected_source": "统编版《中外历史纲要上》",
+      "difficulty": 2,
+      "negative": false
+    },
+    {
+      "query": "明太祖废除丞相制度加强君主专制的措施",
+      "subject": "历史",
+      "expected_kp": "H-B1-E-S1-KP1",
+      "expected_source": "统编版《中外历史纲要上》",
+      "difficulty": 2,
+      "negative": false
+    },
+    {
+      "query": "清朝设立军机处为何标志君主专制达到顶峰",
+      "subject": "历史",
+      "expected_kp": "H-B1-E-S1-KP2",
+      "expected_source": "统编版《中外历史纲要上》",
+      "difficulty": 2,
+      "negative": false
+    },
+    {
+      "query": "鸦片战争及中英南京条约的主要内容与影响",
+      "subject": "历史",
+      "expected_kp": "H-B1-F-S1-KP1",
+      "expected_source": "统编版《中外历史纲要上》",
+      "difficulty": 2,
+      "negative": false
+    },
+    {
+      "query": "洋务运动以自强求富为口号为何是中国近代化开端",
+      "subject": "历史",
+      "expected_kp": "H-B1-F-S2-KP2",
+      "expected_source": "统编版《中外历史纲要上》",
+      "difficulty": 2,
+      "negative": false
+    },
+    {
+      "query": "甲午中日战争战败与马关条约的主要内容",
+      "subject": "历史",
+      "expected_kp": "H-B1-F-S3-KP1",
+      "expected_source": "统编版《中外历史纲要上》",
+      "difficulty": 2,
+      "negative": false
+    },
+    {
+      "query": "戊戌变法失败的原因及其历史意义",
+      "subject": "历史",
+      "expected_kp": "H-B1-F-S3-KP2",
+      "expected_source": "统编版《中外历史纲要上》",
+      "difficulty": 3,
+      "negative": false
+    },
+    {
+      "query": "辛亥革命爆发与三民主义思想主张的关系",
+      "subject": "历史",
+      "expected_kp": "H-B1-G-S1-KP1",
+      "expected_source": "统编版《中外历史纲要上》",
+      "difficulty": 2,
+      "negative": false
+    },
+    {
+      "query": "为什么说五四运动是中国新民主主义革命的开端",
+      "subject": "历史",
+      "expected_kp": "H-B1-H-S1-KP1",
+      "expected_source": "统编版《中外历史纲要上》",
+      "difficulty": 2,
+      "negative": false
+    },
+    {
+      "query": "中共一大召开标志着中国共产党诞生的历史意义",
+      "subject": "历史",
+      "expected_kp": "H-B1-H-S1-KP2",
+      "expected_source": "统编版《中外历史纲要上》",
+      "difficulty": 2,
+      "negative": false
+    },
+    {
+      "query": "红军长征的背景与遵义会议的历史转折作用",
+      "subject": "历史",
+      "expected_kp": "H-B1-H-S2-KP2",
+      "expected_source": "统编版《中外历史纲要上》",
+      "difficulty": 2,
+      "negative": false
+    },
+    {
+      "query": "七七事变后抗日民族统一战线如何正式形成",
+      "subject": "历史",
+      "expected_kp": "H-B1-I-S1-KP2",
+      "expected_source": "统编版《中外历史纲要上》",
+      "difficulty": 2,
+      "negative": false
+    },
+    {
+      "query": "三大战役的胜利对解放战争胜利的意义",
+      "subject": "历史",
+      "expected_kp": "H-B1-J-S2-KP1",
+      "expected_source": "统编版《中外历史纲要上》",
+      "difficulty": 2,
+      "negative": false
+    },
+    {
+      "query": "十一届三中全会作出改革开放伟大决策的背景与意义",
+      "subject": "历史",
+      "expected_kp": "H-B1-L-S1-KP1",
+      "expected_source": "统编版《中外历史纲要上》",
+      "difficulty": 2,
+      "negative": false
+    },
+    {
+      "query": "文艺复兴以人文主义为核心的思想内涵",
+      "subject": "历史",
+      "expected_kp": "H-B2-C-S2-KP1",
+      "expected_source": "统编版《中外历史纲要下》",
+      "difficulty": 2,
+      "negative": false
+    },
+    {
+      "query": "启蒙运动倡导理性主义与三权分立等思想主张",
+      "subject": "历史",
+      "expected_kp": "H-B2-C-S3-KP1",
+      "expected_source": "统编版《中外历史纲要下》",
+      "difficulty": 2,
+      "negative": false
+    },
+    {
+      "query": "工业革命中瓦特改良蒸汽机与工厂制度的确立",
+      "subject": "历史",
+      "expected_kp": "H-B2-C-S4-KP1",
+      "expected_source": "统编版《中外历史纲要下》",
+      "difficulty": 2,
+      "negative": false
+    },
+    {
+      "query": "共产党宣言发表标志马克思主义诞生",
+      "subject": "历史",
+      "expected_kp": "H-B2-C-S4-KP2",
+      "expected_source": "统编版《中外历史纲要下》",
+      "difficulty": 2,
+      "negative": false
+    },
+    {
+      "query": "杜鲁门主义出台与冷战两极格局的形成",
+      "subject": "历史",
+      "expected_kp": "H-B2-D-S2-KP1",
+      "expected_source": "统编版《中外历史纲要下》",
+      "difficulty": 2,
+      "negative": false
+    },
+    {
+      "query": "从三公九卿到三省六部再到军机处体现皇权不断强化",
+      "subject": "历史",
+      "expected_kp": "H-X1-A-S1-KP2",
+      "expected_source": "统编版选择性必修1《国家制度与社会治理》",
+      "difficulty": 3,
+      "negative": false
+    },
+    {
+      "query": "从察举制到九品中正制再到科举制的选官制度演变",
+      "subject": "历史",
+      "expected_kp": "H-X1-B-S1-KP1",
+      "expected_source": "统编版选择性必修1《国家制度与社会治理》",
+      "difficulty": 3,
+      "negative": false
+    },
+    {
+      "query": "从分封制到郡县制再到行省制的地方行政制度演变",
+      "subject": "历史",
+      "expected_kp": "H-X1-A-S2-KP1",
+      "expected_source": "统编版选择性必修1《国家制度与社会治理》",
+      "difficulty": 3,
+      "negative": false
+    },
+    {
+      "query": "中国古代法律礼法结合与儒家思想社会教化的特点",
+      "subject": "历史",
+      "expected_kp": "H-X1-C-S1-KP1",
+      "expected_source": "统编版选择性必修1《国家制度与社会治理》",
+      "difficulty": 3,
+      "negative": false
+    },
+    {
+      "query": "鸦片战争至辛丑条约中国半殖民地半封建化进程",
+      "subject": "历史",
+      "expected_kp": "H-B1-F-S1-KP1",
+      "expected_source": "统编版《中外历史纲要上》",
+      "difficulty": 3,
+      "negative": false
+    },
+    {
+      "query": "从五四运动到新民主主义革命胜利的历程",
+      "subject": "历史",
+      "expected_kp": "H-B1-H-S1-KP1",
+      "expected_source": "统编版《中外历史纲要上》",
+      "difficulty": 3,
+      "negative": false
+    },
+    {
+      "query": "抗日战争正面战场与敌后战场相互配合共同御敌",
+      "subject": "历史",
+      "expected_kp": "H-B1-I-S2-KP1",
+      "expected_source": "统编版《中外历史纲要上》",
+      "difficulty": 3,
+      "negative": false
+    },
+    {
+      "query": "从文艺复兴到启蒙运动西方近代思想解放运动的演进",
+      "subject": "历史",
+      "expected_kp": "H-B2-C-S3-KP1",
+      "expected_source": "统编版《中外历史纲要下》",
+      "difficulty": 3,
+      "negative": false
+    },
+    {
+      "query": "两次工业革命如何推动生产方式与生产组织的变革",
+      "subject": "历史",
+      "expected_kp": "H-X2-B-S1-KP2",
+      "expected_source": "统编版选择性必修2《经济与社会生活》",
+      "difficulty": 3,
+      "negative": false
+    },
+    {
+      "query": "从中华民国临时约法到新中国宪法的民主法治进程",
+      "subject": "历史",
+      "expected_kp": "H-X1-C-S2-KP1",
+      "expected_source": "统编版选择性必修1《国家制度与社会治理》",
+      "difficulty": 3,
+      "negative": false
+    },
+    {
+      "query": "中华文化延续性包容性等特点及其深远影响",
+      "subject": "历史",
+      "expected_kp": "H-X3-A-S1-KP2",
+      "expected_source": "统编版选择性必修3《文化交流与传播》",
+      "difficulty": 3,
+      "negative": false
+    },
+    {
+      "query": "亚历山大东征对东西方文化交流的促进作用",
+      "subject": "历史",
+      "expected_kp": "H-B2-A-S2-KP1",
+      "expected_source": "统编版《中外历史纲要下》",
+      "difficulty": 2,
+      "negative": false
+    },
+    {
+      "query": "新航路开辟对世界市场雏形形成的影响",
+      "subject": "历史",
+      "expected_kp": "H-B2-C-S1-KP2",
+      "expected_source": "统编版《中外历史纲要下》",
+      "difficulty": 3,
+      "negative": false
+    },
+    {
+      "query": "中国古代铁犁牛耕与都江堰等农业技术水利成就",
+      "subject": "历史",
+      "expected_kp": "H-X2-A-S2-KP1",
+      "expected_source": "统编版选择性必修2《经济与社会生活》",
+      "difficulty": 3,
+      "negative": false
+    },
+    {
+      "query": "丝绸之路如何推动中华文化的海外传播",
+      "subject": "历史",
+      "expected_kp": "H-X3-B-S2-KP1",
+      "expected_source": "统编版选择性必修3《文化交流与传播》",
+      "difficulty": 3,
+      "negative": false
+    },
+    {
+      "query": "细胞有丝分裂过程中染色体数目变化规律",
+      "subject": "历史",
+      "expected_kp": "",
+      "expected_source": "",
+      "difficulty": 1,
+      "negative": true
+    },
+    {
+      "query": "海水的盐度分布规律与洋流对气候的影响",
+      "subject": "历史",
+      "expected_kp": "",
+      "expected_source": "",
+      "difficulty": 1,
+      "negative": true
+    },
+    {
+      "query": "元素周期表中稀土元素镧系锕系的排列",
+      "subject": "历史",
+      "expected_kp": "",
+      "expected_source": "",
+      "difficulty": 1,
+      "negative": true
+    },
+    {
+      "query": "大气热力环流中海陆风形成的原理",
+      "subject": "历史",
+      "expected_kp": "",
+      "expected_source": "",
+      "difficulty": 1,
+      "negative": true
+    },
+    {
+      "query": "蛋白质水解最终产物是氨基酸的化学反应",
+      "subject": "历史",
+      "expected_kp": "",
+      "expected_source": "",
+      "difficulty": 1,
+      "negative": true
+    }
+  ]
+}

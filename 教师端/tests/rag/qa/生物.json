@@ -1,0 +1,404 @@
+{
+  "items": [
+    {
+      "query": "细胞学说的建立过程及其主要内容",
+      "subject": "生物",
+      "expected_kp": "B1C1S1-KP1",
+      "expected_source": "人教版必修1",
+      "difficulty": 1,
+      "negative": false
+    },
+    {
+      "query": "原核细胞与真核细胞在结构上的主要区别",
+      "subject": "生物",
+      "expected_kp": "B1C1S2-KP1",
+      "expected_source": "人教版必修1",
+      "difficulty": 2,
+      "negative": false
+    },
+    {
+      "query": "组成细胞的元素与无机自然界相比的统一性和差异性",
+      "subject": "生物",
+      "expected_kp": "B1C2S1-KP1",
+      "expected_source": "人教版必修1",
+      "difficulty": 2,
+      "negative": false
+    },
+    {
+      "query": "蛋白质作为生命活动主要承担者具有哪些功能",
+      "subject": "生物",
+      "expected_kp": "B1C2S2-KP3",
+      "expected_source": "人教版必修1",
+      "difficulty": 2,
+      "negative": false
+    },
+    {
+      "query": "核酸的种类及其在细胞中的分布特点",
+      "subject": "生物",
+      "expected_kp": "B1C2S3-KP1",
+      "expected_source": "人教版必修1",
+      "difficulty": 2,
+      "negative": false
+    },
+    {
+      "query": "细胞膜的流动镶嵌模型的结构特点",
+      "subject": "生物",
+      "expected_kp": "B1C3S1-KP2",
+      "expected_source": "人教版必修1",
+      "difficulty": 2,
+      "negative": false
+    },
+    {
+      "query": "分泌蛋白合成与分泌过程中各细胞器如何协调配合",
+      "subject": "生物",
+      "expected_kp": "B1C3S2-KP2",
+      "expected_source": "人教版必修1",
+      "difficulty": 3,
+      "negative": false
+    },
+    {
+      "query": "细胞核为什么是遗传信息库和代谢遗传的控制中心",
+      "subject": "生物",
+      "expected_kp": "B1C3S3-KP1",
+      "expected_source": "人教版必修1",
+      "difficulty": 2,
+      "negative": false
+    },
+    {
+      "query": "主动运输需要载体蛋白协助并消耗能量的原因",
+      "subject": "生物",
+      "expected_kp": "B1C4S2-KP1",
+      "expected_source": "人教版必修1",
+      "difficulty": 2,
+      "negative": false
+    },
+    {
+      "query": "酶的化学本质是什么，绝大多数酶和少数酶有何区别",
+      "subject": "生物",
+      "expected_kp": "B1C5S1-KP1",
+      "expected_source": "人教版必修1",
+      "difficulty": 2,
+      "negative": false
+    },
+    {
+      "query": "ATP分子结构简式中的高能磷酸键及其作用",
+      "subject": "生物",
+      "expected_kp": "B1C5S2-KP1",
+      "expected_source": "人教版必修1",
+      "difficulty": 2,
+      "negative": false
+    },
+    {
+      "query": "有氧呼吸三个阶段分别在细胞质基质和线粒体进行",
+      "subject": "生物",
+      "expected_kp": "B1C5S3-KP1",
+      "expected_source": "人教版必修1",
+      "difficulty": 3,
+      "negative": false
+    },
+    {
+      "query": "光合作用暗反应阶段发生在叶绿体基质中的过程",
+      "subject": "生物",
+      "expected_kp": "B1C5S4-KP2",
+      "expected_source": "人教版必修1",
+      "difficulty": 3,
+      "negative": false
+    },
+    {
+      "query": "一个细胞周期包括分裂间期和分裂期的划分依据",
+      "subject": "生物",
+      "expected_kp": "B1C6S1-KP1",
+      "expected_source": "人教版必修1",
+      "difficulty": 2,
+      "negative": false
+    },
+    {
+      "query": "细胞分化的根本原因为什么是基因的选择性表达",
+      "subject": "生物",
+      "expected_kp": "B1C6S2-KP1",
+      "expected_source": "人教版必修1",
+      "difficulty": 3,
+      "negative": false
+    },
+    {
+      "query": "细胞凋亡是基因控制的程序性死亡，与细胞坏死的区别",
+      "subject": "生物",
+      "expected_kp": "B1C6S3-KP2",
+      "expected_source": "人教版必修1",
+      "difficulty": 3,
+      "negative": false
+    },
+    {
+      "query": "孟德尔分离定律的实质是什么",
+      "subject": "生物",
+      "expected_kp": "B2C1S1-KP2",
+      "expected_source": "人教版必修2",
+      "difficulty": 3,
+      "negative": false
+    },
+    {
+      "query": "孟德尔自由组合定律的实质是什么",
+      "subject": "生物",
+      "expected_kp": "B2C1S2-KP1",
+      "expected_source": "人教版必修2",
+      "difficulty": 3,
+      "negative": false
+    },
+    {
+      "query": "减数第一次分裂中同源染色体联会形成四分体的过程",
+      "subject": "生物",
+      "expected_kp": "B2C2S1-KP1",
+      "expected_source": "人教版必修2",
+      "difficulty": 3,
+      "negative": false
+    },
+    {
+      "query": "红绿色盲作为X染色体隐性遗传病的遗传特点",
+      "subject": "生物",
+      "expected_kp": "B2C2S3-KP1",
+      "expected_source": "人教版必修2",
+      "difficulty": 3,
+      "negative": false
+    },
+    {
+      "query": "赫尔希和蔡斯噬菌体侵染实验如何证明DNA是遗传物质",
+      "subject": "生物",
+      "expected_kp": "B2C3S1-KP2",
+      "expected_source": "人教版必修2",
+      "difficulty": 3,
+      "negative": false
+    },
+    {
+      "query": "DNA双螺旋结构中碱基互补配对的原则",
+      "subject": "生物",
+      "expected_kp": "B2C3S2-KP1",
+      "expected_source": "人教版必修2",
+      "difficulty": 2,
+      "negative": false
+    },
+    {
+      "query": "DNA半保留复制过程需要解旋酶和DNA聚合酶的参与",
+      "subject": "生物",
+      "expected_kp": "B2C3S3-KP1",
+      "expected_source": "人教版必修2",
+      "difficulty": 3,
+      "negative": false
+    },
+    {
+      "query": "基因突变为什么是新基因产生的根本来源",
+      "subject": "生物",
+      "expected_kp": "B2C5S1-KP1",
+      "expected_source": "人教版必修2",
+      "difficulty": 3,
+      "negative": false
+    },
+    {
+      "query": "秋水仙素为何能使染色体数目加倍用于多倍体育种",
+      "subject": "生物",
+      "expected_kp": "B2C5S2-KP2",
+      "expected_source": "人教版必修2",
+      "difficulty": 3,
+      "negative": false
+    },
+    {
+      "query": "内环境的组成成分包括血浆、组织液和淋巴",
+      "subject": "生物",
+      "expected_kp": "X1C1S1-KP1",
+      "expected_source": "人教版选择性必修1",
+      "difficulty": 2,
+      "negative": false
+    },
+    {
+      "query": "为什么说胰岛素是唯一能降低血糖的激素",
+      "subject": "生物",
+      "expected_kp": "X1C3S2-KP1",
+      "expected_source": "人教版选择性必修1",
+      "difficulty": 3,
+      "negative": false
+    },
+    {
+      "query": "甲状腺激素分泌的分级调节与反馈调节机制",
+      "subject": "生物",
+      "expected_kp": "X1C3S2-KP2",
+      "expected_source": "人教版选择性必修1",
+      "difficulty": 3,
+      "negative": false
+    },
+    {
+      "query": "体液免疫中B细胞增殖分化为浆细胞产生抗体的过程",
+      "subject": "生物",
+      "expected_kp": "X1C4S2-KP1",
+      "expected_source": "人教版选择性必修1",
+      "difficulty": 3,
+      "negative": false
+    },
+    {
+      "query": "达尔文胚芽鞘向光性实验在生长素发现中的作用",
+      "subject": "生物",
+      "expected_kp": "X1C5S1-KP1",
+      "expected_source": "人教版选择性必修1",
+      "difficulty": 2,
+      "negative": false
+    },
+    {
+      "query": "使用显微镜由低倍镜转为高倍镜观察的操作要领",
+      "subject": "生物",
+      "expected_kp": "B1C1S2-KP2",
+      "expected_source": "人教版必修1",
+      "difficulty": 2,
+      "negative": false
+    },
+    {
+      "query": "氨基酸脱水缩合形成肽键与蛋白质结构多样性的关系",
+      "subject": "生物",
+      "expected_kp": "B1C2S2-KP2",
+      "expected_source": "人教版必修1",
+      "difficulty": 3,
+      "negative": false
+    },
+    {
+      "query": "细胞膜流动镶嵌模型与物质跨膜运输方式的联系",
+      "subject": "生物",
+      "expected_kp": "B1C3S1-KP2",
+      "expected_source": "人教版必修1",
+      "difficulty": 3,
+      "negative": false
+    },
+    {
+      "query": "细胞呼吸与光合作用之间物质与能量的相互联系",
+      "subject": "生物",
+      "expected_kp": "B1C5S3-KP1",
+      "expected_source": "人教版必修1",
+      "difficulty": 3,
+      "negative": false
+    },
+    {
+      "query": "有丝分裂保证遗传信息稳定传递与细胞分化的关系",
+      "subject": "生物",
+      "expected_kp": "B1C6S1-KP2",
+      "expected_source": "人教版必修1",
+      "difficulty": 3,
+      "negative": false
+    },
+    {
+      "query": "基因通过转录和翻译控制蛋白质合成进而控制生物性状",
+      "subject": "生物",
+      "expected_kp": "B2C4S2-KP1",
+      "expected_source": "人教版必修2",
+      "difficulty": 3,
+      "negative": false
+    },
+    {
+      "query": "减数分裂与受精作用如何维持前后代染色体数目稳定",
+      "subject": "生物",
+      "expected_kp": "B2C2S1-KP2",
+      "expected_source": "人教版必修2",
+      "difficulty": 3,
+      "negative": false
+    },
+    {
+      "query": "DNA复制、转录与翻译过程中遗传信息传递的中心法则",
+      "subject": "生物",
+      "expected_kp": "B2C3S3-KP1",
+      "expected_source": "人教版必修2",
+      "difficulty": 4,
+      "negative": false
+    },
+    {
+      "query": "基因突变与基因重组为生物进化提供原材料的作用",
+      "subject": "生物",
+      "expected_kp": "B2C5S1-KP1",
+      "expected_source": "人教版必修2",
+      "difficulty": 3,
+      "negative": false
+    },
+    {
+      "query": "现代生物进化理论认为种群基因频率改变是进化实质",
+      "subject": "生物",
+      "expected_kp": "B2C6S3-KP1",
+      "expected_source": "人教版必修2",
+      "difficulty": 3,
+      "negative": false
+    },
+    {
+      "query": "反射弧的组成以及兴奋在神经纤维上的传导机制",
+      "subject": "生物",
+      "expected_kp": "X1C2S3-KP1",
+      "expected_source": "人教版选择性必修1",
+      "difficulty": 3,
+      "negative": false
+    },
+    {
+      "query": "免疫系统的防御、自稳和监视三大功能分别是什么",
+      "subject": "生物",
+      "expected_kp": "X1C4S1-KP2",
+      "expected_source": "人教版选择性必修1",
+      "difficulty": 2,
+      "negative": false
+    },
+    {
+      "query": "生长素与乙烯等植物激素之间的相互作用与协调调节",
+      "subject": "生物",
+      "expected_kp": "X1C5S2-KP2",
+      "expected_source": "人教版选择性必修1",
+      "difficulty": 3,
+      "negative": false
+    },
+    {
+      "query": "种群密度与出生率死亡率年龄结构等数量特征的关联",
+      "subject": "生物",
+      "expected_kp": "X2C1S1-KP2",
+      "expected_source": "人教版选择性必修2",
+      "difficulty": 3,
+      "negative": false
+    },
+    {
+      "query": "生态系统能量流动与物质循环之间的相互关系",
+      "subject": "生物",
+      "expected_kp": "X2C3S3-KP2",
+      "expected_source": "人教版选择性必修2",
+      "difficulty": 3,
+      "negative": false
+    },
+    {
+      "query": "离子键与共价键的形成条件有何不同",
+      "subject": "生物",
+      "expected_kp": "",
+      "expected_source": "",
+      "difficulty": 1,
+      "negative": true
+    },
+    {
+      "query": "平流层中的臭氧层如何吸收太阳紫外线保护地球",
+      "subject": "生物",
+      "expected_kp": "",
+      "expected_source": "",
+      "difficulty": 1,
+      "negative": true
+    },
+    {
+      "query": "中国古代科举制与九品中正制的选官标准差异",
+      "subject": "生物",
+      "expected_kp": "",
+      "expected_source": "",
+      "difficulty": 1,
+      "negative": true
+    },
+    {
+      "query": "元素周期表中同一周期元素金属性的递变规律",
+      "subject": "生物",
+      "expected_kp": "",
+      "expected_source": "",
+      "difficulty": 1,
+      "negative": true
+    },
+    {
+      "query": "贵州喀斯特地貌中溶洞石钟乳和石笋的形成过程",
+      "subject": "生物",
+      "expected_kp": "",
+      "expected_source": "",
+      "difficulty": 1,
+      "negative": true
+    }
+  ]
+}

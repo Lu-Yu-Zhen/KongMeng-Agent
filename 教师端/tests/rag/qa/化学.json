@@ -1,0 +1,404 @@
+{
+  "items": [
+    {
+      "query": "物质的分类方法有哪些，树状分类法和交叉分类法如何区分盐类",
+      "subject": "化学",
+      "expected_kp": "H-M1C1S1-KP1",
+      "expected_source": "人教版必修第一册",
+      "difficulty": 1,
+      "negative": false
+    },
+    {
+      "query": "丁达尔效应是什么，如何用它鉴别胶体和溶液",
+      "subject": "化学",
+      "expected_kp": "H-M1C1S1-KP3",
+      "expected_source": "人教版必修第一册",
+      "difficulty": 2,
+      "negative": false
+    },
+    {
+      "query": "电解质与非电解质的区别以及电离方程式的书写要点",
+      "subject": "化学",
+      "expected_kp": "H-M1C1S2-KP1",
+      "expected_source": "人教版必修第一册",
+      "difficulty": 2,
+      "negative": false
+    },
+    {
+      "query": "氧化还原反应的本质是什么，如何通过化合价变化判断反应类型",
+      "subject": "化学",
+      "expected_kp": "H-M1C1S3-KP1",
+      "expected_source": "人教版必修第一册",
+      "difficulty": 2,
+      "negative": false
+    },
+    {
+      "query": "金属钠化学性质活泼，为什么需要保存在煤油中",
+      "subject": "化学",
+      "expected_kp": "H-M1C2S1-KP1",
+      "expected_source": "人教版必修第一册",
+      "difficulty": 2,
+      "negative": false
+    },
+    {
+      "query": "过氧化钠为什么可用作呼吸面具和潜水艇的供氧剂",
+      "subject": "化学",
+      "expected_kp": "H-M1C2S1-KP2",
+      "expected_source": "人教版必修第一册",
+      "difficulty": 2,
+      "negative": false
+    },
+    {
+      "query": "碳酸氢钠与碳酸钠热稳定性的比较及相关反应",
+      "subject": "化学",
+      "expected_kp": "H-M1C2S1-KP3",
+      "expected_source": "人教版必修第一册",
+      "difficulty": 2,
+      "negative": false
+    },
+    {
+      "query": "氯气与水反应的产物是什么，次氯酸为何具有漂白杀菌作用",
+      "subject": "化学",
+      "expected_kp": "H-M1C2S2-KP1",
+      "expected_source": "人教版必修第一册",
+      "difficulty": 2,
+      "negative": false
+    },
+    {
+      "query": "实验室用二氧化锰与浓盐酸加热制取氯气的原理及尾气处理",
+      "subject": "化学",
+      "expected_kp": "H-M1C2S2-KP2",
+      "expected_source": "人教版必修第一册",
+      "difficulty": 3,
+      "negative": false
+    },
+    {
+      "query": "如何用硝酸酸化的硝酸银溶液检验溶液中的氯离子",
+      "subject": "化学",
+      "expected_kp": "H-M1C2S2-KP3",
+      "expected_source": "人教版必修第一册",
+      "difficulty": 3,
+      "negative": false
+    },
+    {
+      "query": "物质的量、阿伏加德罗常数与摩尔质量的基本概念和应用",
+      "subject": "化学",
+      "expected_kp": "H-M1C2S3-KP1",
+      "expected_source": "人教版必修第一册",
+      "difficulty": 2,
+      "negative": false
+    },
+    {
+      "query": "标准状况下气体摩尔体积为什么约为22.4升每摩尔",
+      "subject": "化学",
+      "expected_kp": "H-M1C2S3-KP2",
+      "expected_source": "人教版必修第一册",
+      "difficulty": 2,
+      "negative": false
+    },
+    {
+      "query": "配制一定物质的量浓度溶液需要哪些步骤和仪器",
+      "subject": "化学",
+      "expected_kp": "H-M1C2S3-KP3",
+      "expected_source": "人教版必修第一册",
+      "difficulty": 3,
+      "negative": false
+    },
+    {
+      "query": "铁在常温下为什么能与浓硫酸或浓硝酸发生钝化",
+      "subject": "化学",
+      "expected_kp": "H-M1C3S1-KP1",
+      "expected_source": "人教版必修第一册",
+      "difficulty": 3,
+      "negative": false
+    },
+    {
+      "query": "如何用硫氰化钾溶液检验三价铁离子",
+      "subject": "化学",
+      "expected_kp": "H-M1C3S1-KP3",
+      "expected_source": "人教版必修第一册",
+      "difficulty": 3,
+      "negative": false
+    },
+    {
+      "query": "合金的硬度与熔点相比其组分金属有何特点",
+      "subject": "化学",
+      "expected_kp": "H-M1C3S2-KP1",
+      "expected_source": "人教版必修第一册",
+      "difficulty": 1,
+      "negative": false
+    },
+    {
+      "query": "氢氧化铝为什么能用作治疗胃酸过多的药物",
+      "subject": "化学",
+      "expected_kp": "H-M1C3S2-KP2",
+      "expected_source": "人教版必修第一册",
+      "difficulty": 2,
+      "negative": false
+    },
+    {
+      "query": "什么是同位素，氢的三种同位素如何表示",
+      "subject": "化学",
+      "expected_kp": "H-M1C4S1-KP1",
+      "expected_source": "人教版必修第一册",
+      "difficulty": 2,
+      "negative": false
+    },
+    {
+      "query": "元素周期表按什么规律划分为周期和族",
+      "subject": "化学",
+      "expected_kp": "H-M1C4S1-KP2",
+      "expected_source": "人教版必修第一册",
+      "difficulty": 2,
+      "negative": false
+    },
+    {
+      "query": "元素周期律的实质是什么，为何呈现周期性变化",
+      "subject": "化学",
+      "expected_kp": "H-M1C4S2-KP1",
+      "expected_source": "人教版必修第一册",
+      "difficulty": 3,
+      "negative": false
+    },
+    {
+      "query": "离子键是如何形成的，离子化合物有哪些特点",
+      "subject": "化学",
+      "expected_kp": "H-M1C4S3-KP1",
+      "expected_source": "人教版必修第一册",
+      "difficulty": 2,
+      "negative": false
+    },
+    {
+      "query": "二氧化硫为什么能使品红溶液褪色，且加热后颜色又能恢复",
+      "subject": "化学",
+      "expected_kp": "H-M2C1S1-KP2",
+      "expected_source": "人教版必修第二册",
+      "difficulty": 3,
+      "negative": false
+    },
+    {
+      "query": "浓硫酸的脱水性如何使蔗糖脱氢脱水而变黑",
+      "subject": "化学",
+      "expected_kp": "H-M2C1S1-KP3",
+      "expected_source": "人教版必修第二册",
+      "difficulty": 3,
+      "negative": false
+    },
+    {
+      "query": "氨气极易溶于水，为何可用湿润的红色石蕊试纸检验",
+      "subject": "化学",
+      "expected_kp": "H-M2C1S2-KP2",
+      "expected_source": "人教版必修第二册",
+      "difficulty": 2,
+      "negative": false
+    },
+    {
+      "query": "浓硝酸为什么能使铁和铝发生钝化",
+      "subject": "化学",
+      "expected_kp": "H-M2C1S2-KP3",
+      "expected_source": "人教版必修第二册",
+      "difficulty": 3,
+      "negative": false
+    },
+    {
+      "query": "铜锌原电池中锌作负极、铜作正极的工作原理",
+      "subject": "化学",
+      "expected_kp": "H-M2C2S2-KP1",
+      "expected_source": "人教版必修第二册",
+      "difficulty": 2,
+      "negative": false
+    },
+    {
+      "query": "化学平衡状态的标志之一是正逆反应速率相等",
+      "subject": "化学",
+      "expected_kp": "H-M2C2S3-KP2",
+      "expected_source": "人教版必修第二册",
+      "difficulty": 3,
+      "negative": false
+    },
+    {
+      "query": "甲烷与氯气在光照条件下发生取代反应生成氯代甲烷",
+      "subject": "化学",
+      "expected_kp": "H-M2C3S1-KP2",
+      "expected_source": "人教版必修第二册",
+      "difficulty": 2,
+      "negative": false
+    },
+    {
+      "query": "乙烯为什么能使溴水褪色，发生了何种加成反应",
+      "subject": "化学",
+      "expected_kp": "H-M2C3S2-KP1",
+      "expected_source": "人教版必修第二册",
+      "difficulty": 2,
+      "negative": false
+    },
+    {
+      "query": "乙酸与乙醇发生酯化反应时酸脱羟基、醇脱氢的机理",
+      "subject": "化学",
+      "expected_kp": "H-M2C3S3-KP2",
+      "expected_source": "人教版必修第二册",
+      "difficulty": 3,
+      "negative": false
+    },
+    {
+      "query": "金属钠化学性质活泼及其在地壳元素周期表中的金属性强弱",
+      "subject": "化学",
+      "expected_kp": "H-M1C2S1-KP1",
+      "expected_source": "人教版必修第一册",
+      "difficulty": 3,
+      "negative": false
+    },
+    {
+      "query": "氯气与铁反应生成氯化铁，如何用试剂检验其中的铁离子",
+      "subject": "化学",
+      "expected_kp": "H-M1C2S2-KP1",
+      "expected_source": "人教版必修第一册",
+      "difficulty": 3,
+      "negative": false
+    },
+    {
+      "query": "元素周期表与碱金属钠等金属性递变规律的应用",
+      "subject": "化学",
+      "expected_kp": "H-M1C4S2-KP1",
+      "expected_source": "人教版必修第一册",
+      "difficulty": 3,
+      "negative": false
+    },
+    {
+      "query": "氧化还原反应原理在原电池化学能转化为电能中的应用",
+      "subject": "化学",
+      "expected_kp": "H-M2C2S2-KP1",
+      "expected_source": "人教版必修第二册",
+      "difficulty": 3,
+      "negative": false
+    },
+    {
+      "query": "气体的物质的量与体积、摩尔质量的综合计算问题",
+      "subject": "化学",
+      "expected_kp": "H-M1C2S3-KP2",
+      "expected_source": "人教版必修第一册",
+      "difficulty": 3,
+      "negative": false
+    },
+    {
+      "query": "二氧化硫和氮氧化物排放导致酸雨，如何防治大气污染",
+      "subject": "化学",
+      "expected_kp": "H-M2C4S3-KP1",
+      "expected_source": "人教版必修第二册",
+      "difficulty": 3,
+      "negative": false
+    },
+    {
+      "query": "乙烯的加成反应与加聚反应生成聚乙烯高分子的过程",
+      "subject": "化学",
+      "expected_kp": "H-M2C3S2-KP2",
+      "expected_source": "人教版必修第二册",
+      "difficulty": 3,
+      "negative": false
+    },
+    {
+      "query": "化学键断裂吸收能量、成键放出能量与反应热变化的关系",
+      "subject": "化学",
+      "expected_kp": "H-M2C2S1-KP2",
+      "expected_source": "人教版必修第二册",
+      "difficulty": 3,
+      "negative": false
+    },
+    {
+      "query": "盐类水解规律及其在明矾净水和泡沫灭火器中的应用",
+      "subject": "化学",
+      "expected_kp": "H-S1C3S3-KP2",
+      "expected_source": "人教版选择性必修1",
+      "difficulty": 4,
+      "negative": false
+    },
+    {
+      "query": "原电池与电解池中化学能与电能相互转化原理的对比",
+      "subject": "化学",
+      "expected_kp": "H-S1C4S1-KP1",
+      "expected_source": "人教版选择性必修1",
+      "difficulty": 4,
+      "negative": false
+    },
+    {
+      "query": "钢铁吸氧腐蚀的电化学原理与牺牲阳极保护法防腐",
+      "subject": "化学",
+      "expected_kp": "H-S1C4S3-KP2",
+      "expected_source": "人教版选择性必修1",
+      "difficulty": 4,
+      "negative": false
+    },
+    {
+      "query": "羟基、羧基、醛基等官能团如何决定有机物的化学性质",
+      "subject": "化学",
+      "expected_kp": "H-S3C1S1-KP1",
+      "expected_source": "人教版选择性必修3",
+      "difficulty": 4,
+      "negative": false
+    },
+    {
+      "query": "DNA双螺旋结构中的碱基配对原则及其结构特点",
+      "subject": "化学",
+      "expected_kp": "H-S3C4S3-KP2",
+      "expected_source": "人教版选择性必修3",
+      "difficulty": 3,
+      "negative": false
+    },
+    {
+      "query": "加聚反应与缩聚反应的区别，聚乙烯与尼龙66的合成",
+      "subject": "化学",
+      "expected_kp": "H-S3C5S1-KP2",
+      "expected_source": "人教版选择性必修3",
+      "difficulty": 4,
+      "negative": false
+    },
+    {
+      "query": "沉淀溶解平衡中氯化银转化为碘化银沉淀的原理与应用",
+      "subject": "化学",
+      "expected_kp": "H-S1C3S4-KP2",
+      "expected_source": "人教版选择性必修1",
+      "difficulty": 4,
+      "negative": false
+    },
+    {
+      "query": "血红蛋白运输氧气主要依赖红细胞中哪种细胞结构",
+      "subject": "化学",
+      "expected_kp": "",
+      "expected_source": "",
+      "difficulty": 1,
+      "negative": true
+    },
+    {
+      "query": "光合作用中二氧化碳被固定的暗反应发生在叶绿体的哪个部位",
+      "subject": "化学",
+      "expected_kp": "",
+      "expected_source": "",
+      "difficulty": 1,
+      "negative": true
+    },
+    {
+      "query": "用显微镜观察植物细胞质壁分离现象的实验操作步骤",
+      "subject": "化学",
+      "expected_kp": "",
+      "expected_source": "",
+      "difficulty": 1,
+      "negative": true
+    },
+    {
+      "query": "唐朝科举制与三省六部制的运行机制对后世的影响",
+      "subject": "化学",
+      "expected_kp": "",
+      "expected_source": "",
+      "difficulty": 1,
+      "negative": true
+    },
+    {
+      "query": "长江中下游平原地区人口密度空间分布的总体特征",
+      "subject": "化学",
+      "expected_kp": "",
+      "expected_source": "",
+      "difficulty": 1,
+      "negative": true
+    }
+  ]
+}

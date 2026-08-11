@@ -119,6 +119,10 @@
         global.showToast('请先在输入框下方选择并配置智能体');
         return;
       }
+      // 纯对话消息（未点名任何产物）：不触发产物工作流，直接走 Chat 流式问答
+      if (typeof global.isPureChatMessage === 'function' && global.isPureChatMessage(q)) {
+        return this._origSend.apply(global, arguments);
+      }
       // 渲染用户消息
       global.appendMsg('beikeMessages', 'user', global.renderMarkdownInline ? global.renderMarkdownInline(q) : global.escapeHtml(q));
       inp.value = '';
@@ -146,19 +150,23 @@
       }
 
       // 运行智能体
-      global.AgentCore.run(q, ctx).then((res) => {
+      global.AgentCore.run(q, ctx).then(async (res) => {
         if (typeof global.setBeikeSendBtn === 'function') global.setBeikeSendBtn('send');
         if (res && res.ok && res.answer) {
-          // 将 Agent 对话存入 beikeHistory，保证切换到 Chat 模式后上下文连续
           global.beikeHistory = global.beikeHistory || [];
           global.beikeHistory.push({ role: 'user', content: q });
           global.beikeHistory.push({ role: 'assistant', content: res.answer });
-          // 更新教案记录
-          this._updateRecord();
+          // 后端/LangGraph 路径不调用 onAnswer，回答未渲染到聊天区；
+          // 此处补齐渲染，确保历史记录保存的 msgsHTML 含完整回答（加载后不回退成"只剩问题"）
+          if (res.answer && this._runCard && !this._answerRendered && typeof this.onAnswer === 'function') {
+            try { await this.onAnswer(res.answer); } catch (e) { /* 渲染失败不影响结果 */ }
+          }
         }
+        this._updateRecord(); // 无论成功/中止/出错，都保存已渲染内容，避免记录停留在"只剩问题"
         if (!res.ok && res.error) global.showToast(res.error);
       }).catch(() => {
         if (typeof global.setBeikeSendBtn === 'function') global.setBeikeSendBtn('send');
+        this._updateRecord();
       });
     },
 
@@ -186,17 +194,22 @@
       }
 
       // 运行智能体，完成后更新记录
-      global.AgentCore.run(q, ctx).then((res) => {
+      global.AgentCore.run(q, ctx).then(async (res) => {
         if (typeof global.setBeikeSendBtn === 'function') global.setBeikeSendBtn('send');
         if (res && res.ok && res.answer) {
           global.beikeHistory = global.beikeHistory || [];
           global.beikeHistory.push({ role: 'user', content: q });
           global.beikeHistory.push({ role: 'assistant', content: res.answer });
-          this._updateRecord();
+          // 后端/LangGraph 路径回答未渲染到聊天区，此处补齐，确保历史记录保存完整
+          if (res.answer && this._runCard && !this._answerRendered && typeof this.onAnswer === 'function') {
+            try { await this.onAnswer(res.answer); } catch (e) { /* 渲染失败不影响结果 */ }
+          }
         }
+        this._updateRecord(); // 无论成功/中止/出错，都保存已渲染内容
         if (!res.ok && res.error) global.showToast(res.error);
       }).catch(() => {
         if (typeof global.setBeikeSendBtn === 'function') global.setBeikeSendBtn('send');
+        this._updateRecord();
       });
     },
 
@@ -228,31 +241,84 @@
         + '<div class="agent-steps"></div>'
         + '<div class="agent-answer"></div>';
       box.scrollTop = box.scrollHeight;
-      this._runCard = { inner, steps: inner.querySelector('.agent-steps'), answer: inner.querySelector('.agent-answer'), head: inner.querySelector('.agent-run-head') };
+      this._runCard = { inner, steps: inner.querySelector('.agent-steps'), answer: inner.querySelector('.agent-answer'), head: inner.querySelector('.agent-run-head'), stageCount: 0 };
+      this._curStage = null; // 当前阶段分组容器（收集该阶段下的子步骤）
+      this._curStageBody = null;
+      this._answerRendered = false; // 最终回答是否已渲染（用于后端/LangGraph 路径补齐渲染）
+    },
+
+    /** 确保存在当前阶段分组。阶段分组=可折叠头+左侧竖线内的子步骤体。 */
+    _ensureStageGroup(stage, label) {
+      const card = this._runCard;
+      if (!card) return null;
+      // 若当前阶段与入参一致，复用；否则新建
+      if (this._curStage && this._curStage.dataset.stage === (stage || '')) {
+        return this._curStageBody;
+      }
+      const stageIcon = this._stageIcon(stage);
+      card.stageCount = (card.stageCount || 0) + 1;
+      const group = document.createElement('div');
+      group.className = 'agent-step-group';
+      group.dataset.stage = stage || '';
+      group.innerHTML =
+        '<div class="agent-step-group-head" onclick="window.AgentSandboxUI._toggleStage(this)">'
+        + '<span class="agent-step-icon"><i class="fa-solid ' + stageIcon + '"></i></span>'
+        + '<span class="agent-step-text">' + global.escapeHtml(label || '') + '</span>'
+        + '<span class="agent-step-status stage-tag">阶段 ' + card.stageCount + '</span>'
+        + '<span class="agent-step-count" title="本阶段子步骤数">0</span>'
+        + '<button class="agent-step-toggle" title="展开/收起本阶段"><i class="fa-solid fa-chevron-up"></i></button>'
+        + '</div>'
+        + '<div class="agent-step-group-body"></div>';
+      card.steps.appendChild(group);
+      this._curStage = group;
+      this._curStageBody = group.querySelector('.agent-step-group-body');
+      // 更新主头 badge
+      const badge = card.head.querySelector('.agent-step-badge');
+      if (badge) badge.textContent = label || '阶段 ' + card.stageCount;
+      const box = document.getElementById('beikeMessages');
+      if (box) box.scrollTop = box.scrollHeight;
+      return this._curStageBody;
+    },
+
+    /** 向当前阶段分组追加一个子步骤行 */
+    _appendStepRow(div, stage) {
+      const card = this._runCard;
+      if (!card) return;
+      let container = this._curStageBody;
+      // 无阶段分组时，直接挂到 steps 根（兼容纯聊天/无阶段场景）
+      const target = container || card.steps;
+      target.appendChild(div);
+      // 更新阶段计数徽标
+      if (this._curStage) {
+        const cnt = this._curStage.querySelector('.agent-step-count');
+        if (cnt) cnt.textContent = this._curStage.querySelectorAll('.agent-step-row').length;
+      }
+      const box = document.getElementById('beikeMessages');
+      if (box) box.scrollTop = box.scrollHeight;
     },
 
     onStep(step) {
       if (!this._runCard) return;
       const badge = this._runCard.head.querySelector('.agent-step-badge');
       if (typeof step === 'object' && step !== null) {
-        // 对象入参：{ stage, label }，创建可见的阶段步骤行 + 更新头部 badge
-        const label = step.label || step.stage || '';
-        if (badge) badge.textContent = label;
-        // 创建阶段步骤行（实时显示，不等待完成）
-        const stageIcon = this._stageIcon(step.stage);
-        const div = document.createElement('div');
-        div.className = 'agent-step-row fade-up stage';
-        div.innerHTML =
-          '<div class="agent-step-main">'
-          + '<span class="agent-step-icon"><i class="fa-solid ' + stageIcon + '"></i></span>'
-          + '<span class="agent-step-text">' + global.escapeHtml(label) + '</span>'
-          + '<span class="agent-step-status stage-tag">阶段</span>'
-          + '</div>';
-        this._runCard.steps.appendChild(div);
-        const box = document.getElementById('beikeMessages');
-        if (box) box.scrollTop = box.scrollHeight;
+        // 对象入参：{ stage, label }，创建可折叠阶段分组（子步骤将收纳其下）
+        this._ensureStageGroup(step.stage, step.label || step.stage || '');
       } else {
         if (badge) badge.textContent = '步骤 ' + step;
+      }
+    },
+
+    /** 展开/收起某个阶段分组 */
+    _toggleStage(head) {
+      const group = head.closest('.agent-step-group');
+      if (!group) return;
+      const body = group.querySelector('.agent-step-group-body');
+      const closed = group.classList.toggle('closed');
+      body.classList.toggle('closed', closed);
+      const btn = head.querySelector('.agent-step-toggle');
+      if (btn) {
+        const i = btn.querySelector('i');
+        if (i) i.className = closed ? 'fa-solid fa-chevron-down' : 'fa-solid fa-chevron-up';
       }
     },
 
@@ -276,9 +342,7 @@
         + '<div class="agent-step-detail">'
         + '<div class="agent-step-detail-section"><span class="agent-detail-label">思考过程</span><div class="agent-thought-detail">' + global.escapeHtml(displayText) + '</div></div>'
         + '</div>';
-      this._runCard.steps.appendChild(div);
-      const box = document.getElementById('beikeMessages');
-      if (box) box.scrollTop = box.scrollHeight;
+      this._appendStepRow(div, step);
     },
 
     onToolCall(info) {
@@ -300,10 +364,8 @@
         + (info.args && Object.keys(info.args).length ? '<div class="agent-step-detail-section"><span class="agent-detail-label">参数</span><pre class="agent-detail-code">' + this._fmtArgs(info.args) + '</pre></div>' : '')
         + '<div class="agent-step-detail-section agent-step-result-wrap"><span class="agent-detail-label">结果</span><div class="agent-detail-result">等待执行...</div></div>'
         + '</div>';
-      this._runCard.steps.appendChild(div);
+      this._appendStepRow(div);
       this._curStepDiv = div;
-      const box = document.getElementById('beikeMessages');
-      if (box) box.scrollTop = box.scrollHeight;
     },
 
     onToolResult(info) {
@@ -330,17 +392,38 @@
             return { title: r.title, url: r.url, source: r.source };
           });
         }
+        // 实际读取了正文的网页：覆盖/标记为「已读」并带摘要
+        var readPages = Array.isArray(info.result.pages) ? info.result.pages : [];
         if (Array.isArray(refs) && refs.length && typeof global.updateBeikeRefList === 'function') {
           var existing = global.beikeRefs || [];
           var existingUrls = existing.map(function (r) { return r.url; });
           var newRefs = refs.filter(function (r) { return r.url && existingUrls.indexOf(r.url) < 0; });
-          if (newRefs.length) {
+          // 已读页面：已存在则更新标记，不存在则插入
+          readPages.forEach(function (p) {
+            if (!p || !p.url) return;
+            var hit = (global.beikeRefs || []).concat(newRefs).find(function (x) { return x.url === p.url; });
+            if (hit) { hit.read = true; hit.snippet = p.snippet || hit.snippet; }
+            else newRefs.push({ title: p.title, url: p.url, source: p.source, read: true, snippet: p.snippet });
+          });
+          if (newRefs.length || readPages.length) {
             global.beikeRefs = existing.concat(newRefs);
             global.updateBeikeRefList(global.beikeRefs);
             // 保存到历史记录
             if (typeof global.saveBeikeSidebarState === 'function') global.saveBeikeSidebarState();
           }
         }
+      }
+      // 记录本次调用的技能/插件到参考信息面板
+      if (typeof global.markBeikeSkillUsed === 'function' && info.name) {
+        var pluginNames = {
+          web_search: ['联网搜索', 'fa-globe'], web_research: ['深度搜索', 'fa-globe'],
+          fetch_page: ['网页读取', 'fa-file-lines'], run_python: ['代码沙箱', 'fa-terminal'],
+          gen_word: ['Word 文档生成', 'fa-file-word'], gen_ppt: ['PPT 课件生成', 'fa-file-powerpoint'],
+          gen_excel: ['Excel 表格生成', 'fa-file-excel'], gen_pdf: ['PDF 生成', 'fa-file-pdf'],
+          print_html: ['HTML 打印', 'fa-print'], gen_chart: ['图表生成', 'fa-chart-column'],
+        };
+        var pn = pluginNames[info.name];
+        if (pn) global.markBeikeSkillUsed(pn[0], pn[1], '插件');
       }
       const box = document.getElementById('beikeMessages');
       if (box) box.scrollTop = box.scrollHeight;
@@ -364,9 +447,7 @@
         + (skill.triggers && skill.triggers.length ? '<div class="agent-step-detail-section"><span class="agent-detail-label">触发词</span><div class="agent-detail-text">' + skill.triggers.map((t) => global.escapeHtml(t)).join('、') + '</div></div>' : '')
         + (skill.tools && skill.tools.length ? '<div class="agent-step-detail-section"><span class="agent-detail-label">推荐工具</span><div class="agent-detail-text">' + skill.tools.map((t) => global.escapeHtml(t)).join('、') + '</div></div>' : '')
         + '</div>';
-      this._runCard.steps.appendChild(div);
-      const box = document.getElementById('beikeMessages');
-      if (box) box.scrollTop = box.scrollHeight;
+      this._appendStepRow(div);
     },
 
     /* ============ 任务规划与待办同步 ============ */
@@ -390,9 +471,7 @@
           + planItems.map((t, i) => (i + 1) + '. ' + global.escapeHtml(String(t))).join('<br>')
           + '</div></div>'
           + '</div>';
-        this._runCard.steps.appendChild(div);
-        const box = document.getElementById('beikeMessages');
-        if (box) box.scrollTop = box.scrollHeight;
+        this._appendStepRow(div);
       }
       // 清空旧待办，填入新的子任务列表（全部未完成）
       global.beikeTodos = planItems.map((t) => ({ text: t, done: false }));
@@ -535,8 +614,11 @@
     confirmClarify() {
       const panel = document.getElementById('beikeClarifyPanel');
       if (!panel || !this._clarifySelections) return;
-      const pending = global.AgentCore._pendingClarify;
-      if (!pending) { this._removeClarifyPanel(); return; }
+      // 修复死锁：_pendingClarify 仅 ReAct 路径设置，而 _clarifyResolver 是
+      // ReAct/LangGraph/后端三条追问路径共用的挂起标志。原来只判 _pendingClarify，
+      // 其余路径点"确认选择"会直接返回、Promise 永不 resolve、任务卡死。
+      const core = global.AgentCore || {};
+      if (!core._clarifyResolver && !core._pendingClarify) { this._removeClarifyPanel(); return; }
       // 将选择索引转为选项文本（处理"其他"选项的自由输入）
       const selections = this._clarifySelections.map((sel, qi) => {
         const opts = this._clarifyOptions[qi] || [];
@@ -578,6 +660,7 @@
 
     async onAnswer(text, opts) {
       if (!this._runCard) return;
+      this._answerRendered = true;
       const ansBox = this._runCard.answer;
       const head = this._runCard.head;
       // 更新头部状态

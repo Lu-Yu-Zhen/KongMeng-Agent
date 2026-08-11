@@ -2192,7 +2192,7 @@
                     </div>
                     <!-- 底部提交按钮 -->
                     <div class="p-3 border-t border-rouge-100 bg-white">
-                        <button onclick="handleSubmitHomework()" class="w-full py-2.5 bg-rouge-500 hover:bg-rouge-600 text-white rounded-xl text-sm font-semibold transition-all flex items-center justify-center gap-2">
+                        <button id="submitHomeworkBtn" onclick="handleSubmitHomework()" class="w-full py-2.5 bg-rouge-500 hover:bg-rouge-600 text-white rounded-xl text-sm font-semibold transition-all flex items-center justify-center gap-2">
                             <i class="fa-solid fa-paper-plane"></i>提交作业
                         </button>
                     </div>
@@ -2593,6 +2593,7 @@
         const isElectron = typeof window.electronAPI !== 'undefined' && window.electronAPI.isElectron === true;
         let fsRootHandle = null;              // 学生端根目录句柄（浏览器模式使用）
         let fsPendingWrites = Promise.resolve(); // 串行写队列
+        let fsPendingWriteLost = false; // 浏览器模式未授权导致写入被丢弃的标记
         const FS_ROOT_IDB = 'km_student_fs_root';
 
         // 从 IndexedDB 恢复上次授权的根目录句柄
@@ -2688,9 +2689,12 @@
         }
 
         // 同步读取：Electron 模式直接从磁盘读取，浏览器模式从内存缓存读取
+        // 记录读取失败路径，避免每次重复读盘+解析
+        let fsReadFailedPaths = {};
         function fsRead(path, fallback) {
             if (isElectron) {
                 if (path in fsCache) return fsCache[path];
+                if (fsReadFailedPaths[path]) return fallback; // 已确认读取失败，直接返回默认值
                 try {
                     var content = window.electronAPI.readFileSync(path);
                     if (content) {
@@ -2698,8 +2702,10 @@
                         fsCache[path] = parsed;
                         return parsed;
                     }
+                    fsReadFailedPaths[path] = true; // 文件为空或不存在
                 } catch(e) {
                     console.warn('[文件存储] 读取失败:', path, e.message);
+                    fsReadFailedPaths[path] = true;
                 }
                 return fallback;
             }
@@ -2709,10 +2715,13 @@
         // 写入：Electron 模式直接写磁盘 + 更新缓存，浏览器模式走异步队列
         function fsWrite(path, data) {
             fsCache[path] = data;
+            delete fsReadFailedPaths[path]; // 有新数据写入，清除失败标记
             if (isElectron) {
-                // Electron 模式：异步写入磁盘
+                // Electron 模式：异步写入磁盘；捕获 rejection 避免 unhandled rejection 静默丢数据
                 window.electronAPI.writeFile(path, JSON.stringify(data, null, 2)).then(function(ok) {
                     if (!ok) console.warn('[文件存储] 写入失败:', path);
+                }).catch(function(err) {
+                    console.error('[文件存储] 写入异常:', path, err && err.message ? err.message : err);
                 });
             } else {
                 fsFlush(path);
@@ -2724,7 +2733,12 @@
             fsPendingWrites = fsPendingWrites.then(function() {
                 return (async function() {
                     const handle = await ensureFsRoot(false);
-                    if (!handle) return;
+                    if (!handle) {
+                        // 浏览器模式未授权目录：提示用户，避免静默丢弃数据
+                        console.warn('[文件存储] 未授权目录，本次写入丢弃:', path);
+                        fsPendingWriteLost = true;
+                        return;
+                    }
                     try {
                         const parts = path.split('/');
                         const fileName = parts.pop();
@@ -2764,15 +2778,30 @@
                     const parts = path.split('/');
                     const fileName = parts.pop();
                     let cur = handle;
+                    // 区分目录缺失与文件缺失：目录缺失则补建，文件缺失则跳过使用默认值
                     for (const part of parts) {
-                        cur = await cur.getDirectoryHandle(part, { create: false });
+                        try {
+                            cur = await cur.getDirectoryHandle(part, { create: false });
+                        } catch(dirErr) {
+                            if (dirErr && dirErr.name === 'NotFoundError') {
+                                cur = await cur.getDirectoryHandle(part, { create: true });
+                            } else {
+                                throw dirErr;
+                            }
+                        }
                     }
-                    const fh = await cur.getFileHandle(fileName);
+                    let fh;
+                    try {
+                        fh = await cur.getFileHandle(fileName);
+                    } catch(fileErr) {
+                        if (fileErr && fileErr.name === 'NotFoundError') continue; // 文件不存在：跳过
+                        throw fileErr;
+                    }
                     const file = await fh.getFile();
                     const text = await file.text();
                     if (text && text.trim()) fsCache[path] = JSON.parse(text);
                 } catch(e) {
-                    // 文件不存在：跳过，使用默认值
+                    // 其他异常：跳过，使用默认值
                 }
             }
             console.log('[文件存储] 已加载本地文件数据');
@@ -2780,44 +2809,73 @@
 
         // ==================== API Key 加密（AES-GCM） ====================
         // 使用 Web Crypto 派生密钥加密保存，防止 API Key 明文泄露
+        // 口令与盐不硬编码在源码，而是存放在独立配置文件 user_data/secret.json（首次运行时生成随机值）
+        // 这样即使获取到源码也无法直接还原密钥，需同时拿到本机配置文件
         let secretCryptoKey = null;
-        const SECRET_SALT = 'km_student_secret_salt_v1';
-        const SECRET_PASSPHRASE = 'KongMeng_Student_2026_Secret';
+        let secretKeyPromise = null;   // 并发锁：保证 PBKDF2 只派生一次
+        const SECRET_FILE = 'user_data/secret.json';
+
+        // 生成随机 hex 字符串（用于口令与盐）
+        function randomHexString(byteLen) {
+            const arr = new Uint8Array(byteLen);
+            crypto.getRandomValues(arr);
+            let hex = '';
+            for (let i = 0; i < arr.length; i++) {
+                hex += ('0' + arr[i].toString(16)).slice(-2);
+            }
+            return hex;
+        }
+
+        // 确保密钥配置文件存在；不存在则生成随机口令与盐并落盘
+        function ensureSecretFile() {
+            const existing = fsRead(SECRET_FILE, null);
+            if (existing && existing.passphrase && existing.salt) return existing;
+            const cfg = {
+                passphrase: randomHexString(32),
+                salt: randomHexString(16)
+            };
+            fsWrite(SECRET_FILE, cfg);
+            return cfg;
+        }
 
         async function getSecretCryptoKey() {
             if (secretCryptoKey) return secretCryptoKey;
-            const enc = new TextEncoder();
-            const baseKey = await crypto.subtle.importKey('raw', enc.encode(SECRET_PASSPHRASE), 'PBKDF2', false, ['deriveKey']);
-            secretCryptoKey = await crypto.subtle.deriveKey(
-                { name: 'PBKDF2', salt: enc.encode(SECRET_SALT), iterations: 150000, hash: 'SHA-256' },
-                baseKey,
-                { name: 'AES-GCM', length: 256 },
-                false,
-                ['encrypt', 'decrypt']
-            );
-            return secretCryptoKey;
+            if (secretKeyPromise) return secretKeyPromise;
+            secretKeyPromise = (async function() {
+                const cfg = ensureSecretFile();
+                const enc = new TextEncoder();
+                const baseKey = await crypto.subtle.importKey('raw', enc.encode(cfg.passphrase), 'PBKDF2', false, ['deriveKey']);
+                const key = await crypto.subtle.deriveKey(
+                    { name: 'PBKDF2', salt: enc.encode(cfg.salt), iterations: 150000, hash: 'SHA-256' },
+                    baseKey,
+                    { name: 'AES-GCM', length: 256 },
+                    false,
+                    ['encrypt', 'decrypt']
+                );
+                secretCryptoKey = key;
+                return key;
+            })().catch(function(e) {
+                secretKeyPromise = null; // 失败时允许重试
+                throw e;
+            });
+            return secretKeyPromise;
         }
 
-        // 加密：返回 base64(iv.ciphertext)
+        // 加密：返回 base64(iv.ciphertext)；失败时抛错，绝不降级明文落盘
         async function encryptSecret(plainText) {
             if (!plainText) return '';
-            try {
-                const key = await getSecretCryptoKey();
-                const iv = crypto.getRandomValues(new Uint8Array(12));
-                const cipher = await crypto.subtle.encrypt({ name: 'AES-GCM', iv: iv }, key, new TextEncoder().encode(plainText));
-                const combined = new Uint8Array(iv.length + cipher.byteLength);
-                combined.set(iv, 0);
-                combined.set(new Uint8Array(cipher), iv.length);
-                let binary = '';
-                combined.forEach(function(b) { binary += String.fromCharCode(b); });
-                return 'enc:' + btoa(binary);
-            } catch(e) {
-                console.warn('[加密] 加密失败:', e.message);
-                return plainText;
-            }
+            const key = await getSecretCryptoKey();
+            const iv = crypto.getRandomValues(new Uint8Array(12));
+            const cipher = await crypto.subtle.encrypt({ name: 'AES-GCM', iv: iv }, key, new TextEncoder().encode(plainText));
+            const combined = new Uint8Array(iv.length + cipher.byteLength);
+            combined.set(iv, 0);
+            combined.set(new Uint8Array(cipher), iv.length);
+            let binary = '';
+            combined.forEach(function(b) { binary += String.fromCharCode(b); });
+            return 'enc:' + btoa(binary);
         }
 
-        // 解密：还原明文；无法解密时原样返回（兼容旧明文数据）
+        // 解密：还原明文；解密失败返回空字符串（交由调用方提示重新配置，而非返回密文导致"死结"）
         async function decryptSecret(encText) {
             if (!encText) return '';
             if (typeof encText !== 'string' || !encText.startsWith('enc:')) return encText;
@@ -2831,8 +2889,8 @@
                 const plain = await crypto.subtle.decrypt({ name: 'AES-GCM', iv: iv }, key, data);
                 return new TextDecoder().decode(plain);
             } catch(e) {
-                console.warn('[解密] 解密失败:', e.message);
-                return encText;
+                console.warn('[解密] 解密失败:', e.message, '（请重新配置该模型的 API Key）');
+                return '';
             }
         }
 
@@ -3305,13 +3363,21 @@
 
             // 检查多模态能力
             var allFiles = [].concat(gradingExamFiles, gradingAnswerFiles, gradingCardFiles, gradingEssayModelFiles, gradingEssayTopicFiles);
-            var imageFiles = allFiles.filter(function(f) { return f.type && f.type.startsWith('image'); });
-            if (imageFiles.length === 0) {
-                showToast('请上传图片格式文件（jpg/png）以启用AI视觉识别');
+            if (allFiles.length === 0) {
+                showToast('请先上传文件');
                 return;
             }
+            var imageFiles = allFiles.filter(function(f) { return f.type && f.type.startsWith('image'); });
+            var nonImageFiles = allFiles.filter(function(f) { return !(f && f.type && f.type.startsWith('image')); });
+            if (nonImageFiles.length > 0 && imageFiles.length > 0) {
+                // 同时含图片与非图片：提示非图片文件可能无法被AI识别，但允许继续
+                showToast('提示：PDF/Word等非图片文件可能无法被AI直接识别，建议上传图片');
+            } else if (imageFiles.length === 0) {
+                // 仅含非图片文件：降级提示，但允许继续（由用户自行决定）
+                showToast('当前仅上传了非图片文件，AI可能无法识别其内容，建议补充图片');
+            }
             // DeepSeek-V4-Pro不支持图片识别，其余模型均可
-            if (modelId === 'deepseek-pro') {
+            if (modelId === 'deepseek-pro' && imageFiles.length > 0) {
                 showToast('DeepSeek-V4-Pro不支持图片识别，请选择其他智能体');
                 return;
             }
@@ -3502,18 +3568,6 @@
             // 切换为暂停键
             setGradingSendButtonState(true);
 
-            // 点击开始批改后立即清空上传区文件预览和数组（图片已显示在结果区左侧3.5栏）
-            gradingExamFiles.length = 0;
-            gradingAnswerFiles.length = 0;
-            gradingCardFiles.length = 0;
-            gradingEssayModelFiles.length = 0;
-            gradingEssayTopicFiles.length = 0;
-            document.getElementById('gradingExamFiles').innerHTML = '';
-            document.getElementById('gradingAnswerFiles').innerHTML = '';
-            document.getElementById('gradingCardFiles').innerHTML = '';
-            document.getElementById('gradingEssayModelFiles').innerHTML = '';
-            document.getElementById('gradingEssayTopicFiles').innerHTML = '';
-
             try {
                 var streamContainer = document.getElementById('gradingStreamContainer');
                 var contentEl = document.getElementById('gradingStreamContent');
@@ -3569,13 +3623,15 @@
                     var gradingRecords = getGradingHistoryRecords();
                     var gradingExistingIdx = gradingRecords.findIndex(function(r) { return r.id === (window.currentGradingSessionId || ''); });
                     var gradingTitle = (subjCfg.name || '') + (typeName || '试卷') + '批改';
+                    // 历史记录中仅保存精简用户诉求，避免完整 prompt 导致历史文件 token 膨胀
+                    var gradingUserBrief = ('批改' + (typeName || '试卷') + '（' + gradingTitle + '）' + (remark ? '｜要求：' + remark : '')) + '，共上传 ' + imageFiles.length + ' 张图片';
                     if (gradingExistingIdx < 0) {
                         // 新建记录（保存完整批改结果HTML，用于历史恢复）
                         var newGradingRecord = {
                             id: 'grading-' + Date.now(),
                             title: gradingTitle,
                             messages: [
-                                { role: 'user', content: promptText, time: new Date().toISOString() },
+                                { role: 'user', content: gradingUserBrief, time: new Date().toISOString() },
                                 { role: 'assistant', content: fullResponse, time: new Date().toISOString() }
                             ],
                             resultHtml: resultEl.innerHTML,
@@ -3587,12 +3643,22 @@
                     } else {
                         // 追加到现有记录（更新结果HTML）
                         gradingRecords[gradingExistingIdx].messages.push(
-                            { role: 'user', content: promptText, time: new Date().toISOString() },
+                            { role: 'user', content: gradingUserBrief, time: new Date().toISOString() },
                             { role: 'assistant', content: fullResponse, time: new Date().toISOString() }
                         );
                         gradingRecords[gradingExistingIdx].resultHtml = resultEl.innerHTML;
                     }
                     saveGradingHistoryRecords(gradingRecords);
+                    // 批改成功后再清空上传区文件（失败时保留，便于重试）
+                    gradingExamFiles.length = 0;
+                    gradingAnswerFiles.length = 0;
+                    gradingCardFiles.length = 0;
+                    gradingEssayModelFiles.length = 0;
+                    gradingEssayTopicFiles.length = 0;
+                    ['gradingExamFiles','gradingAnswerFiles','gradingCardFiles','gradingEssayModelFiles','gradingEssayTopicFiles'].forEach(function(id) {
+                        var el = document.getElementById(id);
+                        if (el) el.innerHTML = '';
+                    });
                 } else {
                     if (streamContainer) {
                         streamContainer.innerHTML = '<div class="text-center text-rose-400 text-sm">未收到批改结果，请检查智能体配置或重试</div>';
@@ -4556,13 +4622,20 @@
             if (data.list && data.list.length > 0) {
                 return data.list;
             }
-            // 初始化示例作业数据
+            // 初始化示例作业数据（截止日期基于当前日期动态生成，避免全部"已过期"）
+            var _d = function(offsetDays) {
+                var t = new Date();
+                t.setDate(t.getDate() + offsetDays);
+                var m = ('0' + (t.getMonth() + 1)).slice(-2);
+                var d = ('0' + t.getDate()).slice(-2);
+                return t.getFullYear() + '-' + m + '-' + d;
+            };
             var sampleList = [
-                { id: 'hw_001', title: '高三数学限时训练（函数与导数）', subject: '数学', dueDate: '2026-07-25', dueTime: '23:59', desc: '完成试卷中第1-10题，要求写出详细解题过程。重点关注导数的应用题型。', status: 'pending', teacher: '王老师' },
-                { id: 'hw_002', title: '语文古诗文默写与鉴赏', subject: '语文', dueDate: '2026-07-24', dueTime: '22:00', desc: '默写《赤壁赋》《阿房宫赋》全文，并完成配套鉴赏题3道。', status: 'pending', teacher: '李老师' },
-                { id: 'hw_003', title: '英语阅读理解专项训练', subject: '英语', dueDate: '2026-07-23', dueTime: '23:59', desc: '完成Unit 5课后阅读理解A-C篇，标注文中生词并整理到词汇本。', status: 'submitted', teacher: '张老师' },
-                { id: 'hw_004', title: '物理力学综合题训练', subject: '物理', dueDate: '2026-07-28', dueTime: '23:59', desc: '完成力学综合试卷，重点练习牛顿运动定律与能量守恒综合应用题。', status: 'pending', teacher: '陈老师' },
-                { id: 'hw_005', title: '化学反应原理单元测试', subject: '化学', dueDate: '2026-07-20', dueTime: '23:59', desc: '完成化学反应原理章节测试卷，包括化学平衡、电离平衡等内容。', status: 'submitted', teacher: '刘老师' }
+                { id: 'hw_001', title: '高三数学限时训练（函数与导数）', subject: '数学', dueDate: _d(3), dueTime: '23:59', desc: '完成试卷中第1-10题，要求写出详细解题过程。重点关注导数的应用题型。', status: 'pending', teacher: '王老师' },
+                { id: 'hw_002', title: '语文古诗文默写与鉴赏', subject: '语文', dueDate: _d(2), dueTime: '22:00', desc: '默写《赤壁赋》《阿房宫赋》全文，并完成配套鉴赏题3道。', status: 'pending', teacher: '李老师' },
+                { id: 'hw_003', title: '英语阅读理解专项训练', subject: '英语', dueDate: _d(1), dueTime: '23:59', desc: '完成Unit 5课后阅读理解A-C篇，标注文中生词并整理到词汇本。', status: 'submitted', teacher: '张老师' },
+                { id: 'hw_004', title: '物理力学综合题训练', subject: '物理', dueDate: _d(6), dueTime: '23:59', desc: '完成力学综合试卷，重点练习牛顿运动定律与能量守恒综合应用题。', status: 'pending', teacher: '陈老师' },
+                { id: 'hw_005', title: '化学反应原理单元测试', subject: '化学', dueDate: _d(-2), dueTime: '23:59', desc: '完成化学反应原理章节测试卷，包括化学平衡、电离平衡等内容。', status: 'submitted', teacher: '刘老师' }
             ];
             writeHomeworkFile(sampleList, readHomeworkFile().submissions);
             return sampleList;
@@ -4633,10 +4706,11 @@
                 if (item.status === 'submitted') {
                     statusBadge = '<span class="px-1.5 py-0.5 text-[9px] font-medium bg-green-50 text-green-600 rounded-full">已提交</span>';
                 } else {
-                    // 检查是否过期
-                    var due = new Date(item.dueDate);
+                    // 检查是否过期（与详情页一致：拼上 dueTime 再比较，避免忽略截止时刻导致误判）
+                    var dueStr = item.dueDate + 'T' + (item.dueTime || '23:59');
+                    var due = new Date(dueStr);
                     var now = new Date();
-                    var isOverdue = due < now;
+                    var isOverdue = !isNaN(due.getTime()) && due < now;
                     if (isOverdue) {
                         statusBadge = '<span class="px-1.5 py-0.5 text-[9px] font-medium bg-rose-50 text-rose-500 rounded-full">已过期</span>';
                     } else {
@@ -4707,7 +4781,7 @@
 
             // 状态徽章
             var statusEl = document.getElementById('submitHwStatus');
-            var submitBtn = document.querySelector('#submitPageContent button[onclick="handleSubmitHomework()"]');
+            var submitBtn = document.getElementById('submitHomeworkBtn');
             if (hw.status === 'submitted') {
                 statusEl.innerHTML = '<span class="px-2.5 py-1 text-[11px] font-medium bg-green-50 text-green-600 rounded-lg flex items-center gap-1"><i class="fa-solid fa-check-circle"></i>已提交</span>';
                 if (submitBtn) submitBtn.innerHTML = '<i class="fa-solid fa-paper-plane"></i>追加提交';
@@ -5120,6 +5194,12 @@
             appendQALoading(loadingId);
 
             try {
+                // 流式期间禁用历史题目导航，避免流式渲染覆盖历史导航展示
+                const qaNavPrev = document.getElementById('qaHistPrev');
+                const qaNavNext = document.getElementById('qaHistNext');
+                if (qaNavPrev) qaNavPrev.disabled = true;
+                if (qaNavNext) qaNavNext.disabled = true;
+
                 const systemInstruction = `你是一名资深高中教师，请根据用户上传的题目内容自动识别所属科目，并切换为对应科目的专家教师角色进行答疑。以下是各科目教师角色设定，请根据识别到的科目自动采用对应的角色：
 
 ${allSubjectRoles}
@@ -5365,14 +5445,25 @@ ${allSubjectRoles}
                 saveQAHistoryRecords(qaRecords);
 
                 // 知识点提取（传入题目内容：优先文件原始内容，无文件时用用户输入）
-                extractKnowledgePoints(fullResponse, subject, rawFileContent || (hasUploadedFiles ? '' : fullQuestionText));
+                extractKnowledgePoints(fullResponse, '', rawFileContent || (hasUploadedFiles ? '' : fullQuestionText));
 
                 // 流式完成，恢复发送按钮
                 setQASendButtonState(false);
 
+                // 流式完成，恢复历史题目导航按钮可用（P2-16）
+                const qaNavDonePrev = document.getElementById('qaHistPrev');
+                const qaNavDoneNext = document.getElementById('qaHistNext');
+                if (qaNavDonePrev) qaNavDonePrev.disabled = qaWhiteboardIndex <= 0;
+                if (qaNavDoneNext) qaNavDoneNext.disabled = qaWhiteboardIndex >= qaWhiteboardHistory.length - 1;
+
             } catch (err) {
                 console.error('[答疑] 错误:', err);
                 setQASendButtonState(false); // 恢复发送按钮
+                // 恢复历史题目导航按钮可用（流式失败时）
+                const qaNavPrev = document.getElementById('qaHistPrev');
+                const qaNavNext = document.getElementById('qaHistNext');
+                if (qaNavPrev) qaNavPrev.disabled = qaWhiteboardIndex <= 0;
+                if (qaNavNext) qaNavNext.disabled = qaWhiteboardIndex >= qaWhiteboardHistory.length - 1;
                 const loadingBubble = document.getElementById(loadingId);
                 if (loadingBubble) loadingBubble.remove();
                 const errMsg = err && err.message ? err.message : '未知错误';
@@ -5863,11 +5954,7 @@ ${allSubjectRoles}
             if (cfg.endpoint && cfg.endpoint.includes('open.bigmodel.cn')) {
                 return { supported: true, params: { tools: [{ type: 'web_search', web_search: { enable: true, search_result: false } }] }, provider: 'glm' };
             }
-            // DeepSeek 官方 API：仅 deepseek-v4-flash 支持联网搜索（Responses API /v1/responses + web_search tool），deepseek-v4-pro 暂不支持
-            if (cfg.model === 'deepseek-v4-flash') {
-                return { supported: true, params: { tools: [{ type: 'web_search' }] }, provider: 'deepseek' };
-            }
-            // MiniMax、Doubao、Moonshot 等：API 不支持与 json_object 模式兼容的联网搜索
+            // DeepSeek、MiniMax、Doubao、Moonshot 等：API 不支持与 json_object 模式兼容的联网搜索
             return { supported: false, params: null, provider: null };
         }
 
@@ -6712,43 +6799,52 @@ ${topic && topic !== 'auto' ? '知识点：' + topic : ''}${extraReqPrompt}
             if (mockSubmitted) return;
             const total = practiceQuestions.length;
             const answered = mockUserAnswers.filter(a => a !== null && a !== undefined && a !== '').length;
+            // 未答完：仅用原生 confirm 确认，不再叠加自定义弹窗，避免双重确认
             if (answered < total) {
-                if (!confirm('你还有 ' + (total - answered) + ' 题未作答，确定要交卷吗？')) return;
+                if (confirm('你还有 ' + (total - answered) + ' 题未作答，确定要交卷吗？')) {
+                    doSubmitMockExam();
+                }
+                return;
             }
+            // 已答完：用统一的自定义确认弹窗
             showConfirmDialog('确认交卷', '交卷后将统一批改，确定要交卷吗？', function() {
-                mockSubmitted = true;
-                practiceResults = { correct: 0, wrong: 0, total: 0 };
-
-                practiceQuestions.forEach(function(q, i) {
-                    const userAns = mockUserAnswers[i];
-                    let isCorrect = false;
-                    if (userAns === null || userAns === undefined || userAns === '') {
-                        // 未作答，算错
-                        isCorrect = false;
-                    } else if (q.type === 'choice') {
-                        isCorrect = userAns.toUpperCase() === (q.answer || '').toUpperCase();
-                    } else if (q.type === 'multi-choice') {
-                        const correctNorm = (q.answer || '').toUpperCase().split('').sort().join('');
-                        const userNorm = userAns.toUpperCase().split('').sort().join('');
-                        isCorrect = userNorm === correctNorm;
-                    } else if (q.type === 'fill') {
-                        isCorrect = userAns.replace(/\s+/g, '') === (q.answer || '').replace(/\s+/g, '').replace(/^\$+|\$+$/g, '');
-                    } else {
-                        // 解答题/作文：无法自动判分，标记为null（显示参考答案）
-                        isCorrect = null;
-                    }
-                    userAnswers[i] = isCorrect;
-                    if (isCorrect === true) practiceResults.correct++;
-                    else if (isCorrect === false) practiceResults.wrong++;
-                    practiceResults.total++;
-                });
-
-                updatePracticeScore();
-                updateSubmitExamBtn();
-                // 重新渲染当前题，显示批改结果
-                showQuestion(currentQuestionIndex);
-                renderPracticeList();
+                doSubmitMockExam();
             });
+        }
+
+        function doSubmitMockExam() {
+            mockSubmitted = true;
+            practiceResults = { correct: 0, wrong: 0, total: 0 };
+
+            practiceQuestions.forEach(function(q, i) {
+                const userAns = mockUserAnswers[i];
+                let isCorrect = false;
+                if (userAns === null || userAns === undefined || userAns === '') {
+                    // 未作答，算错
+                    isCorrect = false;
+                } else if (q.type === 'choice') {
+                    isCorrect = userAns.toUpperCase() === (q.answer || '').toUpperCase();
+                } else if (q.type === 'multi-choice') {
+                    const correctNorm = (q.answer || '').toUpperCase().split('').sort().join('');
+                    const userNorm = userAns.toUpperCase().split('').sort().join('');
+                    isCorrect = userNorm === correctNorm;
+                } else if (q.type === 'fill') {
+                    isCorrect = userAns.replace(/\s+/g, '') === (q.answer || '').replace(/\s+/g, '').replace(/^\$+|\$+$/g, '');
+                } else {
+                    // 解答题/作文：无法自动判分，标记为null（显示参考答案）
+                    isCorrect = null;
+                }
+                userAnswers[i] = isCorrect;
+                if (isCorrect === true) practiceResults.correct++;
+                else if (isCorrect === false) practiceResults.wrong++;
+                practiceResults.total++;
+            });
+
+            updatePracticeScore();
+            updateSubmitExamBtn();
+            // 重新渲染当前题，显示批改结果
+            showQuestion(currentQuestionIndex);
+            renderPracticeList();
         }
 
         function submitAnswer(qIndex, answer) {
@@ -7057,7 +7153,7 @@ ${topic && topic !== 'auto' ? '知识点：' + topic : ''}${extraReqPrompt}
 
         // 构建成绩提示框HTML
         function buildScoreTooltip(exam, subject, prevVal) {
-            var val = subject === '__total__' ? (exam.total || Object.values(exam.scores).reduce(function(a,b){return a+b;},0)) : exam.scores[subject];
+            var val = subject === '__total__' ? (exam.total != null ? exam.total : Object.values(exam.scores).reduce(function(a,b){return a+b;},0)) : exam.scores[subject];
             var date = exam.date || '未设置';
             var name = exam.name || '';
             var changeStr = '';
@@ -7089,7 +7185,7 @@ ${topic && topic !== 'auto' ? '知识点：' + topic : ''}${extraReqPrompt}
                 '<div>' + (labels[key] || '排名') + '：<span style="color:#fbbf24;font-weight:bold;">第' + val + '名</span></div>' + changeStr;
         }
 
-        // 高DPI Canvas辅助函数（scale=4，约800+ DPI）
+        // 高DPI Canvas辅助函数（scale=8，高清晰度）
         function setupHiDPICanvas(canvas, logicalW, logicalH, autoWidth) {
             // 自适应父容器宽度（仅折线图启用）
             if (autoWidth !== false) {
@@ -8536,8 +8632,8 @@ ${topic && topic !== 'auto' ? '知识点：' + topic : ''}${extraReqPrompt}
                 var y = pad.t + ch * i / 3;
                 ctx.beginPath(); ctx.moveTo(pad.l, y); ctx.lineTo(W - pad.r, y); ctx.stroke();
                 ctx.fillStyle = '#9ca3af'; ctx.font = '10px sans-serif'; ctx.textAlign = 'right';
-                // 从上到下：0 -> maxV，即顶部是0（最好），底部是maxV（最差）
-                ctx.fillText(Math.round(maxV - range * i / 3), pad.l - 3, y + 3);
+                // 从上到下：0 -> maxV，即顶部标最小排名（最好），底部标最大排名（最差），与数据点轴向一致
+                ctx.fillText(Math.round(range * i / 3), pad.l - 3, y + 3);
             }
             // 折线 - 排名数值越大y越大（越往下），排名越小y越小（越往上）
             ctx.strokeStyle = color; ctx.lineWidth = 1.5;
@@ -8663,7 +8759,7 @@ ${topic && topic !== 'auto' ? '知识点：' + topic : ''}${extraReqPrompt}
             const pad = { l: 45, r: 15, t: 15, b: 30 };
             canvas._chartPad = pad;
             const cw = W - pad.l - pad.r, ch = H - pad.t - pad.b;
-            var totals = data.map(function(e) { return e.total || Object.values(e.scores).reduce(function(a, b) { return a + b; }, 0); });
+            var totals = data.map(function(e) { return e.total != null ? e.total : Object.values(e.scores).reduce(function(a, b) { return a + b; }, 0); });
             var maxV = Math.max.apply(null, totals) * 1.05;
             var minV = Math.min.apply(null, totals) * 0.95;
             var range = maxV - minV || 1;
@@ -8679,7 +8775,7 @@ ${topic && topic !== 'auto' ? '知识点：' + topic : ''}${extraReqPrompt}
             ctx.strokeStyle = '#0ea5e9'; ctx.lineWidth = 2;
             ctx.beginPath();
             data.forEach(function(e, i) {
-                var v = e.total || Object.values(e.scores).reduce(function(a, b) { return a + b; }, 0);
+                var v = e.total != null ? e.total : Object.values(e.scores).reduce(function(a, b) { return a + b; }, 0);
                 var x = pad.l + cw * (data.length === 1 ? 0.5 : i / (data.length - 1));
                 var y = pad.t + ch * (1 - (v - minV) / range);
                 if (i === 0) ctx.moveTo(x, y); else ctx.lineTo(x, y);
@@ -8688,7 +8784,7 @@ ${topic && topic !== 'auto' ? '知识点：' + topic : ''}${extraReqPrompt}
             // 数据点
             var _points = [];
             data.forEach(function(e, i) {
-                var v = e.total || Object.values(e.scores).reduce(function(a, b) { return a + b; }, 0);
+                var v = e.total != null ? e.total : Object.values(e.scores).reduce(function(a, b) { return a + b; }, 0);
                 var x = pad.l + cw * (data.length === 1 ? 0.5 : i / (data.length - 1));
                 var y = pad.t + ch * (1 - (v - minV) / range);
                 ctx.fillStyle = '#0ea5e9';
@@ -8698,13 +8794,14 @@ ${topic && topic !== 'auto' ? '知识点：' + topic : ''}${extraReqPrompt}
                 ctx.fillStyle = '#9ca3af'; ctx.font = '11px sans-serif';
                 ctx.fillText((e.name || '').substring(0, 6), x, H - pad.b + 14);
                 // 提示框数据
-                var prevVal = i > 0 ? (data[i-1].total || Object.values(data[i-1].scores).reduce(function(a, b) { return a + b; }, 0)) : null;
+                var prevVal = i > 0 ? (data[i-1].total != null ? data[i-1].total : Object.values(data[i-1].scores).reduce(function(a, b) { return a + b; }, 0)) : null;
                 _points.push({ x: x, y: y, html: buildScoreTooltip(e, '__total__', prevVal) });
             });
             bindChartTooltip(canvas, _points);
         }
 
         // 绘制综合排名图（校/市/省三条线）
+        // 死代码（P2-25）：当前诊断报告未调用本函数，保留以满足兼容，避免物理删除。
         function drawDiagCompRankChart(data) {
             const canvas = document.getElementById('diagCompRankChart');
             if (!canvas) return;
@@ -8841,6 +8938,8 @@ ${topic && topic !== 'auto' ? '知识点：' + topic : ''}${extraReqPrompt}
         }
 
         // 绘制排名折线图
+        // 死代码（P2-25）：当前诊断报告使用 drawDiagSingleRankChart 渲染排名，本函数未被主流程引用。
+        // 保留以满足历史记录/外部回调兼容，避免物理删除导致未预期 ReferenceError。
         function drawDiagRankChart(data) {
             const canvas = document.getElementById('diagRankChart');
             if (!canvas) return;
@@ -8963,7 +9062,7 @@ ${topic && topic !== 'auto' ? '知识点：' + topic : ''}${extraReqPrompt}
                 const allWrongs = getDiagWrongQuestions();
                 var scoreSummary = scores.length > 0
                     ? scores.map(function(e) {
-                        var parts = [e.name + (e.date ? '(' + e.date + ')' : '') + ': 总分' + (e.total || Object.values(e.scores).reduce(function(a,b){return a+b;},0))];
+                        var parts = [e.name + (e.date ? '(' + e.date + ')' : '') + ': 总分' + (e.total != null ? e.total : Object.values(e.scores).reduce(function(a,b){return a+b;},0))];
                         subjects.forEach(function(s) { if (e.scores[s] != null) parts.push(s + '=' + e.scores[s]); });
                         if (e.ranks) { if (e.ranks.school) parts.push('校' + e.ranks.school); if (e.ranks.city) parts.push('市' + e.ranks.city); if (e.ranks.province) parts.push('省' + e.ranks.province); }
                         return parts.join(' ');
@@ -9214,7 +9313,10 @@ ${topic && topic !== 'auto' ? '知识点：' + topic : ''}${extraReqPrompt}
             printWindow.document.write('blockquote { border-left: 3px solid #0ea5e9; padding-left: 10px; color: #666; }');
             printWindow.document.write('ul, ol { font-size: 12px; }');
             printWindow.document.write('@media print { .no-print { display: none; } }');
-            printWindow.document.write('</style></head><body>');
+            printWindow.document.write('</style>');
+            // 克隆的 DOM 大量使用 Tailwind 类名，需注入 Tailwind CDN 保证打印样式不丢失
+            printWindow.document.write('<script src="https://cdn.tailwindcss.com"></' + 'script>');
+            printWindow.document.write('</head><body>');
             printWindow.document.write('<div class="print-header"><h1>' + reportTitle + '</h1></div>');
             printWindow.document.write('<div class="print-date">导出时间: ' + printDate + '</div>');
             printWindow.document.write(cloned.innerHTML);
@@ -9235,6 +9337,35 @@ ${topic && topic !== 'auto' ? '知识点：' + topic : ''}${extraReqPrompt}
             breaks: true,
             gfm: true,
         });
+
+        // P2-31：定制代码块渲染器，使用 highlight.js 对围栏代码块做语法高亮
+        // 当前 renderMarkdown 通过 codeBlocks 数组用 marked.parse 渲染 ``` 围栏块，
+        // 此处覆盖 renderer.code 即可让所有围栏代码块自动高亮，无需改动占位逻辑。
+        (function() {
+            try {
+                const customRenderer = new marked.Renderer();
+                const origCode = customRenderer.code;
+                customRenderer.code = function(code, infostring) {
+                    if (typeof hljs === 'undefined' || !hljs) return origCode.call(this, code, infostring);
+                    const lang = (infostring || '').split(/\s+/)[0] || '';
+                    let highlighted = null;
+                    try {
+                        if (lang && hljs.getLanguage(lang)) {
+                            highlighted = hljs.highlight(code, { language: lang }).value;
+                        } else {
+                            highlighted = hljs.highlightAuto(code).value;
+                        }
+                    } catch (e) {
+                        highlighted = null;
+                    }
+                    if (highlighted == null) return origCode.call(this, code, infostring);
+                    return '<pre><code class="hljs language-' + escapeHtml(lang) + '">' + highlighted + '</code></pre>';
+                };
+                marked.setOptions({ renderer: customRenderer });
+            } catch (e) {
+                console.warn('[Markdown] 启用代码高亮失败，回退默认渲染:', e.message);
+            }
+        })();
 
         // 渲染 Markdown 文本为 HTML
         // 核心思路：代码块/行内代码用HTML注释占位 → LaTeX用HTML元素占位(<span data-kx-*>) → marked.parse() → KaTeX渲染 → 还原代码块
@@ -9273,7 +9404,24 @@ ${topic && topic !== 'auto' ? '知识点：' + topic : ''}${extraReqPrompt}
 
                 // 统一 LaTeX 分隔符：将 \(...\) 和 \[...\] 转换为 $...$ 和 $$...$$
                 // 很多 AI 模型（DeepSeek、Qwen、GLM 等）默认使用 \(...\) 和 \[...\] 格式
-                processed = processed.replace(/\\\[([\s\S]*?)\\\]/g, (match, formula) => '$$' + formula.trim() + '$$');
+                // P2-32：\[...\] 仅在内容含 LaTeX 特征（如 \frac、\sum、^、_、\sqrt 等）时才视为公式，
+                // 避免把字面区间/下标表示如 \[0,1\]、\[a,b\] 误判为 LaTeX 块。
+                const LATEX_FEATURE = /[\\](frac|sum|int|lim|sqrt|prod|times|cdot|rightarrow|nrightarrow|geqslant?|leqslant?|neq|approx|infty|partial|nabla|alpha|beta|gamma|delta|theta|lambda|pi|sigma|omega|left|right|begin|end|binom|text|overline|underline|hat|bar|vec|dot|mathrm|textbf)\b/;
+                const looksLikeLatex = function(s) {
+                    if (!s) return false;
+                    if (LATEX_FEATURE.test(s)) return true;
+                    // 含上标/下标且含字母或反斜杠结构，视为公式
+                    if (/\^[{}]?[a-zA-Z0-9\\]/.test(s) || /_[{}]?[a-zA-Z0-9\\]/.test(s)) {
+                        // 排除纯数字区间如 [0,1]、[a,b] 这类简单下标/区间
+                        if (/^[a-zA-Z0-9,\s.\-—]+$/.test(s)) return false;
+                        return true;
+                    }
+                    return false;
+                };
+                processed = processed.replace(/\\\[([\s\S]*?)\\\]/g, (match, formula) => {
+                    const f = formula.trim();
+                    return looksLikeLatex(f) ? '$$' + f + '$$' : ('[' + f + ']');
+                });
                 processed = processed.replace(/\\\(([\s\S]*?)\\\)/g, (match, formula) => '$' + formula.trim() + '$');
                 // 流式传输中的不完整分隔符：末尾有 \( 或 \[ 但尚未闭合，转为 $ 或 $$ 让后续逻辑处理
                 const incompleteBlock = processed.match(/\\\[([\s\S]*)$/);
@@ -9347,7 +9495,8 @@ ${topic && topic !== 'auto' ? '知识点：' + topic : ''}${extraReqPrompt}
                 return html;
             } catch(e) {
                 console.error('[Markdown] 渲染失败:', e);
-                return text.replace(/</g, '&lt;').replace(/>/g, '&gt;');
+                // P2-33：异常兜底完整转义 HTML 特殊字符（& < > " '），避免 XSS 与文本错乱
+                return escapeHtml(text);
             }
         }
 
@@ -9436,6 +9585,10 @@ ${topic && topic !== 'auto' ? '知识点：' + topic : ''}${extraReqPrompt}
         };
 
         // 模型配置与选择状态（内存缓存，启动时从 user_data/model/model.json 加载，变更异步加密写盘）
+        // 用于 onclick 内联事件中的 JS 字符串安全转义，防止 modelId 等外部值被注入为代码
+        function jsStr(s) {
+            return String(s == null ? '' : s).replace(/\\/g, '\\\\').replace(/'/g, "\\'").replace(/"/g, '\\"').replace(/\n/g, '\\n').replace(/\r/g, '\\r');
+        }
         let chatModelsCache = {};          // 明文 { modelId: apiKey }
         let vizModelsCache = {};           // 明文 { modelId: apiKey }
         let selectionCache = { chat: '', qa: '', grading: '', viz: '' };
@@ -9570,6 +9723,11 @@ ${topic && topic !== 'auto' ? '知识点：' + topic : ''}${extraReqPrompt}
                 const chatModels = getConfiguredChatModels();
                 chatModels[modelId] = apiKey;
                 setConfiguredChatModels(chatModels);
+            } else if (target === 'viz') {
+                // 补齐可视化（白板/图片生成）模型的配置分支
+                const vizModels = getConfiguredVizModels();
+                vizModels[modelId] = apiKey;
+                setConfiguredVizModels(vizModels);
             }
 
             modelSelect.value = '';
@@ -9596,8 +9754,15 @@ ${topic && topic !== 'auto' ? '知识点：' + topic : ''}${extraReqPrompt}
                 const models = getConfiguredChatModels();
                 delete models[modelId];
                 setConfiguredChatModels(models);
+                // 同步清理各个场景中引用该模型的选中项，避免删除后下游仍引用已删除模型
                 if (getSelectedChatModel() === modelId) {
                     selectionCache.chat = '';
+                }
+                if (getSelectedQAModel() === modelId) {
+                    setSelectedQAModel('');
+                }
+                if (getSelectedGradingModel() === modelId) {
+                    setSelectedGradingModel('');
                 }
             }
             refreshAllDropdowns();
@@ -9608,7 +9773,9 @@ ${topic && topic !== 'auto' ? '知识点：' + topic : ''}${extraReqPrompt}
         function clearAllConfigured() {
             showConfirmDialog('确认清空？', '确定要清空所有已配置的智能体吗？', function() {
             setConfiguredChatModels({});
+            setConfiguredVizModels({}); // 一并清空可视化模型缓存，避免残留
             selectionCache.chat = '';
+            selectionCache.viz = '';
             setSelectedQAModel('');
             setSelectedGradingModel('');
             refreshAllDropdowns();
@@ -9645,7 +9812,7 @@ ${topic && topic !== 'auto' ? '知识点：' + topic : ''}${extraReqPrompt}
                     const cfg = MODEL_CONFIG[id];
                     const color = PROVIDER_COLORS[id] || '#94a3b8';
                     const isSelected = id === savedSelected;
-                    return `<div class="model-option-item flex items-center gap-2 px-3 py-1.5 ${isSelected ? 'selected' : ''}" onclick="selectQAModel('${id}')" data-model="${id}">
+                    return `<div class="model-option-item flex items-center gap-2 px-3 py-1.5 ${isSelected ? 'selected' : ''}" onclick="selectQAModel('${jsStr(id)}')" data-model="${jsStr(id)}">
                         <span class="w-2 h-2 rounded-full shrink-0" style="background:${color};"></span>
                         <span class="text-[11px] font-medium text-ink-700">${cfg ? cfg.name : id}</span>
                         ${isSelected ? '<i class="fa-solid fa-check text-[9px] text-rouge-500 ml-auto"></i>' : ''}
@@ -9681,7 +9848,7 @@ ${topic && topic !== 'auto' ? '知识点：' + topic : ''}${extraReqPrompt}
                     const cfg = MODEL_CONFIG[id];
                     const color = PROVIDER_COLORS[id] || '#94a3b8';
                     const isSelected = id === savedSelected;
-                    return `<div class="model-option-item flex items-center gap-2 px-3 py-2 ${isSelected ? 'selected' : ''}" onclick="selectChatModel('${id}')" data-model="${id}">
+                    return `<div class="model-option-item flex items-center gap-2 px-3 py-2 ${isSelected ? 'selected' : ''}" onclick="selectChatModel('${jsStr(id)}')" data-model="${jsStr(id)}">
                         <span class="w-2 h-2 rounded-full shrink-0" style="background:${color};"></span>
                         <span class="text-xs font-medium text-ink-700">${cfg ? cfg.name : id}</span>
                         ${isSelected ? '<i class="fa-solid fa-check text-[9px] text-rouge-500 ml-auto"></i>' : ''}
@@ -9689,10 +9856,13 @@ ${topic && topic !== 'auto' ? '知识点：' + topic : ''}${extraReqPrompt}
                 }).join('');
             }
 
-            // 默认选中第一个用户配置的模型
+            // 默认选中第一个用户配置的模型（与 QA 下拉一致：选中即持久化，重启后保持）
             const activeModel = (savedSelected && models[savedSelected] && modelIds.indexOf(savedSelected) !== -1) ? savedSelected : (modelIds.length > 0 ? modelIds[0] : '');
             if (!savedSelected || !models[savedSelected] || modelIds.indexOf(savedSelected) === -1) {
-                if (activeModel) { selectionCache.chat = activeModel; }
+                if (activeModel) {
+                    selectionCache.chat = activeModel;
+                    persistModelFile();
+                }
             }
             const activeCfg = MODEL_CONFIG[activeModel];
             const activeColor = PROVIDER_COLORS[activeModel] || '#94a3b8';
@@ -10008,9 +10178,13 @@ ${topic && topic !== 'auto' ? '知识点：' + topic : ''}${extraReqPrompt}
             if (!form) return;
             const isHidden = form.style.display === 'none' || !form.style.display;
             form.style.display = isHidden ? 'block' : 'none';
-            document.getElementById('studentAccountEditBtn').style.display = isHidden ? 'none' : 'block';
-            document.getElementById('studentAccountSaveBtn').style.display = isHidden ? 'block' : 'none';
-            document.getElementById('studentAccountCancelBtn').style.display = isHidden ? 'block' : 'none';
+            // P2-37：按钮元素判空，避免页面结构变化导致 getElementById(...).style 抛错
+            const editBtn = document.getElementById('studentAccountEditBtn');
+            const saveBtn = document.getElementById('studentAccountSaveBtn');
+            const cancelBtn = document.getElementById('studentAccountCancelBtn');
+            if (editBtn) editBtn.style.display = isHidden ? 'none' : 'block';
+            if (saveBtn) saveBtn.style.display = isHidden ? 'block' : 'none';
+            if (cancelBtn) cancelBtn.style.display = isHidden ? 'block' : 'none';
             if (isHidden) loadStudentAccount();
         }
 
@@ -10034,9 +10208,13 @@ ${topic && topic !== 'auto' ? '知识点：' + topic : ''}${extraReqPrompt}
             if (!form) return;
             loadStudentAccount();
             form.style.display = 'none';
-            document.getElementById('studentAccountEditBtn').style.display = 'block';
-            document.getElementById('studentAccountSaveBtn').style.display = 'none';
-            document.getElementById('studentAccountCancelBtn').style.display = 'none';
+            // P2-37：按钮元素判空
+            const editBtn = document.getElementById('studentAccountEditBtn');
+            const saveBtn = document.getElementById('studentAccountSaveBtn');
+            const cancelBtn = document.getElementById('studentAccountCancelBtn');
+            if (editBtn) editBtn.style.display = 'block';
+            if (saveBtn) saveBtn.style.display = 'none';
+            if (cancelBtn) cancelBtn.style.display = 'none';
         }
 
         // ---- 教材状态展示 ----
@@ -10385,7 +10563,7 @@ ${topic && topic !== 'auto' ? '知识点：' + topic : ''}${extraReqPrompt}
                 desc.style.cssText = 'font-size:11px;color:var(--ink-400);line-height:1.5;margin:0;';
                 div.appendChild(desc);
                 // 文件数
-                const fileCount = Object.keys(skill.files).length;
+                const fileCount = Object.keys(skill.files || {}).length;
                 const meta = document.createElement('span');
                 meta.textContent = fileCount + ' 个文件';
                 meta.style.cssText = 'font-size:10px;color:var(--ink-300);';
@@ -10400,7 +10578,8 @@ ${topic && topic !== 'auto' ? '知识点：' + topic : ''}${extraReqPrompt}
             if (!skills.length) return '';
             const parts = [];
             skills.forEach(function(skill) {
-                const skillMd = skill.files['SKILL.md'] || '';
+                const skillFiles = skill.files || {};
+                const skillMd = skillFiles['SKILL.md'] || '';
                 if (skillMd) {
                     parts.push('【技能：' + skill.name + '】\n' + skillMd);
                 }
@@ -11029,54 +11208,6 @@ ${topic && topic !== 'auto' ? '知识点：' + topic : ''}${extraReqPrompt}
             }
             messages.push({ role: 'user', content: prompt });
 
-            // DeepSeek 官方 API 联网搜索：chat/completions 不支持，须走 /v1/responses + web_search tool（仅 deepseek-v4-flash）
-            if (extraParams && cfg.endpoint && cfg.endpoint.indexOf('api.deepseek.com') !== -1) {
-                const responsesUrl = cfg.endpoint.replace(/\/chat\/completions$/, '/responses');
-                const inputParts = messages.map(function(m) {
-                    if (m.role === 'system') return '[系统指令] ' + m.content;
-                    if (m.role === 'assistant') return '[上一轮回答] ' + String(m.content).substring(0, 600);
-                    return m.content;
-                });
-                const rPayload = { model: model, input: inputParts.join('\n\n'), tools: [{ type: 'web_search' }] };
-                const rCtrl = new AbortController();
-                activeAbortController = rCtrl;
-                const rTimer = setTimeout(function() { try { rCtrl.abort(); } catch(e) {} }, 120000);
-                try {
-                    const rResp = await fetch(responsesUrl, {
-                        method: 'POST',
-                        headers: { 'Content-Type': 'application/json', 'Authorization': 'Bearer ' + apiKey },
-                        body: JSON.stringify(rPayload),
-                        signal: rCtrl.signal
-                    }).catch(function(err) {
-                        if (err.name === 'AbortError') throw new Error('联网搜索请求超时（120秒），请检查网络后重试');
-                        throw err;
-                    });
-                    clearTimeout(rTimer);
-                    activeAbortController = null;
-                    if (rResp.ok) {
-                        const rData = await rResp.json();
-                        let text = rData.output_text || '';
-                        if (!text && rData.output && Array.isArray(rData.output)) {
-                            for (let oi = rData.output.length - 1; oi >= 0; oi--) {
-                                const item = rData.output[oi];
-                                if (item.type === 'message' && item.content && item.content.length) {
-                                    text = item.content.map(function(c) { return c.text || ''; }).join('');
-                                    if (text) break;
-                                }
-                            }
-                        }
-                        if (text && text.trim()) return text.trim();
-                    }
-                    // 参数错误(400/422)或搜索无结果 → 降级到无搜索的 chat/completions
-                } catch (re) {
-                    clearTimeout(rTimer);
-                    activeAbortController = null;
-                    if (re.message && re.message.indexOf('联网搜索请求超时') === 0) throw re;
-                    // 其他网络错误 → 降级到无搜索的 chat/completions
-                }
-                extraParams = null;
-            }
-
             const buildPayload = function(includeExtra) {
                 const p = {
                     model: model,
@@ -11134,6 +11265,8 @@ ${topic && topic !== 'auto' ? '知识点：' + topic : ''}${extraReqPrompt}
                     if (extraParams && supportsSearch) {
                         const fallbackPayload = buildPayload(false);
                         const fbController = new AbortController();
+                        // 降级请求同样纳入全局中断控制，保证用户可中断降级重试
+                        activeAbortController = fbController;
                         const fbTimeoutId = setTimeout(function() { try { fbController.abort(); } catch(e) {} }, 90000);
                         const fallbackResponse = await fetch(cfg.endpoint, {
                             method: 'POST',
@@ -11145,14 +11278,18 @@ ${topic && topic !== 'auto' ? '知识点：' + topic : ''}${extraReqPrompt}
                             signal: fbController.signal
                         }).catch(function(err) {
                             clearTimeout(fbTimeoutId);
+                            activeAbortController = null;
+                            if (err.name === 'AbortError' && isUserAborting) { isUserAborting = false; throw new Error('用户中断了对话'); }
                             if (err.name === 'AbortError') throw new Error('降级重试请求超时，请检查网络后重试');
                             throw err;
                         });
                         clearTimeout(fbTimeoutId);
                         if (fallbackResponse.ok) {
                             const result = await fallbackResponse.json();
+                            activeAbortController = null;
                             return result.choices?.[0]?.message?.content || '';
                         } else {
+                            activeAbortController = null;
                             const errText = await fallbackResponse.text();
                             throw new Error('API 错误 ' + fallbackResponse.status + ': ' + errText);
                         }
@@ -11164,6 +11301,8 @@ ${topic && topic !== 'auto' ? '知识点：' + topic : ''}${extraReqPrompt}
                     throw new Error('API 错误 ' + response.status + ': ' + errText);
                 }
             }
+            // 429 重试全部失败：清理全局中断控制器，避免残留指向已失效的 controller
+            activeAbortController = null;
             throw new Error('API 请求过于频繁，请稍后再试');
         }
 
@@ -11275,8 +11414,15 @@ ${topic && topic !== 'auto' ? '知识点：' + topic : ''}${extraReqPrompt}
                             try {
                                 readResult = await reader.read();
                             } catch (readErr) {
+                                // 用户主动中断：重置全局中断标志，避免残留导致后续请求超时被误判为用户中断
+                                if (isUserAborting) {
+                                    isUserAborting = false;
+                                    if (activeAbortController) activeAbortController = null;
+                                    throw new Error('用户中断了对话');
+                                }
+                                if (activeAbortController) activeAbortController = null;
                                 console.error('[API流式] 读取流失败:', readErr.message);
-                                break;
+                                throw readErr;
                             }
                             const { done, value } = readResult;
                             if (done) break;
@@ -11445,6 +11591,9 @@ ${topic && topic !== 'auto' ? '知识点：' + topic : ''}${extraReqPrompt}
 
                 const controller = new AbortController();
                 activeAbortController = controller;
+                // Gemini 请求同样增加超时控制，避免网络挂死时无法自动恢复
+                const timeoutMs = 90000;
+                const timeoutId = setTimeout(function() { try { controller.abort(); } catch(e) {} }, timeoutMs);
 
                 let response;
                 try {
@@ -11455,38 +11604,50 @@ ${topic && topic !== 'auto' ? '知识点：' + topic : ''}${extraReqPrompt}
                         signal: controller.signal
                     });
                 } catch (err) {
+                    clearTimeout(timeoutId);
                     activeAbortController = null;
                     if (err.name === 'AbortError' && isUserAborting) { isUserAborting = false; throw new Error('用户中断了对话'); }
                     if (err.name === 'AbortError') throw new Error('Gemini API 请求超时');
                     throw err;
                 }
+                clearTimeout(timeoutId);
 
                 if (response.ok) {
                     const reader = response.body.getReader();
                     const decoder = new TextDecoder();
                     let buffer = '';
 
-                    while (true) {
-                        const { done, value } = await reader.read();
-                        if (done) break;
+                    try {
+                        while (true) {
+                            const { done, value } = await reader.read();
+                            if (done) break;
 
-                        buffer += decoder.decode(value, { stream: true });
-                        const lines = buffer.split('\n');
-                        buffer = lines.pop() || '';
+                            buffer += decoder.decode(value, { stream: true });
+                            const lines = buffer.split('\n');
+                            buffer = lines.pop() || '';
 
-                        for (const line of lines) {
-                            const trimmed = line.trim();
-                            if (!trimmed || !trimmed.startsWith('data: ')) continue;
-                            const data = trimmed.slice(6);
+                            for (const line of lines) {
+                                const trimmed = line.trim();
+                                if (!trimmed || !trimmed.startsWith('data: ')) continue;
+                                const data = trimmed.slice(6);
 
-                            try {
-                                const parsed = JSON.parse(data);
-                                const text = parsed.candidates?.[0]?.content?.parts?.[0]?.text;
-                                if (text) yield text;
-                            } catch (e) {
-                                // 忽略解析错误的行
+                                try {
+                                    const parsed = JSON.parse(data);
+                                    const text = parsed.candidates?.[0]?.content?.parts?.[0]?.text;
+                                    if (text) yield text;
+                                } catch (e) {
+                                    // 忽略解析错误的行
+                                }
                             }
                         }
+                    } catch (readErr) {
+                        // 流式读取异常：区分用户中断与网络错误，并复位全局中断标志避免残留
+                        if (readErr.name === 'AbortError' && isUserAborting) {
+                            isUserAborting = false;
+                            throw new Error('用户中断了对话');
+                        }
+                        if (readErr.name === 'AbortError') throw new Error('Gemini API 请求超时');
+                        throw readErr;
                     }
                     activeAbortController = null;
                     return;
@@ -11584,7 +11745,7 @@ ${topic && topic !== 'auto' ? '知识点：' + topic : ''}${extraReqPrompt}
             // 没有文字也没有附件时不发送
             if (!messageText && chatAttachedFiles.length === 0) return;
 
-            // 立即中断当前白板渲染
+            // 立即中断当前白板渲染（P2-30：发送新消息时递增使旧渲染过期；与 streamAndDrawVisualizationByKeywords 内新渲染分配版本号是两处不同用途，非重复计数）
             whiteboardVersionId++;
             document.getElementById('vizLoadingDots')?.classList.add('hidden');
             document.getElementById('vizStatus')?.classList.add('hidden');
@@ -11785,7 +11946,6 @@ ${topic && topic !== 'auto' ? '知识点：' + topic : ''}${extraReqPrompt}
 
                 // 添加AI消息操作栏（时间、复制、重新生成）
                 const aiTime = new Date().toLocaleTimeString('zh-CN', { hour: '2-digit', minute: '2-digit' });
-                const aiMsgId = aiBubble._aiMsgId || aiBubble.dataset.msgId;
                 const actionsBar = document.createElement('div');
                 actionsBar.className = 'msg-actions';
                 actionsBar.innerHTML = '\
@@ -11820,8 +11980,9 @@ ${topic && topic !== 'auto' ? '知识点：' + topic : ''}${extraReqPrompt}
                     try {
                         console.log('[白板] 基于AI回答启动Canvas生成... 模型:', chatModel);
                         saveToWhiteboardHistory();
-                        document.getElementById('vizLoadingDots').classList.remove('hidden');
-                        document.getElementById('vizStatus').classList.remove('hidden');
+                        // P2-28：与 11750 处一致使用可选链判空
+                        document.getElementById('vizLoadingDots')?.classList.remove('hidden');
+                        document.getElementById('vizStatus')?.classList.remove('hidden');
                         await streamAndDrawVisualizationByKeywords(messageText, fullChatResponse);
                         saveToWhiteboardHistory();
 
@@ -11871,8 +12032,9 @@ ${topic && topic !== 'auto' ? '知识点：' + topic : ''}${extraReqPrompt}
                         console.error('[白板] 可视化生成失败:', vizErr);
                         renderVizErrorOnCanvas(vizErr.message || '未知错误');
                     } finally {
-                        document.getElementById('vizLoadingDots').classList.add('hidden');
-                        document.getElementById('vizStatus').classList.add('hidden');
+                        // P2-28：与 11750 处一致使用可选链判空
+                        document.getElementById('vizLoadingDots')?.classList.add('hidden');
+                        document.getElementById('vizStatus')?.classList.add('hidden');
                     }
                 })();
 
@@ -11932,6 +12094,7 @@ ${topic && topic !== 'auto' ? '知识点：' + topic : ''}${extraReqPrompt}
             const wrapper = document.createElement('div');
             wrapper.className = 'msg-group flex flex-col items-start';
             wrapper.dataset.msgId = aiMsgId;
+            wrapper.id = aiMsgId;
 
             const innerWrap = document.createElement('div');
             innerWrap.className = 'flex items-start space-x-2.5 w-full';
@@ -12019,14 +12182,29 @@ ${topic && topic !== 'auto' ? '知识点：' + topic : ''}${extraReqPrompt}
                 var idx = records.findIndex(function(r) { return r.id === currentChatSession.id; });
                 if (idx >= 0) {
                     var record = records[idx];
-                    // 找到要删除的消息索引
+                    // 优先从 DOM 用户消息提取原始文本，用于在历史记录中定位实时消息
+                    var userBubble = userMsg ? userMsg.querySelector('.bg-rouge-500') : null;
+                    var userText = (userBubble ? (userBubble.innerText || userBubble.textContent || '') : '').trim();
                     var msgIdx = -1;
-                    for (var i = 0; i < record.messages.length; i++) {
-                        if (record.messages[i].role === 'user' && i % 2 === 0) {
-                            var checkUserMsgId = 'msg-hist-' + i;
-                            if (checkUserMsgId === userMsgId) {
+                    if (userText) {
+                        // 实时消息：按用户消息内容匹配（role=user 且 content 与 DOM 提取文本一致）
+                        for (var i = 0; i < record.messages.length; i++) {
+                            var rec = record.messages[i];
+                            if (rec.role === 'user' && (rec.content || '').trim() === userText) {
                                 msgIdx = i;
                                 break;
+                            }
+                        }
+                    }
+                    if (msgIdx < 0) {
+                        // 历史加载会话：沿用 msg-hist- 索引匹配
+                        for (var j = 0; j < record.messages.length; j++) {
+                            if (record.messages[j].role === 'user' && j % 2 === 0) {
+                                var checkUserMsgId = 'msg-hist-' + j;
+                                if (checkUserMsgId === userMsgId) {
+                                    msgIdx = j;
+                                    break;
+                                }
                             }
                         }
                     }
@@ -12064,6 +12242,32 @@ ${topic && topic !== 'auto' ? '知识点：' + topic : ''}${extraReqPrompt}
             const questionText = userBubble.innerText || userBubble.textContent;
             // 删除旧AI回答
             if (aiMsg) aiMsg.remove();
+            // 同步清理 conversationHistory 中该问答对（保持内存与历史一致，避免重新生成后残留旧回答）
+            const qText = (questionText || '').trim();
+            for (let hi = 0; hi < conversationHistory.length; hi++) {
+                if (conversationHistory[hi].role === 'user' && (conversationHistory[hi].content === qText || conversationHistory[hi].content.trim() === qText)) {
+                    // 删除该用户消息及其后紧跟的 assistant 回答
+                    conversationHistory.splice(hi, 1);
+                    if (conversationHistory[hi] && conversationHistory[hi].role === 'assistant') {
+                        conversationHistory.splice(hi, 1);
+                    }
+                    break;
+                }
+            }
+            // 同步清理当前会话历史中的旧问答对
+            if (currentChatSession && currentChatSession.messages) {
+                for (let mi = 0; mi < currentChatSession.messages.length; mi++) {
+                    const m = currentChatSession.messages[mi];
+                    const mText = (m.content || '').trim();
+                    if (m.role === 'user' && (mText === qText || mText === questionText)) {
+                        currentChatSession.messages.splice(mi, 1);
+                        if (currentChatSession.messages[mi] && currentChatSession.messages[mi].role === 'assistant') {
+                            currentChatSession.messages.splice(mi, 1);
+                        }
+                        break;
+                    }
+                }
+            }
             // 重新填充输入框并触发发送
             const input = document.getElementById('chatInput');
             if (input) {
@@ -12720,7 +12924,9 @@ ${topic && topic !== 'auto' ? '知识点：' + topic : ''}${extraReqPrompt}
                     '<div class="flex flex-wrap gap-1.5">' +
                     regions.map(r => {
                         const active = textbookState.region === r;
-                        const modeName = GAOKAO_MODES[REGION_MODE_MAP[r]].name;
+                        // P2-34：REGION_MODE_MAP 缺失该地区时回退默认，避免取 GAOKAO_MODES[undefined] 抛错
+                        const mapMode = REGION_MODE_MAP[r] || '3+3';
+                        const modeName = GAOKAO_MODES[mapMode] ? GAOKAO_MODES[mapMode].name : (mapMode || '未设置');
                         return '<button onclick="selectRegion(\'' + r + '\')" class="px-2.5 py-1.5 rounded-lg text-xs font-medium border transition-all ' +
                             (active ? 'bg-rouge-500 text-white border-rouge-500' : 'bg-white text-ink-600 border-ink-200 hover:border-rouge-300 hover:text-rouge-500') + '" title="' + modeName + '">' + r + '</button>';
                     }).join('') +
@@ -12801,6 +13007,11 @@ ${topic && topic !== 'auto' ? '知识点：' + topic : ''}${extraReqPrompt}
 
         // 切换科目选择
         function toggleSubject(subject) {
+            // P2-35：mode 未设置（用户未选地区）时直接返回，避免后续访问 mode.elective 抛错
+            if (!textbookState.mode) {
+                showToast('请先选择地区');
+                return;
+            }
             // 语数英为必考科目，不可取消
             if (['语文', '数学', '英语'].includes(subject) && textbookState.selectedSubjects.includes(subject)) {
                 showToast('语数英为必考科目，不可取消');
@@ -13026,7 +13237,7 @@ ${topic && topic !== 'auto' ? '知识点：' + topic : ''}${extraReqPrompt}
 
             // 更新UI - 教材选择后不显示数量徽章
             const badge = document.getElementById('textbookBadge');
-            badge.classList.add('hidden');
+            if (badge) badge.classList.add('hidden');
             if (activeTextbooks.length > 0) {
                 showToast('已加载 ' + Object.keys(knowledgeGraphs).length + ' 个科目知识图谱');
             } else {
@@ -13084,7 +13295,7 @@ ${topic && topic !== 'auto' ? '知识点：' + topic : ''}${extraReqPrompt}
 
                 // 教材选择后不显示数量徽章
                 const badge = document.getElementById('textbookBadge');
-                badge.classList.add('hidden');
+                if (badge) badge.classList.add('hidden');
 
                 // 恢复知识图谱
                 try {
@@ -13107,7 +13318,7 @@ ${topic && topic !== 'auto' ? '知识点：' + topic : ''}${extraReqPrompt}
             knowledgeGraphs = {};
             knowledgeGraphsLoaded = false;
             const badge = document.getElementById('textbookBadge');
-            badge.classList.add('hidden');
+            if (badge) badge.classList.add('hidden');
         }
 
         // ==================== 知识图谱模块 ====================
@@ -13680,14 +13891,19 @@ ${topic && topic !== 'auto' ? '知识点：' + topic : ''}${extraReqPrompt}
                 container.innerHTML = '<div class="text-center py-8 text-ink-300"><i class="fa-solid fa-comments text-3xl mb-2 opacity-40"></i><p class="text-xs">暂无历史记录</p></div>';
                 return;
             }
+            // P2-39：公共时间格式化，非法时间返回"未知时间"
+            function formatRecordTime(createTime) {
+                var d = new Date(createTime);
+                if (isNaN(d.getTime())) return '未知时间';
+                return d.toLocaleString('zh-CN', { month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit' });
+            }
             records.sort(function(a, b) {
                 var ap = a.pinned ? 1 : 0, bp = b.pinned ? 1 : 0;
                 if (ap !== bp) return bp - ap;
                 return new Date(b.createTime) - new Date(a.createTime);
             });
             container.innerHTML = records.map(function(record) {
-                var date = new Date(record.createTime);
-                var dateStr = date.toLocaleString('zh-CN', { month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit' });
+                var dateStr = formatRecordTime(record.createTime);
                 var pinnedBadge = record.pinned ? '<i class="fa-solid fa-thumbtack text-[9px] text-rouge-500 mr-0.5"></i>' : '';
                 return '<div class="p-2.5 rounded-xl border cursor-pointer transition-all relative ' + (record.pinned ? 'border-rouge-400 bg-rouge-50 ring-1 ring-rouge-200' : 'border-ink-100 bg-white hover:border-rouge-200 hover:bg-rouge-50/30') + '" onclick="loadQAHistory(\'' + record.id + '\')">' +
                     '<div class="flex items-start justify-between gap-1.5"><div class="flex-1 min-w-0">' +
@@ -13833,8 +14049,9 @@ ${topic && topic !== 'auto' ? '知识点：' + topic : ''}${extraReqPrompt}
                 return new Date(b.createTime) - new Date(a.createTime);
             });
             container.innerHTML = records.map(function(record) {
-                var date = new Date(record.createTime);
-                var dateStr = date.toLocaleString('zh-CN', { month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit' });
+                // P2-39：非法时间显示"未知时间"
+                var d = new Date(record.createTime);
+                var dateStr = isNaN(d.getTime()) ? '未知时间' : d.toLocaleString('zh-CN', { month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit' });
                 var pinnedBadge = record.pinned ? '<i class="fa-solid fa-thumbtack text-[9px] text-rouge-500 mr-0.5"></i>' : '';
                 return '<div class="p-2.5 rounded-xl border cursor-pointer transition-all relative ' + (record.pinned ? 'border-rouge-400 bg-rouge-50 ring-1 ring-rouge-200' : 'border-ink-100 bg-white hover:border-rouge-200 hover:bg-rouge-50/30') + '" onclick="loadGradingHistory(\'' + record.id + '\')">' +
                     '<div class="flex items-start justify-between gap-1.5"><div class="flex-1 min-w-0">' +
@@ -13874,6 +14091,9 @@ ${topic && topic !== 'auto' ? '知识点：' + topic : ''}${extraReqPrompt}
                         gradingConversationHistory.push({ role: msg.role, content: msg.content });
                     });
                 }
+            } else {
+                // P2-38：记录无结果内容时给出明确反馈，避免空白无提示
+                resultEl.innerHTML = '<div style="padding:24px;text-align:center;color:#9ca3af;">该记录无批改结果内容</div>';
             }
             window.currentGradingSessionId = record.id;
             toggleGradingHistory();
@@ -13972,8 +14192,9 @@ ${topic && topic !== 'auto' ? '知识点：' + topic : ''}${extraReqPrompt}
                 return new Date(b.createTime) - new Date(a.createTime);
             });
             container.innerHTML = records.map(function(record) {
-                var date = new Date(record.createTime);
-                var dateStr = date.toLocaleString('zh-CN', { month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit' });
+                // P2-39：非法时间显示"未知时间"
+                var d = new Date(record.createTime);
+                var dateStr = isNaN(d.getTime()) ? '未知时间' : d.toLocaleString('zh-CN', { month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit' });
                 var qCount = record.questions ? record.questions.length : 0;
                 var pinnedBadge = record.pinned ? '<i class="fa-solid fa-thumbtack text-[9px] text-rouge-500 mr-0.5"></i>' : '';
                 return '<div class="p-2.5 rounded-xl border cursor-pointer transition-all relative ' + (record.pinned ? 'border-rouge-400 bg-rouge-50 ring-1 ring-rouge-200' : 'border-ink-100 bg-white hover:border-rouge-200 hover:bg-rouge-50/30') + '" onclick="loadPracticeHistory(\'' + record.id + '\')">' +
@@ -14147,8 +14368,9 @@ ${topic && topic !== 'auto' ? '知识点：' + topic : ''}${extraReqPrompt}
             });
             
             container.innerHTML = records.map(function(record) {
-                var date = new Date(record.createTime);
-                var dateStr = date.toLocaleString('zh-CN', { month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit' });
+                // P2-39：非法时间显示"未知时间"
+                var d = new Date(record.createTime);
+                var dateStr = isNaN(d.getTime()) ? '未知时间' : d.toLocaleString('zh-CN', { month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit' });
                 var isActive = currentChatSession && currentChatSession.id === record.id;
                 var msgCount = record.messages ? record.messages.length : 0;
                 var roundCount = Math.ceil(msgCount / 2); // 一轮对话 = 一问一答
@@ -14461,9 +14683,19 @@ ${topic && topic !== 'auto' ? '知识点：' + topic : ''}${extraReqPrompt}
             showConfirmDialog('确认清空？', '确定要清空全部历史记录吗？<br>此操作不可恢复', function() {
                 saveChatHistoryRecords([]);
                 currentChatSession = null;
+                // 同步清理模型记忆与当前会话引用，避免内存残留
+                conversationHistory = [];
+                // 同步重置白板可视区与视觉模型缓存，避免历史清空后残留旧内容
+                clearWhiteboard();
+                if (typeof clearVizModelCache === 'function') clearVizModelCache();
                 renderHistoryList();
                 showToast('已清空全部历史记录');
             });
+        }
+
+        // 清空视觉模型缓存（配合历史记录清空，避免残留明文 Key）
+        function clearVizModelCache() {
+            vizModelsCache = {};
         }
 
         // ==================== 发起新对话 ====================
@@ -14779,9 +15011,5 @@ ${topic && topic !== 'auto' ? '知识点：' + topic : ''}${extraReqPrompt}
             whiteboardHistoryIndex = -1;
         }
     </script>
-
-    <!-- 孔孟大模型 悬浮球（左键对话 / 右键设置 / 拖到边缘自动隐藏） -->
-    <script>window.KM_FLOAT_CONFIG = { logo: 'logo.png' };</script>
-    <script src="./悬浮球.js"></script>
 </body>
 </html>
