@@ -9,7 +9,7 @@
     "typecheck": "tsc -p tsconfig.json --noEmit && tsc -p tsconfig.main.json --noEmit",
     "build:renderer": "tsc -p tsconfig.renderer-sandbox.json && tsc -p tsconfig.renderer-app.json && tsc -p tsconfig.renderer-shell.json",
     "build:main": "tsc -p tsconfig.main.json",
-    "build:ts": "npm run build:renderer && npm run build:main",
+    "build:ts": "node scripts/build-ts.mjs",
     "start": "npm run build:ts && electron . --dev",
     "start:prod": "electron .",
     "build": "npm run build:ts && electron-builder --win",
@@ -19,7 +19,9 @@
   },
   "devDependencies": {
     "electron": "^31.3.0",
-    "electron-builder": "^24.13.3"
+    "electron-builder": "^24.13.3",
+    "typescript": "^5.4.0",
+    "@types/node": "^20.11.0"
   },
   "build": {
     "appId": "com.baige.edu-agent-teacher",
