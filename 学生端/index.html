@@ -3385,7 +3385,15 @@
             var remark = document.getElementById('gradingRemark').value.trim();
             var typeName = gradingType === 'exam' ? '试卷' : (gradingType === 'essay' ? '作文' : '作业');
             var subject = getSelectedGradingSubject();
-            var subjCfg = QA_SUBJECT_CONFIG[subject] || QA_SUBJECT_CONFIG.biology;
+            // 作文批改不使用科目角色（按语种走中/英文 prompt），其余类型必须选定科目：
+            // 科目为空时不再静默回退"生物"（否则会出现"生物老师批改数学卷"），直接提示并中止
+            if (gradingType !== 'essay' && (!subject || !QA_SUBJECT_CONFIG[subject])) {
+                showToast('请先选择批改科目');
+                return;
+            }
+            var subjCfg = gradingType === 'essay'
+                ? (QA_SUBJECT_CONFIG[gradingEssayLang === 'english' ? 'english' : 'chinese'] || QA_SUBJECT_CONFIG.biology)
+                : QA_SUBJECT_CONFIG[subject];
 
             // 构建提示词和系统提示（根据批改类型区分）
             var promptText, systemPrompt;
@@ -3834,14 +3842,20 @@
         const qaAttachedFiles = [];
 
         // 高性能文件读取：根据文件类型只读取一次，避免双重读取
+        // 失败时 reject（onerror/onabort），避免调用方 Promise 永久 pending 且隐藏 input 泄漏 DOM
         function readFileOptimized(file, isImage) {
-            return new Promise(function(resolve) {
+            return new Promise(function(resolve, reject) {
+                var fail = function(ev) {
+                    reject(new Error('文件读取失败：' + (file.name || '未知文件') + (ev && ev.target && ev.target.error ? '（' + ev.target.error.name + '）' : '')));
+                };
                 if (isImage) {
                     // 图片只需 DataURL（用于预览和压缩）
                     const reader = new FileReader();
                     reader.onload = function(ev) {
                         resolve({ dataUrl: ev.target.result, arrayBuffer: null, preReadText: null });
                     };
+                    reader.onerror = fail;
+                    reader.onabort = fail;
                     reader.readAsDataURL(file);
                 } else {
                     // 检测是否为纯文本文件，使用 readAsText 直接读取（比 ArrayBuffer 解码更快）
@@ -3861,6 +3875,8 @@
                         textReader.onload = function(ev) {
                             resolve({ dataUrl: null, arrayBuffer: null, preReadText: ev.target.result });
                         };
+                        textReader.onerror = fail;
+                        textReader.onabort = fail;
                         textReader.readAsText(file, 'utf-8');
                     } else {
                         // 二进制文档只需 ArrayBuffer（PDF/DOCX/XLSX等），跳过慢速 DataURL
@@ -3868,6 +3884,8 @@
                         reader.onload = function(ev) {
                             resolve({ dataUrl: null, arrayBuffer: ev.target.result, preReadText: null });
                         };
+                        reader.onerror = fail;
+                        reader.onabort = fail;
                         reader.readAsArrayBuffer(file);
                     }
                 }
@@ -3931,6 +3949,11 @@
                         renderQAAttachedFiles();
                         input.remove();
                     }
+                }).catch(function(err) {
+                    // 读取失败：提示并移除临时 input，避免 Promise 永久 pending 与 DOM 泄漏
+                    console.warn('[文件上传] 读取失败:', err && err.message);
+                    showToast('文件读取失败：' + (file.name || '未知文件'));
+                    input.remove();
                 });
             });
 
@@ -4548,12 +4571,22 @@
                             chatAttachedFiles.push(fileData);
                             renderChatAttachedFiles();
                             input.remove();
+                        }).catch(function() {
+                            // 压缩失败：保留原图直接入列，不再静默丢弃附件
+                            chatAttachedFiles.push(fileData);
+                            renderChatAttachedFiles();
+                            input.remove();
                         });
                     } else {
                         chatAttachedFiles.push(fileData);
                         renderChatAttachedFiles();
                         input.remove();
                     }
+                }).catch(function(err) {
+                    // 读取失败：提示并移除临时 input，避免 Promise 永久 pending 与 DOM 泄漏
+                    console.warn('[聊天上传] 读取失败:', err && err.message);
+                    showToast('文件读取失败：' + (file.name || '未知文件'));
+                    input.remove();
                 });
             });
 
@@ -4776,7 +4809,7 @@
 
             // 填充作业信息（含截止时间）
             document.getElementById('submitHwTitle').textContent = hw.title;
-            document.getElementById('submitHwMeta').textContent = hw.subject + ' · ' + hw.teacher + ' · 截止 ' + hw.dueDate + ' ' + (hw.dueTime || '23:59');
+            document.getElementById('submitHwMeta').textContent = hw.subject + ' · ' + hw.teacher + ' · 截止 ' + (hw.dueDate ? (hw.dueDate + ' ' + (hw.dueTime || '23:59')) : '未设置');
             document.getElementById('submitHwDesc').innerHTML = '<i class="fa-solid fa-circle-info text-rouge-400 mr-1"></i>' + escapeHtml(hw.desc);
 
             // 状态徽章
@@ -4786,10 +4819,14 @@
                 statusEl.innerHTML = '<span class="px-2.5 py-1 text-[11px] font-medium bg-green-50 text-green-600 rounded-lg flex items-center gap-1"><i class="fa-solid fa-check-circle"></i>已提交</span>';
                 if (submitBtn) submitBtn.innerHTML = '<i class="fa-solid fa-paper-plane"></i>追加提交';
             } else {
+                // 截止时间展示与过期判断：dueDate 缺失或非法时不能走进度比较（Invalid Date < now 恒为 false，会永远显示"待提交"）
                 var dueStr = hw.dueDate + 'T' + (hw.dueTime || '23:59');
                 var due = new Date(dueStr);
                 var now = new Date();
-                if (due < now) {
+                var dueValid = !!hw.dueDate && !isNaN(due.getTime());
+                if (!dueValid) {
+                    statusEl.innerHTML = '<span class="px-2.5 py-1 text-[11px] font-medium bg-ink-50 text-ink-500 rounded-lg flex items-center gap-1"><i class="fa-solid fa-calendar"></i>待提交（未设置截止时间）</span>';
+                } else if (due < now) {
                     statusEl.innerHTML = '<span class="px-2.5 py-1 text-[11px] font-medium bg-rose-50 text-rose-500 rounded-lg flex items-center gap-1"><i class="fa-solid fa-triangle-exclamation"></i>已过期</span>';
                 } else {
                     statusEl.innerHTML = '<span class="px-2.5 py-1 text-[11px] font-medium bg-amber-50 text-amber-500 rounded-lg flex items-center gap-1"><i class="fa-solid fa-clock"></i>待提交</span>';
@@ -7229,14 +7266,24 @@ ${topic && topic !== 'auto' ? '知识点：' + topic : ''}${extraReqPrompt}
         }
 
         // 初始化诊断页面科目下拉框和成绩输入框
+        // _diagPageInited 守卫：resize 监听与拖拽绑定只执行一次（switchTab 每次进入都会调本函数，
+        // 重复绑定会导致一次缩放触发 N 次重绘、拖入 1 个文件被 push N 次）
+        var _diagPageInited = false;
         function initDiagnosisPage() {
             const subjects = getDiagSubjects();
+            // 草稿保留：重建输入区前先把各科目已填成绩与已选试卷/答题卡存起来，重建后恢复，
+            // 避免切换 tab 再回来时静默丢失未保存的输入
+            if (!window._diagDraftScores) window._diagDraftScores = {};
+            subjects.forEach(function(subj) {
+                var prev = document.getElementById('diagScore_' + subj);
+                if (prev && prev.value) window._diagDraftScores[subj] = prev.value;
+            });
             // 填充成绩输入框（含试卷/答题卡上传）
             const scoreInputs = document.getElementById('diagScoreInputs');
             if (scoreInputs) {
                 scoreInputs.innerHTML = '';
-                window._newPapers = {};
-                window._newAnswers = {};
+                if (!window._newPapers) window._newPapers = {};
+                if (!window._newAnswers) window._newAnswers = {};
                 subjects.forEach(function(subj) {
                     const div = document.createElement('div');
                     div.className = 'p-2.5 border border-rouge-100 rounded-xl bg-rouge-50/20';
@@ -7256,6 +7303,12 @@ ${topic && topic !== 'auto' ? '知识点：' + topic : ''}${extraReqPrompt}
                         '<input type="file" id="newAnswerInput_' + subj + '" class="hidden" accept="image/*,.pdf,.doc,.docx" onchange="handleNewAnswerUpload(event, \'' + subj + '\')">';
                     scoreInputs.appendChild(div);
                 });
+                // 恢复成绩草稿（渲染后设置 value 并手动触发一次总分汇总）
+                subjects.forEach(function(subj) {
+                    var el = document.getElementById('diagScore_' + subj);
+                    if (el && window._diagDraftScores[subj]) el.value = window._diagDraftScores[subj];
+                });
+                if (typeof autoCalcDiagTotal === 'function') autoCalcDiagTotal();
             }
             // 填充错题科目下拉框
             const wrongSubj = document.getElementById('diagWrongSubject');
@@ -7279,17 +7332,20 @@ ${topic && topic !== 'auto' ? '知识点：' + topic : ''}${extraReqPrompt}
             }
             refreshDiagScoreHistory();
             refreshDiagWrongHistory();
-            initDiagWrongDragDrop();
-            // 窗口大小变化时重绘图表
-            window.addEventListener('resize', function() {
-                if (document.getElementById('page-diagnosis') && !document.getElementById('page-diagnosis').classList.contains('hidden')) {
-                    var subj = document.getElementById('diagReportSubject');
-                    if (subj && subj.value) {
-                        clearTimeout(window._diagResizeTimer);
-                        window._diagResizeTimer = setTimeout(function() { renderDiagnosisReport(); }, 300);
+            if (!_diagPageInited) {
+                initDiagWrongDragDrop();
+                // 窗口大小变化时重绘图表（只绑一次，见函数头注释）
+                window.addEventListener('resize', function() {
+                    if (document.getElementById('page-diagnosis') && !document.getElementById('page-diagnosis').classList.contains('hidden')) {
+                        var subj = document.getElementById('diagReportSubject');
+                        if (subj && subj.value) {
+                            clearTimeout(window._diagResizeTimer);
+                            window._diagResizeTimer = setTimeout(function() { renderDiagnosisReport(); }, 300);
+                        }
                     }
-                }
-            });
+                });
+                _diagPageInited = true;
+            }
             // 设置默认日期为今天（YYYY-MM-DD格式）
             var today = new Date();
             var todayStr = today.getFullYear() + '-' + String(today.getMonth() + 1).padStart(2, '0') + '-' + String(today.getDate()).padStart(2, '0');
@@ -7927,6 +7983,25 @@ ${topic && topic !== 'auto' ? '知识点：' + topic : ''}${extraReqPrompt}
         }
 
         // 拖拽上传支持
+        // 错题题型联动（diagWrongSubject 的 onchange 调用，原函数缺失导致切换科目即 ReferenceError）：
+        // 按科目过滤题型——语文/英语不出现"实验题"，物理/化学/生物不出现"作文"，未选科目时展示全部
+        function updateDiagWrongTopicOptions() {
+            const subjSel = document.getElementById('diagWrongSubject');
+            const typeSel = document.getElementById('diagWrongType');
+            if (!subjSel || !typeSel) return;
+            const subj = subjSel.value;
+            const ALL_TYPES = ['选择题', '填空题', '解答题', '实验题', '作文', '其他'];
+            let types = ALL_TYPES.slice();
+            if (subj === '语文' || subj === '英语') {
+                types = types.filter(t => t !== '实验题');
+            } else if (subj === '物理' || subj === '化学' || subj === '生物') {
+                types = types.filter(t => t !== '作文');
+            }
+            const prev = typeSel.value;
+            typeSel.innerHTML = types.map(t => '<option value="' + t + '">' + t + '</option>').join('');
+            if (prev && types.indexOf(prev) >= 0) typeSel.value = prev;
+        }
+
         function initDiagWrongDragDrop() {
             var zone = document.getElementById('diagWrongUploadZone');
             if (zone) {
@@ -9371,6 +9446,19 @@ ${topic && topic !== 'auto' ? '知识点：' + topic : ''}${extraReqPrompt}
 
         // 渲染 Markdown 文本为 HTML
         // 核心思路：代码块/行内代码用HTML注释占位 → LaTeX用HTML元素占位(<span data-kx-*>) → marked.parse() → KaTeX渲染 → 还原代码块
+
+        // AI 输出消毒：marked v11 默认透传原始 HTML，AI 返回的 <script>/onerror 等会随 innerHTML 执行。
+        // 剥掉危险标签整体、on* 事件属性与 javascript: 协议（对受信的 KaTeX/代码高亮产物无副作用）。
+        function sanitizeAiHtml(html) {
+            if (!html) return '';
+            let out = String(html);
+            out = out.replace(/<\s*(script|style|iframe|object|embed|form|link|meta|base)[^>]*>[\s\S]*?<\s*\/\s*\1\s*>/gi, '');
+            out = out.replace(/<\s*\/?\s*(script|style|iframe|object|embed|form|link|meta|base)[^>]*>/gi, '');
+            out = out.replace(/\son[a-zA-Z]+\s*=\s*("[^"]*"|'[^']*'|[^\s>]+)/gi, '');
+            out = out.replace(/(href|src)\s*=\s*("javascript:[^"]*"|'javascript:[^']*'|javascript:[^\s>]+)/gi, '$1="#"');
+            return out;
+        }
+
         function renderMarkdown(text) {
             if (!text) return '';
             try {
@@ -9494,6 +9582,11 @@ ${topic && topic !== 'auto' ? '知识点：' + topic : ''}${extraReqPrompt}
                     html = html.replaceAll('<!--IMG' + i + '-->', img);
                 });
 
+                // 统一消毒：marked v11 会透传 AI 输出中的原始 HTML，剥掉 script/iframe 等危险标签、
+                // on* 事件属性与 javascript: 协议，防止 AI 返回内容在页面内执行脚本（覆盖 marked 原文
+                // 与图片/公式等所有注入路径）
+                html = sanitizeAiHtml(html);
+
                 return html;
             } catch(e) {
                 console.error('[Markdown] 渲染失败:', e);
@@ -9556,6 +9649,9 @@ ${topic && topic !== 'auto' ? '知识点：' + topic : ''}${extraReqPrompt}
                 imageStore.forEach((img, i) => {
                     html = html.replaceAll('<!--IMG' + i + '-->', img);
                 });
+
+                // 与 renderMarkdown 一致：marked.parseInline 同样透传原始 HTML，需消毒
+                html = sanitizeAiHtml(html);
 
                 return html;
             } catch(e) {
@@ -9759,6 +9855,9 @@ ${topic && topic !== 'auto' ? '知识点：' + topic : ''}${extraReqPrompt}
                 // 同步清理各个场景中引用该模型的选中项，避免删除后下游仍引用已删除模型
                 if (getSelectedChatModel() === modelId) {
                     selectionCache.chat = '';
+                    // setConfiguredChatModels 的 persist 发生在此赋值之前，必须补一次落盘，
+                    // 否则重启后 model.json 的 selected.chat 仍指向已删除的模型
+                    persistModelFile();
                 }
                 if (getSelectedQAModel() === modelId) {
                     setSelectedQAModel('');
@@ -14582,10 +14681,16 @@ ${topic && topic !== 'auto' ? '知识点：' + topic : ''}${extraReqPrompt}
                     container.appendChild(userWrapper);
                 } else if (msg.role === 'assistant') {
                     var aiMsgId = 'ai-hist-' + idx;
+                    // 配对 id：deleteMessagePair 靠 data-pair-id 查找对应的 AI 气泡，
+                    // 历史渲染必须与实时路径（dataset.pairId = userMsgId）保持一致，否则删除后 AI 回答残留在界面
+                    var pairUserId = 'msg-hist-' + (idx - 1);
                     var aiTime = new Date(msg.time).toLocaleTimeString('zh-CN', { hour: '2-digit', minute: '2-digit' });
                     var aiWrapper = document.createElement('div');
                     aiWrapper.className = 'msg-group flex flex-col items-start';
                     aiWrapper.dataset.msgId = aiMsgId;
+                    if (idx > 0 && record.messages[idx - 1] && record.messages[idx - 1].role === 'user') {
+                        aiWrapper.dataset.pairId = pairUserId;
+                    }
                     
                     // 与 appendChatMessageStream 完全相同的结构
                     var innerWrap = document.createElement('div');
