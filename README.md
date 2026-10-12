@@ -132,10 +132,13 @@ npm start          # 启动桌面应用
 ### 教师端
 ```bash
 cd 教师端
-npm install        # 安装依赖
+npm install        # 安装依赖（首次会安装 TypeScript；electron 下载较慢，可配置镜像）
 npm start          # 启动桌面应用（开发模式，自动先执行 build:ts 编译 TypeScript）
 # 沙箱服务（可选）：cd teacher-agent-sandbox && docker compose up -d
 ```
+
+> **工程说明**：`src/**/*.ts` 为唯一源码，编译产物（`electron/`、`teacher-agent-sandbox/js/`）不入库，首次使用必须先 `npm run build:ts`（`npm start` 已内置）。
+> 仓库现存历史遗留的类型错误基线（`npm run typecheck` 可查全部）：构建脚本 `scripts/build-ts.mjs` 采用「容忍基线、阻断新增」策略——错误数不超过基线即放行（保证 `npm start` 可用），超过基线则构建失败并列出新增错误。修复历史错误后请同步下调脚本内的 `BASELINE`。
 
 ### 云端同步原型
 ```bash

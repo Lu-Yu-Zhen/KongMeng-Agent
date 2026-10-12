@@ -6866,7 +6866,9 @@ ${topic && topic !== 'auto' ? '知识点：' + topic : ''}${extraReqPrompt}
                     const userNorm = userAns.toUpperCase().split('').sort().join('');
                     isCorrect = userNorm === correctNorm;
                 } else if (q.type === 'fill') {
-                    isCorrect = userAns.replace(/\s+/g, '') === (q.answer || '').replace(/\s+/g, '').replace(/^\$+|\$+$/g, '');
+                    // 填空判分：两侧统一去空白与首尾 $（学生从题干复制答案常带 $，只剥标准答案会误判）
+                    const stripFill = (s) => String(s || '').replace(/\s+/g, '').replace(/^\$+|\$+$/g, '');
+                    isCorrect = stripFill(userAns) === stripFill(q.answer);
                 } else {
                     // 解答题/作文：无法自动判分，标记为null（显示参考答案）
                     isCorrect = null;
@@ -7233,7 +7235,9 @@ ${topic && topic !== 'auto' ? '知识点：' + topic : ''}${extraReqPrompt}
                     if (parentW > 50 && parentW < 2000) logicalW = parentW;
                 }
             }
-            const scale = 8;
+            // 像素密度：2 倍足够高清（原 8 倍会把 750×180 分配到 6000×1440 物理像素，
+            // 综合报告同时画多张图时累计数千万像素，低配机明显卡顿）
+            const scale = 2;
             canvas.width = logicalW * scale;
             canvas.height = logicalH * scale;
             if (autoWidth !== false) {

@@ -2543,6 +2543,11 @@ function loadBeikeHistoryRecord(id: string){
    });
   }
  }
+ /* 同步 Agent 对话记忆：只恢复界面不复记忆会让智能体跨轮上下文仍是上一个会话，
+    回答与当前记录脱节（P3-14） */
+ if(window.AgentCore && typeof window.AgentCore.loadHistory==='function'){
+  window.AgentCore.loadHistory(beikeHistory||[]);
+ }
 }
 function deleteBeikeHistoryRecord(id: string){
  var records=getBeikeHistoryRecords();

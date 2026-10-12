@@ -174,6 +174,11 @@
       if (this._toolCache) this._toolCache.clear();
     },
 
+    /** 加载历史会话到对话记忆（备课历史记录恢复时调用，避免跨轮记忆与当前记录脱节） */
+    loadHistory(history: LegacyBoundary) {
+      this._convoHistory = Array.isArray(history) ? history.slice() : [];
+    },
+
     /** 运行一个智能体任务 */
     async run(task: LegacyBoundary, opts: LegacyBoundary) {
       opts = opts || {};
