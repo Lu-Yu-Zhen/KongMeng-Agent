@@ -169,7 +169,7 @@
   async function _generate(meta: LegacyBoundary, shared: LegacyBoundary, deps: LegacyBoundary) {
     var ctx = (shared && shared.ctx) || {};
     var intent = (shared && shared.intent) || {};
-    var vars = {
+    var vars: LegacyBoundary = {
       topic: ctx.topic || '',
       subject: ctx.subject || '',
       grade: ctx.grade || '',
@@ -181,6 +181,17 @@
       keyPoints: (intent.keyPoints && intent.keyPoints.length) ? intent.keyPoints.join('；') : '（基于课题常识把握）',
       quantities: intent.quantities || {},
     };
+
+    // 批改材料透传（grading 模板要求 {questions}/{standardAnswers}/{studentAnswers}）：
+    // 优先取上游结构化传入的 shared.grading / intent.grading；缺失时以教师原始输入兜底
+    // （题目/标准答案/学生作答通常直接写在请求里），模板对空值有"明确说明未提供、严禁虚构"的处理分支。
+    var gradingMat = (shared && shared.grading) || (intent && (intent as LegacyBoundary).grading) || {};
+    var gradingFallback = (shared && shared.userInput) ? String(shared.userInput).slice(0, 4000) : '';
+    if (meta.templateKey === 'grading') {
+      vars.questions = (gradingMat as LegacyBoundary).questions || gradingFallback || '（未提供题目）';
+      vars.standardAnswers = (gradingMat as LegacyBoundary).standardAnswers || '（未提供标准答案/评分要点）';
+      vars.studentAnswers = (gradingMat as LegacyBoundary).studentAnswers || gradingFallback || '（未提供学生作答）';
+    }
 
     var template = global.WorkflowPrompts.getGeneratePrompt(meta.templateKey);
     var prompt = global.WorkflowPrompts.fill(template, vars);

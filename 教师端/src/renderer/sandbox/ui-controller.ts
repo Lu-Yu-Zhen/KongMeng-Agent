@@ -86,7 +86,12 @@
       if (global.clearBeikeChat && !(global.clearBeikeChat as LegacyBoundary)._hooked) {
         const origClear = global.clearBeikeChat;
         global.clearBeikeChat = function () {
-          if (global.AgentCore) global.AgentCore.resetMemory();
+          if (global.AgentCore) {
+            // 若任务正挂在澄清选择上，先取消放行 Promise，避免 run() 永不 settle 造成任务死锁
+            if (typeof global.AgentCore.onClarifyCancel === 'function') global.AgentCore.onClarifyCancel();
+            if (typeof global.AgentCore.stop === 'function') global.AgentCore.stop();
+            global.AgentCore.resetMemory();
+          }
           self._removeClarifyPanel();
           return origClear.apply(global, arguments);
         };

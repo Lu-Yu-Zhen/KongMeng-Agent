@@ -9,6 +9,7 @@
 """
 from __future__ import annotations
 
+import inspect
 import json
 from typing import Any, Dict, List
 
@@ -101,15 +102,24 @@ def build_sdk_mcp_server() -> Any:
         }
 
         def _make_handler(fn):
+            # 按 impl 真实签名过滤传参：各工具只声明自己需要的参数，
+            # 避免把 subject/class_id/pseudo_id/topic/scope 全量传入导致 TypeError。
+            try:
+                _params = set(inspect.signature(fn).parameters)
+            except (TypeError, ValueError):  # 签名不可见时不过滤，保持原行为
+                _params = None
+
             async def _handler(args):
                 try:
-                    data = fn(
-                        subject=str((args or {}).get("subject") or ""),
-                        class_id=str((args or {}).get("class_id") or ""),
-                        pseudo_id=str((args or {}).get("pseudo_id") or ""),
-                        topic=str((args or {}).get("topic") or ""),
-                        scope=str((args or {}).get("scope") or "lesson_prep"),
-                    )
+                    raw = {
+                        "subject": str((args or {}).get("subject") or ""),
+                        "class_id": str((args or {}).get("class_id") or ""),
+                        "pseudo_id": str((args or {}).get("pseudo_id") or ""),
+                        "topic": str((args or {}).get("topic") or ""),
+                        "scope": str((args or {}).get("scope") or "lesson_prep"),
+                    }
+                    kwargs = raw if _params is None else {k: v for k, v in raw.items() if k in _params}
+                    data = fn(**kwargs)
                     return {"content": [{"type": "text", "text": json.dumps(data, ensure_ascii=False)}]}
                 except Exception as e:  # noqa: BLE001
                     return {

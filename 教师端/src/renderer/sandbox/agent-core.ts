@@ -17,6 +17,9 @@
   // 内嵌规则与系统提示（与 rules/RULES.md、prompts/system-prompt.md 一致，离线兜底）
   const AGENT_IDENTITY = '你是「孔孟教研智能体」，运行在教师备课沙箱环境中，具备 Skills/Tools/MCP/记忆/联网搜索能力，能自主规划并完成备课任务。';
 
+  // 澄清等待兜底超时：教师长时间未选择时自动按"取消"放行，避免 Promise 永久挂起导致任务死锁
+  const CLARIFY_TIMEOUT_MS = 10 * 60 * 1000;
+
   const REACT_INSTRUCTION = [
     '## 工作方式（ReAct 循环）',
     '第一步必须先 plan：将任务拆解为有序子任务列表。',
@@ -779,6 +782,8 @@
     /** 中止当前任务：前端置位 abort，并同步向后端发送取消请求，真正终止后端线程 */
     stop() {
       this.abort = true;
+      // 若任务正挂在澄清选择上，必须同时放行 Promise，否则 run() 的 finally 永不执行、running 永真（任务死锁）
+      if (this._clarifyResolver) this.onClarifyCancel();
       if (this._backendTaskId && global.AgentBackend && typeof global.AgentBackend.cancelTask === 'function') {
         const tid = this._backendTaskId;
         try {
@@ -1180,10 +1185,21 @@
       return false;
     },
 
-    /** 等待教师完成澄清选择（Promise 挂起，直到 onClarifyResolve 被调用） */
+    /** 等待教师完成澄清选择（Promise 挂起，直到 onClarifyResolve / onClarifyCancel 被调用）；
+     *  带超时兜底：教师未操作超过 CLARIFY_TIMEOUT_MS 时自动按取消放行，
+     *  防止 stop()/清空聊天漏掉取消路径时 Promise 永不 settle 造成任务死锁。 */
     _waitForClarify() {
       return new Promise((resolve) => {
-        this._clarifyResolver = resolve;
+        let settled = false;
+        const finish = (v: LegacyBoundary) => {
+          if (settled) return;
+          settled = true;
+          clearTimeout(timer);
+          this._clarifyResolver = null;
+          resolve(v);
+        };
+        const timer = setTimeout(() => finish([]), CLARIFY_TIMEOUT_MS);
+        this._clarifyResolver = finish;
       });
     },
 

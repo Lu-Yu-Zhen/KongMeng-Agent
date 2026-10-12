@@ -502,6 +502,9 @@
         searchReferences: searchReferences,
         studentData: sharedStudentData,
         convHistory: state.convHistory || [],
+        // 教师原始输入：批改（grading）等子工作流的材料兜底来源（题目/答案/学生作答常直接写在请求里）
+        userInput: state.task || '',
+        grading: state.grading || null,
       };
 
       var parallelResults: Record<string, LegacyBoundary> = {};
