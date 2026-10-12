@@ -69,7 +69,7 @@
     '- 复杂备课任务推荐五阶段工作流：① 调研（web_search 搜课标/真题/教法学法）→ ② 构思（在 thought 中完整规划文档结构与内容要点）→ ③ 生成（调用文档工具，content 传入完整全文）→ ④ 自检（检查产物是否达到质量标准，内容是否充实、公式是否正确、环节是否完整）→ ⑤ 完善（若自检发现不足，重新生成更详尽的版本或补充遗漏环节）',
     '- 文档生成时优先用 content 参数传 Markdown 文本（而非 blocks 结构化数据），系统会自动解析标题/列表/表格/粗体/斜体等格式',
     '- 数学公式放心用 LaTeX 语法（如 $f(x)=x^2+2x+1$、$$\\frac{a}{b}$$），系统会自动转为可读的 Unicode 数学符号写入 Word/PPT，不会乱码',
-    '- 生成教案/学案用 gen_word，生成课件用 gen_ppt，生成量规/成绩表用 gen_excel，生成试卷用 gen_pdf',
+    '- 生成教案/学案用 gen_word，生成课件用 gen_ppt，生成量规/成绩表用 gen_excel；试卷同样用 gen_word 生成（gen_pdf 无中文字体会乱码，仅用于纯英文内容）',
     '- 需要联网搜索时用 web_search（自动提取关键词，返回标题/摘要/链接/参考资料），需要深度搜索整合多网页内容时用 web_research（搜索+自动抓取Top3网页+整合摘要）',
     '- 搜索返回的 references 会自动展示在右侧参考资料栏（可点击打开），无需在 answer 中重复列出链接',
     '### 6. 收尾自检（decision=answer 前必须确认）',
@@ -157,6 +157,8 @@
   const AgentCore: LegacyBoundary = {
     running: false,
     abort: false,
+    // 任务代次：run() 每次自增，旧任务（被顶替）据此停止改动共享状态（见 run() 与 finally）
+    _runGeneration: 0,
     // 跨轮对话记忆（同一会话内持久，切换会话时清空）
     _convoHistory: [],
     // 当前等待澄清的状态
@@ -176,6 +178,10 @@
     async run(task: LegacyBoundary, opts: LegacyBoundary) {
       opts = opts || {};
       if (this.running) return { ok: false, error: '已有任务正在运行' };
+      // 任务代次：每次 run() 自增。旧任务（被新任务顶替）的所有共享状态（running/abort）
+      // 都不允许再改动，循环检查以代次为准，避免"stop()+300ms重发"竞态导致双任务并发
+      // 写同一个运行卡片、或旧任务把新任务的 abort 标志清掉而停不下来。
+      const myGen = ++this._runGeneration;
       this.running = true; this.abort = false;
       // 同步检查服务器可用性（确保第一次任务也能正确路由）
       if (global.AgentSandbox && !global.AgentSandbox.serverChecked) {
@@ -265,7 +271,11 @@
         if (ui && ui.onError) ui.onError(e);
         return { ok: false, error: (e && e.message) || String(e) };
       } finally {
-        this.running = false;
+        // 仅当代次未变时复位：旧任务被新任务顶替后不得清除新任务的 running/abort
+        if (this._runGeneration === myGen) {
+          this.running = false;
+          this.abort = false;
+        }
         // 任务完成（含出错/中止）后清理临时文件：
         // 仅删除本任务写入"临时/"的文件；最终回答仍引用（路径或文件名）的保留
         try {
@@ -344,7 +354,9 @@
           ui: ui,
           sandbox: sandbox,
           waitClarify: () => this.waitClarify(),
-          // 中止检查：子工作流生成/精炼循环据此提前退出，避免停止后仍跑满
+          // 中止检查：子工作流生成/精炼循环据此提前退出，避免停止后仍跑满。
+          // 注：跨任务竞态由 run() 的任务代次（finally 仅复位本代次状态）与
+          // UI 层"等待旧任务退出后再发新任务"共同防护，此处只认显式中止。
           isAborted: () => this.abort,
         });
 
@@ -1258,6 +1270,8 @@
           try {
             let acc = '';
             for await (const chunk of global.callAIStream(prompt, sysPrompt, [], m, null)) {
+              // 停止后立即退出流式消费，避免点停止后仍继续生成
+              if (this.abort) break;
               if (chunk && !chunk.startsWith('\u0001')) { acc += chunk; if (onChunk) onChunk(chunk); }
             }
             return acc;

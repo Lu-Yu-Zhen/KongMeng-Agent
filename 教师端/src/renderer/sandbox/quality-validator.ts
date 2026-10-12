@@ -60,6 +60,7 @@
     'worksheet': {
       name: '学案',
       minChars: 2000,
+      blankLineAllowed: true,   // 学案本就含填空线（______）与"（填写…）"提示，不作为占位符
       requiredSections: [
         { key: '目标', patterns: ['学习目标', '学习目的'], weight: 15, label: '学习目标' },
         { key: '预习', patterns: ['课前预习', '预习', '课前准备'], weight: 20, label: '课前预习（含填空/思考题）' },
@@ -77,6 +78,7 @@
     'exam-generator': {
       name: '试卷',
       minChars: 1500,
+      blankLineAllowed: true,   // 试卷本就含填空线与作答区，不作为占位符
       requiredSections: [
         { key: '选择题', patterns: ['选择题', '单选', '多项选择'], weight: 15, label: '选择题' },
         { key: '填空题', patterns: ['填空题', '填空'], weight: 10, label: '填空题' },
@@ -221,11 +223,12 @@
       ],
     },
     'ppt-page': {
-      name: 'PPT课件（pptx）',
-      minChars: 0,
-      minSlides: 12,
+      name: 'PPT课件（HTML瀑布流）',
+      minChars: 1500,
       requireLatex: false,
       requiredSections: [
+        { key: 'HTML结构', patterns: ['<!DOCTYPE', '<html', 'deck-card'], weight: 10, label: '完整HTML结构' },
+        { key: '卡片流', patterns: ['deck-card', 'slide-frame'], weight: 15, label: '瀑布流卡片结构' },
         { key: '封面', patterns: ['封面', '课题', '学科'], weight: 5, label: '封面页' },
         { key: '目标', patterns: ['学习目标', '教学目标', '目标'], weight: 10, label: '学习目标页' },
         { key: '目录', patterns: ['目录', 'contents', '概览'], weight: 5, label: '目录页' },
@@ -236,7 +239,9 @@
         { key: '作业', patterns: ['作业', '课后', '巩固'], weight: 5, label: '作业页' },
       ],
       placeholderPatterns: ['讲解XX', '介绍XX', '此处展示', '详见', '略', '待补充', '占位文字', 'placeholder'],
-      depthChecks: [],
+      depthChecks: [
+        { name: '卡片数量', test: function (t: LegacyBoundary) { return (t.match(/deck-card/g) || []).length; }, min: 12, label: '至少12张幻灯片卡片' },
+      ],
     },
     'report-page': {
       name: 'HTML报告页面',
@@ -268,9 +273,13 @@
 
   // 占位符形状正则（难以穷举为固定字符串的模式）
   var PLACEHOLDER_REGEXES = [
-    { re: /X{2,}/, label: 'XX 占位' },      // "XX门课程"等未替换占位
-    { re: /_{3,}/, label: '下划线填空线' },   // "____（填写…）"
+    { id: 'xx', re: /X{2,}/, label: 'XX 占位' },      // "XX门课程"等未替换占位
+    { id: 'blank', re: /_{3,}/, label: '下划线填空线' },   // "____（填写…）"
   ];
+
+  // 学案/试卷的正常教学元素（blankLineAllowed 标准下不作为占位符）：
+  // 填空线、作答区与"（填写…）"引导语
+  var BLANK_LINE_PLACEHOLDERS = ['____', '（填写', '(填写', '待填写'];
 
   /**
    * 验证生成内容的质量
@@ -333,7 +342,11 @@
     });
 
     // 3) 占位符检测
-    var allPlaceholders = (standard.placeholderPatterns || []).concat(GENERIC_PLACEHOLDERS);
+    // blankLineAllowed（学案/试卷）：填空线与"（填写…）"引导语是正常教学元素，豁免检测，
+    // 否则正常产物会被同一判据反复打回，陷入"精炼后仍不通过"的死循环返工
+    var blankOk = !!standard.blankLineAllowed;
+    var allPlaceholders = (standard.placeholderPatterns || []).concat(GENERIC_PLACEHOLDERS)
+      .filter(function (p: LegacyBoundary) { return !(blankOk && BLANK_LINE_PLACEHOLDERS.indexOf(p) >= 0); });
     var foundPlaceholders: any[] = [];
     allPlaceholders.forEach(function (p: LegacyBoundary) {
       if (_hasPlaceholder(text, p)) {
@@ -341,6 +354,7 @@
       }
     });
     PLACEHOLDER_REGEXES.forEach(function (pr) {
+      if (blankOk && pr.id === 'blank') return; // 跳过下划线填空线检测
       if (pr.re.test(text)) foundPlaceholders.push(pr.label);
     });
     details.placeholders = { found: foundPlaceholders };
