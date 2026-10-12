@@ -1604,11 +1604,19 @@ app = FastAPI(
     version="1.0.0",
 )
 
-# CORS 中间件（开发环境允许所有源）
+# CORS 收敛（对齐 backend/server.py）：仅允许本地来源，不再对 "*" 全开。
+# 沙箱暴露 /execute（任意代码执行）等敏感能力，必须防止任意外部网页跨域调用本机沙箱。
+_cors_env = os.getenv("SANDBOX_CORS_ORIGINS", "").strip()
+_CORS_ORIGINS = (
+    [o.strip() for o in _cors_env.split(",") if o.strip()]
+    if _cors_env
+    else ["null", "file://", "app://."]
+)
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
-    allow_credentials=True,
+    allow_origins=_CORS_ORIGINS,
+    allow_origin_regex=r"https?://(localhost|127\.0\.0\.1)(:\d+)?",
+    allow_credentials=False,
     allow_methods=["*"],
     allow_headers=["*"],
 )
@@ -1665,7 +1673,7 @@ async def health_check():
 # ---- 7.2 执行 Python 代码 ----
 
 @app.post("/execute", response_model=ExecuteResponse, summary="执行 Python 代码")
-async def execute_code(req: ExecuteRequest):
+def execute_code(req: ExecuteRequest):
     """
     在隔离的 exec 环境中执行 Python 代码。
     - 捕获 stdout/stderr/返回值
@@ -1693,7 +1701,7 @@ async def execute_code(req: ExecuteRequest):
 # ---- 7.3 生成 Word 文档 ----
 
 @app.post("/generate/docx", summary="生成 Word 文档")
-async def gen_docx(req: DocxRequest):
+def gen_docx(req: DocxRequest):
     """用 python-docx 生成 .docx 文件，解析 Markdown 内容"""
     try:
         result = generate_docx(
@@ -1711,7 +1719,7 @@ async def gen_docx(req: DocxRequest):
 # ---- 7.4 生成 PPT 课件 ----
 
 @app.post("/generate/pptx", summary="生成 PPT 课件")
-async def gen_pptx(req: PptxRequest):
+def gen_pptx(req: PptxRequest):
     """用 python-pptx 生成 .pptx 文件，16:9 布局，主题色 jade/ink/bg"""
     try:
         result = generate_pptx(
@@ -1728,7 +1736,7 @@ async def gen_pptx(req: PptxRequest):
 # ---- 7.5 生成 Excel ----
 
 @app.post("/generate/xlsx", summary="生成 Excel 表格")
-async def gen_xlsx(req: XlsxRequest):
+def gen_xlsx(req: XlsxRequest):
     """用 openpyxl 生成 .xlsx 文件，列宽自适应，表头加粗"""
     try:
         result = generate_xlsx(
@@ -1747,7 +1755,7 @@ async def gen_xlsx(req: XlsxRequest):
 # ---- 7.6 生成 PDF ----
 
 @app.post("/generate/pdf", summary="生成 PDF 文档")
-async def gen_pdf(req: PdfRequest):
+def gen_pdf(req: PdfRequest):
     """优先用 weasyprint（HTML→PDF），降级用 reportlab 生成 PDF"""
     try:
         result = generate_pdf(
@@ -1765,7 +1773,7 @@ async def gen_pdf(req: PdfRequest):
 # ---- 7.7 文档格式转换 ----
 
 @app.post("/convert", summary="文档格式转换")
-async def convert_doc(req: ConvertRequest):
+def convert_doc(req: ConvertRequest):
     """
     支持 pandoc 转换：md <-> docx <-> html <-> pdf
     支持 libreoffice 转换：pptx->pdf, docx->pdf, xlsx->pdf
@@ -1788,7 +1796,7 @@ async def convert_doc(req: ConvertRequest):
 # ---- 7.8 OCR 文字识别 ----
 
 @app.post("/ocr", summary="OCR 文字识别")
-async def ocr_image(req: OcrRequest):
+def ocr_image(req: OcrRequest):
     """调用 tesseract 命令行进行 OCR 识别，返回识别文本"""
     try:
         result = run_ocr(
@@ -1878,7 +1886,7 @@ async def list_files():
 # ---- 7.11 生成图表 ----
 
 @app.post("/analyze/chart", summary="生成图表")
-async def gen_chart(req: ChartRequest):
+def gen_chart(req: ChartRequest):
     """用 matplotlib 生成图表（bar/line/pie/radar/scatter）并保存为 PNG"""
     try:
         result = generate_chart(

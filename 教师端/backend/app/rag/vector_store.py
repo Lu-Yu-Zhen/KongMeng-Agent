@@ -41,7 +41,9 @@ class VectorStore:
     # ---- 连接 ----
     def connect(self) -> sqlite3.Connection:
         if self._con is None:
-            self._con = sqlite3.connect(self.path)
+            # check_same_thread=False：单例会被 API 线程（/rag/status）与构建工作线程（/rag-build）共用，
+            # 默认跨线程使用会抛 sqlite3.ProgrammingError（与 db.py / databus.py 保持一致）
+            self._con = sqlite3.connect(self.path, check_same_thread=False)
             _load_vec(self._con)
         return self._con
 
