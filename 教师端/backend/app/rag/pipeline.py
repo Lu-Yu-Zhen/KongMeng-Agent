@@ -205,6 +205,8 @@ def build(subjects: Optional[List[str]] = None, force: bool = False,
     block_stats: Dict[str, int] = {}
     all_chunks: List[Chunk] = []
     bm = bm25.get_index()
+    # 全量重建：先清空（get_index 可能已从 pickle 加载旧内容），避免重复灌文档
+    bm.reset()
 
     for si, subject in enumerate(subjects):
         emit("tree", int(si / len(subjects) * 30), f"读取 {subject} 知识树与语料…")
@@ -217,8 +219,11 @@ def build(subjects: Optional[List[str]] = None, force: bool = False,
         idx = 0
         for kp in kps:
             kp = _decorate_kp(kp, subject)
-            subject_chunks.extend(chunker.chunk_knowledge_point(kp, idx))
-            idx += len(_rough_segs(kp.get("text", "")))
+            kp_chunks = chunker.chunk_knowledge_point(kp, idx)
+            subject_chunks.extend(kp_chunks)
+            # 按真实块数递进：此前按非空行数递进，长单段（1 行切出多块）时下一个
+            # 知识点的起始序号与上一个的块号重叠 → chunk_id 碰撞、静默丢块
+            idx += len(kp_chunks)
         for doc in corpus:
             subject_chunks.extend(chunker.chunk_document(doc["text"], doc["meta"]))
 

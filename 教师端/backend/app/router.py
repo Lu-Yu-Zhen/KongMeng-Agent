@@ -154,19 +154,13 @@ def _run_workflow_task(task_id: str, payload: Dict[str, Any], task: task_queue.T
     task.emit({"type": "stage", "stage": "intent", "progress": 5, "message": "意图识别与任务路由…"})
     state = workflow.run(input_text, history=history)
 
-    # 追问循环
-    max_clarify = 3
-    round_no = 0
-    while (
-        state.get("pending_questions")
-        and len(state.get("pending_questions", [])) > 0
-        and round_no < max_clarify
-    ):
+    # 追问需要外部答案：中止异步，返回 pending 给前端，由前端调 continue。
+    # 等待态受任务总超时约束（task_queue._task_done 不把 awaiting_input 视为终态），
+    # 前端超时未补充则任务标记失败，不会永久挂起。
+    if state.get("pending_questions"):
         if task.check_cancelled():
             raise InterruptedError("任务已取消")
-        round_no += 1
-        task.emit({"type": "stage", "stage": "clarify", "progress": 10 + round_no * 5, "message": "需要教师补充关键信息…"})
-        # 追问需要外部答案：中止异步，返回 pending 给前端，由前端调 continue
+        task.emit({"type": "stage", "stage": "clarify", "progress": 15, "message": "需要教师补充关键信息…"})
         return {
             "ok": True,
             "pending": True,

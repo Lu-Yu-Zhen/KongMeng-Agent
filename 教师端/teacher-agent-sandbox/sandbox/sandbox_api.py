@@ -38,6 +38,7 @@ import tempfile
 import traceback
 import threading
 import multiprocessing
+import ast
 from pathlib import Path
 from datetime import datetime
 from typing import Any, Optional, List, Dict, Union
@@ -192,7 +193,11 @@ def validate_workspace_path(path: Union[str, Path]) -> Path:
     """
     target = (WORKSPACE_DIR / path).resolve() if not Path(path).is_absolute() else Path(path).resolve()
     workspace_resolved = WORKSPACE_DIR.resolve()
-    if not str(target).startswith(str(workspace_resolved)):
+    # 用 is_relative_to 做路径包含判断：字符串 startswith 会被同前缀兄弟目录绕过
+    # （如 /path/workspace-evil/x 以 /path/workspace 为前缀即通过）
+    try:
+        target.relative_to(workspace_resolved)
+    except ValueError:
         raise HTTPException(status_code=403, detail=f"路径越权：{path} 不在 workspace 目录内")
     return target
 
@@ -382,6 +387,41 @@ class RestrictedExec:
 
         return g
 
+    # 危险属性链（沙箱逃逸常用）：__class__.__base__.__subclasses__() 等
+    DANGEROUS_ATTRS = {
+        "__class__", "__subclasses__", "__base__", "__bases__", "__globals__",
+        "__builtins__", "__code__", "__closure__", "__func__", "__self__",
+        "__mro__", "__dict__", "__module__", "__spec__", "__loader__",
+        "__wrapped__", "__defaults__", "__kwdefaults__",
+    }
+
+    @staticmethod
+    def _static_check(code: str) -> None:
+        """编译前静态检查（DANGEROUS_NAMES / ALLOWED_MODULES 的真正执行点）：
+        1. 拒绝危险属性链（__class__.__base__.__subclasses__() 等逃逸手法）；
+        2. 拒绝黑名单名称（open/exec/eval/__import__ 等）；
+        3. import 仅允许教学/数据处理白名单模块。
+        注：这是纵深防御的一层，进程级隔离仍是最终方案（见沙箱加固路线图）。
+        """
+        try:
+            tree = ast.parse(code)
+        except SyntaxError as e:
+            raise HTTPException(status_code=400, detail=f"代码语法错误: {e.msg} (line {e.lineno})")
+        for node in ast.walk(tree):
+            if isinstance(node, ast.Attribute) and node.attr in RestrictedExec.DANGEROUS_ATTRS:
+                raise HTTPException(status_code=403, detail=f"代码包含受限属性访问: .{node.attr}")
+            if isinstance(node, ast.Name) and node.id in DANGEROUS_NAMES:
+                raise HTTPException(status_code=403, detail=f"代码包含受限名称: {node.id}")
+            if isinstance(node, ast.Import):
+                for a in node.names:
+                    root = (a.name or "").split(".")[0]
+                    if root and root not in ALLOWED_MODULES:
+                        raise HTTPException(status_code=403, detail=f"禁止导入模块: {root}（仅允许白名单内的教学/数据处理库）")
+            elif isinstance(node, ast.ImportFrom):
+                root = (node.module or "").split(".")[0]
+                if root and root not in ALLOWED_MODULES:
+                    raise HTTPException(status_code=403, detail=f"禁止导入模块: {root}（仅允许白名单内的教学/数据处理库）")
+
     @staticmethod
     def execute(code: str, timeout: int = DEFAULT_TIMEOUT, packages: Optional[List[str]] = None) -> dict:
         """
@@ -397,9 +437,13 @@ class RestrictedExec:
                 "files": list,
             }
         """
-        # 可选包安装
+        # 可选包安装（白名单校验：仅允许 ALLOWED_MODULES 内的包，防止任意包装/供应链风险）
         install_msgs = []
         if packages:
+            allowed_lower = {m.lower() for m in ALLOWED_MODULES}
+            for pkg in packages:
+                if not re.fullmatch(r"[A-Za-z0-9._-]+", pkg) or pkg.split(".")[0].lower() not in allowed_lower:
+                    raise HTTPException(status_code=403, detail=f"不允许安装包: {pkg}（仅支持白名单内的库）")
             for pkg in packages:
                 try:
                     subprocess.run(
@@ -409,6 +453,9 @@ class RestrictedExec:
                     install_msgs.append(f"已安装: {pkg}")
                 except Exception as e:
                     install_msgs.append(f"安装失败 {pkg}: {e}")
+
+        # 编译前静态安全检查（先于任何执行）
+        RestrictedExec._static_check(code)
 
         # 捕获 stdout/stderr
         old_stdout = sys.stdout
@@ -1252,11 +1299,14 @@ def convert_document(from_format: str, to_format: str, file_content: str, filena
     # 创建临时文件
     with tempfile.TemporaryDirectory() as tmpdir:
         tmpdir_path = Path(tmpdir)
-        input_path = tmpdir_path / filename
+        # filename 来自请求体，必须剥离路径成分（`../../evil.docx` 可写到临时目录外）；
+        # 与其余生成接口一致使用 safe_filename 消毒
+        safe_name = safe_filename(filename, Path(filename).suffix.lstrip(".") or "bin")
+        input_path = tmpdir_path / safe_name
         input_path.write_bytes(file_bytes)
         
         # 确定输出文件名
-        stem = Path(filename).stem
+        stem = Path(safe_name).stem
         output_filename = f"{stem}.{to_format}"
         output_path = tmpdir_path / output_filename
         
