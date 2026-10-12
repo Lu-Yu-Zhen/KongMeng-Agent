@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>提问反馈 · 学生端 · 孔孟·智学云</title>
+<link rel="stylesheet" href="../assets/styles.css">
+<style>
+  .reply-box{ background:var(--primary-50); border:1px solid var(--primary-100); border-radius:var(--radius-md); padding:12px; }
+  .reply-box .rb-head{ display:flex; align-items:center; gap:var(--space-2); font-size:var(--fs-xs); color:var(--primary); font-weight:600; margin-bottom:6px; }
+  .reply-box .rb-text{ font-size:var(--fs-sm); color:var(--ink-700); }
+  .q-item{ cursor:default; }
+  .section-title{ font-weight:600; color:var(--ink-900); font-size:var(--fs-md); margin-bottom:var(--space-3); }
+</style>
+</head>
+<body>
+<script src="../assets/mock.js"></script>
+<script src="../assets/api.js"></script>
+<script src="../assets/components.js"></script>
+<script>
+renderShell('student','ask');
+
+var root = pageRoot();
+var student = store.getStudent();
+var className = store.getClass(student.classId).name;
+
+function questionsList() {
+  return store.studentQuestions();
+}
+
+function renderForm() {
+  var opts = store.getSubjects().map(function(s) {
+    var selected = student.subjects.indexOf(s) !== -1 ? ' selected' : '';
+    return '<option value="' + s + '"' + selected + '>' + s + '</option>';
+  }).join('');
+  return '<div class="card mb-4">' +
+    '<div class="text-strong mb-2">向老师提问</div>' +
+    '<div class="form-grid">' +
+      '<div class="field"><label>科目</label><select class="select" id="qSubject">' + opts + '</select></div>' +
+      '<div class="field" style="grid-column:1/-1;"><label>问题内容</label><textarea class="textarea" id="qContent" placeholder="请描述你的问题，尽量具体，便于老师精准解答…"></textarea><div class="hint">提问将发送至云端，由对应科目老师回复。</div></div>' +
+    '</div>' +
+    '<div class="mt-2"><button class="btn btn-primary btn-md" id="askBtn" onclick="doAsk()">' + icon('send') + '提交提问</button></div>' +
+  '</div>';
+}
+
+function timeText(q) {
+  return q.askedAt ? q.askedAt : '';
+}
+
+function renderQuestions(list) {
+  if (!list.length) return emptyState('还没有提问记录，通过上方表单向老师提问吧。', 'message');
+  return '<div class="grid">' + list.map(function(q) {
+    var isReplied = q.status === 'replied';
+    var replyHtml = isReplied
+      ? '<div class="reply-box mt-2"><div class="rb-head">' + icon('check') + '老师回复 · ' + escapeHtml(q.replyAt || '') + '</div><div class="rb-text">' + escapeHtml(q.reply) + '</div></div>'
+      : '<div class="text-xs text-sub mt-2">' + icon('time') + ' 老师正在回复中，可点击「同步查看回复」刷新状态。</div>';
+    return '<div class="list-item q-item">' +
+      '<div class="li-head"><div class="li-title">' + escapeHtml(q.subject) + ' · 提问</div>' + statusBadge(q.status) + '</div>' +
+      '<div class="li-meta"><span>' + icon('time') + '提问时间 ' + escapeHtml(timeText(q)) + '</span><span>' + icon('user') + className + '</span></div>' +
+      '<div class="text-sm" style="color:var(--ink-700);">' + escapeHtml(q.content) + '</div>' +
+      replyHtml +
+    '</div>';
+  }).join('') + '</div>';
+}
+
+function render() {
+  root.innerHTML =
+    '<div class="page-head">' +
+      '<div><h1>提问反馈</h1><div class="sub">向老师提问并查看回复 · ' + className + ' · ' + student.name + '</div></div>' +
+      '<div class="page-actions"><button class="btn btn-primary btn-md" id="syncBtn" onclick="syncNow()">' + icon('refresh') + '同步查看回复</button></div>' +
+    '</div>' +
+    renderForm() +
+    '<div class="section-title">我的提问</div>' +
+    renderQuestions(questionsList());
+}
+
+function doAsk() {
+  var subEl = document.getElementById('qSubject');
+  var contentEl = document.getElementById('qContent');
+  var subject = subEl ? subEl.value : '';
+  var content = contentEl ? contentEl.value.trim() : '';
+  if (!content) { toast('请填写问题内容', 'error'); return; }
+  var btn = document.getElementById('askBtn');
+  if (btn) { btn.disabled = true; btn.innerHTML = '提交中…'; }
+  API.askQuestion({ classId: student.classId, subject: subject, content: content }).then(function() {
+    toast('提问已提交，等待老师回复', 'success');
+    render();
+  });
+}
+
+function syncNow() {
+  var btn = document.getElementById('syncBtn');
+  if (btn) { btn.disabled = true; btn.innerHTML = '同步中…'; }
+  API.syncReplies().then(function(res) {
+    var replied = res.list.filter(function(q){ return q.status === 'replied'; }).length;
+    toast('已同步回复，共 ' + replied + ' 条已回复', 'success');
+    render();
+  });
+}
+
+render();
+</script>
+</body>
+</html>

@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>孔孟·智学云 · 教师端 - 成绩公布与学情</title>
+<link rel="stylesheet" href="../assets/styles.css">
+<script src="../assets/mock.js"></script>
+<script src="../assets/api.js"></script>
+<script src="../assets/components.js"></script>
+</head>
+<body>
+<script>renderShell('teacher', 'grades');</script>
+<script>
+(function(){
+  var root = pageRoot();
+  var currentView = 'mine';
+  var currentSubject = DB.teacher.subjects[0] || '';
+
+  root.innerHTML =
+    '<div class="page-head">' +
+      '<div><h1>成绩公布与学情</h1><div class="sub">公布任教班级成绩，纵览单科与全校学情</div></div>' +
+      '<div class="page-actions">' +
+        '<button class="btn btn-primary btn-md" id="publishBtn" onclick="window.__openPublishGrade()">' + icon('plus') + ' 发布成绩</button>' +
+      '</div>' +
+    '</div>' +
+
+    '<div class="view-switch" id="viewSwitch">' +
+      '<button class="vs-btn active" data-view="mine">我的任教现状</button>' +
+      '<button class="vs-btn" data-view="subject">对应单科情况</button>' +
+      '<button class="vs-btn" data-view="school">全年段全科情况</button>' +
+    '</div>' +
+
+    '<div id="subjectWrap" class="hidden mb-4"><div class="field" style="max-width:260px">' +
+      '<label>选择科目（全校该科均分对比，只读）</label>' +
+      '<select class="select" id="subjectSelect"></select>' +
+    '</div></div>' +
+
+    '<div id="readonlyNote" class="hidden mb-4"></div>' +
+    '<div id="viewContent"></div>';
+
+  var sel = document.getElementById('subjectSelect');
+  DB.teacher.subjects.forEach(function(s){
+    var o = document.createElement('option'); o.value = s; o.textContent = s; sel.appendChild(o);
+  });
+  sel.value = currentSubject;
+
+  document.querySelectorAll('#viewSwitch .vs-btn').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      currentView = btn.getAttribute('data-view');
+      document.querySelectorAll('#viewSwitch .vs-btn').forEach(function(b){ b.classList.remove('active'); });
+      btn.classList.add('active');
+      document.getElementById('subjectWrap').classList.toggle('hidden', currentView !== 'subject');
+      render();
+    });
+  });
+  sel.addEventListener('change', function(){ currentSubject = sel.value; render(); });
+
+  window.__openPublishGrade = openPublishModal;
+
+  function applyWriteState(){
+    var btn = document.getElementById('publishBtn');
+    var note = document.getElementById('readonlyNote');
+    if(currentView === 'mine'){
+      btn.disabled = false; btn.style.opacity = '';
+      note.classList.add('hidden');
+    }else{
+      btn.disabled = true; btn.style.opacity = '.5';
+      note.classList.remove('hidden');
+      note.innerHTML = '<div class="card" style="background:var(--info-bg);border-color:var(--info);color:var(--info);display:flex;align-items:center;gap:8px">' +
+        icon('eye') + ' 当前为只读视图，仅可查看统计，发布成绩功能已禁用。</div>';
+    }
+  }
+
+  function render(){
+    applyWriteState();
+    var c = document.getElementById('viewContent');
+    if(currentView === 'mine') c.innerHTML = renderMine();
+    else if(currentView === 'subject') c.innerHTML = renderSubject();
+    else c.innerHTML = renderSchool();
+  }
+
+  /* ---------- 视图一：我的任教现状 ---------- */
+  function renderMine(){
+    var gs = store.teacherGrades();
+    var avg = gs.length ? (gs.reduce(function(a, g){ return a + g.score; }, 0) / gs.length).toFixed(1) : '0';
+    var cards =
+      '<div class="grid grid-3 mb-4">' +
+        '<div class="card stat-card"><div class="stat-label">任教中已公布成绩</div><div class="stat-value">' + gs.length + '</div><div class="stat-note">任教科目 × 任教班级</div></div>' +
+        '<div class="card stat-card"><div class="stat-label">任教科目数</div><div class="stat-value">' + DB.teacher.subjects.length + '</div><div class="stat-note">' + DB.teacher.subjects.join(' / ') + '</div></div>' +
+        '<div class="card stat-card"><div class="stat-label">平均得分</div><div class="stat-value">' + avg + '</div><div class="stat-note">按已公布成绩计算</div></div>' +
+      '</div>';
+    if(!gs.length) return cards + emptyState('暂无已公布的成绩，点击「发布成绩」创建', 'chart');
+    var list = gs.map(function(g){
+      var cls = store.getClass(g.classId);
+      var trend = (g.trend || []).map(function(v){ return '<span class="badge badge-default">' + v + '</span>'; }).join(' ');
+      return '<div class="list-item">' +
+        '<div class="li-head"><span class="li-title">' + escapeHtml(g.examName) + '</span>' + subjectBadge(g.subject) + '</div>' +
+        '<div class="li-meta">' + classBadge(cls ? cls.name : g.classId) + '<span>学生 ' + escapeHtml(g.studentName) + '</span>' +
+        '<span>公布于 ' + escapeHtml(g.publishDate) + '</span></div>' +
+        '<div class="li-foot flex gap-3" style="flex-wrap:wrap">' +
+          '<span class="text-sm"><b class="text-strong">' + g.score + '</b> / ' + g.total + ' 分</span>' +
+          '<span class="text-sm text-sub">班级均分 ' + g.classAvg + ' · 排名 ' + g.rank + '</span>' +
+          '<span class="flex gap-1 items-center">' + icon('activity') + '<span class="text-xs text-sub">近况</span>' + trend + '</span>' +
+        '</div>' +
+      '</div>';
+    }).join('');
+    return cards + '<div class="grid">' + list + '</div>';
+  }
+
+  /* ---------- 视图二：对应单科情况（只读，全校各班均分对比） ---------- */
+  function renderSubject(){
+    var sub = currentSubject;
+    var ov = store.subjectOverview(sub);
+    var grades = ov.grades;
+    var byClass = {};
+    grades.forEach(function(g){
+      if(!byClass[g.classId]) byClass[g.classId] = { scores: [], name: (store.getClass(g.classId) || {}).name || g.classId };
+      byClass[g.classId].scores.push(g.score);
+    });
+    var cards =
+      '<div class="grid grid-3 mb-4">' +
+        '<div class="card stat-card"><div class="stat-label">' + escapeHtml(sub) + ' 成绩记录</div><div class="stat-value">' + grades.length + '</div><div class="stat-note">全校</div></div>' +
+        '<div class="card stat-card"><div class="stat-label">涉及班级</div><div class="stat-value">' + Object.keys(byClass).length + '</div><div class="stat-note">全校</div></div>' +
+        '<div class="card stat-card"><div class="stat-label">平均得分</div><div class="stat-value">' + (grades.length ? (grades.reduce(function(a,g){return a+g.score;},0)/grades.length).toFixed(1) : '0') + '</div><div class="stat-note">全校</div></div>' +
+      '</div>';
+    if(!grades.length) return cards + emptyState('该科目暂无成绩数据', 'inbox');
+    var rows = Object.keys(byClass).map(function(cid){
+      var c = byClass[cid];
+      var avg = (c.scores.reduce(function(a,b){return a+b;},0)/c.scores.length).toFixed(1);
+      var maxV = Math.max.apply(null, c.scores);
+      var minV = Math.min.apply(null, c.scores);
+      return '<tr><td>' + classBadge(c.name) + '</td><td>' + c.scores.length + '</td><td><b>' + avg + '</b></td><td>' + maxV + '</td><td>' + minV + '</td></tr>';
+    }).join('');
+    var table = '<div class="table-wrap"><table><thead><tr><th>班级</th><th>成绩记录数</th><th>班级均分</th><th>最高分</th><th>最低分</th></tr></thead><tbody>' + rows + '</tbody></table></div>';
+    return cards + '<div class="card mt-4"><div class="text-sm text-strong mb-2">' + escapeHtml(sub) + ' 全校各班均分对比</div>' + table + '</div>';
+  }
+
+  /* ---------- 视图三：全年段全科情况（只读） ---------- */
+  function renderSchool(){
+    var ov = store.schoolOverview();
+    var summary =
+      '<div class="grid grid-3 mb-4">' +
+        '<div class="card stat-card"><div class="stat-label">全校作业总数</div><div class="stat-value">' + ov.totalHomework + '</div><div class="stat-note">各科合计</div></div>' +
+        '<div class="card stat-card"><div class="stat-label">全校成绩公布</div><div class="stat-value">' + ov.totalGrades + '</div><div class="stat-note">各科合计</div></div>' +
+        '<div class="card stat-card"><div class="stat-label">全校学生提问</div><div class="stat-value">' + ov.totalQuestions + '</div><div class="stat-note">各科合计</div></div>' +
+      '</div>';
+    var subjectCards = '<div class="grid grid-3 mb-4">' + Object.keys(ov.bySubject).map(function(sub){
+      var d = ov.bySubject[sub];
+      return '<div class="card stat-card"><div class="stat-label">' + escapeHtml(sub) + '</div><div class="stat-value">' + d.grading + '</div>' +
+        '<div class="stat-note">作业 ' + d.homework + ' · 提交 ' + d.submissions + ' · 成绩 ' + d.grading + ' · 提问 ' + d.questions + '</div></div>';
+    }).join('') + '</div>';
+    var buckets = store.syncBuckets();
+    var table = '';
+    if(buckets.length){
+      table = '<div class="table-wrap mt-4"><table><thead><tr><th>班级</th><th>科目</th><th>作业</th><th>成绩</th><th>提问</th><th>批改</th></tr></thead><tbody>' +
+        buckets.map(function(b){
+          return '<tr><td>' + classBadge(b.className) + '</td><td>' + subjectBadge(b.subject) + '</td><td>' + b.homework + '</td><td>' + b.grades + '</td><td>' + b.questions + '</td><td>' + b.comments + '</td></tr>';
+        }).join('') + '</tbody></table></div>';
+    }
+    return summary + subjectCards +
+      '<div class="card mt-4"><div class="text-sm text-strong mb-2">全校各科各班数据分桶</div>' + (table || emptyState('暂无班级数据', 'database')) + '</div>';
+  }
+
+  /* ---------- 发布成绩 modal ---------- */
+  function openPublishModal(){
+    if(currentView !== 'mine'){ toast('当前为只读视图，仅可查看', 'error'); return; }
+    var classes = DB.teacher.classIds.map(function(id){ return store.getClass(id); }).filter(Boolean);
+    var opts = classes.map(function(c){ return '<option value="' + c.id + '">' + escapeHtml(c.name) + '</option>'; }).join('');
+    var subjOpts = DB.teacher.subjects.map(function(s){ return '<option value="' + s + '">' + escapeHtml(s) + '</option>'; }).join('');
+    openModal(modalHead('发布成绩') +
+      '<div class="modal-body">' +
+        '<div class="form-grid">' +
+          '<div class="form-grid-2">' +
+            '<div class="field"><label>班级</label><select class="select" id="f_class">' + opts + '</select></div>' +
+            '<div class="field"><label>科目</label><select class="select" id="f_subject">' + subjOpts + '</select></div>' +
+          '</div>' +
+          '<div class="field"><label>考试名称</label><input class="input" id="f_exam" placeholder="例如：期末模拟考二"></div>' +
+          '<div class="form-grid-2">' +
+            '<div class="field"><label>学生得分</label><input class="input" id="f_score" type="number" placeholder="0"></div>' +
+            '<div class="field"><label>试卷总分</label><input class="input" id="f_total" type="number" placeholder="150"></div>' +
+          '</div>' +
+          '<div class="form-grid-2">' +
+            '<div class="field"><label>班级均分</label><input class="input" id="f_avg" type="number" step="0.1" placeholder="120.5"></div>' +
+            '<div class="field"><label>班级排名</label><input class="input" id="f_rank" type="number" placeholder="8"></div>' +
+          '</div>' +
+        '</div>' +
+      '</div>' +
+      '<div class="modal-foot">' +
+        '<button class="btn btn-ghost btn-md" onclick="closeModal()">取消</button>' +
+        '<button class="btn btn-primary btn-md" id="f_submit">确认发布</button>' +
+      '</div>');
+    document.getElementById('f_submit').addEventListener('click', submitPublish);
+  }
+
+  async function submitPublish(){
+    var exam = document.getElementById('f_exam').value.trim();
+    var score = document.getElementById('f_score').value;
+    var total = document.getElementById('f_total').value;
+    var avg = document.getElementById('f_avg').value;
+    var rank = document.getElementById('f_rank').value;
+    if(!exam){ toast('请填写考试名称', 'error'); return; }
+    if(score === '' || total === '' || avg === '' || rank === ''){ toast('请完整填写分数、总分、均分与排名', 'error'); return; }
+    var btn = document.getElementById('f_submit');
+    btn.disabled = true; btn.textContent = '发布中…';
+    await API.publishGrade({
+      classId: document.getElementById('f_class').value,
+      subject: document.getElementById('f_subject').value,
+      examName: exam,
+      score: Number(score), total: Number(total), classAvg: Number(avg), rank: Number(rank)
+    });
+    closeModal();
+    toast('成绩已发布，同步至云端', 'success');
+    render();
+  }
+
+  render();
+})();
+</script>
+</body>
+</html>

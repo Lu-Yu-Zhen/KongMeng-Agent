@@ -1,0 +1,2593 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+  <key id="name" attr.name="name" attr.type="string" for="node"/>
+  <key id="type" attr.name="type" attr.type="string" for="node"/>
+  <key id="subject" attr.name="subject" attr.type="string" for="node"/>
+  <key id="module" attr.name="module" attr.type="string" for="node"/>
+  <key id="chapter" attr.name="chapter" attr.type="string" for="node"/>
+  <key id="difficulty" attr.name="difficulty" attr.type="int" for="node"/>
+  <key id="description" attr.name="description" attr.type="string" for="node"/>
+  <key id="keywords" attr.name="keywords" attr.type="string" for="node"/>
+  <key id="exam_type" attr.name="exam_type" attr.type="string" for="node"/>
+  <key id="importance" attr.name="importance" attr.type="int" for="node"/>
+  <key id="textbook_source" attr.name="textbook_source" attr.type="string" for="node"/>
+  <key id="relation" attr.name="relation" attr.type="string" for="edge"/>
+  <key id="weight" attr.name="weight" attr.type="double" for="edge"/>
+  <key id="description" attr.name="description" attr.type="string" for="edge"/>
+  <graph id="G" edgedefault="directed">
+    <node id="M1">
+      <data key="name">必修1 分子与细胞</data>
+      <data key="type">Module</data>
+      <data key="subject">生物</data>
+      <data key="description">从分子水平研究细胞的结构与功能，涵盖组成细胞的分子、细胞结构、物质运输、能量代谢和细胞生命历程。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="module">必修1 分子与细胞</data>
+      <data key="chapter"/>
+      <data key="textbook_source"/>
+    </node>
+    <node id="M2">
+      <data key="name">必修2 遗传与进化</data>
+      <data key="type">Module</data>
+      <data key="subject">生物</data>
+      <data key="description">阐述遗传的基本规律、基因的本质与表达、变异类型及生物进化理论，揭示生命延续与多样性的分子机制。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="module">必修2 遗传与进化</data>
+      <data key="chapter"/>
+      <data key="textbook_source"/>
+    </node>
+    <node id="M3">
+      <data key="name">选择性必修1 稳态与调节</data>
+      <data key="type">Module</data>
+      <data key="subject">生物</data>
+      <data key="description">研究生物个体水平的稳态维持机制，包括神经调节、体液调节、免疫调节及植物激素调节。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="module">选择性必修1 稳态与调节</data>
+      <data key="chapter"/>
+      <data key="textbook_source"/>
+    </node>
+    <node id="M4">
+      <data key="name">选择性必修2 生物与环境</data>
+      <data key="type">Module</data>
+      <data key="subject">生物</data>
+      <data key="description">从种群、群落和生态系统层面研究生物与环境的关系，涵盖种群动态、群落演替、生态系统功能与稳定性。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="module">选择性必修2 生物与环境</data>
+      <data key="chapter"/>
+      <data key="textbook_source"/>
+    </node>
+    <node id="M5">
+      <data key="name">选择性必修3 生物技术与工程</data>
+      <data key="type">Module</data>
+      <data key="subject">生物</data>
+      <data key="description">介绍现代生物技术原理与应用，包括发酵工程、细胞工程、基因工程和胚胎工程。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="module">选择性必修3 生物技术与工程</data>
+      <data key="chapter"/>
+      <data key="textbook_source"/>
+    </node>
+    <node id="C1">
+      <data key="name">细胞中的元素与化合物</data>
+      <data key="type">Chapter</data>
+      <data key="subject">生物</data>
+      <data key="module">必修1 分子与细胞</data>
+      <data key="chapter">细胞中的元素与化合物</data>
+      <data key="description">组成细胞的元素、水、无机盐、糖类、脂质、蛋白质和核酸的种类与功能。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="textbook_source">必修1</data>
+    </node>
+    <node id="C2">
+      <data key="name">细胞的基本结构</data>
+      <data key="type">Chapter</data>
+      <data key="subject">生物</data>
+      <data key="module">必修1 分子与细胞</data>
+      <data key="chapter">细胞的基本结构</data>
+      <data key="description">细胞学说、原核与真核细胞、细胞膜、细胞器、细胞核的结构与功能及生物膜系统。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="textbook_source">必修1</data>
+    </node>
+    <node id="C3">
+      <data key="name">细胞的物质输入与输出</data>
+      <data key="type">Chapter</data>
+      <data key="subject">生物</data>
+      <data key="module">必修1 分子与细胞</data>
+      <data key="chapter">细胞的物质输入与输出</data>
+      <data key="description">渗透作用、质壁分离与复原、物质跨膜运输的多种方式。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="textbook_source">必修1</data>
+    </node>
+    <node id="C4">
+      <data key="name">细胞的能量供应与利用</data>
+      <data key="type">Chapter</data>
+      <data key="subject">生物</data>
+      <data key="module">必修1 分子与细胞</data>
+      <data key="chapter">细胞的能量供应与利用</data>
+      <data key="description">酶的作用与特性、ATP、细胞呼吸与光合作用的原理及影响因素。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="textbook_source">必修1</data>
+    </node>
+    <node id="C5">
+      <data key="name">细胞的生命历程</data>
+      <data key="type">Chapter</data>
+      <data key="subject">生物</data>
+      <data key="module">必修1 分子与细胞</data>
+      <data key="chapter">细胞的生命历程</data>
+      <data key="description">细胞增殖与有丝分裂、细胞分化、细胞全能性、细胞衰老凋亡与癌变。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="textbook_source">必修1</data>
+    </node>
+    <node id="C6">
+      <data key="name">遗传因子的发现</data>
+      <data key="type">Chapter</data>
+      <data key="subject">生物</data>
+      <data key="module">必修2 遗传与进化</data>
+      <data key="chapter">遗传因子的发现</data>
+      <data key="description">孟德尔豌豆杂交实验、分离定律与自由组合定律的提出与验证。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="textbook_source">必修2</data>
+    </node>
+    <node id="C7">
+      <data key="name">基因与染色体的关系</data>
+      <data key="type">Chapter</data>
+      <data key="subject">生物</data>
+      <data key="module">必修2 遗传与进化</data>
+      <data key="chapter">基因与染色体的关系</data>
+      <data key="description">减数分裂过程、基因在染色体上的位置关系及伴性遗传规律。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="textbook_source">必修2</data>
+    </node>
+    <node id="C8">
+      <data key="name">基因的本质</data>
+      <data key="type">Chapter</data>
+      <data key="subject">生物</data>
+      <data key="module">必修2 遗传与进化</data>
+      <data key="chapter">基因的本质</data>
+      <data key="description">DNA作为遗传物质的实验证据、DNA分子结构与DNA复制机制。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="textbook_source">必修2</data>
+    </node>
+    <node id="C9">
+      <data key="name">基因的表达</data>
+      <data key="type">Chapter</data>
+      <data key="subject">生物</data>
+      <data key="module">必修2 遗传与进化</data>
+      <data key="chapter">基因的表达</data>
+      <data key="description">转录与翻译过程、遗传密码、中心法则及基因表达调控。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="textbook_source">必修2</data>
+    </node>
+    <node id="C10">
+      <data key="name">基因突变及其他变异</data>
+      <data key="type">Chapter</data>
+      <data key="subject">生物</data>
+      <data key="module">必修2 遗传与进化</data>
+      <data key="chapter">基因突变及其他变异</data>
+      <data key="description">基因突变、基因重组、染色体变异的类型与机制及人类遗传病。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="textbook_source">必修2</data>
+    </node>
+    <node id="C11">
+      <data key="name">生物的进化</data>
+      <data key="type">Chapter</data>
+      <data key="subject">生物</data>
+      <data key="module">必修2 遗传与进化</data>
+      <data key="chapter">生物的进化</data>
+      <data key="description">现代生物进化理论的核心内容、种群基因频率变化、物种形成与生物多样性。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="textbook_source">必修2</data>
+    </node>
+    <node id="C12">
+      <data key="name">人体的内环境与稳态</data>
+      <data key="type">Chapter</data>
+      <data key="subject">生物</data>
+      <data key="module">选择性必修1 稳态与调节</data>
+      <data key="chapter">人体的内环境与稳态</data>
+      <data key="description">内环境的组成与理化性质、稳态的概念与调节机制。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="textbook_source">选择性必修1</data>
+    </node>
+    <node id="C13">
+      <data key="name">神经调节</data>
+      <data key="type">Chapter</data>
+      <data key="subject">生物</data>
+      <data key="module">选择性必修1 稳态与调节</data>
+      <data key="chapter">神经调节</data>
+      <data key="description">反射弧、神经冲动的产生与传导、突触传递及神经系统的分级调节。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="textbook_source">选择性必修1</data>
+    </node>
+    <node id="C14">
+      <data key="name">体液调节</data>
+      <data key="type">Chapter</data>
+      <data key="subject">生物</data>
+      <data key="module">选择性必修1 稳态与调节</data>
+      <data key="chapter">体液调节</data>
+      <data key="description">激素调节的原理、主要激素及其生理作用、神经调节与体液调节的协调。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="textbook_source">选择性必修1</data>
+    </node>
+    <node id="C15">
+      <data key="name">免疫调节</data>
+      <data key="type">Chapter</data>
+      <data key="subject">生物</data>
+      <data key="module">选择性必修1 稳态与调节</data>
+      <data key="chapter">免疫调节</data>
+      <data key="description">免疫系统的组成、特异性免疫(体液免疫与细胞免疫)的过程及免疫失调。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="textbook_source">选择性必修1</data>
+    </node>
+    <node id="C16">
+      <data key="name">植物激素调节</data>
+      <data key="type">Chapter</data>
+      <data key="subject">生物</data>
+      <data key="module">选择性必修1 稳态与调节</data>
+      <data key="chapter">植物激素调节</data>
+      <data key="description">生长素的发现与作用、其他植物激素及植物激素在生产中的应用。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="textbook_source">选择性必修1</data>
+    </node>
+    <node id="C17">
+      <data key="name">种群及其动态</data>
+      <data key="type">Chapter</data>
+      <data key="subject">生物</data>
+      <data key="module">选择性必修2 生物与环境</data>
+      <data key="chapter">种群及其动态</data>
+      <data key="description">种群特征(数量特征与空间特征)、种群数量增长的J型与S型曲线。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="textbook_source">选择性必修2</data>
+    </node>
+    <node id="C18">
+      <data key="name">群落及其演替</data>
+      <data key="type">Chapter</data>
+      <data key="subject">生物</data>
+      <data key="module">选择性必修2 生物与环境</data>
+      <data key="chapter">群落及其演替</data>
+      <data key="description">群落的空间结构、种间关系、群落演替的类型与过程。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="textbook_source">选择性必修2</data>
+    </node>
+    <node id="C19">
+      <data key="name">生态系统及其稳定性</data>
+      <data key="type">Chapter</data>
+      <data key="subject">生物</data>
+      <data key="module">选择性必修2 生物与环境</data>
+      <data key="chapter">生态系统及其稳定性</data>
+      <data key="description">生态系统结构、能量流动、物质循环、信息传递及稳定性。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="textbook_source">选择性必修2</data>
+    </node>
+    <node id="C20">
+      <data key="name">人与环境</data>
+      <data key="type">Chapter</data>
+      <data key="subject">生物</data>
+      <data key="module">选择性必修2 生物与环境</data>
+      <data key="chapter">人与环境</data>
+      <data key="description">人类活动对生态环境的影响、生物多样性的价值与保护措施。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="textbook_source">选择性必修2</data>
+    </node>
+    <node id="C21">
+      <data key="name">发酵工程</data>
+      <data key="type">Chapter</data>
+      <data key="subject">生物</data>
+      <data key="module">选择性必修3 生物技术与工程</data>
+      <data key="chapter">发酵工程</data>
+      <data key="description">微生物的培养与分离技术、发酵工程的基本环节与应用。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="textbook_source">选择性必修3</data>
+    </node>
+    <node id="C22">
+      <data key="name">细胞工程</data>
+      <data key="type">Chapter</data>
+      <data key="subject">生物</data>
+      <data key="module">选择性必修3 生物技术与工程</data>
+      <data key="chapter">细胞工程</data>
+      <data key="description">植物细胞工程(组织培养、体细胞杂交)与动物细胞工程(细胞培养、单克隆抗体)。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="textbook_source">选择性必修3</data>
+    </node>
+    <node id="C23">
+      <data key="name">基因工程</data>
+      <data key="type">Chapter</data>
+      <data key="subject">生物</data>
+      <data key="module">选择性必修3 生物技术与工程</data>
+      <data key="chapter">基因工程</data>
+      <data key="description">DNA重组技术的基本工具、基因工程操作程序及应用。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="textbook_source">选择性必修3</data>
+    </node>
+    <node id="C24">
+      <data key="name">胚胎工程</data>
+      <data key="type">Chapter</data>
+      <data key="subject">生物</data>
+      <data key="module">选择性必修3 生物技术与工程</data>
+      <data key="chapter">胚胎工程</data>
+      <data key="description">体内受精与早期胚胎发育、体外受精、胚胎移植与胚胎分割。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="textbook_source">选择性必修3</data>
+    </node>
+    <node id="K1">
+      <data key="name">组成细胞的元素</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">生物</data>
+      <data key="module">必修1 分子与细胞</data>
+      <data key="chapter">细胞中的元素与化合物</data>
+      <data key="difficulty">2</data>
+      <data key="description">掌握组成细胞的大量元素(C、H、O、N、P、S等)和微量元素(Fe、Mn、Zn等)的分类，理解C是构成细胞最基本元素的原因。</data>
+      <data key="keywords">大量元素,微量元素,碳元素,基本元素</data>
+      <data key="exam_type">选择题,元素判断</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">必修1</data>
+    </node>
+    <node id="K2">
+      <data key="name">组成细胞的化合物</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">生物</data>
+      <data key="module">必修1 分子与细胞</data>
+      <data key="chapter">细胞中的元素与化合物</data>
+      <data key="difficulty">2</data>
+      <data key="description">了解细胞中水、无机盐、糖类、脂质、蛋白质和核酸的种类与含量比例，掌握各类化合物的元素组成。</data>
+      <data key="keywords">化合物,水,无机盐,糖类,脂质,蛋白质,核酸</data>
+      <data key="exam_type">选择题,含量判断</data>
+      <data key="importance">3</data>
+      <data key="textbook_source">必修1</data>
+    </node>
+    <node id="K3">
+      <data key="name">水在细胞中的作用</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">生物</data>
+      <data key="module">必修1 分子与细胞</data>
+      <data key="chapter">细胞中的元素与化合物</data>
+      <data key="difficulty">3</data>
+      <data key="description">区分自由水与结合水的功能差异，理解自由水/结合水比值与代谢速率、抗逆性的关系。</data>
+      <data key="keywords">自由水,结合水,代谢,抗逆性,比值</data>
+      <data key="exam_type">选择题,分析题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">必修1</data>
+    </node>
+    <node id="K4">
+      <data key="name">无机盐的存在形式与功能</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">生物</data>
+      <data key="module">必修1 分子与细胞</data>
+      <data key="chapter">细胞中的元素与化合物</data>
+      <data key="difficulty">3</data>
+      <data key="description">掌握无机盐以离子形式存在，理解其维持渗透压、酸碱平衡及作为复杂化合物组成部分的功能。</data>
+      <data key="keywords">无机盐,离子,渗透压,酸碱平衡,组成成分</data>
+      <data key="exam_type">选择题,功能判断</data>
+      <data key="importance">3</data>
+      <data key="textbook_source">必修1</data>
+    </node>
+    <node id="K5">
+      <data key="name">糖类的种类与功能</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">生物</data>
+      <data key="module">必修1 分子与细胞</data>
+      <data key="chapter">细胞中的元素与化合物</data>
+      <data key="difficulty">3</data>
+      <data key="description">区分单糖、二糖、多糖，掌握淀粉、糖原、纤维素等主要多糖的分布与功能，理解糖类是主要能源物质。</data>
+      <data key="keywords">单糖,二糖,多糖,淀粉,糖原,纤维素,能源物质</data>
+      <data key="exam_type">选择题,归类判断</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">必修1</data>
+    </node>
+    <node id="K6">
+      <data key="name">脂质的种类与功能</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">生物</data>
+      <data key="module">必修1 分子与细胞</data>
+      <data key="chapter">细胞中的元素与化合物</data>
+      <data key="difficulty">3</data>
+      <data key="description">掌握脂肪(储能)、磷脂(构成膜)、固醇(胆固醇、性激素、维生素D)的功能，理解磷脂在生物膜中的重要性。</data>
+      <data key="keywords">脂肪,磷脂,固醇,储能,生物膜</data>
+      <data key="exam_type">选择题,功能配对</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">必修1</data>
+    </node>
+    <node id="K7">
+      <data key="name">蛋白质的结构与功能</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">生物</data>
+      <data key="module">必修1 分子与细胞</data>
+      <data key="chapter">细胞中的元素与化合物</data>
+      <data key="difficulty">5</data>
+      <data key="description">掌握氨基酸结构通式、肽键形成、蛋白质的层级结构(一二三四级)，理解结构多样性与功能多样性的关系，能进行脱水缩合相关计算。</data>
+      <data key="keywords">氨基酸,肽键,脱水缩合,空间结构,多样性,计算</data>
+      <data key="exam_type">选择题,计算题,综合题</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">必修1</data>
+    </node>
+    <node id="K8">
+      <data key="name">核酸的结构与功能</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">生物</data>
+      <data key="module">必修1 分子与细胞</data>
+      <data key="chapter">细胞中的元素与化合物</data>
+      <data key="difficulty">4</data>
+      <data key="description">区分DNA与RNA在组成、结构和功能上的差异，掌握核酸是遗传信息的载体，理解磷酸二酯键与碱基互补配对。</data>
+      <data key="keywords">DNA,RNA,核苷酸,碱基互补配对,遗传信息</data>
+      <data key="exam_type">选择题,比较题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">必修1</data>
+    </node>
+    <node id="K9">
+      <data key="name">细胞学说</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">生物</data>
+      <data key="module">必修1 分子与细胞</data>
+      <data key="chapter">细胞的基本结构</data>
+      <data key="difficulty">2</data>
+      <data key="description">掌握细胞学说的主要内容(三点)及其意义，了解细胞学说的建立过程，理解其揭示了生物界的统一性。</data>
+      <data key="keywords">细胞学说,统一性,主要内容,意义</data>
+      <data key="exam_type">选择题,判断题</data>
+      <data key="importance">3</data>
+      <data key="textbook_source">必修1</data>
+    </node>
+    <node id="K10">
+      <data key="name">原核细胞与真核细胞</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">生物</data>
+      <data key="module">必修1 分子与细胞</data>
+      <data key="chapter">细胞的基本结构</data>
+      <data key="difficulty">3</data>
+      <data key="description">区分原核细胞与真核细胞在细胞核、细胞器等方面的差异，掌握常见原核生物(细菌、蓝藻)与真核生物的代表。</data>
+      <data key="keywords">原核细胞,真核细胞,拟核,蓝藻,细菌</data>
+      <data key="exam_type">选择题,判断题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">必修1</data>
+    </node>
+    <node id="K11">
+      <data key="name">细胞膜的结构与功能</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">生物</data>
+      <data key="module">必修1 分子与细胞</data>
+      <data key="chapter">细胞的基本结构</data>
+      <data key="difficulty">4</data>
+      <data key="description">掌握流动镶嵌模型的基本内容，理解细胞膜作为系统边界的功能(物质运输、信息交流、屏障)，掌握糖蛋白的识别作用。</data>
+      <data key="keywords">流动镶嵌模型,磷脂双分子层,蛋白质,糖蛋白,信息交流</data>
+      <data key="exam_type">选择题,模型分析</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">必修1</data>
+    </node>
+    <node id="K12">
+      <data key="name">细胞器的结构与功能</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">生物</data>
+      <data key="module">必修1 分子与细胞</data>
+      <data key="chapter">细胞的基本结构</data>
+      <data key="difficulty">4</data>
+      <data key="description">掌握线粒体、叶绿体、内质网、高尔基体、核糖体、溶酶体、液泡等细胞器的结构与功能，理解双层膜与单层膜细胞器的区别。</data>
+      <data key="keywords">线粒体,叶绿体,内质网,高尔基体,核糖体,溶酶体,液泡</data>
+      <data key="exam_type">选择题,功能配对,识图题</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">必修1</data>
+    </node>
+    <node id="K13">
+      <data key="name">细胞核的结构与功能</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">生物</data>
+      <data key="module">必修1 分子与细胞</data>
+      <data key="chapter">细胞的基本结构</data>
+      <data key="difficulty">3</data>
+      <data key="description">掌握核膜、核仁、染色质的组成，理解细胞核作为遗传信息库和控制细胞代谢的功能。</data>
+      <data key="keywords">核膜,核仁,染色质,遗传信息库,代谢控制</data>
+      <data key="exam_type">选择题,功能分析</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">必修1</data>
+    </node>
+    <node id="K14">
+      <data key="name">生物膜系统</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">生物</data>
+      <data key="module">必修1 分子与细胞</data>
+      <data key="chapter">细胞的基本结构</data>
+      <data key="difficulty">4</data>
+      <data key="description">理解生物膜系统的概念，掌握各种生物膜在结构上的联系(直接相连、间接相连)和功能上的协调配合(分泌蛋白的合成与运输)。</data>
+      <data key="keywords">生物膜系统,囊泡,分泌蛋白,结构联系,功能协调</data>
+      <data key="exam_type">选择题,综合分析题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">必修1</data>
+    </node>
+    <node id="K15">
+      <data key="name">渗透作用</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">生物</data>
+      <data key="module">必修1 分子与细胞</data>
+      <data key="chapter">细胞的物质输入与输出</data>
+      <data key="difficulty">4</data>
+      <data key="description">理解渗透作用发生的条件(半透膜、浓度差)，掌握原生质层相当于半透层，能分析成熟植物细胞的渗透系统。</data>
+      <data key="keywords">渗透作用,半透膜,浓度差,原生质层</data>
+      <data key="exam_type">选择题,分析题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">必修1</data>
+    </node>
+    <node id="K16">
+      <data key="name">质壁分离与复原</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">生物</data>
+      <data key="module">必修1 分子与细胞</data>
+      <data key="chapter">细胞的物质输入与输出</data>
+      <data key="difficulty">4</data>
+      <data key="description">掌握质壁分离与复原的原理及条件(活的成熟植物细胞、外界溶液浓度大于细胞液)，能进行实验设计与结果分析。</data>
+      <data key="keywords">质壁分离,质壁分离复原,原生质层,细胞壁,实验设计</data>
+      <data key="exam_type">实验题,选择题,分析题</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">必修1</data>
+    </node>
+    <node id="K17">
+      <data key="name">物质跨膜运输的方式</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">生物</data>
+      <data key="module">必修1 分子与细胞</data>
+      <data key="chapter">细胞的物质输入与输出</data>
+      <data key="difficulty">5</data>
+      <data key="description">区分自由扩散、协助扩散、主动运输和胞吞胞吐的特点(方向、载体、能量)，能判断具体物质的运输方式并分析影响因素。</data>
+      <data key="keywords">自由扩散,协助扩散,主动运输,胞吞胞吐,载体,能量</data>
+      <data key="exam_type">选择题,曲线分析,综合题</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">必修1</data>
+    </node>
+    <node id="K18">
+      <data key="name">酶的作用与本质</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">生物</data>
+      <data key="module">必修1 分子与细胞</data>
+      <data key="chapter">细胞的能量供应与利用</data>
+      <data key="difficulty">3</data>
+      <data key="description">理解酶是活细胞产生的具有催化作用的有机物(多数为蛋白质，少数为RNA)，掌握酶降低活化能的催化机制。</data>
+      <data key="keywords">酶,催化,活化能,蛋白质,RNA</data>
+      <data key="exam_type">选择题,实验分析</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">必修1</data>
+    </node>
+    <node id="K19">
+      <data key="name">酶的特性</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">生物</data>
+      <data key="module">必修1 分子与细胞</data>
+      <data key="chapter">细胞的能量供应与利用</data>
+      <data key="difficulty">4</data>
+      <data key="description">掌握酶的高效性、专一性和作用条件温和的特性，能设计实验验证酶的特性并分析实验变量(自变量、因变量、无关变量)。</data>
+      <data key="keywords">高效性,专一性,温和性,实验设计,变量控制</data>
+      <data key="exam_type">实验题,选择题</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">必修1</data>
+    </node>
+    <node id="K20">
+      <data key="name">ATP的结构与功能</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">生物</data>
+      <data key="module">必修1 分子与细胞</data>
+      <data key="chapter">细胞的能量供应与利用</data>
+      <data key="difficulty">3</data>
+      <data key="description">掌握ATP的结构简式(A-P~P~P)及高能磷酸键，理解ATP与ADP的相互转化及ATP作为直接能源物质的功能。</data>
+      <data key="keywords">ATP,ADP,高能磷酸键,直接能源,能量转化</data>
+      <data key="exam_type">选择题,综合分析</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">必修1</data>
+    </node>
+    <node id="K21">
+      <data key="name">细胞呼吸</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">生物</data>
+      <data key="module">必修1 分子与细胞</data>
+      <data key="chapter">细胞的能量供应与利用</data>
+      <data key="difficulty">5</data>
+      <data key="description">掌握有氧呼吸三阶段(糖酵解、三羧酸循环、氧化磷酸化)的场所、反应物与产物，理解无氧呼吸的类型(酒精发酵、乳酸发酵)，能进行呼吸作用相关计算。</data>
+      <data key="keywords">有氧呼吸,无氧呼吸,糖酵解,三羧酸循环,酒精发酵,乳酸发酵</data>
+      <data key="exam_type">选择题,计算题,综合题</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">必修1</data>
+    </node>
+    <node id="K22">
+      <data key="name">光合作用</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">生物</data>
+      <data key="module">必修1 分子与细胞</data>
+      <data key="chapter">细胞的能量供应与利用</data>
+      <data key="difficulty">5</data>
+      <data key="description">掌握光反应(类囊体薄膜:水的光解、ATP合成)与暗反应(基质:CO2固定、C3还原)的过程、场所与物质能量联系，理解光合作用总反应式。</data>
+      <data key="keywords">光反应,暗反应,类囊体,基质,CO2固定,C3还原,色素</data>
+      <data key="exam_type">选择题,综合分析题,实验题</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">必修1</data>
+    </node>
+    <node id="K23">
+      <data key="name">影响光合作用的因素</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">生物</data>
+      <data key="module">必修1 分子与细胞</data>
+      <data key="chapter">细胞的能量供应与利用</data>
+      <data key="difficulty">5</data>
+      <data key="description">分析光照强度、CO2浓度、温度、矿质元素等因素对光合速率的影响，能解读光合速率曲线并应用于农业生产实践。</data>
+      <data key="keywords">光强,CO2浓度,温度,光补偿点,光饱和点,光合速率</data>
+      <data key="exam_type">曲线分析题,选择题,应用题</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">必修1</data>
+    </node>
+    <node id="K24">
+      <data key="name">细胞周期</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">生物</data>
+      <data key="module">必修1 分子与细胞</data>
+      <data key="chapter">细胞的生命历程</data>
+      <data key="difficulty">3</data>
+      <data key="description">掌握细胞周期的概念(分裂间期与分裂期)及连续分裂细胞的特点，理解分裂间期占据大部分时间的原因(DNA复制和蛋白质合成)。</data>
+      <data key="keywords">细胞周期,分裂间期,分裂期,DNA复制</data>
+      <data key="exam_type">选择题,判断题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">必修1</data>
+    </node>
+    <node id="K25">
+      <data key="name">有丝分裂</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">生物</data>
+      <data key="module">必修1 分子与细胞</data>
+      <data key="chapter">细胞的生命历程</data>
+      <data key="difficulty">5</data>
+      <data key="description">掌握有丝分裂各时期(前、中、后、末)的染色体、DNA和染色单体的变化规律，能绘制和解读相关曲线，理解有丝分裂的意义。</data>
+      <data key="keywords">有丝分裂,染色体,DNA,染色单体,赤道板,纺锤体</data>
+      <data key="exam_type">选择题,曲线分析,综合题</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">必修1</data>
+    </node>
+    <node id="K26">
+      <data key="name">细胞分化</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">生物</data>
+      <data key="module">必修1 分子与细胞</data>
+      <data key="chapter">细胞的生命历程</data>
+      <data key="difficulty">3</data>
+      <data key="description">理解细胞分化的概念(基因的选择性表达)、特点(持久性、不可逆性)和意义(形成不同组织器官)。</data>
+      <data key="keywords">细胞分化,基因选择性表达,持久性,组织器官</data>
+      <data key="exam_type">选择题,分析题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">必修1</data>
+    </node>
+    <node id="K27">
+      <data key="name">细胞全能性</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">生物</data>
+      <data key="module">必修1 分子与细胞</data>
+      <data key="chapter">细胞的生命历程</data>
+      <data key="difficulty">4</data>
+      <data key="description">理解细胞全能性的概念，掌握已分化细胞仍具有发育成完整个体的潜能，了解植物组织培养证明全能性的实例。</data>
+      <data key="keywords">全能性,已分化细胞,组织培养,潜能</data>
+      <data key="exam_type">选择题,分析题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">必修1</data>
+    </node>
+    <node id="K28">
+      <data key="name">细胞衰老与凋亡</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">生物</data>
+      <data key="module">必修1 分子与细胞</data>
+      <data key="chapter">细胞的生命历程</data>
+      <data key="difficulty">3</data>
+      <data key="description">掌握细胞衰老的特征(水分减少、酶活性降低、色素积累等)，理解细胞凋亡是基因决定的程序性死亡，区分凋亡与坏死。</data>
+      <data key="keywords">细胞衰老,细胞凋亡,程序性死亡,坏死,基因决定</data>
+      <data key="exam_type">选择题,判断题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">必修1</data>
+    </node>
+    <node id="K29">
+      <data key="name">细胞癌变</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">生物</data>
+      <data key="module">必修1 分子与细胞</data>
+      <data key="chapter">细胞的生命历程</data>
+      <data key="difficulty">4</data>
+      <data key="description">理解癌细胞的主要特征(无限增殖、形态结构改变、表面发生变化)，掌握致癌因子(物理、化学、病毒)及原癌基因与抑癌基因的作用。</data>
+      <data key="keywords">癌细胞,无限增殖,原癌基因,抑癌基因,致癌因子</data>
+      <data key="exam_type">选择题,综合分析</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">必修1</data>
+    </node>
+    <node id="K30">
+      <data key="name">孟德尔杂交实验</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">生物</data>
+      <data key="module">必修2 遗传与进化</data>
+      <data key="chapter">遗传因子的发现</data>
+      <data key="difficulty">3</data>
+      <data key="description">了解孟德尔选用豌豆的原因(自花传粉、相对性状明显)，掌握一对相对性状杂交实验的过程与现象(F1全显、F2 3:1分离比)。</data>
+      <data key="keywords">豌豆,相对性状,杂交,F1,F2,3:1</data>
+      <data key="exam_type">选择题,实验分析</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">必修2</data>
+    </node>
+    <node id="K31">
+      <data key="name">分离定律</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">生物</data>
+      <data key="module">必修2 遗传与进化</data>
+      <data key="chapter">遗传因子的发现</data>
+      <data key="difficulty">5</data>
+      <data key="description">掌握分离定律的实质(等位基因随同源染色体分离而分开)，能进行遗传概率计算(棋盘法、分支法)，能判断显隐性关系与基因型。</data>
+      <data key="keywords">分离定律,等位基因,同源染色体,概率计算,基因型推断</data>
+      <data key="exam_type">计算题,选择题,综合题</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">必修2</data>
+    </node>
+    <node id="K32">
+      <data key="name">自由组合定律</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">生物</data>
+      <data key="module">必修2 遗传与进化</data>
+      <data key="chapter">遗传因子的发现</data>
+      <data key="difficulty">5</data>
+      <data key="description">掌握自由组合定律的实质(非同源染色体上非等位基因自由组合)，能进行多对基因遗传概率计算(9:3:3:1及其变式)。</data>
+      <data key="keywords">自由组合定律,非同源染色体,非等位基因,9:3:3:1,变式比例</data>
+      <data key="exam_type">计算题,选择题,综合题</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">必修2</data>
+    </node>
+    <node id="K33">
+      <data key="name">减数分裂</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">生物</data>
+      <data key="module">必修2 遗传与进化</data>
+      <data key="chapter">基因与染色体的关系</data>
+      <data key="difficulty">5</data>
+      <data key="description">掌握减数第一次分裂(同源染色体分离)和减数第二次分裂(着丝粒分裂)的过程，理解联会、四分体、交叉互换的意义，能比较有丝分裂与减数分裂。</data>
+      <data key="keywords">减数分裂,同源染色体,联会,四分体,交叉互换,减I,减II</data>
+      <data key="exam_type">选择题,综合分析,曲线题</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">必修2</data>
+    </node>
+    <node id="K34">
+      <data key="name">基因在染色体上</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">生物</data>
+      <data key="module">必修2 遗传与进化</data>
+      <data key="chapter">基因与染色体的关系</data>
+      <data key="difficulty">4</data>
+      <data key="description">理解萨顿假说(基因和染色体行为存在平行关系)和摩尔根果蝇实验证据，掌握基因在染色体上呈线性排列的结论。</data>
+      <data key="keywords">萨顿假说,摩尔根,果蝇,白眼基因,线性排列</data>
+      <data key="exam_type">选择题,分析题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">必修2</data>
+    </node>
+    <node id="K35">
+      <data key="name">伴性遗传</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">生物</data>
+      <data key="module">必修2 遗传与进化</data>
+      <data key="chapter">基因与染色体的关系</data>
+      <data key="difficulty">5</data>
+      <data key="description">掌握伴X染色体隐性遗传(色盲、血友病)、显性遗传和伴Y遗传的特点及判断方法，能进行家系图分析和概率计算。</data>
+      <data key="keywords">伴性遗传,X染色体,色盲,血友病,家系分析,概率</data>
+      <data key="exam_type">家系分析题,选择题,计算题</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">必修2</data>
+    </node>
+    <node id="K36">
+      <data key="name">DNA是主要遗传物质</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">生物</data>
+      <data key="module">必修2 遗传与进化</data>
+      <data key="chapter">基因的本质</data>
+      <data key="difficulty">4</data>
+      <data key="description">掌握肺炎双球菌转化实验(格里菲思、艾弗里)和噬菌体侵染细菌实验(赫尔希、蔡斯)的原理与结论，理解DNA是遗传物质而RNA病毒以RNA为遗传物质。</data>
+      <data key="keywords">肺炎双球菌,转化实验,噬菌体侵染,DNA,遗传物质</data>
+      <data key="exam_type">选择题,实验分析</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">必修2</data>
+    </node>
+    <node id="K37">
+      <data key="name">DNA分子结构</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">生物</data>
+      <data key="module">必修2 遗传与进化</data>
+      <data key="chapter">基因的本质</data>
+      <data key="difficulty">4</data>
+      <data key="description">掌握DNA双螺旋结构(沃森、克里克)的特点:两条链反向平行、磷酸脱氧核糖交替连接、碱基互补配对(A-T、G-C)，理解碱基计算规律。</data>
+      <data key="keywords">双螺旋,反向平行,碱基互补配对,A-T,G-C,碱基计算</data>
+      <data key="exam_type">选择题,计算题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">必修2</data>
+    </node>
+    <node id="K38">
+      <data key="name">DNA复制</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">生物</data>
+      <data key="module">必修2 遗传与进化</data>
+      <data key="chapter">基因的本质</data>
+      <data key="difficulty">4</data>
+      <data key="description">掌握DNA复制的时期(S期)、方式(半保留复制)、条件(模板、原料、酶、能量)和过程(解旋、合成)，能分析梅塞尔森-斯塔尔实验。</data>
+      <data key="keywords">半保留复制,解旋酶,DNA聚合酶,S期,梅塞尔森实验</data>
+      <data key="exam_type">选择题,实验分析,综合题</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">必修2</data>
+    </node>
+    <node id="K39">
+      <data key="name">转录与翻译</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">生物</data>
+      <data key="module">必修2 遗传与进化</data>
+      <data key="chapter">基因的表达</data>
+      <data key="difficulty">5</data>
+      <data key="description">掌握转录(DNA→mRNA，场所为细胞核)和翻译(mRNA→蛋白质，场所为核糖体)的过程，理解tRNA的反密码子识别及氨基酸的连接。</data>
+      <data key="keywords">转录,翻译,mRNA,tRNA,核糖体,密码子,反密码子</data>
+      <data key="exam_type">选择题,综合分析,过程图解</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">必修2</data>
+    </node>
+    <node id="K40">
+      <data key="name">遗传密码</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">生物</data>
+      <data key="module">必修2 遗传与进化</data>
+      <data key="chapter">基因的表达</data>
+      <data key="difficulty">3</data>
+      <data key="description">理解密码子的概念(64种，其中61种编码氨基酸，3种终止密码子)，掌握密码子的简并性、通用性与不重叠性。</data>
+      <data key="keywords">密码子,简并性,通用性,终止密码子,起始密码子</data>
+      <data key="exam_type">选择题,判断题</data>
+      <data key="importance">3</data>
+      <data key="textbook_source">必修2</data>
+    </node>
+    <node id="K41">
+      <data key="name">中心法则</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">生物</data>
+      <data key="module">必修2 遗传与进化</data>
+      <data key="chapter">基因的表达</data>
+      <data key="difficulty">4</data>
+      <data key="description">掌握中心法则的内容(复制、转录、翻译)及其补充(逆转录、RNA复制)，理解各类生物信息传递的特点。</data>
+      <data key="keywords">中心法则,复制,转录,翻译,逆转录,RNA复制</data>
+      <data key="exam_type">选择题,综合分析</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">必修2</data>
+    </node>
+    <node id="K42">
+      <data key="name">基因突变</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">生物</data>
+      <data key="module">必修2 遗传与进化</data>
+      <data key="chapter">基因突变及其他变异</data>
+      <data key="difficulty">4</data>
+      <data key="description">掌握基因突变的概念(DNA碱基对的增添、缺失、替换)、特点(普遍性、随机性、低频性、不定向性、多害少利性)及意义(生物变异的根本来源)。</data>
+      <data key="keywords">基因突变,碱基对,增添,缺失,替换,变异来源</data>
+      <data key="exam_type">选择题,分析题</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">必修2</data>
+    </node>
+    <node id="K43">
+      <data key="name">基因重组</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">生物</data>
+      <data key="module">必修2 遗传与进化</data>
+      <data key="chapter">基因突变及其他变异</data>
+      <data key="difficulty">4</data>
+      <data key="description">理解基因重组的类型(自由组合型、交叉互换型)及发生在减数分裂过程中的机制，掌握其作为有性生殖变异来源的意义。</data>
+      <data key="keywords">基因重组,自由组合,交叉互换,减数分裂,有性生殖</data>
+      <data key="exam_type">选择题,分析题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">必修2</data>
+    </node>
+    <node id="K44">
+      <data key="name">染色体变异</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">生物</data>
+      <data key="module">必修2 遗传与进化</data>
+      <data key="chapter">基因突变及其他变异</data>
+      <data key="difficulty">5</data>
+      <data key="description">掌握染色体结构变异(缺失、重复、倒位、易位)和数目变异(整倍体、非整倍体)的类型，理解单倍体、二倍体、多倍体的概念与育种应用。</data>
+      <data key="keywords">染色体结构变异,染色体数目变异,单倍体,多倍体,缺失,重复,倒位,易位</data>
+      <data key="exam_type">选择题,综合分析</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">必修2</data>
+    </node>
+    <node id="K45">
+      <data key="name">人类遗传病</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">生物</data>
+      <data key="module">必修2 遗传与进化</data>
+      <data key="chapter">基因突变及其他变异</data>
+      <data key="difficulty">3</data>
+      <data key="description">掌握单基因遗传病(常染色体显/隐性、性染色体显/隐性)、多基因遗传病和染色体异常遗传病的分类及常见病例。</data>
+      <data key="keywords">单基因遗传病,多基因遗传病,染色体异常,常染色体,性染色体</data>
+      <data key="exam_type">选择题,判断题</data>
+      <data key="importance">3</data>
+      <data key="textbook_source">必修2</data>
+    </node>
+    <node id="K46">
+      <data key="name">现代生物进化理论</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">生物</data>
+      <data key="module">必修2 遗传与进化</data>
+      <data key="chapter">生物的进化</data>
+      <data key="difficulty">4</data>
+      <data key="description">掌握现代生物进化理论的核心内容:种群是进化的基本单位、突变和基因重组提供原材料、自然选择决定进化方向、隔离导致物种形成。</data>
+      <data key="keywords">进化理论,种群,突变,基因重组,自然选择,隔离</data>
+      <data key="exam_type">选择题,综合分析</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">必修2</data>
+    </node>
+    <node id="K47">
+      <data key="name">种群基因频率与进化</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">生物</data>
+      <data key="module">必修2 遗传与进化</data>
+      <data key="chapter">生物的进化</data>
+      <data key="difficulty">5</data>
+      <data key="description">理解基因频率与基因型频率的概念，能进行基因频率计算，掌握 Hardy-Weinberg 平衡定律及影响基因频率变化的因素。</data>
+      <data key="keywords">基因频率,基因型频率,Hardy-Weinberg平衡,遗传平衡,计算</data>
+      <data key="exam_type">计算题,选择题</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">必修2</data>
+    </node>
+    <node id="K48">
+      <data key="name">物种形成</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">生物</data>
+      <data key="module">必修2 遗传与进化</data>
+      <data key="chapter">生物的进化</data>
+      <data key="difficulty">4</data>
+      <data key="description">理解物种的概念、隔离的类型(地理隔离、生殖隔离)及物种形成的一般过程(地理隔离→基因频率差异→生殖隔离)。</data>
+      <data key="keywords">物种,地理隔离,生殖隔离,物种形成,基因频率</data>
+      <data key="exam_type">选择题,分析题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">必修2</data>
+    </node>
+    <node id="K49">
+      <data key="name">共同进化与生物多样性</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">生物</data>
+      <data key="module">必修2 遗传与进化</data>
+      <data key="chapter">生物的进化</data>
+      <data key="difficulty">3</data>
+      <data key="description">理解共同进化的概念(不同物种间、生物与无机环境间协同进化)，掌握生物多样性的三个层次(基因、物种、生态系统)及形成过程。</data>
+      <data key="keywords">共同进化,生物多样性,基因多样性,物种多样性,生态系统多样性</data>
+      <data key="exam_type">选择题,分析题</data>
+      <data key="importance">3</data>
+      <data key="textbook_source">必修2</data>
+    </node>
+    <node id="K50">
+      <data key="name">内环境的组成</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">生物</data>
+      <data key="module">选择性必修1 稳态与调节</data>
+      <data key="chapter">人体的内环境与稳态</data>
+      <data key="difficulty">3</data>
+      <data key="description">掌握体液的组成(细胞内液、外液)，理解血浆、组织液、淋巴三者之间的转化关系，掌握内环境的理化性质(渗透压、pH、温度)。</data>
+      <data key="keywords">内环境,血浆,组织液,淋巴,渗透压,pH,体液</data>
+      <data key="exam_type">选择题,综合分析</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">选择性必修1</data>
+    </node>
+    <node id="K51">
+      <data key="name">内环境的稳态</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">生物</data>
+      <data key="module">选择性必修1 稳态与调节</data>
+      <data key="chapter">人体的内环境与稳态</data>
+      <data key="difficulty">4</data>
+      <data key="description">理解稳态的概念及调节机制(神经-体液-免疫调节网络)，掌握稳态维持的意义和失调的表现。</data>
+      <data key="keywords">稳态,神经调节,体液调节,免疫调节,调节网络</data>
+      <data key="exam_type">选择题,分析题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">选择性必修1</data>
+    </node>
+    <node id="K52">
+      <data key="name">反射与反射弧</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">生物</data>
+      <data key="module">选择性必修1 稳态与调节</data>
+      <data key="chapter">神经调节</data>
+      <data key="difficulty">3</data>
+      <data key="description">掌握反射的概念(条件反射与非条件反射)及反射弧的五个组成部分(感受器、传入神经、神经中枢、传出神经、效应器)。</data>
+      <data key="keywords">反射,条件反射,非条件反射,反射弧,感受器,效应器</data>
+      <data key="exam_type">选择题,分析题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">选择性必修1</data>
+    </node>
+    <node id="K53">
+      <data key="name">神经冲动的产生与传导</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">生物</data>
+      <data key="module">选择性必修1 稳态与调节</data>
+      <data key="chapter">神经调节</data>
+      <data key="difficulty">5</data>
+      <data key="description">理解静息电位(K+外流)和动作电位(Na+内流)的产生机制，掌握兴奋在神经纤维上的传导(双向传导、局部电流)及特征。</data>
+      <data key="keywords">静息电位,动作电位,K+外流,Na+内流,局部电流,传导</data>
+      <data key="exam_type">选择题,曲线分析,综合题</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">选择性必修1</data>
+    </node>
+    <node id="K54">
+      <data key="name">突触传递</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">生物</data>
+      <data key="module">选择性必修1 稳态与调节</data>
+      <data key="chapter">神经调节</data>
+      <data key="difficulty">5</data>
+      <data key="description">掌握突触的结构(突触前膜、突触间隙、突触后膜)及兴奋在突触处的传递过程(电信号→化学信号→电信号)，理解单向传递的原因和神经递质的作用。</data>
+      <data key="keywords">突触,突触前膜,突触间隙,突触后膜,神经递质,单向传递</data>
+      <data key="exam_type">选择题,综合分析,过程图解</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">选择性必修1</data>
+    </node>
+    <node id="K55">
+      <data key="name">神经系统的分级调节</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">生物</data>
+      <data key="module">选择性必修1 稳态与调节</data>
+      <data key="chapter">神经调节</data>
+      <data key="difficulty">4</data>
+      <data key="description">理解中枢神经系统各部位的分工(大脑皮层、小脑、脑干、脊髓)及分级调节的关系，掌握大脑皮层作为最高级中枢的功能。</data>
+      <data key="keywords">分级调节,大脑皮层,小脑,脑干,脊髓,高级中枢</data>
+      <data key="exam_type">选择题,分析题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">选择性必修1</data>
+    </node>
+    <node id="K56">
+      <data key="name">激素调节的原理</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">生物</data>
+      <data key="module">选择性必修1 稳态与调节</data>
+      <data key="chapter">体液调节</data>
+      <data key="difficulty">4</data>
+      <data key="description">理解激素调节的概念和特点(微量高效、通过体液运输、作用于靶器官靶细胞)，掌握激素间的协同与拮抗作用。</data>
+      <data key="keywords">激素调节,微量高效,靶器官,靶细胞,协同作用,拮抗作用</data>
+      <data key="exam_type">选择题,分析题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">选择性必修1</data>
+    </node>
+    <node id="K57">
+      <data key="name">主要激素及其作用</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">生物</data>
+      <data key="module">选择性必修1 稳态与调节</data>
+      <data key="chapter">体液调节</data>
+      <data key="difficulty">4</data>
+      <data key="description">掌握甲状腺激素、胰岛素与胰高血糖素、生长激素、性激素等主要激素的分泌部位、生理作用及分泌异常的表现。</data>
+      <data key="keywords">甲状腺激素,胰岛素,胰高血糖素,生长激素,性激素,分泌异常</data>
+      <data key="exam_type">选择题,综合分析</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">选择性必修1</data>
+    </node>
+    <node id="K58">
+      <data key="name">神经调节与体液调节的关系</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">生物</data>
+      <data key="module">选择性必修1 稳态与调节</data>
+      <data key="chapter">体液调节</data>
+      <data key="difficulty">4</data>
+      <data key="description">理解神经调节与体液调节的区别与联系，掌握两者协调维持稳态的实例(血糖调节、体温调节、水盐调节)。</data>
+      <data key="keywords">神经调节,体液调节,血糖调节,体温调节,水盐调节,协调</data>
+      <data key="exam_type">选择题,综合分析</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">选择性必修1</data>
+    </node>
+    <node id="K59">
+      <data key="name">免疫系统的组成</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">生物</data>
+      <data key="module">选择性必修1 稳态与调节</data>
+      <data key="chapter">免疫调节</data>
+      <data key="difficulty">3</data>
+      <data key="description">掌握免疫器官(骨髓、胸腺、脾、淋巴结)、免疫细胞(淋巴细胞、吞噬细胞)和免疫活性物质(抗体、淋巴因子、溶菌酶)的组成。</data>
+      <data key="keywords">免疫器官,免疫细胞,淋巴细胞,吞噬细胞,抗体,淋巴因子</data>
+      <data key="exam_type">选择题,判断题</data>
+      <data key="importance">3</data>
+      <data key="textbook_source">选择性必修1</data>
+    </node>
+    <node id="K60">
+      <data key="name">特异性免疫</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">生物</data>
+      <data key="module">选择性必修1 稳态与调节</data>
+      <data key="chapter">免疫调节</data>
+      <data key="difficulty">5</data>
+      <data key="description">掌握体液免疫(B细胞→浆细胞→抗体)和细胞免疫(T细胞→效应T细胞→裂解靶细胞)的过程及两者的协同关系，理解记忆细胞的功能。</data>
+      <data key="keywords">体液免疫,细胞免疫,B细胞,浆细胞,抗体,效应T细胞,记忆细胞</data>
+      <data key="exam_type">选择题,综合分析,过程图解</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">选择性必修1</data>
+    </node>
+    <node id="K61">
+      <data key="name">免疫失调</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">生物</data>
+      <data key="module">选择性必修1 稳态与调节</data>
+      <data key="chapter">免疫调节</data>
+      <data key="difficulty">3</data>
+      <data key="description">理解过敏反应(已免疫机体再次接触相同抗原)、自身免疫病(免疫系统攻击自身组织)和免疫缺陷病(艾滋病AIDS)的机制。</data>
+      <data key="keywords">过敏反应,自身免疫病,免疫缺陷病,艾滋病,过敏原</data>
+      <data key="exam_type">选择题,分析题</data>
+      <data key="importance">3</data>
+      <data key="textbook_source">选择性必修1</data>
+    </node>
+    <node id="K62">
+      <data key="name">生长素的发现与作用</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">生物</data>
+      <data key="module">选择性必修1 稳态与调节</data>
+      <data key="chapter">植物激素调节</data>
+      <data key="difficulty">4</data>
+      <data key="description">了解生长素的发现历程(达尔文、詹森、拜耳、温特)，掌握生长素的产生(幼嫩芽叶)、运输(极性运输)和分布，理解两重性(低促高抑)。</data>
+      <data key="keywords">生长素,达尔文,温特,极性运输,两重性,顶端优势</data>
+      <data key="exam_type">选择题,实验分析,综合题</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">选择性必修1</data>
+    </node>
+    <node id="K63">
+      <data key="name">其他植物激素</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">生物</data>
+      <data key="module">选择性必修1 稳态与调节</data>
+      <data key="chapter">植物激素调节</data>
+      <data key="difficulty">3</data>
+      <data key="description">掌握赤霉素、细胞分裂素、脱落酸和乙烯的主要生理作用，理解植物激素间的协同与拮抗关系。</data>
+      <data key="keywords">赤霉素,细胞分裂素,脱落酸,乙烯,协同,拮抗</data>
+      <data key="exam_type">选择题,判断题</data>
+      <data key="importance">3</data>
+      <data key="textbook_source">选择性必修1</data>
+    </node>
+    <node id="K64">
+      <data key="name">植物激素的应用</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">生物</data>
+      <data key="module">选择性必修1 稳态与调节</data>
+      <data key="chapter">植物激素调节</data>
+      <data key="difficulty">3</data>
+      <data key="description">掌握植物生长调节剂在农业生产中的应用实例(无子果实、催熟、除草等)，理解合理使用植物激素的意义。</data>
+      <data key="keywords">植物生长调节剂,无子果实,催熟,除草,农业应用</data>
+      <data key="exam_type">选择题,应用题</data>
+      <data key="importance">3</data>
+      <data key="textbook_source">选择性必修1</data>
+    </node>
+    <node id="K65">
+      <data key="name">种群特征</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">生物</data>
+      <data key="module">选择性必修2 生物与环境</data>
+      <data key="chapter">种群及其动态</data>
+      <data key="difficulty">3</data>
+      <data key="description">掌握种群的数量特征(种群密度、出生率死亡率、年龄结构、性别比例)和空间特征(均匀分布、随机分布、集群分布)。</data>
+      <data key="keywords">种群密度,出生率,死亡率,年龄结构,性别比例,空间特征</data>
+      <data key="exam_type">选择题,分析题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">选择性必修2</data>
+    </node>
+    <node id="K66">
+      <data key="name">种群数量变化</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">生物</data>
+      <data key="module">选择性必修2 生物与环境</data>
+      <data key="chapter">种群及其动态</data>
+      <data key="difficulty">5</data>
+      <data key="description">掌握J型曲线(理想条件:λ)和S型曲线(有限环境:K值)的数学模型，理解K值与K/2的实践意义(渔业捕捞、害虫防治)。</data>
+      <data key="keywords">J型曲线,S型曲线,K值,K/2,种群增长,数学模型</data>
+      <data key="exam_type">选择题,曲线分析,计算题</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">选择性必修2</data>
+    </node>
+    <node id="K67">
+      <data key="name">群落的结构</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">生物</data>
+      <data key="module">选择性必修2 生物与环境</data>
+      <data key="chapter">群落及其演替</data>
+      <data key="difficulty">4</data>
+      <data key="description">掌握群落的物种组成(优势种)、垂直结构(分层现象)和水平结构，理解种间关系(竞争、捕食、互利共生、寄生)及生态位概念。</data>
+      <data key="keywords">群落,优势种,垂直结构,水平结构,种间关系,生态位</data>
+      <data key="exam_type">选择题,综合分析</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">选择性必修2</data>
+    </node>
+    <node id="K68">
+      <data key="name">群落的演替</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">生物</data>
+      <data key="module">选择性必修2 生物与环境</data>
+      <data key="chapter">群落及其演替</data>
+      <data key="difficulty">3</data>
+      <data key="description">区分初生演替(从无到有，如火山岩、沙丘)和次生演替(原有土壤条件保留，如火灾后)的特点与过程。</data>
+      <data key="keywords">初生演替,次生演替,火山岩,沙丘,火灾后</data>
+      <data key="exam_type">选择题,分析题</data>
+      <data key="importance">3</data>
+      <data key="textbook_source">选择性必修2</data>
+    </node>
+    <node id="K69">
+      <data key="name">生态系统的结构</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">生物</data>
+      <data key="module">选择性必修2 生物与环境</data>
+      <data key="chapter">生态系统及其稳定性</data>
+      <data key="difficulty">3</data>
+      <data key="description">掌握生态系统的组成成分(非生物物质和能量、生产者、消费者、分解者)及食物链和食物网的结构。</data>
+      <data key="keywords">生态系统,生产者,消费者,分解者,食物链,食物网</data>
+      <data key="exam_type">选择题,综合分析</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">选择性必修2</data>
+    </node>
+    <node id="K70">
+      <data key="name">生态系统的能量流动</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">生物</data>
+      <data key="module">选择性必修2 生物与环境</data>
+      <data key="chapter">生态系统及其稳定性</data>
+      <data key="difficulty">5</data>
+      <data key="description">掌握能量流动的过程(输入、传递、散失)和特点(单向流动、逐级递减，传递效率10%-20%)，能进行能量流动相关计算并应用于农业生产。</data>
+      <data key="keywords">能量流动,单向流动,逐级递减,10%-20%,传递效率,计算</data>
+      <data key="exam_type">选择题,计算题,综合分析</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">选择性必修2</data>
+    </node>
+    <node id="K71">
+      <data key="name">生态系统的物质循环</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">生物</data>
+      <data key="module">选择性必修2 生物与环境</data>
+      <data key="chapter">生态系统及其稳定性</data>
+      <data key="difficulty">4</data>
+      <data key="description">掌握碳循环(光合作用、呼吸作用、分解者分解、燃烧)的过程和特点(全球性、循环性)，理解物质循环与能量流动的关系。</data>
+      <data key="keywords">物质循环,碳循环,光合作用,呼吸作用,全球性,循环性</data>
+      <data key="exam_type">选择题,综合分析</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">选择性必修2</data>
+    </node>
+    <node id="K72">
+      <data key="name">生态系统的信息传递</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">生物</data>
+      <data key="module">选择性必修2 生物与环境</data>
+      <data key="chapter">生态系统及其稳定性</data>
+      <data key="difficulty">3</data>
+      <data key="description">掌握物理信息、化学信息和行为信息的分类及信息传递在生态系统中的作用(个体生命活动调节、种间关系、生物种群繁衍)。</data>
+      <data key="keywords">信息传递,物理信息,化学信息,行为信息,种间关系</data>
+      <data key="exam_type">选择题,判断题</data>
+      <data key="importance">3</data>
+      <data key="textbook_source">选择性必修2</data>
+    </node>
+    <node id="K73">
+      <data key="name">生态系统的稳定性</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">生物</data>
+      <data key="module">选择性必修2 生物与环境</data>
+      <data key="chapter">生态系统及其稳定性</data>
+      <data key="difficulty">4</data>
+      <data key="description">理解抵抗力稳定性(结构复杂、稳定性高)和恢复力稳定性的概念及两者关系，掌握提高生态系统稳定性的措施。</data>
+      <data key="keywords">稳定性,抵抗力稳定性,恢复力稳定性,结构复杂</data>
+      <data key="exam_type">选择题,分析题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">选择性必修2</data>
+    </node>
+    <node id="K74">
+      <data key="name">人类活动对环境的影响</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">生物</data>
+      <data key="module">选择性必修2 生物与环境</data>
+      <data key="chapter">人与环境</data>
+      <data key="difficulty">3</data>
+      <data key="description">理解人口增长对环境的影响，掌握富营养化、温室效应、酸雨等环境问题的成因及生物防治措施。</data>
+      <data key="keywords">人口增长,富营养化,温室效应,酸雨,环境问题</data>
+      <data key="exam_type">选择题,分析题</data>
+      <data key="importance">3</data>
+      <data key="textbook_source">选择性必修2</data>
+    </node>
+    <node id="K75">
+      <data key="name">生物多样性及其保护</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">生物</data>
+      <data key="module">选择性必修2 生物与环境</data>
+      <data key="chapter">人与环境</data>
+      <data key="difficulty">3</data>
+      <data key="description">掌握生物多样性的三个层次及价值(潜在价值、间接价值、直接价值)，理解就地保护和迁地保护等保护措施。</data>
+      <data key="keywords">生物多样性,潜在价值,间接价值,就地保护,迁地保护</data>
+      <data key="exam_type">选择题,分析题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">选择性必修2</data>
+    </node>
+    <node id="K76">
+      <data key="name">微生物的培养技术</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">生物</data>
+      <data key="module">选择性必修3 生物技术与工程</data>
+      <data key="chapter">发酵工程</data>
+      <data key="difficulty">4</data>
+      <data key="description">掌握培养基的配制原则(碳源、氮源、水、无机盐、生长因子)、消毒与灭菌的方法(高压蒸汽、干热、紫外线)及微生物的分离纯化技术。</data>
+      <data key="keywords">培养基,碳源,氮源,灭菌,消毒,分离纯化,接种</data>
+      <data key="exam_type">选择题,实验分析</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">选择性必修3</data>
+    </node>
+    <node id="K77">
+      <data key="name">发酵工程的应用</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">生物</data>
+      <data key="module">选择性必修3 生物技术与工程</data>
+      <data key="chapter">发酵工程</data>
+      <data key="difficulty">3</data>
+      <data key="description">了解发酵工程的基本环节(菌种选育、培养基配制、灭菌、扩大培养、发酵、分离提纯)及在医药、食品工业中的应用实例。</data>
+      <data key="keywords">发酵工程,菌种选育,扩大培养,分离提纯,医药,食品</data>
+      <data key="exam_type">选择题,分析题</data>
+      <data key="importance">3</data>
+      <data key="textbook_source">选择性必修3</data>
+    </node>
+    <node id="K78">
+      <data key="name">植物细胞工程</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">生物</data>
+      <data key="module">选择性必修3 生物技术与工程</data>
+      <data key="chapter">细胞工程</data>
+      <data key="difficulty">4</data>
+      <data key="description">掌握植物组织培养(脱分化→愈伤组织→再分化→试管苗)的原理(全能性)和植物体细胞杂交(去壁、融合、筛选)的技术过程。</data>
+      <data key="keywords">植物组织培养,脱分化,愈伤组织,再分化,体细胞杂交,原生质体</data>
+      <data key="exam_type">选择题,综合分析</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">选择性必修3</data>
+    </node>
+    <node id="K79">
+      <data key="name">动物细胞工程</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">生物</data>
+      <data key="module">选择性必修3 生物技术与工程</data>
+      <data key="chapter">细胞工程</data>
+      <data key="difficulty">5</data>
+      <data key="description">掌握动物细胞培养技术、细胞融合和单克隆抗体制备(杂交瘤细胞:筛选→克隆→抗体)的原理与应用。</data>
+      <data key="keywords">动物细胞培养,细胞融合,单克隆抗体,杂交瘤细胞,HAT筛选</data>
+      <data key="exam_type">选择题,综合分析,过程图解</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">选择性必修3</data>
+    </node>
+    <node id="K80">
+      <data key="name">DNA重组技术的基本工具</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">生物</data>
+      <data key="module">选择性必修3 生物技术与工程</data>
+      <data key="chapter">基因工程</data>
+      <data key="difficulty">4</data>
+      <data key="description">掌握限制性内切核酸酶(识别特定序列、切割产生黏性末端或平末端)、DNA连接酶和运载体(质粒)的作用与特点。</data>
+      <data key="keywords">限制酶,DNA连接酶,运载体,质粒,黏性末端,平末端</data>
+      <data key="exam_type">选择题,分析题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">选择性必修3</data>
+    </node>
+    <node id="K81">
+      <data key="name">基因工程的操作程序</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">生物</data>
+      <data key="module">选择性必修3 生物技术与工程</data>
+      <data key="chapter">基因工程</data>
+      <data key="difficulty">5</data>
+      <data key="description">掌握基因工程四步操作:目的基因的获取(PCR、人工合成)、表达载体的构建、导入受体细胞、目的基因的检测与鉴定。</data>
+      <data key="keywords">目的基因,PCR,表达载体,导入,检测鉴定,基因工程</data>
+      <data key="exam_type">选择题,综合分析,排序题</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">选择性必修3</data>
+    </node>
+    <node id="K82">
+      <data key="name">基因工程的应用</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">生物</data>
+      <data key="module">选择性必修3 生物技术与工程</data>
+      <data key="chapter">基因工程</data>
+      <data key="difficulty">3</data>
+      <data key="description">了解基因工程在农牧业(抗虫棉)、医药(胰岛素、干扰素)和环境保护(工程菌降解污染物)中的应用实例。</data>
+      <data key="keywords">抗虫棉,胰岛素,干扰素,工程菌,基因工程应用</data>
+      <data key="exam_type">选择题,分析题</data>
+      <data key="importance">3</data>
+      <data key="textbook_source">选择性必修3</data>
+    </node>
+    <node id="K83">
+      <data key="name">体内受精与早期胚胎发育</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">生物</data>
+      <data key="module">选择性必修3 生物技术与工程</data>
+      <data key="chapter">胚胎工程</data>
+      <data key="difficulty">3</data>
+      <data key="description">掌握受精过程(精子获能、顶体反应、透明带反应、卵黄膜封闭作用)及早期胚胎发育阶段(桑椹胚、囊胚、原肠胚)。</data>
+      <data key="keywords">受精,精子获能,顶体反应,桑椹胚,囊胚,原肠胚</data>
+      <data key="exam_type">选择题,综合分析</data>
+      <data key="importance">3</data>
+      <data key="textbook_source">选择性必修3</data>
+    </node>
+    <node id="K84">
+      <data key="name">胚胎工程的应用</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">生物</data>
+      <data key="module">选择性必修3 生物技术与工程</data>
+      <data key="chapter">胚胎工程</data>
+      <data key="difficulty">4</data>
+      <data key="description">掌握体外受精技术(卵母细胞采集、精子获能、受精)、胚胎移植(供体超数排卵、胚胎收集与移植)和胚胎分割的技术过程与意义。</data>
+      <data key="keywords">体外受精,胚胎移植,超数排卵,胚胎分割,试管动物</data>
+      <data key="exam_type">选择题,综合分析</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">选择性必修3</data>
+    </node>
+    <edge source="M1" target="C1">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">模块包含章节</data>
+    </edge>
+    <edge source="M1" target="C2">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">模块包含章节</data>
+    </edge>
+    <edge source="M1" target="C3">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">模块包含章节</data>
+    </edge>
+    <edge source="M1" target="C4">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">模块包含章节</data>
+    </edge>
+    <edge source="M1" target="C5">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">模块包含章节</data>
+    </edge>
+    <edge source="M2" target="C6">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">模块包含章节</data>
+    </edge>
+    <edge source="M2" target="C7">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">模块包含章节</data>
+    </edge>
+    <edge source="M2" target="C8">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">模块包含章节</data>
+    </edge>
+    <edge source="M2" target="C9">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">模块包含章节</data>
+    </edge>
+    <edge source="M2" target="C10">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">模块包含章节</data>
+    </edge>
+    <edge source="M2" target="C11">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">模块包含章节</data>
+    </edge>
+    <edge source="M3" target="C12">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">模块包含章节</data>
+    </edge>
+    <edge source="M3" target="C13">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">模块包含章节</data>
+    </edge>
+    <edge source="M3" target="C14">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">模块包含章节</data>
+    </edge>
+    <edge source="M3" target="C15">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">模块包含章节</data>
+    </edge>
+    <edge source="M3" target="C16">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">模块包含章节</data>
+    </edge>
+    <edge source="M4" target="C17">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">模块包含章节</data>
+    </edge>
+    <edge source="M4" target="C18">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">模块包含章节</data>
+    </edge>
+    <edge source="M4" target="C19">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">模块包含章节</data>
+    </edge>
+    <edge source="M4" target="C20">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">模块包含章节</data>
+    </edge>
+    <edge source="M5" target="C21">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">模块包含章节</data>
+    </edge>
+    <edge source="M5" target="C22">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">模块包含章节</data>
+    </edge>
+    <edge source="M5" target="C23">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">模块包含章节</data>
+    </edge>
+    <edge source="M5" target="C24">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">模块包含章节</data>
+    </edge>
+    <edge source="C1" target="K1">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C1" target="K2">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C1" target="K3">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C1" target="K4">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C1" target="K5">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C1" target="K6">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C1" target="K7">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C1" target="K8">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C2" target="K9">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C2" target="K10">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C2" target="K11">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C2" target="K12">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C2" target="K13">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C2" target="K14">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C3" target="K15">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C3" target="K16">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C3" target="K17">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C4" target="K18">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C4" target="K19">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C4" target="K20">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C4" target="K21">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C4" target="K22">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C4" target="K23">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C5" target="K24">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C5" target="K25">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C5" target="K26">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C5" target="K27">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C5" target="K28">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C5" target="K29">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C6" target="K30">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C6" target="K31">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C6" target="K32">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C7" target="K33">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C7" target="K34">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C7" target="K35">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C8" target="K36">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C8" target="K37">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C8" target="K38">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C9" target="K39">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C9" target="K40">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C9" target="K41">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C10" target="K42">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C10" target="K43">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C10" target="K44">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C10" target="K45">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C11" target="K46">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C11" target="K47">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C11" target="K48">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C11" target="K49">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C12" target="K50">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C12" target="K51">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C13" target="K52">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C13" target="K53">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C13" target="K54">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C13" target="K55">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C14" target="K56">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C14" target="K57">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C14" target="K58">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C15" target="K59">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C15" target="K60">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C15" target="K61">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C16" target="K62">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C16" target="K63">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C16" target="K64">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C17" target="K65">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C17" target="K66">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C18" target="K67">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C18" target="K68">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C19" target="K69">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C19" target="K70">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C19" target="K71">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C19" target="K72">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C19" target="K73">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C20" target="K74">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C20" target="K75">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C21" target="K76">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C21" target="K77">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C22" target="K78">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C22" target="K79">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C23" target="K80">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C23" target="K81">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C23" target="K82">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C24" target="K83">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C24" target="K84">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="K2" target="K3">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.7</data>
+      <data key="description">化合物知识是理解水作用的基础</data>
+    </edge>
+    <edge source="K2" target="K4">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.7</data>
+      <data key="description">化合物知识是理解无机盐功能的基础</data>
+    </edge>
+    <edge source="K2" target="K5">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.8</data>
+      <data key="description">化合物分类是学习糖类的前提</data>
+    </edge>
+    <edge source="K2" target="K6">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.8</data>
+      <data key="description">化合物分类是学习脂质的前提</data>
+    </edge>
+    <edge source="K2" target="K7">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.6</data>
+      <data key="description">化合物知识为理解蛋白质做铺垫</data>
+    </edge>
+    <edge source="K2" target="K8">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.6</data>
+      <data key="description">化合物知识为理解核酸做铺垫</data>
+    </edge>
+    <edge source="K7" target="K8">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.5</data>
+      <data key="description">蛋白质结构知识有助于理解核酸功能</data>
+    </edge>
+    <edge source="K7" target="K11">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.6</data>
+      <data key="description">蛋白质知识是理解细胞膜组成的基础</data>
+    </edge>
+    <edge source="K8" target="K13">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.7</data>
+      <data key="description">核酸知识是理解细胞核中染色质的前提</data>
+    </edge>
+    <edge source="K7" target="K12">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.5</data>
+      <data key="description">蛋白质知识有助于理解细胞器功能</data>
+    </edge>
+    <edge source="K11" target="K14">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.8</data>
+      <data key="description">细胞膜结构是理解生物膜系统的基础</data>
+    </edge>
+    <edge source="K12" target="K14">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.7</data>
+      <data key="description">细胞器知识是理解生物膜系统的基础</data>
+    </edge>
+    <edge source="K11" target="K15">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.7</data>
+      <data key="description">细胞膜结构是理解渗透作用的前提</data>
+    </edge>
+    <edge source="K11" target="K17">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.8</data>
+      <data key="description">细胞膜结构是理解跨膜运输方式的基础</data>
+    </edge>
+    <edge source="K15" target="K16">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.9</data>
+      <data key="description">渗透作用原理是质壁分离实验的基础</data>
+    </edge>
+    <edge source="K15" target="K17">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.6</data>
+      <data key="description">渗透作用与跨膜运输原理相通</data>
+    </edge>
+    <edge source="K18" target="K19">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.8</data>
+      <data key="description">酶的作用本质是理解酶特性的前提</data>
+    </edge>
+    <edge source="K20" target="K21">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.7</data>
+      <data key="description">ATP知识是理解细胞呼吸能量转化的基础</data>
+    </edge>
+    <edge source="K20" target="K22">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.8</data>
+      <data key="description">ATP知识是理解光合作用中能量转化的基础</data>
+    </edge>
+    <edge source="K21" target="K22">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.6</data>
+      <data key="description">细胞呼吸与光合作用互为逆过程,相互关联</data>
+    </edge>
+    <edge source="K22" target="K23">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.9</data>
+      <data key="description">光合作用原理是分析影响因素的基础</data>
+    </edge>
+    <edge source="K24" target="K25">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.9</data>
+      <data key="description">细胞周期是有丝分裂学习的前提</data>
+    </edge>
+    <edge source="K25" target="K26">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.5</data>
+      <data key="description">有丝分裂与细胞分化相关</data>
+    </edge>
+    <edge source="K26" target="K27">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.8</data>
+      <data key="description">细胞分化是理解全能性的前提</data>
+    </edge>
+    <edge source="K26" target="K28">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.5</data>
+      <data key="description">细胞分化与衰老凋亡有联系</data>
+    </edge>
+    <edge source="K28" target="K29">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.6</data>
+      <data key="description">细胞凋亡与癌变机制相关</data>
+    </edge>
+    <edge source="K30" target="K31">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.9</data>
+      <data key="description">杂交实验是分离定律的基础</data>
+    </edge>
+    <edge source="K31" target="K32">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.8</data>
+      <data key="description">分离定律是自由组合定律的基础</data>
+    </edge>
+    <edge source="K31" target="K33">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.6</data>
+      <data key="description">分离定律与减数分裂中同源染色体分离一致</data>
+    </edge>
+    <edge source="K32" target="K33">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.5</data>
+      <data key="description">自由组合定律与减数分裂中非同源染色体自由组合一致</data>
+    </edge>
+    <edge source="K33" target="K34">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.7</data>
+      <data key="description">减数分裂为基因在染色体上提供细胞学基础</data>
+    </edge>
+    <edge source="K34" target="K35">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.8</data>
+      <data key="description">基因在染色体上是伴性遗传的前提</data>
+    </edge>
+    <edge source="K31" target="K35">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.6</data>
+      <data key="description">分离定律是分析伴性遗传的工具</data>
+    </edge>
+    <edge source="K34" target="K36">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.5</data>
+      <data key="description">基因在染色体上为寻找遗传物质提供方向</data>
+    </edge>
+    <edge source="K36" target="K37">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.8</data>
+      <data key="description">确认DNA为遗传物质是研究其结构的前提</data>
+    </edge>
+    <edge source="K37" target="K38">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.9</data>
+      <data key="description">DNA结构是理解复制机制的基础</data>
+    </edge>
+    <edge source="K38" target="K39">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.7</data>
+      <data key="description">DNA复制涉及模板,转录翻译也以DNA为模板</data>
+    </edge>
+    <edge source="K37" target="K39">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.6</data>
+      <data key="description">DNA结构是理解转录的基础</data>
+    </edge>
+    <edge source="K39" target="K40">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.7</data>
+      <data key="description">翻译过程涉及遗传密码</data>
+    </edge>
+    <edge source="K39" target="K41">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.8</data>
+      <data key="description">转录翻译是中心法则的核心环节</data>
+    </edge>
+    <edge source="K39" target="K42">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.5</data>
+      <data key="description">基因表达知识有助于理解基因突变</data>
+    </edge>
+    <edge source="K38" target="K42">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.6</data>
+      <data key="description">DNA复制过程可能发生基因突变</data>
+    </edge>
+    <edge source="K33" target="K43">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.7</data>
+      <data key="description">减数分裂中交叉互换导致基因重组</data>
+    </edge>
+    <edge source="K34" target="K44">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.6</data>
+      <data key="description">染色体行为知识是理解染色体变异的基础</data>
+    </edge>
+    <edge source="K42" target="K45">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.5</data>
+      <data key="description">基因突变导致遗传病</data>
+    </edge>
+    <edge source="K42" target="K46">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.7</data>
+      <data key="description">基因突变是进化的原材料</data>
+    </edge>
+    <edge source="K43" target="K46">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.6</data>
+      <data key="description">基因重组是进化的原材料</data>
+    </edge>
+    <edge source="K46" target="K47">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.8</data>
+      <data key="description">进化理论是基因频率分析的基础</data>
+    </edge>
+    <edge source="K47" target="K48">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.8</data>
+      <data key="description">基因频率变化是物种形成的微观机制</data>
+    </edge>
+    <edge source="K48" target="K49">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.7</data>
+      <data key="description">物种形成过程产生生物多样性</data>
+    </edge>
+    <edge source="K51" target="K52">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.7</data>
+      <data key="description">稳态概念是学习神经调节的前提</data>
+    </edge>
+    <edge source="K51" target="K56">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.7</data>
+      <data key="description">稳态概念是学习激素调节的前提</data>
+    </edge>
+    <edge source="K51" target="K59">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.5</data>
+      <data key="description">稳态概念是学习免疫调节的前提</data>
+    </edge>
+    <edge source="K52" target="K53">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.8</data>
+      <data key="description">反射弧是神经冲动传导的结构基础</data>
+    </edge>
+    <edge source="K53" target="K54">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.9</data>
+      <data key="description">神经冲动传导是突触传递的基础</data>
+    </edge>
+    <edge source="K54" target="K55">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.7</data>
+      <data key="description">突触传递是分级调节的基础</data>
+    </edge>
+    <edge source="K56" target="K57">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.8</data>
+      <data key="description">激素调节原理是学习具体激素的基础</data>
+    </edge>
+    <edge source="K56" target="K58">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.7</data>
+      <data key="description">激素调节原理是理解神经-体液协调的基础</data>
+    </edge>
+    <edge source="K55" target="K58">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.5</data>
+      <data key="description">神经分级调节参与多种稳态调节</data>
+    </edge>
+    <edge source="K59" target="K60">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.8</data>
+      <data key="description">免疫系统组成是学习特异性免疫的基础</data>
+    </edge>
+    <edge source="K60" target="K61">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.6</data>
+      <data key="description">特异性免疫机制有助于理解免疫失调</data>
+    </edge>
+    <edge source="K62" target="K63">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.6</data>
+      <data key="description">生长素知识是理解其他激素的参照</data>
+    </edge>
+    <edge source="K63" target="K64">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.6</data>
+      <data key="description">各类激素知识是农业应用的基础</data>
+    </edge>
+    <edge source="K65" target="K66">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.8</data>
+      <data key="description">种群特征是分析数量变化的基础</data>
+    </edge>
+    <edge source="K66" target="K67">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.5</data>
+      <data key="description">种群动态与群落结构相关</data>
+    </edge>
+    <edge source="K67" target="K69">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.6</data>
+      <data key="description">群落结构知识有助于理解生态系统结构</data>
+    </edge>
+    <edge source="K68" target="K73">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.4</data>
+      <data key="description">群落演替影响生态系统稳定性</data>
+    </edge>
+    <edge source="K69" target="K70">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.9</data>
+      <data key="description">生态系统结构是能量流动的基础</data>
+    </edge>
+    <edge source="K69" target="K71">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.8</data>
+      <data key="description">生态系统结构是物质循环的基础</data>
+    </edge>
+    <edge source="K70" target="K71">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.6</data>
+      <data key="description">能量流动与物质循环密切相关</data>
+    </edge>
+    <edge source="K69" target="K73">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.5</data>
+      <data key="description">生态系统结构影响稳定性</data>
+    </edge>
+    <edge source="K73" target="K74">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.5</data>
+      <data key="description">生态系统稳定性受人类活动影响</data>
+    </edge>
+    <edge source="K69" target="K75">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.5</data>
+      <data key="description">生态系统结构知识有助于理解生物多样性保护</data>
+    </edge>
+    <edge source="K78" target="K81">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.5</data>
+      <data key="description">细胞工程技术与基因工程有交叉</data>
+    </edge>
+    <edge source="K79" target="K81">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.4</data>
+      <data key="description">动物细胞培养技术是基因工程受体细胞培养的基础</data>
+    </edge>
+    <edge source="K80" target="K81">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.9</data>
+      <data key="description">DNA重组工具是基因工程操作的基础</data>
+    </edge>
+    <edge source="K81" target="K82">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.8</data>
+      <data key="description">操作程序是理解应用的基础</data>
+    </edge>
+    <edge source="K78" target="K84">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.4</data>
+      <data key="description">细胞工程与胚胎工程有技术交叉</data>
+    </edge>
+    <edge source="K83" target="K84">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.8</data>
+      <data key="description">受精与早期胚胎发育是胚胎工程的基础</data>
+    </edge>
+    <edge source="K7" target="K39">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.6</data>
+      <data key="description">蛋白质知识是理解翻译过程的基础</data>
+    </edge>
+    <edge source="K8" target="K36">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.5</data>
+      <data key="description">核酸知识为理解DNA作为遗传物质做铺垫</data>
+    </edge>
+    <edge source="K22" target="K70">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.5</data>
+      <data key="description">光合作用原理与生态系统能量流动相关</data>
+    </edge>
+    <edge source="K25" target="K33">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.7</data>
+      <data key="description">有丝分裂知识是理解减数分裂的基础</data>
+    </edge>
+    <edge source="K26" target="K78">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.4</data>
+      <data key="description">细胞分化与全能性是植物组织培养的理论基础</data>
+    </edge>
+    <edge source="K17" target="K50">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.4</data>
+      <data key="description">物质跨膜运输与内环境物质交换相关</data>
+    </edge>
+    <edge source="K3" target="K4">
+      <data key="relation">RELATED_TO</data>
+      <data key="weight">0.5</data>
+      <data key="description">水与无机盐共同维持细胞内环境</data>
+    </edge>
+    <edge source="K5" target="K6">
+      <data key="relation">RELATED_TO</data>
+      <data key="weight">0.4</data>
+      <data key="description">糖类与脂质都是能源物质</data>
+    </edge>
+    <edge source="K12" target="K17">
+      <data key="relation">RELATED_TO</data>
+      <data key="weight">0.5</data>
+      <data key="description">细胞器与跨膜运输方式相关</data>
+    </edge>
+    <edge source="K18" target="K21">
+      <data key="relation">RELATED_TO</data>
+      <data key="weight">0.5</data>
+      <data key="description">酶参与细胞呼吸各阶段</data>
+    </edge>
+    <edge source="K18" target="K22">
+      <data key="relation">RELATED_TO</data>
+      <data key="weight">0.5</data>
+      <data key="description">酶参与光合作用暗反应</data>
+    </edge>
+    <edge source="K31" target="K32">
+      <data key="relation">RELATED_TO</data>
+      <data key="weight">0.6</data>
+      <data key="description">分离定律与自由组合定律都是遗传规律</data>
+    </edge>
+    <edge source="K37" target="K38">
+      <data key="relation">RELATED_TO</data>
+      <data key="weight">0.7</data>
+      <data key="description">DNA结构与复制紧密关联</data>
+    </edge>
+    <edge source="K42" target="K43">
+      <data key="relation">RELATED_TO</data>
+      <data key="weight">0.5</data>
+      <data key="description">基因突变与基因重组都是变异类型</data>
+    </edge>
+    <edge source="K43" target="K44">
+      <data key="relation">RELATED_TO</data>
+      <data key="weight">0.5</data>
+      <data key="description">基因重组与染色体变异都是变异类型</data>
+    </edge>
+    <edge source="K52" target="K56">
+      <data key="relation">RELATED_TO</data>
+      <data key="weight">0.4</data>
+      <data key="description">神经调节与体液调节都是稳态调节方式</data>
+    </edge>
+    <edge source="K56" target="K60">
+      <data key="relation">RELATED_TO</data>
+      <data key="weight">0.4</data>
+      <data key="description">激素调节与免疫调节都参与稳态维持</data>
+    </edge>
+    <edge source="K66" target="K73">
+      <data key="relation">RELATED_TO</data>
+      <data key="weight">0.4</data>
+      <data key="description">种群数量变化与生态系统稳定性相关</data>
+    </edge>
+    <edge source="K70" target="K73">
+      <data key="relation">RELATED_TO</data>
+      <data key="weight">0.5</data>
+      <data key="description">能量流动与生态系统稳定性相关</data>
+    </edge>
+    <edge source="K71" target="K74">
+      <data key="relation">RELATED_TO</data>
+      <data key="weight">0.5</data>
+      <data key="description">物质循环与人类活动影响相关</data>
+    </edge>
+    <edge source="K76" target="K77">
+      <data key="relation">RELATED_TO</data>
+      <data key="weight">0.7</data>
+      <data key="description">微生物培养是发酵工程的基础环节</data>
+    </edge>
+    <edge source="K80" target="K81">
+      <data key="relation">RELATED_TO</data>
+      <data key="weight">0.6</data>
+      <data key="description">工具与操作程序紧密关联</data>
+    </edge>
+    <edge source="K21" target="K22">
+      <data key="relation">RELATED_TO</data>
+      <data key="weight">0.6</data>
+      <data key="description">细胞呼吸与光合作用是细胞能量代谢的核心</data>
+    </edge>
+    <edge source="K60" target="K61">
+      <data key="relation">RELATED_TO</data>
+      <data key="weight">0.5</data>
+      <data key="description">免疫机制与免疫失调紧密关联</data>
+    </edge>
+    <edge source="K62" target="K64">
+      <data key="relation">RELATED_TO</data>
+      <data key="weight">0.5</data>
+      <data key="description">生长素理论与植物激素应用相关</data>
+    </edge>
+    <edge source="K47" target="K48">
+      <data key="relation">RELATED_TO</data>
+      <data key="weight">0.6</data>
+      <data key="description">基因频率变化与物种形成紧密关联</data>
+    </edge>
+    <edge source="K31" target="K30">
+      <data key="relation">DERIVED_FROM</data>
+      <data key="weight">0.9</data>
+      <data key="description">分离定律由孟德尔杂交实验推导得出</data>
+    </edge>
+    <edge source="K32" target="K30">
+      <data key="relation">DERIVED_FROM</data>
+      <data key="weight">0.8</data>
+      <data key="description">自由组合定律由孟德尔杂交实验推导得出</data>
+    </edge>
+    <edge source="K47" target="K46">
+      <data key="relation">DERIVED_FROM</data>
+      <data key="weight">0.8</data>
+      <data key="description">基因频率分析由进化理论推导而来</data>
+    </edge>
+    <edge source="K25" target="K24">
+      <data key="relation">DERIVED_FROM</data>
+      <data key="weight">0.8</data>
+      <data key="description">有丝分裂各期特征由细胞周期推导而来</data>
+    </edge>
+    <edge source="K23" target="K66">
+      <data key="relation">APPLIED_IN</data>
+      <data key="weight">0.5</data>
+      <data key="description">光合作用影响因素分析应用于种群数量研究</data>
+    </edge>
+    <edge source="K17" target="K50">
+      <data key="relation">APPLIED_IN</data>
+      <data key="weight">0.4</data>
+      <data key="description">跨膜运输原理应用于内环境稳态分析</data>
+    </edge>
+    <edge source="K64" target="K77">
+      <data key="relation">APPLIED_IN</data>
+      <data key="weight">0.4</data>
+      <data key="description">植物激素调节应用于发酵工程菌种选育</data>
+    </edge>
+    <edge source="K44" target="K78">
+      <data key="relation">APPLIED_IN</data>
+      <data key="weight">0.5</data>
+      <data key="description">染色体变异理论应用于植物细胞工程育种</data>
+    </edge>
+  </graph>
+</graphml>

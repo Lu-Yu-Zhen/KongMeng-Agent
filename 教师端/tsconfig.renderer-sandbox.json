@@ -1,0 +1,11 @@
+{
+  "//": "沙箱 Agent 运行体（全局脚本，浏览器执行）构建：tsc -p tsconfig.renderer-sandbox.json（产物写回 teacher-agent-sandbox/js/，路径与引用保持不变）",
+  "extends": "./tsconfig.base.json",
+  "compilerOptions": {
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "types": [],
+    "rootDir": "src/renderer/sandbox",
+    "outDir": "teacher-agent-sandbox/js"
+  },
+  "include": ["src/renderer/sandbox/**/*.ts", "src/types/**/*.d.ts"]
+}

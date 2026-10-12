@@ -1,0 +1,124 @@
+{
+  "version": "3.0.0",
+  "name": "teacher-agent-sandbox",
+  "description": "教师备课智能体沙箱运行时配置 - 三模式：浏览器(Pyodide) + Python服务器(FastAPI) + Node服务器(Express)",
+  "runtime": {
+    "mode": "auto",
+    "description": "auto=自动选择(优先server,降级browser); server=仅服务器; browser=仅浏览器",
+    "browser": {
+      "type": "browser-pyodide",
+      "pyodideUrl": "https://cdn.jsdelivr.net/pyodide/v0.26.2/full/pyodide.js",
+      "lazyLoad": true,
+      "wasmMemoryMB": 512,
+      "execTimeoutMs": 15000,
+      "maxOutputChars": 20000,
+      "supportedPackages": ["numpy", "pandas", "matplotlib", "openpyxl", "sympy", "jieba", "scipy", "networkx", "pillow", "regex"]
+    },
+    "server": {
+      "python": {
+        "baseUrl": "http://localhost:8000",
+        "healthCheckPath": "/health",
+        "endpoints": {
+          "execute": "/execute",
+          "generateDocx": "/generate/docx",
+          "generatePptx": "/generate/pptx",
+          "generateXlsx": "/generate/xlsx",
+          "generatePdf": "/generate/pdf",
+          "convert": "/convert",
+          "ocr": "/ocr",
+          "chart": "/analyze/chart",
+          "files": "/files",
+          "fileDownload": "/files/{path}"
+        },
+        "requestTimeoutMs": 60000,
+        "maxRetries": 2,
+        "retryDelayMs": 1000
+      },
+      "node": {
+        "baseUrl": "http://localhost:8001",
+        "healthCheckPath": "/health",
+        "endpoints": {
+          "generateDocx": "/generate/docx",
+          "generatePptx": "/generate/pptx",
+          "generateXlsx": "/generate/xlsx",
+          "generatePdf": "/generate/pdf",
+          "convertMdToDocx": "/convert/md-to-docx",
+          "convertHtmlToPdf": "/convert/html-to-pdf",
+          "convertDocxToHtml": "/convert/docx-to-html",
+          "renderMermaid": "/render/mermaid",
+          "renderLatex": "/render/latex",
+          "imageProcess": "/image/process",
+          "scrape": "/scrape",
+          "screenshot": "/screenshot",
+          "archiveZip": "/archive/zip",
+          "files": "/files",
+          "fileDownload": "/files/{path}"
+        },
+        "requestTimeoutMs": 60000,
+        "maxRetries": 2,
+        "retryDelayMs": 1000
+      }
+    }
+  },
+  "routing": {
+    "description": "智能路由：根据任务类型自动选择执行环境",
+    "rules": [
+      { "task": "python_execute", "lightweight": "browser", "heavyweight": "server", "keywords": ["matplotlib", "weasyprint", "reportlab", "scikit-learn", "manim", "opencv", "moviepy"] },
+      { "task": "document_generation", "format": "docx", "preferred": "server", "fallback": "browser" },
+      { "task": "document_generation", "format": "pptx", "preferred": "server", "fallback": "browser" },
+      { "task": "document_generation", "format": "xlsx", "preferred": "server", "fallback": "browser" },
+      { "task": "document_generation", "format": "pdf", "preferred": "server", "fallback": "browser" },
+      { "task": "format_conversion", "preferred": "server", "fallback": "none" },
+      { "task": "ocr", "preferred": "server", "fallback": "none" },
+      { "task": "chart_generation", "preferred": "server", "fallback": "browser" }
+    ]
+  },
+  "documentLibs": {
+    "browser": {
+      "pptx": "https://cdn.jsdelivr.net/npm/pptxgenjs@3.12.0/dist/pptxgen.bundle.min.js",
+      "docx": "https://cdn.jsdelivr.net/npm/docx@8.5.0/build/index.umd.min.js",
+      "xlsx": "builtin",
+      "pdf": "https://cdn.jsdelivr.net/npm/jspdf@2.5.1/dist/jspdf.umd.min.js",
+      "html2canvas": "https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"
+    },
+    "server": {
+      "docx": "python-docx>=1.1.2",
+      "pptx": "python-pptx>=0.6.23",
+      "xlsx": "openpyxl>=3.1.5",
+      "pdf": "weasyprint>=62.0 + reportlab>=4.2.0",
+      "conversion": "pandoc + libreoffice + wkhtmltopdf"
+    }
+  },
+  "fileSystem": {
+    "type": "indexeddb-virtual",
+    "dbName": "teacher_agent_fs",
+    "rootDirs": ["教案", "课件", "学案", "量规", "大单元", "分层", "试题", "临时"],
+    "maxTotalMB": 200,
+    "serverWorkspace": "/sandbox/workspace"
+  },
+  "security": {
+    "allowNetwork": ["*.aliyuncs.com", "api.deepseek.com", "*.feishu.cn", "localhost:8000"],
+    "blockedSyscalls": ["subprocess", "socket", "filesystem-outside-root"],
+    "sanitizeOutput": true,
+    "maxRequestSizeMB": 50
+  },
+  "packages": {
+    "python": {
+      "browser": ["numpy", "pandas", "matplotlib", "openpyxl", "sympy", "jieba", "scipy"],
+      "server": ["python-pptx", "python-docx", "openpyxl", "reportlab", "weasyprint", "pandas", "numpy", "scipy", "scikit-learn", "matplotlib", "seaborn", "jieba", "sympy", "pdfplumber", "Pillow", "jieba", "networkx", "fastapi", "uvicorn"]
+    },
+    "javascript": ["pptxgenjs", "docx", "xlsx", "jspdf", "html2canvas", "marked", "katex"]
+  },
+  "agent": {
+    "maxSteps": 12,
+    "maxToolCalls": 8,
+    "reflectionEveryN": 4,
+    "autoConfirmHighRisk": false,
+    "parallelToolExecution": true,
+    "maxParallelTools": 3,
+    "observationCompression": true,
+    "maxObservationChars": 2000,
+    "toolResultCache": true,
+    "cacheTTL": 300
+  }
+}

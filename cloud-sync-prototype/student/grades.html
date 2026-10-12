@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>成绩学情 · 学生端 · 孔孟·智学云</title>
+<link rel="stylesheet" href="../assets/styles.css">
+<style>
+  .grade-score{ font-size:var(--fs-xl); font-weight:700; color:var(--ink-900); }
+  .grade-score small{ font-size:var(--fs-sm); font-weight:500; color:var(--ink-400); }
+  .grade-meta{ display:flex; gap:var(--space-4); font-size:var(--fs-xs); color:var(--ink-500); flex-wrap:wrap; }
+  .grade-meta span{ display:inline-flex; align-items:center; gap:4px; }
+  .trend-box{ display:flex; align-items:flex-end; gap:6px; height:56px; margin-top:var(--space-3); }
+  .trend-bar{ width:18px; border-radius:3px 3px 0 0; background:var(--primary-100); transition:height .3s; }
+  .trend-bar:last-child{ background:var(--primary); }
+  .trend-val{ display:flex; justify-content:space-between; font-size:var(--fs-xs); color:var(--ink-400); margin-top:4px; }
+  .report-weak{ display:flex; flex-wrap:wrap; gap:var(--space-2); }
+  .weak-chip{ background:var(--warning-bg); color:var(--warning); font-size:var(--fs-xs); padding:2px 8px; border-radius:999px; }
+  .section-title{ font-weight:600; color:var(--ink-900); font-size:var(--fs-md); margin-bottom:var(--space-3); }
+</style>
+</head>
+<body>
+<script src="../assets/mock.js"></script>
+<script src="../assets/api.js"></script>
+<script src="../assets/components.js"></script>
+<script>
+renderShell('student','grades');
+
+var root = pageRoot();
+var student = store.getStudent();
+var className = store.getClass(student.classId).name;
+
+function gradeList() {
+  return store.studentGrades();
+}
+
+function trendHtml(trend) {
+  if (!trend || !trend.length) return '';
+  var max = Math.max.apply(null, trend);
+  var min = Math.min.apply(null, trend);
+  var range = (max - min) || 1;
+  var bars = trend.map(function(v) {
+    var h = 12 + Math.round((v - min) / range * 40);
+    return '<div class="trend-bar" style="height:' + h + 'px" title="' + v + '"></div>';
+  }).join('');
+  return '<div class="trend-box">' + bars + '</div>' +
+    '<div class="trend-val"><span>' + trend[0] + '</span><span>' + trend[trend.length - 1] + '</span></div>';
+}
+
+function renderGrades() {
+  var list = gradeList();
+  if (!list.length) return emptyState('暂无已公布的成绩，点击「同步接收成绩」检查云端。', 'chart');
+  return '<div class="grid grid-2">' + list.map(function(g) {
+    var diff = (g.score - g.classAvg).toFixed(1);
+    var diffTxt = diff >= 0 ? '高于均分 ' + Math.abs(diff) : '低于均分 ' + Math.abs(diff);
+    return '<div class="card">' +
+      '<div class="flex items-center justify-between mb-2">' +
+        '<div class="flex items-center gap-2">' + subjectBadge(g.subject) + '<span class="text-sm text-strong">' + escapeHtml(g.examName) + '</span></div>' +
+        '<span class="text-xs text-sub">' + escapeHtml(g.publishDate) + ' 公布</span>' +
+      '</div>' +
+      '<div class="grade-score">' + g.score + '<small> / ' + g.total + ' 分</small></div>' +
+      '<div class="grade-meta mt-2"><span>' + icon('target') + '班级均分 ' + g.classAvg + '</span>' +
+        '<span>' + icon('chart') + (g.rank ? '班级排名 #' + g.rank : '排名未公布') + '</span>' +
+        '<span>' + (diff >= 0 ? icon('arrowRight') : icon('arrowLeft')) + diffTxt + '</span></div>' +
+      '<div class="text-xs text-sub mt-2">近几次成绩走势</div>' +
+      trendHtml(g.trend) +
+    '</div>';
+  }).join('') + '</div>';
+}
+
+function reportList() {
+  return DB.learningReports.filter(function(r){ return r.studentId === student.id; });
+}
+
+function renderReports() {
+  var list = reportList();
+  if (!list.length) return emptyState('暂无学情报告。', 'activity');
+  return '<div class="grid grid-2">' + list.map(function(r) {
+    var weak = (r.weakPoints || []).map(function(w){ return '<span class="weak-chip">' + escapeHtml(w) + '</span>'; }).join('');
+    return '<div class="card">' +
+      '<div class="flex items-center justify-between mb-2">' +
+        '<div class="flex items-center gap-2">' + subjectBadge(r.subject) + '<span class="text-sm text-strong">学情报告</span></div>' +
+        '<span class="text-xs text-sub">' + escapeHtml(r.reportAt) + '</span>' +
+      '</div>' +
+      '<div class="text-xs text-sub mb-1">薄弱环节</div>' +
+      '<div class="report-weak mb-3">' + (weak || '<span class="text-xs text-sub">暂未标注</span>') + '</div>' +
+      '<div class="text-xs text-sub mb-1">学习建议</div>' +
+      '<div class="text-sm" style="color:var(--ink-700);">' + escapeHtml(r.suggestion) + '</div>' +
+    '</div>';
+  }).join('') + '</div>';
+}
+
+function render() {
+  root.innerHTML =
+    '<div class="page-head">' +
+      '<div><h1>成绩学情</h1><div class="sub">查看公布的成绩与老师生成的学情报告 · ' + className + ' · ' + student.name + '</div></div>' +
+      '<div class="page-actions"><button class="btn btn-primary btn-md" id="syncBtn" onclick="syncNow()">' + icon('download') + '同步接收成绩</button></div>' +
+    '</div>' +
+    '<div class="section-title">成绩概览</div>' +
+    renderGrades() +
+    '<div class="section-title mt-4">学情报告</div>' +
+    renderReports();
+}
+
+function syncNow() {
+  var btn = document.getElementById('syncBtn');
+  if (btn) { btn.disabled = true; btn.innerHTML = '同步中…'; }
+  API.syncGrades().then(function(res) {
+    toast('已同步成绩，共 ' + res.list.length +  '条记录', 'success');
+    render();
+  });
+}
+
+render();
+</script>
+</body>
+</html>

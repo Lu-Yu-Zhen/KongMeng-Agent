@@ -1,0 +1,2434 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+  <key id="name" attr.name="name" attr.type="string" for="node"/>
+  <key id="type" attr.name="type" attr.type="string" for="node"/>
+  <key id="subject" attr.name="subject" attr.type="string" for="node"/>
+  <key id="module" attr.name="module" attr.type="string" for="node"/>
+  <key id="chapter" attr.name="chapter" attr.type="string" for="node"/>
+  <key id="difficulty" attr.name="difficulty" attr.type="int" for="node"/>
+  <key id="description" attr.name="description" attr.type="string" for="node"/>
+  <key id="keywords" attr.name="keywords" attr.type="string" for="node"/>
+  <key id="exam_type" attr.name="exam_type" attr.type="string" for="node"/>
+  <key id="importance" attr.name="importance" attr.type="int" for="node"/>
+  <key id="textbook_source" attr.name="textbook_source" attr.type="string" for="node"/>
+  <key id="relation" attr.name="relation" attr.type="string" for="edge"/>
+  <key id="weight" attr.name="weight" attr.type="double" for="edge"/>
+  <key id="description" attr.name="description" attr.type="string" for="edge"/>
+  <graph id="G" edgedefault="directed">
+    <node id="M1">
+      <data key="name">必修第一册</data>
+      <data key="type">Module</data>
+      <data key="subject">英语</data>
+      <data key="description">主题涵盖青少年生活、环球旅行、运动健身、自然灾害与世界语言，融入基本时态、情态动词、被动语态等语法及阅读写作策略训练。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="module">必修第一册</data>
+      <data key="chapter"/>
+      <data key="textbook_source"/>
+    </node>
+    <node id="M2">
+      <data key="name">必修第二册</data>
+      <data key="type">Module</data>
+      <data key="subject">英语</data>
+      <data key="description">主题包括文化遗产、野生动植物保护、互联网与音乐，融入定语从句、现在完成时被动语态、宾语从句与状语从句等语法。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="module">必修第二册</data>
+      <data key="chapter"/>
+      <data key="textbook_source"/>
+    </node>
+    <node id="M3">
+      <data key="name">必修第三册</data>
+      <data key="type">Module</data>
+      <data key="subject">英语</data>
+      <data key="description">主题涉及节日庆典、道德美德、多元文化与太空探索，融入定语从句(关系副词)、虚拟语气、主谓一致与不定式等语法。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="module">必修第三册</data>
+      <data key="chapter"/>
+      <data key="textbook_source"/>
+    </node>
+    <node id="M4">
+      <data key="name">选择性必修1-2</data>
+      <data key="type">Module</data>
+      <data key="subject">英语</data>
+      <data key="description">主题涵盖杰出人物、未来展望、迷人公园与标志性景观，融入非谓语动词、将来时态、倒装句与同位语从句等高级语法。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="module">选择性必修1-2</data>
+      <data key="chapter"/>
+      <data key="textbook_source"/>
+    </node>
+    <node id="M5">
+      <data key="name">选择性必修3-4</data>
+      <data key="type">Module</data>
+      <data key="subject">英语</data>
+      <data key="description">主题涉及艺术、逆境与勇气、科学探索与幽默，融入强调句型、虚拟语气扩展、名词性从句综合与修辞应用等语法。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="module">选择性必修3-4</data>
+      <data key="chapter"/>
+      <data key="textbook_source"/>
+    </node>
+    <node id="C1">
+      <data key="name">Teenage Life</data>
+      <data key="type">Chapter</data>
+      <data key="subject">英语</data>
+      <data key="module">必修第一册</data>
+      <data key="chapter">Teenage Life</data>
+      <data key="description">围绕青少年校园生活与课外活动，学习校园生活主题词汇、一般现在时与现在进行时、略读策略与建议信写作。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="textbook_source">必修第一册</data>
+    </node>
+    <node id="C2">
+      <data key="name">Travelling Around</data>
+      <data key="type">Chapter</data>
+      <data key="subject">英语</data>
+      <data key="module">必修第一册</data>
+      <data key="chapter">Travelling Around</data>
+      <data key="description">围绕旅游与交通，学习旅游主题词汇、将来时态表达、扫读策略与旅行计划写作。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="textbook_source">必修第一册</data>
+    </node>
+    <node id="C3">
+      <data key="name">Sports and Fitness</data>
+      <data key="type">Chapter</data>
+      <data key="subject">英语</data>
+      <data key="module">必修第一册</data>
+      <data key="chapter">Sports and Fitness</data>
+      <data key="description">围绕体育运动与健康，学习体育主题词汇、情态动词、猜词策略与说明文写作。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="textbook_source">必修第一册</data>
+    </node>
+    <node id="C4">
+      <data key="name">Natural Disasters</data>
+      <data key="type">Chapter</data>
+      <data key="subject">英语</data>
+      <data key="module">必修第一册</data>
+      <data key="chapter">Natural Disasters</data>
+      <data key="description">围绕自然灾害与救援，学习灾害主题词汇、过去时态、篇章结构识别与新闻报道写作。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="textbook_source">必修第一册</data>
+    </node>
+    <node id="C5">
+      <data key="name">Languages Around the World</data>
+      <data key="type">Chapter</data>
+      <data key="subject">英语</data>
+      <data key="module">必修第一册</data>
+      <data key="chapter">Languages Around the World</data>
+      <data key="description">围绕语言与交流，学习语言主题词汇、被动语态、推断作者态度策略与说明文写作。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="textbook_source">必修第一册</data>
+    </node>
+    <node id="C6">
+      <data key="name">Cultural Heritage</data>
+      <data key="type">Chapter</data>
+      <data key="subject">英语</data>
+      <data key="module">必修第二册</data>
+      <data key="chapter">Cultural Heritage</data>
+      <data key="description">围绕文化遗产与保护，学习文化遗产主题词汇、定语从句(关系代词)、事实与观点区分及议论文写作。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="textbook_source">必修第二册</data>
+    </node>
+    <node id="C7">
+      <data key="name">Wildlife Protection</data>
+      <data key="type">Chapter</data>
+      <data key="subject">英语</data>
+      <data key="module">必修第二册</data>
+      <data key="chapter">Wildlife Protection</data>
+      <data key="description">围绕野生动植物保护，学习生态主题词汇、现在完成时被动语态、因果关系识别与图表作文写作。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="textbook_source">必修第二册</data>
+    </node>
+    <node id="C8">
+      <data key="name">The Internet</data>
+      <data key="type">Chapter</data>
+      <data key="subject">英语</data>
+      <data key="module">必修第二册</data>
+      <data key="chapter">The Internet</data>
+      <data key="description">围绕互联网与信息技术，学习网络主题词汇、宾语从句、论证方法识别与倡议书写作。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="textbook_source">必修第二册</data>
+    </node>
+    <node id="C9">
+      <data key="name">Music</data>
+      <data key="type">Chapter</data>
+      <data key="subject">英语</data>
+      <data key="module">必修第二册</data>
+      <data key="chapter">Music</data>
+      <data key="description">围绕音乐类型与表达，学习音乐主题词汇、状语从句、修辞手法理解与应用文写作。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="textbook_source">必修第二册</data>
+    </node>
+    <node id="C10">
+      <data key="name">Festivals and Celebrations</data>
+      <data key="type">Chapter</data>
+      <data key="subject">英语</data>
+      <data key="module">必修第三册</data>
+      <data key="chapter">Festivals and Celebrations</data>
+      <data key="description">围绕节日文化与庆祝，学习节日主题词汇、定语从句(关系副词)、跨文化理解与节日介绍文写作。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="textbook_source">必修第三册</data>
+    </node>
+    <node id="C11">
+      <data key="name">Morals and Virtues</data>
+      <data key="type">Chapter</data>
+      <data key="subject">英语</data>
+      <data key="module">必修第三册</data>
+      <data key="chapter">Morals and Virtues</data>
+      <data key="description">围绕道德品质与价值，学习道德主题词汇、虚拟语气(if条件句)、人物性格分析与记叙文写作。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="textbook_source">必修第三册</data>
+    </node>
+    <node id="C12">
+      <data key="name">Diverse Cultures</data>
+      <data key="type">Chapter</data>
+      <data key="subject">英语</data>
+      <data key="module">必修第三册</data>
+      <data key="chapter">Diverse Cultures</data>
+      <data key="description">围绕多元文化与融合，学习文化主题词汇、主谓一致、文化差异比较与对比类作文写作。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="textbook_source">必修第三册</data>
+    </node>
+    <node id="C13">
+      <data key="name">Space Exploration</data>
+      <data key="type">Chapter</data>
+      <data key="subject">英语</data>
+      <data key="module">必修第三册</data>
+      <data key="chapter">Space Exploration</data>
+      <data key="description">围绕太空探索与科技，学习太空主题词汇、不定式作主语和定语、科普文章理解与科普说明文写作。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="textbook_source">必修第三册</data>
+    </node>
+    <node id="C14">
+      <data key="name">People of Achievement</data>
+      <data key="type">Chapter</data>
+      <data key="subject">英语</data>
+      <data key="module">选择性必修1-2</data>
+      <data key="chapter">People of Achievement</data>
+      <data key="description">围绕杰出人物与成就，学习人物主题词汇、非谓语动词(动名词、分词)、人物传记阅读与人物介绍文写作。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="textbook_source">选择性必修1</data>
+    </node>
+    <node id="C15">
+      <data key="name">Looking into the Future</data>
+      <data key="type">Chapter</data>
+      <data key="subject">英语</data>
+      <data key="module">选择性必修1-2</data>
+      <data key="chapter">Looking into the Future</data>
+      <data key="description">围绕未来科技与生活，学习未来主题词汇、将来完成时与进行时、预测推断策略与预测类作文写作。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="textbook_source">选择性必修1</data>
+    </node>
+    <node id="C16">
+      <data key="name">Fascinating Parks</data>
+      <data key="type">Chapter</data>
+      <data key="subject">英语</data>
+      <data key="module">选择性必修1-2</data>
+      <data key="chapter">Fascinating Parks</data>
+      <data key="description">围绕自然公园与景观，学习自然主题词汇、倒装句、描写性语言欣赏与描写文写作。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="textbook_source">选择性必修1</data>
+    </node>
+    <node id="C17">
+      <data key="name">Iconic Attractions</data>
+      <data key="type">Chapter</data>
+      <data key="subject">英语</data>
+      <data key="module">选择性必修1-2</data>
+      <data key="chapter">Iconic Attractions</data>
+      <data key="description">围绕标志性景观与旅游，学习旅游主题词汇、同位语从句、综合理解策略与旅游宣传文写作。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="textbook_source">选择性必修2</data>
+    </node>
+    <node id="C18">
+      <data key="name">Art</data>
+      <data key="type">Chapter</data>
+      <data key="subject">英语</data>
+      <data key="module">选择性必修3-4</data>
+      <data key="chapter">Art</data>
+      <data key="description">围绕艺术与审美，学习艺术主题词汇、强调句型、艺术评论阅读与艺术评论写作。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="textbook_source">选择性必修3</data>
+    </node>
+    <node id="C19">
+      <data key="name">Adversity and Courage</data>
+      <data key="type">Chapter</data>
+      <data key="subject">英语</data>
+      <data key="module">选择性必修3-4</data>
+      <data key="chapter">Adversity and Courage</data>
+      <data key="description">围绕逆境与勇气，学习勇气主题词汇、虚拟语气扩展(wish, as if)、叙事结构分析与读后感写作。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="textbook_source">选择性必修3</data>
+    </node>
+    <node id="C20">
+      <data key="name">Scientific Exploration</data>
+      <data key="type">Chapter</data>
+      <data key="subject">英语</data>
+      <data key="module">选择性必修3-4</data>
+      <data key="chapter">Scientific Exploration</data>
+      <data key="description">围绕科学探索与发现，学习科学主题词汇、名词性从句综合、科普文逻辑分析与实验报告写作。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="textbook_source">选择性必修4</data>
+    </node>
+    <node id="C21">
+      <data key="name">Humour</data>
+      <data key="type">Chapter</data>
+      <data key="subject">英语</data>
+      <data key="module">选择性必修3-4</data>
+      <data key="chapter">Humour</data>
+      <data key="description">围绕幽默与智慧，学习幽默主题词汇、修辞手法应用、幽默讽刺识别与幽默短文写作。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="textbook_source">选择性必修4</data>
+    </node>
+    <node id="K1">
+      <data key="name">主题词汇:校园生活与课外活动</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">英语</data>
+      <data key="module">必修第一册</data>
+      <data key="chapter">Teenage Life</data>
+      <data key="difficulty">2</data>
+      <data key="description">掌握校园生活相关词汇(club, volunteer, debate, schedule, assignment, extracurricular等)及搭配用法，能运用于口语和写作表达。</data>
+      <data key="keywords">club, volunteer, debate, schedule, assignment, extracurricular, campus</data>
+      <data key="exam_type">词汇选择题,完形填空</data>
+      <data key="importance">3</data>
+      <data key="textbook_source">必修第一册</data>
+    </node>
+    <node id="K2">
+      <data key="name">语法:一般现在时与现在进行时</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">英语</data>
+      <data key="module">必修第一册</data>
+      <data key="chapter">Teenage Life</data>
+      <data key="difficulty">3</data>
+      <data key="description">掌握一般现在时(习惯性动作、客观事实)与现在进行时(此时此刻正在进行、近期趋势)的形式、用法与区别，能正确运用。</data>
+      <data key="keywords">一般现在时,现在进行时,习惯性动作,客观事实,正在进行</data>
+      <data key="exam_type">语法选择题,改错题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">必修第一册</data>
+    </node>
+    <node id="K3">
+      <data key="name">阅读策略:略读获取主旨大意</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">英语</data>
+      <data key="module">必修第一册</data>
+      <data key="chapter">Teenage Life</data>
+      <data key="difficulty">3</data>
+      <data key="description">掌握略读(skimming)技巧:快速浏览标题、首尾段、每段首句，在短时间内获取文章主旨大意和中心思想。</data>
+      <data key="keywords">略读,skimming,主旨大意,标题,首尾段,中心思想</data>
+      <data key="exam_type">阅读理解题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">必修第一册</data>
+    </node>
+    <node id="K4">
+      <data key="name">写作:建议信的写作</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">英语</data>
+      <data key="module">必修第一册</data>
+      <data key="chapter">Teenage Life</data>
+      <data key="difficulty">3</data>
+      <data key="description">掌握建议信的结构(开头引出问题、正文提出建议及理由、结尾表达期望)与语言特点(委婉语气:You'd better.../I suggest...)，能撰写规范的建议信。</data>
+      <data key="keywords">建议信,结构,委婉语气,I suggest,You'd better,开头结尾</data>
+      <data key="exam_type">写作题</data>
+      <data key="importance">3</data>
+      <data key="textbook_source">必修第一册</data>
+    </node>
+    <node id="K5">
+      <data key="name">主题词汇:旅游与交通</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">英语</data>
+      <data key="module">必修第一册</data>
+      <data key="chapter">Travelling Around</data>
+      <data key="difficulty">2</data>
+      <data key="description">掌握旅游交通相关词汇(destination, itinerary, accommodation, souvenir, transport, depart, arrive等)及搭配用法。</data>
+      <data key="keywords">destination, itinerary, accommodation, souvenir, transport, depart, arrive</data>
+      <data key="exam_type">词汇选择题,完形填空</data>
+      <data key="importance">3</data>
+      <data key="textbook_source">必修第一册</data>
+    </node>
+    <node id="K6">
+      <data key="name">语法:将来时态的表达</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">英语</data>
+      <data key="module">必修第一册</data>
+      <data key="chapter">Travelling Around</data>
+      <data key="difficulty">3</data>
+      <data key="description">掌握will+do(临时决定/预测)、be going to+do(计划打算/有迹象的预测)、be doing(按计划即将发生)三种将来时态的用法区别。</data>
+      <data key="keywords">将来时,will,be going to,be doing,临时决定,计划打算,预测</data>
+      <data key="exam_type">语法选择题,改错题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">必修第一册</data>
+    </node>
+    <node id="K7">
+      <data key="name">阅读策略:扫读查找具体信息</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">英语</data>
+      <data key="module">必修第一册</data>
+      <data key="chapter">Travelling Around</data>
+      <data key="difficulty">3</data>
+      <data key="description">掌握扫读(scanning)技巧:带着具体问题快速搜索文本中的关键词(数字、人名、地名、时间等)，定位并提取特定信息。</data>
+      <data key="keywords">扫读,scanning,具体信息,关键词,数字,人名,地名,定位</data>
+      <data key="exam_type">阅读理解题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">必修第一册</data>
+    </node>
+    <node id="K8">
+      <data key="name">写作:旅行计划与游记</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">英语</data>
+      <data key="module">必修第一册</data>
+      <data key="chapter">Travelling Around</data>
+      <data key="difficulty">3</data>
+      <data key="description">掌握旅行计划(行程安排:时间、地点、活动)与游记(按时间或空间顺序记述见闻感受)的写作要素与语言特征。</data>
+      <data key="keywords">旅行计划,游记,行程安排,时间空间顺序,见闻感受</data>
+      <data key="exam_type">写作题</data>
+      <data key="importance">3</data>
+      <data key="textbook_source">必修第一册</data>
+    </node>
+    <node id="K9">
+      <data key="name">主题词汇:体育运动与健康</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">英语</data>
+      <data key="module">必修第一册</data>
+      <data key="chapter">Sports and Fitness</data>
+      <data key="difficulty">2</data>
+      <data key="description">掌握体育运动与健康相关词汇(athlete, championship, fitness, nutrition, strength, endurance, referee等)及搭配用法。</data>
+      <data key="keywords">athlete, championship, fitness, nutrition, strength, endurance, referee</data>
+      <data key="exam_type">词汇选择题,完形填空</data>
+      <data key="importance">3</data>
+      <data key="textbook_source">必修第一册</data>
+    </node>
+    <node id="K10">
+      <data key="name">语法:情态动词</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">英语</data>
+      <data key="module">必修第一册</data>
+      <data key="chapter">Sports and Fitness</data>
+      <data key="difficulty">4</data>
+      <data key="description">掌握can/could(能力、请求)、should/ought to(建议、义务)、must(必须、肯定推测)、may/might(可能)等情态动词的用法及推测用法。</data>
+      <data key="keywords">情态动词,can,could,should,must,may,might,推测用法</data>
+      <data key="exam_type">语法选择题,改错题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">必修第一册</data>
+    </node>
+    <node id="K11">
+      <data key="name">阅读策略:根据上下文猜测词义</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">英语</data>
+      <data key="module">必修第一册</data>
+      <data key="chapter">Sports and Fitness</data>
+      <data key="difficulty">4</data>
+      <data key="description">掌握猜词策略:利用定义/解释信号词(is, means, refers to)、同义反义关系、举例信号词(for example)、构词法(词根词缀)推断生词含义。</data>
+      <data key="keywords">猜词,上下文,定义解释,同义反义,举例,构词法,词根词缀</data>
+      <data key="exam_type">阅读理解题,词汇题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">必修第一册</data>
+    </node>
+    <node id="K12">
+      <data key="name">写作:说明文(运动益处)</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">英语</data>
+      <data key="module">必修第一册</data>
+      <data key="chapter">Sports and Fitness</data>
+      <data key="difficulty">3</data>
+      <data key="description">掌握说明文写作要素(主题句、支撑句、结论句)及说明方法(举例、列数字、因果分析)，能撰写关于运动益处的说明文。</data>
+      <data key="keywords">说明文,主题句,支撑句,结论句,举例,列数字,因果分析</data>
+      <data key="exam_type">写作题</data>
+      <data key="importance">3</data>
+      <data key="textbook_source">必修第一册</data>
+    </node>
+    <node id="K13">
+      <data key="name">主题词汇:自然灾害与救援</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">英语</data>
+      <data key="module">必修第一册</data>
+      <data key="chapter">Natural Disasters</data>
+      <data key="difficulty">2</data>
+      <data key="description">掌握自然灾害与救援相关词汇(earthquake, flood, hurricane, rescue, evacuate, casualty, shelter, emergency等)及搭配用法。</data>
+      <data key="keywords">earthquake, flood, hurricane, rescue, evacuate, casualty, shelter, emergency</data>
+      <data key="exam_type">词汇选择题,完形填空</data>
+      <data key="importance">3</data>
+      <data key="textbook_source">必修第一册</data>
+    </node>
+    <node id="K14">
+      <data key="name">语法:过去时态</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">英语</data>
+      <data key="module">必修第一册</data>
+      <data key="chapter">Natural Disasters</data>
+      <data key="difficulty">4</data>
+      <data key="description">掌握一般过去时(过去事实/动作)和过去进行时(过去某时正在进行的动作)的形式与用法，能区分并正确运用。</data>
+      <data key="keywords">一般过去时,过去进行时,过去事实,正在进行,was/were doing</data>
+      <data key="exam_type">语法选择题,改错题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">必修第一册</data>
+    </node>
+    <node id="K15">
+      <data key="name">阅读策略:识别篇章结构</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">英语</data>
+      <data key="module">必修第一册</data>
+      <data key="chapter">Natural Disasters</data>
+      <data key="difficulty">3</data>
+      <data key="description">掌握识别篇章结构的方法:分析段落间的逻辑关系(总分、并列、递进、转折、因果)，判断文章组织模式。</data>
+      <data key="keywords">篇章结构,段落逻辑,总分,并列,递进,转折,因果,组织模式</data>
+      <data key="exam_type">阅读理解题,结构排序题</data>
+      <data key="importance">3</data>
+      <data key="textbook_source">必修第一册</data>
+    </node>
+    <node id="K16">
+      <data key="name">写作:新闻报道写作</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">英语</data>
+      <data key="module">必修第一册</data>
+      <data key="chapter">Natural Disasters</data>
+      <data key="difficulty">3</data>
+      <data key="description">掌握新闻报道的结构(headline, lead导语含5W1H, body主体, tail结尾)与语言特征(客观、简洁、第三人称)，能撰写英文新闻报道。</data>
+      <data key="keywords">新闻报道,headline,lead,导语,5W1H,body,客观简洁,第三人称</data>
+      <data key="exam_type">写作题</data>
+      <data key="importance">3</data>
+      <data key="textbook_source">必修第一册</data>
+    </node>
+    <node id="K17">
+      <data key="name">主题词汇:语言与交流</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">英语</data>
+      <data key="module">必修第一册</data>
+      <data key="chapter">Languages Around the World</data>
+      <data key="difficulty">2</data>
+      <data key="description">掌握语言交流相关词汇(fluency, accent, dialect, bilingual, translation, interpret, communicate等)及搭配用法。</data>
+      <data key="keywords">fluency, accent, dialect, bilingual, translation, interpret, communicate</data>
+      <data key="exam_type">词汇选择题,完形填空</data>
+      <data key="importance">3</data>
+      <data key="textbook_source">必修第一册</data>
+    </node>
+    <node id="K18">
+      <data key="name">语法:被动语态</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">英语</data>
+      <data key="module">必修第一册</data>
+      <data key="chapter">Languages Around the World</data>
+      <data key="difficulty">4</data>
+      <data key="description">掌握一般现在时与一般过去时的被动语态(be + done)的构成与用法，理解被动语态使用的语境(强调动作承受者、不知道动作执行者)。</data>
+      <data key="keywords">被动语态,be done,一般现在时,一般过去时,动作承受者,动作执行者</data>
+      <data key="exam_type">语法选择题,句型转换题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">必修第一册</data>
+    </node>
+    <node id="K19">
+      <data key="name">阅读策略:推断作者态度与意图</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">英语</data>
+      <data key="module">必修第一册</data>
+      <data key="chapter">Languages Around the World</data>
+      <data key="difficulty">4</data>
+      <data key="description">掌握推断作者态度的方法:分析措辞色彩(褒义/贬义/中性)、识别语气词(unfortunately/surprisingly)、结合主旨判断作者态度与写作意图。</data>
+      <data key="keywords">推断,作者态度,写作意图,措辞色彩,褒义贬义,语气词</data>
+      <data key="exam_type">阅读理解题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">必修第一册</data>
+    </node>
+    <node id="K20">
+      <data key="name">写作:说明文(语言现象)</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">英语</data>
+      <data key="module">必修第一册</data>
+      <data key="chapter">Languages Around the World</data>
+      <data key="difficulty">3</data>
+      <data key="description">能运用说明文写作方法(定义、分类、比较、举例)阐述语言现象(如英语的全球传播、方言差异等)。</data>
+      <data key="keywords">说明文,语言现象,定义,分类,比较,举例,全球传播,方言</data>
+      <data key="exam_type">写作题</data>
+      <data key="importance">3</data>
+      <data key="textbook_source">必修第一册</data>
+    </node>
+    <node id="K21">
+      <data key="name">主题词汇:文化遗产与保护</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">英语</data>
+      <data key="module">必修第二册</data>
+      <data key="chapter">Cultural Heritage</data>
+      <data key="difficulty">2</data>
+      <data key="description">掌握文化遗产相关词汇(heritage, preserve, monument, temple, architecture, archaeology, restore等)及搭配用法。</data>
+      <data key="keywords">heritage, preserve, monument, temple, architecture, archaeology, restore</data>
+      <data key="exam_type">词汇选择题,完形填空</data>
+      <data key="importance">3</data>
+      <data key="textbook_source">必修第二册</data>
+    </node>
+    <node id="K22">
+      <data key="name">语法:定语从句(关系代词)</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">英语</data>
+      <data key="module">必修第二册</data>
+      <data key="chapter">Cultural Heritage</data>
+      <data key="difficulty">5</data>
+      <data key="description">掌握定语从句中关系代词who(人,主格)、whom(人,宾格)、whose(所属)、which(物)、that(人或物)的用法及that与which的区别。</data>
+      <data key="keywords">定语从句,关系代词,who,whom,whose,which,that,主格宾格</data>
+      <data key="exam_type">语法选择题,完形填空,改错题</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">必修第二册</data>
+    </node>
+    <node id="K23">
+      <data key="name">阅读策略:区分事实与观点</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">英语</data>
+      <data key="module">必修第二册</data>
+      <data key="chapter">Cultural Heritage</data>
+      <data key="difficulty">4</data>
+      <data key="description">掌握区分事实(可验证的客观陈述)与观点(主观判断与评价)的方法:识别观点标志词(I think/in my view/arguably)与事实表述特征。</data>
+      <data key="keywords">事实,观点,区分,可验证,主观判断,观点标志词,I think,in my view</data>
+      <data key="exam_type">阅读理解题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">必修第二册</data>
+    </node>
+    <node id="K24">
+      <data key="name">写作:议论文(文化遗产保护)</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">英语</data>
+      <data key="module">必修第二册</data>
+      <data key="chapter">Cultural Heritage</data>
+      <data key="difficulty">4</data>
+      <data key="description">掌握议论文结构(引论提出论点、本论展开论证、结论重申论点)及论证方法(举例、对比、因果)，能撰写文化遗产保护议论文。</data>
+      <data key="keywords">议论文,引论,本论,结论,论点,论证方法,举例,对比,因果</data>
+      <data key="exam_type">写作题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">必修第二册</data>
+    </node>
+    <node id="K25">
+      <data key="name">主题词汇:野生动植物与保护</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">英语</data>
+      <data key="module">必修第二册</data>
+      <data key="chapter">Wildlife Protection</data>
+      <data key="difficulty">2</data>
+      <data key="description">掌握野生动植物保护相关词汇(extinct, endangered, habitat, biodiversity, conservation, species, poach等)及搭配用法。</data>
+      <data key="keywords">extinct, endangered, habitat, biodiversity, conservation, species, poach</data>
+      <data key="exam_type">词汇选择题,完形填空</data>
+      <data key="importance">3</data>
+      <data key="textbook_source">必修第二册</data>
+    </node>
+    <node id="K26">
+      <data key="name">语法:现在完成时的被动语态</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">英语</data>
+      <data key="module">必修第二册</data>
+      <data key="chapter">Wildlife Protection</data>
+      <data key="difficulty">4</data>
+      <data key="description">掌握现在完成时被动语态(have/has been + done)的构成与用法，表示过去发生的动作对现在造成的影响或结果，且主语是动作承受者。</data>
+      <data key="keywords">现在完成时,被动语态,have been done,has been done,影响结果</data>
+      <data key="exam_type">语法选择题,句型转换题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">必修第二册</data>
+    </node>
+    <node id="K27">
+      <data key="name">阅读策略:识别因果关系</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">英语</data>
+      <data key="module">必修第二册</data>
+      <data key="chapter">Wildlife Protection</data>
+      <data key="difficulty">3</data>
+      <data key="description">掌握识别因果关系的信号词(because, since, as, due to, result in, lead to, consequently)及隐性因果推断方法。</data>
+      <data key="keywords">因果关系,信号词,because,since,due to,result in,lead to,隐性因果</data>
+      <data key="exam_type">阅读理解题</data>
+      <data key="importance">3</data>
+      <data key="textbook_source">必修第二册</data>
+    </node>
+    <node id="K28">
+      <data key="name">写作:图表作文</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">英语</data>
+      <data key="module">必修第二册</data>
+      <data key="chapter">Wildlife Protection</data>
+      <data key="difficulty">4</data>
+      <data key="description">掌握图表作文写作步骤(描述图表数据-分析原因-得出结论/提出建议)及数据描述语言(as shown in.../account for.../compared with...)。</data>
+      <data key="keywords">图表作文,描述数据,分析原因,结论建议,as shown in,account for</data>
+      <data key="exam_type">写作题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">必修第二册</data>
+    </node>
+    <node id="K29">
+      <data key="name">主题词汇:互联网与信息技术</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">英语</data>
+      <data key="module">必修第二册</data>
+      <data key="chapter">The Internet</data>
+      <data key="difficulty">2</data>
+      <data key="description">掌握互联网相关词汇(download, upload, browse, network, database, privacy, cyber, online, offline等)及搭配用法。</data>
+      <data key="keywords">download, upload, browse, network, database, privacy, cyber, online</data>
+      <data key="exam_type">词汇选择题,完形填空</data>
+      <data key="importance">3</data>
+      <data key="textbook_source">必修第二册</data>
+    </node>
+    <node id="K30">
+      <data key="name">语法:宾语从句</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">英语</data>
+      <data key="module">必修第二册</data>
+      <data key="chapter">The Internet</data>
+      <data key="difficulty">4</data>
+      <data key="description">掌握宾语从句的引导词(that引导陈述句、whether/if引导一般疑问句、wh-词引导特殊疑问句)、语序(陈述语序)和时态一致性原则。</data>
+      <data key="keywords">宾语从句,引导词,that,whether,if,wh-词,陈述语序,时态一致</data>
+      <data key="exam_type">语法选择题,完形填空,改错题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">必修第二册</data>
+    </node>
+    <node id="K31">
+      <data key="name">阅读策略:识别论证方法</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">英语</data>
+      <data key="module">必修第二册</data>
+      <data key="chapter">The Internet</data>
+      <data key="difficulty">3</data>
+      <data key="description">掌握识别文章中论证方法(举例论证for example/for instance、引用论证according to、数据论证statistics show)的技巧。</data>
+      <data key="keywords">论证方法,举例论证,引用论证,数据论证,for example,according to</data>
+      <data key="exam_type">阅读理解题</data>
+      <data key="importance">3</data>
+      <data key="textbook_source">必修第二册</data>
+    </node>
+    <node id="K32">
+      <data key="name">写作:网络安全倡议书</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">英语</data>
+      <data key="module">必修第二册</data>
+      <data key="chapter">The Internet</data>
+      <data key="difficulty">3</data>
+      <data key="description">掌握倡议书的结构(背景问题-倡议内容-号召呼吁)与语言特点(祈使句、情态动词should/must)，能撰写网络安全倡议书。</data>
+      <data key="keywords">倡议书,背景问题,倡议内容,号召呼吁,祈使句,情态动词</data>
+      <data key="exam_type">写作题</data>
+      <data key="importance">3</data>
+      <data key="textbook_source">必修第二册</data>
+    </node>
+    <node id="K33">
+      <data key="name">主题词汇:音乐类型与表达</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">英语</data>
+      <data key="module">必修第二册</data>
+      <data key="chapter">Music</data>
+      <data key="difficulty">2</data>
+      <data key="description">掌握音乐相关词汇(classical, jazz, rock, symphony, melody, rhythm, compose, perform等)及搭配用法。</data>
+      <data key="keywords">classical, jazz, rock, symphony, melody, rhythm, compose, perform</data>
+      <data key="exam_type">词汇选择题,完形填空</data>
+      <data key="importance">3</data>
+      <data key="textbook_source">必修第二册</data>
+    </node>
+    <node id="K34">
+      <data key="name">语法:状语从句</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">英语</data>
+      <data key="module">必修第二册</data>
+      <data key="chapter">Music</data>
+      <data key="difficulty">4</data>
+      <data key="description">掌握时间状语从句(when/while/as/before/after)、原因状语从句(because/since/as)、条件状语从句(if/unless)的用法与主从句时态规则。</data>
+      <data key="keywords">状语从句,时间状语,原因状语,条件状语,when,while,because,if,unless</data>
+      <data key="exam_type">语法选择题,完形填空,改错题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">必修第二册</data>
+    </node>
+    <node id="K35">
+      <data key="name">阅读策略:理解修辞手法</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">英语</data>
+      <data key="module">必修第二册</data>
+      <data key="chapter">Music</data>
+      <data key="difficulty">3</data>
+      <data key="description">掌握识别并理解英语常见修辞手法(simile明喻、metaphor暗喻、personification拟人、hyperbole夸张)在文本中的表达效果。</data>
+      <data key="keywords">修辞手法,simile,metaphor,personification,hyperbole,明喻,暗喻,拟人</data>
+      <data key="exam_type">阅读理解题</data>
+      <data key="importance">3</data>
+      <data key="textbook_source">必修第二册</data>
+    </node>
+    <node id="K36">
+      <data key="name">写作:应用文(活动介绍)</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">英语</data>
+      <data key="module">必修第二册</data>
+      <data key="chapter">Music</data>
+      <data key="difficulty">3</data>
+      <data key="description">掌握活动介绍应用文的结构(活动概况-活动内容-活动意义)与语言特点，能撰写音乐节等活动的介绍文。</data>
+      <data key="keywords">应用文,活动介绍,活动概况,活动内容,活动意义</data>
+      <data key="exam_type">写作题</data>
+      <data key="importance">3</data>
+      <data key="textbook_source">必修第二册</data>
+    </node>
+    <node id="K37">
+      <data key="name">主题词汇:节日文化与庆祝</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">英语</data>
+      <data key="module">必修第三册</data>
+      <data key="chapter">Festivals and Celebrations</data>
+      <data key="difficulty">2</data>
+      <data key="description">掌握节日相关词汇(celebration, tradition, custom, ceremony, costume, feast, fireworks, parade等)及搭配用法。</data>
+      <data key="keywords">celebration, tradition, custom, ceremony, costume, feast, fireworks, parade</data>
+      <data key="exam_type">词汇选择题,完形填空</data>
+      <data key="importance">3</data>
+      <data key="textbook_source">必修第三册</data>
+    </node>
+    <node id="K38">
+      <data key="name">语法:定语从句(关系副词)</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">英语</data>
+      <data key="module">必修第三册</data>
+      <data key="chapter">Festivals and Celebrations</data>
+      <data key="difficulty">5</data>
+      <data key="description">掌握关系副词when(时间,=介词+which)、where(地点,=介词+which)、why(原因,=for which)引导定语从句的用法及与关系代词的区分。</data>
+      <data key="keywords">定语从句,关系副词,when,where,why,介词+which,关系代词区分</data>
+      <data key="exam_type">语法选择题,完形填空,改错题</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">必修第三册</data>
+    </node>
+    <node id="K39">
+      <data key="name">阅读策略:跨文化理解</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">英语</data>
+      <data key="module">必修第三册</data>
+      <data key="chapter">Festivals and Celebrations</data>
+      <data key="difficulty">3</data>
+      <data key="description">掌握跨文化理解的阅读策略:理解文化背景差异、尊重文化多样性、比较中外节日文化异同、避免文化偏见。</data>
+      <data key="keywords">跨文化理解,文化背景,文化多样性,中外比较,文化偏见</data>
+      <data key="exam_type">阅读理解题,综合题</data>
+      <data key="importance">3</data>
+      <data key="textbook_source">必修第三册</data>
+    </node>
+    <node id="K40">
+      <data key="name">写作:节日介绍文</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">英语</data>
+      <data key="module">必修第三册</data>
+      <data key="chapter">Festivals and Celebrations</data>
+      <data key="difficulty">3</data>
+      <data key="description">掌握节日介绍文的结构(节日概述-庆祝方式-文化意义)与语言特征，能撰写中外节日介绍文。</data>
+      <data key="keywords">节日介绍,节日概述,庆祝方式,文化意义</data>
+      <data key="exam_type">写作题</data>
+      <data key="importance">3</data>
+      <data key="textbook_source">必修第三册</data>
+    </node>
+    <node id="K41">
+      <data key="name">主题词汇:道德品质与价值</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">英语</data>
+      <data key="module">必修第三册</data>
+      <data key="chapter">Morals and Virtues</data>
+      <data key="difficulty">2</data>
+      <data key="description">掌握道德品质相关词汇(virtue, integrity, honesty, responsibility, compassion, sacrifice, ethical, moral等)及搭配用法。</data>
+      <data key="keywords">virtue, integrity, honesty, responsibility, compassion, sacrifice, ethical, moral</data>
+      <data key="exam_type">词汇选择题,完形填空</data>
+      <data key="importance">3</data>
+      <data key="textbook_source">必修第三册</data>
+    </node>
+    <node id="K42">
+      <data key="name">语法:虚拟语气(if条件句)</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">英语</data>
+      <data key="module">必修第三册</data>
+      <data key="chapter">Morals and Virtues</data>
+      <data key="difficulty">5</data>
+      <data key="description">掌握虚拟语气在if条件句中的三种情况:与现在相反(if+过去时,would+do)、与过去相反(if+had done,would have done)、与将来相反(if+were to do/would+do)。</data>
+      <data key="keywords">虚拟语气,if条件句,与现在相反,与过去相反,与将来相反,would+do,had done</data>
+      <data key="exam_type">语法选择题,改错题,翻译题</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">必修第三册</data>
+    </node>
+    <node id="K43">
+      <data key="name">阅读策略:人物性格分析</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">英语</data>
+      <data key="module">必修第三册</data>
+      <data key="chapter">Morals and Virtues</data>
+      <data key="difficulty">3</data>
+      <data key="description">掌握通过人物言行(description, dialogue, action)、他人评价和情节发展分析人物性格特征的阅读方法。</data>
+      <data key="keywords">人物性格,言行分析,description,dialogue,action,他人评价,情节发展</data>
+      <data key="exam_type">阅读理解题</data>
+      <data key="importance">3</data>
+      <data key="textbook_source">必修第三册</data>
+    </node>
+    <node id="K44">
+      <data key="name">写作:记叙文(道德故事)</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">英语</data>
+      <data key="module">必修第三册</data>
+      <data key="chapter">Morals and Virtues</data>
+      <data key="difficulty">3</data>
+      <data key="description">掌握记叙文写作要素(时间、地点、人物、事件起因经过结果)及叙事技巧(细节描写、对话、情感表达)，能撰写道德主题记叙文。</data>
+      <data key="keywords">记叙文,六要素,时间地点人物,起因经过结果,细节描写,对话,情感</data>
+      <data key="exam_type">写作题</data>
+      <data key="importance">3</data>
+      <data key="textbook_source">必修第三册</data>
+    </node>
+    <node id="K45">
+      <data key="name">主题词汇:多元文化与融合</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">英语</data>
+      <data key="module">必修第三册</data>
+      <data key="chapter">Diverse Cultures</data>
+      <data key="difficulty">2</data>
+      <data key="description">掌握多元文化相关词汇(diverse, multicultural, fusion, immigration, ethnic, harmony, tolerance, identity等)及搭配用法。</data>
+      <data key="keywords">diverse, multicultural, fusion, immigration, ethnic, harmony, tolerance, identity</data>
+      <data key="exam_type">词汇选择题,完形填空</data>
+      <data key="importance">3</data>
+      <data key="textbook_source">必修第三册</data>
+    </node>
+    <node id="K46">
+      <data key="name">语法:主谓一致</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">英语</data>
+      <data key="module">必修第三册</data>
+      <data key="chapter">Diverse Cultures</data>
+      <data key="difficulty">4</data>
+      <data key="description">掌握主谓一致的三原则:语法一致(单数主语+单数谓语)、意义一致(集合名词根据意义)、就近原则(either...or.../neither...nor.../not only...but also...)。</data>
+      <data key="keywords">主谓一致,语法一致,意义一致,就近原则,集合名词,either or,neither nor</data>
+      <data key="exam_type">语法选择题,改错题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">必修第三册</data>
+    </node>
+    <node id="K47">
+      <data key="name">阅读策略:比较文化差异</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">英语</data>
+      <data key="module">必修第三册</data>
+      <data key="chapter">Diverse Cultures</data>
+      <data key="difficulty">3</data>
+      <data key="description">掌握比较文化差异的阅读方法:提取不同文化的特征信息、建立比较框架(异同点)、分析差异成因、形成文化理解。</data>
+      <data key="keywords">文化差异,比较框架,异同点,差异成因,文化理解</data>
+      <data key="exam_type">阅读理解题,综合题</data>
+      <data key="importance">3</data>
+      <data key="textbook_source">必修第三册</data>
+    </node>
+    <node id="K48">
+      <data key="name">写作:对比类作文</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">英语</data>
+      <data key="module">必修第三册</data>
+      <data key="chapter">Diverse Cultures</data>
+      <data key="difficulty">4</data>
+      <data key="description">掌握对比类作文的结构(引出比较对象-分析相同点-分析不同点-得出结论)及对比连接词(similarly, however, in contrast, on the other hand)。</data>
+      <data key="keywords">对比作文,比较对象,相同点,不同点,similarly,however,in contrast,on the other hand</data>
+      <data key="exam_type">写作题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">必修第三册</data>
+    </node>
+    <node id="K49">
+      <data key="name">主题词汇:太空探索与科技</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">英语</data>
+      <data key="module">必修第三册</data>
+      <data key="chapter">Space Exploration</data>
+      <data key="difficulty">2</data>
+      <data key="description">掌握太空探索相关词汇(astronaut, orbit, spacecraft, satellite, galaxy, universe, gravity, launch等)及搭配用法。</data>
+      <data key="keywords">astronaut, orbit, spacecraft, satellite, galaxy, universe, gravity, launch</data>
+      <data key="exam_type">词汇选择题,完形填空</data>
+      <data key="importance">3</data>
+      <data key="textbook_source">必修第三册</data>
+    </node>
+    <node id="K50">
+      <data key="name">语法:不定式作主语和定语</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">英语</data>
+      <data key="module">必修第三册</data>
+      <data key="chapter">Space Exploration</data>
+      <data key="difficulty">4</data>
+      <data key="description">掌握不定式(to do)作主语(It is + adj + to do.../To do... is...)和作定语(修饰名词，放名词后，如the first man to land on...)的用法。</data>
+      <data key="keywords">不定式,作主语,作定语,It is adj to do,the first to do</data>
+      <data key="exam_type">语法选择题,改错题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">必修第三册</data>
+    </node>
+    <node id="K51">
+      <data key="name">阅读策略:理解科普文章</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">英语</data>
+      <data key="module">必修第三册</data>
+      <data key="chapter">Space Exploration</data>
+      <data key="difficulty">3</data>
+      <data key="description">掌握科普文章阅读方法:理解科学概念、把握实验或观测过程、分析数据结论、评估科普文章的可靠性与通俗性。</data>
+      <data key="keywords">科普文章,科学概念,实验过程,数据结论,可靠性,通俗性</data>
+      <data key="exam_type">阅读理解题</data>
+      <data key="importance">3</data>
+      <data key="textbook_source">必修第三册</data>
+    </node>
+    <node id="K52">
+      <data key="name">写作:科普说明文</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">英语</data>
+      <data key="module">必修第三册</data>
+      <data key="chapter">Space Exploration</data>
+      <data key="difficulty">4</data>
+      <data key="description">掌握科普说明文写作特点(准确用语、逻辑清晰、图文结合、通俗表达)，能撰写太空探索主题的科普说明文。</data>
+      <data key="keywords">科普说明文,准确用语,逻辑清晰,图文结合,通俗表达</data>
+      <data key="exam_type">写作题</data>
+      <data key="importance">3</data>
+      <data key="textbook_source">必修第三册</data>
+    </node>
+    <node id="K53">
+      <data key="name">主题词汇:杰出人物与成就</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">英语</data>
+      <data key="module">选择性必修1-2</data>
+      <data key="chapter">People of Achievement</data>
+      <data key="difficulty">2</data>
+      <data key="description">掌握杰出人物相关词汇(achievement, contribution, breakthrough, pioneer, dedicate, overcome, inspire, legacy等)及搭配用法。</data>
+      <data key="keywords">achievement, contribution, breakthrough, pioneer, dedicate, overcome, inspire, legacy</data>
+      <data key="exam_type">词汇选择题,完形填空</data>
+      <data key="importance">3</data>
+      <data key="textbook_source">选择性必修1</data>
+    </node>
+    <node id="K54">
+      <data key="name">语法:非谓语动词(动名词与分词)</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">英语</data>
+      <data key="module">选择性必修1-2</data>
+      <data key="chapter">People of Achievement</data>
+      <data key="difficulty">5</data>
+      <data key="description">掌握动名词(v-ing作主语/宾语)与分词(v-ing现在分词表主动进行/ed过去分词表被动完成，作定语/状语/宾补)的形式与用法区别。</data>
+      <data key="keywords">非谓语动词,动名词,现在分词,过去分词,作主语,作宾语,作定语,作状语,主动被动</data>
+      <data key="exam_type">语法选择题,完形填空,改错题</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">选择性必修1</data>
+    </node>
+    <node id="K55">
+      <data key="name">阅读策略:人物传记阅读</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">英语</data>
+      <data key="module">选择性必修1-2</data>
+      <data key="chapter">People of Achievement</data>
+      <data key="difficulty">3</data>
+      <data key="description">掌握人物传记阅读方法:梳理生平时间线、分析成就贡献、理解人物精神品质、评价历史地位与影响。</data>
+      <data key="keywords">人物传记,生平时间线,成就贡献,精神品质,历史地位</data>
+      <data key="exam_type">阅读理解题,综合题</data>
+      <data key="importance">3</data>
+      <data key="textbook_source">选择性必修1</data>
+    </node>
+    <node id="K56">
+      <data key="name">写作:人物介绍文</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">英语</data>
+      <data key="module">选择性必修1-2</data>
+      <data key="chapter">People of Achievement</data>
+      <data key="difficulty">3</data>
+      <data key="description">掌握人物介绍文的结构(基本信息-主要成就-品质评价)与语言特点，能撰写杰出人物介绍文。</data>
+      <data key="keywords">人物介绍,基本信息,主要成就,品质评价</data>
+      <data key="exam_type">写作题</data>
+      <data key="importance">3</data>
+      <data key="textbook_source">选择性必修1</data>
+    </node>
+    <node id="K57">
+      <data key="name">主题词汇:未来科技与生活</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">英语</data>
+      <data key="module">选择性必修1-2</data>
+      <data key="chapter">Looking into the Future</data>
+      <data key="difficulty">2</data>
+      <data key="description">掌握未来科技相关词汇(artificial intelligence, automation, virtual reality, sustainable, innovation, breakthrough等)及搭配用法。</data>
+      <data key="keywords">artificial intelligence, automation, virtual reality, sustainable, innovation, breakthrough</data>
+      <data key="exam_type">词汇选择题,完形填空</data>
+      <data key="importance">3</data>
+      <data key="textbook_source">选择性必修1</data>
+    </node>
+    <node id="K58">
+      <data key="name">语法:将来完成时与进行时</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">英语</data>
+      <data key="module">选择性必修1-2</data>
+      <data key="chapter">Looking into the Future</data>
+      <data key="difficulty">4</data>
+      <data key="description">掌握将来完成时(will have done:到将来某时已完成)和将来进行时(will be doing:将来某时正在进行)的构成与用法。</data>
+      <data key="keywords">将来完成时,将来进行时,will have done,will be doing,将来某时</data>
+      <data key="exam_type">语法选择题,改错题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">选择性必修1</data>
+    </node>
+    <node id="K59">
+      <data key="name">阅读策略:预测与推断</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">英语</data>
+      <data key="module">选择性必修1-2</data>
+      <data key="chapter">Looking into the Future</data>
+      <data key="difficulty">3</data>
+      <data key="description">掌握预测(根据标题/图表/首段预测内容)与推断(根据文本信息推断未来趋势和可能发展)的阅读策略。</data>
+      <data key="keywords">预测,推断,标题图表,首段,未来趋势,可能发展</data>
+      <data key="exam_type">阅读理解题</data>
+      <data key="importance">3</data>
+      <data key="textbook_source">选择性必修1</data>
+    </node>
+    <node id="K60">
+      <data key="name">写作:预测类作文</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">英语</data>
+      <data key="module">选择性必修1-2</data>
+      <data key="chapter">Looking into the Future</data>
+      <data key="difficulty">3</data>
+      <data key="description">掌握预测类作文的结构(现状描述-预测趋势-分析影响-个人看法)与预测表达语言(will/may/might/are likely to...)。</data>
+      <data key="keywords">预测作文,现状描述,预测趋势,分析影响,will,may,might,are likely to</data>
+      <data key="exam_type">写作题</data>
+      <data key="importance">3</data>
+      <data key="textbook_source">选择性必修1</data>
+    </node>
+    <node id="K61">
+      <data key="name">主题词汇:自然公园与景观</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">英语</data>
+      <data key="module">选择性必修1-2</data>
+      <data key="chapter">Fascinating Parks</data>
+      <data key="difficulty">2</data>
+      <data key="description">掌握自然景观相关词汇(scenery, landscape, wilderness, spectacular, breathtaking, trail, canyon, glacier等)及搭配用法。</data>
+      <data key="keywords">scenery, landscape, wilderness, spectacular, breathtaking, trail, canyon, glacier</data>
+      <data key="exam_type">词汇选择题,完形填空</data>
+      <data key="importance">3</data>
+      <data key="textbook_source">选择性必修1</data>
+    </node>
+    <node id="K62">
+      <data key="name">语法:倒装句</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">英语</data>
+      <data key="module">选择性必修1-2</data>
+      <data key="chapter">Fascinating Parks</data>
+      <data key="difficulty">5</data>
+      <data key="description">掌握完全倒装(地点/方向副词放句首:Here comes the bus)和部分倒装(否定词/only/so...that等放句首:Never have I seen...)的用法。</data>
+      <data key="keywords">倒装句,完全倒装,部分倒装,否定词,only,so that,Here comes</data>
+      <data key="exam_type">语法选择题,改错题,翻译题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">选择性必修1</data>
+    </node>
+    <node id="K63">
+      <data key="name">阅读策略:欣赏描写性语言</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">英语</data>
+      <data key="module">选择性必修1-2</data>
+      <data key="chapter">Fascinating Parks</data>
+      <data key="difficulty">3</data>
+      <data key="description">掌握欣赏描写性语言的方法:分析感官描写(视觉/听觉/触觉)、修辞手法运用、词语搭配与画面感营造。</data>
+      <data key="keywords">描写性语言,感官描写,视觉听觉触觉,修辞手法,画面感</data>
+      <data key="exam_type">阅读理解题,鉴赏题</data>
+      <data key="importance">3</data>
+      <data key="textbook_source">选择性必修1</data>
+    </node>
+    <node id="K64">
+      <data key="name">写作:描写文</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">英语</data>
+      <data key="module">选择性必修1-2</data>
+      <data key="chapter">Fascinating Parks</data>
+      <data key="difficulty">4</data>
+      <data key="description">掌握描写文写作技巧(空间顺序、多感官描写、生动词汇与修辞)，能撰写自然景观的描写文。</data>
+      <data key="keywords">描写文,空间顺序,多感官描写,生动词汇,修辞</data>
+      <data key="exam_type">写作题</data>
+      <data key="importance">3</data>
+      <data key="textbook_source">选择性必修1</data>
+    </node>
+    <node id="K65">
+      <data key="name">主题词汇:标志性景观与旅游</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">英语</data>
+      <data key="module">选择性必修1-2</data>
+      <data key="chapter">Iconic Attractions</data>
+      <data key="difficulty">2</data>
+      <data key="description">掌握旅游景观相关词汇(iconic, landmark, spectacular, destination, heritage, magnificent, unique等)及搭配用法。</data>
+      <data key="keywords">iconic, landmark, spectacular, destination, heritage, magnificent, unique</data>
+      <data key="exam_type">词汇选择题,完形填空</data>
+      <data key="importance">3</data>
+      <data key="textbook_source">选择性必修2</data>
+    </node>
+    <node id="K66">
+      <data key="name">语法:同位语从句</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">英语</data>
+      <data key="module">选择性必修1-2</data>
+      <data key="chapter">Iconic Attractions</data>
+      <data key="difficulty">4</data>
+      <data key="description">掌握同位语从句(对名词进行解释说明:the fact that.../the idea that.../the news that...)的引导词用法及与定语从句的区别。</data>
+      <data key="keywords">同位语从句,the fact that,the idea that,解释说明,定语从句区别</data>
+      <data key="exam_type">语法选择题,改错题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">选择性必修2</data>
+    </node>
+    <node id="K67">
+      <data key="name">阅读策略:综合理解</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">英语</data>
+      <data key="module">选择性必修1-2</data>
+      <data key="chapter">Iconic Attractions</data>
+      <data key="difficulty">3</data>
+      <data key="description">综合运用略读、扫读、推断、概括等策略进行文本深层理解，能整合多段落信息形成整体理解。</data>
+      <data key="keywords">综合理解,略读,扫读,推断,概括,深层理解,信息整合</data>
+      <data key="exam_type">阅读理解题,综合题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">选择性必修2</data>
+    </node>
+    <node id="K68">
+      <data key="name">写作:旅游宣传文</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">英语</data>
+      <data key="module">选择性必修1-2</data>
+      <data key="chapter">Iconic Attractions</data>
+      <data key="difficulty">3</data>
+      <data key="description">掌握旅游宣传文的结构(景点亮点-特色体验-游览建议-号召参观)与宣传语言特色(生动形容词、祈使号召句)，能撰写旅游宣传文。</data>
+      <data key="keywords">旅游宣传,景点亮点,特色体验,游览建议,号召参观,宣传语言</data>
+      <data key="exam_type">写作题</data>
+      <data key="importance">3</data>
+      <data key="textbook_source">选择性必修2</data>
+    </node>
+    <node id="K69">
+      <data key="name">主题词汇:艺术与审美</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">英语</data>
+      <data key="module">选择性必修3-4</data>
+      <data key="chapter">Art</data>
+      <data key="difficulty">2</data>
+      <data key="description">掌握艺术相关词汇(aesthetic, masterpiece, sculpture, exhibition, gallery, abstract, contemporary, portrait等)及搭配用法。</data>
+      <data key="keywords">aesthetic, masterpiece, sculpture, exhibition, gallery, abstract, contemporary, portrait</data>
+      <data key="exam_type">词汇选择题,完形填空</data>
+      <data key="importance">3</data>
+      <data key="textbook_source">选择性必修3</data>
+    </node>
+    <node id="K70">
+      <data key="name">语法:强调句型</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">英语</data>
+      <data key="module">选择性必修3-4</data>
+      <data key="chapter">Art</data>
+      <data key="difficulty">4</data>
+      <data key="description">掌握强调句型It is/was + 被强调部分 + that/who + 句子其余部分的结构，能区分强调句与主语从句并运用强调句进行表达。</data>
+      <data key="keywords">强调句型,It is that,被强调部分,主语从句区分</data>
+      <data key="exam_type">语法选择题,改错题,翻译题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">选择性必修3</data>
+    </node>
+    <node id="K71">
+      <data key="name">阅读策略:艺术评论阅读</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">英语</data>
+      <data key="module">选择性必修3-4</data>
+      <data key="chapter">Art</data>
+      <data key="difficulty">3</data>
+      <data key="description">掌握艺术评论的阅读方法:理解评论者的审美判断、分析评价标准与论据、识别评论中的主观与客观成分。</data>
+      <data key="keywords">艺术评论,审美判断,评价标准,论据,主观客观</data>
+      <data key="exam_type">阅读理解题</data>
+      <data key="importance">3</data>
+      <data key="textbook_source">选择性必修3</data>
+    </node>
+    <node id="K72">
+      <data key="name">写作:艺术评论</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">英语</data>
+      <data key="module">选择性必修3-4</data>
+      <data key="chapter">Art</data>
+      <data key="difficulty">4</data>
+      <data key="description">掌握艺术评论写作要素(作品概述-形式分析-内容解读-评价结论)与评论语言特征(专业术语、评价性词汇)，能撰写简短艺术评论。</data>
+      <data key="keywords">艺术评论,作品概述,形式分析,内容解读,评价结论,专业术语</data>
+      <data key="exam_type">写作题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">选择性必修3</data>
+    </node>
+    <node id="K73">
+      <data key="name">主题词汇:逆境与勇气</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">英语</data>
+      <data key="module">选择性必修3-4</data>
+      <data key="chapter">Adversity and Courage</data>
+      <data key="difficulty">2</data>
+      <data key="description">掌握逆境勇气相关词汇(adversity, hardship, persevere, resilient, determination, overcome, endurance, sacrifice等)及搭配用法。</data>
+      <data key="keywords">adversity, hardship, persevere, resilient, determination, overcome, endurance, sacrifice</data>
+      <data key="exam_type">词汇选择题,完形填空</data>
+      <data key="importance">3</data>
+      <data key="textbook_source">选择性必修3</data>
+    </node>
+    <node id="K74">
+      <data key="name">语法:虚拟语气扩展(wish与as if)</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">英语</data>
+      <data key="module">选择性必修3-4</data>
+      <data key="chapter">Adversity and Courage</data>
+      <data key="difficulty">4</data>
+      <data key="description">掌握wish后虚拟语气(wish+过去时表示现在愿望/wish+had done表示过去愿望/wish+would do表示将来愿望)及as if/as though引导虚拟的用法。</data>
+      <data key="keywords">虚拟语气扩展,wish,as if,as though,现在愿望,过去愿望,将来愿望</data>
+      <data key="exam_type">语法选择题,改错题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">选择性必修3</data>
+    </node>
+    <node id="K75">
+      <data key="name">阅读策略:叙事结构分析</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">英语</data>
+      <data key="module">选择性必修3-4</data>
+      <data key="chapter">Adversity and Courage</data>
+      <data key="difficulty">3</data>
+      <data key="description">掌握叙事结构分析的方法:识别叙事线索(主线与副线)、分析情节发展阶段(开端-发展-高潮-结局)、理解叙事节奏与悬念设置。</data>
+      <data key="keywords">叙事结构,叙事线索,主线副线,开端发展高潮结局,叙事节奏,悬念</data>
+      <data key="exam_type">阅读理解题,综合题</data>
+      <data key="importance">3</data>
+      <data key="textbook_source">选择性必修3</data>
+    </node>
+    <node id="K76">
+      <data key="name">写作:读后感</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">英语</data>
+      <data key="module">选择性必修3-4</data>
+      <data key="chapter">Adversity and Courage</data>
+      <data key="difficulty">3</data>
+      <data key="description">掌握读后感的结构(引述原文-分析评论-联系实际-总结感悟)与写作要求(观点明确、有感而发、叙议结合)，能撰写英文读后感。</data>
+      <data key="keywords">读后感,引述原文,分析评论,联系实际,总结感悟,叙议结合</data>
+      <data key="exam_type">写作题</data>
+      <data key="importance">3</data>
+      <data key="textbook_source">选择性必修3</data>
+    </node>
+    <node id="K77">
+      <data key="name">主题词汇:科学探索与发现</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">英语</data>
+      <data key="module">选择性必修3-4</data>
+      <data key="chapter">Scientific Exploration</data>
+      <data key="difficulty">2</data>
+      <data key="description">掌握科学探索相关词汇(hypothesis, experiment, observation, evidence, conclusion, theory, phenomenon, discovery等)及搭配用法。</data>
+      <data key="keywords">hypothesis, experiment, observation, evidence, conclusion, theory, phenomenon, discovery</data>
+      <data key="exam_type">词汇选择题,完形填空</data>
+      <data key="importance">3</data>
+      <data key="textbook_source">选择性必修4</data>
+    </node>
+    <node id="K78">
+      <data key="name">语法:名词性从句综合</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">英语</data>
+      <data key="module">选择性必修3-4</data>
+      <data key="chapter">Scientific Exploration</data>
+      <data key="difficulty">5</data>
+      <data key="description">综合掌握主语从句(It is + adj/noun + that...)、宾语从句、表语从句和同位语从句的引导词选择、语序和时态一致性，能进行名词性从句的辨析与转换。</data>
+      <data key="keywords">名词性从句,主语从句,宾语从句,表语从句,同位语从句,引导词,时态一致</data>
+      <data key="exam_type">语法选择题,完形填空,改错题</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">选择性必修4</data>
+    </node>
+    <node id="K79">
+      <data key="name">阅读策略:科普文逻辑分析</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">英语</data>
+      <data key="module">选择性必修3-4</data>
+      <data key="chapter">Scientific Exploration</data>
+      <data key="difficulty">4</data>
+      <data key="description">掌握科普文逻辑分析方法:识别假设-验证-结论的逻辑链条、分析因果推理过程、评估论据与结论的匹配度。</data>
+      <data key="keywords">科普文逻辑,假设验证结论,逻辑链条,因果推理,论据结论匹配</data>
+      <data key="exam_type">阅读理解题,综合题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">选择性必修4</data>
+    </node>
+    <node id="K80">
+      <data key="name">写作:实验报告</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">英语</data>
+      <data key="module">选择性必修3-4</data>
+      <data key="chapter">Scientific Exploration</data>
+      <data key="difficulty">4</data>
+      <data key="description">掌握实验报告的结构(目的Objective-方法Method-结果Result-讨论Discussion-结论Conclusion)与学术语言特征，能撰写英文实验报告。</data>
+      <data key="keywords">实验报告,Objective,Method,Result,Discussion,Conclusion,学术语言</data>
+      <data key="exam_type">写作题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">选择性必修4</data>
+    </node>
+    <node id="K81">
+      <data key="name">主题词汇:幽默与智慧</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">英语</data>
+      <data key="module">选择性必修3-4</data>
+      <data key="chapter">Humour</data>
+      <data key="difficulty">2</data>
+      <data key="description">掌握幽默相关词汇(humour, witty, irony, satire, punchline, anecdote, amusing, hilarious等)及搭配用法。</data>
+      <data key="keywords">humour, witty, irony, satire, punchline, anecdote, amusing, hilarious</data>
+      <data key="exam_type">词汇选择题,完形填空</data>
+      <data key="importance">3</data>
+      <data key="textbook_source">选择性必修4</data>
+    </node>
+    <node id="K82">
+      <data key="name">修辞手法在英语中的应用</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">英语</data>
+      <data key="module">选择性必修3-4</data>
+      <data key="chapter">Humour</data>
+      <data key="difficulty">4</data>
+      <data key="description">掌握修辞手法(双关pun、反讽irony、夸张hyperbole、对比contrast、排比parallelism)在幽默表达中的运用技巧与效果。</data>
+      <data key="keywords">修辞应用,双关,反讽,夸张,对比,排比,幽默表达</data>
+      <data key="exam_type">选择题,阅读理解题,写作题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">选择性必修4</data>
+    </node>
+    <node id="K83">
+      <data key="name">阅读策略:识别幽默与讽刺</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">英语</data>
+      <data key="module">选择性必修3-4</data>
+      <data key="chapter">Humour</data>
+      <data key="difficulty">3</data>
+      <data key="description">掌握识别幽默与讽刺的方法:分析语境反差、识别语气转折(but/however)、理解言外之意与弦外之音、辨析讽刺与赞美的边界。</data>
+      <data key="keywords">幽默讽刺,语境反差,语气转折,言外之意,讽刺赞美辨析</data>
+      <data key="exam_type">阅读理解题,综合题</data>
+      <data key="importance">3</data>
+      <data key="textbook_source">选择性必修4</data>
+    </node>
+    <node id="K84">
+      <data key="name">写作:幽默短文</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">英语</data>
+      <data key="module">选择性必修3-4</data>
+      <data key="chapter">Humour</data>
+      <data key="difficulty">3</data>
+      <data key="description">掌握幽默短文写作技巧(设置反差、运用双关、制造意外结局、控制节奏)，能撰写简短的英文幽默短文。</data>
+      <data key="keywords">幽默短文,设置反差,运用双关,意外结局,控制节奏</data>
+      <data key="exam_type">写作题</data>
+      <data key="importance">3</data>
+      <data key="textbook_source">选择性必修4</data>
+    </node>
+    <edge source="M1" target="C1">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">模块包含章节</data>
+    </edge>
+    <edge source="M1" target="C2">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">模块包含章节</data>
+    </edge>
+    <edge source="M1" target="C3">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">模块包含章节</data>
+    </edge>
+    <edge source="M1" target="C4">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">模块包含章节</data>
+    </edge>
+    <edge source="M1" target="C5">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">模块包含章节</data>
+    </edge>
+    <edge source="M2" target="C6">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">模块包含章节</data>
+    </edge>
+    <edge source="M2" target="C7">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">模块包含章节</data>
+    </edge>
+    <edge source="M2" target="C8">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">模块包含章节</data>
+    </edge>
+    <edge source="M2" target="C9">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">模块包含章节</data>
+    </edge>
+    <edge source="M3" target="C10">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">模块包含章节</data>
+    </edge>
+    <edge source="M3" target="C11">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">模块包含章节</data>
+    </edge>
+    <edge source="M3" target="C12">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">模块包含章节</data>
+    </edge>
+    <edge source="M3" target="C13">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">模块包含章节</data>
+    </edge>
+    <edge source="M4" target="C14">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">模块包含章节</data>
+    </edge>
+    <edge source="M4" target="C15">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">模块包含章节</data>
+    </edge>
+    <edge source="M4" target="C16">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">模块包含章节</data>
+    </edge>
+    <edge source="M4" target="C17">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">模块包含章节</data>
+    </edge>
+    <edge source="M5" target="C18">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">模块包含章节</data>
+    </edge>
+    <edge source="M5" target="C19">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">模块包含章节</data>
+    </edge>
+    <edge source="M5" target="C20">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">模块包含章节</data>
+    </edge>
+    <edge source="M5" target="C21">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">模块包含章节</data>
+    </edge>
+    <edge source="C1" target="K1">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C1" target="K2">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C1" target="K3">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C1" target="K4">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C2" target="K5">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C2" target="K6">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C2" target="K7">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C2" target="K8">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C3" target="K9">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C3" target="K10">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C3" target="K11">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C3" target="K12">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C4" target="K13">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C4" target="K14">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C4" target="K15">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C4" target="K16">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C5" target="K17">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C5" target="K18">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C5" target="K19">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C5" target="K20">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C6" target="K21">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C6" target="K22">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C6" target="K23">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C6" target="K24">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C7" target="K25">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C7" target="K26">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C7" target="K27">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C7" target="K28">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C8" target="K29">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C8" target="K30">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C8" target="K31">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C8" target="K32">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C9" target="K33">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C9" target="K34">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C9" target="K35">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C9" target="K36">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C10" target="K37">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C10" target="K38">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C10" target="K39">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C10" target="K40">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C11" target="K41">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C11" target="K42">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C11" target="K43">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C11" target="K44">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C12" target="K45">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C12" target="K46">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C12" target="K47">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C12" target="K48">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C13" target="K49">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C13" target="K50">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C13" target="K51">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C13" target="K52">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C14" target="K53">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C14" target="K54">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C14" target="K55">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C14" target="K56">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C15" target="K57">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C15" target="K58">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C15" target="K59">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C15" target="K60">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C16" target="K61">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C16" target="K62">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C16" target="K63">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C16" target="K64">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C17" target="K65">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C17" target="K66">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C17" target="K67">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C17" target="K68">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C18" target="K69">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C18" target="K70">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C18" target="K71">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C18" target="K72">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C19" target="K73">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C19" target="K74">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C19" target="K75">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C19" target="K76">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C20" target="K77">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C20" target="K78">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C20" target="K79">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C20" target="K80">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C21" target="K81">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C21" target="K82">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C21" target="K83">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="C21" target="K84">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节包含知识点</data>
+    </edge>
+    <edge source="K2" target="K3">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.5</data>
+      <data key="description">时态基础有助于理解阅读策略</data>
+    </edge>
+    <edge source="K3" target="K4">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.4</data>
+      <data key="description">阅读策略有助于写作中的素材组织</data>
+    </edge>
+    <edge source="K3" target="K7">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.6</data>
+      <data key="description">略读与扫读都是基本阅读策略</data>
+    </edge>
+    <edge source="K2" target="K6">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.5</data>
+      <data key="description">现在时是学习将来时态的基础</data>
+    </edge>
+    <edge source="K5" target="K8">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.4</data>
+      <data key="description">旅游词汇是旅行写作的基础</data>
+    </edge>
+    <edge source="K6" target="K8">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.5</data>
+      <data key="description">将来时态是旅行计划写作的语法基础</data>
+    </edge>
+    <edge source="K11" target="K12">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.5</data>
+      <data key="description">猜词策略有助于说明文阅读与写作</data>
+    </edge>
+    <edge source="K10" target="K12">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.4</data>
+      <data key="description">情态动词有助于说明文中的建议表达</data>
+    </edge>
+    <edge source="K14" target="K16">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.5</data>
+      <data key="description">过去时态是新闻报道写作的基础</data>
+    </edge>
+    <edge source="K15" target="K16">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.4</data>
+      <data key="description">篇章结构识别有助于新闻报道组织</data>
+    </edge>
+    <edge source="K18" target="K20">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.5</data>
+      <data key="description">被动语态常用于说明文表达</data>
+    </edge>
+    <edge source="K19" target="K20">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.4</data>
+      <data key="description">推断策略有助于说明文写作的素材选择</data>
+    </edge>
+    <edge source="K2" target="K18">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.5</data>
+      <data key="description">一般现在时是学习被动语态的基础</data>
+    </edge>
+    <edge source="K14" target="K18">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.5</data>
+      <data key="description">一般过去时是学习过去被动语态的基础</data>
+    </edge>
+    <edge source="K22" target="K24">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.5</data>
+      <data key="description">定语从句有助于议论文的句式丰富</data>
+    </edge>
+    <edge source="K23" target="K24">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.5</data>
+      <data key="description">区分事实观点有助于议论文论证</data>
+    </edge>
+    <edge source="K26" target="K28">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.5</data>
+      <data key="description">现在完成时被动语态可用于图表描述</data>
+    </edge>
+    <edge source="K27" target="K28">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.5</data>
+      <data key="description">因果识别有助于图表作文的因果分析</data>
+    </edge>
+    <edge source="K22" target="K26">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.6</data>
+      <data key="description">定语从句基础有助于学习被动语态</data>
+    </edge>
+    <edge source="K30" target="K32">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.4</data>
+      <data key="description">宾语从句可用于倡议书中的建议表达</data>
+    </edge>
+    <edge source="K31" target="K32">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.4</data>
+      <data key="description">论证方法识别有助于倡议书的论证</data>
+    </edge>
+    <edge source="K34" target="K36">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.4</data>
+      <data key="description">状语从句有助于应用文中的逻辑表达</data>
+    </edge>
+    <edge source="K35" target="K36">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.4</data>
+      <data key="description">修辞理解有助于应用文写作的表达</data>
+    </edge>
+    <edge source="K22" target="K38">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.7</data>
+      <data key="description">关系代词是学习关系副词的基础</data>
+    </edge>
+    <edge source="K37" target="K40">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.4</data>
+      <data key="description">节日词汇是节日介绍文的基础</data>
+    </edge>
+    <edge source="K39" target="K40">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.4</data>
+      <data key="description">跨文化理解有助于节日介绍文写作</data>
+    </edge>
+    <edge source="K42" target="K44">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.5</data>
+      <data key="description">虚拟语气可用于记叙文中的假设表达</data>
+    </edge>
+    <edge source="K43" target="K44">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.5</data>
+      <data key="description">人物性格分析有助于记叙文人物塑造</data>
+    </edge>
+    <edge source="K46" target="K48">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.4</data>
+      <data key="description">主谓一致是对比作文的语法基础</data>
+    </edge>
+    <edge source="K47" target="K48">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.5</data>
+      <data key="description">文化差异比较策略有助于对比作文</data>
+    </edge>
+    <edge source="K50" target="K52">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.4</data>
+      <data key="description">不定式语法有助于科普说明文写作</data>
+    </edge>
+    <edge source="K51" target="K52">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.5</data>
+      <data key="description">科普文章理解有助于科普说明文写作</data>
+    </edge>
+    <edge source="K42" target="K74">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.7</data>
+      <data key="description">if条件句虚拟语气是学习wish/as if虚拟的基础</data>
+    </edge>
+    <edge source="K54" target="K56">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.5</data>
+      <data key="description">非谓语动词有助于人物介绍文的句式表达</data>
+    </edge>
+    <edge source="K55" target="K56">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.5</data>
+      <data key="description">人物传记阅读策略有助于人物介绍文写作</data>
+    </edge>
+    <edge source="K58" target="K60">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.5</data>
+      <data key="description">将来时态是预测作文的语法基础</data>
+    </edge>
+    <edge source="K59" target="K60">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.5</data>
+      <data key="description">预测推断策略有助于预测作文写作</data>
+    </edge>
+    <edge source="K6" target="K58">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.5</data>
+      <data key="description">一般将来时是学习将来完成/进行时的基础</data>
+    </edge>
+    <edge source="K62" target="K64">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.4</data>
+      <data key="description">倒装句有助于描写文的句式变化</data>
+    </edge>
+    <edge source="K63" target="K64">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.6</data>
+      <data key="description">描写性语言欣赏是描写文写作的基础</data>
+    </edge>
+    <edge source="K66" target="K68">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.4</data>
+      <data key="description">同位语从句有助于宣传文的表达</data>
+    </edge>
+    <edge source="K67" target="K68">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.5</data>
+      <data key="description">综合理解策略有助于宣传文写作</data>
+    </edge>
+    <edge source="K30" target="K66">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.5</data>
+      <data key="description">宾语从句是学习同位语从句的基础</data>
+    </edge>
+    <edge source="K70" target="K72">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.5</data>
+      <data key="description">强调句型有助于艺术评论的表达</data>
+    </edge>
+    <edge source="K71" target="K72">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.5</data>
+      <data key="description">艺术评论阅读有助于艺术评论写作</data>
+    </edge>
+    <edge source="K74" target="K76">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.4</data>
+      <data key="description">虚拟语气扩展有助于读后感中的假设表达</data>
+    </edge>
+    <edge source="K75" target="K76">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.6</data>
+      <data key="description">叙事结构分析有助于读后感中的评论</data>
+    </edge>
+    <edge source="K78" target="K80">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.5</data>
+      <data key="description">名词性从句综合有助于实验报告的表达</data>
+    </edge>
+    <edge source="K79" target="K80">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.5</data>
+      <data key="description">科普文逻辑分析有助于实验报告写作</data>
+    </edge>
+    <edge source="K30" target="K78">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.6</data>
+      <data key="description">宾语从句是名词性从句综合的基础</data>
+    </edge>
+    <edge source="K66" target="K78">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.6</data>
+      <data key="description">同位语从句是名词性从句综合的基础</data>
+    </edge>
+    <edge source="K82" target="K84">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.5</data>
+      <data key="description">修辞应用有助于幽默短文写作</data>
+    </edge>
+    <edge source="K83" target="K84">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.5</data>
+      <data key="description">幽默讽刺识别有助于幽默短文写作</data>
+    </edge>
+    <edge source="K35" target="K82">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.6</data>
+      <data key="description">修辞手法理解是修辞应用的基础</data>
+    </edge>
+    <edge source="K18" target="K26">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.5</data>
+      <data key="description">被动语态基础有助于学习现在完成时被动语态</data>
+    </edge>
+    <edge source="K14" target="K75">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.3</data>
+      <data key="description">过去时态知识有助于叙事结构中的时态分析</data>
+    </edge>
+    <edge source="K24" target="K48">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.4</data>
+      <data key="description">议论文写作是对比作文写作的基础</data>
+    </edge>
+    <edge source="K24" target="K28">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.3</data>
+      <data key="description">议论文论证方法有助于图表作文分析</data>
+    </edge>
+    <edge source="K2" target="K14">
+      <data key="relation">RELATED_TO</data>
+      <data key="weight">0.5</data>
+      <data key="description">现在时与过去时都是基本时态</data>
+    </edge>
+    <edge source="K6" target="K58">
+      <data key="relation">RELATED_TO</data>
+      <data key="weight">0.5</data>
+      <data key="description">将来时态与将来完成/进行时相关</data>
+    </edge>
+    <edge source="K3" target="K7">
+      <data key="relation">RELATED_TO</data>
+      <data key="weight">0.6</data>
+      <data key="description">略读与扫读是互补的阅读策略</data>
+    </edge>
+    <edge source="K3" target="K67">
+      <data key="relation">RELATED_TO</data>
+      <data key="weight">0.4</data>
+      <data key="description">略读是综合理解策略的组成</data>
+    </edge>
+    <edge source="K7" target="K67">
+      <data key="relation">RELATED_TO</data>
+      <data key="weight">0.4</data>
+      <data key="description">扫读是综合理解策略的组成</data>
+    </edge>
+    <edge source="K11" target="K19">
+      <data key="relation">RELATED_TO</data>
+      <data key="weight">0.4</data>
+      <data key="description">猜词与推断都是深层阅读策略</data>
+    </edge>
+    <edge source="K15" target="K79">
+      <data key="relation">RELATED_TO</data>
+      <data key="weight">0.4</data>
+      <data key="description">篇章结构识别与科普文逻辑分析相关</data>
+    </edge>
+    <edge source="K18" target="K26">
+      <data key="relation">RELATED_TO</data>
+      <data key="weight">0.6</data>
+      <data key="description">被动语态与现在完成时被动语态紧密关联</data>
+    </edge>
+    <edge source="K22" target="K38">
+      <data key="relation">RELATED_TO</data>
+      <data key="weight">0.7</data>
+      <data key="description">关系代词与关系副词都是定语从句的引导词</data>
+    </edge>
+    <edge source="K22" target="K66">
+      <data key="relation">RELATED_TO</data>
+      <data key="weight">0.5</data>
+      <data key="description">定语从句与同位语从句都涉及that引导词</data>
+    </edge>
+    <edge source="K30" target="K78">
+      <data key="relation">RELATED_TO</data>
+      <data key="weight">0.6</data>
+      <data key="description">宾语从句与名词性从句综合紧密关联</data>
+    </edge>
+    <edge source="K34" target="K42">
+      <data key="relation">RELATED_TO</data>
+      <data key="weight">0.4</data>
+      <data key="description">状语从句与虚拟语气if条件句在条件表达上相关</data>
+    </edge>
+    <edge source="K35" target="K82">
+      <data key="relation">RELATED_TO</data>
+      <data key="weight">0.5</data>
+      <data key="description">修辞手法理解与修辞应用紧密关联</data>
+    </edge>
+    <edge source="K39" target="K47">
+      <data key="relation">RELATED_TO</data>
+      <data key="weight">0.5</data>
+      <data key="description">跨文化理解与文化差异比较都是文化主题阅读策略</data>
+    </edge>
+    <edge source="K42" target="K74">
+      <data key="relation">RELATED_TO</data>
+      <data key="weight">0.6</data>
+      <data key="description">if虚拟与wish/as if虚拟都是虚拟语气</data>
+    </edge>
+    <edge source="K44" target="K76">
+      <data key="relation">RELATED_TO</data>
+      <data key="weight">0.4</data>
+      <data key="description">记叙文写作与读后感写作都涉及叙事</data>
+    </edge>
+    <edge source="K51" target="K79">
+      <data key="relation">RELATED_TO</data>
+      <data key="weight">0.5</data>
+      <data key="description">科普文章理解与科普文逻辑分析紧密关联</data>
+    </edge>
+    <edge source="K52" target="K80">
+      <data key="relation">RELATED_TO</data>
+      <data key="weight">0.4</data>
+      <data key="description">科普说明文与实验报告在科技写作上相关</data>
+    </edge>
+    <edge source="K55" target="K43">
+      <data key="relation">RELATED_TO</data>
+      <data key="weight">0.4</data>
+      <data key="description">人物传记阅读与人物性格分析在人物分析上相关</data>
+    </edge>
+    <edge source="K63" target="K35">
+      <data key="relation">RELATED_TO</data>
+      <data key="weight">0.4</data>
+      <data key="description">描写性语言欣赏与修辞手法理解都涉及语言鉴赏</data>
+    </edge>
+    <edge source="K12" target="K20">
+      <data key="relation">RELATED_TO</data>
+      <data key="weight">0.5</data>
+      <data key="description">说明文写作在不同主题间相通</data>
+    </edge>
+    <edge source="K24" target="K60">
+      <data key="relation">RELATED_TO</data>
+      <data key="weight">0.3</data>
+      <data key="description">议论文与预测作文在论证结构上相关</data>
+    </edge>
+    <edge source="K38" target="K22">
+      <data key="relation">DERIVED_FROM</data>
+      <data key="weight">0.8</data>
+      <data key="description">关系副词定语从句由关系代词定语从句发展而来</data>
+    </edge>
+    <edge source="K74" target="K42">
+      <data key="relation">DERIVED_FROM</data>
+      <data key="weight">0.7</data>
+      <data key="description">虚拟语气扩展由if条件句虚拟语气延伸而来</data>
+    </edge>
+    <edge source="K78" target="K30">
+      <data key="relation">DERIVED_FROM</data>
+      <data key="weight">0.7</data>
+      <data key="description">名词性从句综合由宾语从句发展而来</data>
+    </edge>
+    <edge source="K26" target="K18">
+      <data key="relation">DERIVED_FROM</data>
+      <data key="weight">0.6</data>
+      <data key="description">现在完成时被动语态由一般被动语态发展而来</data>
+    </edge>
+    <edge source="K58" target="K6">
+      <data key="relation">DERIVED_FROM</data>
+      <data key="weight">0.6</data>
+      <data key="description">将来完成/进行时由一般将来时发展而来</data>
+    </edge>
+    <edge source="K22" target="K24">
+      <data key="relation">APPLIED_IN</data>
+      <data key="weight">0.5</data>
+      <data key="description">定语从句应用于议论文写作丰富句式</data>
+    </edge>
+    <edge source="K18" target="K16">
+      <data key="relation">APPLIED_IN</data>
+      <data key="weight">0.5</data>
+      <data key="description">被动语态应用于新闻报道写作</data>
+    </edge>
+    <edge source="K34" target="K36">
+      <data key="relation">APPLIED_IN</data>
+      <data key="weight">0.4</data>
+      <data key="description">状语从句应用于应用文写作</data>
+    </edge>
+    <edge source="K54" target="K56">
+      <data key="relation">APPLIED_IN</data>
+      <data key="weight">0.5</data>
+      <data key="description">非谓语动词应用于人物介绍文写作</data>
+    </edge>
+    <edge source="K82" target="K84">
+      <data key="relation">APPLIED_IN</data>
+      <data key="weight">0.6</data>
+      <data key="description">修辞手法应用于幽默短文写作</data>
+    </edge>
+    <edge source="K78" target="K80">
+      <data key="relation">APPLIED_IN</data>
+      <data key="weight">0.5</data>
+      <data key="description">名词性从句应用于实验报告写作</data>
+    </edge>
+    <edge source="K35" target="K63">
+      <data key="relation">APPLIED_IN</data>
+      <data key="weight">0.4</data>
+      <data key="description">修辞手法理解应用于描写性语言欣赏</data>
+    </edge>
+  </graph>
+</graphml>

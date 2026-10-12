@@ -1,0 +1,2013 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+  <key id="name" attr.name="name" attr.type="string" for="node"/>
+  <key id="type" attr.name="type" attr.type="string" for="node"/>
+  <key id="subject" attr.name="subject" attr.type="string" for="node"/>
+  <key id="module" attr.name="module" attr.type="string" for="node"/>
+  <key id="chapter" attr.name="chapter" attr.type="string" for="node"/>
+  <key id="difficulty" attr.name="difficulty" attr.type="int" for="node"/>
+  <key id="description" attr.name="description" attr.type="string" for="node"/>
+  <key id="keywords" attr.name="keywords" attr.type="string" for="node"/>
+  <key id="exam_type" attr.name="exam_type" attr.type="string" for="node"/>
+  <key id="importance" attr.name="importance" attr.type="int" for="node"/>
+  <key id="textbook_source" attr.name="textbook_source" attr.type="string" for="node"/>
+  <key id="relation" attr.name="relation" attr.type="string" for="edge"/>
+  <key id="weight" attr.name="weight" attr.type="double" for="edge"/>
+  <key id="description" attr.name="description" attr.type="string" for="edge"/>
+  <graph id="G" edgedefault="directed">
+    <node id="G_M1">
+      <data key="name">必修第一册——自然地理基础</data>
+      <data key="type">Module</data>
+      <data key="subject">地理</data>
+      <data key="description">必修第一册。阐述宇宙中的地球、大气、水、地貌、植被与土壤、自然灾害等自然地理基础。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="module">必修第一册——自然地理基础</data>
+      <data key="chapter"/>
+      <data key="textbook_source"/>
+    </node>
+    <node id="G_M2">
+      <data key="name">必修第二册——人文地理</data>
+      <data key="type">Module</data>
+      <data key="subject">地理</data>
+      <data key="description">必修第二册。阐述人口、乡村和城镇、产业区位因素、环境与发展等人文地理内容。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="module">必修第二册——人文地理</data>
+      <data key="chapter"/>
+      <data key="textbook_source"/>
+    </node>
+    <node id="G_M3">
+      <data key="name">选择性必修1 自然地理原理</data>
+      <data key="type">Module</data>
+      <data key="subject">地理</data>
+      <data key="description">选必1。阐述地球运动、地表形态塑造、大气受热与运动、洋流水体运动、自然环境的整体性与差异性。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="module">选择性必修1 自然地理原理</data>
+      <data key="chapter"/>
+      <data key="textbook_source"/>
+    </node>
+    <node id="G_M4">
+      <data key="name">选择性必修2 区域发展</data>
+      <data key="type">Module</data>
+      <data key="subject">地理</data>
+      <data key="description">选必2。阐述区域与区域发展、生态脆弱区治理、资源枯竭型城市转型、产业转移。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="module">选择性必修2 区域发展</data>
+      <data key="chapter"/>
+      <data key="textbook_source"/>
+    </node>
+    <node id="G_M5">
+      <data key="name">选择性必修3 资源、环境与国家安全</data>
+      <data key="type">Module</data>
+      <data key="subject">地理</data>
+      <data key="description">选必3。阐述资源安全、环境安全及保障国家安全的资源环境行动。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="module">选择性必修3 资源、环境与国家安全</data>
+      <data key="chapter"/>
+      <data key="textbook_source"/>
+    </node>
+    <node id="G_C1_1">
+      <data key="name">宇宙中的地球</data>
+      <data key="type">Chapter</data>
+      <data key="subject">地理</data>
+      <data key="module">必修第一册——自然地理基础</data>
+      <data key="chapter">宇宙中的地球</data>
+      <data key="description">天体系统、太阳辐射与活动、地球圈层结构、生命存在条件。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="textbook_source">必修1 第一章</data>
+    </node>
+    <node id="G_C1_2">
+      <data key="name">地球上的大气</data>
+      <data key="type">Chapter</data>
+      <data key="subject">地理</data>
+      <data key="module">必修第一册——自然地理基础</data>
+      <data key="chapter">地球上的大气</data>
+      <data key="description">大气组成与垂直分层、受热过程、热力环流与风。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="textbook_source">必修1 第二章</data>
+    </node>
+    <node id="G_C1_3">
+      <data key="name">地球上的水</data>
+      <data key="type">Chapter</data>
+      <data key="subject">地理</data>
+      <data key="module">必修第一册——自然地理基础</data>
+      <data key="chapter">地球上的水</data>
+      <data key="description">水循环、海水性质与运动。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="textbook_source">必修1 第三章</data>
+    </node>
+    <node id="G_C1_4">
+      <data key="name">地貌</data>
+      <data key="type">Chapter</data>
+      <data key="subject">地理</data>
+      <data key="module">必修第一册——自然地理基础</data>
+      <data key="chapter">地貌</data>
+      <data key="description">常见地貌类型、河流地貌发育、地貌观察与等高线。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="textbook_source">必修1 第四章</data>
+    </node>
+    <node id="G_C1_5">
+      <data key="name">植被与土壤</data>
+      <data key="type">Chapter</data>
+      <data key="subject">地理</data>
+      <data key="module">必修第一册——自然地理基础</data>
+      <data key="chapter">植被与土壤</data>
+      <data key="description">主要植被类型、土壤组成与形成、土壤剖面。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="textbook_source">必修1 第五章</data>
+    </node>
+    <node id="G_C1_6">
+      <data key="name">自然灾害</data>
+      <data key="type">Chapter</data>
+      <data key="subject">地理</data>
+      <data key="module">必修第一册——自然地理基础</data>
+      <data key="chapter">自然灾害</data>
+      <data key="description">气象灾害与地质灾害的成因、监测防御与救援。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="textbook_source">必修1 第六章</data>
+    </node>
+    <node id="G_C2_1">
+      <data key="name">人口</data>
+      <data key="type">Chapter</data>
+      <data key="subject">地理</data>
+      <data key="module">必修第二册——人文地理</data>
+      <data key="chapter">人口</data>
+      <data key="description">人口分布、迁移、数量变化与人口容量。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="textbook_source">必修2 第一章</data>
+    </node>
+    <node id="G_C2_2">
+      <data key="name">乡村和城镇</data>
+      <data key="type">Chapter</data>
+      <data key="subject">地理</data>
+      <data key="module">必修第二册——人文地理</data>
+      <data key="chapter">乡村和城镇</data>
+      <data key="description">城乡空间结构、城镇化及问题、地域文化与城乡景观。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="textbook_source">必修2 第二章</data>
+    </node>
+    <node id="G_C2_3">
+      <data key="name">产业区位因素</data>
+      <data key="type">Chapter</data>
+      <data key="subject">地理</data>
+      <data key="module">必修第二册——人文地理</data>
+      <data key="chapter">产业区位因素</data>
+      <data key="description">农业、工业、服务业区位及交通运输布局影响。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="textbook_source">必修2 第三章</data>
+    </node>
+    <node id="G_C2_4">
+      <data key="name">环境与发展</data>
+      <data key="type">Chapter</data>
+      <data key="subject">地理</data>
+      <data key="module">必修第二册——人文地理</data>
+      <data key="chapter">环境与发展</data>
+      <data key="description">主要环境问题、可持续发展、国家发展战略。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="textbook_source">必修2 第四章</data>
+    </node>
+    <node id="G_C3_1">
+      <data key="name">地球的运动</data>
+      <data key="type">Chapter</data>
+      <data key="subject">地理</data>
+      <data key="module">选择性必修1 自然地理原理</data>
+      <data key="chapter">地球的运动</data>
+      <data key="description">地球自转与公转的地理意义、黄赤交角。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="textbook_source">选必1 第一章</data>
+    </node>
+    <node id="G_C3_2">
+      <data key="name">地表形态的塑造</data>
+      <data key="type">Chapter</data>
+      <data key="subject">地理</data>
+      <data key="module">选择性必修1 自然地理原理</data>
+      <data key="chapter">地表形态的塑造</data>
+      <data key="description">内力作用、外力作用、山地形成、河流地貌。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="textbook_source">选必1 第二章</data>
+    </node>
+    <node id="G_C3_3">
+      <data key="name">大气的受热过程与运动</data>
+      <data key="type">Chapter</data>
+      <data key="subject">地理</data>
+      <data key="module">选择性必修1 自然地理原理</data>
+      <data key="chapter">大气的受热过程与运动</data>
+      <data key="description">受热过程保温、热力环流、大气环流、季风、天气系统。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="textbook_source">选必1 第三章</data>
+    </node>
+    <node id="G_C3_4">
+      <data key="name">洋流与水体运动</data>
+      <data key="type">Chapter</data>
+      <data key="subject">地理</data>
+      <data key="module">选择性必修1 自然地理原理</data>
+      <data key="chapter">洋流与水体运动</data>
+      <data key="description">水循环、洋流成因分布与影响、河流补给、水资源利用。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="textbook_source">选必1 第四章</data>
+    </node>
+    <node id="G_C3_5">
+      <data key="name">自然环境的整体性与差异性</data>
+      <data key="type">Chapter</data>
+      <data key="subject">地理</data>
+      <data key="module">选择性必修1 自然地理原理</data>
+      <data key="chapter">自然环境的整体性与差异性</data>
+      <data key="description">整体性、地域分异规律、非地带性。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="textbook_source">选必1 第五章</data>
+    </node>
+    <node id="G_C4_1">
+      <data key="name">区域与区域发展</data>
+      <data key="type">Chapter</data>
+      <data key="subject">地理</data>
+      <data key="module">选择性必修2 区域发展</data>
+      <data key="chapter">区域与区域发展</data>
+      <data key="description">区域特征类型、发展阶段与产业结构、发展条件。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="textbook_source">选必2 第一章</data>
+    </node>
+    <node id="G_C4_2">
+      <data key="name">生态脆弱区的治理</data>
+      <data key="type">Chapter</data>
+      <data key="subject">地理</data>
+      <data key="module">选择性必修2 区域发展</data>
+      <data key="chapter">生态脆弱区的治理</data>
+      <data key="description">生态脆弱区成因特征、黄土高原、荒漠化、湿地治理。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="textbook_source">选必2 第二章</data>
+    </node>
+    <node id="G_C4_3">
+      <data key="name">资源枯竭型城市转型</data>
+      <data key="type">Chapter</data>
+      <data key="subject">地理</data>
+      <data key="module">选择性必修2 区域发展</data>
+      <data key="chapter">资源枯竭型城市转型</data>
+      <data key="description">资源枯竭型城市转型发展、可持续发展对策。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="textbook_source">选必2 第三章</data>
+    </node>
+    <node id="G_C4_4">
+      <data key="name">产业转移与区域发展</data>
+      <data key="type">Chapter</data>
+      <data key="subject">地理</data>
+      <data key="module">选择性必修2 区域发展</data>
+      <data key="chapter">产业转移与区域发展</data>
+      <data key="description">产业转移影响因素、对区域影响、东亚路径。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="textbook_source">选必2 第四章</data>
+    </node>
+    <node id="G_C5_1">
+      <data key="name">资源安全</data>
+      <data key="type">Chapter</data>
+      <data key="subject">地理</data>
+      <data key="module">选择性必修3 资源、环境与国家安全</data>
+      <data key="chapter">资源安全</data>
+      <data key="description">水资源能源耕地安全、战略性矿产与粮食安全。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="textbook_source">选必3 第一、二单元</data>
+    </node>
+    <node id="G_C5_2">
+      <data key="name">环境安全</data>
+      <data key="type">Chapter</data>
+      <data key="subject">地理</data>
+      <data key="module">选择性必修3 资源、环境与国家安全</data>
+      <data key="chapter">环境安全</data>
+      <data key="description">环境污染生态破坏、全球性环境问题、污染防治。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="textbook_source">选必3 第三单元</data>
+    </node>
+    <node id="G_C5_3">
+      <data key="name">保障国家安全的资源环境行动</data>
+      <data key="type">Chapter</data>
+      <data key="subject">地理</data>
+      <data key="module">选择性必修3 资源、环境与国家安全</data>
+      <data key="chapter">保障国家安全的资源环境行动</data>
+      <data key="description">保障途径、国家战略与公众参与。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="textbook_source">选必3 第四单元</data>
+    </node>
+    <node id="G_K1_1_1">
+      <data key="name">天体与天体系统</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">地理</data>
+      <data key="module">必修第一册——自然地理基础</data>
+      <data key="chapter">宇宙中的地球</data>
+      <data key="difficulty">2</data>
+      <data key="description">宇宙中恒星、行星、星云等为天体；天体相互吸引相互绕转形成地月系、太阳系、银河系等天体系统。</data>
+      <data key="keywords">天体,恒星行星星云,天体系统,地月系太阳系银河系</data>
+      <data key="exam_type">选择题</data>
+      <data key="importance">3</data>
+      <data key="textbook_source">必修1 第一章</data>
+    </node>
+    <node id="G_K1_1_2">
+      <data key="name">太阳辐射及其影响</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">地理</data>
+      <data key="module">必修第一册——自然地理基础</data>
+      <data key="chapter">宇宙中的地球</data>
+      <data key="difficulty">3</data>
+      <data key="description">太阳辐射是地球大气运动水循环和生物活动的主要能量来源，维持地表温度。</data>
+      <data key="keywords">太阳辐射,能量来源,大气运动,水循环</data>
+      <data key="exam_type">选择题、综合题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">必修1 第一章</data>
+    </node>
+    <node id="G_K1_1_3">
+      <data key="name">太阳活动对地球的影响</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">地理</data>
+      <data key="module">必修第一册——自然地理基础</data>
+      <data key="chapter">宇宙中的地球</data>
+      <data key="difficulty">3</data>
+      <data key="description">黑子耀斑等太阳活动影响无线电短波通信、干扰磁场、产生极光，与气候有一定相关性。</data>
+      <data key="keywords">太阳活动,黑子,耀斑,无线电通信,极光</data>
+      <data key="exam_type">选择题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">必修1 第一章</data>
+    </node>
+    <node id="G_K1_1_4">
+      <data key="name">地球的圈层结构</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">地理</data>
+      <data key="module">必修第一册——自然地理基础</data>
+      <data key="chapter">宇宙中的地球</data>
+      <data key="difficulty">3</data>
+      <data key="description">内部圈层分地壳、地幔、地核（以莫霍面、古登堡面为界）；外部圈层为大气圈、水圈、生物圈。</data>
+      <data key="keywords">圈层结构,地壳地幔地核,莫霍面古登堡面,大气水生物圈</data>
+      <data key="exam_type">选择题、综合题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">必修1 第一章</data>
+    </node>
+    <node id="G_K1_1_5">
+      <data key="name">地球存在生命的条件</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">地理</data>
+      <data key="module">必修第一册——自然地理基础</data>
+      <data key="chapter">宇宙中的地球</data>
+      <data key="difficulty">3</data>
+      <data key="description">外部条件是太阳光照稳定、行星各行其道互不干扰；自身条件是适宜温度、液态水、适合呼吸的大气。</data>
+      <data key="keywords">生命条件,外部条件,自身条件,适宜温度液态水大气</data>
+      <data key="exam_type">选择题、综合题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">必修1 第一章</data>
+    </node>
+    <node id="G_K1_2_1">
+      <data key="name">大气组成与垂直分层</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">地理</data>
+      <data key="module">必修第一册——自然地理基础</data>
+      <data key="chapter">地球上的大气</data>
+      <data key="difficulty">3</data>
+      <data key="description">干洁空气、水汽、固体杂质组成大气；垂直分对流层（气温递减、对流）、平流层（升温、航空）、高层大气。</data>
+      <data key="keywords">大气组成,对流层,平流层,高层大气,气温垂直变化</data>
+      <data key="exam_type">选择题、综合题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">必修1 第二章</data>
+    </node>
+    <node id="G_K1_2_2">
+      <data key="name">大气的受热过程</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">地理</data>
+      <data key="module">必修第一册——自然地理基础</data>
+      <data key="chapter">地球上的大气</data>
+      <data key="difficulty">4</data>
+      <data key="description">太阳短波辐射经大气削弱到达地面，地面增温后以长波辐射加热大气，大气逆辐射对地面起保温作用。</data>
+      <data key="keywords">受热过程,短波辐射,长波辐射,地面辐射,大气逆辐射,保温作用</data>
+      <data key="exam_type">综合题、选择题</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">必修1 第二章</data>
+    </node>
+    <node id="G_K1_2_3">
+      <data key="name">热力环流</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">地理</data>
+      <data key="module">必修第一册——自然地理基础</data>
+      <data key="chapter">地球上的大气</data>
+      <data key="difficulty">4</data>
+      <data key="description">地面冷热不均引起大气上升下沉运动，形成同一水平面气压差异，进而形成热力环流，是大气运动最简单形式。</data>
+      <data key="keywords">热力环流,冷热不均,上升下沉,气压差异,大气运动</data>
+      <data key="exam_type">综合题、选择题</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">必修1 第二章</data>
+    </node>
+    <node id="G_K1_2_4">
+      <data key="name">大气的水平运动——风</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">地理</data>
+      <data key="module">必修第一册——自然地理基础</data>
+      <data key="chapter">地球上的大气</data>
+      <data key="difficulty">4</data>
+      <data key="description">水平气压梯度力是风形成的直接原因；高空风受气压梯度力与地转偏向力影响，近地面风还受摩擦力影响。</data>
+      <data key="keywords">风,水平气压梯度力,地转偏向力,摩擦力,风向</data>
+      <data key="exam_type">综合题、选择题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">必修1 第二章</data>
+    </node>
+    <node id="G_K1_3_1">
+      <data key="name">水循环</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">地理</data>
+      <data key="module">必修第一册——自然地理基础</data>
+      <data key="chapter">地球上的水</data>
+      <data key="difficulty">4</data>
+      <data key="description">包括蒸发、水汽输送、降水、地表径流、下渗、地下径流等环节；分海上内循环、陆地内循环、海陆间循环，意义在于维持全球水量平衡、塑造地表形态。</data>
+      <data key="keywords">水循环,环节,海陆间循环,水量平衡,塑造地表</data>
+      <data key="exam_type">综合题、选择题</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">必修1 第三章</data>
+    </node>
+    <node id="G_K1_3_2">
+      <data key="name">海水的性质</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">地理</data>
+      <data key="module">必修第一册——自然地理基础</data>
+      <data key="chapter">地球上的水</data>
+      <data key="difficulty">3</data>
+      <data key="description">海水温度随纬度升高而降低、随深度增加而降低；盐度以副热带海区最高；密度随温度降低盐度升高而增大。</data>
+      <data key="keywords">海水温度,海水盐度,海水密度,分布规律</data>
+      <data key="exam_type">选择题、综合题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">必修1 第三章</data>
+    </node>
+    <node id="G_K1_3_3">
+      <data key="name">海水的运动</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">地理</data>
+      <data key="module">必修第一册——自然地理基础</data>
+      <data key="chapter">地球上的水</data>
+      <data key="difficulty">3</data>
+      <data key="description">海水运动形式有波浪、潮汐、洋流，对航运、海岸地貌、海洋生物有重要影响。</data>
+      <data key="keywords">海水运动,波浪,潮汐,洋流</data>
+      <data key="exam_type">选择题</data>
+      <data key="importance">3</data>
+      <data key="textbook_source">必修1 第三章</data>
+    </node>
+    <node id="G_K1_4_1">
+      <data key="name">常见地貌类型</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">地理</data>
+      <data key="module">必修第一册——自然地理基础</data>
+      <data key="chapter">地貌</data>
+      <data key="difficulty">3</data>
+      <data key="description">喀斯特地貌、河流地貌、风成地貌、海岸地貌等的成因与形态特征。</data>
+      <data key="keywords">喀斯特地貌,河流地貌,风成地貌,海岸地貌</data>
+      <data key="exam_type">选择题、综合题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">必修1 第四章</data>
+    </node>
+    <node id="G_K1_4_2">
+      <data key="name">河流地貌的发育</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">地理</data>
+      <data key="module">必修第一册——自然地理基础</data>
+      <data key="chapter">地貌</data>
+      <data key="difficulty">4</data>
+      <data key="description">上游侵蚀形成V型谷，中游侧蚀拓宽河道，下游堆积形成冲积平原、三角洲。</data>
+      <data key="keywords">河流地貌,V型谷,冲积平原,三角洲,侵蚀堆积</data>
+      <data key="exam_type">综合题、选择题</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">必修1 第四章</data>
+    </node>
+    <node id="G_K1_4_3">
+      <data key="name">地貌观察与等高线</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">地理</data>
+      <data key="module">必修第一册——自然地理基础</data>
+      <data key="chapter">地貌</data>
+      <data key="difficulty">3</data>
+      <data key="description">通过等高线地形图判断山顶山脊山谷鞍部陡崖，观察地貌的坡度、走向与组合。</data>
+      <data key="keywords">等高线,山顶山脊山谷,鞍部陡崖,地貌观察</data>
+      <data key="exam_type">综合题、选择题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">必修1 第四章</data>
+    </node>
+    <node id="G_K1_5_1">
+      <data key="name">主要植被类型与环境</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">地理</data>
+      <data key="module">必修第一册——自然地理基础</data>
+      <data key="chapter">植被与土壤</data>
+      <data key="difficulty">3</data>
+      <data key="description">森林、草原、荒漠等植被类型与气候水分条件相适应，植被是自然环境的一面镜子。</data>
+      <data key="keywords">植被,森林草原荒漠,气候水分,自然环境镜子</data>
+      <data key="exam_type">选择题、综合题</data>
+      <data key="importance">3</data>
+      <data key="textbook_source">必修1 第五章</data>
+    </node>
+    <node id="G_K1_5_2">
+      <data key="name">土壤的组成与形成因素</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">地理</data>
+      <data key="module">必修第一册——自然地理基础</data>
+      <data key="chapter">植被与土壤</data>
+      <data key="difficulty">4</data>
+      <data key="description">土壤由矿物质、有机质、水分、空气组成；成土母质、气候、生物、地形、时间是其形成因素。</data>
+      <data key="keywords">土壤组成,矿物质有机质,成土母质,成土因素</data>
+      <data key="exam_type">选择题、综合题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">必修1 第五章</data>
+    </node>
+    <node id="G_K1_5_3">
+      <data key="name">土壤剖面与质地</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">地理</data>
+      <data key="module">必修第一册——自然地理基础</data>
+      <data key="chapter">植被与土壤</data>
+      <data key="difficulty">2</data>
+      <data key="description">自然土壤剖面分枯枝落叶层、腐殖质层、淋溶层、淀积层、母质层；土壤质地分砂土、壤土、黏土。</data>
+      <data key="keywords">土壤剖面,腐殖质层,淋溶淀积,土壤质地,砂土壤土黏土</data>
+      <data key="exam_type">选择题</data>
+      <data key="importance">3</data>
+      <data key="textbook_source">必修1 第五章</data>
+    </node>
+    <node id="G_K1_6_1">
+      <data key="name">气象灾害</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">地理</data>
+      <data key="module">必修第一册——自然地理基础</data>
+      <data key="chapter">自然灾害</data>
+      <data key="difficulty">4</data>
+      <data key="description">洪涝、干旱、台风、寒潮等气象灾害的成因、时空分布与危害。</data>
+      <data key="keywords">气象灾害,洪涝干旱台风寒潮,成因分布危害</data>
+      <data key="exam_type">综合题、选择题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">必修1 第六章</data>
+    </node>
+    <node id="G_K1_6_2">
+      <data key="name">地质灾害</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">地理</data>
+      <data key="module">必修第一册——自然地理基础</data>
+      <data key="chapter">自然灾害</data>
+      <data key="difficulty">4</data>
+      <data key="description">地震、滑坡、泥石流等地质灾害的成因、分布与危害，常与气象灾害链发。</data>
+      <data key="keywords">地质灾害,地震滑坡泥石流,成因分布,灾害链</data>
+      <data key="exam_type">综合题、选择题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">必修1 第六章</data>
+    </node>
+    <node id="G_K1_6_3">
+      <data key="name">灾害监测防御与救援</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">地理</data>
+      <data key="module">必修第一册——自然地理基础</data>
+      <data key="chapter">自然灾害</data>
+      <data key="difficulty">2</data>
+      <data key="description">通过遥感等监测手段、工程与非工程防御措施及灾后救援减轻灾害损失。</data>
+      <data key="keywords">灾害监测,遥感,防御措施,灾后救援</data>
+      <data key="exam_type">选择题、简答题</data>
+      <data key="importance">3</data>
+      <data key="textbook_source">必修1 第六章</data>
+    </node>
+    <node id="G_K2_1_1">
+      <data key="name">人口分布的影响因素</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">地理</data>
+      <data key="module">必修第二册——人文地理</data>
+      <data key="chapter">人口</data>
+      <data key="difficulty">3</data>
+      <data key="description">自然因素（气候、地形、水源、土壤）和社会经济因素（经济、交通、历史）共同影响人口分布。</data>
+      <data key="keywords">人口分布,自然因素,社会经济因素</data>
+      <data key="exam_type">选择题、综合题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">必修2 第一章</data>
+    </node>
+    <node id="G_K2_1_2">
+      <data key="name">人口迁移及其影响因素</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">地理</data>
+      <data key="module">必修第二册——人文地理</data>
+      <data key="chapter">人口</data>
+      <data key="difficulty">4</data>
+      <data key="description">人口迁移受推力（经济落后、灾害、战争）和拉力（经济发达、资源、政策）影响。</data>
+      <data key="keywords">人口迁移,推力拉力,影响因素</data>
+      <data key="exam_type">综合题、选择题</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">必修2 第一章</data>
+    </node>
+    <node id="G_K2_1_3">
+      <data key="name">人口数量变化</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">地理</data>
+      <data key="module">必修第二册——人文地理</data>
+      <data key="chapter">人口</data>
+      <data key="difficulty">3</data>
+      <data key="description">人口数量变化由自然增长（出生率减死亡率）和机械增长（迁移）决定；人口增长模式分原始、传统、现代型。</data>
+      <data key="keywords">人口数量变化,自然增长,机械增长,人口增长模式</data>
+      <data key="exam_type">选择题、综合题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">必修2 第一章</data>
+    </node>
+    <node id="G_K2_1_4">
+      <data key="name">人口容量</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">地理</data>
+      <data key="module">必修第二册——人文地理</data>
+      <data key="chapter">人口</data>
+      <data key="difficulty">4</data>
+      <data key="description">环境承载力决定环境人口容量，合理人口容量是使人类活动与环境协调的最适宜人口数。</data>
+      <data key="keywords">人口容量,环境承载力,合理人口容量</data>
+      <data key="exam_type">综合题、选择题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">必修2 第一章</data>
+    </node>
+    <node id="G_K2_2_1">
+      <data key="name">城乡空间结构</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">地理</data>
+      <data key="module">必修第二册——人文地理</data>
+      <data key="chapter">乡村和城镇</data>
+      <data key="difficulty">4</data>
+      <data key="description">城镇分住宅区、商业区、工业区等功能区，受地租、交通通达度、知名度等因素影响分布。</data>
+      <data key="keywords">城乡空间结构,住宅区商业区工业区,地租,功能分区</data>
+      <data key="exam_type">综合题、选择题</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">必修2 第二章</data>
+    </node>
+    <node id="G_K2_2_2">
+      <data key="name">城镇化及问题</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">地理</data>
+      <data key="module">必修第二册——人文地理</data>
+      <data key="chapter">乡村和城镇</data>
+      <data key="difficulty">4</data>
+      <data key="description">城镇化是人口向城镇集聚和乡村变城镇的过程；带来环境污染、交通拥挤、住房紧张等问题。</data>
+      <data key="keywords">城镇化,人口集聚,环境污染,交通拥挤,城市化问题</data>
+      <data key="exam_type">综合题、选择题</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">必修2 第二章</data>
+    </node>
+    <node id="G_K2_2_3">
+      <data key="name">地域文化与城乡景观</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">地理</data>
+      <data key="module">必修第二册——人文地理</data>
+      <data key="chapter">乡村和城镇</data>
+      <data key="difficulty">2</data>
+      <data key="description">地域文化影响建筑风格、空间布局，形成各具特色的城乡景观。</data>
+      <data key="keywords">地域文化,建筑风格,城乡景观</data>
+      <data key="exam_type">选择题</data>
+      <data key="importance">3</data>
+      <data key="textbook_source">必修2 第二章</data>
+    </node>
+    <node id="G_K2_3_1">
+      <data key="name">农业区位因素</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">地理</data>
+      <data key="module">必修第二册——人文地理</data>
+      <data key="chapter">产业区位因素</data>
+      <data key="difficulty">4</data>
+      <data key="description">自然因素（气候、地形、水源、土壤）和社会经济因素（市场、交通、劳动力、政策、技术）影响农业生产。</data>
+      <data key="keywords">农业区位,自然因素,社会经济因素,农业地域类型</data>
+      <data key="exam_type">综合题、选择题</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">必修2 第三章</data>
+    </node>
+    <node id="G_K2_3_2">
+      <data key="name">工业区位因素</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">地理</data>
+      <data key="module">必修第二册——人文地理</data>
+      <data key="chapter">产业区位因素</data>
+      <data key="difficulty">4</data>
+      <data key="description">原料、动力、劳动力、市场、交通、土地、水源、政策等影响工业区位选择，主导因素决定工业类型。</data>
+      <data key="keywords">工业区位,原料动力,市场交通,主导因素,工业地域</data>
+      <data key="exam_type">综合题、选择题</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">必修2 第三章</data>
+    </node>
+    <node id="G_K2_3_3">
+      <data key="name">服务业区位因素</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">地理</data>
+      <data key="module">必修第二册——人文地理</data>
+      <data key="chapter">产业区位因素</data>
+      <data key="difficulty">3</data>
+      <data key="description">服务业区位主要受市场、交通、劳动力、集聚等因素影响，商业中心趋向人口密集交通便捷处。</data>
+      <data key="keywords">服务业区位,市场交通,集聚,商业中心</data>
+      <data key="exam_type">选择题、综合题</data>
+      <data key="importance">3</data>
+      <data key="textbook_source">必修2 第三章</data>
+    </node>
+    <node id="G_K2_3_4">
+      <data key="name">交通运输布局的影响</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">地理</data>
+      <data key="module">必修第二册——人文地理</data>
+      <data key="chapter">产业区位因素</data>
+      <data key="difficulty">3</data>
+      <data key="description">交通运输方式和布局变化影响聚落空间形态、商业网点分布和区域经济发展。</data>
+      <data key="keywords">交通运输,布局,聚落形态,商业网点,区域发展</data>
+      <data key="exam_type">综合题、选择题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">必修2 第三章</data>
+    </node>
+    <node id="G_K2_4_1">
+      <data key="name">主要环境问题</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">地理</data>
+      <data key="module">必修第二册——人文地理</data>
+      <data key="chapter">环境与发展</data>
+      <data key="difficulty">3</data>
+      <data key="description">资源短缺、环境污染、生态破坏等环境问题威胁人类生存发展。</data>
+      <data key="keywords">环境问题,资源短缺,环境污染,生态破坏</data>
+      <data key="exam_type">选择题、综合题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">必修2 第四章</data>
+    </node>
+    <node id="G_K2_4_2">
+      <data key="name">可持续发展</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">地理</data>
+      <data key="module">必修第二册——人文地理</data>
+      <data key="chapter">环境与发展</data>
+      <data key="difficulty">4</data>
+      <data key="description">既满足当代人需求又不损害后代人满足其需求能力的发展，核心是实现人地协调，遵循公平性持续性共同性原则。</data>
+      <data key="keywords">可持续发展,人地协调,公平性持续性共同性</data>
+      <data key="exam_type">综合题、选择题</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">必修2 第四章</data>
+    </node>
+    <node id="G_K2_4_3">
+      <data key="name">国家发展战略</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">地理</data>
+      <data key="module">必修第二册——人文地理</data>
+      <data key="chapter">环境与发展</data>
+      <data key="difficulty">3</data>
+      <data key="description">如长江经济带、京津冀协同、乡村振兴、西部大开发等体现区域协调与可持续发展。</data>
+      <data key="keywords">国家战略,长江经济带,乡村振兴,区域协调</data>
+      <data key="exam_type">综合题、选择题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">必修2 第四章</data>
+    </node>
+    <node id="G_K3_1_1">
+      <data key="name">地球自转的地理意义</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">地理</data>
+      <data key="module">选择性必修1 自然地理原理</data>
+      <data key="chapter">地球的运动</data>
+      <data key="difficulty">4</data>
+      <data key="description">地球自转产生昼夜交替、地方时差异、沿地表水平运动物体的地转偏向现象。</data>
+      <data key="keywords">地球自转,昼夜交替,地方时,地转偏向力</data>
+      <data key="exam_type">综合题、选择题</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">选必1 第一章</data>
+    </node>
+    <node id="G_K3_1_2">
+      <data key="name">地球公转的地理意义</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">地理</data>
+      <data key="module">选择性必修1 自然地理原理</data>
+      <data key="chapter">地球的运动</data>
+      <data key="difficulty">5</data>
+      <data key="description">地球公转导致昼夜长短变化、正午太阳高度变化、四季更替和五带划分。</data>
+      <data key="keywords">地球公转,昼夜长短,正午太阳高度,四季五带</data>
+      <data key="exam_type">综合题、选择题</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">选必1 第一章</data>
+    </node>
+    <node id="G_K3_1_3">
+      <data key="name">黄赤交角与直射点回归运动</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">地理</data>
+      <data key="module">选择性必修1 自然地理原理</data>
+      <data key="chapter">地球的运动</data>
+      <data key="difficulty">4</data>
+      <data key="description">黄赤交角存在使太阳直射点在南北回归线之间往返运动，是四季更替根本原因。</data>
+      <data key="keywords">黄赤交角,太阳直射点,回归运动,四季更替</data>
+      <data key="exam_type">综合题、选择题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">选必1 第一章</data>
+    </node>
+    <node id="G_K3_2_1">
+      <data key="name">内力作用与板块构造</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">地理</data>
+      <data key="module">选择性必修1 自然地理原理</data>
+      <data key="chapter">地表形态的塑造</data>
+      <data key="difficulty">4</data>
+      <data key="description">内力作用包括地壳运动、岩浆活动、变质作用；板块构造学说解释海陆分布和山脉海沟形成。</data>
+      <data key="keywords">内力作用,地壳运动,岩浆活动,板块构造,海陆形成</data>
+      <data key="exam_type">综合题、选择题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">选必1 第二章</data>
+    </node>
+    <node id="G_K3_2_2">
+      <data key="name">外力作用与地表形态</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">地理</data>
+      <data key="module">选择性必修1 自然地理原理</data>
+      <data key="chapter">地表形态的塑造</data>
+      <data key="difficulty">4</data>
+      <data key="description">外力作用通过风化、侵蚀、搬运、堆积塑造地表，形成各种侵蚀堆积地貌。</data>
+      <data key="keywords">外力作用,风化侵蚀搬运堆积,地表形态,侵蚀堆积地貌</data>
+      <data key="exam_type">综合题、选择题</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">选必1 第二章</data>
+    </node>
+    <node id="G_K3_2_3">
+      <data key="name">山地的形成</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">地理</data>
+      <data key="module">选择性必修1 自然地理原理</data>
+      <data key="chapter">地表形态的塑造</data>
+      <data key="difficulty">3</data>
+      <data key="description">褶皱山、断块山、火山等的形成机制与地貌特征，背斜向斜的构造意义。</data>
+      <data key="keywords">褶皱山,断块山,火山,背斜向斜</data>
+      <data key="exam_type">选择题、综合题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">选必1 第二章</data>
+    </node>
+    <node id="G_K3_2_4">
+      <data key="name">河流侵蚀与堆积地貌</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">地理</data>
+      <data key="module">选择性必修1 自然地理原理</data>
+      <data key="chapter">地表形态的塑造</data>
+      <data key="difficulty">4</data>
+      <data key="description">河流侵蚀形成V型谷、峡谷，堆积形成冲积扇、冲积平原、三角洲、河漫滩平原。</data>
+      <data key="keywords">河流地貌,V型谷,冲积扇,冲积平原,三角洲</data>
+      <data key="exam_type">综合题、选择题</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">选必1 第二章</data>
+    </node>
+    <node id="G_K3_3_1">
+      <data key="name">大气受热过程与保温作用</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">地理</data>
+      <data key="module">选择性必修1 自然地理原理</data>
+      <data key="chapter">大气的受热过程与运动</data>
+      <data key="difficulty">4</data>
+      <data key="description">太阳辐射、地面辐射、大气辐射、大气逆辐射的能量传递过程，大气逆辐射起保温作用。</data>
+      <data key="keywords">受热过程,地面辐射,大气逆辐射,保温作用,温室效应</data>
+      <data key="exam_type">综合题、选择题</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">选必1 第三章</data>
+    </node>
+    <node id="G_K3_3_2">
+      <data key="name">大气热力环流与风</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">地理</data>
+      <data key="module">选择性必修1 自然地理原理</data>
+      <data key="chapter">大气的受热过程与运动</data>
+      <data key="difficulty">3</data>
+      <data key="description">热力环流原理及海陆风、山谷风、城市风的形成；近地面与高空风向受力差异。</data>
+      <data key="keywords">热力环流,海陆风,山谷风,城市风,风向</data>
+      <data key="exam_type">综合题、选择题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">选必1 第三章</data>
+    </node>
+    <node id="G_K3_3_3">
+      <data key="name">三圈环流与气压带风带</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">地理</data>
+      <data key="module">选择性必修1 自然地理原理</data>
+      <data key="chapter">大气的受热过程与运动</data>
+      <data key="difficulty">5</data>
+      <data key="description">全球形成七个气压带六个风带，气压带风带随太阳直射点移动而季节移动，是气候形成重要因素。</data>
+      <data key="keywords">三圈环流,气压带风带,季节移动,气候形成</data>
+      <data key="exam_type">综合题、选择题</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">选必1 第三章</data>
+    </node>
+    <node id="G_K3_3_4">
+      <data key="name">季风环流</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">地理</data>
+      <data key="module">选择性必修1 自然地理原理</data>
+      <data key="chapter">大气的受热过程与运动</data>
+      <data key="difficulty">4</data>
+      <data key="description">东亚季风（海陆热力性质差异）冬干夏雨；南亚季风（海陆差异与气压带风带移动）形成热带季风气候。</data>
+      <data key="keywords">季风环流,东亚季风,南亚季风,海陆热力差异,热带季风</data>
+      <data key="exam_type">综合题、选择题</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">选必1 第三章</data>
+    </node>
+    <node id="G_K3_3_5">
+      <data key="name">常见天气系统</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">地理</data>
+      <data key="module">选择性必修1 自然地理原理</data>
+      <data key="chapter">大气的受热过程与运动</data>
+      <data key="difficulty">5</data>
+      <data key="description">锋面系统（冷锋、暖锋、准静止锋）与气旋反气旋，决定天气变化与降水分布。</data>
+      <data key="keywords">锋面系统,冷锋暖锋准静止锋,气旋反气旋,天气变化</data>
+      <data key="exam_type">综合题、选择题</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">选必1 第三章</data>
+    </node>
+    <node id="G_K3_4_1">
+      <data key="name">水循环的类型与意义</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">地理</data>
+      <data key="module">选择性必修1 自然地理原理</data>
+      <data key="chapter">洋流与水体运动</data>
+      <data key="difficulty">4</data>
+      <data key="description">水循环联系水圈大气圈岩石圈生物圈，促进水体更新、能量交换和物质迁移。</data>
+      <data key="keywords">水循环,海陆间循环,陆地内循环,海上内循环,物质能量交换</data>
+      <data key="exam_type">综合题、选择题</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">选必1 第四章</data>
+    </node>
+    <node id="G_K3_4_2">
+      <data key="name">洋流的成因与分布规律</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">地理</data>
+      <data key="module">选择性必修1 自然地理原理</data>
+      <data key="chapter">洋流与水体运动</data>
+      <data key="difficulty">5</data>
+      <data key="description">洋流按成因分风海流、密度流、补偿流；副热带与副极地环流分布规律，中低纬顺时针中高纬逆时针（北半球）。</data>
+      <data key="keywords">洋流,风海流密度流补偿流,副热带环流,副极地环流,分布规律</data>
+      <data key="exam_type">综合题、选择题</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">选必1 第四章</data>
+    </node>
+    <node id="G_K3_4_3">
+      <data key="name">洋流对地理环境的影响</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">地理</data>
+      <data key="module">选择性必修1 自然地理原理</data>
+      <data key="chapter">洋流与水体运动</data>
+      <data key="difficulty">4</data>
+      <data key="description">洋流影响气候（暖流增温增湿寒流降温减湿）、形成渔场、影响航海和海洋污染净化。</data>
+      <data key="keywords">洋流影响,气候,渔场,航海,海洋污染</data>
+      <data key="exam_type">综合题、选择题</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">选必1 第四章</data>
+    </node>
+    <node id="G_K3_4_4">
+      <data key="name">河流补给与径流变化</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">地理</data>
+      <data key="module">选择性必修1 自然地理原理</data>
+      <data key="chapter">洋流与水体运动</data>
+      <data key="difficulty">3</data>
+      <data key="description">河流补给类型有大气降水、冰雪融水、地下水、湖泊水，影响径流季节变化与年际变化。</data>
+      <data key="keywords">河流补给,降水补给,冰雪融水,径流变化</data>
+      <data key="exam_type">综合题、选择题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">选必1 第四章</data>
+    </node>
+    <node id="G_K3_4_5">
+      <data key="name">水资源的合理利用</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">地理</data>
+      <data key="module">选择性必修1 自然地理原理</data>
+      <data key="chapter">洋流与水体运动</data>
+      <data key="difficulty">3</data>
+      <data key="description">通过跨流域调水、修建水库、节水技术等缓解水资源短缺，实现水资源可持续利用。</data>
+      <data key="keywords">水资源,跨流域调水,水库,节水,可持续利用</data>
+      <data key="exam_type">综合题、选择题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">选必1 第四章</data>
+    </node>
+    <node id="G_K3_5_1">
+      <data key="name">自然环境的整体性</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">地理</data>
+      <data key="module">选择性必修1 自然地理原理</data>
+      <data key="chapter">自然环境的整体性与差异性</data>
+      <data key="difficulty">4</data>
+      <data key="description">地理环境各要素通过水循环、生物循环、岩石圈物质循环进行物质能量交换，一要素变化牵动整体。</data>
+      <data key="keywords">整体性,要素,物质能量交换,牵一发而动全身</data>
+      <data key="exam_type">综合题、选择题</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">选必1 第五章</data>
+    </node>
+    <node id="G_K3_5_2">
+      <data key="name">地域分异规律</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">地理</data>
+      <data key="module">选择性必修1 自然地理原理</data>
+      <data key="chapter">自然环境的整体性与差异性</data>
+      <data key="difficulty">5</data>
+      <data key="description">由赤道到两极、由沿海到内陆、山地垂直地域分异规律的形成基础与分布特点。</data>
+      <data key="keywords">地域分异,纬度地带性,经度地带性,垂直地域分异</data>
+      <data key="exam_type">综合题、选择题</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">选必1 第五章</data>
+    </node>
+    <node id="G_K3_5_3">
+      <data key="name">非地带性分异现象</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">地理</data>
+      <data key="module">选择性必修1 自然地理原理</data>
+      <data key="chapter">自然环境的整体性与差异性</data>
+      <data key="difficulty">3</data>
+      <data key="description">受海陆分布、地形起伏、洋流等影响出现非地带性现象，如绿洲、荒漠中的绿洲。</data>
+      <data key="keywords">非地带性,海陆分布,地形起伏,洋流</data>
+      <data key="exam_type">选择题、综合题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">选必1 第五章</data>
+    </node>
+    <node id="G_K4_1_1">
+      <data key="name">区域的特征与类型</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">地理</data>
+      <data key="module">选择性必修2 区域发展</data>
+      <data key="chapter">区域与区域发展</data>
+      <data key="difficulty">3</data>
+      <data key="description">区域具有一定面积形状范围界线，具有整体性差异性和开放性，分均质区功能区。</data>
+      <data key="keywords">区域,整体性差异性开放性,均质区功能区</data>
+      <data key="exam_type">选择题</data>
+      <data key="importance">3</data>
+      <data key="textbook_source">选必2 第一章</data>
+    </node>
+    <node id="G_K4_1_2">
+      <data key="name">区域发展阶段与产业结构</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">地理</data>
+      <data key="module">选择性必修2 区域发展</data>
+      <data key="chapter">区域与区域发展</data>
+      <data key="difficulty">3</data>
+      <data key="description">区域经历初期、成长、转型、衰退等阶段，产业结构由第一产业向二三产业演进。</data>
+      <data key="keywords">区域发展阶段,初期成长转型,产业结构演进</data>
+      <data key="exam_type">综合题、选择题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">选必2 第一章</data>
+    </node>
+    <node id="G_K4_1_3">
+      <data key="name">区域发展的优势与限制因素</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">地理</data>
+      <data key="module">选择性必修2 区域发展</data>
+      <data key="chapter">区域与区域发展</data>
+      <data key="difficulty">2</data>
+      <data key="description">区位条件、资源禀赋是优势，生态环境脆弱、基础设施薄弱等是限制因素。</data>
+      <data key="keywords">区域发展,区位条件,资源禀赋,优势与限制</data>
+      <data key="exam_type">选择题、综合题</data>
+      <data key="importance">3</data>
+      <data key="textbook_source">选必2 第一章</data>
+    </node>
+    <node id="G_K4_2_1">
+      <data key="name">生态脆弱区的成因与特征</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">地理</data>
+      <data key="module">选择性必修2 区域发展</data>
+      <data key="chapter">生态脆弱区的治理</data>
+      <data key="difficulty">3</data>
+      <data key="description">生态脆弱区生态环境抗干扰能力弱，自然条件恶劣与人类不合理活动叠加易退化。</data>
+      <data key="keywords">生态脆弱区,抗干扰能力弱,生态退化,自然与人为叠加</data>
+      <data key="exam_type">选择题、综合题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">选必2 第二章</data>
+    </node>
+    <node id="G_K4_2_2">
+      <data key="name">黄土高原水土流失治理</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">地理</data>
+      <data key="module">选择性必修2 区域发展</data>
+      <data key="chapter">生态脆弱区的治理</data>
+      <data key="difficulty">4</data>
+      <data key="description">黄土高原水土流失由土质疏松、降水集中、植被破坏导致，通过工程（打坝淤地）、生物（植树种草）、农业技术措施综合治理。</data>
+      <data key="keywords">黄土高原,水土流失,打坝淤地,植树种草,综合治理</data>
+      <data key="exam_type">综合题、选择题</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">选必2 第二章</data>
+    </node>
+    <node id="G_K4_2_3">
+      <data key="name">荒漠化的治理</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">地理</data>
+      <data key="module">选择性必修2 区域发展</data>
+      <data key="chapter">生态脆弱区的治理</data>
+      <data key="difficulty">4</data>
+      <data key="description">西北地区荒漠化由气候干旱、过度放牧开垦引起，通过合理利用水资源、设置沙障、恢复植被治理。</data>
+      <data key="keywords">荒漠化,西北地区,过度放牧开垦,沙障,恢复植被</data>
+      <data key="exam_type">综合题、选择题</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">选必2 第二章</data>
+    </node>
+    <node id="G_K4_2_4">
+      <data key="name">湿地的开发与保护</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">地理</data>
+      <data key="module">选择性必修2 区域发展</data>
+      <data key="chapter">生态脆弱区的治理</data>
+      <data key="difficulty">3</data>
+      <data key="description">湿地具有蓄洪防旱、调节气候、净化水质等功能，围垦污染导致退化，需退田还湿保护。</data>
+      <data key="keywords">湿地,蓄洪防旱,调节气候,退化,退田还湿</data>
+      <data key="exam_type">综合题、选择题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">选必2 第二章</data>
+    </node>
+    <node id="G_K4_3_1">
+      <data key="name">资源枯竭型城市转型</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">地理</data>
+      <data key="module">选择性必修2 区域发展</data>
+      <data key="chapter">资源枯竭型城市转型</data>
+      <data key="difficulty">3</data>
+      <data key="description">以大庆（石油）、阜新（煤炭）为例，资源枯竭后通过培育新产业、发展接续产业实现转型。</data>
+      <data key="keywords">资源枯竭型城市,大庆,阜新,接续产业,转型</data>
+      <data key="exam_type">综合题、选择题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">选必2 第三章</data>
+    </node>
+    <node id="G_K4_3_2">
+      <data key="name">资源型城市可持续发展对策</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">地理</data>
+      <data key="module">选择性必修2 区域发展</data>
+      <data key="chapter">资源枯竭型城市转型</data>
+      <data key="difficulty">2</data>
+      <data key="description">通过产业结构调整、生态修复、发展多元经济延长产业链实现可持续发展。</data>
+      <data key="keywords">资源型城市,产业结构调整,生态修复,延长产业链,可持续发展</data>
+      <data key="exam_type">综合题、选择题</data>
+      <data key="importance">3</data>
+      <data key="textbook_source">选必2 第三章</data>
+    </node>
+    <node id="G_K4_4_1">
+      <data key="name">产业转移的影响因素</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">地理</data>
+      <data key="module">选择性必修2 区域发展</data>
+      <data key="chapter">产业转移与区域发展</data>
+      <data key="difficulty">4</data>
+      <data key="description">劳动力成本、内部交易成本、市场、地价、政策等影响产业转移方向与规模。</data>
+      <data key="keywords">产业转移,劳动力成本,内部交易成本,市场,地价政策</data>
+      <data key="exam_type">综合题、选择题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">选必2 第四章</data>
+    </node>
+    <node id="G_K4_4_2">
+      <data key="name">产业转移对区域发展的影响</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">地理</data>
+      <data key="module">选择性必修2 区域发展</data>
+      <data key="chapter">产业转移与区域发展</data>
+      <data key="difficulty">4</data>
+      <data key="description">对迁出区促进产业升级但可能就业减少，对迁入区促进经济但带来环境压力。</data>
+      <data key="keywords">产业转移影响,产业升级,就业,环境压力,区域发展</data>
+      <data key="exam_type">综合题、选择题</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">选必2 第四章</data>
+    </node>
+    <node id="G_K4_4_3">
+      <data key="name">东亚产业转移路径</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">地理</data>
+      <data key="module">选择性必修2 区域发展</data>
+      <data key="chapter">产业转移与区域发展</data>
+      <data key="difficulty">3</data>
+      <data key="description">东亚产业由日韩向中国东南沿海再向东南亚转移，体现比较优势变化。</data>
+      <data key="keywords">东亚产业转移,日韩,中国东南沿海,东南亚,比较优势</data>
+      <data key="exam_type">选择题、综合题</data>
+      <data key="importance">3</data>
+      <data key="textbook_source">选必2 第四章</data>
+    </node>
+    <node id="G_K5_1_1">
+      <data key="name">资源安全问题</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">地理</data>
+      <data key="module">选择性必修3 资源、环境与国家安全</data>
+      <data key="chapter">资源安全</data>
+      <data key="difficulty">3</data>
+      <data key="description">水资源、能源、耕地等资源因供给不足或破坏威胁国家安全与社会稳定。</data>
+      <data key="keywords">资源安全,水资源,能源,耕地安全</data>
+      <data key="exam_type">选择题、综合题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">选必3 第一单元</data>
+    </node>
+    <node id="G_K5_1_2">
+      <data key="name">战略性矿产与能源安全</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">地理</data>
+      <data key="module">选择性必修3 资源、环境与国家安全</data>
+      <data key="chapter">资源安全</data>
+      <data key="difficulty">3</data>
+      <data key="description">石油天然气等战略性矿产对外依存度高影响国家能源安全，需多元化进口与储备。</data>
+      <data key="keywords">战略性矿产,石油天然气,对外依存,能源安全,战略储备</data>
+      <data key="exam_type">综合题、选择题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">选必3 第二单元</data>
+    </node>
+    <node id="G_K5_1_3">
+      <data key="name">耕地安全与粮食安全</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">地理</data>
+      <data key="module">选择性必修3 资源、环境与国家安全</data>
+      <data key="chapter">资源安全</data>
+      <data key="difficulty">3</data>
+      <data key="description">严守18亿亩耕地红线，保障耕地数量质量，是粮食安全的基础。</data>
+      <data key="keywords">耕地安全,耕地红线,粮食安全,18亿亩</data>
+      <data key="exam_type">综合题、选择题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">选必3 第二单元</data>
+    </node>
+    <node id="G_K5_2_1">
+      <data key="name">环境安全问题</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">地理</data>
+      <data key="module">选择性必修3 资源、环境与国家安全</data>
+      <data key="chapter">环境安全</data>
+      <data key="difficulty">3</data>
+      <data key="description">环境污染和生态破坏威胁人类健康和生态系统稳定，影响国家安全。</data>
+      <data key="keywords">环境安全,环境污染,生态破坏,国家安全</data>
+      <data key="exam_type">选择题、综合题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">选必3 第三单元</data>
+    </node>
+    <node id="G_K5_2_2">
+      <data key="name">全球性环境问题</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">地理</data>
+      <data key="module">选择性必修3 资源、环境与国家安全</data>
+      <data key="chapter">环境安全</data>
+      <data key="difficulty">4</data>
+      <data key="description">全球气候变暖、臭氧层破坏、酸雨、生物多样性减少等需全球共同应对。</data>
+      <data key="keywords">全球环境问题,气候变暖,臭氧层破坏,酸雨,生物多样性</data>
+      <data key="exam_type">综合题、选择题</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">选必3 第三单元</data>
+    </node>
+    <node id="G_K5_2_3">
+      <data key="name">环境污染的防治</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">地理</data>
+      <data key="module">选择性必修3 资源、环境与国家安全</data>
+      <data key="chapter">环境安全</data>
+      <data key="difficulty">3</data>
+      <data key="description">通过清洁生产、循环经济、末端治理等方式减少污染物排放。</data>
+      <data key="keywords">污染防治,清洁生产,循环经济,末端治理</data>
+      <data key="exam_type">选择题、综合题</data>
+      <data key="importance">3</data>
+      <data key="textbook_source">选必3 第三单元</data>
+    </node>
+    <node id="G_K5_3_1">
+      <data key="name">保障资源环境安全的途径</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">地理</data>
+      <data key="module">选择性必修3 资源、环境与国家安全</data>
+      <data key="chapter">保障国家安全的资源环境行动</data>
+      <data key="difficulty">3</data>
+      <data key="description">通过开源节流、保护修复、国际合作等途径保障国家资源环境安全。</data>
+      <data key="keywords">资源环境安全,开源节流,保护修复,国际合作</data>
+      <data key="exam_type">综合题、选择题</data>
+      <data key="importance">3</data>
+      <data key="textbook_source">选必3 第四单元</data>
+    </node>
+    <node id="G_K5_3_2">
+      <data key="name">国家战略与资源环境安全</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">地理</data>
+      <data key="module">选择性必修3 资源、环境与国家安全</data>
+      <data key="chapter">保障国家安全的资源环境行动</data>
+      <data key="difficulty">3</data>
+      <data key="description">生态保护红线、主体功能区规划、海洋权益维护等保障国家安全的战略举措。</data>
+      <data key="keywords">国家战略,生态保护红线,主体功能区,海洋权益</data>
+      <data key="exam_type">综合题、选择题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">选必3 第四单元</data>
+    </node>
+    <node id="G_K5_3_3">
+      <data key="name">公众参与与可持续发展</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">地理</data>
+      <data key="module">选择性必修3 资源、环境与国家安全</data>
+      <data key="chapter">保障国家安全的资源环境行动</data>
+      <data key="difficulty">2</data>
+      <data key="description">公众通过绿色消费、垃圾分类、环保监督等方式参与资源环境保护。</data>
+      <data key="keywords">公众参与,绿色消费,垃圾分类,环保监督,可持续发展</data>
+      <data key="exam_type">选择题、简答题</data>
+      <data key="importance">3</data>
+      <data key="textbook_source">选必3 第四单元</data>
+    </node>
+    <edge source="G_M1" target="G_C1_1">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">模块【必修第一册——自然地理基础】包含章节【宇宙中的地球】</data>
+    </edge>
+    <edge source="G_M1" target="G_C1_2">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">模块【必修第一册——自然地理基础】包含章节【地球上的大气】</data>
+    </edge>
+    <edge source="G_M1" target="G_C1_3">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">模块【必修第一册——自然地理基础】包含章节【地球上的水】</data>
+    </edge>
+    <edge source="G_M1" target="G_C1_4">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">模块【必修第一册——自然地理基础】包含章节【地貌】</data>
+    </edge>
+    <edge source="G_M1" target="G_C1_5">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">模块【必修第一册——自然地理基础】包含章节【植被与土壤】</data>
+    </edge>
+    <edge source="G_M1" target="G_C1_6">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">模块【必修第一册——自然地理基础】包含章节【自然灾害】</data>
+    </edge>
+    <edge source="G_M2" target="G_C2_1">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">模块【必修第二册——人文地理】包含章节【人口】</data>
+    </edge>
+    <edge source="G_M2" target="G_C2_2">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">模块【必修第二册——人文地理】包含章节【乡村和城镇】</data>
+    </edge>
+    <edge source="G_M2" target="G_C2_3">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">模块【必修第二册——人文地理】包含章节【产业区位因素】</data>
+    </edge>
+    <edge source="G_M2" target="G_C2_4">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">模块【必修第二册——人文地理】包含章节【环境与发展】</data>
+    </edge>
+    <edge source="G_M3" target="G_C3_1">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">模块【选择性必修1 自然地理原理】包含章节【地球的运动】</data>
+    </edge>
+    <edge source="G_M3" target="G_C3_2">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">模块【选择性必修1 自然地理原理】包含章节【地表形态的塑造】</data>
+    </edge>
+    <edge source="G_M3" target="G_C3_3">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">模块【选择性必修1 自然地理原理】包含章节【大气的受热过程与运动】</data>
+    </edge>
+    <edge source="G_M3" target="G_C3_4">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">模块【选择性必修1 自然地理原理】包含章节【洋流与水体运动】</data>
+    </edge>
+    <edge source="G_M3" target="G_C3_5">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">模块【选择性必修1 自然地理原理】包含章节【自然环境的整体性与差异性】</data>
+    </edge>
+    <edge source="G_M4" target="G_C4_1">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">模块【选择性必修2 区域发展】包含章节【区域与区域发展】</data>
+    </edge>
+    <edge source="G_M4" target="G_C4_2">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">模块【选择性必修2 区域发展】包含章节【生态脆弱区的治理】</data>
+    </edge>
+    <edge source="G_M4" target="G_C4_3">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">模块【选择性必修2 区域发展】包含章节【资源枯竭型城市转型】</data>
+    </edge>
+    <edge source="G_M4" target="G_C4_4">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">模块【选择性必修2 区域发展】包含章节【产业转移与区域发展】</data>
+    </edge>
+    <edge source="G_M5" target="G_C5_1">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">模块【选择性必修3 资源、环境与国家安全】包含章节【资源安全】</data>
+    </edge>
+    <edge source="G_M5" target="G_C5_2">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">模块【选择性必修3 资源、环境与国家安全】包含章节【环境安全】</data>
+    </edge>
+    <edge source="G_M5" target="G_C5_3">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">模块【选择性必修3 资源、环境与国家安全】包含章节【保障国家安全的资源环境行动】</data>
+    </edge>
+    <edge source="G_C1_1" target="G_K1_1_1">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【宇宙中的地球】包含知识点【天体与天体系统】</data>
+    </edge>
+    <edge source="G_C1_1" target="G_K1_1_2">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【宇宙中的地球】包含知识点【太阳辐射及其影响】</data>
+    </edge>
+    <edge source="G_C1_1" target="G_K1_1_3">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【宇宙中的地球】包含知识点【太阳活动对地球的影响】</data>
+    </edge>
+    <edge source="G_C1_1" target="G_K1_1_4">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【宇宙中的地球】包含知识点【地球的圈层结构】</data>
+    </edge>
+    <edge source="G_C1_1" target="G_K1_1_5">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【宇宙中的地球】包含知识点【地球存在生命的条件】</data>
+    </edge>
+    <edge source="G_C1_2" target="G_K1_2_1">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【地球上的大气】包含知识点【大气组成与垂直分层】</data>
+    </edge>
+    <edge source="G_C1_2" target="G_K1_2_2">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【地球上的大气】包含知识点【大气的受热过程】</data>
+    </edge>
+    <edge source="G_C1_2" target="G_K1_2_3">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【地球上的大气】包含知识点【热力环流】</data>
+    </edge>
+    <edge source="G_C1_2" target="G_K1_2_4">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【地球上的大气】包含知识点【大气的水平运动——风】</data>
+    </edge>
+    <edge source="G_C1_3" target="G_K1_3_1">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【地球上的水】包含知识点【水循环】</data>
+    </edge>
+    <edge source="G_C1_3" target="G_K1_3_2">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【地球上的水】包含知识点【海水的性质】</data>
+    </edge>
+    <edge source="G_C1_3" target="G_K1_3_3">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【地球上的水】包含知识点【海水的运动】</data>
+    </edge>
+    <edge source="G_C1_4" target="G_K1_4_1">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【地貌】包含知识点【常见地貌类型】</data>
+    </edge>
+    <edge source="G_C1_4" target="G_K1_4_2">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【地貌】包含知识点【河流地貌的发育】</data>
+    </edge>
+    <edge source="G_C1_4" target="G_K1_4_3">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【地貌】包含知识点【地貌观察与等高线】</data>
+    </edge>
+    <edge source="G_C1_5" target="G_K1_5_1">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【植被与土壤】包含知识点【主要植被类型与环境】</data>
+    </edge>
+    <edge source="G_C1_5" target="G_K1_5_2">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【植被与土壤】包含知识点【土壤的组成与形成因素】</data>
+    </edge>
+    <edge source="G_C1_5" target="G_K1_5_3">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【植被与土壤】包含知识点【土壤剖面与质地】</data>
+    </edge>
+    <edge source="G_C1_6" target="G_K1_6_1">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【自然灾害】包含知识点【气象灾害】</data>
+    </edge>
+    <edge source="G_C1_6" target="G_K1_6_2">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【自然灾害】包含知识点【地质灾害】</data>
+    </edge>
+    <edge source="G_C1_6" target="G_K1_6_3">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【自然灾害】包含知识点【灾害监测防御与救援】</data>
+    </edge>
+    <edge source="G_C2_1" target="G_K2_1_1">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【人口】包含知识点【人口分布的影响因素】</data>
+    </edge>
+    <edge source="G_C2_1" target="G_K2_1_2">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【人口】包含知识点【人口迁移及其影响因素】</data>
+    </edge>
+    <edge source="G_C2_1" target="G_K2_1_3">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【人口】包含知识点【人口数量变化】</data>
+    </edge>
+    <edge source="G_C2_1" target="G_K2_1_4">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【人口】包含知识点【人口容量】</data>
+    </edge>
+    <edge source="G_C2_2" target="G_K2_2_1">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【乡村和城镇】包含知识点【城乡空间结构】</data>
+    </edge>
+    <edge source="G_C2_2" target="G_K2_2_2">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【乡村和城镇】包含知识点【城镇化及问题】</data>
+    </edge>
+    <edge source="G_C2_2" target="G_K2_2_3">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【乡村和城镇】包含知识点【地域文化与城乡景观】</data>
+    </edge>
+    <edge source="G_C2_3" target="G_K2_3_1">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【产业区位因素】包含知识点【农业区位因素】</data>
+    </edge>
+    <edge source="G_C2_3" target="G_K2_3_2">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【产业区位因素】包含知识点【工业区位因素】</data>
+    </edge>
+    <edge source="G_C2_3" target="G_K2_3_3">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【产业区位因素】包含知识点【服务业区位因素】</data>
+    </edge>
+    <edge source="G_C2_3" target="G_K2_3_4">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【产业区位因素】包含知识点【交通运输布局的影响】</data>
+    </edge>
+    <edge source="G_C2_4" target="G_K2_4_1">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【环境与发展】包含知识点【主要环境问题】</data>
+    </edge>
+    <edge source="G_C2_4" target="G_K2_4_2">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【环境与发展】包含知识点【可持续发展】</data>
+    </edge>
+    <edge source="G_C2_4" target="G_K2_4_3">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【环境与发展】包含知识点【国家发展战略】</data>
+    </edge>
+    <edge source="G_C3_1" target="G_K3_1_1">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【地球的运动】包含知识点【地球自转的地理意义】</data>
+    </edge>
+    <edge source="G_C3_1" target="G_K3_1_2">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【地球的运动】包含知识点【地球公转的地理意义】</data>
+    </edge>
+    <edge source="G_C3_1" target="G_K3_1_3">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【地球的运动】包含知识点【黄赤交角与直射点回归运动】</data>
+    </edge>
+    <edge source="G_C3_2" target="G_K3_2_1">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【地表形态的塑造】包含知识点【内力作用与板块构造】</data>
+    </edge>
+    <edge source="G_C3_2" target="G_K3_2_2">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【地表形态的塑造】包含知识点【外力作用与地表形态】</data>
+    </edge>
+    <edge source="G_C3_2" target="G_K3_2_3">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【地表形态的塑造】包含知识点【山地的形成】</data>
+    </edge>
+    <edge source="G_C3_2" target="G_K3_2_4">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【地表形态的塑造】包含知识点【河流侵蚀与堆积地貌】</data>
+    </edge>
+    <edge source="G_C3_3" target="G_K3_3_1">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【大气的受热过程与运动】包含知识点【大气受热过程与保温作用】</data>
+    </edge>
+    <edge source="G_C3_3" target="G_K3_3_2">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【大气的受热过程与运动】包含知识点【大气热力环流与风】</data>
+    </edge>
+    <edge source="G_C3_3" target="G_K3_3_3">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【大气的受热过程与运动】包含知识点【三圈环流与气压带风带】</data>
+    </edge>
+    <edge source="G_C3_3" target="G_K3_3_4">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【大气的受热过程与运动】包含知识点【季风环流】</data>
+    </edge>
+    <edge source="G_C3_3" target="G_K3_3_5">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【大气的受热过程与运动】包含知识点【常见天气系统】</data>
+    </edge>
+    <edge source="G_C3_4" target="G_K3_4_1">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【洋流与水体运动】包含知识点【水循环的类型与意义】</data>
+    </edge>
+    <edge source="G_C3_4" target="G_K3_4_2">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【洋流与水体运动】包含知识点【洋流的成因与分布规律】</data>
+    </edge>
+    <edge source="G_C3_4" target="G_K3_4_3">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【洋流与水体运动】包含知识点【洋流对地理环境的影响】</data>
+    </edge>
+    <edge source="G_C3_4" target="G_K3_4_4">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【洋流与水体运动】包含知识点【河流补给与径流变化】</data>
+    </edge>
+    <edge source="G_C3_4" target="G_K3_4_5">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【洋流与水体运动】包含知识点【水资源的合理利用】</data>
+    </edge>
+    <edge source="G_C3_5" target="G_K3_5_1">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【自然环境的整体性与差异性】包含知识点【自然环境的整体性】</data>
+    </edge>
+    <edge source="G_C3_5" target="G_K3_5_2">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【自然环境的整体性与差异性】包含知识点【地域分异规律】</data>
+    </edge>
+    <edge source="G_C3_5" target="G_K3_5_3">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【自然环境的整体性与差异性】包含知识点【非地带性分异现象】</data>
+    </edge>
+    <edge source="G_C4_1" target="G_K4_1_1">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【区域与区域发展】包含知识点【区域的特征与类型】</data>
+    </edge>
+    <edge source="G_C4_1" target="G_K4_1_2">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【区域与区域发展】包含知识点【区域发展阶段与产业结构】</data>
+    </edge>
+    <edge source="G_C4_1" target="G_K4_1_3">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【区域与区域发展】包含知识点【区域发展的优势与限制因素】</data>
+    </edge>
+    <edge source="G_C4_2" target="G_K4_2_1">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【生态脆弱区的治理】包含知识点【生态脆弱区的成因与特征】</data>
+    </edge>
+    <edge source="G_C4_2" target="G_K4_2_2">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【生态脆弱区的治理】包含知识点【黄土高原水土流失治理】</data>
+    </edge>
+    <edge source="G_C4_2" target="G_K4_2_3">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【生态脆弱区的治理】包含知识点【荒漠化的治理】</data>
+    </edge>
+    <edge source="G_C4_2" target="G_K4_2_4">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【生态脆弱区的治理】包含知识点【湿地的开发与保护】</data>
+    </edge>
+    <edge source="G_C4_3" target="G_K4_3_1">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【资源枯竭型城市转型】包含知识点【资源枯竭型城市转型】</data>
+    </edge>
+    <edge source="G_C4_3" target="G_K4_3_2">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【资源枯竭型城市转型】包含知识点【资源型城市可持续发展对策】</data>
+    </edge>
+    <edge source="G_C4_4" target="G_K4_4_1">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【产业转移与区域发展】包含知识点【产业转移的影响因素】</data>
+    </edge>
+    <edge source="G_C4_4" target="G_K4_4_2">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【产业转移与区域发展】包含知识点【产业转移对区域发展的影响】</data>
+    </edge>
+    <edge source="G_C4_4" target="G_K4_4_3">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【产业转移与区域发展】包含知识点【东亚产业转移路径】</data>
+    </edge>
+    <edge source="G_C5_1" target="G_K5_1_1">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【资源安全】包含知识点【资源安全问题】</data>
+    </edge>
+    <edge source="G_C5_1" target="G_K5_1_2">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【资源安全】包含知识点【战略性矿产与能源安全】</data>
+    </edge>
+    <edge source="G_C5_1" target="G_K5_1_3">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【资源安全】包含知识点【耕地安全与粮食安全】</data>
+    </edge>
+    <edge source="G_C5_2" target="G_K5_2_1">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【环境安全】包含知识点【环境安全问题】</data>
+    </edge>
+    <edge source="G_C5_2" target="G_K5_2_2">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【环境安全】包含知识点【全球性环境问题】</data>
+    </edge>
+    <edge source="G_C5_2" target="G_K5_2_3">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【环境安全】包含知识点【环境污染的防治】</data>
+    </edge>
+    <edge source="G_C5_3" target="G_K5_3_1">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【保障国家安全的资源环境行动】包含知识点【保障资源环境安全的途径】</data>
+    </edge>
+    <edge source="G_C5_3" target="G_K5_3_2">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【保障国家安全的资源环境行动】包含知识点【国家战略与资源环境安全】</data>
+    </edge>
+    <edge source="G_C5_3" target="G_K5_3_3">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【保障国家安全的资源环境行动】包含知识点【公众参与与可持续发展】</data>
+    </edge>
+    <edge source="G_K3_3_2" target="G_K1_2_3">
+      <data key="relation">RELATED_TO</data>
+      <data key="weight">0.8</data>
+      <data key="description">选必热力环流原理深化必修热力环流</data>
+    </edge>
+    <edge source="G_K3_3_1" target="G_K1_2_2">
+      <data key="relation">RELATED_TO</data>
+      <data key="weight">0.8</data>
+      <data key="description">选必受热过程深化必修受热过程</data>
+    </edge>
+    <edge source="G_K3_3_3" target="G_K1_2_3">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.8</data>
+      <data key="description">三圈环流以热力环流为基础</data>
+    </edge>
+    <edge source="G_K3_3_3" target="G_K3_3_2">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.7</data>
+      <data key="description">三圈环流建立在热力环流与风之上</data>
+    </edge>
+    <edge source="G_K3_3_4" target="G_K3_3_3">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.8</data>
+      <data key="description">季风环流以气压带风带为基础</data>
+    </edge>
+    <edge source="G_K3_3_5" target="G_K3_3_4">
+      <data key="relation">RELATED_TO</data>
+      <data key="weight">0.6</data>
+      <data key="description">锋面系统与季风共同影响天气</data>
+    </edge>
+    <edge source="G_K3_4_2" target="G_K1_3_3">
+      <data key="relation">RELATED_TO</data>
+      <data key="weight">0.7</data>
+      <data key="description">选必洋流深化必修海水运动</data>
+    </edge>
+    <edge source="G_K3_4_3" target="G_K3_4_2">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.8</data>
+      <data key="description">分析洋流影响需先掌握洋流分布规律</data>
+    </edge>
+    <edge source="G_K3_4_1" target="G_K1_3_1">
+      <data key="relation">RELATED_TO</data>
+      <data key="weight">0.7</data>
+      <data key="description">选必水循环深化必修水循环</data>
+    </edge>
+    <edge source="G_K3_5_1" target="G_K1_5_2">
+      <data key="relation">RELATED_TO</data>
+      <data key="weight">0.6</data>
+      <data key="description">整体性体现于土壤植被等要素间联系</data>
+    </edge>
+    <edge source="G_K3_5_2" target="G_K1_5_1">
+      <data key="relation">RELATED_TO</data>
+      <data key="weight">0.7</data>
+      <data key="description">地域分异决定植被分布规律</data>
+    </edge>
+    <edge source="G_K3_5_1" target="G_K3_5_2">
+      <data key="relation">RELATED_TO</data>
+      <data key="weight">0.7</data>
+      <data key="description">整体性与差异性是自然环境两个侧面</data>
+    </edge>
+    <edge source="G_K3_2_2" target="G_K1_4_1">
+      <data key="relation">RELATED_TO</data>
+      <data key="weight">0.7</data>
+      <data key="description">外力作用塑造常见地貌类型</data>
+    </edge>
+    <edge source="G_K3_2_4" target="G_K1_4_2">
+      <data key="relation">RELATED_TO</data>
+      <data key="weight">0.8</data>
+      <data key="description">选必河流地貌深化必修河流地貌发育</data>
+    </edge>
+    <edge source="G_K3_2_1" target="G_K1_4_1">
+      <data key="relation">RELATED_TO</data>
+      <data key="weight">0.6</data>
+      <data key="description">内力作用与地貌类型关联</data>
+    </edge>
+    <edge source="G_K4_2_2" target="G_K3_5_1">
+      <data key="relation">APPLIED_IN</data>
+      <data key="weight">0.7</data>
+      <data key="description">黄土高原治理运用自然环境整体性原理</data>
+    </edge>
+    <edge source="G_K4_2_3" target="G_K3_5_2">
+      <data key="relation">APPLIED_IN</data>
+      <data key="weight">0.6</data>
+      <data key="description">荒漠化治理运用地域分异规律</data>
+    </edge>
+    <edge source="G_K2_3_1" target="G_K3_5_2">
+      <data key="relation">APPLIED_IN</data>
+      <data key="weight">0.6</data>
+      <data key="description">农业区位受气候植被等地域分异影响</data>
+    </edge>
+    <edge source="G_K2_1_2" target="G_K4_4_1">
+      <data key="relation">RELATED_TO</data>
+      <data key="weight">0.5</data>
+      <data key="description">人口迁移与产业转移相互影响</data>
+    </edge>
+    <edge source="G_K2_2_2" target="G_K2_1_3">
+      <data key="relation">RELATED_TO</data>
+      <data key="weight">0.6</data>
+      <data key="description">城镇化与人口数量变化相互关联</data>
+    </edge>
+    <edge source="G_K2_3_2" target="G_K4_4_1">
+      <data key="relation">RELATED_TO</data>
+      <data key="weight">0.6</data>
+      <data key="description">工业区位与产业转移影响因素相通</data>
+    </edge>
+    <edge source="G_K4_4_2" target="G_K2_2_2">
+      <data key="relation">APPLIED_IN</data>
+      <data key="weight">0.5</data>
+      <data key="description">产业转移影响迁入区城镇化</data>
+    </edge>
+    <edge source="G_K5_2_2" target="G_K3_5_1">
+      <data key="relation">APPLIED_IN</data>
+      <data key="weight">0.6</data>
+      <data key="description">全球气候变暖体现自然环境整体性</data>
+    </edge>
+    <edge source="G_K1_6_1" target="G_K3_3_5">
+      <data key="relation">RELATED_TO</data>
+      <data key="weight">0.6</data>
+      <data key="description">台风等气象灾害与气旋等天气系统关联</data>
+    </edge>
+    <edge source="G_K1_6_2" target="G_K3_2_2">
+      <data key="relation">RELATED_TO</data>
+      <data key="weight">0.5</data>
+      <data key="description">泥石流等地质灾害与外力作用相关</data>
+    </edge>
+    <edge source="G_K5_1_1" target="G_K3_4_5">
+      <data key="relation">RELATED_TO</data>
+      <data key="weight">0.6</data>
+      <data key="description">水资源安全与水资源合理利用相通</data>
+    </edge>
+    <edge source="G_K5_3_2" target="G_K2_4_3">
+      <data key="relation">RELATED_TO</data>
+      <data key="weight">0.5</data>
+      <data key="description">国家战略与国家发展战略衔接</data>
+    </edge>
+    <edge source="G_K5_1_3" target="G_K2_3_1">
+      <data key="relation">RELATED_TO</data>
+      <data key="weight">0.5</data>
+      <data key="description">耕地安全与农业区位因素关联</data>
+    </edge>
+    <edge source="G_K3_1_1" target="G_K1_2_4">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.6</data>
+      <data key="description">地球自转地转偏向力是近地面风向的受力基础</data>
+    </edge>
+    <edge source="G_K3_4_4" target="G_K3_4_1">
+      <data key="relation">RELATED_TO</data>
+      <data key="weight">0.6</data>
+      <data key="description">河流补给与水循环环节相通</data>
+    </edge>
+    <edge source="G_K4_1_2" target="G_K4_4_2">
+      <data key="relation">RELATED_TO</data>
+      <data key="weight">0.5</data>
+      <data key="description">区域发展阶段与产业转移影响衔接</data>
+    </edge>
+    <edge source="G_K2_4_2" target="G_K5_3_3">
+      <data key="relation">DERIVED_FROM</data>
+      <data key="weight">0.5</data>
+      <data key="description">公众参与是可持续发展原则的落实</data>
+    </edge>
+    <edge source="G_K4_3_1" target="G_K5_1_2">
+      <data key="relation">RELATED_TO</data>
+      <data key="weight">0.5</data>
+      <data key="description">资源枯竭城市与能源矿产安全关联</data>
+    </edge>
+  </graph>
+</graphml>

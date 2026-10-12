@@ -1,0 +1,11 @@
+{
+  "//": "悬浮球组件构建：tsc -p tsconfig.renderer-shell.json（产物 build/renderer/悬浮球.js，由 index.html 引用）",
+  "extends": "./tsconfig.base.json",
+  "compilerOptions": {
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "types": [],
+    "rootDir": "src/renderer/shell",
+    "outDir": "build/renderer"
+  },
+  "include": ["src/renderer/shell/**/*.ts", "src/types/**/*.d.ts"]
+}

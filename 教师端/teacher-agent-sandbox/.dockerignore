@@ -1,0 +1,51 @@
+# Git
+.git
+.gitignore
+
+# IDE
+.vscode
+.idea
+*.swp
+*.swo
+
+# Node.js
+node_modules
+npm-debug.log*
+yarn-error.log*
+
+# Python
+__pycache__
+*.pyc
+*.pyo
+.pytest_cache
+.venv
+venv
+
+# 构建产物
+dist
+build
+*.egg-info
+
+# 日志
+*.log
+logs/
+
+# 临时文件
+tmp/
+temp/
+*.tmp
+*.bak
+
+# 数据文件（不打包进镜像，通过volume挂载）
+sandbox/data/
+sandbox/workspace/
+sandbox/logs/
+
+# 文档
+*.md
+!README.md
+docs/
+
+# 操作系统
+.DS_Store
+Thumbs.db

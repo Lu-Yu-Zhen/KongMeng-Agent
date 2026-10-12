@@ -1,0 +1,60 @@
+{
+    "name": "kongmeng-student",
+    "version": "1.0.0",
+    "description": "KongMeng Student Desktop App",
+    "main": "main.js",
+    "author": "KongMeng",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/kongmeng/student"
+    },
+    "scripts": {
+        "start": "electron .",
+        "build": "electron-builder --win dir",
+        "build-installer": "electron-builder --win nsis"
+    },
+    "build": {
+        "appId": "com.kongmeng.student",
+        "productName": "KongMeng-Student",
+        "publish": null,
+        "directories": {
+            "output": "dist"
+        },
+        "win": {
+            "target": "dir",
+            "icon": "logo.png"
+        },
+        "nsis": {
+            "oneClick": false,
+            "allowToChangeInstallationDirectory": true,
+            "createDesktopShortcut": true,
+            "createStartMenuShortcut": true,
+            "shortcutName": "孔孟大模型"
+        },
+        "files": [
+            "main.js",
+            "preload.js",
+            "package.json"
+        ],
+        "extraFiles": [
+            "index.html",
+            "logo.png",
+            {
+                "from": "textbooks",
+                "to": "textbooks"
+            },
+            {
+                "from": "user_data",
+                "to": "user_data"
+            },
+            {
+                "from": "data",
+                "to": "data"
+            }
+        ]
+    },
+    "devDependencies": {
+        "electron": "^31.0.0",
+        "electron-builder": "^24.13.3"
+    }
+}

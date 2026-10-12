@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>孔孟·智学云 · 教师端 - 题目批改</title>
+<link rel="stylesheet" href="../assets/styles.css">
+<script src="../assets/mock.js"></script>
+<script src="../assets/api.js"></script>
+<script src="../assets/components.js"></script>
+</head>
+<body>
+<script>renderShell('teacher', 'grading');</script>
+<script>
+(function(){
+  var root = pageRoot();
+  var currentView = 'mine';
+  var currentSubject = DB.teacher.subjects[0] || '';
+
+  /* 由提交记录反查科目 */
+  function subjectOf(sub){
+    var h = DB.homework.find(function(x){ return x.id === sub.homeworkId; });
+    return h ? h.subject : '';
+  }
+  function titleOf(sub){
+    var h = DB.homework.find(function(x){ return x.id === sub.homeworkId; });
+    return h ? h.title : '作业';
+  }
+
+  root.innerHTML =
+    '<div class="page-head">' +
+      '<div><h1>题目批改</h1><div class="sub">批改任教班级学生提交的作业并发布讲解</div></div>' +
+    '</div>' +
+
+    '<div class="view-switch" id="viewSwitch">' +
+      '<button class="vs-btn active" data-view="mine">我的任教现状</button>' +
+      '<button class="vs-btn" data-view="subject">对应单科情况</button>' +
+      '<button class="vs-btn" data-view="school">全年段全科情况</button>' +
+    '</div>' +
+
+    '<div id="subjectWrap" class="hidden mb-4"><div class="field" style="max-width:260px">' +
+      '<label>选择科目（全校该科批改，只读）</label>' +
+      '<select class="select" id="subjectSelect"></select>' +
+    '</div></div>' +
+
+    '<div id="readonlyNote" class="hidden mb-4"></div>' +
+    '<div id="viewContent"></div>';
+
+  var sel = document.getElementById('subjectSelect');
+  DB.teacher.subjects.forEach(function(s){
+    var o = document.createElement('option'); o.value = s; o.textContent = s; sel.appendChild(o);
+  });
+  sel.value = currentSubject;
+
+  document.querySelectorAll('#viewSwitch .vs-btn').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      currentView = btn.getAttribute('data-view');
+      document.querySelectorAll('#viewSwitch .vs-btn').forEach(function(b){ b.classList.remove('active'); });
+      btn.classList.add('active');
+      document.getElementById('subjectWrap').classList.toggle('hidden', currentView !== 'subject');
+      render();
+    });
+  });
+  sel.addEventListener('change', function(){ currentSubject = sel.value; render(); });
+
+  function applyReadonly(){
+    var note = document.getElementById('readonlyNote');
+    if(currentView === 'mine'){ note.classList.add('hidden'); }
+    else{
+      note.classList.remove('hidden');
+      note.innerHTML = '<div class="card" style="background:var(--info-bg);border-color:var(--info);color:var(--info);display:flex;align-items:center;gap:8px">' +
+        icon('eye') + ' 当前为只读视图，仅可查看批改情况，批改功能已禁用。</div>';
+    }
+  }
+
+  function render(){
+    applyReadonly();
+    var c = document.getElementById('viewContent');
+    if(currentView === 'mine') c.innerHTML = renderMine();
+    else if(currentView === 'subject') c.innerHTML = renderSubject();
+    else c.innerHTML = renderSchool();
+  }
+
+  /* ---------- 视图一：我的任教现状 ---------- */
+  function renderMine(){
+    var subsAll = store.teacherSubmissions();
+    var pending = subsAll.filter(function(s){ return s.status === 'submitted'; });
+    var gradedSubs = subsAll.filter(function(s){ return s.status === 'graded'; });
+    var comments = store.teacherComments();
+    var cards =
+      '<div class="grid grid-3 mb-4">' +
+        '<div class="card stat-card"><div class="stat-label">待批改提交</div><div class="stat-value">' + pending.length + '</div><div class="stat-note">等待批改</div></div>' +
+        '<div class="card stat-card"><div class="stat-label">已批改</div><div class="stat-value">' + gradedSubs.length + '</div><div class="stat-note">已完成</div></div>' +
+        '<div class="card stat-card"><div class="stat-label">批改记录</div><div class="stat-value">' + comments.length + '</div><div class="stat-note">任教科目 × 任教班级</div></div>' +
+      '</div>';
+
+    var pendingHtml;
+    if(!pending.length){
+      pendingHtml = '<div class="card mt-4"><div class="text-sm text-strong mb-2">待批改提交</div>' + emptyState('暂无待批改的提交', 'inbox') + '</div>';
+    }else{
+      pendingHtml = '<div class="card mt-4"><div class="text-sm text-strong mb-2">待批改提交（' + pending.length + '）</div><div class="grid mt-2">' +
+        pending.map(function(s){
+          var cls = store.getClass(s.classId);
+          return '<div class="list-item" onclick="window.__openGrade(\'' + s.id + '\')">' +
+            '<div class="li-head"><span class="li-title">' + escapeHtml(s.studentName) + '</span>' + statusBadge(s.status) + '</div>' +
+            '<div class="li-meta">' + classBadge(cls ? cls.name : s.classId) + subjectBadge(subjectOf(s)) +
+            '<span>' + icon('file') + ' ' + escapeHtml(titleOf(s)) + '</span>' +
+            '<span>' + icon('time') + ' ' + escapeHtml(s.submittedAt) + '</span></div>' +
+            '<div class="text-sm text-sub">' + escapeHtml(s.content) + '</div>' +
+            '<div class="li-foot"><span class="text-xs text-sub">点击进行批改</span>' + icon('arrowRight') + '</div>' +
+          '</div>';
+        }).join('') + '</div></div>';
+    }
+
+    var gradedHtml;
+    var shown = gradedSubs.map(function(s){
+      var c = comments.find(function(x){ return x.homeworkId === s.homeworkId && x.studentId === s.studentId; });
+      return { s: s, c: c };
+    }).filter(function(x){ return x.c; });
+    if(!shown.length){
+      gradedHtml = '<div class="card mt-4"><div class="text-sm text-strong mb-2">已批改结果</div>' + emptyState('暂无批改结果', 'check') + '</div>';
+    }else{
+      gradedHtml = '<div class="card mt-4"><div class="text-sm text-strong mb-2">已批改结果（' + shown.length + '）</div><div class="grid mt-2">' +
+        shown.map(function(x){
+          var cls = store.getClass(x.s.classId);
+          return '<div class="list-item">' +
+            '<div class="li-head"><span class="li-title">' + escapeHtml(x.s.studentName) + '</span>' + statusBadge('graded') + '</div>' +
+            '<div class="li-meta">' + classBadge(cls ? cls.name : x.s.classId) + subjectBadge(subjectOf(x.s)) +
+            '<span>' + icon('file') + ' ' + escapeHtml(titleOf(x.s)) + '</span></div>' +
+            '<div class="li-foot"><span class="badge badge-subject">评分 ' + escapeHtml(x.c.grade) + '</span>' +
+            '<span class="text-xs text-sub">批改于 ' + escapeHtml(x.c.gradedAt) + '</span></div>' +
+            '<div class="text-sm mt-1">' + escapeHtml(x.c.comment) + '</div>' +
+            (x.c.explanation ? '<div class="card mt-2" style="background:var(--info-bg);border-color:var(--info);color:var(--ink-700)"><div class="text-xs text-sub">讲解</div><div class="text-sm mt-1">' + escapeHtml(x.c.explanation) + '</div></div>' : '') +
+          '</div>';
+        }).join('') + '</div></div>';
+    }
+
+    return cards + pendingHtml + gradedHtml;
+  }
+
+  /* ---------- 视图二：对应单科情况（只读） ---------- */
+  function renderSubject(){
+    var sub = currentSubject;
+    var ov = store.subjectOverview(sub);
+    var cards =
+      '<div class="grid grid-3 mb-4">' +
+        '<div class="card stat-card"><div class="stat-label">' + escapeHtml(sub) + ' 提交数</div><div class="stat-value">' + ov.submissions.length + '</div><div class="stat-note">全校</div></div>' +
+        '<div class="card stat-card"><div class="stat-label">批改记录</div><div class="stat-value">' + ov.comments.length + '</div><div class="stat-note">全校</div></div>' +
+        '<div class="card stat-card"><div class="stat-label">成绩公布</div><div class="stat-value">' + ov.grades.length + '</div><div class="stat-note">全校</div></div>' +
+      '</div>';
+    if(!ov.submissions.length) return cards + emptyState('该科目暂无提交', 'inbox');
+    var list = ov.submissions.map(function(s){
+      var cls = store.getClass(s.classId);
+      var c = ov.comments.find(function(x){ return x.homeworkId === s.homeworkId && x.studentId === s.studentId; });
+      var result = c
+        ? '<div class="li-foot"><span class="badge badge-subject">评分 ' + escapeHtml(c.grade) + '</span><span class="text-xs text-sub">' + escapeHtml(c.comment) + '</span></div>'
+        : '<div class="li-foot"><span class="text-xs text-sub">待批改</span>' + statusBadge('submitted') + '</div>';
+      return '<div class="list-item">' +
+        '<div class="li-head"><span class="li-title">' + escapeHtml(s.studentName) + '</span>' + (c ? statusBadge('graded') : statusBadge('submitted')) + '</div>' +
+        '<div class="li-meta">' + classBadge(cls ? cls.name : s.classId) + subjectBadge(subjectOf(s)) +
+        '<span>' + icon('file') + ' ' + escapeHtml(titleOf(s)) + '</span></div>' +
+        result +
+      '</div>';
+    }).join('');
+    return cards + '<div class="grid">' + list + '</div>';
+  }
+
+  /* ---------- 视图三：全年段全科情况（只读） ---------- */
+  function renderSchool(){
+    var ov = store.schoolOverview();
+    var summary =
+      '<div class="grid grid-3 mb-4">' +
+        '<div class="card stat-card"><div class="stat-label">全校作业总数</div><div class="stat-value">' + ov.totalHomework + '</div><div class="stat-note">各科合计</div></div>' +
+        '<div class="card stat-card"><div class="stat-label">全校成绩公布</div><div class="stat-value">' + ov.totalGrades + '</div><div class="stat-note">各科合计</div></div>' +
+        '<div class="card stat-card"><div class="stat-label">全校学生提问</div><div class="stat-value">' + ov.totalQuestions + '</div><div class="stat-note">各科合计</div></div>' +
+      '</div>';
+    var subjectCards = '<div class="grid grid-3 mb-4">' + Object.keys(ov.bySubject).map(function(sub){
+      var d = ov.bySubject[sub];
+      return '<div class="card stat-card"><div class="stat-label">' + escapeHtml(sub) + '</div><div class="stat-value">' + d.submissions + '</div>' +
+        '<div class="stat-note">作业 ' + d.homework + ' · 提交 ' + d.submissions + ' · 成绩 ' + d.grading + ' · 提问 ' + d.questions + '</div></div>';
+    }).join('') + '</div>';
+    var buckets = store.syncBuckets();
+    var table = '';
+    if(buckets.length){
+      table = '<div class="table-wrap mt-4"><table><thead><tr><th>班级</th><th>科目</th><th>作业</th><th>成绩</th><th>提问</th><th>批改</th></tr></thead><tbody>' +
+        buckets.map(function(b){
+          return '<tr><td>' + classBadge(b.className) + '</td><td>' + subjectBadge(b.subject) + '</td><td>' + b.homework + '</td><td>' + b.grades + '</td><td>' + b.questions + '</td><td>' + b.comments + '</td></tr>';
+        }).join('') + '</tbody></table></div>';
+    }
+    return summary + subjectCards +
+      '<div class="card mt-4"><div class="text-sm text-strong mb-2">全校各科各班数据分桶</div>' + (table || emptyState('暂无班级数据', 'database')) + '</div>';
+  }
+
+  /* ---------- 批改 modal ---------- */
+  window.__openGrade = function(subId){
+    if(currentView !== 'mine'){ toast('当前为只读视图，仅可查看', 'error'); return; }
+    var s = DB.homeworkSubmissions.find(function(x){ return x.id === subId; });
+    if(!s){ toast('提交记录不存在', 'error'); return; }
+    var cls = store.getClass(s.classId);
+    var gradeOpts = ['A', 'B+', 'B', 'C'].map(function(g){ return '<option value="' + g + '">' + g + '</option>'; }).join('');
+    openModal(modalHead('批改作业') +
+      '<div class="modal-body">' +
+        '<div class="card mb-4" style="background:var(--ink-50)">' +
+          '<div class="li-meta mb-2">' + classBadge(cls ? cls.name : s.classId) + subjectBadge(subjectOf(s)) + '</div>' +
+          '<div class="text-sm"><b>' + escapeHtml(s.studentName) + '</b> · ' + escapeHtml(titleOf(s)) + '</div>' +
+          '<div class="text-sm text-sub mt-1">' + escapeHtml(s.content) + '</div>' +
+        '</div>' +
+        '<div class="form-grid">' +
+          '<div class="field"><label>评分等级</label><select class="select" id="g_grade">' + gradeOpts + '</select>' +
+          '<div class="hint">A 优秀 / B+ 良好 / B 中等 / C 需加强</div></div>' +
+          '<div class="field"><label>评语</label><textarea class="textarea" id="g_comment" placeholder="对学生本次提交的整体评价…"></textarea></div>' +
+          '<div class="field"><label>讲解要点</label><textarea class="textarea" id="g_explanation" placeholder="针对易错点的讲解，将同步给学生端…"></textarea></div>' +
+        '</div>' +
+      '</div>' +
+      '<div class="modal-foot">' +
+        '<button class="btn btn-ghost btn-md" onclick="closeModal()">取消</button>' +
+        '<button class="btn btn-primary btn-md" id="g_submit">确认批改</button>' +
+      '</div>');
+    document.getElementById('g_submit').addEventListener('click', function(){ submitGrade(s); });
+  };
+
+  async function submitGrade(s){
+    var comment = document.getElementById('g_comment').value.trim();
+    var expl = document.getElementById('g_explanation').value.trim();
+    if(!comment){ toast('请填写评语', 'error'); return; }
+    var btn = document.getElementById('g_submit');
+    btn.disabled = true; btn.textContent = '发布中…';
+    await API.publishComment({
+      homeworkId: s.homeworkId, classId: s.classId, studentId: s.studentId, studentName: s.studentName,
+      subject: subjectOf(s), grade: document.getElementById('g_grade').value, comment: comment, explanation: expl
+    });
+    closeModal();
+    toast('批改已发布，同步至云端', 'success');
+    render();
+  }
+
+  render();
+})();
+</script>
+</body>
+</html>

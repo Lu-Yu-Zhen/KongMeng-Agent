@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>孔孟·智学云 · 教师端 - 学生提问处理</title>
+<link rel="stylesheet" href="../assets/styles.css">
+<script src="../assets/mock.js"></script>
+<script src="../assets/api.js"></script>
+<script src="../assets/components.js"></script>
+</head>
+<body>
+<script>renderShell('teacher', 'ask');</script>
+<script>
+(function(){
+  var root = pageRoot();
+  var currentView = 'mine';
+  var currentSubject = DB.teacher.subjects[0] || '';
+
+  root.innerHTML =
+    '<div class="page-head">' +
+      '<div><h1>学生提问处理</h1><div class="sub">接收并回复任教班级学生的提问与反馈</div></div>' +
+      '<div class="page-actions">' +
+        '<button class="btn btn-ghost btn-md" id="syncBtn" onclick="window.__syncQuestions()">' + icon('refresh') + ' 同步接收</button>' +
+      '</div>' +
+    '</div>' +
+
+    '<div class="view-switch" id="viewSwitch">' +
+      '<button class="vs-btn active" data-view="mine">我的任教现状</button>' +
+      '<button class="vs-btn" data-view="subject">对应单科情况</button>' +
+      '<button class="vs-btn" data-view="school">全年段全科情况</button>' +
+    '</div>' +
+
+    '<div id="subjectWrap" class="hidden mb-4"><div class="field" style="max-width:260px">' +
+      '<label>选择科目（全校该科提问，只读）</label>' +
+      '<select class="select" id="subjectSelect"></select>' +
+    '</div></div>' +
+
+    '<div id="readonlyNote" class="hidden mb-4"></div>' +
+    '<div id="viewContent"></div>';
+
+  var sel = document.getElementById('subjectSelect');
+  DB.teacher.subjects.forEach(function(s){
+    var o = document.createElement('option'); o.value = s; o.textContent = s; sel.appendChild(o);
+  });
+  sel.value = currentSubject;
+
+  document.querySelectorAll('#viewSwitch .vs-btn').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      currentView = btn.getAttribute('data-view');
+      document.querySelectorAll('#viewSwitch .vs-btn').forEach(function(b){ b.classList.remove('active'); });
+      btn.classList.add('active');
+      document.getElementById('subjectWrap').classList.toggle('hidden', currentView !== 'subject');
+      render();
+    });
+  });
+  sel.addEventListener('change', function(){ currentSubject = sel.value; render(); });
+
+  window.__syncQuestions = syncQuestions;
+
+  function applyReadonly(){
+    var note = document.getElementById('readonlyNote');
+    if(currentView === 'mine'){ note.classList.add('hidden'); }
+    else{
+      note.classList.remove('hidden');
+      note.innerHTML = '<div class="card" style="background:var(--info-bg);border-color:var(--info);color:var(--info);display:flex;align-items:center;gap:8px">' +
+        icon('eye') + ' 当前为只读视图，仅可查看提问，回复功能已禁用。</div>';
+    }
+  }
+
+  function render(){
+    applyReadonly();
+    var c = document.getElementById('viewContent');
+    if(currentView === 'mine') c.innerHTML = renderMine();
+    else if(currentView === 'subject') c.innerHTML = renderSubject();
+    else c.innerHTML = renderSchool();
+  }
+
+  async function syncQuestions(){
+    var btn = document.getElementById('syncBtn');
+    if(btn) btn.disabled = true;
+    await API.syncQuestions();
+    if(btn){ btn.disabled = false; }
+    toast('已同步云端最新提问', 'success');
+    render();
+  }
+
+  /* ---------- 视图一：我的任教现状 ---------- */
+  function renderMine(){
+    var qs = store.teacherQuestions();
+    var pending = qs.filter(function(q){ return q.status === 'pending'; }).length;
+    var replied = qs.filter(function(q){ return q.status === 'replied'; }).length;
+    var cards =
+      '<div class="grid grid-3 mb-4">' +
+        '<div class="card stat-card"><div class="stat-label">待处理提问</div><div class="stat-value">' + pending + '</div><div class="stat-note">等待回复</div></div>' +
+        '<div class="card stat-card"><div class="stat-label">已回复</div><div class="stat-value">' + replied + '</div><div class="stat-note">已完成</div></div>' +
+        '<div class="card stat-card"><div class="stat-label">提问总数</div><div class="stat-value">' + qs.length + '</div><div class="stat-note">任教科目 × 任教班级</div></div>' +
+      '</div>';
+    if(!qs.length) return cards + emptyState('暂无学生提问', 'message');
+    var list = qs.map(function(q){
+      var cls = store.getClass(q.classId);
+      var body = '<div class="text-sm mt-2">' + escapeHtml(q.content) + '</div>';
+      var action = '';
+      if(q.status === 'pending'){
+        action = '<button class="btn btn-primary btn-sm" onclick="window.__openReply(\'' + q.id + '\')">' + icon('send') + ' 回复</button>';
+      }else{
+        body += '<div class="card mt-2" style="background:var(--success-bg);border-color:var(--success);color:var(--ink-700)">' +
+          '<div class="text-xs text-sub">我的回复（' + escapeHtml(q.replyAt || '') + '）</div>' +
+          '<div class="text-sm mt-1">' + escapeHtml(q.reply) + '</div></div>';
+        action = '<span class="text-xs text-sub">已处理</span>';
+      }
+      return '<div class="list-item">' +
+        '<div class="li-head"><span class="li-title">' + escapeHtml(q.studentName) + ' 的提问</span>' + statusBadge(q.status) + '</div>' +
+        '<div class="li-meta">' + classBadge(cls ? cls.name : q.classId) + subjectBadge(q.subject) +
+        '<span>' + icon('time') + ' ' + escapeHtml(q.askedAt) + '</span></div>' +
+        body +
+        '<div class="li-foot"><span class="text-xs text-sub">' + escapeHtml(q.studentId) + '</span>' + action + '</div>' +
+      '</div>';
+    }).join('');
+    return cards + '<div class="grid">' + list + '</div>';
+  }
+
+  /* ---------- 视图二：对应单科情况（只读） ---------- */
+  function renderSubject(){
+    var sub = currentSubject;
+    var qs = store.subjectOverview(sub).questions;
+    var pending = qs.filter(function(q){ return q.status === 'pending'; }).length;
+    var cards =
+      '<div class="grid grid-3 mb-4">' +
+        '<div class="card stat-card"><div class="stat-label">' + escapeHtml(sub) + ' 提问数</div><div class="stat-value">' + qs.length + '</div><div class="stat-note">全校</div></div>' +
+        '<div class="card stat-card"><div class="stat-label">待回复</div><div class="stat-value">' + pending + '</div><div class="stat-note">全校</div></div>' +
+        '<div class="card stat-card"><div class="stat-label">已回复</div><div class="stat-value">' + (qs.length - pending) + '</div><div class="stat-note">全校</div></div>' +
+      '</div>';
+    if(!qs.length) return cards + emptyState('该科目暂无提问', 'inbox');
+    var list = qs.map(function(q){
+      var cls = store.getClass(q.classId);
+      var replyHtml = q.status === 'replied'
+        ? '<div class="card mt-2" style="background:var(--success-bg);border-color:var(--success);color:var(--ink-700)"><div class="text-xs text-sub">已回复</div><div class="text-sm mt-1">' + escapeHtml(q.reply) + '</div></div>'
+        : '';
+      return '<div class="list-item">' +
+        '<div class="li-head"><span class="li-title">' + escapeHtml(q.studentName) + ' 的提问</span>' + statusBadge(q.status) + '</div>' +
+        '<div class="li-meta">' + classBadge(cls ? cls.name : q.classId) + subjectBadge(q.subject) +
+        '<span>' + icon('time') + ' ' + escapeHtml(q.askedAt) + '</span></div>' +
+        '<div class="text-sm mt-2">' + escapeHtml(q.content) + '</div>' + replyHtml +
+      '</div>';
+    }).join('');
+    return cards + '<div class="grid">' + list + '</div>';
+  }
+
+  /* ---------- 视图三：全年段全科情况（只读） ---------- */
+  function renderSchool(){
+    var ov = store.schoolOverview();
+    var summary =
+      '<div class="grid grid-3 mb-4">' +
+        '<div class="card stat-card"><div class="stat-label">全校作业总数</div><div class="stat-value">' + ov.totalHomework + '</div><div class="stat-note">各科合计</div></div>' +
+        '<div class="card stat-card"><div class="stat-label">全校成绩公布</div><div class="stat-value">' + ov.totalGrades + '</div><div class="stat-note">各科合计</div></div>' +
+        '<div class="card stat-card"><div class="stat-label">全校学生提问</div><div class="stat-value">' + ov.totalQuestions + '</div><div class="stat-note">各科合计</div></div>' +
+      '</div>';
+    var subjectCards = '<div class="grid grid-3 mb-4">' + Object.keys(ov.bySubject).map(function(sub){
+      var d = ov.bySubject[sub];
+      return '<div class="card stat-card"><div class="stat-label">' + escapeHtml(sub) + '</div><div class="stat-value">' + d.questions + '</div>' +
+        '<div class="stat-note">作业 ' + d.homework + ' · 提交 ' + d.submissions + ' · 成绩 ' + d.grading + ' · 提问 ' + d.questions + '</div></div>';
+    }).join('') + '</div>';
+    var buckets = store.syncBuckets();
+    var table = '';
+    if(buckets.length){
+      table = '<div class="table-wrap mt-4"><table><thead><tr><th>班级</th><th>科目</th><th>作业</th><th>成绩</th><th>提问</th><th>批改</th></tr></thead><tbody>' +
+        buckets.map(function(b){
+          return '<tr><td>' + classBadge(b.className) + '</td><td>' + subjectBadge(b.subject) + '</td><td>' + b.homework + '</td><td>' + b.grades + '</td><td>' + b.questions + '</td><td>' + b.comments + '</td></tr>';
+        }).join('') + '</tbody></table></div>';
+    }
+    return summary + subjectCards +
+      '<div class="card mt-4"><div class="text-sm text-strong mb-2">全校各科各班数据分桶</div>' + (table || emptyState('暂无班级数据', 'database')) + '</div>';
+  }
+
+  /* ---------- 回复 modal ---------- */
+  window.__openReply = function(qid){
+    if(currentView !== 'mine'){ toast('当前为只读视图，仅可查看', 'error'); return; }
+    var q = DB.questions.find(function(x){ return x.id === qid; });
+    if(!q){ toast('提问不存在', 'error'); return; }
+    openModal(modalHead('回复提问') +
+      '<div class="modal-body">' +
+        '<div class="card mb-4" style="background:var(--ink-50)"><div class="li-meta mb-2">' + classBadge(store.getClass(q.classId) ? store.getClass(q.classId).name : q.classId) + subjectBadge(q.subject) + '</div>' +
+        '<div class="text-sm"><b>' + escapeHtml(q.studentName) + '</b>：' + escapeHtml(q.content) + '</div></div>' +
+        '<div class="field"><label>回复内容</label><textarea class="textarea" id="r_content" placeholder="请给出清晰、可执行的解答…"></textarea>' +
+        '<div class="hint">回复将同步至云端并推送给学生端</div></div>' +
+      '</div>' +
+      '<div class="modal-foot">' +
+        '<button class="btn btn-ghost btn-md" onclick="closeModal()">取消</button>' +
+        '<button class="btn btn-primary btn-md" id="r_submit">确认回复</button>' +
+      '</div>');
+    document.getElementById('r_submit').addEventListener('click', function(){ submitReply(qid); });
+  };
+
+  async function submitReply(qid){
+    var content = document.getElementById('r_content').value.trim();
+    if(!content){ toast('请填写回复内容', 'error'); return; }
+    var btn = document.getElementById('r_submit');
+    btn.disabled = true; btn.textContent = '回复中…';
+    await API.replyQuestion({ id: qid, reply: content });
+    closeModal();
+    toast('回复已同步至云端', 'success');
+    render();
+  }
+
+  render();
+})();
+</script>
+</body>
+</html>

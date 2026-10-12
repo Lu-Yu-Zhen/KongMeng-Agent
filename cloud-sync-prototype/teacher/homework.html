@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>孔孟·智学云 · 教师端 - 作业下发管理</title>
+<link rel="stylesheet" href="../assets/styles.css">
+<script src="../assets/mock.js"></script>
+<script src="../assets/api.js"></script>
+<script src="../assets/components.js"></script>
+</head>
+<body>
+<script>renderShell('teacher', 'homework');</script>
+<script>
+(function(){
+  var root = pageRoot();
+  var currentView = 'mine';                              // mine | subject | school
+  var currentSubject = DB.teacher.subjects[0] || '';     // 单科视图默认任教第一科目
+
+  root.innerHTML =
+    '<div class="page-head">' +
+      '<div><h1>作业下发管理</h1><div class="sub">下发作业到任教班级，并实时查看学生提交情况</div></div>' +
+      '<div class="page-actions">' +
+        '<button class="btn btn-primary btn-md" id="publishBtn" onclick="window.__openPublishHomework()">' + icon('plus') + ' 下发作业</button>' +
+      '</div>' +
+    '</div>' +
+
+    '<div class="view-switch" id="viewSwitch">' +
+      '<button class="vs-btn active" data-view="mine">我的任教现状</button>' +
+      '<button class="vs-btn" data-view="subject">对应单科情况</button>' +
+      '<button class="vs-btn" data-view="school">全年段全科情况</button>' +
+    '</div>' +
+
+    '<div id="subjectWrap" class="hidden mb-4"><div class="field" style="max-width:260px">' +
+      '<label>选择科目（全校该科统计，只读）</label>' +
+      '<select class="select" id="subjectSelect"></select>' +
+    '</div></div>' +
+
+    '<div id="readonlyNote" class="hidden mb-4"></div>' +
+    '<div id="viewContent"></div>';
+
+  /* 填充科目下拉 */
+  var sel = document.getElementById('subjectSelect');
+  DB.teacher.subjects.forEach(function(s){
+    var o = document.createElement('option'); o.value = s; o.textContent = s; sel.appendChild(o);
+  });
+  sel.value = currentSubject;
+
+  /* 视图切换 */
+  document.querySelectorAll('#viewSwitch .vs-btn').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      currentView = btn.getAttribute('data-view');
+      document.querySelectorAll('#viewSwitch .vs-btn').forEach(function(b){ b.classList.remove('active'); });
+      btn.classList.add('active');
+      document.getElementById('subjectWrap').classList.toggle('hidden', currentView !== 'subject');
+      render();
+    });
+  });
+  sel.addEventListener('change', function(){ currentSubject = sel.value; render(); });
+
+  window.__openPublishHomework = openPublishModal;
+
+  /* 写操作仅在「我的任教现状」可用 */
+  function applyWriteState(){
+    var btn = document.getElementById('publishBtn');
+    var note = document.getElementById('readonlyNote');
+    if(currentView === 'mine'){
+      btn.disabled = false; btn.style.opacity = '';
+      note.classList.add('hidden');
+    }else{
+      btn.disabled = true; btn.style.opacity = '.5';
+      note.classList.remove('hidden');
+      note.innerHTML = '<div class="card" style="background:var(--info-bg);border-color:var(--info);color:var(--info);display:flex;align-items:center;gap:8px">' +
+        icon('eye') + ' 当前为只读视图，仅可查看全校统计，下发作业功能已禁用。</div>';
+    }
+  }
+
+  function render(){
+    applyWriteState();
+    var c = document.getElementById('viewContent');
+    if(currentView === 'mine') c.innerHTML = renderMine();
+    else if(currentView === 'subject') c.innerHTML = renderSubject();
+    else c.innerHTML = renderSchool();
+  }
+
+  /* ---------- 视图一：我的任教现状 ---------- */
+  function renderMine(){
+    var hw = store.teacherHomework();
+    var subs = store.teacherSubmissions();
+    var rate = hw.length ? Math.round(subs.length / hw.length * 100) : 0;
+    var cards =
+      '<div class="grid grid-3 mb-4">' +
+        '<div class="card stat-card"><div class="stat-label">任教中作业数</div><div class="stat-value">' + hw.length + '</div><div class="stat-note">任教科目 × 任教班级</div></div>' +
+        '<div class="card stat-card"><div class="stat-label">已提交份数</div><div class="stat-value">' + subs.length + '</div><div class="stat-note">学生已提交的作业份数</div></div>' +
+        '<div class="card stat-card"><div class="stat-label">整体提交率</div><div class="stat-value">' + rate + '%</div><div class="stat-note">已提交 / 作业数</div></div>' +
+      '</div>';
+    if(!hw.length) return cards + emptyState('暂无任教中的作业，点击「下发作业」创建', 'book');
+    var list = hw.map(function(item){
+      var cls = store.getClass(item.classId);
+      var subsOf = store.teacherSubmissions().filter(function(s){ return s.homeworkId === item.id; });
+      var subHtml = subsOf.length
+        ? subsOf.map(function(s){ return '<span class="badge badge-default">' + escapeHtml(s.studentName) + '</span>'; }).join(' ')
+        : '<span class="text-xs text-sub">暂无学生提交</span>';
+      var meta = '<div class="li-meta">' + classBadge(cls ? cls.name : item.classId) + subjectBadge(item.subject) +
+        '<span>' + icon('time') + ' 截止 ' + escapeHtml(item.dueDate) + ' ' + escapeHtml(item.dueTime || '') + '</span>' +
+        '<span class="badge badge-default">难度：' + escapeHtml(item.difficulty || '中') + '</span></div>';
+      return '<div class="list-item">' +
+        '<div class="li-head"><span class="li-title">' + escapeHtml(item.title) + '</span>' + statusBadge(item.status) + '</div>' +
+        meta +
+        (item.desc ? '<div class="text-sm text-sub">' + escapeHtml(item.desc) + '</div>' : '') +
+        '<div class="li-foot"><span class="text-xs text-sub">已提交学生：</span>' +
+        '<span class="flex gap-1" style="flex-wrap:wrap">' + subHtml + '</span></div>' +
+      '</div>';
+    }).join('');
+    return cards + '<div class="grid">' + list + '</div>';
+  }
+
+  /* ---------- 视图二：对应单科情况（只读） ---------- */
+  function renderSubject(){
+    var sub = currentSubject;
+    var ov = store.subjectOverview(sub);
+    var cards =
+      '<div class="grid grid-4 mb-4">' +
+        '<div class="card stat-card"><div class="stat-label">' + escapeHtml(sub) + ' 作业数</div><div class="stat-value">' + ov.homework.length + '</div><div class="stat-note">全校</div></div>' +
+        '<div class="card stat-card"><div class="stat-label">已提交份数</div><div class="stat-value">' + ov.submissions.length + '</div><div class="stat-note">全校</div></div>' +
+        '<div class="card stat-card"><div class="stat-label">成绩公布</div><div class="stat-value">' + ov.grades.length + '</div><div class="stat-note">全校</div></div>' +
+        '<div class="card stat-card"><div class="stat-label">学生提问</div><div class="stat-value">' + ov.questions.length + '</div><div class="stat-note">全校</div></div>' +
+      '</div>';
+    if(!ov.homework.length) return cards + emptyState('该科目暂无作业数据', 'inbox');
+    var list = ov.homework.map(function(h){
+      var cls = store.getClass(h.classId);
+      return '<div class="list-item">' +
+        '<div class="li-head"><span class="li-title">' + escapeHtml(h.title) + '</span>' + statusBadge(h.status) + '</div>' +
+        '<div class="li-meta">' + classBadge(cls ? cls.name : h.classId) + subjectBadge(h.subject) +
+        '<span>' + icon('time') + ' 截止 ' + escapeHtml(h.dueDate) + '</span></div>' +
+      '</div>';
+    }).join('');
+    return cards + '<div class="grid">' + list + '</div>';
+  }
+
+  /* ---------- 视图三：全年段全科情况（只读） ---------- */
+  function renderSchool(){
+    var ov = store.schoolOverview();
+    var summary =
+      '<div class="grid grid-3 mb-4">' +
+        '<div class="card stat-card"><div class="stat-label">全校作业总数</div><div class="stat-value">' + ov.totalHomework + '</div><div class="stat-note">各科合计</div></div>' +
+        '<div class="card stat-card"><div class="stat-label">全校成绩公布</div><div class="stat-value">' + ov.totalGrades + '</div><div class="stat-note">各科合计</div></div>' +
+        '<div class="card stat-card"><div class="stat-label">全校学生提问</div><div class="stat-value">' + ov.totalQuestions + '</div><div class="stat-note">各科合计</div></div>' +
+      '</div>';
+    var subjectCards = '<div class="grid grid-3 mb-4">' + Object.keys(ov.bySubject).map(function(sub){
+      var d = ov.bySubject[sub];
+      return '<div class="card stat-card"><div class="stat-label">' + escapeHtml(sub) + '</div><div class="stat-value">' + d.homework + '</div>' +
+        '<div class="stat-note">作业 ' + d.homework + ' · 提交 ' + d.submissions + ' · 成绩 ' + d.grading + ' · 提问 ' + d.questions + '</div></div>';
+    }).join('') + '</div>';
+    var buckets = store.syncBuckets();
+    var table = '';
+    if(buckets.length){
+      table = '<div class="table-wrap mt-4"><table><thead><tr><th>班级</th><th>科目</th><th>作业</th><th>成绩</th><th>提问</th><th>批改</th></tr></thead><tbody>' +
+        buckets.map(function(b){
+          return '<tr><td>' + classBadge(b.className) + '</td><td>' + subjectBadge(b.subject) + '</td><td>' + b.homework + '</td><td>' + b.grades + '</td><td>' + b.questions + '</td><td>' + b.comments + '</td></tr>';
+        }).join('') + '</tbody></table></div>';
+    }
+    return summary + subjectCards +
+      '<div class="card mt-4"><div class="text-sm text-strong mb-2">全校各科各班数据分桶</div>' + (table || emptyState('暂无班级数据', 'database')) + '</div>';
+  }
+
+  /* ---------- 下发作业 modal ---------- */
+  function openPublishModal(){
+    if(currentView !== 'mine'){ toast('当前为只读视图，仅可查看', 'error'); return; }
+    var classes = DB.teacher.classIds.map(function(id){ return store.getClass(id); }).filter(Boolean);
+    var opts = classes.map(function(c){ return '<option value="' + c.id + '">' + escapeHtml(c.name) + '</option>'; }).join('');
+    var subjOpts = DB.teacher.subjects.map(function(s){ return '<option value="' + s + '">' + escapeHtml(s) + '</option>'; }).join('');
+    openModal(modalHead('下发作业') +
+      '<div class="modal-body">' +
+        '<div class="form-grid">' +
+          '<div class="form-grid-2">' +
+            '<div class="field"><label>任教班级</label><select class="select" id="f_class">' + opts + '</select></div>' +
+            '<div class="field"><label>科目</label><select class="select" id="f_subject">' + subjOpts + '</select></div>' +
+          '</div>' +
+          '<div class="field"><label>作业标题</label><input class="input" id="f_title" placeholder="例如：函数单调性专项练习"></div>' +
+          '<div class="field"><label>作业描述</label><textarea class="textarea" id="f_desc" placeholder="作业要求与说明，可写明完成范围、提交方式等"></textarea></div>' +
+          '<div class="field"><label>截止日期</label><input class="input" id="f_due" type="date"></div>' +
+        '</div>' +
+      '</div>' +
+      '<div class="modal-foot">' +
+        '<button class="btn btn-ghost btn-md" onclick="closeModal()">取消</button>' +
+        '<button class="btn btn-primary btn-md" id="f_submit">确认下发</button>' +
+      '</div>');
+    document.getElementById('f_submit').addEventListener('click', submitPublish);
+  }
+
+  async function submitPublish(){
+    var title = document.getElementById('f_title').value.trim();
+    var due = document.getElementById('f_due').value;
+    if(!title){ toast('请填写作业标题', 'error'); return; }
+    if(!due){ toast('请选择截止日期', 'error'); return; }
+    var btn = document.getElementById('f_submit');
+    btn.disabled = true; btn.textContent = '下发中…';
+    await API.publishHomework({
+      id: 'hw' + Date.now(),
+      classId: document.getElementById('f_class').value,
+      subject: document.getElementById('f_subject').value,
+      title: title,
+      teacher: DB.teacher.name,
+      desc: document.getElementById('f_desc').value.trim(),
+      dueDate: due, dueTime: '20:00', status: 'assigned', difficulty: '中等'
+    });
+    closeModal();
+    toast('作业已下发，同步至云端', 'success');
+    render();
+  }
+
+  render();
+})();
+</script>
+</body>
+</html>

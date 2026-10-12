@@ -1,0 +1,126 @@
+{
+  "version": "2.0.0",
+  "description": "教师智能体备课沙箱 · MCP 服务器配置（完整版）",
+  "globalConfig": {
+    "timeout": 30000,
+    "retry": 2,
+    "transport": "stdio",
+    "autoRestart": true
+  },
+  "servers": {
+    "filesystem": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-filesystem", "./sandbox/workspace"],
+      "env": {},
+      "description": "本地文件系统访问，限定沙箱工作区",
+      "tools": ["read_file", "write_file", "list_directory", "create_directory", "move_file", "search_files", "get_file_info"],
+      "enabled": true,
+      "autoStart": true,
+      "priority": "high"
+    },
+    "fetch": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-fetch"],
+      "env": {},
+      "description": "抓取网页内容并转为 Markdown，供智能体阅读在线教材/教案资源",
+      "tools": ["fetch"],
+      "enabled": true,
+      "autoStart": true,
+      "priority": "high"
+    },
+    "memory": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-memory"],
+      "env": {
+        "MEMORY_FILE": "./sandbox/data/mcp-memory.json"
+      },
+      "description": "知识图谱记忆：存储教师偏好、教学策略、学生学情的实体关系",
+      "tools": ["create_entities", "create_relations", "add_observations", "delete_entities", "delete_relations", "delete_observations", "read_graph", "search_nodes", "open_nodes"],
+      "enabled": true,
+      "autoStart": true,
+      "priority": "high"
+    },
+    "sequential-thinking": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-sequential-thinking"],
+      "env": {},
+      "description": "逐步推理引擎：复杂教学问题分解、多步教案设计、分层教学策略推导",
+      "tools": ["sequentialthinking"],
+      "enabled": true,
+      "autoStart": true,
+      "priority": "medium"
+    },
+    "time": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-time"],
+      "env": {},
+      "description": "时间与时区服务：获取当前时间、计算时间差、学期/课时规划",
+      "tools": ["get_current_time", "convert_time"],
+      "enabled": true,
+      "autoStart": true,
+      "priority": "low"
+    },
+    "puppeteer": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-puppeteer"],
+      "env": {
+        "PUPPETEER_EXECUTABLE_PATH": "/usr/bin/chromium"
+      },
+      "description": "浏览器自动化：网页截图、PDF导出、在线资源采集、动态网页渲染",
+      "tools": ["puppeteer_navigate", "puppeteer_screenshot", "puppeteer_click", "puppeteer_fill", "puppeteer_evaluate", "puppeteer_pdf"],
+      "enabled": true,
+      "autoStart": false,
+      "priority": "medium"
+    },
+    "textbook-knowledge": {
+      "command": "python",
+      "args": ["./mcp/servers/textbook_server.py"],
+      "env": { "TEXTBOOK_ROOT": "../学生端/教材" },
+      "description": "教材知识库：检索各版本教材章节、知识点、例题",
+      "tools": ["search_textbook", "get_chapter", "get_example", "list_versions", "get_knowledge_points"],
+      "enabled": true,
+      "autoStart": false,
+      "priority": "high"
+    },
+    "exam-bank": {
+      "command": "python",
+      "args": ["./mcp/servers/exam_bank_server.py"],
+      "env": { "EXAM_BANK_DB": "./sandbox/data/exam-bank.db" },
+      "description": "题库服务：按知识点/难度检索试题、智能组卷、查重",
+      "tools": ["search_questions", "compose_paper", "check_duplicate", "get_question_detail", "add_question"],
+      "enabled": true,
+      "autoStart": false,
+      "priority": "high"
+    },
+    "learning-analytics": {
+      "command": "python",
+      "args": ["./mcp/servers/learning_data_server.py"],
+      "env": { "DATA_ROOT": "./sandbox/data" },
+      "description": "学情数据：读取班级成绩、生成诊断报告、识别薄弱知识点",
+      "tools": ["get_class_summary", "get_student_detail", "get_weak_points", "get_trend", "generate_report"],
+      "enabled": true,
+      "autoStart": false,
+      "priority": "high"
+    }
+  },
+  "browserFallback": {
+    "enabled": true,
+    "note": "在纯浏览器环境中无后端时，使用内置模拟实现这些工具，保证智能体可用",
+    "fallbacks": {
+      "filesystem": "indexeddb-virtual-fs",
+      "fetch": "browser-fetch-api",
+      "memory": "localStorage-json",
+      "sequential-thinking": "inline-js-reasoning",
+      "time": "javascript-date",
+      "puppeteer": "screenshot-api-fallback",
+      "textbook-knowledge": "mock-textbook-data",
+      "exam-bank": "mock-exam-data",
+      "learning-analytics": "mock-analytics-data"
+    }
+  },
+  "serverEndpoints": {
+    "python": "http://localhost:8000",
+    "node": "http://localhost:8001",
+    "redis": "redis://localhost:6379"
+  }
+}

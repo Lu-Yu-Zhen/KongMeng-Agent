@@ -1,0 +1,1450 @@
+{
+  "subject": "英语",
+  "subject_en": "english",
+  "version": "普通高中英语课程标准（2017年版2020年修订）+ 人教版高中英语教材",
+  "grade_scope": "必修+选择性必修",
+  "nodes": [
+    {
+      "kp_id": "E-M1",
+      "name": "词汇与语法基础",
+      "module": "词汇与语法基础",
+      "grade": "高一、高二",
+      "level": 1,
+      "children": [
+        {
+          "kp_id": "E-M1-C1",
+          "name": "第一章 名词与代词",
+          "chapter": "名词与代词",
+          "grade": "高一",
+          "level": 2,
+          "children": [
+            {
+              "kp_id": "E-M1-C1-S1",
+              "name": "1.1 名词的数与所有格",
+              "section": "名词的数与所有格",
+              "grade": "高一",
+              "level": 3,
+              "children": [
+                {
+                  "kp_id": "E-M1C1S1-KP1",
+                  "name": "可数名词与不可数名词",
+                  "subject": "英语",
+                  "module": "词汇与语法基础",
+                  "chapter": "名词与代词",
+                  "section": "名词的数与所有格",
+                  "grade": "高一",
+                  "level": 4,
+                  "difficulty": 1,
+                  "importance": 3,
+                  "level_requirement": "掌握",
+                  "exam_type": "单选题、语篇填空",
+                  "source": "人教版高中英语必修",
+                  "text": "英语名词分可数名词（countable noun）与不可数名词（uncountable noun）。可数名词有单复数形式，常见复数构成规则为直接加-s（如book→books）、以-s/x/ch/sh结尾加-es（如bus→buses，box→boxes）、以辅音字母+y结尾变y为i再加-es（如baby→babies）。以-f或-fe结尾的词多数变f为v再加-es（如leaf→leaves，但roof→roofs例外）。不可数名词（如water, advice, information, furniture）无复数形式，不能直接与a/an或数词连用，需借助量词表达数量，如a piece of advice、a bottle of water。"
+                },
+                {
+                  "kp_id": "E-M1C1S1-KP2",
+                  "name": "名词所有格",
+                  "subject": "英语",
+                  "module": "词汇与语法基础",
+                  "chapter": "名词与代词",
+                  "section": "名词的数与所有格",
+                  "grade": "高一",
+                  "level": 4,
+                  "difficulty": 2,
+                  "importance": 3,
+                  "level_requirement": "掌握",
+                  "exam_type": "单选题、语篇填空",
+                  "source": "人教版高中英语必修",
+                  "text": "名词所有格（possessive case）表示所属关系。有生命名词一般用's所有格，如the teacher's book；以-s结尾的复数名词只加撇号，如the students' classroom。无生命名词多用of所有格，如the door of the classroom；但表时间、距离、价值、重量时可用's，如two days' time、a mile's distance。双重所有格（double possessive）如a friend of mine表示'我朋友中的一个'，of后须用名词性物主代词或名词。注意区分's所表示的所有格与is/has的缩写形式。"
+                }
+              ]
+            },
+            {
+              "kp_id": "E-M1-C1-S2",
+              "name": "1.2 代词",
+              "section": "代词",
+              "grade": "高一",
+              "level": 3,
+              "children": [
+                {
+                  "kp_id": "E-M1C1S2-KP1",
+                  "name": "人称代词与物主代词",
+                  "subject": "英语",
+                  "module": "词汇与语法基础",
+                  "chapter": "名词与代词",
+                  "section": "代词",
+                  "grade": "高一",
+                  "level": 4,
+                  "difficulty": 1,
+                  "importance": 4,
+                  "level_requirement": "掌握",
+                  "exam_type": "单选题、语篇填空",
+                  "source": "人教版高中英语必修",
+                  "text": "人称代词（personal pronoun）有主格（I, you, he, she, it, we, they）与宾格（me, you, him, her, it, us, them），作主语用主格、作宾语用宾格，介词后也接宾格（between you and me）。物主代词（possessive pronoun）分形容词性（my, your, his, her, its, our, their）与名词性（mine, yours, his, hers, ours, theirs），形容词性不能单独作表语或宾语，名词性物主代词相当于'形容词性物主代词+名词'，如This is mine(=my book)。反身代词（myself, yourself, himself等）用于主语与宾语指同一人，或作强调成分，by oneself意为'独自地'。"
+                },
+                {
+                  "kp_id": "E-M1C1S2-KP2",
+                  "name": "不定代词",
+                  "subject": "英语",
+                  "module": "词汇与语法基础",
+                  "chapter": "名词与代词",
+                  "section": "代词",
+                  "grade": "高一",
+                  "level": 4,
+                  "difficulty": 2,
+                  "importance": 4,
+                  "level_requirement": "掌握",
+                  "exam_type": "单选题、语篇填空",
+                  "source": "人教版高中英语必修",
+                  "text": "不定代词（indefinite pronoun）指不确定的人或物。some用于肯定句，any用于否定句和疑问句，但表请求、建议时some也可用于疑问句，如Would you like some tea?。表示'两个'关系用one...the other（一个另一个）、both/either/neither；表示'多个'用some...others（一些另一些）、another（三者以上中的另一个）、all/any/none。复合不定代词（someone, anybody, nothing等）作主语时谓语动词用单数，且形容词修饰时需后置，如something important。"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kp_id": "E-M1-C2",
+          "name": "第二章 形容词与副词",
+          "chapter": "形容词与副词",
+          "grade": "高一",
+          "level": 2,
+          "children": [
+            {
+              "kp_id": "E-M1-C2-S1",
+              "name": "2.1 比较级与最高级",
+              "section": "比较级与最高级",
+              "grade": "高一",
+              "level": 3,
+              "children": [
+                {
+                  "kp_id": "E-M1C2S1-KP1",
+                  "name": "比较级与最高级的构成",
+                  "subject": "英语",
+                  "module": "词汇与语法基础",
+                  "chapter": "形容词与副词",
+                  "section": "比较级与最高级",
+                  "grade": "高一",
+                  "level": 4,
+                  "difficulty": 2,
+                  "importance": 4,
+                  "level_requirement": "掌握",
+                  "exam_type": "单选题、语篇填空",
+                  "source": "人教版高中英语必修",
+                  "text": "形容词和副词比较级、最高级的构成规则：一般单音节词加-er/-est（如tall→taller→tallest），以e结尾加-r/-st（如large→larger→largest），重读闭音节双写末字母再加-er/-est（如big→bigger），以辅音字母+y结尾变y为i加-er/-est（如happy→happier）。多音节词和多数双音节词前加more/most（如more beautiful）。不规则变化需牢记：good/well→better→best，bad/badly→worse→worst，many/much→more→most，little→less→least，far→farther/further。"
+                },
+                {
+                  "kp_id": "E-M1C2S1-KP2",
+                  "name": "比较等级的用法",
+                  "subject": "英语",
+                  "module": "词汇与语法基础",
+                  "chapter": "形容词与副词",
+                  "section": "比较级与最高级",
+                  "grade": "高一",
+                  "level": 4,
+                  "difficulty": 3,
+                  "importance": 5,
+                  "level_requirement": "掌握",
+                  "exam_type": "单选题、语篇填空",
+                  "source": "人教版高中英语必修",
+                  "text": "比较级用于两者比较，常用结构为'比较级+than'，如He is taller than I。同级比较用as+原级+as表示肯定、not as/so+原级+as表示否定。最高级用于三者以上，通常加the并带in/of范围短语，如the tallest in his class。倍数结构为'倍数+as+原级+as'或'倍数+比较级+than'。固定结构：the+比较级...the+比较级表'越……越……'，如The more you read, the more you learn；比较级+and+比较级表'越来越……'。比较时须保证比较对象对等，避免自我比较。"
+                }
+              ]
+            },
+            {
+              "kp_id": "E-M1-C2-S2",
+              "name": "2.2 形容词副词的基本用法",
+              "section": "形容词副词的基本用法",
+              "grade": "高一",
+              "level": 3,
+              "children": [
+                {
+                  "kp_id": "E-M1C2S2-KP1",
+                  "name": "形容词与副词的位置和功能",
+                  "subject": "英语",
+                  "module": "词汇与语法基础",
+                  "chapter": "形容词与副词",
+                  "section": "形容词副词的基本用法",
+                  "grade": "高一",
+                  "level": 4,
+                  "difficulty": 2,
+                  "importance": 3,
+                  "level_requirement": "理解",
+                  "exam_type": "单选题、语篇填空",
+                  "source": "人教版高中英语必修",
+                  "text": "形容词修饰名词作定语（a beautiful girl）或作表语、宾语补足语（The flower is beautiful. / The news made us happy）。副词修饰动词、形容词、其他副词或整个句子，多位于句末、句首或所修饰词之前。形容词作表语后常接介词短语连用（be good at, be interested in, be proud of）。常见的-ly副词由形容词加-ly构成（careful→carefully），但有的副词与形容词同形（fast, early, hard）。频度副词（often, always, never等）一般放在行为动词之前、be动词之后。"
+                },
+                {
+                  "kp_id": "E-M1C2S2-KP2",
+                  "name": "易混词辨析",
+                  "subject": "英语",
+                  "module": "词汇与语法基础",
+                  "chapter": "形容词与副词",
+                  "section": "形容词副词的基本用法",
+                  "grade": "高一",
+                  "level": 4,
+                  "difficulty": 3,
+                  "importance": 3,
+                  "level_requirement": "理解",
+                  "exam_type": "单选题、完形填空",
+                  "source": "人教版高中英语必修",
+                  "text": "常见易混词辨析：quite（相当、十分）与quiet（安静的）；hard（努力地）与hardly（几乎不）；late（迟）与lately（最近）；high（高地）与highly（高度地，表抽象）；deep（深地）与deeply（深深地，表抽象）。fairly与rather都表'相当'，但rather可与比较级和too连用。注意既可作形容词又可作副词的词（如fast, early）。解题时需根据句意和所修饰的成分判断词性与具体含义，并结合固定搭配作答。"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kp_id": "E-M1-C3",
+          "name": "第三章 动词时态与语态",
+          "chapter": "动词时态与语态",
+          "grade": "高一",
+          "level": 2,
+          "children": [
+            {
+              "kp_id": "E-M1-C3-S1",
+              "name": "3.1 常用时态",
+              "section": "常用时态",
+              "grade": "高一",
+              "level": 3,
+              "children": [
+                {
+                  "kp_id": "E-M1C3S1-KP1",
+                  "name": "一般时态与进行时态",
+                  "subject": "英语",
+                  "module": "词汇与语法基础",
+                  "chapter": "动词时态与语态",
+                  "section": "常用时态",
+                  "grade": "高一",
+                  "level": 4,
+                  "difficulty": 2,
+                  "importance": 5,
+                  "level_requirement": "掌握",
+                  "exam_type": "单选题、语篇填空",
+                  "source": "人教版高中英语必修",
+                  "text": "一般现在时表示经常性动作、习惯或客观事实，主语为第三人称单数时动词加-s/-es，常见时间状语有always, usually, every day。一般过去时表示过去发生的动作或存在的状态，规则动词加-ed，常与yesterday, last week等连用。现在进行时（am/is/are doing）表示说话时正在进行的动作，过去进行时（was/were doing）表示过去某一时刻正在进行的动作。一般现在时还可表示按时刻表安排好的将来，如The train leaves at 8。注意always等词与进行时连用可表达表扬或批评等感情色彩，如He is always complaining。"
+                },
+                {
+                  "kp_id": "E-M1C3S1-KP2",
+                  "name": "完成时态",
+                  "subject": "英语",
+                  "module": "词汇与语法基础",
+                  "chapter": "动词时态与语态",
+                  "section": "常用时态",
+                  "grade": "高一",
+                  "level": 4,
+                  "difficulty": 3,
+                  "importance": 5,
+                  "level_requirement": "掌握",
+                  "exam_type": "单选题、语篇填空",
+                  "source": "人教版高中英语必修",
+                  "text": "现在完成时（have/has done）表示过去发生的动作对现在造成影响或结果，或动作从过去持续到现在，常与already, yet, recently, since, for, so far等连用。过去完成时（had done）表示'过去的过去'，常用于含明确过去参照点的主从句中。现在完成进行时（have/has been doing）强调动作从过去一直持续到现在并可能继续。注意瞬间动词（如come, leave, buy, die）不与for/since引导的时间段连用，需转换为相应的延续性动词或状态动词（如be here, be away, have）。完成时态是高考时态考查的重点。"
+                }
+              ]
+            },
+            {
+              "kp_id": "E-M1-C3-S2",
+              "name": "3.2 时态呼应与被动态",
+              "section": "时态呼应与被动态",
+              "grade": "高一",
+              "level": 3,
+              "children": [
+                {
+                  "kp_id": "E-M1C3S2-KP1",
+                  "name": "时态一致",
+                  "subject": "英语",
+                  "module": "词汇与语法基础",
+                  "chapter": "动词时态与语态",
+                  "section": "时态呼应与被动态",
+                  "grade": "高一",
+                  "level": 4,
+                  "difficulty": 3,
+                  "importance": 4,
+                  "level_requirement": "掌握",
+                  "exam_type": "单选题、语篇填空",
+                  "source": "人教版高中英语必修",
+                  "text": "时态一致（sequence of tenses）指主从复合句中从句的动词时态须与主句时态相呼应。主句为一般过去时时，宾语从句常用相应的过去时态（一般过去时、过去进行时、过去完成时），但表示客观真理、自然现象和习惯事实的从句仍用一般现在时，如The teacher said that the earth moves around the sun。主句为一般现在时，从句可根据实际需要选用任何时态。在时间状语从句和条件状语从句中，主句用将来时、从句用一般现在时表将来，即'主将从现'。"
+                },
+                {
+                  "kp_id": "E-M1C3S2-KP2",
+                  "name": "被动语态",
+                  "subject": "英语",
+                  "module": "词汇与语法基础",
+                  "chapter": "动词时态与语态",
+                  "section": "时态呼应与被动态",
+                  "grade": "高一",
+                  "level": 4,
+                  "difficulty": 3,
+                  "importance": 5,
+                  "level_requirement": "掌握",
+                  "exam_type": "单选题、语篇填空",
+                  "source": "人教版高中英语必修",
+                  "text": "被动语态由'be+过去分词'构成，be随人称、数和时态变化，如am/is/are done（一般现在时）、was/were done（一般过去时）、will be done（一般将来时）、have/has been done（现在完成时）。只有及物动词和及物动词短语带宾语才有被动形式。主动变被动时：宾语变主语、谓语变为be+过去分词、原主语用by引出（可省略）。注意含情态动词的被动态为'modal verbs+be+done'；get+过去分词也可表被动并强调动作结果；无被动的动词如happen, appear, belong to等需牢记。"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kp_id": "E-M1-C4",
+          "name": "第四章 非谓语动词",
+          "chapter": "非谓语动词",
+          "grade": "高二",
+          "level": 2,
+          "children": [
+            {
+              "kp_id": "E-M1-C4-S1",
+              "name": "4.1 不定式与动名词",
+              "section": "不定式与动名词",
+              "grade": "高二",
+              "level": 3,
+              "children": [
+                {
+                  "kp_id": "E-M1C4S1-KP1",
+                  "name": "动词不定式",
+                  "subject": "英语",
+                  "module": "词汇与语法基础",
+                  "chapter": "非谓语动词",
+                  "section": "不定式与动名词",
+                  "grade": "高二",
+                  "level": 4,
+                  "difficulty": 3,
+                  "importance": 5,
+                  "level_requirement": "掌握",
+                  "exam_type": "单选题、语篇填空",
+                  "source": "人教版高中英语选择性必修",
+                  "text": "动词不定式（infinitive, to do）可作主语（To learn English is important）、宾语（I want to go）、定语（something to do）、状语（表目的：He came to help me）等。后接不定式作宾语的常用动词：want, decide, hope, agree, plan, refuse, offer等。带逻辑主语用for sb to do；疑问词+不定式（what to do）可作宾语。感官动词和使役动词后接不定式作宾补时省略to（see/watch/hear sb do, make/let/have sb do），变为被动语态时须还原to（He was seen to do it）。"
+                },
+                {
+                  "kp_id": "E-M1C4S1-KP2",
+                  "name": "动名词",
+                  "subject": "英语",
+                  "module": "词汇与语法基础",
+                  "chapter": "非谓语动词",
+                  "section": "不定式与动名词",
+                  "grade": "高二",
+                  "level": 4,
+                  "difficulty": 3,
+                  "importance": 5,
+                  "level_requirement": "掌握",
+                  "exam_type": "单选题、语篇填空",
+                  "source": "人教版高中英语选择性必修",
+                  "text": "动名词（gerund, doing）起名词作用，可作主语（Reading aloud helps a lot）、宾语、表语和定语。后接动名词的常用动词：enjoy, finish, mind, avoid, practice, suggest, keep, consider等；介词后也常接动名词（be good at doing, look forward to doing, instead of doing）。注意既可接不定式又可接动名词但意义不同的动词：remember/forget to do（记得/忘记去做）与remember/forget doing（记得/忘记做过），stop to do（停下来去做）与stop doing（停止做），try to do（尽力做）与try doing（试着做）。"
+                }
+              ]
+            },
+            {
+              "kp_id": "E-M1-C4-S2",
+              "name": "4.2 分词",
+              "section": "分词",
+              "grade": "高二",
+              "level": 3,
+              "children": [
+                {
+                  "kp_id": "E-M1C4S2-KP1",
+                  "name": "分词作定语和表语",
+                  "subject": "英语",
+                  "module": "词汇与语法基础",
+                  "chapter": "非谓语动词",
+                  "section": "分词",
+                  "grade": "高二",
+                  "level": 4,
+                  "difficulty": 3,
+                  "importance": 4,
+                  "level_requirement": "掌握",
+                  "exam_type": "单选题、语篇填空",
+                  "source": "人教版高中英语选择性必修",
+                  "text": "现在分词（doing）表主动、进行，过去分词（done）表被动、完成，二者均可作定语：单个分词作定语置于名词前（a running boy表主动, a broken window表被动），分词短语作定语须后置（the book written by him）。作表语时，现在分词常表示事物本身'令人……'的特征（如exciting令人兴奋的），过去分词表示人'感到……'的感受（如excited感到兴奋的）。判断依据是看被修饰或说明的主语与动作的关系：主动用现在分词、被动用过去分词。"
+                },
+                {
+                  "kp_id": "E-M1C4S2-KP2",
+                  "name": "分词作状语与独立主格",
+                  "subject": "英语",
+                  "module": "词汇与语法基础",
+                  "chapter": "非谓语动词",
+                  "section": "分词",
+                  "grade": "高二",
+                  "level": 4,
+                  "difficulty": 4,
+                  "importance": 5,
+                  "level_requirement": "掌握",
+                  "exam_type": "单选题、语篇填空",
+                  "source": "人教版高中英语选择性必修",
+                  "text": "分词（短语）作状语可表时间、原因、条件、伴随等，其逻辑主语须与句子主语一致：主语与动作为主动关系用现在分词，为被动关系用过去分词，如Seeing the teacher, the students stood up.（主动）和Given more time, he could do better.（被动）。分词作状语可与when/while/after等连词连用，如While walking in the park, I met an old friend。另有固定独立成分如generally speaking（一般说来）、judging from（根据……判断）。带自身逻辑主语的称为独立主格结构（independent genitive），如Weather permitting, we will go out，可保留being或省略。"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kp_id": "E-M1-C5",
+          "name": "第五章 情态动词",
+          "chapter": "情态动词",
+          "grade": "高二",
+          "level": 2,
+          "children": [
+            {
+              "kp_id": "E-M1-C5-S1",
+              "name": "5.1 情态动词的基本用法",
+              "section": "情态动词的基本用法",
+              "grade": "高二",
+              "level": 3,
+              "children": [
+                {
+                  "kp_id": "E-M1C5S1-KP1",
+                  "name": "常见情态动词用法",
+                  "subject": "英语",
+                  "module": "词汇与语法基础",
+                  "chapter": "情态动词",
+                  "section": "情态动词的基本用法",
+                  "grade": "高二",
+                  "level": 4,
+                  "difficulty": 2,
+                  "importance": 4,
+                  "level_requirement": "掌握",
+                  "exam_type": "单选题、语篇填空",
+                  "source": "人教版高中英语选择性必修",
+                  "text": "情态动词（modal verbs）本身有词义，表示说话人的态度或推测，后接动词原形，无人称和数的变化。can/could表能力或可能性，may/might表允许或推测，must表必须或（肯定）推测，should表应该，need表需要，dare表敢。表推测时语气强弱：must（一定）>can/could（可能）>may/might（也许）；否定推测用can't/couldn't（不可能）。情态动词+have done表示对过去情况的推测，如must have done（一定已做）、needn't have done（本不必做）。"
+                },
+                {
+                  "kp_id": "E-M1C5S1-KP2",
+                  "name": "情态动词的辨析与否定",
+                  "subject": "英语",
+                  "module": "词汇与语法基础",
+                  "chapter": "情态动词",
+                  "section": "情态动词的基本用法",
+                  "grade": "高二",
+                  "level": 4,
+                  "difficulty": 3,
+                  "importance": 4,
+                  "level_requirement": "掌握",
+                  "exam_type": "单选题、语篇填空",
+                  "source": "人教版高中英语选择性必修",
+                  "text": "must的否定为mustn't，表示'禁止、不准'，而表示'不必'用needn't或don't have to。can't表'不可能'或'不能'，mustn't表'不准'，二者语义不同。should表'应该'，也可表推测'按道理应该'。shall用于第一人称征询意见（Shall I open the door?），will/would表意愿。need和dare既可作情态动词（多用于否定句和疑问句，如Dare he go?）也可作实义动词，作实义动词时有人称、数、时态的变化，其后接不定式（need to do）。"
+                }
+              ]
+            },
+            {
+              "kp_id": "E-M1-C5-S2",
+              "name": "5.2 情态动词+have done",
+              "section": "情态动词+have done",
+              "grade": "高二",
+              "level": 3,
+              "children": [
+                {
+                  "kp_id": "E-M1C5S2-KP1",
+                  "name": "情态动词+have done的用法",
+                  "subject": "英语",
+                  "module": "词汇与语法基础",
+                  "chapter": "情态动词",
+                  "section": "情态动词+have done",
+                  "grade": "高二",
+                  "level": 4,
+                  "difficulty": 4,
+                  "importance": 5,
+                  "level_requirement": "掌握",
+                  "exam_type": "单选题、完形填空",
+                  "source": "人教版高中英语选择性必修",
+                  "text": "情态动词+have done用于对过去动作的推测或虚拟假设：must have done（一定做过，肯定推测）、can't/couldn't have done（不可能做过）、may/might have done（可能做过）、should have done（本应做而未做）、shouldn't have done（本不该做却做了）、needn't have done（本不必做但做了）、could have done（本能够做）。这些结构常出现在单项选择和完形填空中。答题时先判断是对过去的推测还是对过去的虚拟，再结合语境选择相应的情态动词。"
+                },
+                {
+                  "kp_id": "E-M1C5S2-KP2",
+                  "name": "情态动词的特殊用法",
+                  "subject": "英语",
+                  "module": "词汇与语法基础",
+                  "chapter": "情态动词",
+                  "section": "情态动词+have done",
+                  "grade": "高二",
+                  "level": 4,
+                  "difficulty": 4,
+                  "importance": 4,
+                  "level_requirement": "理解",
+                  "exam_type": "单选题、完形填空",
+                  "source": "人教版高中英语选择性必修",
+                  "text": "情态动词的特殊用法：will/would表意愿和习惯，used to和would都可表过去经常发生的习惯性动作；shall用于第一、三人称表建议、许诺或征求意见；may用于表祝愿（May you succeed!）。表推测时，若动作正在进行用'modals+be doing'，若动作已经完成用'modals+have done'。在反意疑问句中，情态动词的否定形式需根据语境判断，如'dare'和'used to'的附加疑问形式较特殊。情态动词表推测时不用于真实发生的肯定句中的一般将来。"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kp_id": "E-M1-C6",
+          "name": "第六章 虚拟语气",
+          "chapter": "虚拟语气",
+          "grade": "高二",
+          "level": 2,
+          "children": [
+            {
+              "kp_id": "E-M1-C6-S1",
+              "name": "6.1 if条件句的虚拟",
+              "section": "if条件句的虚拟",
+              "grade": "高二",
+              "level": 3,
+              "children": [
+                {
+                  "kp_id": "E-M1C6S1-KP1",
+                  "name": "与现在或将来事实相反",
+                  "subject": "英语",
+                  "module": "词汇与语法基础",
+                  "chapter": "虚拟语气",
+                  "section": "if条件句的虚拟",
+                  "grade": "高二",
+                  "level": 4,
+                  "difficulty": 3,
+                  "importance": 5,
+                  "level_requirement": "掌握",
+                  "exam_type": "单选题、语篇填空",
+                  "source": "人教版高中英语选择性必修",
+                  "text": "虚拟语气（subjunctive mood）表示说话人主观愿望或与事实相反的假设。与现在事实相反：if+主语+动词过去式（be一律用were），主句用would/could/might+动词原形，如If I were you, I would accept the offer。与将来事实相反：if+主语+should+动词原形（或用动词过去式、were to do），主句用would/should+动词原形。注意if从句中的be动词在虚拟语气中一律用were（If I were a bird）。高考重点考查主从句时态的对应关系。"
+                },
+                {
+                  "kp_id": "E-M1C6S1-KP2",
+                  "name": "与过去事实相反",
+                  "subject": "英语",
+                  "module": "词汇与语法基础",
+                  "chapter": "虚拟语气",
+                  "section": "if条件句的虚拟",
+                  "grade": "高二",
+                  "level": 4,
+                  "difficulty": 4,
+                  "importance": 5,
+                  "level_requirement": "掌握",
+                  "exam_type": "单选题、语篇填空",
+                  "source": "人教版高中英语选择性必修",
+                  "text": "与过去事实相反：if+主语+had done，主句用would/should/could/might+have done，如If you had come earlier, you would have met him。混合虚拟（错综条件句）：条件从句与过去事实相反、主句与现在事实相反时，从句用had done、主句用would+动词原形，如If you had studied hard, you would be successful now。若省略if，需将were/had/should提前形成部分倒装，如Had I known the news, I would have told you。"
+                }
+              ]
+            },
+            {
+              "kp_id": "E-M1-C6-S2",
+              "name": "6.2 虚拟语气在其他句式",
+              "section": "虚拟语气在其他句式",
+              "grade": "高二",
+              "level": 3,
+              "children": [
+                {
+                  "kp_id": "E-M1C6S2-KP1",
+                  "name": "宾语从句中的虚拟",
+                  "subject": "英语",
+                  "module": "词汇与语法基础",
+                  "chapter": "虚拟语气",
+                  "section": "虚拟语气在其他句式",
+                  "grade": "高二",
+                  "level": 4,
+                  "difficulty": 4,
+                  "importance": 5,
+                  "level_requirement": "掌握",
+                  "exam_type": "单选题、语篇填空",
+                  "source": "人教版高中英语选择性必修",
+                  "text": "wish后的宾语从句用虚拟语气：与现在事实相反用过去式（be用were），与过去事实相反用had done，与将来事实相反用would/could+动词原形。would rather后的从句表愿望用过去式或过去完成时。动词suggest（建议）、demand, require, order, insist（坚持）、request等后接宾语从句时，从句用'（should+）动词原形'，should可省略。注意suggest表'建议'时用虚拟、表'暗示'时用陈述语气，insist表'坚持主张'时用虚拟、表'坚持认为'时用陈述语气。"
+                },
+                {
+                  "kp_id": "E-M1C6S2-KP2",
+                  "name": "名词性从句与固定句式中的虚拟",
+                  "subject": "英语",
+                  "module": "词汇与语法基础",
+                  "chapter": "虚拟语气",
+                  "section": "虚拟语气在其他句式",
+                  "grade": "高二",
+                  "level": 4,
+                  "difficulty": 4,
+                  "importance": 4,
+                  "level_requirement": "掌握",
+                  "exam_type": "单选题、语篇填空",
+                  "source": "人教版高中英语选择性必修",
+                  "text": "在It is/was+形容词（如necessary, important, essential, natural）+that从句中，从句用（should+）动词原形。advice, suggestion, demand, order等名词后接的同位语从句和表语从句也用（should+）动词原形。常用虚拟句式：as if/though（好像）后可用虚拟语气，It's (high) time that后用过去式或should+动词原形（用should时不可省略），if only（要是……就好了）后用虚拟语气，without/but for（要不是）表虚拟条件。这些是高考虚拟语气的常考点。"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kp_id": "E-M1-C7",
+          "name": "第七章 三大从句",
+          "chapter": "三大从句",
+          "grade": "高二",
+          "level": 2,
+          "children": [
+            {
+              "kp_id": "E-M1-C7-S1",
+              "name": "7.1 定语从句",
+              "section": "定语从句",
+              "grade": "高二",
+              "level": 3,
+              "children": [
+                {
+                  "kp_id": "E-M1C7S1-KP1",
+                  "name": "关系代词的选择",
+                  "subject": "英语",
+                  "module": "词汇与语法基础",
+                  "chapter": "三大从句",
+                  "section": "定语从句",
+                  "grade": "高二",
+                  "level": 4,
+                  "difficulty": 3,
+                  "importance": 5,
+                  "level_requirement": "掌握",
+                  "exam_type": "单选题、语篇填空",
+                  "source": "人教版高中英语选择性必修",
+                  "text": "定语从句（attributive clause）由关系词引导修饰先行词。关系代词that, which, who, whom, whose的选用取决于先行词指人还是指物以及在从句中充当的成分：先行词指人且作主语用who/that，作宾语用whom/who/that；先行词指物作主语或宾语用which/that；whose表所属关系作定语（whose book）。只用that不用which的情况：先行词为不定代词、被序数词/最高级/only/very等修饰、先行词既含人又含物等；只用which不用that的情况：介词+which、非限制性定语从句中。"
+                },
+                {
+                  "kp_id": "E-M1C7S1-KP2",
+                  "name": "关系副词的选择",
+                  "subject": "英语",
+                  "module": "词汇与语法基础",
+                  "chapter": "三大从句",
+                  "section": "定语从句",
+                  "grade": "高二",
+                  "level": 4,
+                  "difficulty": 3,
+                  "importance": 5,
+                  "level_requirement": "掌握",
+                  "exam_type": "单选题、语篇填空",
+                  "source": "人教版高中英语选择性必修",
+                  "text": "关系副词where, when, why在从句中分别作地点、时间、原因状语，相当于'介词+which'（where=in/at+which，when=at/in+which，why=for+which）。选择关系词的关键是分析先行词在从句中作状语还是作主语/宾语：作状语用关系副词，作主语或宾语用关系代词。非限制性定语从句（用逗号与主句隔开）不能用that，常用which, who, whose。as与which引导非限制性定语从句的区别：as可置于句首且表示'正如'（as we know），which不能放在句首。"
+                }
+              ]
+            },
+            {
+              "kp_id": "E-M1-C7-S2",
+              "name": "7.2 名词性从句与状语从句",
+              "section": "名词性从句与状语从句",
+              "grade": "高二",
+              "level": 3,
+              "children": [
+                {
+                  "kp_id": "E-M1C7S2-KP1",
+                  "name": "名词性从句",
+                  "subject": "英语",
+                  "module": "词汇与语法基础",
+                  "chapter": "三大从句",
+                  "section": "名词性从句与状语从句",
+                  "grade": "高二",
+                  "level": 4,
+                  "difficulty": 3,
+                  "importance": 5,
+                  "level_requirement": "掌握",
+                  "exam_type": "单选题、语篇填空",
+                  "source": "人教版高中英语选择性必修",
+                  "text": "名词性从句（noun clause）包括主语从句、宾语从句、表语从句和同位语从句。引导词：that（表陈述，在从句中不作成分、无含义）、whether/if（是否）、连接代词（what, who, which）、连接副词（when, where, why, how）。what与that的区别：what在从句中作主语或宾语且有含义（……的事/东西），that不作成分、无含义。whether与if在宾语从句中可互换，但主语从句、表语从句、介词宾语及与or not连用时只能用whether。it可作形式主语或形式宾语（I think it important that...）。"
+                },
+                {
+                  "kp_id": "E-M1C7S2-KP2",
+                  "name": "状语从句",
+                  "subject": "英语",
+                  "module": "词汇与语法基础",
+                  "chapter": "三大从句",
+                  "section": "名词性从句与状语从句",
+                  "grade": "高二",
+                  "level": 4,
+                  "difficulty": 3,
+                  "importance": 5,
+                  "level_requirement": "掌握",
+                  "exam_type": "单选题、语篇填空",
+                  "source": "人教版高中英语选择性必修",
+                  "text": "状语从句（adverbial clause）包括时间、原因、条件、让步、目的、结果、方式、比较等类型。时间状语从句用when, while, as, before, after, until, since, as soon as等，主句将来时、从句用一般现在时。原因用because, since, as；条件用if, unless, as long as；让步用although/though（不与but连用）、even if、no matter+疑问词。目的用so that, in order that；结果用so...that, such...that；比较用as...as, than。解题时根据语境判断主从句的逻辑关系选择恰当的从属连词。"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kp_id": "E-M1-C8",
+          "name": "第八章 特殊句式",
+          "chapter": "特殊句式",
+          "grade": "高二",
+          "level": 2,
+          "children": [
+            {
+              "kp_id": "E-M1-C8-S1",
+              "name": "8.1 倒装句",
+              "section": "倒装句",
+              "grade": "高二",
+              "level": 3,
+              "children": [
+                {
+                  "kp_id": "E-M1C8S1-KP1",
+                  "name": "完全倒装与部分倒装",
+                  "subject": "英语",
+                  "module": "词汇与语法基础",
+                  "chapter": "特殊句式",
+                  "section": "倒装句",
+                  "grade": "高二",
+                  "level": 4,
+                  "difficulty": 4,
+                  "importance": 4,
+                  "level_requirement": "掌握",
+                  "exam_type": "单选题、语篇填空",
+                  "source": "人教版高中英语选择性必修",
+                  "text": "倒装句（inversion）分完全倒装和部分倒装。完全倒装：here/there/now/then+动词+主语，或表地点的介词短语置于句首（Under the tree sat a boy）；主语为代词时不倒装。部分倒装：否定词（never, hardly, seldom, rarely, not only...but also, no sooner...than, not until）置于句首时，助动词/情态动词/be提前；only+状语置于句首时部分倒装；so/neither/nor置于句首表'也/也不'时倒装（So do I）。as/though引导让步状语从句时表语或状语提前（Child as he is, he knows a lot）。"
+                },
+                {
+                  "kp_id": "E-M1C8S1-KP2",
+                  "name": "倒装句的辨析",
+                  "subject": "英语",
+                  "module": "词汇与语法基础",
+                  "chapter": "特殊句式",
+                  "section": "倒装句",
+                  "grade": "高二",
+                  "level": 4,
+                  "difficulty": 4,
+                  "importance": 4,
+                  "level_requirement": "掌握",
+                  "exam_type": "单选题、语篇填空",
+                  "source": "人教版高中英语选择性必修",
+                  "text": "so的倒装与so的代替用法：so+助动词+主语表示'某人也……'（So does he），so+主语+助动词表示'的确如此'（表强调、主谓不倒装，如So he does）。neither/nor+助动词+主语表'某人也不……'。only+状语时倒装，而only+主语时不倒装。句首为否定词须部分倒装，选择助动词时注意句子的时态与人称（一般现在时用do/does，过去时用did）。not until置于句首时主句倒装。解答倒装题时先判断是否倒装，再确定助动词形式。"
+                }
+              ]
+            },
+            {
+              "kp_id": "E-M1-C8-S2",
+              "name": "8.2 强调句与There be句型",
+              "section": "强调句与There be句型",
+              "grade": "高二",
+              "level": 3,
+              "children": [
+                {
+                  "kp_id": "E-M1C8S2-KP1",
+                  "name": "强调句",
+                  "subject": "英语",
+                  "module": "词汇与语法基础",
+                  "chapter": "特殊句式",
+                  "section": "强调句与There be句型",
+                  "grade": "高二",
+                  "level": 4,
+                  "difficulty": 3,
+                  "importance": 4,
+                  "level_requirement": "掌握",
+                  "exam_type": "单选题、语篇填空",
+                  "source": "人教版高中英语选择性必修",
+                  "text": "强调句型：It is/was+被强调部分+that/who+其余部分，可强调主语、宾语、状语（不能直接强调谓语和表语）。强调人时可用who或that，强调其他成分一律用that。判断强调句的方法：去掉'It is/was...that/who'后句子仍完整则是强调句。对时间状语、地点状语强调时仍用that，不能用when或where。注意强调句与主语从句的区别：强调句去掉It is...that后结构完整，主语从句去掉后不完整。强调句常与倒装、时态结合考查。"
+                },
+                {
+                  "kp_id": "E-M1C8S2-KP2",
+                  "name": "There be句型与It句型",
+                  "subject": "英语",
+                  "module": "词汇与语法基础",
+                  "chapter": "特殊句式",
+                  "section": "强调句与There be句型",
+                  "grade": "高二",
+                  "level": 4,
+                  "difficulty": 2,
+                  "importance": 3,
+                  "level_requirement": "掌握",
+                  "exam_type": "单选题、语篇填空",
+                  "source": "人教版高中英语选择性必修",
+                  "text": "There be句型表示'某处有某物'，be动词采取就近原则，与最近的名词单复数保持一致，如There is a pen and two books on the desk。There be可与情态动词、时态结合（There will be, There used to be, There is going to be）。There be表存在，have表所属，二者不同义。常用It句型：It takes sb some time to do（花费）、It is+adj+for/of sb to do、It is no use doing、It seems/appears that等。解题时注意区分There be句型与It is句型（It is a book）。"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "kp_id": "E-M2",
+      "name": "语言技能",
+      "module": "语言技能",
+      "grade": "高一、高二",
+      "level": 1,
+      "children": [
+        {
+          "kp_id": "E-M2-C1",
+          "name": "第一章 听力与口语",
+          "chapter": "听力与口语",
+          "grade": "高一",
+          "level": 2,
+          "children": [
+            {
+              "kp_id": "E-M2-C1-S1",
+              "name": "1.1 听力理解",
+              "section": "听力理解",
+              "grade": "高一",
+              "level": 3,
+              "children": [
+                {
+                  "kp_id": "E-M2C1S1-KP1",
+                  "name": "听力理解策略",
+                  "subject": "英语",
+                  "module": "语言技能",
+                  "chapter": "听力与口语",
+                  "section": "听力理解",
+                  "grade": "高一",
+                  "level": 4,
+                  "difficulty": 3,
+                  "importance": 4,
+                  "level_requirement": "运用",
+                  "exam_type": "听力测试",
+                  "source": "人教版高中英语必修",
+                  "text": "听力理解（listening comprehension）要求听懂对话或独白的大意、细节、人物关系、地点和说话人态度。解题策略：听前预览题目，圈出关键词预测内容和话题；听时注意数字、时间、地点、人物关系等细节信息；特别关注转折词（but, however, yet）后的信息，因为答案常出现在转折之后。注意同义替换，听力材料常以不同表达替换选项中的原词。平时多听英美原声材料，训练语速适应以及对连读、弱读、失去爆破等语音现象的识别。"
+                },
+                {
+                  "kp_id": "E-M2C1S1-KP2",
+                  "name": "常见听力场景与话题",
+                  "subject": "英语",
+                  "module": "语言技能",
+                  "chapter": "听力与口语",
+                  "section": "听力理解",
+                  "grade": "高一",
+                  "level": 4,
+                  "difficulty": 3,
+                  "importance": 3,
+                  "level_requirement": "理解",
+                  "exam_type": "听力测试",
+                  "source": "人教版高中英语必修",
+                  "text": "高考听力常见场景包括校园、购物、餐饮、问路、打电话、天气、旅行、就医等，需熟悉各场景的常用表达和词汇。如购物场景涉及price, size, discount, change；问路涉及turn left/right, go straight, at the corner；就医涉及symptom, medicine, appointment。判断人物关系（如student-teacher, customer-salesperson）可通过双方称呼和语境推断。听的过程要快速记录关键信息，结合常识排除明显干扰项。听力试题一般分两节，第一节为短对话，第二节为较长的对话或独白。"
+                }
+              ]
+            },
+            {
+              "kp_id": "E-M2-C1-S2",
+              "name": "1.2 口语表达",
+              "section": "口语表达",
+              "grade": "高一",
+              "level": 3,
+              "children": [
+                {
+                  "kp_id": "E-M2C1S2-KP1",
+                  "name": "口语交际功能",
+                  "subject": "英语",
+                  "module": "语言技能",
+                  "chapter": "听力与口语",
+                  "section": "口语表达",
+                  "grade": "高一",
+                  "level": 4,
+                  "difficulty": 2,
+                  "importance": 3,
+                  "level_requirement": "运用",
+                  "exam_type": "口语测试",
+                  "source": "人教版高中英语必修",
+                  "text": "课标要求学生能运用英语进行日常和课堂交际。常见口语功能项目：问候与告别（Hello, How are you? / Goodbye, See you）、介绍（This is...）、感谢（Thank you very much.）、道歉（I'm sorry. / I apologize for...）、请求与允许（Could I...? / May I...?）、建议（Why not...? / What about...?）、邀请（Would you like to...?）、表达观点（In my opinion...）。口语应答要符合英语习惯，避免中式表达。请求时注意使用Could you please...等委婉得体的表达。"
+                },
+                {
+                  "kp_id": "E-M2C1S2-KP2",
+                  "name": "口语会话原则",
+                  "subject": "英语",
+                  "module": "语言技能",
+                  "chapter": "听力与口语",
+                  "section": "口语表达",
+                  "grade": "高一",
+                  "level": 4,
+                  "difficulty": 2,
+                  "importance": 3,
+                  "level_requirement": "运用",
+                  "exam_type": "口语测试",
+                  "source": "人教版高中英语必修",
+                  "text": "会话中要注意话轮转换（turn-taking）和衔接自然，回应对方提议或观点时先表态再说明理由（I agree with you, but... / I'm afraid I disagree because...）。表达观点可用In my opinion, I think, As far as I'm concerned, From my point of view等。注意语境和语体：正式场合用书面化、得体的表达，非正式场合可用简短的口语化表达。高考口语（或人机对话听说测试）常考查情景对话对答，需根据对方的话轮内容选择恰当、得体的应答，避免生硬套用。"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kp_id": "E-M2-C2",
+          "name": "第二章 阅读与完形",
+          "chapter": "阅读与完形",
+          "grade": "高一",
+          "level": 2,
+          "children": [
+            {
+              "kp_id": "E-M2-C2-S1",
+              "name": "2.1 阅读理解",
+              "section": "阅读理解",
+              "grade": "高一",
+              "level": 3,
+              "children": [
+                {
+                  "kp_id": "E-M2C2S1-KP1",
+                  "name": "阅读理解题型与主旨大意题",
+                  "subject": "英语",
+                  "module": "语言技能",
+                  "chapter": "阅读与完形",
+                  "section": "阅读理解",
+                  "grade": "高一",
+                  "level": 4,
+                  "difficulty": 3,
+                  "importance": 5,
+                  "level_requirement": "运用",
+                  "exam_type": "阅读理解",
+                  "source": "人教版高中英语必修",
+                  "text": "阅读理解常见题型包括主旨大意题、细节理解题、推理判断题、词义猜测题和观点态度题。主旨大意题（main idea）要求概括文章或段落中心，通常可通过首尾段、段落主题句和反复出现的关键词来把握，选项过度泛化或以偏概全的一般不正确。细节题需定位到原文对应之处，注意同义转换，警惕张冠李戴、无中生有的干扰项。解题策略是先浏览题干和选项、再带着问题精读相应段落，避免主观臆断和凭常识代替原文信息。"
+                },
+                {
+                  "kp_id": "E-M2C2S1-KP2",
+                  "name": "推理判断与词义猜测",
+                  "subject": "英语",
+                  "module": "语言技能",
+                  "chapter": "阅读与完形",
+                  "section": "阅读理解",
+                  "grade": "高一",
+                  "level": 4,
+                  "difficulty": 4,
+                  "importance": 5,
+                  "level_requirement": "运用",
+                  "exam_type": "阅读理解",
+                  "source": "人教版高中英语必修",
+                  "text": "推理判断题（inference）要求根据文章内容推断隐含信息，正确选项是对原文的合理推导，不能直接照抄原文，常用infer, imply, suggest, conclude等提问。词义猜测题可利用构词法（前缀、后缀、合成）、上下文逻辑关系（因果、转折、同位、举例、定义）以及生活常识推断生词含义。观点态度题通过作者用词（如positive, negative, doubtful, objective）判断其立场。阅读中还需注意长难句的语法分析，抓句子主干、去枝叶，把握句意。"
+                }
+              ]
+            },
+            {
+              "kp_id": "E-M2-C2-S2",
+              "name": "2.2 完形填空",
+              "section": "完形填空",
+              "grade": "高一",
+              "level": 3,
+              "children": [
+                {
+                  "kp_id": "E-M2C2S2-KP1",
+                  "name": "完形填空解题策略",
+                  "subject": "英语",
+                  "module": "语言技能",
+                  "chapter": "阅读与完形",
+                  "section": "完形填空",
+                  "grade": "高一",
+                  "level": 4,
+                  "difficulty": 4,
+                  "importance": 5,
+                  "level_requirement": "运用",
+                  "exam_type": "完形填空",
+                  "source": "人教版高中英语必修",
+                  "text": "完形填空（cloze test）考查在语篇中综合运用词汇、语法和语篇衔接的能力。解题三步骤：先通读全文，把握大意、作者态度和叙事线索；再逐空分析，结合上下文语境选择最佳答案；最后复读检查全文逻辑是否通顺。遵循'语义优先、语法为辅'的原则，多数选项需依据前后文的照应和复现来判断。重点关注动词、名词、形容词和副词在具体语境中的含义区别，结合固定搭配（如take place, make sense, give up）和短语辨析作答。"
+                },
+                {
+                  "kp_id": "E-M2C2S2-KP2",
+                  "name": "完形填空常见考点",
+                  "subject": "英语",
+                  "module": "语言技能",
+                  "chapter": "阅读与完形",
+                  "section": "完形填空",
+                  "grade": "高一",
+                  "level": 4,
+                  "difficulty": 4,
+                  "importance": 5,
+                  "level_requirement": "运用",
+                  "exam_type": "完形填空",
+                  "source": "人教版高中英语必修",
+                  "text": "完形填空的难点在于近义词辨析和逻辑衔接词。近义词辨析要结合语境和搭配，如spend/cost/take表花费的区别、raise/rise/lift表上升的区别。逻辑衔接词如however（转折）、therefore（因此）、besides（此外）、otherwise（否则）、meanwhile（同时）决定句子之间或段落之间的逻辑关系。语篇首句通常不设空，往往是主题句或背景句。做完后务必将答案代入原文通读，检查时态、语态、主谓一致以及故事情节和逻辑是否连贯。词汇复现和同义替换是重要的解题线索。"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kp_id": "E-M2-C3",
+          "name": "第三章 写作技能",
+          "chapter": "写作技能",
+          "grade": "高一、高二",
+          "level": 2,
+          "children": [
+            {
+              "kp_id": "E-M2-C3-S1",
+              "name": "3.1 语篇填空",
+              "section": "语篇填空",
+              "grade": "高一",
+              "level": 3,
+              "children": [
+                {
+                  "kp_id": "E-M2C3S1-KP1",
+                  "name": "语篇填空（有提示词）",
+                  "subject": "英语",
+                  "module": "语言技能",
+                  "chapter": "写作技能",
+                  "section": "语篇填空",
+                  "grade": "高一",
+                  "level": 4,
+                  "difficulty": 3,
+                  "importance": 5,
+                  "level_requirement": "运用",
+                  "exam_type": "语篇填空",
+                  "source": "人教版高中英语必修",
+                  "text": "语篇填空（grammar filling）分有提示词和无提示词两类。有提示词时，通常考查词性转换（动词变名词、名词变形容词、形容词变副词）、动词的时态语态、非谓语动词、形容词副词比较等级等。给动词时先判断是作谓语还是非谓语：作谓语考虑时态、语态和主谓一致，作非谓语根据与逻辑主语的关系选doing/done/to do。给名词考虑单复数，给形容词考虑词性转换或比较级、最高级。解题须结合整句结构判断所填词的成分。"
+                },
+                {
+                  "kp_id": "E-M2C3S1-KP2",
+                  "name": "语篇填空（无提示词）",
+                  "subject": "英语",
+                  "module": "语言技能",
+                  "chapter": "写作技能",
+                  "section": "语篇填空",
+                  "grade": "高一",
+                  "level": 4,
+                  "difficulty": 4,
+                  "importance": 5,
+                  "level_requirement": "运用",
+                  "exam_type": "语篇填空",
+                  "source": "人教版高中英语必修",
+                  "text": "无提示词的填空主要考查功能词：冠词（a/an/the）、介词、连词、代词、关系词等。缺主语或宾语时考虑代词或关系代词；缺引导词时考虑从句引导词（定语从句的关系词、名词性从句的连接词、状语从句的从属连词）；缺冠词的固定搭配（in the morning, a few, the same）。分析句子结构是关键：若逗号后面还有完整的主谓结构，则可能是从句，需判断缺少的是连词还是关系词。注意并列连词and/or/but与从属连词的区分，以及介词的固定搭配。"
+                }
+              ]
+            },
+            {
+              "kp_id": "E-M2-C3-S2",
+              "name": "3.2 书面表达",
+              "section": "书面表达",
+              "grade": "高二",
+              "level": 3,
+              "children": [
+                {
+                  "kp_id": "E-M2C3S2-KP1",
+                  "name": "书面表达（应用文写作）",
+                  "subject": "英语",
+                  "module": "语言技能",
+                  "chapter": "写作技能",
+                  "section": "书面表达",
+                  "grade": "高二",
+                  "level": 4,
+                  "difficulty": 3,
+                  "importance": 5,
+                  "level_requirement": "运用",
+                  "exam_type": "书面表达",
+                  "source": "人教版高中英语选择性必修",
+                  "text": "书面表达的应用文主要包括书信、电子邮件、通知、倡议书、演讲稿和日记等。书信格式包括称呼（Dear...）、正文、结束语（Yours sincerely/Yours faithfully）和署名。正文要涵盖题目要求的全部要点，结构清晰：开头表明写信目的，中间分层陈述内容，结尾表达期望或祝愿。语言要得体、正式，用词准确。高考书面表达一般要求100词左右，要做到要点齐全、语言准确、逻辑连贯、书写规范。注意应用文的时态常用一般现在时或一般将来时。"
+                },
+                {
+                  "kp_id": "E-M2C3S2-KP2",
+                  "name": "写作连接词与句式",
+                  "subject": "英语",
+                  "module": "语言技能",
+                  "chapter": "写作技能",
+                  "section": "书面表达",
+                  "grade": "高二",
+                  "level": 4,
+                  "difficulty": 3,
+                  "importance": 4,
+                  "level_requirement": "运用",
+                  "exam_type": "书面表达",
+                  "source": "人教版高中英语选择性必修",
+                  "text": "书面表达要善用连接词使文章连贯：表递进用besides, what's more, moreover；表转折用however, on the contrary, but；表因果用therefore, as a result, consequently；表总结用in a word, in conclusion, to sum up。适当使用高级句式提升语言档次：定语从句、状语从句、宾语从句、倒装句、强调句、非谓语动词等，但要以准确为前提，避免为用而用造成错误。注意段落之间过渡自然，首尾呼应，结尾可表达期望、祝愿或提出倡议。"
+                }
+              ]
+            },
+            {
+              "kp_id": "E-M2-C3-S3",
+              "name": "3.3 读后续写",
+              "section": "读后续写",
+              "grade": "高二",
+              "level": 3,
+              "children": [
+                {
+                  "kp_id": "E-M2C3S3-KP1",
+                  "name": "读后续写的要求与策略",
+                  "subject": "英语",
+                  "module": "语言技能",
+                  "chapter": "写作技能",
+                  "section": "读后续写",
+                  "grade": "高二",
+                  "level": 4,
+                  "difficulty": 4,
+                  "importance": 5,
+                  "level_requirement": "运用",
+                  "exam_type": "读后续写",
+                  "source": "人教版高中英语选择性必修",
+                  "text": "读后续写（continuation writing）要求根据所给材料内容和两段段落开头语续写两段，使情节完整连贯。解题策略：先通读原文，把握人物、事件、情感和主题，明确续写方向以及两条段落开头语所限定的情节走向。续写内容要与原文风格一致、情节合理，与前文衔接紧密，不脱离原文设定。注意使用与原文一致的主要时态（多为一般过去时），保持人称和叙述视角一致。两段之间要有逻辑上的过渡和情节推进，情节要自然起伏。"
+                },
+                {
+                  "kp_id": "E-M2C3S3-KP2",
+                  "name": "读后续写的语言与结尾",
+                  "subject": "英语",
+                  "module": "语言技能",
+                  "chapter": "写作技能",
+                  "section": "读后续写",
+                  "grade": "高二",
+                  "level": 4,
+                  "difficulty": 4,
+                  "importance": 5,
+                  "level_requirement": "运用",
+                  "exam_type": "读后续写",
+                  "source": "人教版高中英语选择性必修",
+                  "text": "读后续写要注重语言质量，综合运用动作描写、心理描写、环境描写和对话来丰富情节、塑造人物。可适当使用非谓语动词、独立主格、定语从句等高级结构，但必须保证使用准确。情节设计要有冲突和转折，结局要合理并能升华主题（如感悟、成长、善意、勇气）。第一段首句要自然衔接给定的段落开头语，末句可点题或呼应原文。注意总体字数要求（两段共150词左右），避免偏离主题或情节跳跃，确保叙事连贯、逻辑清晰。"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "kp_id": "E-M3",
+      "name": "体裁与话题",
+      "module": "体裁与话题",
+      "grade": "高一、高二",
+      "level": 1,
+      "children": [
+        {
+          "kp_id": "E-M3-C1",
+          "name": "第一章 记叙文与说明文",
+          "chapter": "记叙文与说明文",
+          "grade": "高一",
+          "level": 2,
+          "children": [
+            {
+              "kp_id": "E-M3-C1-S1",
+              "name": "1.1 记叙文",
+              "section": "记叙文",
+              "grade": "高一",
+              "level": 3,
+              "children": [
+                {
+                  "kp_id": "E-M3C1S1-KP1",
+                  "name": "记叙文的结构要素",
+                  "subject": "英语",
+                  "module": "体裁与话题",
+                  "chapter": "记叙文与说明文",
+                  "section": "记叙文",
+                  "grade": "高一",
+                  "level": 4,
+                  "difficulty": 2,
+                  "importance": 4,
+                  "level_requirement": "理解",
+                  "exam_type": "阅读理解、读后续写",
+                  "source": "人教版高中英语必修",
+                  "text": "记叙文（narration）以叙述人物和事件为主，基本要素是何时（when）、何地（where）、何人（who）、何事（what）、何因（why）、何果（how），合称六要素。结构通常按时间顺序展开：开端（introduction）→发展（development）→高潮（climax）→结局（ending）。阅读记叙文要抓住人物关系、事件脉络和情感变化，理解作者通过这些事件所要表达的主题。叙述人称常为第一人称或第三人称，主要时态多用一般过去时。"
+                },
+                {
+                  "kp_id": "E-M3C1S1-KP2",
+                  "name": "记叙文的阅读与写作",
+                  "subject": "英语",
+                  "module": "体裁与话题",
+                  "chapter": "记叙文与说明文",
+                  "section": "记叙文",
+                  "grade": "高一",
+                  "level": 4,
+                  "difficulty": 3,
+                  "importance": 4,
+                  "level_requirement": "运用",
+                  "exam_type": "阅读理解、读后续写",
+                  "source": "人教版高中英语必修",
+                  "text": "阅读记叙文时重点关注事件的前因后果和人物情感的变化轨迹，推断作者的写作意图和文章主题。写作记叙文要选材真实、线索清晰，可采用顺叙，也可用倒叙、插叙增强感染力。常用的描写手法有细节描写、动作描写、心理描写和环境描写，能使人物形象生动、情节真实可感。注意首尾呼应，结尾可画龙点睛点明感悟或升华主题。叙述中恰当运用过渡语（first, then, afterwards, finally, however）使情节连贯自然。"
+                }
+              ]
+            },
+            {
+              "kp_id": "E-M3-C1-S2",
+              "name": "1.2 说明文",
+              "section": "说明文",
+              "grade": "高一",
+              "level": 3,
+              "children": [
+                {
+                  "kp_id": "E-M3C1S2-KP1",
+                  "name": "说明文的类型与说明方法",
+                  "subject": "英语",
+                  "module": "体裁与话题",
+                  "chapter": "记叙文与说明文",
+                  "section": "说明文",
+                  "grade": "高一",
+                  "level": 4,
+                  "difficulty": 3,
+                  "importance": 4,
+                  "level_requirement": "理解",
+                  "exam_type": "阅读理解",
+                  "source": "人教版高中英语必修",
+                  "text": "说明文（exposition）以说明、解释事物或事理为主要目的，常见类型有事物说明文（说明具体事物）和事理说明文（解释抽象道理）。常用说明方法包括举例子（for example）、列数字（figures and statistics）、作比较（comparison）、打比方（analogy）、下定义（definition）、分类别（classification）。阅读说明文需抓住说明对象及其特征，理清说明顺序（时间顺序、空间顺序、逻辑顺序）。说明文语言准确、结构清晰，常用一般现在时。"
+                },
+                {
+                  "kp_id": "E-M3C1S2-KP2",
+                  "name": "说明文阅读技巧",
+                  "subject": "英语",
+                  "module": "体裁与话题",
+                  "chapter": "记叙文与说明文",
+                  "section": "说明文",
+                  "grade": "高一",
+                  "level": 4,
+                  "difficulty": 3,
+                  "importance": 4,
+                  "level_requirement": "运用",
+                  "exam_type": "阅读理解",
+                  "source": "人教版高中英语必修",
+                  "text": "说明文通常有明确的主题句和清晰的段落结构，阅读时先找主题句和段落大意，理清说明对象的特征和要点。注意文中的定义、举例、对比信息，这些往往是命题重点。说明文常涉及科普、文化、自然、技术等话题，需把握说明顺序和逻辑关系（如因果、并列、递进、比较）。遇到生词可通过上下文中的定义、举例、对比等线索猜测词义。阅读说明文时需区分说明对象与说明内容，防止张冠李戴。"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kp_id": "E-M3-C2",
+          "name": "第二章 议论文与应用文",
+          "chapter": "议论文与应用文",
+          "grade": "高二",
+          "level": 2,
+          "children": [
+            {
+              "kp_id": "E-M3-C2-S1",
+              "name": "2.1 议论文",
+              "section": "议论文",
+              "grade": "高二",
+              "level": 3,
+              "children": [
+                {
+                  "kp_id": "E-M3C2S1-KP1",
+                  "name": "议论文的三要素",
+                  "subject": "英语",
+                  "module": "体裁与话题",
+                  "chapter": "议论文与应用文",
+                  "section": "议论文",
+                  "grade": "高二",
+                  "level": 4,
+                  "difficulty": 3,
+                  "importance": 4,
+                  "level_requirement": "理解",
+                  "exam_type": "阅读理解、书面表达",
+                  "source": "人教版高中英语选择性必修",
+                  "text": "议论文（argumentation）由论点（thesis/argument）、论据（evidence）和论证（reasoning）三要素构成。论点是作者的观点，通常在开头或结尾明确提出；论据包括事实、数据、例子、引证等，须真实、典型、充分；论证是用论据证明论点的过程，常用归纳、演绎、类比等方法。阅读议论文要找准作者观点和论据，分析论证的逻辑是否严密。议论文常见结构为提出问题→分析问题→解决问题。"
+                },
+                {
+                  "kp_id": "E-M3C2S1-KP2",
+                  "name": "议论文的观点与论证",
+                  "subject": "英语",
+                  "module": "体裁与话题",
+                  "chapter": "议论文与应用文",
+                  "section": "议论文",
+                  "grade": "高二",
+                  "level": 4,
+                  "difficulty": 4,
+                  "importance": 4,
+                  "level_requirement": "运用",
+                  "exam_type": "阅读理解、书面表达",
+                  "source": "人教版高中英语选择性必修",
+                  "text": "阅读议论文时要区分作者观点与事实、作者本人观点与引述的他人观点，注意however, but, yet, nevertheless等转折词后的内容往往是作者真正想表达的观点。议论文写作需立场鲜明、论据充实、逻辑严密，可采用列举、举例、正反对比、因果推理等方法论证。开篇提出明确的观点，中间分段论证（每段围绕一个分论点并配以论据），结尾总结观点或提出建议。常用表达有In my opinion, I hold the view that, It is widely believed that, On the one hand...on the other hand等。"
+                }
+              ]
+            },
+            {
+              "kp_id": "E-M3-C2-S2",
+              "name": "2.2 应用文",
+              "section": "应用文",
+              "grade": "高二",
+              "level": 3,
+              "children": [
+                {
+                  "kp_id": "E-M3C2S2-KP1",
+                  "name": "应用文的常见类型",
+                  "subject": "英语",
+                  "module": "体裁与话题",
+                  "chapter": "议论文与应用文",
+                  "section": "应用文",
+                  "grade": "高二",
+                  "level": 4,
+                  "difficulty": 2,
+                  "importance": 4,
+                  "level_requirement": "理解",
+                  "exam_type": "阅读理解、书面表达",
+                  "source": "人教版高中英语选择性必修",
+                  "text": "应用文（practical writing）是人们在生活、工作和学习中使用的实用文体，包括书信、电子邮件、通知（notice）、启事、广告、海报、邀请函、演讲稿、日记、便条等。应用文格式规范、语言简明、目的明确。书信和电子邮件有固定格式（称呼、正文、结束语、签名）；通知要有标题并写明时间、地点、参加对象和注意事项。阅读应用文要快速定位关键信息，如活动的时间、地点、内容和要求。"
+                },
+                {
+                  "kp_id": "E-M3C2S2-KP2",
+                  "name": "应用文的信息提取",
+                  "subject": "英语",
+                  "module": "体裁与话题",
+                  "chapter": "议论文与应用文",
+                  "section": "应用文",
+                  "grade": "高二",
+                  "level": 4,
+                  "difficulty": 3,
+                  "importance": 4,
+                  "level_requirement": "运用",
+                  "exam_type": "阅读理解、书面表达",
+                  "source": "人教版高中英语选择性必修",
+                  "text": "阅读应用文（如通知、海报、广告、说明书）要抓住核心要素：时间（when）、地点（where）、对象（who）、内容（what）、要求（how）。通知类注意活动的时间、地点、报名方式和注意事项；广告海报注意促销信息和联系方式。应用文的信息常以要点式列出，阅读时可标记关键信息，防止遗漏。写作应用文时注意格式正确、内容完整、语言得体，字数符合题目要求，并体现应用文实用、简洁、明确的特点。"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "kp_id": "E-M4",
+      "name": "高中英语核心素养",
+      "module": "高中英语核心素养",
+      "grade": "高一至高三",
+      "level": 1,
+      "children": [
+        {
+          "kp_id": "E-M4-C1",
+          "name": "第一章 语言能力与文化意识",
+          "chapter": "语言能力与文化意识",
+          "grade": "高一至高三",
+          "level": 2,
+          "children": [
+            {
+              "kp_id": "E-M4-C1-S1",
+              "name": "1.1 语言能力",
+              "section": "语言能力",
+              "grade": "高一至高三",
+              "level": 3,
+              "children": [
+                {
+                  "kp_id": "E-M4C1S1-KP1",
+                  "name": "语言能力的构成",
+                  "subject": "英语",
+                  "module": "高中英语核心素养",
+                  "chapter": "语言能力与文化意识",
+                  "section": "语言能力",
+                  "grade": "高一至高三",
+                  "level": 4,
+                  "difficulty": 2,
+                  "importance": 4,
+                  "level_requirement": "理解",
+                  "exam_type": "综合考查",
+                  "source": "普通高中英语课程标准",
+                  "text": "英语学科核心素养包括语言能力、文化意识、思维品质和学习能力四个方面。语言能力（language competence）指在具体情境中运用英语理解和表达意义的能力，涵盖语言知识（语音、词汇、语法、语篇、语用）和语言技能（听、说、读、看、写）。语言能力是英语学科核心素养的基础，其他素养的发展以语言能力为依托。课标要求学生在真实语篇中学习语言知识，发展综合语言运用能力，并在具体语境中迁移应用。"
+                },
+                {
+                  "kp_id": "E-M4C1S1-KP2",
+                  "name": "语言能力的培养",
+                  "subject": "英语",
+                  "module": "高中英语核心素养",
+                  "chapter": "语言能力与文化意识",
+                  "section": "语言能力",
+                  "grade": "高一至高三",
+                  "level": 4,
+                  "difficulty": 2,
+                  "importance": 4,
+                  "level_requirement": "运用",
+                  "exam_type": "综合考查",
+                  "source": "普通高中英语课程标准",
+                  "text": "培养语言能力需通过大量真实语言实践活动，在听、说、读、看、写中综合运用语言。词汇积累要结合语境和语篇进行，避免孤立、机械地记忆单词；语法学习注重在语篇中的实际运用，而非单纯记忆规则。要多读多写、多听多说，注重语言输出和交际互动。课标强调在主题意义引领下整合语言知识的学习，围绕人与自然、人与社会、人与自我三大主题选材。评价语言能力看学生能否用英语得体地传达信息、表达观点和情感。"
+                }
+              ]
+            },
+            {
+              "kp_id": "E-M4-C1-S2",
+              "name": "1.2 文化意识",
+              "section": "文化意识",
+              "grade": "高一至高三",
+              "level": 3,
+              "children": [
+                {
+                  "kp_id": "E-M4C1S2-KP1",
+                  "name": "文化意识的内涵",
+                  "subject": "英语",
+                  "module": "高中英语核心素养",
+                  "chapter": "语言能力与文化意识",
+                  "section": "文化意识",
+                  "grade": "高一至高三",
+                  "level": 4,
+                  "difficulty": 2,
+                  "importance": 4,
+                  "level_requirement": "理解",
+                  "exam_type": "阅读理解、综合考查",
+                  "source": "普通高中英语课程标准",
+                  "text": "文化意识（cultural awareness）指对中外文化及其差异的理解和认同，包括文化知识的积累、文化理解能力和跨文化交际意识与能力。课标要求学生了解中外文化背景，理解文化差异，尊重文化多样性，同时增强文化自信。学习英语文化知识（如节日、习俗、价值观、交际礼仪）有助于正确理解英语语篇的深层含义。在跨文化交际中要得体地表达与回应，避免因文化差异造成误解。文化意识还体现为用英语传播中华优秀文化的能力。"
+                },
+                {
+                  "kp_id": "E-M4C1S2-KP2",
+                  "name": "文化意识的培养",
+                  "subject": "英语",
+                  "module": "高中英语核心素养",
+                  "chapter": "语言能力与文化意识",
+                  "section": "文化意识",
+                  "grade": "高一至高三",
+                  "level": 4,
+                  "difficulty": 2,
+                  "importance": 4,
+                  "level_requirement": "运用",
+                  "exam_type": "阅读理解、综合考查",
+                  "source": "普通高中英语课程标准",
+                  "text": "通过在语篇学习中接触中外文化知识，比较中外文化异同，理解不同文化背景下的思维方式和行为习惯。教材话题涉及中外节日、饮食、教育、科技、环保、文学等，阅读时注意文化负载词以及具有文化内涵的表达。培养跨文化交际能力时，既要尊重英语国家的文化习俗，也要学会用英语讲好中国故事、传播中华优秀文化。文化意识的养成需要在真实或模拟的跨文化交际情境中反复实践，在理解与包容中逐步形成正确的情感态度和价值观。"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kp_id": "E-M4-C2",
+          "name": "第二章 思维品质与学习能力",
+          "chapter": "思维品质与学习能力",
+          "grade": "高一至高三",
+          "level": 2,
+          "children": [
+            {
+              "kp_id": "E-M4-C2-S1",
+              "name": "2.1 思维品质",
+              "section": "思维品质",
+              "grade": "高一至高三",
+              "level": 3,
+              "children": [
+                {
+                  "kp_id": "E-M4C2S1-KP1",
+                  "name": "思维品质的内涵",
+                  "subject": "英语",
+                  "module": "高中英语核心素养",
+                  "chapter": "思维品质与学习能力",
+                  "section": "思维品质",
+                  "grade": "高一至高三",
+                  "level": 4,
+                  "difficulty": 3,
+                  "importance": 4,
+                  "level_requirement": "理解",
+                  "exam_type": "阅读理解、综合考查",
+                  "source": "普通高中英语课程标准",
+                  "text": "思维品质（thinking quality）指英语学习中体现的思维活动的深度和广度，包括逻辑思维、批判性思维和创新思维。逻辑思维体现在梳理、概括、推断语篇信息的能力；批判性思维指能理性分析、评判文章中观点和论据的合理性；创新思维指能从多角度提出新观点、新问题。课标强调通过英语学习促进学生思维能力的发展。阅读中分析文章结构、推断作者意图、评价观点得失都是思维品质的重要体现。"
+                },
+                {
+                  "kp_id": "E-M4C2S1-KP2",
+                  "name": "思维品质的培养",
+                  "subject": "英语",
+                  "module": "高中英语核心素养",
+                  "chapter": "思维品质与学习能力",
+                  "section": "思维品质",
+                  "grade": "高一至高三",
+                  "level": 4,
+                  "difficulty": 3,
+                  "importance": 4,
+                  "level_requirement": "运用",
+                  "exam_type": "阅读理解、综合考查",
+                  "source": "普通高中英语课程标准",
+                  "text": "培养思维品质需在语篇学习中设置分析、比较、归纳、推理、评价等高阶思维活动。阅读时可绘制思维导图梳理文章结构，比较不同观点，提出自己的见解并进行论证。写作中训练论点与论据的逻辑性和条理性。通过项目式学习、小组讨论、辩论等活动促进批判性思考和问题解决能力的提升。思维品质的发展与语言能力相互促进，语言活动是思维训练的重要载体，思维活动又反过来提升语言表达的深度与质量。"
+                }
+              ]
+            },
+            {
+              "kp_id": "E-M4-C2-S2",
+              "name": "2.2 学习能力",
+              "section": "学习能力",
+              "grade": "高一至高三",
+              "level": 3,
+              "children": [
+                {
+                  "kp_id": "E-M4C2S2-KP1",
+                  "name": "学习能力的内涵",
+                  "subject": "英语",
+                  "module": "高中英语核心素养",
+                  "chapter": "思维品质与学习能力",
+                  "section": "学习能力",
+                  "grade": "高一至高三",
+                  "level": 4,
+                  "difficulty": 1,
+                  "importance": 4,
+                  "level_requirement": "理解",
+                  "exam_type": "综合考查",
+                  "source": "普通高中英语课程标准",
+                  "text": "学习能力（learning ability）指学生主动获取和运用学习策略、自我监控与管理学习的能力。包括元认知策略（制订和调整学习计划、自我评估学习效果）、认知策略（归纳总结、联想记忆、利用资源）、情感策略（保持学习兴趣与自信）和交际策略（运用沟通策略完成交际）。课标要求学生能自主规划、反思和调整英语学习的过程和方法。良好的学习能力能够提高学习效率，为终身学习和持续发展奠定基础。"
+                },
+                {
+                  "kp_id": "E-M4C2S2-KP2",
+                  "name": "学习策略与自我管理",
+                  "subject": "英语",
+                  "module": "高中英语核心素养",
+                  "chapter": "思维品质与学习能力",
+                  "section": "学习能力",
+                  "grade": "高一至高三",
+                  "level": 4,
+                  "difficulty": 1,
+                  "importance": 4,
+                  "level_requirement": "运用",
+                  "exam_type": "综合考查",
+                  "source": "普通高中英语课程标准",
+                  "text": "常用学习策略包括：利用词典、网络等资源获取和验证信息；通过构词法、上下文线索猜测词义；做好课堂笔记并定期复习巩固；主动参与课堂活动，勇于用英语交流和表达。学会自我管理：制定切实可行的学习目标和计划，合理安排学习时间，及时反思学习方法是否有效并加以调整。积极参加英语角、英语竞赛、课外阅读等活动以保持学习兴趣。学习能力强的学生善于发现适合自己的学习方法并能持之以恒地坚持。"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

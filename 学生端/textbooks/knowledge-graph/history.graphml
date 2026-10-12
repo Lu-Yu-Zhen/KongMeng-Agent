@@ -1,0 +1,2429 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+  <key id="name" attr.name="name" attr.type="string" for="node"/>
+  <key id="type" attr.name="type" attr.type="string" for="node"/>
+  <key id="subject" attr.name="subject" attr.type="string" for="node"/>
+  <key id="module" attr.name="module" attr.type="string" for="node"/>
+  <key id="chapter" attr.name="chapter" attr.type="string" for="node"/>
+  <key id="difficulty" attr.name="difficulty" attr.type="int" for="node"/>
+  <key id="description" attr.name="description" attr.type="string" for="node"/>
+  <key id="keywords" attr.name="keywords" attr.type="string" for="node"/>
+  <key id="exam_type" attr.name="exam_type" attr.type="string" for="node"/>
+  <key id="importance" attr.name="importance" attr.type="int" for="node"/>
+  <key id="textbook_source" attr.name="textbook_source" attr.type="string" for="node"/>
+  <key id="relation" attr.name="relation" attr.type="string" for="edge"/>
+  <key id="weight" attr.name="weight" attr.type="double" for="edge"/>
+  <key id="description" attr.name="description" attr.type="string" for="edge"/>
+  <graph id="G" edgedefault="directed">
+    <node id="H_M1">
+      <data key="name">中外历史纲要(上)——中国史</data>
+      <data key="type">Module</data>
+      <data key="subject">历史</data>
+      <data key="description">必修上册。按通史体例梳理中国从中华文明起源到中华民族伟大复兴的历史进程。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="module">中外历史纲要(上)——中国史</data>
+      <data key="chapter"/>
+      <data key="textbook_source"/>
+    </node>
+    <node id="H_M2">
+      <data key="name">中外历史纲要(下)——世界史</data>
+      <data key="type">Module</data>
+      <data key="subject">历史</data>
+      <data key="description">必修下册。按通史体例梳理世界从古代文明到当代全球化的发展进程。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="module">中外历史纲要(下)——世界史</data>
+      <data key="chapter"/>
+      <data key="textbook_source"/>
+    </node>
+    <node id="H_M3">
+      <data key="name">国家制度与社会治理</data>
+      <data key="type">Module</data>
+      <data key="subject">历史</data>
+      <data key="description">选择性必修1。专题梳理政治制度、官员选拔、法律教化、民族外交与基层治理。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="module">国家制度与社会治理</data>
+      <data key="chapter"/>
+      <data key="textbook_source"/>
+    </node>
+    <node id="H_M4">
+      <data key="name">经济与社会生活</data>
+      <data key="type">Module</data>
+      <data key="subject">历史</data>
+      <data key="description">选择性必修2。专题梳理食物生产、生产工具、商业贸易、居住环境、交通通信与医疗卫生。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="module">经济与社会生活</data>
+      <data key="chapter"/>
+      <data key="textbook_source"/>
+    </node>
+    <node id="H_M5">
+      <data key="name">文化交流与传播</data>
+      <data key="type">Module</data>
+      <data key="subject">历史</data>
+      <data key="description">选择性必修3。专题梳理中华文化与外来文化交流、人口迁徙商路贸易战争中的文化传播及文化遗产。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="module">文化交流与传播</data>
+      <data key="chapter"/>
+      <data key="textbook_source"/>
+    </node>
+    <node id="H_C1_1">
+      <data key="name">中华文明的起源与早期国家</data>
+      <data key="type">Chapter</data>
+      <data key="subject">历史</data>
+      <data key="module">中外历史纲要(上)——中国史</data>
+      <data key="chapter">中华文明的起源与早期国家</data>
+      <data key="description">旧新石器时代文化遗存、文明起源标志、夏商西周政治制度。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="textbook_source">纲要上 第一单元</data>
+    </node>
+    <node id="H_C1_2">
+      <data key="name">统一多民族封建国家的形成与巩固</data>
+      <data key="type">Chapter</data>
+      <data key="subject">历史</data>
+      <data key="module">中外历史纲要(上)——中国史</data>
+      <data key="chapter">统一多民族封建国家的形成与巩固</data>
+      <data key="description">秦的统一与专制集权、汉武帝大一统、丝绸之路。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="textbook_source">纲要上 第二单元</data>
+    </node>
+    <node id="H_C1_3">
+      <data key="name">三国两晋南北朝至隋唐</data>
+      <data key="type">Chapter</data>
+      <data key="subject">历史</data>
+      <data key="module">中外历史纲要(上)——中国史</data>
+      <data key="chapter">三国两晋南北朝至隋唐</data>
+      <data key="description">民族交融、隋朝建制、唐朝繁荣开放及由盛转衰。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="textbook_source">纲要上 第三单元</data>
+    </node>
+    <node id="H_C1_4">
+      <data key="name">辽宋夏金元时期</data>
+      <data key="type">Chapter</data>
+      <data key="subject">历史</data>
+      <data key="module">中外历史纲要(上)——中国史</data>
+      <data key="chapter">辽宋夏金元时期</data>
+      <data key="description">多民族政权并立到元朝统一、行省制度、宋元经济科技文化。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="textbook_source">纲要上 第四单元</data>
+    </node>
+    <node id="H_C1_5">
+      <data key="name">明清时期</data>
+      <data key="type">Chapter</data>
+      <data key="subject">历史</data>
+      <data key="module">中外历史纲要(上)——中国史</data>
+      <data key="chapter">明清时期</data>
+      <data key="description">加强皇权、赋税改革、对外关系与危机。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="textbook_source">纲要上 第五单元</data>
+    </node>
+    <node id="H_C1_6">
+      <data key="name">晚清至民国（救亡图存与革命）</data>
+      <data key="type">Chapter</data>
+      <data key="subject">历史</data>
+      <data key="module">中外历史纲要(上)——中国史</data>
+      <data key="chapter">晚清至民国（救亡图存与革命）</data>
+      <data key="description">列强侵略与不平等条约、太平天国、洋务、维新、辛亥革命、新文化五四、国共合作与革命、抗日战争、解放战争。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="textbook_source">纲要上 第六、七、八单元</data>
+    </node>
+    <node id="H_C1_7">
+      <data key="name">中华人民共和国的成立与发展</data>
+      <data key="type">Chapter</data>
+      <data key="subject">历史</data>
+      <data key="module">中外历史纲要(上)——中国史</data>
+      <data key="chapter">中华人民共和国的成立与发展</data>
+      <data key="description">新中国政权巩固、三大改造、一五计划、改革开放、一国两制与外交。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="textbook_source">纲要上 第九、十单元</data>
+    </node>
+    <node id="H_C2_1">
+      <data key="name">古代文明的产生与发展</data>
+      <data key="type">Chapter</data>
+      <data key="subject">历史</data>
+      <data key="module">中外历史纲要(下)——世界史</data>
+      <data key="chapter">古代文明的产生与发展</data>
+      <data key="description">早期文明区域及文明扩展交往。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="textbook_source">纲要下 第一单元</data>
+    </node>
+    <node id="H_C2_2">
+      <data key="name">中古时期的世界</data>
+      <data key="type">Chapter</data>
+      <data key="subject">历史</data>
+      <data key="module">中外历史纲要(下)——世界史</data>
+      <data key="chapter">中古时期的世界</data>
+      <data key="description">西欧封建社会、拜占庭俄罗斯、阿拉伯奥斯曼、中古日本印度。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="textbook_source">纲要下 第二单元</data>
+    </node>
+    <node id="H_C2_3">
+      <data key="name">走向整体的世界</data>
+      <data key="type">Chapter</data>
+      <data key="subject">历史</data>
+      <data key="module">中外历史纲要(下)——世界史</data>
+      <data key="chapter">走向整体的世界</data>
+      <data key="description">新航路开辟的动因、过程与影响。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="textbook_source">纲要下 第三单元</data>
+    </node>
+    <node id="H_C2_4">
+      <data key="name">资本主义制度的确立与工业革命</data>
+      <data key="type">Chapter</data>
+      <data key="subject">历史</data>
+      <data key="module">中外历史纲要(下)——世界史</data>
+      <data key="chapter">资本主义制度的确立与工业革命</data>
+      <data key="description">英法美资产阶级革命与制度确立、两次工业革命。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="textbook_source">纲要下 第四、五单元</data>
+    </node>
+    <node id="H_C2_5">
+      <data key="name">马克思主义的诞生与国际工人运动</data>
+      <data key="type">Chapter</data>
+      <data key="subject">历史</data>
+      <data key="module">中外历史纲要(下)——世界史</data>
+      <data key="chapter">马克思主义的诞生与国际工人运动</data>
+      <data key="description">《共产党宣言》、第一国际、巴黎公社、列宁主义与十月革命。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="textbook_source">纲要下 第六单元</data>
+    </node>
+    <node id="H_C2_6">
+      <data key="name">两次世界大战与冷战</data>
+      <data key="type">Chapter</data>
+      <data key="subject">历史</data>
+      <data key="module">中外历史纲要(下)——世界史</data>
+      <data key="chapter">两次世界大战与冷战</data>
+      <data key="description">一战与凡华体系、经济大危机与罗斯福新政、二战、冷战。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="textbook_source">纲要下 第七、八单元</data>
+    </node>
+    <node id="H_C2_7">
+      <data key="name">当代世界的发展特点与主要趋势</data>
+      <data key="type">Chapter</data>
+      <data key="subject">历史</data>
+      <data key="module">中外历史纲要(下)——世界史</data>
+      <data key="chapter">当代世界的发展特点与主要趋势</data>
+      <data key="description">冷战结束、多极化、全球化与全球性问题。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="textbook_source">纲要下 第九单元</data>
+    </node>
+    <node id="H_C3_1">
+      <data key="name">政治制度</data>
+      <data key="type">Chapter</data>
+      <data key="subject">历史</data>
+      <data key="module">国家制度与社会治理</data>
+      <data key="chapter">政治制度</data>
+      <data key="description">中国古代与西方近现代政治制度演变。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="textbook_source">选必1 第一单元</data>
+    </node>
+    <node id="H_C3_2">
+      <data key="name">官员选拔与管理</data>
+      <data key="type">Chapter</data>
+      <data key="subject">历史</data>
+      <data key="module">国家制度与社会治理</data>
+      <data key="chapter">官员选拔与管理</data>
+      <data key="description">察举九品中正、科举制、西方文官制度。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="textbook_source">选必1 第二单元</data>
+    </node>
+    <node id="H_C3_3">
+      <data key="name">法律教化</data>
+      <data key="type">Chapter</data>
+      <data key="subject">历史</data>
+      <data key="module">国家制度与社会治理</data>
+      <data key="chapter">法律教化</data>
+      <data key="description">中国古代礼法、近代法律、西方法律传统。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="textbook_source">选必1 第三单元</data>
+    </node>
+    <node id="H_C3_4">
+      <data key="name">民族外交与基层治理</data>
+      <data key="type">Chapter</data>
+      <data key="subject">历史</data>
+      <data key="module">国家制度与社会治理</data>
+      <data key="chapter">民族外交与基层治理</data>
+      <data key="description">民族政策、外交、基层治理与社会保障。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="textbook_source">选必1 第四、五单元</data>
+    </node>
+    <node id="H_C4_1">
+      <data key="name">食物生产与社会生活</data>
+      <data key="type">Chapter</data>
+      <data key="subject">历史</data>
+      <data key="module">经济与社会生活</data>
+      <data key="chapter">食物生产与社会生活</data>
+      <data key="description">农业起源、区域食物生产、物种大交换。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="textbook_source">选必2 第一单元</data>
+    </node>
+    <node id="H_C4_2">
+      <data key="name">生产工具与劳作方式</data>
+      <data key="type">Chapter</data>
+      <data key="subject">历史</data>
+      <data key="module">经济与社会生活</data>
+      <data key="chapter">生产工具与劳作方式</data>
+      <data key="description">农业工具、手工业工具、工业革命与机器大生产。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="textbook_source">选必2 第二单元</data>
+    </node>
+    <node id="H_C4_3">
+      <data key="name">商业贸易与居住环境</data>
+      <data key="type">Chapter</data>
+      <data key="subject">历史</data>
+      <data key="module">经济与社会生活</data>
+      <data key="chapter">商业贸易与居住环境</data>
+      <data key="description">古代商业、世界市场、城市化与居住环境。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="textbook_source">选必2 第三、四单元</data>
+    </node>
+    <node id="H_C4_4">
+      <data key="name">交通通信与医疗卫生</data>
+      <data key="type">Chapter</data>
+      <data key="subject">历史</data>
+      <data key="module">经济与社会生活</data>
+      <data key="chapter">交通通信与医疗卫生</data>
+      <data key="description">交通通信进步、医疗卫生进步、习俗变迁。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="textbook_source">选必2 第五、六单元</data>
+    </node>
+    <node id="H_C5_1">
+      <data key="name">中华文化与外来文化交流</data>
+      <data key="type">Chapter</data>
+      <data key="subject">历史</data>
+      <data key="module">文化交流与传播</data>
+      <data key="chapter">中华文化与外来文化交流</data>
+      <data key="description">中华文化的传播、外来文化的传入与本土化。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="textbook_source">选必3 第一单元</data>
+    </node>
+    <node id="H_C5_2">
+      <data key="name">迁徙、贸易与战争中的文化交流</data>
+      <data key="type">Chapter</data>
+      <data key="subject">历史</data>
+      <data key="module">文化交流与传播</data>
+      <data key="chapter">迁徙、贸易与战争中的文化交流</data>
+      <data key="description">人口迁徙、商路贸易、战争冲突中的文化碰撞。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="textbook_source">选必3 第二单元</data>
+    </node>
+    <node id="H_C5_3">
+      <data key="name">文化遗产</data>
+      <data key="type">Chapter</data>
+      <data key="subject">历史</data>
+      <data key="module">文化交流与传播</data>
+      <data key="chapter">文化遗产</data>
+      <data key="description">世界遗产保护与中华优秀传统文化保护。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="textbook_source">选必3 第三单元</data>
+    </node>
+    <node id="H_K1_1_1">
+      <data key="name">石器时代文化遗存</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">历史</data>
+      <data key="module">中外历史纲要(上)——中国史</data>
+      <data key="chapter">中华文明的起源与早期国家</data>
+      <data key="difficulty">2</data>
+      <data key="description">元谋人、北京人属旧石器时代；仰韶、龙山、河姆渡等属新石器时代，反映中华文明多元一体起源。</data>
+      <data key="keywords">旧石器,新石器,元谋人,北京人,仰韶,龙山,河姆渡,多元一体</data>
+      <data key="exam_type">选择题、史料分析题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">纲要上 第一课</data>
+    </node>
+    <node id="H_K1_1_2">
+      <data key="name">文明起源与早期国家</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">历史</data>
+      <data key="module">中外历史纲要(上)——中国史</data>
+      <data key="chapter">中华文明的起源与早期国家</data>
+      <data key="difficulty">3</data>
+      <data key="description">私有制、阶级和国家的出现是文明诞生的标志；夏商西周进入早期国家阶段。</data>
+      <data key="keywords">文明起源,私有制,阶级,国家,早期国家</data>
+      <data key="exam_type">选择题、材料分析题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">纲要上 第一课</data>
+    </node>
+    <node id="H_K1_1_3">
+      <data key="name">夏商西周政治制度</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">历史</data>
+      <data key="module">中外历史纲要(上)——中国史</data>
+      <data key="chapter">中华文明的起源与早期国家</data>
+      <data key="difficulty">4</data>
+      <data key="description">王位世袭制取代禅让制；西周实行分封制、宗法制、礼乐制度，宗法制核心是嫡长子继承制。</data>
+      <data key="keywords">王位世袭,分封制,宗法制,嫡长子继承,礼乐制度</data>
+      <data key="exam_type">选择题、材料分析题</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">纲要上 第二课</data>
+    </node>
+    <node id="H_K1_1_4">
+      <data key="name">商周青铜文明与甲骨文</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">历史</data>
+      <data key="module">中外历史纲要(上)——中国史</data>
+      <data key="chapter">中华文明的起源与早期国家</data>
+      <data key="difficulty">2</data>
+      <data key="description">青铜器代表商周手工业最高水平，甲骨文是成熟文字体系，印证商史为信史。</data>
+      <data key="keywords">青铜文明,甲骨文,司母戊鼎,信史</data>
+      <data key="exam_type">选择题</data>
+      <data key="importance">3</data>
+      <data key="textbook_source">纲要上 第二课</data>
+    </node>
+    <node id="H_K1_1_5">
+      <data key="name">春秋战国变革与百家争鸣</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">历史</data>
+      <data key="module">中外历史纲要(上)——中国史</data>
+      <data key="chapter">中华文明的起源与早期国家</data>
+      <data key="difficulty">4</data>
+      <data key="description">铁犁牛耕出现、井田制瓦解；商鞅变法；儒家道家法家墨家等百家争鸣是思想解放潮流。</data>
+      <data key="keywords">铁犁牛耕,井田制瓦解,商鞅变法,百家争鸣,诸子百家</data>
+      <data key="exam_type">材料分析题、选择题</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">纲要上 第二课</data>
+    </node>
+    <node id="H_K1_2_1">
+      <data key="name">秦统一与专制主义中央集权制度</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">历史</data>
+      <data key="module">中外历史纲要(上)——中国史</data>
+      <data key="chapter">统一多民族封建国家的形成与巩固</data>
+      <data key="difficulty">5</data>
+      <data key="description">秦始皇统一；建立皇帝制度、三公九卿制、郡县制，奠定大一统国家治理基本框架。</data>
+      <data key="keywords">秦统一,皇帝制,三公九卿,郡县制,专制主义中央集权</data>
+      <data key="exam_type">材料分析题、选择题</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">纲要上 第三课</data>
+    </node>
+    <node id="H_K1_2_2">
+      <data key="name">汉武帝大一统</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">历史</data>
+      <data key="module">中外历史纲要(上)——中国史</data>
+      <data key="chapter">统一多民族封建国家的形成与巩固</data>
+      <data key="difficulty">4</data>
+      <data key="description">颁布推恩令解决王国问题、罢黜百家独尊儒术、设刺史、盐铁官营，巩固大一统。</data>
+      <data key="keywords">汉武帝,推恩令,罢黜百家独尊儒术,盐铁官营,刺史</data>
+      <data key="exam_type">材料分析题、选择题</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">纲要上 第四课</data>
+    </node>
+    <node id="H_K1_2_3">
+      <data key="name">两汉选官制度</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">历史</data>
+      <data key="module">中外历史纲要(上)——中国史</data>
+      <data key="chapter">统一多民族封建国家的形成与巩固</data>
+      <data key="difficulty">2</data>
+      <data key="description">实行察举制与征辟制，以品德才学为标准选拔官吏。</data>
+      <data key="keywords">察举制,征辟制,孝廉,选官</data>
+      <data key="exam_type">选择题</data>
+      <data key="importance">3</data>
+      <data key="textbook_source">纲要上 第四课</data>
+    </node>
+    <node id="H_K1_2_4">
+      <data key="name">丝绸之路</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">历史</data>
+      <data key="module">中外历史纲要(上)——中国史</data>
+      <data key="chapter">统一多民族封建国家的形成与巩固</data>
+      <data key="difficulty">4</data>
+      <data key="description">张骞通西域开辟陆上丝绸之路，促进中西方经济文化交流，是中外交流的重要通道。</data>
+      <data key="keywords">张骞,丝绸之路,西域,中外交流</data>
+      <data key="exam_type">选择题、材料分析题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">纲要上 第四课</data>
+    </node>
+    <node id="H_K1_3_1">
+      <data key="name">北魏孝文帝改革与民族交融</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">历史</data>
+      <data key="module">中外历史纲要(上)——中国史</data>
+      <data key="chapter">三国两晋南北朝至隋唐</data>
+      <data key="difficulty">4</data>
+      <data key="description">迁都洛阳、推行汉化政策（说汉语、穿汉服、改汉姓、通汉婚），促进民族交融。</data>
+      <data key="keywords">北魏孝文帝改革,迁都洛阳,汉化政策,民族交融</data>
+      <data key="exam_type">材料分析题、选择题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">纲要上 第五课</data>
+    </node>
+    <node id="H_K1_3_2">
+      <data key="name">隋朝建制</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">历史</data>
+      <data key="module">中外历史纲要(上)——中国史</data>
+      <data key="chapter">三国两晋南北朝至隋唐</data>
+      <data key="difficulty">4</data>
+      <data key="description">隋朝统一、创立科举制、开凿大运河，开创制度影响深远。</data>
+      <data key="keywords">隋朝统一,科举制创立,大运河</data>
+      <data key="exam_type">选择题、材料分析题</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">纲要上 第六课</data>
+    </node>
+    <node id="H_K1_3_3">
+      <data key="name">唐朝三省六部制与盛世</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">历史</data>
+      <data key="module">中外历史纲要(上)——中国史</data>
+      <data key="chapter">三国两晋南北朝至隋唐</data>
+      <data key="difficulty">4</data>
+      <data key="description">三省六部制分割相权加强皇权；贞观之治、开元盛世体现唐朝繁荣开放。</data>
+      <data key="keywords">三省六部制,贞观之治,开元盛世,分割相权</data>
+      <data key="exam_type">选择题、材料分析题</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">纲要上 第七课</data>
+    </node>
+    <node id="H_K1_3_4">
+      <data key="name">唐朝民族关系与对外交流</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">历史</data>
+      <data key="module">中外历史纲要(上)——中国史</data>
+      <data key="chapter">三国两晋南北朝至隋唐</data>
+      <data key="difficulty">3</data>
+      <data key="description">文成公主入藏、册封制度；遣唐使、鉴真东渡、玄奘西行体现开放包容。</data>
+      <data key="keywords">文成公主,遣唐使,鉴真东渡,玄奘西行,对外开放</data>
+      <data key="exam_type">选择题、材料分析题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">纲要上 第七课、第八课</data>
+    </node>
+    <node id="H_K1_3_5">
+      <data key="name">安史之乱与藩镇割据</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">历史</data>
+      <data key="module">中外历史纲要(上)——中国史</data>
+      <data key="chapter">三国两晋南北朝至隋唐</data>
+      <data key="difficulty">3</data>
+      <data key="description">安史之乱使唐朝由盛转衰，此后形成藩镇割据，中央集权削弱。</data>
+      <data key="keywords">安史之乱,藩镇割据,由盛转衰</data>
+      <data key="exam_type">选择题</data>
+      <data key="importance">3</data>
+      <data key="textbook_source">纲要上 第八课</data>
+    </node>
+    <node id="H_K1_4_1">
+      <data key="name">北宋加强中央集权</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">历史</data>
+      <data key="module">中外历史纲要(上)——中国史</data>
+      <data key="chapter">辽宋夏金元时期</data>
+      <data key="difficulty">4</data>
+      <data key="description">通过分化事权、设转运使收财权、杯酒释兵权等措施加强中央集权，导致积贫积弱。</data>
+      <data key="keywords">北宋,分化事权,转运使,杯酒释兵权,积贫积弱</data>
+      <data key="exam_type">选择题、材料分析题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">纲要上 第九课</data>
+    </node>
+    <node id="H_K1_4_2">
+      <data key="name">宋代科举制与文官政治</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">历史</data>
+      <data key="module">中外历史纲要(上)——中国史</data>
+      <data key="chapter">辽宋夏金元时期</data>
+      <data key="difficulty">3</data>
+      <data key="description">科举规模扩大、糊名誊录完善，形成文官政治，促进社会流动。</data>
+      <data key="keywords">宋代科举,糊名誊录,文官政治,社会流动</data>
+      <data key="exam_type">选择题</data>
+      <data key="importance">3</data>
+      <data key="textbook_source">纲要上 第九课</data>
+    </node>
+    <node id="H_K1_4_3">
+      <data key="name">辽夏金的制度</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">历史</data>
+      <data key="module">中外历史纲要(上)——中国史</data>
+      <data key="chapter">辽宋夏金元时期</data>
+      <data key="difficulty">2</data>
+      <data key="description">辽实行南北面官（蕃汉分治）、金行猛安谋克制，体现因俗而治。</data>
+      <data key="keywords">辽,南北面官,猛安谋克,因俗而治</data>
+      <data key="exam_type">选择题</data>
+      <data key="importance">3</data>
+      <data key="textbook_source">纲要上 第十课</data>
+    </node>
+    <node id="H_K1_4_4">
+      <data key="name">元朝统一与行省制度</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">历史</data>
+      <data key="module">中外历史纲要(上)——中国史</data>
+      <data key="chapter">辽宋夏金元时期</data>
+      <data key="difficulty">4</data>
+      <data key="description">元朝完成大一统；推行行省制度加强边疆管辖，是中国省制开端。</data>
+      <data key="keywords">元朝统一,行省制度,省制开端,边疆管辖</data>
+      <data key="exam_type">选择题、材料分析题</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">纲要上 第十一课</data>
+    </node>
+    <node id="H_K1_4_5">
+      <data key="name">宋元经济科技文化</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">历史</data>
+      <data key="module">中外历史纲要(上)——中国史</data>
+      <data key="chapter">辽宋夏金元时期</data>
+      <data key="difficulty">4</data>
+      <data key="description">交子是世界上最早纸币；三大发明（活字印刷、指南针、火药）发展；程朱理学成为官方哲学。</data>
+      <data key="keywords">交子,活字印刷,指南针,火药,程朱理学</data>
+      <data key="exam_type">选择题、材料分析题</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">纲要上 第十二课</data>
+    </node>
+    <node id="H_K1_5_1">
+      <data key="name">明朝加强皇权</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">历史</data>
+      <data key="module">中外历史纲要(上)——中国史</data>
+      <data key="chapter">明清时期</data>
+      <data key="difficulty">4</data>
+      <data key="description">废丞相设三司、设内阁、锦衣卫东厂等特务机构，君主专制空前加强。</data>
+      <data key="keywords">废丞相,三司,内阁,锦衣卫东厂,君主专制</data>
+      <data key="exam_type">选择题、材料分析题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">纲要上 第十三课</data>
+    </node>
+    <node id="H_K1_5_2">
+      <data key="name">清朝军机处</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">历史</data>
+      <data key="module">中外历史纲要(上)——中国史</data>
+      <data key="chapter">明清时期</data>
+      <data key="difficulty">4</data>
+      <data key="description">雍正设军机处，君主专制达到顶峰，标志专制主义中央集权发展到顶峰。</data>
+      <data key="keywords">军机处,雍正,君主专制顶峰</data>
+      <data key="exam_type">选择题、材料分析题</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">纲要上 第十四课</data>
+    </node>
+    <node id="H_K1_5_3">
+      <data key="name">明清赋税改革</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">历史</data>
+      <data key="module">中外历史纲要(上)——中国史</data>
+      <data key="chapter">明清时期</data>
+      <data key="difficulty">3</data>
+      <data key="description">明张居正一条鞭法赋役合并征银；清摊丁入亩废除人头税，促进人口增长与商品经济。</data>
+      <data key="keywords">一条鞭法,张居正,摊丁入亩,人头税</data>
+      <data key="exam_type">选择题、材料分析题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">纲要上 第十四课</data>
+    </node>
+    <node id="H_K1_5_4">
+      <data key="name">明清对外关系</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">历史</data>
+      <data key="module">中外历史纲要(上)——中国史</data>
+      <data key="chapter">明清时期</data>
+      <data key="difficulty">3</data>
+      <data key="description">郑和下西洋为宣扬国威；明实行海禁、清闭关锁国；郑成功收复台湾。</data>
+      <data key="keywords">郑和下西洋,海禁,闭关锁国,郑成功收复台湾</data>
+      <data key="exam_type">选择题、材料分析题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">纲要上 第十四课</data>
+    </node>
+    <node id="H_K1_6_1">
+      <data key="name">两次鸦片战争与不平等条约</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">历史</data>
+      <data key="module">中外历史纲要(上)——中国史</data>
+      <data key="chapter">晚清至民国（救亡图存与革命）</data>
+      <data key="difficulty">5</data>
+      <data key="description">鸦片战争《南京条约》使中国开始沦为半殖民地半封建社会；《马关条约》大大加深；《辛丑条约》完全沦为。</data>
+      <data key="keywords">鸦片战争,南京条约,马关条约,辛丑条约,半殖民地半封建</data>
+      <data key="exam_type">材料分析题、选择题</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">纲要上 第十六、十七课</data>
+    </node>
+    <node id="H_K1_6_2">
+      <data key="name">太平天国运动</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">历史</data>
+      <data key="module">中外历史纲要(上)——中国史</data>
+      <data key="chapter">晚清至民国（救亡图存与革命）</data>
+      <data key="difficulty">3</data>
+      <data key="description">颁布《天朝田亩制度》（绝对平均主义空想）和《资政新篇》（提出发展资本主义），失败于中外反动势力联合绞杀。</data>
+      <data key="keywords">太平天国,天朝田亩制度,资政新篇,农民起义</data>
+      <data key="exam_type">选择题、材料分析题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">纲要上 第十七课</data>
+    </node>
+    <node id="H_K1_6_3">
+      <data key="name">洋务运动</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">历史</data>
+      <data key="module">中外历史纲要(上)——中国史</data>
+      <data key="chapter">晚清至民国（救亡图存与革命）</data>
+      <data key="difficulty">4</data>
+      <data key="description">以中体西用为指导创办军事民用工业、新式海军，是中国近代化开端，但甲午战败标志其破产。</data>
+      <data key="keywords">洋务运动,中体西用,近代化开端,军事民用工业</data>
+      <data key="exam_type">材料分析题、选择题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">纲要上 第十七课</data>
+    </node>
+    <node id="H_K1_6_4">
+      <data key="name">戊戌变法与义和团运动</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">历史</data>
+      <data key="module">中外历史纲要(上)——中国史</data>
+      <data key="chapter">晚清至民国（救亡图存与革命）</data>
+      <data key="difficulty">3</data>
+      <data key="description">戊戌变法是救亡图存的资产阶级改良运动；义和团运动打击列强瓜分图谋。</data>
+      <data key="keywords">戊戌变法,义和团,救亡图存,改良运动</data>
+      <data key="exam_type">选择题</data>
+      <data key="importance">3</data>
+      <data key="textbook_source">纲要上 第十八课</data>
+    </node>
+    <node id="H_K1_6_5">
+      <data key="name">辛亥革命</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">历史</data>
+      <data key="module">中外历史纲要(上)——中国史</data>
+      <data key="chapter">晚清至民国（救亡图存与革命）</data>
+      <data key="difficulty">5</data>
+      <data key="description">武昌起义推翻清王朝；颁布《中华民国临时约法》（中国第一部资产阶级宪法）；终结君主专制但未改变社会性质。</data>
+      <data key="keywords">辛亥革命,武昌起义,临时约法,推翻君主专制,资产阶级革命</data>
+      <data key="exam_type">材料分析题、论述题</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">纲要上 第十九课</data>
+    </node>
+    <node id="H_K1_6_6">
+      <data key="name">新文化运动与五四运动</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">历史</data>
+      <data key="module">中外历史纲要(上)——中国史</data>
+      <data key="chapter">晚清至民国（救亡图存与革命）</data>
+      <data key="difficulty">4</data>
+      <data key="description">新文化运动高举民主科学，动摇封建正统思想；五四运动是彻底反帝反封建的伟大爱国革命运动，促进马克思主义传播。</data>
+      <data key="keywords">新文化运动,民主科学,五四运动,反帝反封建,马克思主义传播</data>
+      <data key="exam_type">材料分析题、选择题</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">纲要上 第二十课</data>
+    </node>
+    <node id="H_K1_6_7">
+      <data key="name">国民革命</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">历史</data>
+      <data key="module">中外历史纲要(上)——中国史</data>
+      <data key="chapter">晚清至民国（救亡图存与革命）</data>
+      <data key="difficulty">3</data>
+      <data key="description">国共第一次合作推动北伐战争基本推翻北洋军阀统治，但国民党右派叛变致革命失败。</data>
+      <data key="keywords">国共合作,北伐战争,国民革命</data>
+      <data key="exam_type">选择题、材料分析题</data>
+      <data key="importance">3</data>
+      <data key="textbook_source">纲要上 第二十一课</data>
+    </node>
+    <node id="H_K1_6_8">
+      <data key="name">土地革命与红军长征</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">历史</data>
+      <data key="module">中外历史纲要(上)——中国史</data>
+      <data key="chapter">晚清至民国（救亡图存与革命）</data>
+      <data key="difficulty">4</data>
+      <data key="description">井冈山革命道路（农村包围城市武装夺取政权）；遵义会议确立毛泽东领导地位；红军长征。</data>
+      <data key="keywords">土地革命,井冈山道路,农村包围城市,遵义会议,长征</data>
+      <data key="exam_type">材料分析题、选择题</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">纲要上 第二十二课</data>
+    </node>
+    <node id="H_K1_6_9">
+      <data key="name">抗日战争</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">历史</data>
+      <data key="module">中外历史纲要(上)——中国史</data>
+      <data key="chapter">晚清至民国（救亡图存与革命）</data>
+      <data key="difficulty">5</data>
+      <data key="description">1931九一八到1945抗战胜利；正面战场与敌后战场相互配合；全民族抗战；抗战胜利是近代反侵略首次完全胜利。</data>
+      <data key="keywords">抗日战争,九一八,正面战场,敌后战场,全民族抗战,抗战胜利</data>
+      <data key="exam_type">材料分析题、论述题</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">纲要上 第二十三课</data>
+    </node>
+    <node id="H_K1_6_10">
+      <data key="name">解放战争</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">历史</data>
+      <data key="module">中外历史纲要(上)——中国史</data>
+      <data key="chapter">晚清至民国（救亡图存与革命）</data>
+      <data key="difficulty">4</data>
+      <data key="description">重庆谈判、三大战役、渡江战役；1949新政协通过《共同纲领》，新中国成立。</data>
+      <data key="keywords">解放战争,重庆谈判,三大战役,共同纲领,新中国成立</data>
+      <data key="exam_type">材料分析题、选择题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">纲要上 第二十四课</data>
+    </node>
+    <node id="H_K1_7_1">
+      <data key="name">新中国政权巩固</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">历史</data>
+      <data key="module">中外历史纲要(上)——中国史</data>
+      <data key="chapter">中华人民共和国的成立与发展</data>
+      <data key="difficulty">3</data>
+      <data key="description">土地改革、抗美援朝、镇压反革命三大运动巩固新生政权。</data>
+      <data key="keywords">土地改革,抗美援朝,镇压反革命,政权巩固</data>
+      <data key="exam_type">选择题、材料分析题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">纲要上 第二十五课</data>
+    </node>
+    <node id="H_K1_7_2">
+      <data key="name">三大改造</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">历史</data>
+      <data key="module">中外历史纲要(上)——中国史</data>
+      <data key="chapter">中华人民共和国的成立与发展</data>
+      <data key="difficulty">4</data>
+      <data key="description">1956年三大改造基本完成，社会主义公有制确立，社会主义制度在我国基本建立。</data>
+      <data key="keywords">三大改造,1956,社会主义制度建立,公有制</data>
+      <data key="exam_type">选择题、材料分析题</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">纲要上 第二十六课</data>
+    </node>
+    <node id="H_K1_7_3">
+      <data key="name">一五计划与建设成就</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">历史</data>
+      <data key="module">中外历史纲要(上)——中国史</data>
+      <data key="chapter">中华人民共和国的成立与发展</data>
+      <data key="difficulty">3</data>
+      <data key="description">一五计划优先发展重工业，奠定工业化初步基础；鞍钢、长春一汽等成就。</data>
+      <data key="keywords">一五计划,重工业,工业化初步基础</data>
+      <data key="exam_type">选择题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">纲要上 第二十六课</data>
+    </node>
+    <node id="H_K1_7_4">
+      <data key="name">改革开放</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">历史</data>
+      <data key="module">中外历史纲要(上)——中国史</data>
+      <data key="chapter">中华人民共和国的成立与发展</data>
+      <data key="difficulty">5</data>
+      <data key="description">农村实行家庭联产承包责任制；城市国企改革；形成经济特区—沿海开放城市—沿海经济开放区开放格局。</data>
+      <data key="keywords">改革开放,家庭联产承包责任制,国企改革,经济特区,对外开放格局</data>
+      <data key="exam_type">材料分析题、论述题</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">纲要上 第二十七课</data>
+    </node>
+    <node id="H_K1_7_5">
+      <data key="name">一国两制与祖国统一</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">历史</data>
+      <data key="module">中外历史纲要(上)——中国史</data>
+      <data key="chapter">中华人民共和国的成立与发展</data>
+      <data key="difficulty">3</data>
+      <data key="description">一国两制构想实现港澳回归；海峡两岸关系发展，反台独促统一。</data>
+      <data key="keywords">一国两制,港澳回归,海峡两岸,祖国统一</data>
+      <data key="exam_type">选择题、材料分析题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">纲要上 第二十八课</data>
+    </node>
+    <node id="H_K1_7_6">
+      <data key="name">新中国外交</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">历史</data>
+      <data key="module">中外历史纲要(上)——中国史</data>
+      <data key="chapter">中华人民共和国的成立与发展</data>
+      <data key="difficulty">4</data>
+      <data key="description">和平共处五项原则是外交准则；1971恢复联合国合法席位；1972中美关系正常化、中日建交。</data>
+      <data key="keywords">和平共处五项原则,联合国合法席位,中美关系正常化,新中国外交</data>
+      <data key="exam_type">选择题、材料分析题</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">纲要上 第二十八课</data>
+    </node>
+    <node id="H_K2_1_1">
+      <data key="name">古代早期文明</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">历史</data>
+      <data key="module">中外历史纲要(下)——世界史</data>
+      <data key="chapter">古代文明的产生与发展</data>
+      <data key="difficulty">3</data>
+      <data key="description">两河流域苏美尔楔形文字、《汉谟拉比法典》；古埃及金字塔象形文字；古印度种姓制度；古希腊城邦民主。</data>
+      <data key="keywords">两河流域,汉谟拉比法典,古埃及,种姓制度,古希腊城邦</data>
+      <data key="exam_type">选择题、材料分析题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">纲要下 第一课</data>
+    </node>
+    <node id="H_K2_1_2">
+      <data key="name">古代文明的扩展与交往</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">历史</data>
+      <data key="module">中外历史纲要(下)——世界史</data>
+      <data key="chapter">古代文明的产生与发展</data>
+      <data key="difficulty">2</data>
+      <data key="description">通过武力扩张、移民、贸易等方式扩展，促进不同文明交往。</data>
+      <data key="keywords">文明扩展,移民,贸易,文明交往</data>
+      <data key="exam_type">选择题</data>
+      <data key="importance">3</data>
+      <data key="textbook_source">纲要下 第一课</data>
+    </node>
+    <node id="H_K2_2_1">
+      <data key="name">中古西欧封建社会</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">历史</data>
+      <data key="module">中外历史纲要(下)——世界史</data>
+      <data key="chapter">中古时期的世界</data>
+      <data key="difficulty">4</data>
+      <data key="description">封君封臣制、庄园与农奴制、基督教会在中世纪占据支配地位，是西欧封建社会特征。</data>
+      <data key="keywords">封君封臣,庄园农奴制,基督教,中世纪西欧</data>
+      <data key="exam_type">选择题、材料分析题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">纲要下 第三课</data>
+    </node>
+    <node id="H_K2_2_2">
+      <data key="name">拜占庭与俄罗斯</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">历史</data>
+      <data key="module">中外历史纲要(下)——世界史</data>
+      <data key="chapter">中古时期的世界</data>
+      <data key="difficulty">2</data>
+      <data key="description">拜占庭帝国《查士丁尼法典》；俄罗斯基辅罗斯受东正教影响发展为沙皇俄国。</data>
+      <data key="keywords">拜占庭,查士丁尼法典,基辅罗斯,沙皇俄国</data>
+      <data key="exam_type">选择题</data>
+      <data key="importance">2</data>
+      <data key="textbook_source">纲要下 第三课</data>
+    </node>
+    <node id="H_K2_2_3">
+      <data key="name">阿拉伯帝国与奥斯曼帝国</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">历史</data>
+      <data key="module">中外历史纲要(下)——世界史</data>
+      <data key="chapter">中古时期的世界</data>
+      <data key="difficulty">3</data>
+      <data key="description">阿拉伯帝国沟通东西方文化；奥斯曼帝国攻灭拜占庭并控制东西方商路。</data>
+      <data key="keywords">阿拉伯帝国,东西方文化,奥斯曼帝国,东西方商路</data>
+      <data key="exam_type">选择题</data>
+      <data key="importance">3</data>
+      <data key="textbook_source">纲要下 第三课</data>
+    </node>
+    <node id="H_K2_2_4">
+      <data key="name">中古日本与印度</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">历史</data>
+      <data key="module">中外历史纲要(下)——世界史</data>
+      <data key="chapter">中古时期的世界</data>
+      <data key="difficulty">2</data>
+      <data key="description">日本大化改新仿唐制建立中央集权，后形成幕府统治；印度德里苏丹国伊斯兰化。</data>
+      <data key="keywords">大化改新,幕府统治,德里苏丹国,中古日本印度</data>
+      <data key="exam_type">选择题</data>
+      <data key="importance">2</data>
+      <data key="textbook_source">纲要下 第三课</data>
+    </node>
+    <node id="H_K2_3_1">
+      <data key="name">新航路开辟的动因与条件</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">历史</data>
+      <data key="module">中外历史纲要(下)——世界史</data>
+      <data key="chapter">走向整体的世界</data>
+      <data key="difficulty">3</data>
+      <data key="description">动因是商品经济发展和寻金热、传播天主教；条件是航海造船技术进步、地理知识增长、王室支持。</data>
+      <data key="keywords">新航路,动因,寻金热,航海技术,王室支持</data>
+      <data key="exam_type">选择题、材料分析题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">纲要下 第四课</data>
+    </node>
+    <node id="H_K2_3_2">
+      <data key="name">新航路开辟的过程</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">历史</data>
+      <data key="module">中外历史纲要(下)——世界史</data>
+      <data key="chapter">走向整体的世界</data>
+      <data key="difficulty">4</data>
+      <data key="description">迪亚士达好望角、达伽马到印度、哥伦布发现美洲、麦哲伦船队环球航行。</data>
+      <data key="keywords">迪亚士,达伽马,哥伦布,麦哲伦,环球航行</data>
+      <data key="exam_type">选择题</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">纲要下 第四课</data>
+    </node>
+    <node id="H_K2_3_3">
+      <data key="name">新航路开辟的影响</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">历史</data>
+      <data key="module">中外历史纲要(下)——世界史</data>
+      <data key="chapter">走向整体的世界</data>
+      <data key="difficulty">4</data>
+      <data key="description">引发商业革命和价格革命，世界由分散走向整体，加速资本主义发展和殖民扩张。</data>
+      <data key="keywords">商业革命,价格革命,世界走向整体,殖民扩张</data>
+      <data key="exam_type">材料分析题、选择题</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">纲要下 第四课</data>
+    </node>
+    <node id="H_K2_4_1">
+      <data key="name">英国君主立宪制</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">历史</data>
+      <data key="module">中外历史纲要(下)——世界史</data>
+      <data key="chapter">资本主义制度的确立与工业革命</data>
+      <data key="difficulty">4</data>
+      <data key="description">《权利法案》限制王权确立议会主权，责任内阁制使行政权转移到首相内阁。</data>
+      <data key="keywords">权利法案,议会主权,责任内阁制,君主立宪</data>
+      <data key="exam_type">选择题、材料分析题</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">纲要下 第九课</data>
+    </node>
+    <node id="H_K2_4_2">
+      <data key="name">美国共和制</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">历史</data>
+      <data key="module">中外历史纲要(下)——世界史</data>
+      <data key="chapter">资本主义制度的确立与工业革命</data>
+      <data key="difficulty">4</data>
+      <data key="description">《1787年宪法》确立联邦制和三权分立相互制衡，是世界上第一部成文资产阶级共和国宪法。</data>
+      <data key="keywords">1787年宪法,联邦制,三权分立,制衡,共和国</data>
+      <data key="exam_type">选择题、材料分析题</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">纲要下 第九课</data>
+    </node>
+    <node id="H_K2_4_3">
+      <data key="name">法国大革命与《人权宣言》</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">历史</data>
+      <data key="module">中外历史纲要(下)——世界史</data>
+      <data key="chapter">资本主义制度的确立与工业革命</data>
+      <data key="difficulty">3</data>
+      <data key="description">法国大革命推翻封建专制，《人权宣言》宣扬天赋人权自由平等，确立资本主义政治原则。</data>
+      <data key="keywords">法国大革命,人权宣言,天赋人权,自由平等</data>
+      <data key="exam_type">选择题、材料分析题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">纲要下 第九课</data>
+    </node>
+    <node id="H_K2_4_4">
+      <data key="name">第一次工业革命</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">历史</data>
+      <data key="module">中外历史纲要(下)——世界史</data>
+      <data key="chapter">资本主义制度的确立与工业革命</data>
+      <data key="difficulty">4</data>
+      <data key="description">蒸汽机的广泛使用标志进入蒸汽时代，工厂制度确立，推动世界市场初步形成。</data>
+      <data key="keywords">第一次工业革命,蒸汽机,蒸汽时代,工厂制度,世界市场初步形成</data>
+      <data key="exam_type">选择题、材料分析题</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">纲要下 第十课</data>
+    </node>
+    <node id="H_K2_4_5">
+      <data key="name">第二次工业革命</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">历史</data>
+      <data key="module">中外历史纲要(下)——世界史</data>
+      <data key="chapter">资本主义制度的确立与工业革命</data>
+      <data key="difficulty">4</data>
+      <data key="description">电力的广泛应用标志进入电气时代，垄断组织产生，世界市场最终形成。</data>
+      <data key="keywords">第二次工业革命,电力,电气时代,垄断组织,世界市场最终形成</data>
+      <data key="exam_type">选择题、材料分析题</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">纲要下 第十课</data>
+    </node>
+    <node id="H_K2_4_6">
+      <data key="name">资本主义的扩展</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">历史</data>
+      <data key="module">中外历史纲要(下)——世界史</data>
+      <data key="chapter">资本主义制度的确立与工业革命</data>
+      <data key="difficulty">3</data>
+      <data key="description">俄国1861农奴制改革、日本明治维新走上资本主义发展道路。</data>
+      <data key="keywords">俄国农奴制改革,日本明治维新,资本主义扩展</data>
+      <data key="exam_type">选择题</data>
+      <data key="importance">3</data>
+      <data key="textbook_source">纲要下 第九课</data>
+    </node>
+    <node id="H_K2_5_1">
+      <data key="name">马克思主义的诞生</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">历史</data>
+      <data key="module">中外历史纲要(下)——世界史</data>
+      <data key="chapter">马克思主义的诞生与国际工人运动</data>
+      <data key="difficulty">4</data>
+      <data key="description">《共产党宣言》标志马克思主义诞生；第一国际推动国际工人运动；巴黎公社是无产阶级专政首次尝试。</data>
+      <data key="keywords">共产党宣言,马克思主义诞生,第一国际,巴黎公社</data>
+      <data key="exam_type">选择题、材料分析题</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">纲要下 第十一课</data>
+    </node>
+    <node id="H_K2_5_2">
+      <data key="name">列宁主义与十月革命</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">历史</data>
+      <data key="module">中外历史纲要(下)——世界史</data>
+      <data key="chapter">马克思主义的诞生与国际工人运动</data>
+      <data key="difficulty">4</data>
+      <data key="description">列宁主义发展马克思主义；十月革命建立世界上第一个社会主义国家，开辟人类历史新纪元。</data>
+      <data key="keywords">列宁主义,十月革命,第一个社会主义国家,人类历史新纪元</data>
+      <data key="exam_type">选择题、材料分析题</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">纲要下 第十五课</data>
+    </node>
+    <node id="H_K2_5_3">
+      <data key="name">国际工人运动发展</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">历史</data>
+      <data key="module">中外历史纲要(下)——世界史</data>
+      <data key="chapter">马克思主义的诞生与国际工人运动</data>
+      <data key="difficulty">2</data>
+      <data key="description">第二国际推动各国工人政党建立；十月革命后共产国际成立推动世界无产阶级革命。</data>
+      <data key="keywords">第二国际,共产国际,国际工人运动</data>
+      <data key="exam_type">选择题</data>
+      <data key="importance">2</data>
+      <data key="textbook_source">纲要下 第十一课</data>
+    </node>
+    <node id="H_K2_6_1">
+      <data key="name">第一次世界大战与凡华体系</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">历史</data>
+      <data key="module">中外历史纲要(下)——世界史</data>
+      <data key="chapter">两次世界大战与冷战</data>
+      <data key="difficulty">4</data>
+      <data key="description">一战是帝国主义争夺霸权结果；战后形成凡尔赛—华盛顿体系暂时调整列强在欧亚秩序。</data>
+      <data key="keywords">第一次世界大战,帝国主义战争,凡尔赛华盛顿体系</data>
+      <data key="exam_type">选择题、材料分析题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">纲要下 第十四课</data>
+    </node>
+    <node id="H_K2_6_2">
+      <data key="name">经济大危机与罗斯福新政</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">历史</data>
+      <data key="module">中外历史纲要(下)——世界史</data>
+      <data key="chapter">两次世界大战与冷战</data>
+      <data key="difficulty">4</data>
+      <data key="description">1929—1933年资本主义经济大危机；罗斯福新政以国家干预经济方式开创资本主义自我调节新模式。</data>
+      <data key="keywords">经济大危机,罗斯福新政,国家干预经济,自我调节</data>
+      <data key="exam_type">材料分析题、选择题</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">纲要下 第十五课</data>
+    </node>
+    <node id="H_K2_6_3">
+      <data key="name">法西斯主义与二战</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">历史</data>
+      <data key="module">中外历史纲要(下)——世界史</data>
+      <data key="chapter">两次世界大战与冷战</data>
+      <data key="difficulty">4</data>
+      <data key="description">德意日法西斯上台对外侵略；世界反法西斯同盟取得二战胜利，确立雅尔塔体系。</data>
+      <data key="keywords">法西斯主义,第二次世界大战,反法西斯同盟,雅尔塔体系</data>
+      <data key="exam_type">选择题、材料分析题</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">纲要下 第十七课</data>
+    </node>
+    <node id="H_K2_6_4">
+      <data key="name">冷战</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">历史</data>
+      <data key="module">中外历史纲要(下)——世界史</data>
+      <data key="chapter">两次世界大战与冷战</data>
+      <data key="difficulty">4</data>
+      <data key="description">杜鲁门主义标志冷战开始；马歇尔计划、北约与华约对峙，两极格局形成。</data>
+      <data key="keywords">冷战,杜鲁门主义,马歇尔计划,北约华约,两极格局</data>
+      <data key="exam_type">选择题、材料分析题</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">纲要下 第十八课</data>
+    </node>
+    <node id="H_K2_6_5">
+      <data key="name">冷战中的热战与多极化</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">历史</data>
+      <data key="module">中外历史纲要(下)——世界史</data>
+      <data key="chapter">两次世界大战与冷战</data>
+      <data key="difficulty">3</data>
+      <data key="description">朝鲜战争、越南战争等局部热战；西欧日本崛起、不结盟运动推动多极化趋势出现。</data>
+      <data key="keywords">朝鲜战争,越南战争,西欧日本崛起,不结盟运动,多极化趋势</data>
+      <data key="exam_type">选择题</data>
+      <data key="importance">3</data>
+      <data key="textbook_source">纲要下 第十八课</data>
+    </node>
+    <node id="H_K2_7_1">
+      <data key="name">冷战结束与多极化加强</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">历史</data>
+      <data key="module">中外历史纲要(下)——世界史</data>
+      <data key="chapter">当代世界的发展特点与主要趋势</data>
+      <data key="difficulty">3</data>
+      <data key="description">东欧剧变苏联解体标志冷战结束；世界多极化趋势继续发展，一超多强格局。</data>
+      <data key="keywords">冷战结束,苏联解体,一超多强,多极化</data>
+      <data key="exam_type">选择题、材料分析题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">纲要下 第二十二课</data>
+    </node>
+    <node id="H_K2_7_2">
+      <data key="name">经济全球化与区域集团化</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">历史</data>
+      <data key="module">中外历史纲要(下)——世界史</data>
+      <data key="chapter">当代世界的发展特点与主要趋势</data>
+      <data key="difficulty">3</data>
+      <data key="description">世贸组织推动全球化；欧盟、北美自由贸易区、亚太经合等区域经济集团化发展。</data>
+      <data key="keywords">经济全球化,世贸组织,区域经济集团化,欧盟</data>
+      <data key="exam_type">选择题、材料分析题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">纲要下 第二十二课</data>
+    </node>
+    <node id="H_K2_7_3">
+      <data key="name">当代全球性问题</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">历史</data>
+      <data key="module">中外历史纲要(下)——世界史</data>
+      <data key="chapter">当代世界的发展特点与主要趋势</data>
+      <data key="difficulty">2</data>
+      <data key="description">南北差距、恐怖主义、环境、粮食等全球性问题需要国际合作。</data>
+      <data key="keywords">全球性问题,南北差距,恐怖主义,国际合作</data>
+      <data key="exam_type">选择题、简答题</data>
+      <data key="importance">3</data>
+      <data key="textbook_source">纲要下 第二十三课</data>
+    </node>
+    <node id="H_K3_1_1">
+      <data key="name">中国古代政治制度演变</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">历史</data>
+      <data key="module">国家制度与社会治理</data>
+      <data key="chapter">政治制度</data>
+      <data key="difficulty">4</data>
+      <data key="description">从分封宗法制到专制主义中央集权制度的演进：秦确立、汉巩固、隋唐完善、宋加强、明清强化到顶峰。</data>
+      <data key="keywords">专制主义中央集权,分封宗法制,演变,加强强化</data>
+      <data key="exam_type">材料分析题、选择题</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">选必1 第一单元</data>
+    </node>
+    <node id="H_K3_1_2">
+      <data key="name">西方政治制度</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">历史</data>
+      <data key="module">国家制度与社会治理</data>
+      <data key="chapter">政治制度</data>
+      <data key="difficulty">4</data>
+      <data key="description">比较英君主立宪、美总统共和、法半总统制、德君主立宪等资产阶级代议制。</data>
+      <data key="keywords">代议制,君主立宪,总统共和,半总统制,西方政治制度</data>
+      <data key="exam_type">选择题、材料分析题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">选必1 第一单元</data>
+    </node>
+    <node id="H_K3_1_3">
+      <data key="name">中国近现代政治制度</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">历史</data>
+      <data key="module">国家制度与社会治理</data>
+      <data key="chapter">政治制度</data>
+      <data key="difficulty">3</data>
+      <data key="description">从《临时约法》到人大制度、政党制度、民族区域自治、基层群众自治的发展。</data>
+      <data key="keywords">临时约法,人民代表大会制度,政党制度,近现代政治制度</data>
+      <data key="exam_type">选择题、材料分析题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">选必1 第一单元</data>
+    </node>
+    <node id="H_K3_2_1">
+      <data key="name">察举制与九品中正制</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">历史</data>
+      <data key="module">国家制度与社会治理</data>
+      <data key="chapter">官员选拔与管理</data>
+      <data key="difficulty">3</data>
+      <data key="description">汉武帝察举制以孝廉为标准；魏晋九品中正制后期沦为门阀政治，选官看重门第。</data>
+      <data key="keywords">察举制,九品中正制,门阀政治,选官</data>
+      <data key="exam_type">选择题</data>
+      <data key="importance">3</data>
+      <data key="textbook_source">选必1 第二单元</data>
+    </node>
+    <node id="H_K3_2_2">
+      <data key="name">科举制的演变与影响</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">历史</data>
+      <data key="module">国家制度与社会治理</data>
+      <data key="chapter">官员选拔与管理</data>
+      <data key="difficulty">5</data>
+      <data key="description">隋创立、唐完善、宋发展、明清八股取士、1905废除；扩大统治基础、促进社会流动、影响东亚及西方文官制度。</data>
+      <data key="keywords">科举制,隋创唐完善,八股取士,1905废除,社会流动</data>
+      <data key="exam_type">材料分析题、选择题</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">选必1 第二单元</data>
+    </node>
+    <node id="H_K3_2_3">
+      <data key="name">西方文官制度</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">历史</data>
+      <data key="module">国家制度与社会治理</data>
+      <data key="chapter">官员选拔与管理</data>
+      <data key="difficulty">3</data>
+      <data key="description">英国1855年建立文官制度，实行考试录用、政治中立、常任，影响各国人事管理。</data>
+      <data key="keywords">西方文官制度,英国,考试录用,政治中立,常任</data>
+      <data key="exam_type">选择题</data>
+      <data key="importance">3</data>
+      <data key="textbook_source">选必1 第二单元</data>
+    </node>
+    <node id="H_K3_3_1">
+      <data key="name">中国古代法律与教化</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">历史</data>
+      <data key="module">国家制度与社会治理</data>
+      <data key="chapter">法律教化</data>
+      <data key="difficulty">3</data>
+      <data key="description">以德主刑辅、礼法并施为原则；《唐律疏议》是中华法系代表。</data>
+      <data key="keywords">德主刑辅,礼法并施,唐律疏议,中华法系</data>
+      <data key="exam_type">选择题、材料分析题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">选必1 第三单元</data>
+    </node>
+    <node id="H_K3_3_2">
+      <data key="name">近代中国的法律与教化</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">历史</data>
+      <data key="module">国家制度与社会治理</data>
+      <data key="chapter">法律教化</data>
+      <data key="difficulty">2</data>
+      <data key="description">清末修律开启法律近代化；南京临时政府、北洋、国民政府法律演变。</data>
+      <data key="keywords">清末修律,法律近代化,近代法律</data>
+      <data key="exam_type">选择题</data>
+      <data key="importance">2</data>
+      <data key="textbook_source">选必1 第三单元</data>
+    </node>
+    <node id="H_K3_3_3">
+      <data key="name">西方法律传统</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">历史</data>
+      <data key="module">国家制度与社会治理</data>
+      <data key="chapter">法律教化</data>
+      <data key="difficulty">4</data>
+      <data key="description">罗马法从《十二铜表法》到《查士丁尼民法大全》；大陆法系与英美法系（判例法）的差异。</data>
+      <data key="keywords">罗马法,十二铜表法,查士丁尼民法大全,大陆法系,英美法系</data>
+      <data key="exam_type">选择题、材料分析题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">选必1 第三单元</data>
+    </node>
+    <node id="H_K3_4_1">
+      <data key="name">民族政策与外交</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">历史</data>
+      <data key="module">国家制度与社会治理</data>
+      <data key="chapter">民族外交与基层治理</data>
+      <data key="difficulty">3</data>
+      <data key="description">我国民族区域自治制度与和平外交；古代朝贡体系与近代外交转型。</data>
+      <data key="keywords">民族区域自治,和平外交,朝贡体系,外交转型</data>
+      <data key="exam_type">选择题、材料分析题</data>
+      <data key="importance">3</data>
+      <data key="textbook_source">选必1 第四、五单元</data>
+    </node>
+    <node id="H_K3_4_2">
+      <data key="name">基层治理与社会保障</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">历史</data>
+      <data key="module">国家制度与社会治理</data>
+      <data key="chapter">民族外交与基层治理</data>
+      <data key="difficulty">2</data>
+      <data key="description">中国古代乡里制度、西方社区自治；现代社会保障制度（福利国家）。</data>
+      <data key="keywords">乡里制度,社区自治,社会保障,福利国家</data>
+      <data key="exam_type">选择题</data>
+      <data key="importance">3</data>
+      <data key="textbook_source">选必1 第五单元</data>
+    </node>
+    <node id="H_K4_1_1">
+      <data key="name">农业的起源</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">历史</data>
+      <data key="module">经济与社会生活</data>
+      <data key="chapter">食物生产与社会生活</data>
+      <data key="difficulty">3</data>
+      <data key="description">农业起源南稻北粟，是文明产生的重要标志，促进人类定居和人口增长。</data>
+      <data key="keywords">农业起源,南稻北粟,文明产生,定居</data>
+      <data key="exam_type">选择题</data>
+      <data key="importance">3</data>
+      <data key="textbook_source">选必2 第一单元</data>
+    </node>
+    <node id="H_K4_1_2">
+      <data key="name">古代区域食物生产</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">历史</data>
+      <data key="module">经济与社会生活</data>
+      <data key="chapter">食物生产与社会生活</data>
+      <data key="difficulty">2</data>
+      <data key="description">不同文明区形成各具特色的食物生产与饮食结构。</data>
+      <data key="keywords">食物生产,饮食结构,文明区域</data>
+      <data key="exam_type">选择题</data>
+      <data key="importance">2</data>
+      <data key="textbook_source">选必2 第一单元</data>
+    </node>
+    <node id="H_K4_1_3">
+      <data key="name">物种大交换</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">历史</data>
+      <data key="module">经济与社会生活</data>
+      <data key="chapter">食物生产与社会生活</data>
+      <data key="difficulty">4</data>
+      <data key="description">新航路开辟后哥伦布大交换使玉米马铃薯番茄等在全球传播，引发食物革命。</data>
+      <data key="keywords">哥伦布大交换,玉米马铃薯,食物革命,物种交流</data>
+      <data key="exam_type">选择题、材料分析题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">选必2 第一单元</data>
+    </node>
+    <node id="H_K4_2_1">
+      <data key="name">农业工具演变</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">历史</data>
+      <data key="module">经济与社会生活</data>
+      <data key="chapter">生产工具与劳作方式</data>
+      <data key="difficulty">3</data>
+      <data key="description">从石器、骨器到铁器、铁犁牛耕，再到近代农业机械，反映生产力进步。</data>
+      <data key="keywords">农业工具,石器铁器,铁犁牛耕,农业机械,生产力</data>
+      <data key="exam_type">选择题</data>
+      <data key="importance">3</data>
+      <data key="textbook_source">选必2 第二单元</data>
+    </node>
+    <node id="H_K4_2_2">
+      <data key="name">手工业工具与技术</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">历史</data>
+      <data key="module">经济与社会生活</data>
+      <data key="chapter">生产工具与劳作方式</data>
+      <data key="difficulty">2</data>
+      <data key="description">纺织、冶炼、制瓷等手工业工具进步，中国古代手工业长期领先。</data>
+      <data key="keywords">手工业工具,纺织冶炼制瓷,手工业技术</data>
+      <data key="exam_type">选择题</data>
+      <data key="importance">2</data>
+      <data key="textbook_source">选必2 第二单元</data>
+    </node>
+    <node id="H_K4_2_3">
+      <data key="name">工业革命与机器大生产</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">历史</data>
+      <data key="module">经济与社会生活</data>
+      <data key="chapter">生产工具与劳作方式</data>
+      <data key="difficulty">4</data>
+      <data key="description">工业革命用机器取代手工劳动，工厂制度确立，深刻改变生产方式与社会结构。</data>
+      <data key="keywords">工业革命,机器大生产,工厂制度,生产方式</data>
+      <data key="exam_type">选择题、材料分析题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">选必2 第二单元</data>
+    </node>
+    <node id="H_K4_3_1">
+      <data key="name">古代商业贸易</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">历史</data>
+      <data key="module">经济与社会生活</data>
+      <data key="chapter">商业贸易与居住环境</data>
+      <data key="difficulty">3</data>
+      <data key="description">从市坊分离到市坊界限打破，明清商帮（晋商徽商）兴起，丝绸之路贸易繁荣。</data>
+      <data key="keywords">古代商业,市坊,商帮,晋商徽商,丝绸之路贸易</data>
+      <data key="exam_type">选择题、材料分析题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">选必2 第三单元</data>
+    </node>
+    <node id="H_K4_3_2">
+      <data key="name">世界市场形成</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">历史</data>
+      <data key="module">经济与社会生活</data>
+      <data key="chapter">商业贸易与居住环境</data>
+      <data key="difficulty">4</data>
+      <data key="description">新航路开辟到两次工业革命，资本主义世界市场从雏形、初步形成到最终形成。</data>
+      <data key="keywords">世界市场,雏形,初步形成,最终形成</data>
+      <data key="exam_type">选择题、材料分析题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">选必2 第三单元</data>
+    </node>
+    <node id="H_K4_3_3">
+      <data key="name">居住环境演变</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">历史</data>
+      <data key="module">经济与社会生活</data>
+      <data key="chapter">商业贸易与居住环境</data>
+      <data key="difficulty">2</data>
+      <data key="description">从村落到城市，近代以来城市化加速，居住条件和基础设施改善。</data>
+      <data key="keywords">居住环境,村落城市,城市化,基础设施</data>
+      <data key="exam_type">选择题</data>
+      <data key="importance">2</data>
+      <data key="textbook_source">选必2 第四单元</data>
+    </node>
+    <node id="H_K4_4_1">
+      <data key="name">交通通信进步</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">历史</data>
+      <data key="module">经济与社会生活</data>
+      <data key="chapter">交通通信与医疗卫生</data>
+      <data key="difficulty">3</data>
+      <data key="description">铁路、轮船、飞机、电报电话出现，缩短时空距离，改变社会生活。</data>
+      <data key="keywords">铁路轮船飞机,电报电话,交通通信,时空距离</data>
+      <data key="exam_type">选择题、材料分析题</data>
+      <data key="importance">3</data>
+      <data key="textbook_source">选必2 第五单元</data>
+    </node>
+    <node id="H_K4_4_2">
+      <data key="name">医疗卫生进步</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">历史</data>
+      <data key="module">经济与社会生活</data>
+      <data key="chapter">交通通信与医疗卫生</data>
+      <data key="difficulty">3</data>
+      <data key="description">近代医学进步（抗生素、疫苗）、公共卫生体系建立，人均寿命延长。</data>
+      <data key="keywords">医疗卫生,抗生素疫苗,公共卫生,人均寿命</data>
+      <data key="exam_type">选择题</data>
+      <data key="importance">3</data>
+      <data key="textbook_source">选必2 第六单元</data>
+    </node>
+    <node id="H_K4_4_3">
+      <data key="name">习俗变迁</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">历史</data>
+      <data key="module">经济与社会生活</data>
+      <data key="chapter">交通通信与医疗卫生</data>
+      <data key="difficulty">2</data>
+      <data key="description">近代以来断发易服、婚丧礼俗变革体现社会观念转变。</data>
+      <data key="keywords">习俗变迁,断发易服,婚丧礼俗,社会观念</data>
+      <data key="exam_type">选择题</data>
+      <data key="importance">2</data>
+      <data key="textbook_source">选必2 第六单元</data>
+    </node>
+    <node id="H_K5_1_1">
+      <data key="name">中华文化的传播</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">历史</data>
+      <data key="module">文化交流与传播</data>
+      <data key="chapter">中华文化与外来文化交流</data>
+      <data key="difficulty">3</data>
+      <data key="description">汉字、儒学东传朝鲜日本越南，四大发明西传推动欧洲社会变革。</data>
+      <data key="keywords">汉字儒学东传,四大发明西传,中华文化影响</data>
+      <data key="exam_type">选择题、材料分析题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">选必3 第一单元</data>
+    </node>
+    <node id="H_K5_1_2">
+      <data key="name">外来文化的传入与本土化</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">历史</data>
+      <data key="module">文化交流与传播</data>
+      <data key="chapter">中华文化与外来文化交流</data>
+      <data key="difficulty">3</data>
+      <data key="description">佛教传入并中国化；明清西学东渐；近代西方科技思想传入推动中国近代化。</data>
+      <data key="keywords">佛教中国化,西学东渐,外来文化本土化,近代化</data>
+      <data key="exam_type">选择题、材料分析题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">选必3 第一单元</data>
+    </node>
+    <node id="H_K5_2_1">
+      <data key="name">人口迁徙与文化交流</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">历史</data>
+      <data key="module">文化交流与传播</data>
+      <data key="chapter">迁徙、贸易与战争中的文化交流</data>
+      <data key="difficulty">3</data>
+      <data key="description">印欧人迁徙、匈奴西迁、华人下南洋等人口迁徙促进民族融合与文化交流。</data>
+      <data key="keywords">人口迁徙,印欧人,华人下南洋,文化交流</data>
+      <data key="exam_type">选择题</data>
+      <data key="importance">3</data>
+      <data key="textbook_source">选必3 第二单元</data>
+    </node>
+    <node id="H_K5_2_2">
+      <data key="name">商路贸易与文化交流</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">历史</data>
+      <data key="module">文化交流与传播</data>
+      <data key="chapter">迁徙、贸易与战争中的文化交流</data>
+      <data key="difficulty">4</data>
+      <data key="description">丝绸之路、茶叶瓷器香料贸易不仅交换商品也传播文化技术。</data>
+      <data key="keywords">丝绸之路贸易,茶叶瓷器香料,商路,文化传播</data>
+      <data key="exam_type">选择题、材料分析题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">选必3 第二单元</data>
+    </node>
+    <node id="H_K5_2_3">
+      <data key="name">战争冲突与文化碰撞</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">历史</data>
+      <data key="module">文化交流与传播</data>
+      <data key="chapter">迁徙、贸易与战争中的文化交流</data>
+      <data key="difficulty">3</data>
+      <data key="description">亚历山大东征、蒙古西征、十字军东征等在破坏中也带来文化交流。</data>
+      <data key="keywords">亚历山大东征,蒙古西征,十字军东征,文化碰撞</data>
+      <data key="exam_type">选择题</data>
+      <data key="importance">3</data>
+      <data key="textbook_source">选必3 第二单元</data>
+    </node>
+    <node id="H_K5_3_1">
+      <data key="name">文化遗产保护</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">历史</data>
+      <data key="module">文化交流与传播</data>
+      <data key="chapter">文化遗产</data>
+      <data key="difficulty">2</data>
+      <data key="description">1972年《世界遗产公约》建立世界遗产保护制度；文化遗产是全人类共同财富。</data>
+      <data key="keywords">世界遗产公约,文化遗产保护,全人类共同财富</data>
+      <data key="exam_type">选择题、简答题</data>
+      <data key="importance">3</data>
+      <data key="textbook_source">选必3 第三单元</data>
+    </node>
+    <node id="H_K5_3_2">
+      <data key="name">中华优秀传统文化保护</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">历史</data>
+      <data key="module">文化交流与传播</data>
+      <data key="chapter">文化遗产</data>
+      <data key="difficulty">2</data>
+      <data key="description">我国通过立法、非遗名录等方式保护传统文化，传承中华文脉。</data>
+      <data key="keywords">传统文化保护,非物质文化遗产,传承文脉</data>
+      <data key="exam_type">选择题、简答题</data>
+      <data key="importance">3</data>
+      <data key="textbook_source">选必3 第三单元</data>
+    </node>
+    <edge source="H_M1" target="H_C1_1">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">模块【中外历史纲要(上)——中国史】包含章节【中华文明的起源与早期国家】</data>
+    </edge>
+    <edge source="H_M1" target="H_C1_2">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">模块【中外历史纲要(上)——中国史】包含章节【统一多民族封建国家的形成与巩固】</data>
+    </edge>
+    <edge source="H_M1" target="H_C1_3">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">模块【中外历史纲要(上)——中国史】包含章节【三国两晋南北朝至隋唐】</data>
+    </edge>
+    <edge source="H_M1" target="H_C1_4">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">模块【中外历史纲要(上)——中国史】包含章节【辽宋夏金元时期】</data>
+    </edge>
+    <edge source="H_M1" target="H_C1_5">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">模块【中外历史纲要(上)——中国史】包含章节【明清时期】</data>
+    </edge>
+    <edge source="H_M1" target="H_C1_6">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">模块【中外历史纲要(上)——中国史】包含章节【晚清至民国（救亡图存与革命）】</data>
+    </edge>
+    <edge source="H_M1" target="H_C1_7">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">模块【中外历史纲要(上)——中国史】包含章节【中华人民共和国的成立与发展】</data>
+    </edge>
+    <edge source="H_M2" target="H_C2_1">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">模块【中外历史纲要(下)——世界史】包含章节【古代文明的产生与发展】</data>
+    </edge>
+    <edge source="H_M2" target="H_C2_2">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">模块【中外历史纲要(下)——世界史】包含章节【中古时期的世界】</data>
+    </edge>
+    <edge source="H_M2" target="H_C2_3">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">模块【中外历史纲要(下)——世界史】包含章节【走向整体的世界】</data>
+    </edge>
+    <edge source="H_M2" target="H_C2_4">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">模块【中外历史纲要(下)——世界史】包含章节【资本主义制度的确立与工业革命】</data>
+    </edge>
+    <edge source="H_M2" target="H_C2_5">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">模块【中外历史纲要(下)——世界史】包含章节【马克思主义的诞生与国际工人运动】</data>
+    </edge>
+    <edge source="H_M2" target="H_C2_6">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">模块【中外历史纲要(下)——世界史】包含章节【两次世界大战与冷战】</data>
+    </edge>
+    <edge source="H_M2" target="H_C2_7">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">模块【中外历史纲要(下)——世界史】包含章节【当代世界的发展特点与主要趋势】</data>
+    </edge>
+    <edge source="H_M3" target="H_C3_1">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">模块【国家制度与社会治理】包含章节【政治制度】</data>
+    </edge>
+    <edge source="H_M3" target="H_C3_2">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">模块【国家制度与社会治理】包含章节【官员选拔与管理】</data>
+    </edge>
+    <edge source="H_M3" target="H_C3_3">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">模块【国家制度与社会治理】包含章节【法律教化】</data>
+    </edge>
+    <edge source="H_M3" target="H_C3_4">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">模块【国家制度与社会治理】包含章节【民族外交与基层治理】</data>
+    </edge>
+    <edge source="H_M4" target="H_C4_1">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">模块【经济与社会生活】包含章节【食物生产与社会生活】</data>
+    </edge>
+    <edge source="H_M4" target="H_C4_2">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">模块【经济与社会生活】包含章节【生产工具与劳作方式】</data>
+    </edge>
+    <edge source="H_M4" target="H_C4_3">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">模块【经济与社会生活】包含章节【商业贸易与居住环境】</data>
+    </edge>
+    <edge source="H_M4" target="H_C4_4">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">模块【经济与社会生活】包含章节【交通通信与医疗卫生】</data>
+    </edge>
+    <edge source="H_M5" target="H_C5_1">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">模块【文化交流与传播】包含章节【中华文化与外来文化交流】</data>
+    </edge>
+    <edge source="H_M5" target="H_C5_2">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">模块【文化交流与传播】包含章节【迁徙、贸易与战争中的文化交流】</data>
+    </edge>
+    <edge source="H_M5" target="H_C5_3">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">模块【文化交流与传播】包含章节【文化遗产】</data>
+    </edge>
+    <edge source="H_C1_1" target="H_K1_1_1">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【中华文明的起源与早期国家】包含知识点【石器时代文化遗存】</data>
+    </edge>
+    <edge source="H_C1_1" target="H_K1_1_2">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【中华文明的起源与早期国家】包含知识点【文明起源与早期国家】</data>
+    </edge>
+    <edge source="H_C1_1" target="H_K1_1_3">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【中华文明的起源与早期国家】包含知识点【夏商西周政治制度】</data>
+    </edge>
+    <edge source="H_C1_1" target="H_K1_1_4">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【中华文明的起源与早期国家】包含知识点【商周青铜文明与甲骨文】</data>
+    </edge>
+    <edge source="H_C1_1" target="H_K1_1_5">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【中华文明的起源与早期国家】包含知识点【春秋战国变革与百家争鸣】</data>
+    </edge>
+    <edge source="H_C1_2" target="H_K1_2_1">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【统一多民族封建国家的形成与巩固】包含知识点【秦统一与专制主义中央集权制度】</data>
+    </edge>
+    <edge source="H_C1_2" target="H_K1_2_2">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【统一多民族封建国家的形成与巩固】包含知识点【汉武帝大一统】</data>
+    </edge>
+    <edge source="H_C1_2" target="H_K1_2_3">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【统一多民族封建国家的形成与巩固】包含知识点【两汉选官制度】</data>
+    </edge>
+    <edge source="H_C1_2" target="H_K1_2_4">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【统一多民族封建国家的形成与巩固】包含知识点【丝绸之路】</data>
+    </edge>
+    <edge source="H_C1_3" target="H_K1_3_1">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【三国两晋南北朝至隋唐】包含知识点【北魏孝文帝改革与民族交融】</data>
+    </edge>
+    <edge source="H_C1_3" target="H_K1_3_2">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【三国两晋南北朝至隋唐】包含知识点【隋朝建制】</data>
+    </edge>
+    <edge source="H_C1_3" target="H_K1_3_3">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【三国两晋南北朝至隋唐】包含知识点【唐朝三省六部制与盛世】</data>
+    </edge>
+    <edge source="H_C1_3" target="H_K1_3_4">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【三国两晋南北朝至隋唐】包含知识点【唐朝民族关系与对外交流】</data>
+    </edge>
+    <edge source="H_C1_3" target="H_K1_3_5">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【三国两晋南北朝至隋唐】包含知识点【安史之乱与藩镇割据】</data>
+    </edge>
+    <edge source="H_C1_4" target="H_K1_4_1">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【辽宋夏金元时期】包含知识点【北宋加强中央集权】</data>
+    </edge>
+    <edge source="H_C1_4" target="H_K1_4_2">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【辽宋夏金元时期】包含知识点【宋代科举制与文官政治】</data>
+    </edge>
+    <edge source="H_C1_4" target="H_K1_4_3">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【辽宋夏金元时期】包含知识点【辽夏金的制度】</data>
+    </edge>
+    <edge source="H_C1_4" target="H_K1_4_4">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【辽宋夏金元时期】包含知识点【元朝统一与行省制度】</data>
+    </edge>
+    <edge source="H_C1_4" target="H_K1_4_5">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【辽宋夏金元时期】包含知识点【宋元经济科技文化】</data>
+    </edge>
+    <edge source="H_C1_5" target="H_K1_5_1">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【明清时期】包含知识点【明朝加强皇权】</data>
+    </edge>
+    <edge source="H_C1_5" target="H_K1_5_2">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【明清时期】包含知识点【清朝军机处】</data>
+    </edge>
+    <edge source="H_C1_5" target="H_K1_5_3">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【明清时期】包含知识点【明清赋税改革】</data>
+    </edge>
+    <edge source="H_C1_5" target="H_K1_5_4">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【明清时期】包含知识点【明清对外关系】</data>
+    </edge>
+    <edge source="H_C1_6" target="H_K1_6_1">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【晚清至民国（救亡图存与革命）】包含知识点【两次鸦片战争与不平等条约】</data>
+    </edge>
+    <edge source="H_C1_6" target="H_K1_6_2">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【晚清至民国（救亡图存与革命）】包含知识点【太平天国运动】</data>
+    </edge>
+    <edge source="H_C1_6" target="H_K1_6_3">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【晚清至民国（救亡图存与革命）】包含知识点【洋务运动】</data>
+    </edge>
+    <edge source="H_C1_6" target="H_K1_6_4">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【晚清至民国（救亡图存与革命）】包含知识点【戊戌变法与义和团运动】</data>
+    </edge>
+    <edge source="H_C1_6" target="H_K1_6_5">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【晚清至民国（救亡图存与革命）】包含知识点【辛亥革命】</data>
+    </edge>
+    <edge source="H_C1_6" target="H_K1_6_6">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【晚清至民国（救亡图存与革命）】包含知识点【新文化运动与五四运动】</data>
+    </edge>
+    <edge source="H_C1_6" target="H_K1_6_7">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【晚清至民国（救亡图存与革命）】包含知识点【国民革命】</data>
+    </edge>
+    <edge source="H_C1_6" target="H_K1_6_8">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【晚清至民国（救亡图存与革命）】包含知识点【土地革命与红军长征】</data>
+    </edge>
+    <edge source="H_C1_6" target="H_K1_6_9">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【晚清至民国（救亡图存与革命）】包含知识点【抗日战争】</data>
+    </edge>
+    <edge source="H_C1_6" target="H_K1_6_10">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【晚清至民国（救亡图存与革命）】包含知识点【解放战争】</data>
+    </edge>
+    <edge source="H_C1_7" target="H_K1_7_1">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【中华人民共和国的成立与发展】包含知识点【新中国政权巩固】</data>
+    </edge>
+    <edge source="H_C1_7" target="H_K1_7_2">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【中华人民共和国的成立与发展】包含知识点【三大改造】</data>
+    </edge>
+    <edge source="H_C1_7" target="H_K1_7_3">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【中华人民共和国的成立与发展】包含知识点【一五计划与建设成就】</data>
+    </edge>
+    <edge source="H_C1_7" target="H_K1_7_4">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【中华人民共和国的成立与发展】包含知识点【改革开放】</data>
+    </edge>
+    <edge source="H_C1_7" target="H_K1_7_5">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【中华人民共和国的成立与发展】包含知识点【一国两制与祖国统一】</data>
+    </edge>
+    <edge source="H_C1_7" target="H_K1_7_6">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【中华人民共和国的成立与发展】包含知识点【新中国外交】</data>
+    </edge>
+    <edge source="H_C2_1" target="H_K2_1_1">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【古代文明的产生与发展】包含知识点【古代早期文明】</data>
+    </edge>
+    <edge source="H_C2_1" target="H_K2_1_2">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【古代文明的产生与发展】包含知识点【古代文明的扩展与交往】</data>
+    </edge>
+    <edge source="H_C2_2" target="H_K2_2_1">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【中古时期的世界】包含知识点【中古西欧封建社会】</data>
+    </edge>
+    <edge source="H_C2_2" target="H_K2_2_2">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【中古时期的世界】包含知识点【拜占庭与俄罗斯】</data>
+    </edge>
+    <edge source="H_C2_2" target="H_K2_2_3">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【中古时期的世界】包含知识点【阿拉伯帝国与奥斯曼帝国】</data>
+    </edge>
+    <edge source="H_C2_2" target="H_K2_2_4">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【中古时期的世界】包含知识点【中古日本与印度】</data>
+    </edge>
+    <edge source="H_C2_3" target="H_K2_3_1">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【走向整体的世界】包含知识点【新航路开辟的动因与条件】</data>
+    </edge>
+    <edge source="H_C2_3" target="H_K2_3_2">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【走向整体的世界】包含知识点【新航路开辟的过程】</data>
+    </edge>
+    <edge source="H_C2_3" target="H_K2_3_3">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【走向整体的世界】包含知识点【新航路开辟的影响】</data>
+    </edge>
+    <edge source="H_C2_4" target="H_K2_4_1">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【资本主义制度的确立与工业革命】包含知识点【英国君主立宪制】</data>
+    </edge>
+    <edge source="H_C2_4" target="H_K2_4_2">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【资本主义制度的确立与工业革命】包含知识点【美国共和制】</data>
+    </edge>
+    <edge source="H_C2_4" target="H_K2_4_3">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【资本主义制度的确立与工业革命】包含知识点【法国大革命与《人权宣言》】</data>
+    </edge>
+    <edge source="H_C2_4" target="H_K2_4_4">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【资本主义制度的确立与工业革命】包含知识点【第一次工业革命】</data>
+    </edge>
+    <edge source="H_C2_4" target="H_K2_4_5">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【资本主义制度的确立与工业革命】包含知识点【第二次工业革命】</data>
+    </edge>
+    <edge source="H_C2_4" target="H_K2_4_6">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【资本主义制度的确立与工业革命】包含知识点【资本主义的扩展】</data>
+    </edge>
+    <edge source="H_C2_5" target="H_K2_5_1">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【马克思主义的诞生与国际工人运动】包含知识点【马克思主义的诞生】</data>
+    </edge>
+    <edge source="H_C2_5" target="H_K2_5_2">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【马克思主义的诞生与国际工人运动】包含知识点【列宁主义与十月革命】</data>
+    </edge>
+    <edge source="H_C2_5" target="H_K2_5_3">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【马克思主义的诞生与国际工人运动】包含知识点【国际工人运动发展】</data>
+    </edge>
+    <edge source="H_C2_6" target="H_K2_6_1">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【两次世界大战与冷战】包含知识点【第一次世界大战与凡华体系】</data>
+    </edge>
+    <edge source="H_C2_6" target="H_K2_6_2">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【两次世界大战与冷战】包含知识点【经济大危机与罗斯福新政】</data>
+    </edge>
+    <edge source="H_C2_6" target="H_K2_6_3">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【两次世界大战与冷战】包含知识点【法西斯主义与二战】</data>
+    </edge>
+    <edge source="H_C2_6" target="H_K2_6_4">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【两次世界大战与冷战】包含知识点【冷战】</data>
+    </edge>
+    <edge source="H_C2_6" target="H_K2_6_5">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【两次世界大战与冷战】包含知识点【冷战中的热战与多极化】</data>
+    </edge>
+    <edge source="H_C2_7" target="H_K2_7_1">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【当代世界的发展特点与主要趋势】包含知识点【冷战结束与多极化加强】</data>
+    </edge>
+    <edge source="H_C2_7" target="H_K2_7_2">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【当代世界的发展特点与主要趋势】包含知识点【经济全球化与区域集团化】</data>
+    </edge>
+    <edge source="H_C2_7" target="H_K2_7_3">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【当代世界的发展特点与主要趋势】包含知识点【当代全球性问题】</data>
+    </edge>
+    <edge source="H_C3_1" target="H_K3_1_1">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【政治制度】包含知识点【中国古代政治制度演变】</data>
+    </edge>
+    <edge source="H_C3_1" target="H_K3_1_2">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【政治制度】包含知识点【西方政治制度】</data>
+    </edge>
+    <edge source="H_C3_1" target="H_K3_1_3">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【政治制度】包含知识点【中国近现代政治制度】</data>
+    </edge>
+    <edge source="H_C3_2" target="H_K3_2_1">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【官员选拔与管理】包含知识点【察举制与九品中正制】</data>
+    </edge>
+    <edge source="H_C3_2" target="H_K3_2_2">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【官员选拔与管理】包含知识点【科举制的演变与影响】</data>
+    </edge>
+    <edge source="H_C3_2" target="H_K3_2_3">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【官员选拔与管理】包含知识点【西方文官制度】</data>
+    </edge>
+    <edge source="H_C3_3" target="H_K3_3_1">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【法律教化】包含知识点【中国古代法律与教化】</data>
+    </edge>
+    <edge source="H_C3_3" target="H_K3_3_2">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【法律教化】包含知识点【近代中国的法律与教化】</data>
+    </edge>
+    <edge source="H_C3_3" target="H_K3_3_3">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【法律教化】包含知识点【西方法律传统】</data>
+    </edge>
+    <edge source="H_C3_4" target="H_K3_4_1">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【民族外交与基层治理】包含知识点【民族政策与外交】</data>
+    </edge>
+    <edge source="H_C3_4" target="H_K3_4_2">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【民族外交与基层治理】包含知识点【基层治理与社会保障】</data>
+    </edge>
+    <edge source="H_C4_1" target="H_K4_1_1">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【食物生产与社会生活】包含知识点【农业的起源】</data>
+    </edge>
+    <edge source="H_C4_1" target="H_K4_1_2">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【食物生产与社会生活】包含知识点【古代区域食物生产】</data>
+    </edge>
+    <edge source="H_C4_1" target="H_K4_1_3">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【食物生产与社会生活】包含知识点【物种大交换】</data>
+    </edge>
+    <edge source="H_C4_2" target="H_K4_2_1">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【生产工具与劳作方式】包含知识点【农业工具演变】</data>
+    </edge>
+    <edge source="H_C4_2" target="H_K4_2_2">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【生产工具与劳作方式】包含知识点【手工业工具与技术】</data>
+    </edge>
+    <edge source="H_C4_2" target="H_K4_2_3">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【生产工具与劳作方式】包含知识点【工业革命与机器大生产】</data>
+    </edge>
+    <edge source="H_C4_3" target="H_K4_3_1">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【商业贸易与居住环境】包含知识点【古代商业贸易】</data>
+    </edge>
+    <edge source="H_C4_3" target="H_K4_3_2">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【商业贸易与居住环境】包含知识点【世界市场形成】</data>
+    </edge>
+    <edge source="H_C4_3" target="H_K4_3_3">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【商业贸易与居住环境】包含知识点【居住环境演变】</data>
+    </edge>
+    <edge source="H_C4_4" target="H_K4_4_1">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【交通通信与医疗卫生】包含知识点【交通通信进步】</data>
+    </edge>
+    <edge source="H_C4_4" target="H_K4_4_2">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【交通通信与医疗卫生】包含知识点【医疗卫生进步】</data>
+    </edge>
+    <edge source="H_C4_4" target="H_K4_4_3">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【交通通信与医疗卫生】包含知识点【习俗变迁】</data>
+    </edge>
+    <edge source="H_C5_1" target="H_K5_1_1">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【中华文化与外来文化交流】包含知识点【中华文化的传播】</data>
+    </edge>
+    <edge source="H_C5_1" target="H_K5_1_2">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【中华文化与外来文化交流】包含知识点【外来文化的传入与本土化】</data>
+    </edge>
+    <edge source="H_C5_2" target="H_K5_2_1">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【迁徙、贸易与战争中的文化交流】包含知识点【人口迁徙与文化交流】</data>
+    </edge>
+    <edge source="H_C5_2" target="H_K5_2_2">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【迁徙、贸易与战争中的文化交流】包含知识点【商路贸易与文化交流】</data>
+    </edge>
+    <edge source="H_C5_2" target="H_K5_2_3">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【迁徙、贸易与战争中的文化交流】包含知识点【战争冲突与文化碰撞】</data>
+    </edge>
+    <edge source="H_C5_3" target="H_K5_3_1">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【文化遗产】包含知识点【文化遗产保护】</data>
+    </edge>
+    <edge source="H_C5_3" target="H_K5_3_2">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【文化遗产】包含知识点【中华优秀传统文化保护】</data>
+    </edge>
+    <edge source="H_K1_2_1" target="H_K1_1_3">
+      <data key="relation">DERIVED_FROM</data>
+      <data key="weight">0.8</data>
+      <data key="description">秦郡县制取代分封宗法制，建立专制集权</data>
+    </edge>
+    <edge source="H_K1_2_2" target="H_K1_2_1">
+      <data key="relation">RELATED_TO</data>
+      <data key="weight">0.7</data>
+      <data key="description">汉大一统巩固秦开创的中央集权</data>
+    </edge>
+    <edge source="H_K1_3_3" target="H_K1_2_1">
+      <data key="relation">DERIVED_FROM</data>
+      <data key="weight">0.7</data>
+      <data key="description">三省六部制发展完善专制集权</data>
+    </edge>
+    <edge source="H_K1_5_1" target="H_K1_3_3">
+      <data key="relation">DERIVED_FROM</data>
+      <data key="weight">0.7</data>
+      <data key="description">明废丞相是相权皇权矛盾演变的产物</data>
+    </edge>
+    <edge source="H_K1_5_2" target="H_K1_5_1">
+      <data key="relation">DERIVED_FROM</data>
+      <data key="weight">0.8</data>
+      <data key="description">军机处使明代加强的皇权达到顶峰</data>
+    </edge>
+    <edge source="H_K3_1_1" target="H_K1_5_2">
+      <data key="relation">RELATED_TO</data>
+      <data key="weight">0.8</data>
+      <data key="description">古代政治制度演变专题涵盖军机处这一顶峰</data>
+    </edge>
+    <edge source="H_K3_1_1" target="H_K1_2_1">
+      <data key="relation">RELATED_TO</data>
+      <data key="weight">0.8</data>
+      <data key="description">古代政治制度演变涵盖秦确立</data>
+    </edge>
+    <edge source="H_K3_1_1" target="H_K1_3_3">
+      <data key="relation">RELATED_TO</data>
+      <data key="weight">0.7</data>
+      <data key="description">古代政治制度演变涵盖隋唐完善</data>
+    </edge>
+    <edge source="H_K3_2_2" target="H_K1_3_2">
+      <data key="relation">DERIVED_FROM</data>
+      <data key="weight">0.8</data>
+      <data key="description">科举制演变专题以隋创立为起点</data>
+    </edge>
+    <edge source="H_K3_2_2" target="H_K1_4_2">
+      <data key="relation">RELATED_TO</data>
+      <data key="weight">0.7</data>
+      <data key="description">科举制演变涵盖宋代发展</data>
+    </edge>
+    <edge source="H_K3_2_2" target="H_K3_2_3">
+      <data key="relation">RELATED_TO</data>
+      <data key="weight">0.7</data>
+      <data key="description">科举制影响西方文官制度形成</data>
+    </edge>
+    <edge source="H_K3_3_3" target="H_K3_3_1">
+      <data key="relation">RELATED_TO</data>
+      <data key="weight">0.6</data>
+      <data key="description">罗马法与中国古代法比较</data>
+    </edge>
+    <edge source="H_K2_3_3" target="H_K2_3_2">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.8</data>
+      <data key="description">分析新航路影响需先掌握开辟过程</data>
+    </edge>
+    <edge source="H_K2_3_2" target="H_K2_3_1">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.7</data>
+      <data key="description">掌握开辟过程需先理解动因条件</data>
+    </edge>
+    <edge source="H_K4_3_2" target="H_K2_3_3">
+      <data key="relation">RELATED_TO</data>
+      <data key="weight">0.8</data>
+      <data key="description">世界市场形成以新航路开辟为起点</data>
+    </edge>
+    <edge source="H_K2_4_4" target="H_K4_3_2">
+      <data key="relation">RELATED_TO</data>
+      <data key="weight">0.7</data>
+      <data key="description">第一次工业革命推动世界市场初步形成</data>
+    </edge>
+    <edge source="H_K2_4_5" target="H_K4_3_2">
+      <data key="relation">RELATED_TO</data>
+      <data key="weight">0.8</data>
+      <data key="description">第二次工业革命推动世界市场最终形成</data>
+    </edge>
+    <edge source="H_K2_4_5" target="H_K2_4_4">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.7</data>
+      <data key="description">第二次工业革命建立在第一次基础上</data>
+    </edge>
+    <edge source="H_K4_2_3" target="H_K2_4_4">
+      <data key="relation">DERIVED_FROM</data>
+      <data key="weight">0.8</data>
+      <data key="description">机器大生产是工业革命的核心</data>
+    </edge>
+    <edge source="H_K2_4_1" target="H_K3_1_2">
+      <data key="relation">RELATED_TO</data>
+      <data key="weight">0.7</data>
+      <data key="description">英君主立宪是西方政治制度典型案例</data>
+    </edge>
+    <edge source="H_K2_4_2" target="H_K3_1_2">
+      <data key="relation">RELATED_TO</data>
+      <data key="weight">0.7</data>
+      <data key="description">美共和制是西方政治制度典型案例</data>
+    </edge>
+    <edge source="H_K1_6_3" target="H_K2_4_6">
+      <data key="relation">RELATED_TO</data>
+      <data key="weight">0.6</data>
+      <data key="description">洋务运动与日本明治维新是同时期近代化探索</data>
+    </edge>
+    <edge source="H_K1_6_5" target="H_K1_6_3">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.6</data>
+      <data key="description">辛亥革命继承洋务运动以来的救亡图存</data>
+    </edge>
+    <edge source="H_K1_6_6" target="H_K1_6_5">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.7</data>
+      <data key="description">新文化五四运动在辛亥革命后推动思想解放</data>
+    </edge>
+    <edge source="H_K1_6_9" target="H_K2_6_3">
+      <data key="relation">RELATED_TO</data>
+      <data key="weight">0.7</data>
+      <data key="description">中国抗战是世界反法西斯战争重要组成部分</data>
+    </edge>
+    <edge source="H_K1_6_8" target="H_K1_6_6">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.6</data>
+      <data key="description">土地革命在新文化五四思想解放后展开</data>
+    </edge>
+    <edge source="H_K1_6_10" target="H_K1_6_8">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.6</data>
+      <data key="description">解放战争承接土地革命时期革命力量</data>
+    </edge>
+    <edge source="H_K1_7_2" target="H_K1_7_1">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.7</data>
+      <data key="description">三大改造在政权巩固基础上进行</data>
+    </edge>
+    <edge source="H_K1_7_4" target="H_K1_6_10">
+      <data key="relation">RELATED_TO</data>
+      <data key="weight">0.5</data>
+      <data key="description">改革开放建立在新中国体制基础上</data>
+    </edge>
+    <edge source="H_K2_5_2" target="H_K2_5_1">
+      <data key="relation">DERIVED_FROM</data>
+      <data key="weight">0.8</data>
+      <data key="description">列宁主义十月革命发展马克思主义</data>
+    </edge>
+    <edge source="H_K2_6_1" target="H_K2_4_5">
+      <data key="relation">RELATED_TO</data>
+      <data key="weight">0.6</data>
+      <data key="description">一战是第二次工业革命后列强矛盾产物</data>
+    </edge>
+    <edge source="H_K2_6_4" target="H_K2_6_3">
+      <data key="relation">DERIVED_FROM</data>
+      <data key="weight">0.8</data>
+      <data key="description">冷战格局由二战后雅尔塔体系演变而来</data>
+    </edge>
+    <edge source="H_K2_6_2" target="H_K2_4_5">
+      <data key="relation">RELATED_TO</data>
+      <data key="weight">0.5</data>
+      <data key="description">罗斯福新政应对垄断资本主义矛盾</data>
+    </edge>
+    <edge source="H_K5_2_2" target="H_K1_2_4">
+      <data key="relation">RELATED_TO</data>
+      <data key="weight">0.7</data>
+      <data key="description">丝绸之路既是商路贸易也是文化交流通道</data>
+    </edge>
+    <edge source="H_K5_1_1" target="H_K1_3_4">
+      <data key="relation">RELATED_TO</data>
+      <data key="weight">0.7</data>
+      <data key="description">唐代对外交流体现中华文化对外传播</data>
+    </edge>
+    <edge source="H_K5_3_2" target="H_K5_1_1">
+      <data key="relation">RELATED_TO</data>
+      <data key="weight">0.6</data>
+      <data key="description">中华优秀传统文化保护与中华文化对外传播相辅相成</data>
+    </edge>
+    <edge source="H_K5_3_1" target="H_K5_1_2">
+      <data key="relation">RELATED_TO</data>
+      <data key="weight">0.5</data>
+      <data key="description">文化遗产保护涉及外来文化本土化遗存</data>
+    </edge>
+  </graph>
+</graphml>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>孔孟·智学云 - 学生端↔云端↔教师端 同步原型</title>
+<link rel="stylesheet" href="assets/styles.css">
+<style>
+  .landing{ min-height:100vh; display:flex; flex-direction:column; }
+  .hero{ background:linear-gradient(135deg,#1f2933 0%,#31404f 55%,#3A4A5A 100%); color:#fff; padding:56px 24px 40px; text-align:center; }
+  .hero .logo-big{ width:56px; height:56px; margin:0 auto 16px; background:rgba(255,255,255,.15); border-radius:14px; display:flex; align-items:center; justify-content:center; }
+  .hero .logo-big svg{ width:30px; height:30px; }
+  .hero h1{ font-size:28px; color:#fff; margin-bottom:8px; }
+  .hero p{ color:rgba(255,255,255,.75); font-size:15px; max-width:640px; margin:0 auto; }
+  .entry{ flex:1; max-width:1120px; margin:0 auto; padding:32px 24px 48px; width:100%; }
+  .surface-cards{ display:grid; grid-template-columns:repeat(3,1fr); gap:20px; margin-bottom:40px; }
+  @media (max-width:800px){ .surface-cards{ grid-template-columns:1fr; } }
+  .s-card{ background:var(--surface); border:1px solid var(--border); border-radius:16px; padding:28px 24px; box-shadow:var(--shadow-sm); transition:transform .2s, box-shadow .2s, border-color .2s; cursor:pointer; display:flex; flex-direction:column; gap:12px; }
+  .s-card:hover{ transform:translateY(-4px); box-shadow:var(--shadow-lg); }
+  .s-card .s-ic{ width:44px; height:44px; border-radius:12px; display:flex; align-items:center; justify-content:center; color:#fff; }
+  .s-card .s-ic svg{ width:22px; height:22px; }
+  .s-card.student .s-ic{ background:#C0392B; }
+  .s-card.teacher .s-ic{ background:#2F6B54; }
+  .s-card.cloud .s-ic{ background:#3A4A5A; }
+  .s-card h3{ font-size:18px; }
+  .s-card p{ font-size:13px; color:var(--ink-400); line-height:1.6; }
+  .s-card .enter{ margin-top:auto; display:inline-flex; align-items:center; gap:6px; color:var(--ink-700); font-size:13px; font-weight:500; }
+  .s-card:hover .enter{ color:#3A4A5A; }
+  .s-card.student:hover{ border-color:#C0392B; } .s-card.student:hover .enter{ color:#C0392B; }
+  .s-card.teacher:hover{ border-color:#2F6B54; } .s-card.teacher:hover .enter{ color:#2F6B54; }
+  .s-card.cloud:hover{ border-color:#3A4A5A; }
+  .guide{ background:var(--surface); border:1px solid var(--border); border-radius:16px; padding:24px; }
+  .guide h2{ font-size:16px; margin-bottom:16px; display:flex; align-items:center; gap:8px; }
+  .guide h2 svg{ width:18px; height:18px; color:#3A4A5A; }
+  .guide ol{ padding-left:20px; display:flex; flex-direction:column; gap:10px; }
+  .guide li{ font-size:14px; color:var(--ink-700); line-height:1.6; }
+  .guide li b{ color:var(--ink-900); }
+  .guide .flow{ display:flex; align-items:center; gap:8px; flex-wrap:wrap; margin-top:4px; }
+  .flow .node{ background:var(--ink-50); border:1px solid var(--border); border-radius:8px; padding:4px 10px; font-size:12px; color:var(--ink-700); }
+  .flow .arrow{ color:var(--ink-400); }
+</style>
+</head>
+<body>
+<div class="landing">
+  <div class="hero">
+    <div class="logo-big"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/></svg></div>
+    <h1>孔孟·智学云</h1>
+    <p>学生端 ↔ 云端 ↔ 教师端 数据同步交互原型。<br>演示跨端数据的云端同步与互动：作业下发、成绩公布、提问反馈、批改讲解。</p>
+  </div>
+
+  <div class="entry">
+    <div class="surface-cards">
+      <div class="s-card student" onclick="location.href='student/homework.html'">
+        <div class="s-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg></div>
+        <h3>学生端</h3>
+        <p>接收老师下发的作业、查看公布的成绩与学情、向老师提问反馈、查看批改与讲解内容。</p>
+        <span class="enter">进入学生端 →</span>
+      </div>
+      <div class="s-card cloud" onclick="location.href='cloud/sync-center.html'">
+        <div class="s-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/></svg></div>
+        <h3>云端同步中心</h3>
+        <p>查看跨端数据的云端流转时间线，按班级 × 科目 分桶展示各数据文件的同步情况。</p>
+        <span class="enter">进入云端中心 →</span>
+      </div>
+      <div class="s-card teacher" onclick="location.href='teacher/homework.html'">
+        <div class="s-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+        <h3>教师端</h3>
+        <p>下发作业、公布成绩与学情、处理学生提问、批改作业。按任教班级与科目接收信息。</p>
+        <span class="enter">进入教师端 →</span>
+      </div>
+    </div>
+
+    <div class="guide">
+      <h2><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>推荐演示路径：体验四大跨端同步链路</h2>
+      <ol>
+        <li><b>作业下发与接收</b>：教师端「作业下发」创建并下发作业 → 云端分桶 → 学生端「作业中心」同步接收并提交。</li>
+        <li><b>成绩公布与学情</b>：教师端「成绩学情」发布成绩 → 云端 → 学生端「成绩学情」查看成绩与学情报告。</li>
+        <li><b>学生提问/反馈</b>：学生端「提问反馈」发送问题 → 云端 → 教师端「提问处理」回复 → 云端 → 学生端查看回复。</li>
+        <li><b>批改/讲解同步</b>：教师端「题目批改」发布批改与讲解 → 云端 → 学生端「批改讲解」查看并标记已读。</li>
+      </ol>
+      <div class="flow mt-2">
+        <span class="node">学生端</span><span class="arrow">⇄</span><span class="node">云端</span><span class="arrow">⇄</span><span class="node">教师端</span>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

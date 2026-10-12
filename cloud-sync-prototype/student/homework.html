@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>作业中心 · 学生端 · 孔孟·智学云</title>
+<link rel="stylesheet" href="../assets/styles.css">
+<style>
+  .stat-icon{ width:34px; height:34px; border-radius:8px; display:flex; align-items:center; justify-content:center; color:#fff; }
+  .stat-icon svg{ width:18px; height:18px; }
+  .stat-icon.i-pending{ background:var(--warning); }
+  .stat-icon.i-submitted{ background:var(--info); }
+  .stat-icon.i-graded{ background:var(--success); }
+  .hw-item{ cursor:pointer; }
+  .hw-item .li-foot-left{ display:flex; align-items:center; gap:var(--space-3); font-size:var(--fs-xs); color:var(--ink-400); }
+  .hw-difficulty{ font-size:var(--fs-xs); color:var(--ink-400); }
+  .section-title{ font-weight:600; color:var(--ink-900); font-size:var(--fs-md); margin-bottom:var(--space-3); }
+</style>
+</head>
+<body>
+<script src="../assets/mock.js"></script>
+<script src="../assets/api.js"></script>
+<script src="../assets/components.js"></script>
+<script>
+renderShell('student','homework');
+
+var root = pageRoot();
+var student = store.getStudent();
+var className = store.getClass(student.classId).name;
+
+function homeworkList() {
+  return store.studentHomework();
+}
+
+function renderStatCards(list) {
+  var pending = list.filter(function(h){ return h.status === 'assigned'; }).length;
+  var submitted = list.filter(function(h){ return h.status === 'submitted'; }).length;
+  var graded = list.filter(function(h){ return h.status === 'graded'; }).length;
+  return '<div class="grid grid-3 mb-4">' +
+    '<div class="card stat-card"><div class="flex items-center gap-3"><span class="stat-icon i-pending">' + icon('inbox') + '</span><div><div class="stat-label">待提交</div><div class="stat-value">' + pending + '</div></div></div><div class="stat-note">' + className + ' · ' + student.name + '</div></div>' +
+    '<div class="card stat-card"><div class="flex items-center gap-3"><span class="stat-icon i-submitted">' + icon('upload') + '</span><div><div class="stat-label">已提交</div><div class="stat-value">' + submitted + '</div></div></div><div class="stat-note">等待老师批改</div></div>' +
+    '<div class="card stat-card"><div class="flex items-center gap-3"><span class="stat-icon i-graded">' + icon('check') + '</span><div><div class="stat-label">已批改</div><div class="stat-value">' + graded + '</div></div></div><div class="stat-note">可到「批改讲解」查看</div></div>' +
+    '</div>';
+}
+
+function dueText(h) {
+  return h.dueDate + ' ' + h.dueTime;
+}
+
+function renderHomeworkList(list) {
+  if (!list.length) return emptyState('当前没有待接收的作业，点击右上角「同步接收」检查云端。', 'inbox');
+  return '<div class="grid">' + list.map(function(h) {
+    return '<div class="list-item hw-item" onclick="openHomework(\'' + h.id + '\')">' +
+      '<div class="li-head"><div class="li-title">' + escapeHtml(h.title) + '</div>' + statusBadge(h.status) + '</div>' +
+      '<div class="li-meta">' +
+        subjectBadge(h.subject) + classBadge(className) +
+        '<span>' + icon('user') + escapeHtml(h.teacher) + '</span>' +
+        '<span>' + icon('time') + '截止 ' + escapeHtml(dueText(h)) + '</span>' +
+        '<span class="hw-difficulty">难度：' + escapeHtml(h.difficulty) + '</span>' +
+      '</div>' +
+      '<div class="li-foot"><div class="li-foot-left"><span>' + icon('activity') + (h.status === 'assigned' ? '待完成' : h.status === 'submitted' ? '已提交，等待批改' : '已批改') + '</span></div>' +
+        '<span class="text-sub text-xs">点击查看详情并提交</span>' +
+      '</div>' +
+    '</div>';
+  }).join('') + '</div>';
+}
+
+function render() {
+  var list = homeworkList();
+  root.innerHTML =
+    '<div class="page-head">' +
+      '<div><h1>作业中心</h1><div class="sub">接收老师下发的作业并在线提交 · ' + className + ' · ' + student.name + '</div></div>' +
+      '<div class="page-actions">' +
+        '<button class="btn btn-primary btn-md" id="syncBtn" onclick="syncNow()">' + icon('refresh') + '同步接收</button>' +
+      '</div>' +
+    '</div>' +
+    renderStatCards(list) +
+    '<div class="section-title">作业列表</div>' +
+    renderHomeworkList(list);
+}
+
+function syncNow() {
+  var btn = document.getElementById('syncBtn');
+  if (btn) { btn.disabled = true; btn.innerHTML = icon('refresh') + '同步中…'; }
+  API.syncHomework({ classId: student.classId }).then(function(res) {
+    toast('已从云端同步，当前共 ' + res.list.length + ' 项作业', 'success');
+    render();
+  });
+}
+
+function openHomework(id) {
+  var h = DB.homework.find(function(x){ return x.id === id; });
+  if (!h) return;
+  var canSubmit = h.status === 'assigned';
+  var bodyHtml =
+    '<div class="mb-4"><div class="flex gap-2 mb-2">' + subjectBadge(h.subject) + classBadge(className) + statusBadge(h.status) + '</div>' +
+    '<div class="li-title text-lg mb-2">' + escapeHtml(h.title) + '</div>' +
+    '<div class="li-meta mb-2"><span>' + icon('user') + '出题教师：' + escapeHtml(h.teacher) + '</span><span>' + icon('time') + '截止：' + escapeHtml(dueText(h)) + '</span><span>难度：' + escapeHtml(h.difficulty) + '</span></div>' +
+    '<div class="text-sm" style="color:var(--ink-700); background:var(--ink-50); border:1px solid var(--border); border-radius:var(--radius-md); padding:12px;">' + escapeHtml(h.desc) + '</div>' +
+    '</div>' +
+    (canSubmit
+      ? '<div class="form-grid">' +
+          '<div class="field"><label>提交内容</label><textarea class="textarea" id="submitContent" placeholder="请填写作业完成情况，如：已完成全部习题，错题已订正…"></textarea></div>' +
+          '<div class="field"><label>备注（选填）</label><input class="input" id="submitNote" placeholder="如：第 5 题仍有疑问"></div>' +
+        '</div>'
+      : '<div class="text-sm" style="color:var(--ink-400);">该作业已提交' + (h.status === 'graded' ? '并完成批改' : '，等待老师批改') + '，无需重复提交。</div>');
+
+  openModal(
+    modalHead(h.title) +
+    '<div class="modal-body">' + bodyHtml + '</div>' +
+    (canSubmit
+      ? '<div class="modal-foot"><button class="btn btn-ghost btn-md" onclick="closeModal()">取消</button><button class="btn btn-primary btn-md" id="submitBtn" onclick="doSubmit(\'' + h.id + '\')">' + icon('send') + '提交作业</button></div>'
+      : '<div class="modal-foot"><button class="btn btn-ghost btn-md" onclick="closeModal()">关闭</button></div>')
+  );
+}
+
+function doSubmit(id) {
+  var h = DB.homework.find(function(x){ return x.id === id; });
+  if (!h) return;
+  var contentEl = document.getElementById('submitContent');
+  var noteEl = document.getElementById('submitNote');
+  var content = contentEl ? contentEl.value.trim() : '';
+  var note = noteEl ? noteEl.value.trim() : '';
+  if (!content) { toast('请填写提交内容', 'error'); return; }
+  var btn = document.getElementById('submitBtn');
+  if (btn) { btn.disabled = true; btn.innerHTML = '提交中…'; }
+  API.submitHomework({
+    homeworkId: id,
+    classId: h.classId,
+    content: content + (note ? '\n【备注】' + note : ''),
+    attachments: []
+  }).then(function() {
+    closeModal();
+    toast('作业已提交，等待老师批改', 'success');
+    render();
+  });
+}
+
+render();
+</script>
+</body>
+</html>

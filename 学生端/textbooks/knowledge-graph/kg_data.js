@@ -1,0 +1,24049 @@
+var BUILTIN_KG_DATA = {
+  "数学": {
+    "color": "#8B2C2C",
+    "nodes": [
+      {
+        "id": "M1",
+        "name": "必修第一册(代数基础)",
+        "type": "Module",
+        "module": "必修第一册(代数基础)",
+        "chapter": "",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "集合、函数、不等式、指对数与三角函数等代数基础内容,高中数学的根基。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "M2",
+        "name": "必修第二册(几何与统计)",
+        "type": "Module",
+        "module": "必修第二册(几何与统计)",
+        "chapter": "",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "平面向量、复数、立体几何初步、统计与概率,几何与数据处理基础。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "M3",
+        "name": "选择性必修第一册(解析几何)",
+        "type": "Module",
+        "module": "选择性必修第一册(解析几何)",
+        "chapter": "",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "空间向量与立体几何、平面解析几何(直线、圆、圆锥曲线)。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "M4",
+        "name": "选择性必修第二册(数列与导数)",
+        "type": "Module",
+        "module": "选择性必修第二册(数列与导数)",
+        "chapter": "",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "数列、导数及其应用,函数与极限思想的深化。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "M5",
+        "name": "选择性必修第三册(计数与统计)",
+        "type": "Module",
+        "module": "选择性必修第三册(计数与统计)",
+        "chapter": "",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "计数原理、随机变量及其分布、成对数据的统计分析。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "C1",
+        "name": "集合与常用逻辑用语",
+        "type": "Chapter",
+        "module": "必修第一册(代数基础)",
+        "chapter": "集合与常用逻辑用语",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "集合的概念、关系、运算及常用逻辑用语。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "C2",
+        "name": "一元二次函数、方程和不等式",
+        "type": "Chapter",
+        "module": "必修第一册(代数基础)",
+        "chapter": "一元二次函数、方程和不等式",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "不等式性质、基本不等式及一元二次函数与不等式的关系。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "C3",
+        "name": "函数的概念与性质",
+        "type": "Chapter",
+        "module": "必修第一册(代数基础)",
+        "chapter": "函数的概念与性质",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "函数概念、表示、单调性、奇偶性、幂函数。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "C4",
+        "name": "指数函数与对数函数",
+        "type": "Chapter",
+        "module": "必修第一册(代数基础)",
+        "chapter": "指数函数与对数函数",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "指数与对数运算、指数函数与对数函数的图象与性质。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "C5",
+        "name": "三角函数",
+        "type": "Chapter",
+        "module": "必修第一册(代数基础)",
+        "chapter": "三角函数",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "任意角与弧度制、三角函数定义、诱导公式、图象与性质、恒等变换。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "C6",
+        "name": "平面向量及其应用",
+        "type": "Chapter",
+        "module": "必修第二册(几何与统计)",
+        "chapter": "平面向量及其应用",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "向量概念、线性运算、数量积、坐标表示及几何物理应用。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "C7",
+        "name": "复数",
+        "type": "Chapter",
+        "module": "必修第二册(几何与统计)",
+        "chapter": "复数",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "复数概念、几何意义与四则运算。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "C8",
+        "name": "立体几何初步",
+        "type": "Chapter",
+        "module": "必修第二册(几何与统计)",
+        "chapter": "立体几何初步",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "空间几何体结构、三视图、表面积体积、点线面位置关系。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "C9",
+        "name": "统计",
+        "type": "Chapter",
+        "module": "必修第二册(几何与统计)",
+        "chapter": "统计",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "随机抽样、用样本估计总体、样本数字特征。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "C10",
+        "name": "概率",
+        "type": "Chapter",
+        "module": "必修第二册(几何与统计)",
+        "chapter": "概率",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "随机事件与概率、古典概型、概率基本性质与事件独立性。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "C11",
+        "name": "空间向量与立体几何",
+        "type": "Chapter",
+        "module": "选择性必修第一册(解析几何)",
+        "chapter": "空间向量与立体几何",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "空间向量及其坐标表示、数量积,用向量研究空间位置关系。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "C12",
+        "name": "直线与方程",
+        "type": "Chapter",
+        "module": "选择性必修第一册(解析几何)",
+        "chapter": "直线与方程",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "直线倾斜角与斜率、直线方程的多种形式、两直线位置关系。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "C13",
+        "name": "圆与方程",
+        "type": "Chapter",
+        "module": "选择性必修第一册(解析几何)",
+        "chapter": "圆与方程",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "圆的标准方程与一般方程、直线与圆、圆与圆的位置关系。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "C14",
+        "name": "圆锥曲线",
+        "type": "Chapter",
+        "module": "选择性必修第一册(解析几何)",
+        "chapter": "圆锥曲线",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "椭圆、双曲线、抛物线的标准方程与几何性质、直线与圆锥曲线。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "C15",
+        "name": "数列",
+        "type": "Chapter",
+        "module": "选择性必修第二册(数列与导数)",
+        "chapter": "数列",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "数列概念、等差与等比数列及其前n项和、数列求和方法。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "C16",
+        "name": "导数及其应用",
+        "type": "Chapter",
+        "module": "选择性必修第二册(数列与导数)",
+        "chapter": "导数及其应用",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "导数概念与几何意义、导数运算、用导数研究函数单调性与极值。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "C17",
+        "name": "计数原理",
+        "type": "Chapter",
+        "module": "选择性必修第三册(计数与统计)",
+        "chapter": "计数原理",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "分类与分步计数原理、排列组合、二项式定理。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "C18",
+        "name": "随机变量及其分布",
+        "type": "Chapter",
+        "module": "选择性必修第三册(计数与统计)",
+        "chapter": "随机变量及其分布",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "离散型随机变量、分布列、均值方差、条件概率、二项分布、正态分布。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "C19",
+        "name": "成对数据的统计分析",
+        "type": "Chapter",
+        "module": "选择性必修第三册(计数与统计)",
+        "chapter": "成对数据的统计分析",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "回归分析与独立性检验。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "K1",
+        "name": "集合的概念与表示",
+        "type": "KnowledgePoint",
+        "module": "必修第一册(代数基础)",
+        "chapter": "集合与常用逻辑用语",
+        "difficulty": 2,
+        "importance": 4,
+        "description": "理解集合的含义,掌握集合的列举法与描述法表示,能判断元素与集合的属于关系。",
+        "keywords": "集合,元素,属于,列举法,描述法",
+        "exam_type": "选择题,概念辨析题"
+      },
+      {
+        "id": "K2",
+        "name": "集合间的基本关系",
+        "type": "KnowledgePoint",
+        "module": "必修第一册(代数基础)",
+        "chapter": "集合与常用逻辑用语",
+        "difficulty": 3,
+        "importance": 4,
+        "description": "理解子集、真子集、集合相等的概念,掌握包含关系的符号表示,会求集合的子集个数。",
+        "keywords": "子集,真子集,集合相等,包含关系",
+        "exam_type": "选择题,集合关系判断"
+      },
+      {
+        "id": "K3",
+        "name": "集合的基本运算",
+        "type": "KnowledgePoint",
+        "module": "必修第一册(代数基础)",
+        "chapter": "集合与常用逻辑用语",
+        "difficulty": 3,
+        "importance": 5,
+        "description": "掌握并集、交集、补集的运算,会用Venn图表示集合运算,能求解含参数的集合运算。",
+        "keywords": "并集,交集,补集,Venn图,全集",
+        "exam_type": "选择题,计算题,集合运算"
+      },
+      {
+        "id": "K4",
+        "name": "充分条件与必要条件",
+        "type": "KnowledgePoint",
+        "module": "必修第一册(代数基础)",
+        "chapter": "集合与常用逻辑用语",
+        "difficulty": 3,
+        "importance": 4,
+        "description": "理解充分条件、必要条件、充要条件的含义,能判断命题间的条件关系。",
+        "keywords": "充分条件,必要条件,充要条件,命题",
+        "exam_type": "选择题,条件判断题"
+      },
+      {
+        "id": "K5",
+        "name": "全称量词与存在量词",
+        "type": "KnowledgePoint",
+        "module": "必修第一册(代数基础)",
+        "chapter": "集合与常用逻辑用语",
+        "difficulty": 3,
+        "importance": 3,
+        "description": "理解全称量词命题与存在量词命题的含义,能正确否定含量词的命题。",
+        "keywords": "全称量词,存在量词,命题否定,量词",
+        "exam_type": "选择题,命题判断"
+      },
+      {
+        "id": "K6",
+        "name": "不等式的基本性质",
+        "type": "KnowledgePoint",
+        "module": "必修第一册(代数基础)",
+        "chapter": "一元二次函数、方程和不等式",
+        "difficulty": 2,
+        "importance": 4,
+        "description": "掌握不等式的基本性质(对称性、传递性、加法与乘法性质),能用于不等式比较与推导。",
+        "keywords": "不等式性质,比较大小,作差比较",
+        "exam_type": "选择题,比较大小"
+      },
+      {
+        "id": "K7",
+        "name": "基本不等式",
+        "type": "KnowledgePoint",
+        "module": "必修第一册(代数基础)",
+        "chapter": "一元二次函数、方程和不等式",
+        "difficulty": 4,
+        "importance": 5,
+        "description": "掌握基本不等式a+b>=2√ab及其变形,能利用基本不等式求最值,注意等号成立条件。",
+        "keywords": "基本不等式,均值不等式,最值,等号成立条件",
+        "exam_type": "填空题,求最值,证明题"
+      },
+      {
+        "id": "K8",
+        "name": "一元二次不等式及其解法",
+        "type": "KnowledgePoint",
+        "module": "必修第一册(代数基础)",
+        "chapter": "一元二次函数、方程和不等式",
+        "difficulty": 3,
+        "importance": 5,
+        "description": "掌握一元二次不等式的解法,理解二次函数图象与不等式的关系,会解含参数的二次不等式。",
+        "keywords": "一元二次不等式,二次函数,判别式,解集",
+        "exam_type": "选择题,解不等式,含参讨论"
+      },
+      {
+        "id": "K9",
+        "name": "二次函数与一元二次方程不等式的关系",
+        "type": "KnowledgePoint",
+        "module": "必修第一册(代数基础)",
+        "chapter": "一元二次函数、方程和不等式",
+        "difficulty": 4,
+        "importance": 5,
+        "description": "理解二次函数图象、一元二次方程根与一元二次不等式解集之间的内在联系(三个二次的关系)。",
+        "keywords": "三个二次,函数方程不等式,判别式,图象",
+        "exam_type": "综合题,函数与不等式综合"
+      },
+      {
+        "id": "K10",
+        "name": "函数的概念",
+        "type": "KnowledgePoint",
+        "module": "必修第一册(代数基础)",
+        "chapter": "函数的概念与性质",
+        "difficulty": 3,
+        "importance": 5,
+        "description": "理解函数是两个非空数集间的对应关系,掌握定义域、值域、对应法则三要素。",
+        "keywords": "函数,定义域,值域,对应法则,函数三要素",
+        "exam_type": "选择题,概念辨析"
+      },
+      {
+        "id": "K11",
+        "name": "函数的表示法",
+        "type": "KnowledgePoint",
+        "module": "必修第一册(代数基础)",
+        "chapter": "函数的概念与性质",
+        "difficulty": 3,
+        "importance": 3,
+        "description": "掌握函数的解析法、列表法、图象法三种表示,能进行表示法之间的转换。",
+        "keywords": "解析法,列表法,图象法,函数表示",
+        "exam_type": "选择题,作图题"
+      },
+      {
+        "id": "K12",
+        "name": "分段函数",
+        "type": "KnowledgePoint",
+        "module": "必修第一册(代数基础)",
+        "chapter": "函数的概念与性质",
+        "difficulty": 4,
+        "importance": 4,
+        "description": "理解分段函数的概念,会求分段函数的定义域、值域及在某点的函数值,能作分段函数图象。",
+        "keywords": "分段函数,定义域,值域,函数值",
+        "exam_type": "选择题,计算题,分段函数综合"
+      },
+      {
+        "id": "K13",
+        "name": "函数的单调性",
+        "type": "KnowledgePoint",
+        "module": "必修第一册(代数基础)",
+        "chapter": "函数的概念与性质",
+        "difficulty": 4,
+        "importance": 5,
+        "description": "理解增函数与减函数定义,能用定义法证明函数单调性,会用图象判断单调区间。",
+        "keywords": "单调性,增函数,减函数,单调区间,定义法证明",
+        "exam_type": "证明题,选择题,单调性判断"
+      },
+      {
+        "id": "K14",
+        "name": "函数的最大(小)值",
+        "type": "KnowledgePoint",
+        "module": "必修第一册(代数基础)",
+        "chapter": "函数的概念与性质",
+        "difficulty": 4,
+        "importance": 4,
+        "description": "理解函数最大值与最小值的概念,掌握利用单调性求最值的方法。",
+        "keywords": "最大值,最小值,最值,单调性",
+        "exam_type": "计算题,求最值"
+      },
+      {
+        "id": "K15",
+        "name": "函数的奇偶性",
+        "type": "KnowledgePoint",
+        "module": "必修第一册(代数基础)",
+        "chapter": "函数的概念与性质",
+        "difficulty": 4,
+        "importance": 5,
+        "description": "理解奇函数与偶函数的定义,会判断函数奇偶性,理解奇偶性与图象对称性的关系。",
+        "keywords": "奇函数,偶函数,奇偶性,对称性,定义域",
+        "exam_type": "选择题,判断题,奇偶性综合"
+      },
+      {
+        "id": "K16",
+        "name": "幂函数",
+        "type": "KnowledgePoint",
+        "module": "必修第一册(代数基础)",
+        "chapter": "函数的概念与性质",
+        "difficulty": 3,
+        "importance": 3,
+        "description": "掌握幂函数y=x^a的概念,了解常见幂函数的图象与性质。",
+        "keywords": "幂函数,指数,定义域,图象性质",
+        "exam_type": "选择题,幂函数性质"
+      },
+      {
+        "id": "K17",
+        "name": "指数与指数幂的运算",
+        "type": "KnowledgePoint",
+        "module": "必修第一册(代数基础)",
+        "chapter": "指数函数与对数函数",
+        "difficulty": 3,
+        "importance": 4,
+        "description": "理解n次方根与分数指数幂的概念,掌握有理指数幂的运算性质。",
+        "keywords": "n次方根,分数指数幂,指数运算,根式",
+        "exam_type": "计算题,指数化简"
+      },
+      {
+        "id": "K18",
+        "name": "指数函数的图象与性质",
+        "type": "KnowledgePoint",
+        "module": "必修第一册(代数基础)",
+        "chapter": "指数函数与对数函数",
+        "difficulty": 4,
+        "importance": 5,
+        "description": "掌握指数函数y=a^x(a>0且a≠1)的图象特征与单调性、值域等性质,理解底数对图象的影响。",
+        "keywords": "指数函数,图象,单调性,值域,底数",
+        "exam_type": "选择题,图象题,性质应用"
+      },
+      {
+        "id": "K19",
+        "name": "对数的概念",
+        "type": "KnowledgePoint",
+        "module": "必修第一册(代数基础)",
+        "chapter": "指数函数与对数函数",
+        "difficulty": 3,
+        "importance": 4,
+        "description": "理解对数的定义,掌握对数式与指数式的互化,了解常用对数与自然对数。",
+        "keywords": "对数,指数,互化,常用对数,自然对数",
+        "exam_type": "选择题,对数运算"
+      },
+      {
+        "id": "K20",
+        "name": "对数的运算性质",
+        "type": "KnowledgePoint",
+        "module": "必修第一册(代数基础)",
+        "chapter": "指数函数与对数函数",
+        "difficulty": 3,
+        "importance": 5,
+        "description": "掌握对数的积、商、幂的运算性质及换底公式,能熟练进行对数式的化简与求值。",
+        "keywords": "对数运算,换底公式,积商幂,对数恒等式",
+        "exam_type": "计算题,对数化简求值"
+      },
+      {
+        "id": "K21",
+        "name": "对数函数的图象与性质",
+        "type": "KnowledgePoint",
+        "module": "必修第一册(代数基础)",
+        "chapter": "指数函数与对数函数",
+        "difficulty": 4,
+        "importance": 5,
+        "description": "掌握对数函数y=log_a x的图象特征与单调性、定义域值域等性质,理解底数对图象的影响。",
+        "keywords": "对数函数,图象,单调性,定义域,反函数",
+        "exam_type": "选择题,图象题,性质综合"
+      },
+      {
+        "id": "K22",
+        "name": "反函数",
+        "type": "KnowledgePoint",
+        "module": "必修第一册(代数基础)",
+        "chapter": "指数函数与对数函数",
+        "difficulty": 3,
+        "importance": 3,
+        "description": "理解反函数的概念,掌握指数函数与对数函数互为反函数,了解互为反函数图象的对称性。",
+        "keywords": "反函数,互为反函数,图象对称,定义域值域",
+        "exam_type": "选择题,反函数概念"
+      },
+      {
+        "id": "K23",
+        "name": "任意角与弧度制",
+        "type": "KnowledgePoint",
+        "module": "必修第一册(代数基础)",
+        "chapter": "三角函数",
+        "difficulty": 3,
+        "importance": 3,
+        "description": "理解任意角的概念(正角、负角、零角),掌握弧度制,能进行弧度与角度的互化。",
+        "keywords": "任意角,弧度制,正角负角,弧度角度互化",
+        "exam_type": "选择题,角度弧度换算"
+      },
+      {
+        "id": "K24",
+        "name": "三角函数的定义",
+        "type": "KnowledgePoint",
+        "module": "必修第一册(代数基础)",
+        "chapter": "三角函数",
+        "difficulty": 4,
+        "importance": 5,
+        "description": "掌握任意角三角函数(正弦、余弦、正切)的坐标法定义,理解三角函数值在各象限的符号。",
+        "keywords": "三角函数,单位圆,正弦,余弦,正切,象限符号",
+        "exam_type": "选择题,定义应用"
+      },
+      {
+        "id": "K25",
+        "name": "同角三角函数的基本关系",
+        "type": "KnowledgePoint",
+        "module": "必修第一册(代数基础)",
+        "chapter": "三角函数",
+        "difficulty": 4,
+        "importance": 5,
+        "description": "掌握平方关系sin²x+cos²x=1与商数关系tanx=sinx/cosx,能进行三角式的化简求值。",
+        "keywords": "平方关系,商数关系,同角三角函数,化简",
+        "exam_type": "计算题,化简求值"
+      },
+      {
+        "id": "K26",
+        "name": "诱导公式",
+        "type": "KnowledgePoint",
+        "module": "必修第一册(代数基础)",
+        "chapter": "三角函数",
+        "difficulty": 4,
+        "importance": 4,
+        "description": "掌握角2kπ+a、-a、π+a、π-a等的诱导公式,能将任意角三角函数转化为锐角三角函数。",
+        "keywords": "诱导公式,任意角,锐角三角函数,符号判断",
+        "exam_type": "选择题,计算题"
+      },
+      {
+        "id": "K27",
+        "name": "三角函数的图象",
+        "type": "KnowledgePoint",
+        "module": "必修第一册(代数基础)",
+        "chapter": "三角函数",
+        "difficulty": 4,
+        "importance": 4,
+        "description": "掌握正弦、余弦、正切函数的图象特征,理解周期性、单调性、对称性等性质。",
+        "keywords": "正弦曲线,余弦曲线,正切曲线,周期性",
+        "exam_type": "选择题,图象分析"
+      },
+      {
+        "id": "K28",
+        "name": "三角函数的性质",
+        "type": "KnowledgePoint",
+        "module": "必修第一册(代数基础)",
+        "chapter": "三角函数",
+        "difficulty": 4,
+        "importance": 4,
+        "description": "掌握三角函数的周期性、单调性、奇偶性、最大最小值等性质,能求三角函数的最值与周期。",
+        "keywords": "周期性,单调性,奇偶性,最值,周期",
+        "exam_type": "选择题,性质综合"
+      },
+      {
+        "id": "K29",
+        "name": "函数y=Asin(ωx+φ)的图象",
+        "type": "KnowledgePoint",
+        "module": "必修第一册(代数基础)",
+        "chapter": "三角函数",
+        "difficulty": 5,
+        "importance": 5,
+        "description": "掌握y=Asin(ωx+φ)图象的变换(振幅、周期、相位变换),能由图象确定A、ω、φ的值。",
+        "keywords": "振幅变换,周期变换,相位变换,图象变换",
+        "exam_type": "综合题,图象变换,解析式确定"
+      },
+      {
+        "id": "K30",
+        "name": "两角和与差的三角函数公式",
+        "type": "KnowledgePoint",
+        "module": "必修第一册(代数基础)",
+        "chapter": "三角函数",
+        "difficulty": 5,
+        "importance": 5,
+        "description": "掌握两角和与差的正弦、余弦、正切公式,能用于三角式的化简、求值与证明。",
+        "keywords": "两角和差公式,正弦,余弦,正切,化简求值",
+        "exam_type": "计算题,化简求值证明"
+      },
+      {
+        "id": "K31",
+        "name": "二倍角公式",
+        "type": "KnowledgePoint",
+        "module": "必修第一册(代数基础)",
+        "chapter": "三角函数",
+        "difficulty": 4,
+        "importance": 4,
+        "description": "掌握二倍角的正弦、余弦、正切公式及其变形,能用于三角式化简与求值。",
+        "keywords": "二倍角公式,正弦,余弦,正切,半角",
+        "exam_type": "计算题,化简求值"
+      },
+      {
+        "id": "K32",
+        "name": "平面向量的概念",
+        "type": "KnowledgePoint",
+        "module": "必修第二册(几何与统计)",
+        "chapter": "平面向量及其应用",
+        "difficulty": 2,
+        "importance": 3,
+        "description": "理解向量的概念(大小与方向),掌握向量的模、零向量、单位向量、平行(共线)向量、相等向量。",
+        "keywords": "向量,模,零向量,单位向量,共线向量,相等向量",
+        "exam_type": "选择题,概念辨析"
+      },
+      {
+        "id": "K33",
+        "name": "向量的线性运算",
+        "type": "KnowledgePoint",
+        "module": "必修第二册(几何与统计)",
+        "chapter": "平面向量及其应用",
+        "difficulty": 3,
+        "importance": 4,
+        "description": "掌握向量的加法、减法与数乘运算及其几何意义,理解向量共线的条件。",
+        "keywords": "向量加法,向量减法,数乘,线性运算,共线条件",
+        "exam_type": "选择题,计算题"
+      },
+      {
+        "id": "K34",
+        "name": "平面向量基本定理",
+        "type": "KnowledgePoint",
+        "module": "必修第二册(几何与统计)",
+        "chapter": "平面向量及其应用",
+        "difficulty": 4,
+        "importance": 4,
+        "description": "理解平面向量基本定理,掌握向量的基底表示与分解,能选择基底表示任意向量。",
+        "keywords": "向量基本定理,基底,分解,线性组合",
+        "exam_type": "选择题,证明题"
+      },
+      {
+        "id": "K35",
+        "name": "平面向量的坐标表示",
+        "type": "KnowledgePoint",
+        "module": "必修第二册(几何与统计)",
+        "chapter": "平面向量及其应用",
+        "difficulty": 3,
+        "importance": 4,
+        "description": "掌握向量的坐标表示,理解坐标下的加法、减法、数乘运算及共线条件的坐标形式。",
+        "keywords": "坐标表示,坐标运算,共线条件,坐标",
+        "exam_type": "计算题,坐标运算"
+      },
+      {
+        "id": "K36",
+        "name": "向量的数量积",
+        "type": "KnowledgePoint",
+        "module": "必修第二册(几何与统计)",
+        "chapter": "平面向量及其应用",
+        "difficulty": 4,
+        "importance": 5,
+        "description": "理解向量数量积的定义与几何意义,掌握数量积的坐标运算及夹角、模的计算。",
+        "keywords": "数量积,点积,夹角,投影,模,垂直条件",
+        "exam_type": "计算题,夹角与模"
+      },
+      {
+        "id": "K37",
+        "name": "向量在几何与物理中的应用",
+        "type": "KnowledgePoint",
+        "module": "必修第二册(几何与统计)",
+        "chapter": "平面向量及其应用",
+        "difficulty": 4,
+        "importance": 3,
+        "description": "能利用向量方法解决平面几何问题(平行、垂直、长度、夹角)及物理中的力、速度问题。",
+        "keywords": "向量应用,几何证明,物理应用,力,速度",
+        "exam_type": "综合题,向量应用"
+      },
+      {
+        "id": "K38",
+        "name": "复数的概念",
+        "type": "KnowledgePoint",
+        "module": "必修第二册(几何与统计)",
+        "chapter": "复数",
+        "difficulty": 2,
+        "importance": 3,
+        "description": "理解复数的引入背景与概念,掌握复数a+bi的实部、虚部及复数相等的条件。",
+        "keywords": "复数,实部,虚部,虚数单位,复数相等",
+        "exam_type": "选择题,概念辨析"
+      },
+      {
+        "id": "K39",
+        "name": "复数的几何意义",
+        "type": "KnowledgePoint",
+        "module": "必修第二册(几何与统计)",
+        "chapter": "复数",
+        "difficulty": 3,
+        "importance": 3,
+        "description": "理解复数与复平面内点的对应关系及复数与向量的对应,掌握复数的模。",
+        "keywords": "复平面,点,向量,模,几何意义",
+        "exam_type": "选择题,几何意义"
+      },
+      {
+        "id": "K40",
+        "name": "复数的四则运算",
+        "type": "KnowledgePoint",
+        "module": "必修第二册(几何与统计)",
+        "chapter": "复数",
+        "difficulty": 3,
+        "importance": 4,
+        "description": "掌握复数的加、减、乘、除运算及共轭复数的概念,能进行复数运算与化简。",
+        "keywords": "复数运算,加减乘除,共轭复数,除法",
+        "exam_type": "计算题,复数运算"
+      },
+      {
+        "id": "K41",
+        "name": "空间几何体的结构",
+        "type": "KnowledgePoint",
+        "module": "必修第二册(几何与统计)",
+        "chapter": "立体几何初步",
+        "difficulty": 2,
+        "importance": 3,
+        "description": "认识棱柱、棱锥、棱台、圆柱、圆锥、圆台、球等空间几何体的结构特征。",
+        "keywords": "棱柱,棱锥,棱台,圆柱,圆锥,球,结构特征",
+        "exam_type": "选择题,识别几何体"
+      },
+      {
+        "id": "K42",
+        "name": "空间几何体的三视图",
+        "type": "KnowledgePoint",
+        "module": "必修第二册(几何与统计)",
+        "chapter": "立体几何初步",
+        "difficulty": 4,
+        "importance": 5,
+        "description": "掌握空间几何体的三视图(正视图、侧视图、俯视图),能由三视图还原几何体并计算。",
+        "keywords": "三视图,正视图,侧视图,俯视图,还原",
+        "exam_type": "选择题,三视图还原计算"
+      },
+      {
+        "id": "K43",
+        "name": "空间几何体的表面积与体积",
+        "type": "KnowledgePoint",
+        "module": "必修第二册(几何与统计)",
+        "chapter": "立体几何初步",
+        "difficulty": 4,
+        "importance": 5,
+        "description": "掌握柱、锥、台、球的表面积与体积公式,能结合三视图计算几何体的表面积与体积。",
+        "keywords": "表面积,体积,柱锥台球,公式",
+        "exam_type": "计算题,表面积体积"
+      },
+      {
+        "id": "K44",
+        "name": "空间点、直线、平面之间的位置关系",
+        "type": "KnowledgePoint",
+        "module": "必修第二册(几何与统计)",
+        "chapter": "立体几何初步",
+        "difficulty": 4,
+        "importance": 4,
+        "description": "理解空间点线面的位置关系(共面、异面直线、线在面内等),掌握四个基本公理。",
+        "keywords": "位置关系,异面直线,公理,共面,共线",
+        "exam_type": "选择题,位置关系判断"
+      },
+      {
+        "id": "K45",
+        "name": "直线与平面平行的判定与性质",
+        "type": "KnowledgePoint",
+        "module": "必修第二册(几何与统计)",
+        "chapter": "立体几何初步",
+        "difficulty": 4,
+        "importance": 5,
+        "description": "掌握线面平行的判定定理与性质定理,能进行平行关系的证明与转化。",
+        "keywords": "线面平行,判定定理,性质定理,平行证明",
+        "exam_type": "证明题,线面平行"
+      },
+      {
+        "id": "K46",
+        "name": "直线与平面垂直的判定与性质",
+        "type": "KnowledgePoint",
+        "module": "必修第二册(几何与统计)",
+        "chapter": "立体几何初步",
+        "difficulty": 5,
+        "importance": 5,
+        "description": "掌握线面垂直的判定定理与性质定理,理解二面角,能进行垂直关系的证明与角度计算。",
+        "keywords": "线面垂直,判定定理,二面角,垂直证明",
+        "exam_type": "证明题,线面垂直,二面角"
+      },
+      {
+        "id": "K47",
+        "name": "随机抽样",
+        "type": "KnowledgePoint",
+        "module": "必修第二册(几何与统计)",
+        "chapter": "统计",
+        "difficulty": 2,
+        "importance": 3,
+        "description": "理解简单随机抽样、分层抽样、系统抽样的概念与方法,能选择合适的抽样方法。",
+        "keywords": "简单随机抽样,分层抽样,系统抽样,抽样方法",
+        "exam_type": "选择题,抽样方法选择"
+      },
+      {
+        "id": "K48",
+        "name": "用样本估计总体",
+        "type": "KnowledgePoint",
+        "module": "必修第二册(几何与统计)",
+        "chapter": "统计",
+        "difficulty": 3,
+        "importance": 4,
+        "description": "掌握频率分布直方图、茎叶图等图表方法,会用样本的频率分布估计总体分布。",
+        "keywords": "频率分布直方图,茎叶图,样本估计总体",
+        "exam_type": "计算题,读图分析"
+      },
+      {
+        "id": "K49",
+        "name": "样本的数字特征",
+        "type": "KnowledgePoint",
+        "module": "必修第二册(几何与统计)",
+        "chapter": "统计",
+        "difficulty": 3,
+        "importance": 4,
+        "description": "掌握样本均值(平均数)、中位数、众数、方差、标准差等数字特征的计算与意义。",
+        "keywords": "平均数,中位数,众数,方差,标准差",
+        "exam_type": "计算题,数字特征计算"
+      },
+      {
+        "id": "K50",
+        "name": "随机事件与概率",
+        "type": "KnowledgePoint",
+        "module": "必修第二册(几何与统计)",
+        "chapter": "概率",
+        "difficulty": 3,
+        "importance": 4,
+        "description": "理解随机事件、必然事件、不可能事件,掌握概率的统计定义与古典定义。",
+        "keywords": "随机事件,概率,必然事件,不可能事件",
+        "exam_type": "选择题,概率概念"
+      },
+      {
+        "id": "K51",
+        "name": "古典概型",
+        "type": "KnowledgePoint",
+        "module": "必修第二册(几何与统计)",
+        "chapter": "概率",
+        "difficulty": 4,
+        "importance": 5,
+        "description": "掌握古典概型的两个特征(有限性、等可能性),能用排列组合或列举法求古典概率。",
+        "keywords": "古典概型,等可能性,有限性,概率计算",
+        "exam_type": "计算题,古典概型"
+      },
+      {
+        "id": "K52",
+        "name": "概率的基本性质与事件运算",
+        "type": "KnowledgePoint",
+        "module": "必修第二册(几何与统计)",
+        "chapter": "概率",
+        "difficulty": 3,
+        "importance": 4,
+        "description": "掌握互斥事件、对立事件的概念及概率加法公式,理解事件的交并运算。",
+        "keywords": "互斥事件,对立事件,加法公式,事件运算",
+        "exam_type": "选择题,计算题"
+      },
+      {
+        "id": "K53",
+        "name": "事件的独立性",
+        "type": "KnowledgePoint",
+        "module": "必修第二册(几何与统计)",
+        "chapter": "概率",
+        "difficulty": 4,
+        "importance": 4,
+        "description": "理解两个事件相互独立的概念,掌握独立事件同时发生的概率乘法公式。",
+        "keywords": "独立事件,乘法公式,独立性,概率",
+        "exam_type": "计算题,独立事件概率"
+      },
+      {
+        "id": "K54",
+        "name": "空间向量的概念与运算",
+        "type": "KnowledgePoint",
+        "module": "选择性必修第一册(解析几何)",
+        "chapter": "空间向量与立体几何",
+        "difficulty": 3,
+        "importance": 4,
+        "description": "理解空间向量的概念,掌握空间向量的加法、减法、数乘及数量积运算。",
+        "keywords": "空间向量,加减数乘,数量积,运算",
+        "exam_type": "选择题,向量运算"
+      },
+      {
+        "id": "K55",
+        "name": "空间向量的坐标表示与数量积",
+        "type": "KnowledgePoint",
+        "module": "选择性必修第一册(解析几何)",
+        "chapter": "空间向量与立体几何",
+        "difficulty": 4,
+        "importance": 5,
+        "description": "建立空间直角坐标系,掌握空间向量的坐标表示及数量积的坐标运算,能求夹角与距离。",
+        "keywords": "空间直角坐标,坐标表示,数量积,夹角距离",
+        "exam_type": "计算题,坐标运算"
+      },
+      {
+        "id": "K56",
+        "name": "直线的方向向量与平面的法向量",
+        "type": "KnowledgePoint",
+        "module": "选择性必修第一册(解析几何)",
+        "chapter": "空间向量与立体几何",
+        "difficulty": 4,
+        "importance": 4,
+        "description": "理解方向向量与法向量的概念,能用向量表示直线与平面,建立位置关系的向量判定。",
+        "keywords": "方向向量,法向量,直线平面表示",
+        "exam_type": "选择题,概念应用"
+      },
+      {
+        "id": "K57",
+        "name": "用向量研究空间中的平行与垂直关系",
+        "type": "KnowledgePoint",
+        "module": "选择性必修第一册(解析几何)",
+        "chapter": "空间向量与立体几何",
+        "difficulty": 5,
+        "importance": 5,
+        "description": "掌握用向量判定线线、线面、面面的平行与垂直关系,能进行向量法空间证明。",
+        "keywords": "向量法,平行判定,垂直判定,空间证明",
+        "exam_type": "证明题,向量法空间证明"
+      },
+      {
+        "id": "K58",
+        "name": "空间距离与夹角的向量求法",
+        "type": "KnowledgePoint",
+        "module": "选择性必修第一册(解析几何)",
+        "chapter": "空间向量与立体几何",
+        "difficulty": 5,
+        "importance": 5,
+        "description": "掌握用向量求两点间距离、点到面的距离及线线角、线面角、面面角(二面角)的方法。",
+        "keywords": "距离,夹角,线面角,二面角,向量法",
+        "exam_type": "综合题,空间角与距离"
+      },
+      {
+        "id": "K59",
+        "name": "直线的倾斜角与斜率",
+        "type": "KnowledgePoint",
+        "module": "选择性必修第一册(解析几何)",
+        "chapter": "直线与方程",
+        "difficulty": 3,
+        "importance": 4,
+        "description": "理解直线倾斜角与斜率的概念,掌握斜率公式及斜率与倾斜角的关系。",
+        "keywords": "倾斜角,斜率,斜率公式,斜率范围",
+        "exam_type": "选择题,斜率计算"
+      },
+      {
+        "id": "K60",
+        "name": "直线方程的多种形式",
+        "type": "KnowledgePoint",
+        "module": "选择性必修第一册(解析几何)",
+        "chapter": "直线与方程",
+        "difficulty": 4,
+        "importance": 4,
+        "description": "掌握点斜式、斜截式、两点式、截距式、一般式等直线方程形式及互化。",
+        "keywords": "点斜式,斜截式,两点式,截距式,一般式",
+        "exam_type": "计算题,求直线方程"
+      },
+      {
+        "id": "K61",
+        "name": "两直线的位置关系",
+        "type": "KnowledgePoint",
+        "module": "选择性必修第一册(解析几何)",
+        "chapter": "直线与方程",
+        "difficulty": 4,
+        "importance": 4,
+        "description": "掌握两直线平行、垂直、相交(含垂直)的判定条件,能求两直线交点。",
+        "keywords": "平行,垂直,相交,交点,斜率关系",
+        "exam_type": "选择题,计算题"
+      },
+      {
+        "id": "K62",
+        "name": "点到直线的距离",
+        "type": "KnowledgePoint",
+        "module": "选择性必修第一册(解析几何)",
+        "chapter": "直线与方程",
+        "difficulty": 4,
+        "importance": 4,
+        "description": "掌握点到直线的距离公式及两平行线间距离公式,能解决距离相关最值问题。",
+        "keywords": "点到直线距离,平行线距离,距离公式",
+        "exam_type": "计算题,距离最值"
+      },
+      {
+        "id": "K63",
+        "name": "圆的标准方程与一般方程",
+        "type": "KnowledgePoint",
+        "module": "选择性必修第一册(解析几何)",
+        "chapter": "圆与方程",
+        "difficulty": 3,
+        "importance": 4,
+        "description": "掌握圆的标准方程(x-a)²+(y-b)²=r²与一般方程,能由条件求圆的方程。",
+        "keywords": "圆标准方程,圆一般方程,圆心半径",
+        "exam_type": "计算题,求圆方程"
+      },
+      {
+        "id": "K64",
+        "name": "直线与圆的位置关系",
+        "type": "KnowledgePoint",
+        "module": "选择性必修第一册(解析几何)",
+        "chapter": "圆与方程",
+        "difficulty": 4,
+        "importance": 5,
+        "description": "掌握直线与圆相交、相切、相离的判定方法(几何法与代数法),能求弦长与切线。",
+        "keywords": "相交相切相离,弦长,切线,位置关系",
+        "exam_type": "计算题,直线与圆"
+      },
+      {
+        "id": "K65",
+        "name": "圆与圆的位置关系",
+        "type": "KnowledgePoint",
+        "module": "选择性必修第一册(解析几何)",
+        "chapter": "圆与方程",
+        "difficulty": 3,
+        "importance": 3,
+        "description": "掌握两圆位置关系(相离、外切、相交、内切、内含)的判定,能求公共弦方程。",
+        "keywords": "圆与圆,位置关系,公共弦,圆心距",
+        "exam_type": "选择题,计算题"
+      },
+      {
+        "id": "K66",
+        "name": "椭圆及其标准方程",
+        "type": "KnowledgePoint",
+        "module": "选择性必修第一册(解析几何)",
+        "chapter": "圆锥曲线",
+        "difficulty": 4,
+        "importance": 5,
+        "description": "理解椭圆定义,掌握椭圆标准方程的推导,能由条件求椭圆方程。",
+        "keywords": "椭圆,定义,标准方程,a,b,c,焦点",
+        "exam_type": "计算题,求椭圆方程"
+      },
+      {
+        "id": "K67",
+        "name": "椭圆的几何性质",
+        "type": "KnowledgePoint",
+        "module": "选择性必修第一册(解析几何)",
+        "chapter": "圆锥曲线",
+        "difficulty": 4,
+        "importance": 5,
+        "description": "掌握椭圆的范围、对称性、顶点、离心率等几何性质,理解a、b、c、e的关系。",
+        "keywords": "椭圆性质,范围,对称性,顶点,离心率",
+        "exam_type": "选择题,椭圆性质"
+      },
+      {
+        "id": "K68",
+        "name": "双曲线及其标准方程",
+        "type": "KnowledgePoint",
+        "module": "选择性必修第一册(解析几何)",
+        "chapter": "圆锥曲线",
+        "difficulty": 4,
+        "importance": 5,
+        "description": "理解双曲线定义(含渐近线概念),掌握双曲线标准方程,能由条件求双曲线方程。",
+        "keywords": "双曲线,定义,标准方程,渐近线,焦点",
+        "exam_type": "计算题,求双曲线方程"
+      },
+      {
+        "id": "K69",
+        "name": "双曲线的几何性质",
+        "type": "KnowledgePoint",
+        "module": "选择性必修第一册(解析几何)",
+        "chapter": "圆锥曲线",
+        "difficulty": 4,
+        "importance": 4,
+        "description": "掌握双曲线的范围、对称性、顶点、渐近线、离心率等几何性质。",
+        "keywords": "双曲线性质,渐近线,离心率,范围",
+        "exam_type": "选择题,双曲线性质"
+      },
+      {
+        "id": "K70",
+        "name": "抛物线及其标准方程",
+        "type": "KnowledgePoint",
+        "module": "选择性必修第一册(解析几何)",
+        "chapter": "圆锥曲线",
+        "difficulty": 4,
+        "importance": 5,
+        "description": "理解抛物线定义,掌握四种标准方程形式,能由条件求抛物线方程。",
+        "keywords": "抛物线,定义,标准方程,焦点,准线",
+        "exam_type": "计算题,求抛物线方程"
+      },
+      {
+        "id": "K71",
+        "name": "抛物线的几何性质",
+        "type": "KnowledgePoint",
+        "module": "选择性必修第一册(解析几何)",
+        "chapter": "圆锥曲线",
+        "difficulty": 3,
+        "importance": 4,
+        "description": "掌握抛物线的范围、对称性、顶点、离心率等几何性质及焦半径公式。",
+        "keywords": "抛物线性质,焦半径,焦点弦,准线",
+        "exam_type": "选择题,抛物线性质"
+      },
+      {
+        "id": "K72",
+        "name": "直线与圆锥曲线的位置关系",
+        "type": "KnowledgePoint",
+        "module": "选择性必修第一册(解析几何)",
+        "chapter": "圆锥曲线",
+        "difficulty": 5,
+        "importance": 5,
+        "description": "掌握直线与椭圆、双曲线、抛物线位置关系的代数判别方法,能求弦长、面积、定点定值问题。",
+        "keywords": "直线圆锥曲线,弦长,韦达定理,定点定值,焦点弦",
+        "exam_type": "综合题,解析几何压轴"
+      },
+      {
+        "id": "K73",
+        "name": "数列的概念与简单表示",
+        "type": "KnowledgePoint",
+        "module": "选择性必修第二册(数列与导数)",
+        "chapter": "数列",
+        "difficulty": 2,
+        "importance": 3,
+        "description": "理解数列的概念,掌握数列的通项公式与递推公式表示,理解数列与函数的关系。",
+        "keywords": "数列,通项公式,递推公式,项,有界",
+        "exam_type": "选择题,求数列通项"
+      },
+      {
+        "id": "K74",
+        "name": "等差数列及其前n项和",
+        "type": "KnowledgePoint",
+        "module": "选择性必修第二册(数列与导数)",
+        "chapter": "数列",
+        "difficulty": 4,
+        "importance": 5,
+        "description": "掌握等差数列的定义、通项公式、性质及前n项和公式,能解决等差数列综合问题。",
+        "keywords": "等差数列,通项公式,前n项和,公差,性质",
+        "exam_type": "计算题,等差数列综合"
+      },
+      {
+        "id": "K75",
+        "name": "等比数列及其前n项和",
+        "type": "KnowledgePoint",
+        "module": "选择性必修第二册(数列与导数)",
+        "chapter": "数列",
+        "difficulty": 4,
+        "importance": 5,
+        "description": "掌握等比数列的定义、通项公式、性质及前n项和公式,能解决等比数列综合问题。",
+        "keywords": "等比数列,通项公式,前n项和,公比,性质",
+        "exam_type": "计算题,等比数列综合"
+      },
+      {
+        "id": "K76",
+        "name": "数列求和的特殊方法",
+        "type": "KnowledgePoint",
+        "module": "选择性必修第二册(数列与导数)",
+        "chapter": "数列",
+        "difficulty": 5,
+        "importance": 5,
+        "description": "掌握错位相减法、裂项相消法、分组求和法、倒序相加法等数列求和方法。",
+        "keywords": "错位相减,裂项相消,分组求和,倒序相加",
+        "exam_type": "综合题,数列求和"
+      },
+      {
+        "id": "K77",
+        "name": "导数的概念",
+        "type": "KnowledgePoint",
+        "module": "选择性必修第二册(数列与导数)",
+        "chapter": "导数及其应用",
+        "difficulty": 4,
+        "importance": 4,
+        "description": "理解导数的概念与瞬时变化率的含义,掌握用极限定义导数的方法。",
+        "keywords": "导数,瞬时变化率,极限,平均变化率",
+        "exam_type": "选择题,导数概念"
+      },
+      {
+        "id": "K78",
+        "name": "导数的几何意义",
+        "type": "KnowledgePoint",
+        "module": "选择性必修第二册(数列与导数)",
+        "chapter": "导数及其应用",
+        "difficulty": 4,
+        "importance": 5,
+        "description": "理解导数的几何意义为切线斜率,掌握求曲线在某点处切线方程的方法。",
+        "keywords": "切线斜率,切线方程,几何意义,切点",
+        "exam_type": "计算题,切线方程"
+      },
+      {
+        "id": "K79",
+        "name": "基本初等函数的导数公式",
+        "type": "KnowledgePoint",
+        "module": "选择性必修第二册(数列与导数)",
+        "chapter": "导数及其应用",
+        "difficulty": 4,
+        "importance": 5,
+        "description": "掌握常数、幂函数、指数函数、对数函数、三角函数等基本初等函数的导数公式。",
+        "keywords": "导数公式,幂函数,指数对数,三角函数导数",
+        "exam_type": "计算题,求导数"
+      },
+      {
+        "id": "K80",
+        "name": "导数的四则运算法则与复合函数求导",
+        "type": "KnowledgePoint",
+        "module": "选择性必修第二册(数列与导数)",
+        "chapter": "导数及其应用",
+        "difficulty": 5,
+        "importance": 5,
+        "description": "掌握导数的和差积商法则及复合函数的链式求导法则,能对复杂函数求导。",
+        "keywords": "四则运算法则,复合函数,链式法则,求导",
+        "exam_type": "计算题,复合函数求导"
+      },
+      {
+        "id": "K81",
+        "name": "函数的单调性与导数",
+        "type": "KnowledgePoint",
+        "module": "选择性必修第二册(数列与导数)",
+        "chapter": "导数及其应用",
+        "difficulty": 5,
+        "importance": 5,
+        "description": "掌握用导数判断函数单调性的方法,能求函数单调区间并证明单调性。",
+        "keywords": "单调性,导数符号,单调区间,求导判断",
+        "exam_type": "综合题,单调性分析"
+      },
+      {
+        "id": "K82",
+        "name": "函数的极值与导数",
+        "type": "KnowledgePoint",
+        "module": "选择性必修第二册(数列与导数)",
+        "chapter": "导数及其应用",
+        "difficulty": 5,
+        "importance": 5,
+        "description": "理解极值概念,掌握用导数求函数极值(极大值、极小值)的方法,会求极值点。",
+        "keywords": "极值,极大值,极小值,极值点,导数变号",
+        "exam_type": "综合题,求极值"
+      },
+      {
+        "id": "K83",
+        "name": "函数的最大(小)值与导数",
+        "type": "KnowledgePoint",
+        "module": "选择性必修第二册(数列与导数)",
+        "chapter": "导数及其应用",
+        "difficulty": 5,
+        "importance": 5,
+        "description": "掌握用导数求闭区间上函数最大值与最小值的方法,解决实际最值优化问题。",
+        "keywords": "最大值,最小值,闭区间,导数,优化问题",
+        "exam_type": "综合题,最值应用题"
+      },
+      {
+        "id": "K84",
+        "name": "分类加法与分步乘法计数原理",
+        "type": "KnowledgePoint",
+        "module": "选择性必修第三册(计数与统计)",
+        "chapter": "计数原理",
+        "difficulty": 3,
+        "importance": 4,
+        "description": "理解分类加法计数原理与分步乘法计数原理,能用于排列组合问题的分析与计数。",
+        "keywords": "分类计数原理,分步计数原理,加法,乘法",
+        "exam_type": "选择题,计算题"
+      },
+      {
+        "id": "K85",
+        "name": "排列与排列数",
+        "type": "KnowledgePoint",
+        "module": "选择性必修第三册(计数与统计)",
+        "chapter": "计数原理",
+        "difficulty": 4,
+        "importance": 4,
+        "description": "理解排列概念,掌握排列数公式A(n,m),能解决排列应用题(含限制条件)。",
+        "keywords": "排列,排列数公式,限制条件,排列应用",
+        "exam_type": "计算题,排列应用题"
+      },
+      {
+        "id": "K86",
+        "name": "组合与组合数",
+        "type": "KnowledgePoint",
+        "module": "选择性必修第三册(计数与统计)",
+        "chapter": "计数原理",
+        "difficulty": 4,
+        "importance": 4,
+        "description": "理解组合概念,掌握组合数公式C(n,m)及组合数性质,能解决组合应用题。",
+        "keywords": "组合,组合数公式,组合数性质,组合应用",
+        "exam_type": "计算题,组合应用题"
+      },
+      {
+        "id": "K87",
+        "name": "二项式定理",
+        "type": "KnowledgePoint",
+        "module": "选择性必修第三册(计数与统计)",
+        "chapter": "计数原理",
+        "difficulty": 5,
+        "importance": 5,
+        "description": "掌握二项式定理及通项公式,理解二项式系数的性质,能求展开式中特定项与系数。",
+        "keywords": "二项式定理,通项公式,二项式系数,特定项",
+        "exam_type": "计算题,二项式展开"
+      },
+      {
+        "id": "K88",
+        "name": "离散型随机变量及其分布列",
+        "type": "KnowledgePoint",
+        "module": "选择性必修第三册(计数与统计)",
+        "chapter": "随机变量及其分布",
+        "difficulty": 4,
+        "importance": 5,
+        "description": "理解离散型随机变量概念,掌握分布列的性质,能求简单随机变量的分布列。",
+        "keywords": "随机变量,分布列,离散型,概率分布",
+        "exam_type": "计算题,分布列"
+      },
+      {
+        "id": "K89",
+        "name": "离散型随机变量的均值与方差",
+        "type": "KnowledgePoint",
+        "module": "选择性必修第三册(计数与统计)",
+        "chapter": "随机变量及其分布",
+        "difficulty": 4,
+        "importance": 5,
+        "description": "掌握离散型随机变量均值(数学期望)与方差的计算公式及性质,理解其统计意义。",
+        "keywords": "均值,数学期望,方差,标准差,性质",
+        "exam_type": "计算题,期望方差"
+      },
+      {
+        "id": "K90",
+        "name": "条件概率与全概率公式",
+        "type": "KnowledgePoint",
+        "module": "选择性必修第三册(计数与统计)",
+        "chapter": "随机变量及其分布",
+        "difficulty": 4,
+        "importance": 4,
+        "description": "理解条件概率概念,掌握条件概率公式与全概率公式,能解决条件概率问题。",
+        "keywords": "条件概率,全概率公式,贝叶斯,概率",
+        "exam_type": "计算题,条件概率"
+      },
+      {
+        "id": "K91",
+        "name": "独立重复试验与二项分布",
+        "type": "KnowledgePoint",
+        "module": "选择性必修第三册(计数与统计)",
+        "chapter": "随机变量及其分布",
+        "difficulty": 5,
+        "importance": 5,
+        "description": "理解n次独立重复试验,掌握二项分布B(n,p)及其均值方差,能解决二项分布问题。",
+        "keywords": "独立重复试验,二项分布,B(n,p),均值方差",
+        "exam_type": "计算题,二项分布"
+      },
+      {
+        "id": "K92",
+        "name": "正态分布",
+        "type": "KnowledgePoint",
+        "module": "选择性必修第三册(计数与统计)",
+        "chapter": "随机变量及其分布",
+        "difficulty": 4,
+        "importance": 4,
+        "description": "理解正态分布N(μ,σ²)的概念与密度曲线特征,掌握3σ原则及正态分布的性质。",
+        "keywords": "正态分布,密度曲线,μ,σ,3σ原则",
+        "exam_type": "选择题,正态分布"
+      },
+      {
+        "id": "K93",
+        "name": "回归分析",
+        "type": "KnowledgePoint",
+        "module": "选择性必修第三册(计数与统计)",
+        "chapter": "成对数据的统计分析",
+        "difficulty": 4,
+        "importance": 4,
+        "description": "理解线性回归模型,掌握最小二乘法求回归方程,理解相关系数与残差分析。",
+        "keywords": "回归分析,最小二乘法,回归方程,相关系数,残差",
+        "exam_type": "计算题,回归分析"
+      },
+      {
+        "id": "K94",
+        "name": "独立性检验",
+        "type": "KnowledgePoint",
+        "module": "选择性必修第三册(计数与统计)",
+        "chapter": "成对数据的统计分析",
+        "difficulty": 4,
+        "importance": 4,
+        "description": "理解独立性检验(卡方检验)的基本思想,掌握χ²统计量的计算与查表判断。",
+        "keywords": "独立性检验,卡方检验,χ²,列联表,显著性",
+        "exam_type": "计算题,独立性检验"
+      }
+    ],
+    "edges": [
+      {
+        "source": "M1",
+        "target": "C1",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "模块[M1]包含章节[集合与常用逻辑用语]"
+      },
+      {
+        "source": "M1",
+        "target": "C2",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "模块[M1]包含章节[一元二次函数、方程和不等式]"
+      },
+      {
+        "source": "M1",
+        "target": "C3",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "模块[M1]包含章节[函数的概念与性质]"
+      },
+      {
+        "source": "M1",
+        "target": "C4",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "模块[M1]包含章节[指数函数与对数函数]"
+      },
+      {
+        "source": "M1",
+        "target": "C5",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "模块[M1]包含章节[三角函数]"
+      },
+      {
+        "source": "M2",
+        "target": "C6",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "模块[M2]包含章节[平面向量及其应用]"
+      },
+      {
+        "source": "M2",
+        "target": "C7",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "模块[M2]包含章节[复数]"
+      },
+      {
+        "source": "M2",
+        "target": "C8",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "模块[M2]包含章节[立体几何初步]"
+      },
+      {
+        "source": "M2",
+        "target": "C9",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "模块[M2]包含章节[统计]"
+      },
+      {
+        "source": "M2",
+        "target": "C10",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "模块[M2]包含章节[概率]"
+      },
+      {
+        "source": "M3",
+        "target": "C11",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "模块[M3]包含章节[空间向量与立体几何]"
+      },
+      {
+        "source": "M3",
+        "target": "C12",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "模块[M3]包含章节[直线与方程]"
+      },
+      {
+        "source": "M3",
+        "target": "C13",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "模块[M3]包含章节[圆与方程]"
+      },
+      {
+        "source": "M3",
+        "target": "C14",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "模块[M3]包含章节[圆锥曲线]"
+      },
+      {
+        "source": "M4",
+        "target": "C15",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "模块[M4]包含章节[数列]"
+      },
+      {
+        "source": "M4",
+        "target": "C16",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "模块[M4]包含章节[导数及其应用]"
+      },
+      {
+        "source": "M5",
+        "target": "C17",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "模块[M5]包含章节[计数原理]"
+      },
+      {
+        "source": "M5",
+        "target": "C18",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "模块[M5]包含章节[随机变量及其分布]"
+      },
+      {
+        "source": "M5",
+        "target": "C19",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "模块[M5]包含章节[成对数据的统计分析]"
+      },
+      {
+        "source": "C1",
+        "target": "K1",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[集合的概念与表示]"
+      },
+      {
+        "source": "C1",
+        "target": "K2",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[集合间的基本关系]"
+      },
+      {
+        "source": "C1",
+        "target": "K3",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[集合的基本运算]"
+      },
+      {
+        "source": "C1",
+        "target": "K4",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[充分条件与必要条件]"
+      },
+      {
+        "source": "C1",
+        "target": "K5",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[全称量词与存在量词]"
+      },
+      {
+        "source": "C2",
+        "target": "K6",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[不等式的基本性质]"
+      },
+      {
+        "source": "C2",
+        "target": "K7",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[基本不等式]"
+      },
+      {
+        "source": "C2",
+        "target": "K8",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[一元二次不等式及其解法]"
+      },
+      {
+        "source": "C2",
+        "target": "K9",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[二次函数与一元二次方程不等式的关系]"
+      },
+      {
+        "source": "C3",
+        "target": "K10",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[函数的概念]"
+      },
+      {
+        "source": "C3",
+        "target": "K11",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[函数的表示法]"
+      },
+      {
+        "source": "C3",
+        "target": "K12",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[分段函数]"
+      },
+      {
+        "source": "C3",
+        "target": "K13",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[函数的单调性]"
+      },
+      {
+        "source": "C3",
+        "target": "K14",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[函数的最大(小)值]"
+      },
+      {
+        "source": "C3",
+        "target": "K15",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[函数的奇偶性]"
+      },
+      {
+        "source": "C3",
+        "target": "K16",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[幂函数]"
+      },
+      {
+        "source": "C4",
+        "target": "K17",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[指数与指数幂的运算]"
+      },
+      {
+        "source": "C4",
+        "target": "K18",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[指数函数的图象与性质]"
+      },
+      {
+        "source": "C4",
+        "target": "K19",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[对数的概念]"
+      },
+      {
+        "source": "C4",
+        "target": "K20",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[对数的运算性质]"
+      },
+      {
+        "source": "C4",
+        "target": "K21",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[对数函数的图象与性质]"
+      },
+      {
+        "source": "C4",
+        "target": "K22",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[反函数]"
+      },
+      {
+        "source": "C5",
+        "target": "K23",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[任意角与弧度制]"
+      },
+      {
+        "source": "C5",
+        "target": "K24",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[三角函数的定义]"
+      },
+      {
+        "source": "C5",
+        "target": "K25",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[同角三角函数的基本关系]"
+      },
+      {
+        "source": "C5",
+        "target": "K26",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[诱导公式]"
+      },
+      {
+        "source": "C5",
+        "target": "K27",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[三角函数的图象]"
+      },
+      {
+        "source": "C5",
+        "target": "K28",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[三角函数的性质]"
+      },
+      {
+        "source": "C5",
+        "target": "K29",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[函数y=Asin(ωx+φ)的图象]"
+      },
+      {
+        "source": "C5",
+        "target": "K30",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[两角和与差的三角函数公式]"
+      },
+      {
+        "source": "C5",
+        "target": "K31",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[二倍角公式]"
+      },
+      {
+        "source": "C6",
+        "target": "K32",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[平面向量的概念]"
+      },
+      {
+        "source": "C6",
+        "target": "K33",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[向量的线性运算]"
+      },
+      {
+        "source": "C6",
+        "target": "K34",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[平面向量基本定理]"
+      },
+      {
+        "source": "C6",
+        "target": "K35",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[平面向量的坐标表示]"
+      },
+      {
+        "source": "C6",
+        "target": "K36",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[向量的数量积]"
+      },
+      {
+        "source": "C6",
+        "target": "K37",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[向量在几何与物理中的应用]"
+      },
+      {
+        "source": "C7",
+        "target": "K38",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[复数的概念]"
+      },
+      {
+        "source": "C7",
+        "target": "K39",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[复数的几何意义]"
+      },
+      {
+        "source": "C7",
+        "target": "K40",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[复数的四则运算]"
+      },
+      {
+        "source": "C8",
+        "target": "K41",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[空间几何体的结构]"
+      },
+      {
+        "source": "C8",
+        "target": "K42",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[空间几何体的三视图]"
+      },
+      {
+        "source": "C8",
+        "target": "K43",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[空间几何体的表面积与体积]"
+      },
+      {
+        "source": "C8",
+        "target": "K44",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[空间点、直线、平面之间的位置关系]"
+      },
+      {
+        "source": "C8",
+        "target": "K45",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[直线与平面平行的判定与性质]"
+      },
+      {
+        "source": "C8",
+        "target": "K46",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[直线与平面垂直的判定与性质]"
+      },
+      {
+        "source": "C9",
+        "target": "K47",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[随机抽样]"
+      },
+      {
+        "source": "C9",
+        "target": "K48",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[用样本估计总体]"
+      },
+      {
+        "source": "C9",
+        "target": "K49",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[样本的数字特征]"
+      },
+      {
+        "source": "C10",
+        "target": "K50",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[随机事件与概率]"
+      },
+      {
+        "source": "C10",
+        "target": "K51",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[古典概型]"
+      },
+      {
+        "source": "C10",
+        "target": "K52",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[概率的基本性质与事件运算]"
+      },
+      {
+        "source": "C10",
+        "target": "K53",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[事件的独立性]"
+      },
+      {
+        "source": "C11",
+        "target": "K54",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[空间向量的概念与运算]"
+      },
+      {
+        "source": "C11",
+        "target": "K55",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[空间向量的坐标表示与数量积]"
+      },
+      {
+        "source": "C11",
+        "target": "K56",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[直线的方向向量与平面的法向量]"
+      },
+      {
+        "source": "C11",
+        "target": "K57",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[用向量研究空间中的平行与垂直关系]"
+      },
+      {
+        "source": "C11",
+        "target": "K58",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[空间距离与夹角的向量求法]"
+      },
+      {
+        "source": "C12",
+        "target": "K59",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[直线的倾斜角与斜率]"
+      },
+      {
+        "source": "C12",
+        "target": "K60",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[直线方程的多种形式]"
+      },
+      {
+        "source": "C12",
+        "target": "K61",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[两直线的位置关系]"
+      },
+      {
+        "source": "C12",
+        "target": "K62",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[点到直线的距离]"
+      },
+      {
+        "source": "C13",
+        "target": "K63",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[圆的标准方程与一般方程]"
+      },
+      {
+        "source": "C13",
+        "target": "K64",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[直线与圆的位置关系]"
+      },
+      {
+        "source": "C13",
+        "target": "K65",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[圆与圆的位置关系]"
+      },
+      {
+        "source": "C14",
+        "target": "K66",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[椭圆及其标准方程]"
+      },
+      {
+        "source": "C14",
+        "target": "K67",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[椭圆的几何性质]"
+      },
+      {
+        "source": "C14",
+        "target": "K68",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[双曲线及其标准方程]"
+      },
+      {
+        "source": "C14",
+        "target": "K69",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[双曲线的几何性质]"
+      },
+      {
+        "source": "C14",
+        "target": "K70",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[抛物线及其标准方程]"
+      },
+      {
+        "source": "C14",
+        "target": "K71",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[抛物线的几何性质]"
+      },
+      {
+        "source": "C14",
+        "target": "K72",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[直线与圆锥曲线的位置关系]"
+      },
+      {
+        "source": "C15",
+        "target": "K73",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[数列的概念与简单表示]"
+      },
+      {
+        "source": "C15",
+        "target": "K74",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[等差数列及其前n项和]"
+      },
+      {
+        "source": "C15",
+        "target": "K75",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[等比数列及其前n项和]"
+      },
+      {
+        "source": "C15",
+        "target": "K76",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[数列求和的特殊方法]"
+      },
+      {
+        "source": "C16",
+        "target": "K77",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[导数的概念]"
+      },
+      {
+        "source": "C16",
+        "target": "K78",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[导数的几何意义]"
+      },
+      {
+        "source": "C16",
+        "target": "K79",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[基本初等函数的导数公式]"
+      },
+      {
+        "source": "C16",
+        "target": "K80",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[导数的四则运算法则与复合函数求导]"
+      },
+      {
+        "source": "C16",
+        "target": "K81",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[函数的单调性与导数]"
+      },
+      {
+        "source": "C16",
+        "target": "K82",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[函数的极值与导数]"
+      },
+      {
+        "source": "C16",
+        "target": "K83",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[函数的最大(小)值与导数]"
+      },
+      {
+        "source": "C17",
+        "target": "K84",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[分类加法与分步乘法计数原理]"
+      },
+      {
+        "source": "C17",
+        "target": "K85",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[排列与排列数]"
+      },
+      {
+        "source": "C17",
+        "target": "K86",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[组合与组合数]"
+      },
+      {
+        "source": "C17",
+        "target": "K87",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[二项式定理]"
+      },
+      {
+        "source": "C18",
+        "target": "K88",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[离散型随机变量及其分布列]"
+      },
+      {
+        "source": "C18",
+        "target": "K89",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[离散型随机变量的均值与方差]"
+      },
+      {
+        "source": "C18",
+        "target": "K90",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[条件概率与全概率公式]"
+      },
+      {
+        "source": "C18",
+        "target": "K91",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[独立重复试验与二项分布]"
+      },
+      {
+        "source": "C18",
+        "target": "K92",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[正态分布]"
+      },
+      {
+        "source": "C19",
+        "target": "K93",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[回归分析]"
+      },
+      {
+        "source": "C19",
+        "target": "K94",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[独立性检验]"
+      },
+      {
+        "source": "K1",
+        "target": "K2",
+        "relation": "PREREQUISITE",
+        "weight": 0.9,
+        "description": "掌握集合概念是理解集合间关系的前提"
+      },
+      {
+        "source": "K2",
+        "target": "K3",
+        "relation": "PREREQUISITE",
+        "weight": 0.9,
+        "description": "理解集合关系是进行集合运算的基础"
+      },
+      {
+        "source": "K6",
+        "target": "K7",
+        "relation": "PREREQUISITE",
+        "weight": 0.8,
+        "description": "不等式性质是基本不等式的基础"
+      },
+      {
+        "source": "K7",
+        "target": "K8",
+        "relation": "PREREQUISITE",
+        "weight": 0.8,
+        "description": "基本不等式用于解一元二次不等式"
+      },
+      {
+        "source": "K8",
+        "target": "K9",
+        "relation": "PREREQUISITE",
+        "weight": 0.9,
+        "description": "一元二次不等式是理解三个二次关系的前提"
+      },
+      {
+        "source": "K10",
+        "target": "K13",
+        "relation": "PREREQUISITE",
+        "weight": 0.9,
+        "description": "函数概念是研究单调性的基础"
+      },
+      {
+        "source": "K10",
+        "target": "K15",
+        "relation": "PREREQUISITE",
+        "weight": 0.9,
+        "description": "函数概念是研究奇偶性的基础"
+      },
+      {
+        "source": "K13",
+        "target": "K14",
+        "relation": "PREREQUISITE",
+        "weight": 0.9,
+        "description": "单调性是求最值的基础"
+      },
+      {
+        "source": "K13",
+        "target": "K15",
+        "relation": "RELATED_TO",
+        "weight": 0.6,
+        "description": "单调性与奇偶性都是函数的重要性质"
+      },
+      {
+        "source": "K17",
+        "target": "K18",
+        "relation": "PREREQUISITE",
+        "weight": 0.9,
+        "description": "指数运算是研究指数函数的基础"
+      },
+      {
+        "source": "K19",
+        "target": "K20",
+        "relation": "PREREQUISITE",
+        "weight": 0.9,
+        "description": "对数概念是学习对数运算的前提"
+      },
+      {
+        "source": "K20",
+        "target": "K21",
+        "relation": "PREREQUISITE",
+        "weight": 0.9,
+        "description": "对数运算是研究对数函数的基础"
+      },
+      {
+        "source": "K18",
+        "target": "K21",
+        "relation": "RELATED_TO",
+        "weight": 0.8,
+        "description": "指数函数与对数函数互为反函数"
+      },
+      {
+        "source": "K22",
+        "target": "K18",
+        "relation": "DERIVED_FROM",
+        "weight": 0.7,
+        "description": "反函数由指数函数推导得到对数函数"
+      },
+      {
+        "source": "K23",
+        "target": "K24",
+        "relation": "PREREQUISITE",
+        "weight": 0.9,
+        "description": "弧度制是定义任意角三角函数的基础"
+      },
+      {
+        "source": "K24",
+        "target": "K25",
+        "relation": "PREREQUISITE",
+        "weight": 0.9,
+        "description": "三角函数定义是同角关系的前提"
+      },
+      {
+        "source": "K25",
+        "target": "K26",
+        "relation": "PREREQUISITE",
+        "weight": 0.8,
+        "description": "同角关系与诱导公式结合使用"
+      },
+      {
+        "source": "K26",
+        "target": "K27",
+        "relation": "PREREQUISITE",
+        "weight": 0.8,
+        "description": "诱导公式有助于理解三角函数图象"
+      },
+      {
+        "source": "K27",
+        "target": "K28",
+        "relation": "PREREQUISITE",
+        "weight": 0.8,
+        "description": "三角函数图象是研究性质的基础"
+      },
+      {
+        "source": "K28",
+        "target": "K29",
+        "relation": "PREREQUISITE",
+        "weight": 0.8,
+        "description": "三角函数性质是图象变换的基础"
+      },
+      {
+        "source": "K30",
+        "target": "K31",
+        "relation": "PREREQUISITE",
+        "weight": 0.9,
+        "description": "两角和差公式是二倍角公式的基础"
+      },
+      {
+        "source": "K31",
+        "target": "K30",
+        "relation": "DERIVED_FROM",
+        "weight": 0.8,
+        "description": "二倍角公式由两角和公式推导"
+      },
+      {
+        "source": "K32",
+        "target": "K33",
+        "relation": "PREREQUISITE",
+        "weight": 0.9,
+        "description": "向量概念是线性运算的基础"
+      },
+      {
+        "source": "K33",
+        "target": "K34",
+        "relation": "PREREQUISITE",
+        "weight": 0.8,
+        "description": "线性运算是向量基本定理的基础"
+      },
+      {
+        "source": "K34",
+        "target": "K35",
+        "relation": "PREREQUISITE",
+        "weight": 0.8,
+        "description": "基本定理是坐标表示的理论基础"
+      },
+      {
+        "source": "K35",
+        "target": "K36",
+        "relation": "PREREQUISITE",
+        "weight": 0.9,
+        "description": "坐标表示是数量积坐标运算的基础"
+      },
+      {
+        "source": "K36",
+        "target": "K37",
+        "relation": "APPLIED_IN",
+        "weight": 0.7,
+        "description": "数量积应用于几何与物理问题"
+      },
+      {
+        "source": "K38",
+        "target": "K40",
+        "relation": "PREREQUISITE",
+        "weight": 0.8,
+        "description": "复数概念是四则运算的基础"
+      },
+      {
+        "source": "K41",
+        "target": "K42",
+        "relation": "PREREQUISITE",
+        "weight": 0.7,
+        "description": "几何体结构是三视图的基础"
+      },
+      {
+        "source": "K42",
+        "target": "K43",
+        "relation": "PREREQUISITE",
+        "weight": 0.8,
+        "description": "三视图是计算表面积体积的基础"
+      },
+      {
+        "source": "K44",
+        "target": "K45",
+        "relation": "PREREQUISITE",
+        "weight": 0.8,
+        "description": "点线面位置关系是平行判定的基础"
+      },
+      {
+        "source": "K45",
+        "target": "K46",
+        "relation": "PREREQUISITE",
+        "weight": 0.8,
+        "description": "平行与垂直关系相互关联"
+      },
+      {
+        "source": "K47",
+        "target": "K48",
+        "relation": "PREREQUISITE",
+        "weight": 0.7,
+        "description": "抽样是用样本估计总体的前提"
+      },
+      {
+        "source": "K48",
+        "target": "K49",
+        "relation": "PREREQUISITE",
+        "weight": 0.8,
+        "description": "样本分布与数字特征紧密关联"
+      },
+      {
+        "source": "K50",
+        "target": "K51",
+        "relation": "PREREQUISITE",
+        "weight": 0.8,
+        "description": "概率概念是古典概型的基础"
+      },
+      {
+        "source": "K51",
+        "target": "K52",
+        "relation": "PREREQUISITE",
+        "weight": 0.8,
+        "description": "古典概型与概率性质相关"
+      },
+      {
+        "source": "K52",
+        "target": "K53",
+        "relation": "PREREQUISITE",
+        "weight": 0.8,
+        "description": "事件运算与独立性相关"
+      },
+      {
+        "source": "K33",
+        "target": "K54",
+        "relation": "PREREQUISITE",
+        "weight": 0.6,
+        "description": "平面向量运算推广到空间向量"
+      },
+      {
+        "source": "K54",
+        "target": "K55",
+        "relation": "PREREQUISITE",
+        "weight": 0.9,
+        "description": "向量运算是坐标表示的基础"
+      },
+      {
+        "source": "K55",
+        "target": "K56",
+        "relation": "PREREQUISITE",
+        "weight": 0.8,
+        "description": "坐标表示是方向向量法向量的基础"
+      },
+      {
+        "source": "K56",
+        "target": "K57",
+        "relation": "PREREQUISITE",
+        "weight": 0.9,
+        "description": "方向向量与法向量是判定平行垂直的基础"
+      },
+      {
+        "source": "K57",
+        "target": "K58",
+        "relation": "PREREQUISITE",
+        "weight": 0.8,
+        "description": "平行垂直判定是求距离夹角的基础"
+      },
+      {
+        "source": "K46",
+        "target": "K58",
+        "relation": "RELATED_TO",
+        "weight": 0.7,
+        "description": "立体几何中的垂直关系与向量法求角相关"
+      },
+      {
+        "source": "K59",
+        "target": "K60",
+        "relation": "PREREQUISITE",
+        "weight": 0.9,
+        "description": "斜率是直线方程的基础"
+      },
+      {
+        "source": "K60",
+        "target": "K61",
+        "relation": "PREREQUISITE",
+        "weight": 0.8,
+        "description": "直线方程是研究位置关系的基础"
+      },
+      {
+        "source": "K61",
+        "target": "K62",
+        "relation": "PREREQUISITE",
+        "weight": 0.8,
+        "description": "位置关系与距离计算相关"
+      },
+      {
+        "source": "K63",
+        "target": "K64",
+        "relation": "PREREQUISITE",
+        "weight": 0.9,
+        "description": "圆的方程是研究直线与圆的基础"
+      },
+      {
+        "source": "K64",
+        "target": "K65",
+        "relation": "PREREQUISITE",
+        "weight": 0.7,
+        "description": "直线与圆的关系推广到圆与圆"
+      },
+      {
+        "source": "K63",
+        "target": "K66",
+        "relation": "PREREQUISITE",
+        "weight": 0.5,
+        "description": "圆的方程为椭圆方程奠定坐标法基础"
+      },
+      {
+        "source": "K66",
+        "target": "K67",
+        "relation": "PREREQUISITE",
+        "weight": 0.9,
+        "description": "椭圆方程是研究椭圆性质的基础"
+      },
+      {
+        "source": "K67",
+        "target": "K68",
+        "relation": "PREREQUISITE",
+        "weight": 0.6,
+        "description": "椭圆性质与双曲线对比"
+      },
+      {
+        "source": "K68",
+        "target": "K69",
+        "relation": "PREREQUISITE",
+        "weight": 0.9,
+        "description": "双曲线方程是研究性质的基础"
+      },
+      {
+        "source": "K66",
+        "target": "K70",
+        "relation": "RELATED_TO",
+        "weight": 0.5,
+        "description": "椭圆与抛物线同属圆锥曲线"
+      },
+      {
+        "source": "K70",
+        "target": "K71",
+        "relation": "PREREQUISITE",
+        "weight": 0.9,
+        "description": "抛物线方程是研究性质的基础"
+      },
+      {
+        "source": "K67",
+        "target": "K72",
+        "relation": "PREREQUISITE",
+        "weight": 0.8,
+        "description": "椭圆性质是直线与圆锥曲线的基础"
+      },
+      {
+        "source": "K71",
+        "target": "K72",
+        "relation": "PREREQUISITE",
+        "weight": 0.7,
+        "description": "抛物线性质与直线抛物线综合相关"
+      },
+      {
+        "source": "K73",
+        "target": "K74",
+        "relation": "PREREQUISITE",
+        "weight": 0.8,
+        "description": "数列概念是等差数列的基础"
+      },
+      {
+        "source": "K74",
+        "target": "K75",
+        "relation": "PREREQUISITE",
+        "weight": 0.6,
+        "description": "等差与等比数列方法类比"
+      },
+      {
+        "source": "K75",
+        "target": "K76",
+        "relation": "PREREQUISITE",
+        "weight": 0.8,
+        "description": "等比数列前n项和涉及错位相减"
+      },
+      {
+        "source": "K77",
+        "target": "K78",
+        "relation": "PREREQUISITE",
+        "weight": 0.9,
+        "description": "导数概念是几何意义的基础"
+      },
+      {
+        "source": "K78",
+        "target": "K79",
+        "relation": "PREREQUISITE",
+        "weight": 0.7,
+        "description": "几何意义与导数公式相关"
+      },
+      {
+        "source": "K79",
+        "target": "K80",
+        "relation": "PREREQUISITE",
+        "weight": 0.9,
+        "description": "基本导数公式是复合求导的基础"
+      },
+      {
+        "source": "K80",
+        "target": "K81",
+        "relation": "PREREQUISITE",
+        "weight": 0.9,
+        "description": "求导法则是用导数研究单调性的基础"
+      },
+      {
+        "source": "K81",
+        "target": "K82",
+        "relation": "PREREQUISITE",
+        "weight": 0.9,
+        "description": "单调性是研究极值的基础"
+      },
+      {
+        "source": "K82",
+        "target": "K83",
+        "relation": "PREREQUISITE",
+        "weight": 0.9,
+        "description": "极值是求最值的基础"
+      },
+      {
+        "source": "K84",
+        "target": "K85",
+        "relation": "PREREQUISITE",
+        "weight": 0.9,
+        "description": "计数原理是排列的基础"
+      },
+      {
+        "source": "K85",
+        "target": "K86",
+        "relation": "PREREQUISITE",
+        "weight": 0.7,
+        "description": "排列与组合紧密关联"
+      },
+      {
+        "source": "K86",
+        "target": "K87",
+        "relation": "PREREQUISITE",
+        "weight": 0.8,
+        "description": "组合是二项式定理的基础"
+      },
+      {
+        "source": "K87",
+        "target": "K86",
+        "relation": "DERIVED_FROM",
+        "weight": 0.7,
+        "description": "二项式定理由组合数推导"
+      },
+      {
+        "source": "K84",
+        "target": "K88",
+        "relation": "PREREQUISITE",
+        "weight": 0.6,
+        "description": "计数原理是分布列的基础"
+      },
+      {
+        "source": "K88",
+        "target": "K89",
+        "relation": "PREREQUISITE",
+        "weight": 0.9,
+        "description": "分布列是均值方差的基础"
+      },
+      {
+        "source": "K53",
+        "target": "K90",
+        "relation": "PREREQUISITE",
+        "weight": 0.6,
+        "description": "独立性与条件概率相关"
+      },
+      {
+        "source": "K90",
+        "target": "K91",
+        "relation": "PREREQUISITE",
+        "weight": 0.8,
+        "description": "条件概率是独立重复试验的基础"
+      },
+      {
+        "source": "K91",
+        "target": "K92",
+        "relation": "PREREQUISITE",
+        "weight": 0.5,
+        "description": "二项分布与正态分布概念相关"
+      },
+      {
+        "source": "K49",
+        "target": "K93",
+        "relation": "PREREQUISITE",
+        "weight": 0.6,
+        "description": "样本数字特征与回归分析相关"
+      },
+      {
+        "source": "K89",
+        "target": "K93",
+        "relation": "APPLIED_IN",
+        "weight": 0.5,
+        "description": "均值方差思想用于回归分析"
+      },
+      {
+        "source": "K53",
+        "target": "K91",
+        "relation": "RELATED_TO",
+        "weight": 0.6,
+        "description": "事件独立性与二项分布相关"
+      },
+      {
+        "source": "K92",
+        "target": "K93",
+        "relation": "RELATED_TO",
+        "weight": 0.4,
+        "description": "正态分布与回归都是统计推断"
+      },
+      {
+        "source": "K13",
+        "target": "K81",
+        "relation": "RELATED_TO",
+        "weight": 0.7,
+        "description": "函数单调性可用导数研究,定义法与导数法互通"
+      },
+      {
+        "source": "K81",
+        "target": "K13",
+        "relation": "DERIVED_FROM",
+        "weight": 0.6,
+        "description": "导数法单调性由单调性定义发展而来"
+      },
+      {
+        "source": "K14",
+        "target": "K83",
+        "relation": "RELATED_TO",
+        "weight": 0.7,
+        "description": "最值的初等方法与导数方法互通"
+      },
+      {
+        "source": "K36",
+        "target": "K55",
+        "relation": "RELATED_TO",
+        "weight": 0.5,
+        "description": "平面向量数量积推广到空间"
+      },
+      {
+        "source": "K7",
+        "target": "K83",
+        "relation": "APPLIED_IN",
+        "weight": 0.5,
+        "description": "基本不等式与导数都可求最值"
+      },
+      {
+        "source": "K29",
+        "target": "K31",
+        "relation": "APPLIED_IN",
+        "weight": 0.6,
+        "description": "三角函数图象变换与恒等变换综合应用"
+      },
+      {
+        "source": "K72",
+        "target": "K82",
+        "relation": "RELATED_TO",
+        "weight": 0.4,
+        "description": "解析几何与导数综合常作为压轴题"
+      }
+    ],
+    "categories": [
+      "必修第一册(代数基础)",
+      "必修第二册(几何与统计)",
+      "选择性必修第一册(解析几何)",
+      "选择性必修第二册(数列与导数)",
+      "选择性必修第三册(计数与统计)"
+    ],
+    "stats": {
+      "total_nodes": 118,
+      "total_edges": 198,
+      "modules": 5,
+      "chapters": 19,
+      "knowledge_points": 94
+    }
+  },
+  "物理": {
+    "color": "#2E5984",
+    "nodes": [
+      {
+        "id": "M1",
+        "name": "必修第一册(力学基础)",
+        "type": "Module",
+        "module": "必修第一册(力学基础)",
+        "chapter": "",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "运动的描述、匀变速直线运动、相互作用(力)、牛顿运动定律,经典力学基石。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "M2",
+        "name": "必修第二册(力学进阶)",
+        "type": "Module",
+        "module": "必修第二册(力学进阶)",
+        "chapter": "",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "抛体运动、圆周运动、万有引力与宇宙航行、机械能守恒定律。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "M3",
+        "name": "必修第三册(电学)",
+        "type": "Module",
+        "module": "必修第三册(电学)",
+        "chapter": "",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "静电场、电路与电能、电磁感应与电磁波初步。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "M4",
+        "name": "选择性必修第一册(动量振动光)",
+        "type": "Module",
+        "module": "选择性必修第一册(动量振动光)",
+        "chapter": "",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "动量守恒定律、机械振动与机械波、光。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "M5",
+        "name": "选择性必修第二册(电磁场)",
+        "type": "Module",
+        "module": "选择性必修第二册(电磁场)",
+        "chapter": "",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "电磁场与电磁波、传感器。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "M6",
+        "name": "选择性必修第三册(热学原子)",
+        "type": "Module",
+        "module": "选择性必修第三册(热学原子)",
+        "chapter": "",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "固体液体气体、热力学定律、原子结构、原子核。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "C1",
+        "name": "运动的描述",
+        "type": "Chapter",
+        "module": "必修第一册(力学基础)",
+        "chapter": "运动的描述",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "质点、参考系、坐标系、时间位移、速度加速度。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "C2",
+        "name": "匀变速直线运动的研究",
+        "type": "Chapter",
+        "module": "必修第一册(力学基础)",
+        "chapter": "匀变速直线运动的研究",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "匀变速直线运动规律、自由落体运动、运动图象。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "C3",
+        "name": "相互作用——力",
+        "type": "Chapter",
+        "module": "必修第一册(力学基础)",
+        "chapter": "相互作用——力",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "重力、弹力、摩擦力、力的合成与分解、共点力平衡。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "C4",
+        "name": "牛顿运动定律",
+        "type": "Chapter",
+        "module": "必修第一册(力学基础)",
+        "chapter": "牛顿运动定律",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "牛顿三大定律、力学单位制、牛顿定律的应用。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "C5",
+        "name": "运动和力",
+        "type": "Chapter",
+        "module": "必修第二册(力学进阶)",
+        "chapter": "运动和力",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "牛顿运动定律的综合应用与运动和力的关系。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "C6",
+        "name": "抛体运动",
+        "type": "Chapter",
+        "module": "必修第二册(力学进阶)",
+        "chapter": "抛体运动",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "曲线运动、运动的合成与分解、平抛运动。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "C7",
+        "name": "圆周运动",
+        "type": "Chapter",
+        "module": "必修第二册(力学进阶)",
+        "chapter": "圆周运动",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "圆周运动描述、向心加速度、向心力及实例分析。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "C8",
+        "name": "万有引力与宇宙航行",
+        "type": "Chapter",
+        "module": "必修第二册(力学进阶)",
+        "chapter": "万有引力与宇宙航行",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "行星运动、万有引力定律、宇宙速度、经典力学局限性。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "C9",
+        "name": "机械能守恒定律",
+        "type": "Chapter",
+        "module": "必修第二册(力学进阶)",
+        "chapter": "机械能守恒定律",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "功、功率、动能定理、势能、机械能守恒定律。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "C10",
+        "name": "静电场",
+        "type": "Chapter",
+        "module": "必修第三册(电学)",
+        "chapter": "静电场",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "电荷、库仑定律、电场强度、电势、电容器。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "C11",
+        "name": "电能(电路)",
+        "type": "Chapter",
+        "module": "必修第三册(电学)",
+        "chapter": "电能(电路)",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "电流、电阻、欧姆定律、串并联电路、闭合电路欧姆定律。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "C12",
+        "name": "电磁感应与电磁波初步",
+        "type": "Chapter",
+        "module": "必修第三册(电学)",
+        "chapter": "电磁感应与电磁波初步",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "电流磁效应、磁场、电磁感应、法拉第定律、电磁波。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "C13",
+        "name": "动量守恒定律",
+        "type": "Chapter",
+        "module": "选择性必修第一册(动量振动光)",
+        "chapter": "动量守恒定律",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "动量、冲量与动量定理、动量守恒定律、反冲运动。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "C14",
+        "name": "机械振动与机械波",
+        "type": "Chapter",
+        "module": "选择性必修第一册(动量振动光)",
+        "chapter": "机械振动与机械波",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "简谐运动、单摆、机械波、波长频率波速、波的干涉衍射。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "C15",
+        "name": "光",
+        "type": "Chapter",
+        "module": "选择性必修第一册(动量振动光)",
+        "chapter": "光",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "光的折射、干涉、衍射、偏振与色散。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "C16",
+        "name": "电磁场与电磁波",
+        "type": "Chapter",
+        "module": "选择性必修第二册(电磁场)",
+        "chapter": "电磁场与电磁波",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "麦克斯韦电磁场理论、电磁波谱、电磁波发射与接收。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "C17",
+        "name": "传感器",
+        "type": "Chapter",
+        "module": "选择性必修第二册(电磁场)",
+        "chapter": "传感器",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "传感器工作原理及常见应用。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "C18",
+        "name": "固体、液体、气体",
+        "type": "Chapter",
+        "module": "选择性必修第三册(热学原子)",
+        "chapter": "固体、液体、气体",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "晶体、液体表面张力、气体实验定律、理想气体状态方程。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "C19",
+        "name": "热力学定律",
+        "type": "Chapter",
+        "module": "选择性必修第三册(热学原子)",
+        "chapter": "热力学定律",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "内能、热力学第一定律、热力学第二定律、熵。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "C20",
+        "name": "原子结构",
+        "type": "Chapter",
+        "module": "选择性必修第三册(热学原子)",
+        "chapter": "原子结构",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "电子发现、原子核式结构、玻尔模型、原子光谱。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "C21",
+        "name": "原子核",
+        "type": "Chapter",
+        "module": "选择性必修第三册(热学原子)",
+        "chapter": "原子核",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "天然放射现象、原子核组成、衰变、核力结合能、核反应核能。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "K1",
+        "name": "质点与参考系",
+        "type": "KnowledgePoint",
+        "module": "必修第一册(力学基础)",
+        "chapter": "运动的描述",
+        "difficulty": 2,
+        "importance": 4,
+        "description": "理解质点模型的条件与参考系的概念,能判断物体能否看作质点,会选择参考系描述运动。",
+        "keywords": "质点,参考系,模型,理想化",
+        "exam_type": "选择题,概念辨析"
+      },
+      {
+        "id": "K2",
+        "name": "时间与时刻、坐标与位移",
+        "type": "KnowledgePoint",
+        "module": "必修第一册(力学基础)",
+        "chapter": "运动的描述",
+        "difficulty": 2,
+        "importance": 4,
+        "description": "区分时间间隔与时刻,理解坐标系、路程与位移的区别与联系。",
+        "keywords": "时刻,时间间隔,位移,路程,坐标系",
+        "exam_type": "选择题,概念辨析"
+      },
+      {
+        "id": "K3",
+        "name": "速度",
+        "type": "KnowledgePoint",
+        "module": "必修第一册(力学基础)",
+        "chapter": "运动的描述",
+        "difficulty": 2,
+        "importance": 4,
+        "description": "理解平均速度与瞬时速度的概念及区别,掌握速度的矢量性,理解速率。",
+        "keywords": "平均速度,瞬时速度,速率,矢量",
+        "exam_type": "选择题,计算题"
+      },
+      {
+        "id": "K4",
+        "name": "加速度",
+        "type": "KnowledgePoint",
+        "module": "必修第一册(力学基础)",
+        "chapter": "运动的描述",
+        "difficulty": 3,
+        "importance": 5,
+        "description": "理解加速度的概念、物理意义与矢量性,掌握加速度与速度、速度变化的关系。",
+        "keywords": "加速度,速度变化率,矢量,方向",
+        "exam_type": "选择题,概念辨析,计算"
+      },
+      {
+        "id": "K5",
+        "name": "匀变速直线运动的速度与时间关系",
+        "type": "KnowledgePoint",
+        "module": "必修第一册(力学基础)",
+        "chapter": "匀变速直线运动的研究",
+        "difficulty": 3,
+        "importance": 5,
+        "description": "掌握匀变速直线运动的速度公式v=v0+at,理解v-t图象及其斜率意义。",
+        "keywords": "速度公式,v-t图象,匀变速,斜率",
+        "exam_type": "计算题,图象分析"
+      },
+      {
+        "id": "K6",
+        "name": "匀变速直线运动的位移与时间关系",
+        "type": "KnowledgePoint",
+        "module": "必修第一册(力学基础)",
+        "chapter": "匀变速直线运动的研究",
+        "difficulty": 4,
+        "importance": 5,
+        "description": "掌握位移公式x=v0t+½at²及速度位移公式v²-v0²=2ax,理解x-t图象与v-t图象中面积的意义。",
+        "keywords": "位移公式,速度位移关系,x-t图象,面积意义",
+        "exam_type": "计算题,图象分析"
+      },
+      {
+        "id": "K7",
+        "name": "自由落体运动",
+        "type": "KnowledgePoint",
+        "module": "必修第一册(力学基础)",
+        "chapter": "匀变速直线运动的研究",
+        "difficulty": 3,
+        "importance": 4,
+        "description": "理解自由落体运动是初速度为零的匀加速直线运动,掌握重力加速度g及自由落体公式。",
+        "keywords": "自由落体,重力加速度,初速度为零,匀加速",
+        "exam_type": "计算题,自由落体"
+      },
+      {
+        "id": "K8",
+        "name": "运动图象的分析",
+        "type": "KnowledgePoint",
+        "module": "必修第一册(力学基础)",
+        "chapter": "匀变速直线运动的研究",
+        "difficulty": 4,
+        "importance": 5,
+        "description": "掌握x-t图与v-t图的物理意义,能从图象提取运动信息(斜率、截距、面积、交点)。",
+        "keywords": "x-t图,v-t图,斜率,面积,截距,交点",
+        "exam_type": "选择题,图象综合分析"
+      },
+      {
+        "id": "K9",
+        "name": "重力",
+        "type": "KnowledgePoint",
+        "module": "必修第一册(力学基础)",
+        "chapter": "相互作用——力",
+        "difficulty": 2,
+        "importance": 3,
+        "description": "理解重力的产生、大小与方向,掌握重心概念及重心的确定方法。",
+        "keywords": "重力,重力加速度,重心,自由落体",
+        "exam_type": "选择题,概念"
+      },
+      {
+        "id": "K10",
+        "name": "弹力",
+        "type": "KnowledgePoint",
+        "module": "必修第一册(力学基础)",
+        "chapter": "相互作用——力",
+        "difficulty": 3,
+        "importance": 4,
+        "description": "理解弹力的产生条件与方向,掌握胡克定律F=kx,能计算弹簧弹力。",
+        "keywords": "弹力,形变,胡克定律,劲度系数,方向",
+        "exam_type": "选择题,计算题,胡克定律"
+      },
+      {
+        "id": "K11",
+        "name": "摩擦力(滑动与静摩擦力)",
+        "type": "KnowledgePoint",
+        "module": "必修第一册(力学基础)",
+        "chapter": "相互作用——力",
+        "difficulty": 4,
+        "importance": 5,
+        "description": "理解滑动摩擦力与静摩擦力的产生条件、方向与大小,掌握f=μN及最大静摩擦力概念。",
+        "keywords": "滑动摩擦力,静摩擦力,最大静摩擦力,μN",
+        "exam_type": "选择题,计算题,摩擦力判断"
+      },
+      {
+        "id": "K12",
+        "name": "力的合成与分解",
+        "type": "KnowledgePoint",
+        "module": "必修第一册(力学基础)",
+        "chapter": "相互作用——力",
+        "difficulty": 4,
+        "importance": 5,
+        "description": "掌握力的平行四边形定则与正交分解法,能进行力的合成与分解计算。",
+        "keywords": "平行四边形定则,正交分解,合力分力,矢量运算",
+        "exam_type": "计算题,力的合成分解"
+      },
+      {
+        "id": "K13",
+        "name": "共点力的平衡",
+        "type": "KnowledgePoint",
+        "module": "必修第一册(力学基础)",
+        "chapter": "相互作用——力",
+        "difficulty": 4,
+        "importance": 5,
+        "description": "掌握共点力平衡条件(合力为零),能运用正交分解法解决平衡问题。",
+        "keywords": "共点力,平衡条件,正交分解,平衡问题",
+        "exam_type": "计算题,平衡问题综合"
+      },
+      {
+        "id": "K14",
+        "name": "牛顿第一定律与惯性",
+        "type": "KnowledgePoint",
+        "module": "必修第一册(力学基础)",
+        "chapter": "牛顿运动定律",
+        "difficulty": 3,
+        "importance": 4,
+        "description": "理解牛顿第一定律的内容与意义,理解惯性概念及质量是惯性大小的量度。",
+        "keywords": "牛顿第一定律,惯性,质量,惯性大小",
+        "exam_type": "选择题,概念辨析"
+      },
+      {
+        "id": "K15",
+        "name": "牛顿第二定律",
+        "type": "KnowledgePoint",
+        "module": "必修第一册(力学基础)",
+        "chapter": "牛顿运动定律",
+        "difficulty": 5,
+        "importance": 5,
+        "description": "掌握牛顿第二定律F=ma的内容与矢量性,理解加速度与合外力的瞬时对应关系。",
+        "keywords": "牛顿第二定律,F=ma,矢量性,瞬时性,合外力",
+        "exam_type": "计算题,牛顿定律综合"
+      },
+      {
+        "id": "K16",
+        "name": "牛顿第三定律",
+        "type": "KnowledgePoint",
+        "module": "必修第一册(力学基础)",
+        "chapter": "牛顿运动定律",
+        "difficulty": 3,
+        "importance": 4,
+        "description": "理解牛顿第三定律(作用力与反作用力),区分作用力反作用力与平衡力。",
+        "keywords": "牛顿第三定律,作用力反作用力,平衡力",
+        "exam_type": "选择题,概念辨析"
+      },
+      {
+        "id": "K17",
+        "name": "力学单位制",
+        "type": "KnowledgePoint",
+        "module": "必修第一册(力学基础)",
+        "chapter": "牛顿运动定律",
+        "difficulty": 2,
+        "importance": 3,
+        "description": "理解基本单位与导出单位,掌握国际单位制中的力学基本单位。",
+        "keywords": "单位制,基本单位,导出单位,国际单位制",
+        "exam_type": "选择题,单位换算"
+      },
+      {
+        "id": "K18",
+        "name": "牛顿运动定律的应用(超重与失重)",
+        "type": "KnowledgePoint",
+        "module": "必修第一册(力学基础)",
+        "chapter": "牛顿运动定律",
+        "difficulty": 4,
+        "importance": 5,
+        "description": "掌握用牛顿定律分析超重与失重现象,理解视重与实重的关系及完全失重条件。",
+        "keywords": "超重,失重,完全失重,视重,加速度",
+        "exam_type": "选择题,计算题,超重失重"
+      },
+      {
+        "id": "K19",
+        "name": "牛顿定律的综合应用",
+        "type": "KnowledgePoint",
+        "module": "必修第二册(力学进阶)",
+        "chapter": "运动和力",
+        "difficulty": 5,
+        "importance": 5,
+        "description": "综合运用牛顿运动定律与运动学公式解决动力学问题(连接体、传送带、斜面等)。",
+        "keywords": "动力学综合,连接体,传送带,斜面,牛顿定律",
+        "exam_type": "综合题,动力学综合"
+      },
+      {
+        "id": "K20",
+        "name": "曲线运动",
+        "type": "KnowledgePoint",
+        "module": "必修第二册(力学进阶)",
+        "chapter": "抛体运动",
+        "difficulty": 3,
+        "importance": 4,
+        "description": "理解曲线运动的速度方向(切线方向)与曲线运动的条件(合外力方向指向曲率中心)。",
+        "keywords": "曲线运动,速度方向,切线,合外力方向",
+        "exam_type": "选择题,概念"
+      },
+      {
+        "id": "K21",
+        "name": "运动的合成与分解",
+        "type": "KnowledgePoint",
+        "module": "必修第二册(力学进阶)",
+        "chapter": "抛体运动",
+        "difficulty": 4,
+        "importance": 5,
+        "description": "掌握运动的合成与分解(等效替代),理解合运动与分运动的关系(等时性、独立性)。",
+        "keywords": "运动合成分解,合运动分运动,等时性,独立性",
+        "exam_type": "计算题,运动合成分解"
+      },
+      {
+        "id": "K22",
+        "name": "平抛运动",
+        "type": "KnowledgePoint",
+        "module": "必修第二册(力学进阶)",
+        "chapter": "抛体运动",
+        "difficulty": 4,
+        "importance": 5,
+        "description": "掌握平抛运动的规律(水平匀速、竖直自由落体),能求解平抛的时间、速度与位移。",
+        "keywords": "平抛运动,水平匀速,竖直自由落体,落地速度",
+        "exam_type": "计算题,平抛运动"
+      },
+      {
+        "id": "K23",
+        "name": "圆周运动的描述",
+        "type": "KnowledgePoint",
+        "module": "必修第二册(力学进阶)",
+        "chapter": "圆周运动",
+        "difficulty": 3,
+        "importance": 4,
+        "description": "掌握线速度、角速度、周期、频率、转速等描述量及其关系v=ωr。",
+        "keywords": "线速度,角速度,周期,频率,v=ωr",
+        "exam_type": "选择题,计算题"
+      },
+      {
+        "id": "K24",
+        "name": "向心加速度",
+        "type": "KnowledgePoint",
+        "module": "必修第二册(力学进阶)",
+        "chapter": "圆周运动",
+        "difficulty": 4,
+        "importance": 4,
+        "description": "理解向心加速度的方向与物理意义,掌握向心加速度公式a=v²/r=ω²r。",
+        "keywords": "向心加速度,方向,公式,a=v²/r,ω²r",
+        "exam_type": "计算题,向心加速度"
+      },
+      {
+        "id": "K25",
+        "name": "向心力",
+        "type": "KnowledgePoint",
+        "module": "必修第二册(力学进阶)",
+        "chapter": "圆周运动",
+        "difficulty": 5,
+        "importance": 5,
+        "description": "理解向心力是效果力,掌握向心力公式F=mv²/r=mω²r,能分析圆周运动的向心力来源。",
+        "keywords": "向心力,效果力,F=mv²/r,向心力来源",
+        "exam_type": "计算题,圆周运动综合"
+      },
+      {
+        "id": "K26",
+        "name": "圆周运动的实例分析",
+        "type": "KnowledgePoint",
+        "module": "必修第二册(力学进阶)",
+        "chapter": "圆周运动",
+        "difficulty": 5,
+        "importance": 5,
+        "description": "能分析汽车转弯、火车转弯、圆锥摆、过最高点(绳、杆模型)等实际圆周运动问题。",
+        "keywords": "圆周运动实例,圆锥摆,过最高点,绳模型杆模型",
+        "exam_type": "综合题,圆周运动临界"
+      },
+      {
+        "id": "K27",
+        "name": "行星的运动(开普勒定律)",
+        "type": "KnowledgePoint",
+        "module": "必修第二册(力学进阶)",
+        "chapter": "万有引力与宇宙航行",
+        "difficulty": 3,
+        "importance": 3,
+        "description": "理解开普勒三大行星运动定律,了解行星运动轨道特点。",
+        "keywords": "开普勒定律,椭圆轨道,面积定律,周期定律",
+        "exam_type": "选择题,开普勒定律"
+      },
+      {
+        "id": "K28",
+        "name": "万有引力定律",
+        "type": "KnowledgePoint",
+        "module": "必修第二册(力学进阶)",
+        "chapter": "万有引力与宇宙航行",
+        "difficulty": 4,
+        "importance": 5,
+        "description": "掌握万有引力定律F=Gm1m2/r²的内容与适用条件,理解引力常量G的意义。",
+        "keywords": "万有引力定律,引力常量G,质量,距离",
+        "exam_type": "计算题,万有引力"
+      },
+      {
+        "id": "K29",
+        "name": "万有引力定律的应用(宇宙速度)",
+        "type": "KnowledgePoint",
+        "module": "必修第二册(力学进阶)",
+        "chapter": "万有引力与宇宙航行",
+        "difficulty": 5,
+        "importance": 5,
+        "description": "掌握用万有引力等于向心力分析卫星运动,理解第一、第二、第三宇宙速度及变轨问题。",
+        "keywords": "宇宙速度,卫星,变轨,万有引力等于向心力,轨道",
+        "exam_type": "综合题,卫星天体运动"
+      },
+      {
+        "id": "K30",
+        "name": "经典力学的局限性",
+        "type": "KnowledgePoint",
+        "module": "必修第二册(力学进阶)",
+        "chapter": "万有引力与宇宙航行",
+        "difficulty": 2,
+        "importance": 2,
+        "description": "了解经典力学在高速(接近光速)、微观领域的局限性,理解相对论与量子力学的引入背景。",
+        "keywords": "经典力学,局限性,相对论,量子力学,高速微观",
+        "exam_type": "选择题,概念"
+      },
+      {
+        "id": "K31",
+        "name": "功",
+        "type": "KnowledgePoint",
+        "module": "必修第二册(力学进阶)",
+        "chapter": "机械能守恒定律",
+        "difficulty": 4,
+        "importance": 5,
+        "description": "理解功的概念与公式W=Flcosθ,掌握正负功的判断及恒力做功与变力做功。",
+        "keywords": "功,公式,正负功,恒力做功,功的矢量性",
+        "exam_type": "计算题,功的计算"
+      },
+      {
+        "id": "K32",
+        "name": "功率",
+        "type": "KnowledgePoint",
+        "module": "必修第二册(力学进阶)",
+        "chapter": "机械能守恒定律",
+        "difficulty": 3,
+        "importance": 4,
+        "description": "理解功率的概念与公式P=W/t及P=Fv,理解额定功率与实际功率、平均功率与瞬时功率。",
+        "keywords": "功率,平均功率,瞬时功率,P=Fv,额定功率",
+        "exam_type": "计算题,功率"
+      },
+      {
+        "id": "K33",
+        "name": "动能与动能定理",
+        "type": "KnowledgePoint",
+        "module": "必修第二册(力学进阶)",
+        "chapter": "机械能守恒定律",
+        "difficulty": 5,
+        "importance": 5,
+        "description": "理解动能概念Ek=½mv²,掌握动能定理W合=ΔEk及其应用,能解决变力做功问题。",
+        "keywords": "动能,动能定理,合外力做功,动能变化",
+        "exam_type": "综合题,动能定理应用"
+      },
+      {
+        "id": "K34",
+        "name": "重力势能",
+        "type": "KnowledgePoint",
+        "module": "必修第二册(力学进阶)",
+        "chapter": "机械能守恒定律",
+        "difficulty": 3,
+        "importance": 4,
+        "description": "理解重力势能Ep=mgh的概念及相对性,掌握重力做功与重力势能变化的关系。",
+        "keywords": "重力势能,相对性,参考面,重力做功",
+        "exam_type": "计算题,重力势能"
+      },
+      {
+        "id": "K35",
+        "name": "机械能守恒定律",
+        "type": "KnowledgePoint",
+        "module": "必修第二册(力学进阶)",
+        "chapter": "机械能守恒定律",
+        "difficulty": 5,
+        "importance": 5,
+        "description": "掌握机械能守恒的条件(只有重力或弹力做功)及守恒定律的表达与应用。",
+        "keywords": "机械能守恒,守恒条件,动能势能转化",
+        "exam_type": "综合题,机械能守恒"
+      },
+      {
+        "id": "K36",
+        "name": "功能关系与功能原理",
+        "type": "KnowledgePoint",
+        "module": "必修第二册(力学进阶)",
+        "chapter": "机械能守恒定律",
+        "difficulty": 5,
+        "importance": 5,
+        "description": "理解各种力做功与对应能量变化的关系(重力做功与重力势能、合外力做功与动能等)。",
+        "keywords": "功能关系,功能原理,能量转化,做功",
+        "exam_type": "综合题,功能关系"
+      },
+      {
+        "id": "K37",
+        "name": "电荷与电荷守恒",
+        "type": "KnowledgePoint",
+        "module": "必修第三册(电学)",
+        "chapter": "静电场",
+        "difficulty": 2,
+        "importance": 3,
+        "description": "理解电荷的种类与电荷守恒定律,掌握元电荷概念及电荷的分配规律。",
+        "keywords": "电荷,正负电荷,电荷守恒,元电荷",
+        "exam_type": "选择题,概念"
+      },
+      {
+        "id": "K38",
+        "name": "库仑定律",
+        "type": "KnowledgePoint",
+        "module": "必修第三册(电学)",
+        "chapter": "静电场",
+        "difficulty": 4,
+        "importance": 5,
+        "description": "掌握库仑定律F=kq1q2/r²的内容与适用条件(真空中、点电荷),理解库仑力。",
+        "keywords": "库仑定律,点电荷,k,真空,距离平方",
+        "exam_type": "计算题,库仑力"
+      },
+      {
+        "id": "K39",
+        "name": "电场与电场强度",
+        "type": "KnowledgePoint",
+        "module": "必修第三册(电学)",
+        "chapter": "静电场",
+        "difficulty": 5,
+        "importance": 5,
+        "description": "理解电场概念与电场强度的定义E=F/q,掌握点电荷电场及场强叠加原理,会画电场线。",
+        "keywords": "电场强度,定义,E=F/q,点电荷电场,叠加原理,电场线",
+        "exam_type": "计算题,场强计算"
+      },
+      {
+        "id": "K40",
+        "name": "电势能与电势",
+        "type": "KnowledgePoint",
+        "module": "必修第三册(电学)",
+        "chapter": "静电场",
+        "difficulty": 5,
+        "importance": 5,
+        "description": "理解电势能、电势的概念及电势φ=Ep/q,掌握等势面及电场力做功与电势能变化的关系。",
+        "keywords": "电势能,电势,等势面,电场力做功,电势能变化",
+        "exam_type": "计算题,电势电势能"
+      },
+      {
+        "id": "K41",
+        "name": "电势差与匀强电场",
+        "type": "KnowledgePoint",
+        "module": "必修第三册(电学)",
+        "chapter": "静电场",
+        "difficulty": 4,
+        "importance": 4,
+        "description": "掌握电势差UAB=φA-φB及U=Ed(匀强电场),理解电势差与电场力做功的关系W=qU。",
+        "keywords": "电势差,匀强电场,U=Ed,W=qU,电场力做功",
+        "exam_type": "计算题,电势差"
+      },
+      {
+        "id": "K42",
+        "name": "电容器与电容",
+        "type": "KnowledgePoint",
+        "module": "必修第三册(电学)",
+        "chapter": "静电场",
+        "difficulty": 4,
+        "importance": 4,
+        "description": "理解电容器的充放电,掌握电容定义C=Q/U及平行板电容器电容的决定式。",
+        "keywords": "电容器,电容,C=Q/U,平行板,充放电",
+        "exam_type": "选择题,计算题"
+      },
+      {
+        "id": "K43",
+        "name": "带电粒子在电场中的运动",
+        "type": "KnowledgePoint",
+        "module": "必修第三册(电学)",
+        "chapter": "静电场",
+        "difficulty": 5,
+        "importance": 5,
+        "description": "掌握带电粒子在匀强电场中的加速与偏转规律,能结合动能定理与类平抛运动分析。",
+        "keywords": "带电粒子,加速,偏转,类平抛,动能定理",
+        "exam_type": "综合题,带电粒子运动"
+      },
+      {
+        "id": "K44",
+        "name": "电流与电源",
+        "type": "KnowledgePoint",
+        "module": "必修第三册(电学)",
+        "chapter": "电能(电路)",
+        "difficulty": 2,
+        "importance": 3,
+        "description": "理解电流的定义I=q/t及方向规定,理解电源在电路中的作用及电动势概念。",
+        "keywords": "电流,定义,方向,电源,电动势",
+        "exam_type": "选择题,概念"
+      },
+      {
+        "id": "K45",
+        "name": "电阻与电阻定律",
+        "type": "KnowledgePoint",
+        "module": "必修第三册(电学)",
+        "chapter": "电能(电路)",
+        "difficulty": 3,
+        "importance": 4,
+        "description": "理解电阻概念,掌握电阻定律R=ρl/S及电阻率的影响因素(温度)。",
+        "keywords": "电阻,电阻定律,电阻率,温度,长度截面积",
+        "exam_type": "计算题,电阻定律"
+      },
+      {
+        "id": "K46",
+        "name": "部分电路欧姆定律",
+        "type": "KnowledgePoint",
+        "module": "必修第三册(电学)",
+        "chapter": "电能(电路)",
+        "difficulty": 3,
+        "importance": 4,
+        "description": "掌握部分电路欧姆定律I=U/R及I-U图象(伏安特性曲线),理解线性与非线性元件。",
+        "keywords": "欧姆定律,I=U/R,伏安特性曲线,线性非线性",
+        "exam_type": "计算题,欧姆定律"
+      },
+      {
+        "id": "K47",
+        "name": "串并联电路",
+        "type": "KnowledgePoint",
+        "module": "必修第三册(电学)",
+        "chapter": "电能(电路)",
+        "difficulty": 3,
+        "importance": 4,
+        "description": "掌握串联分压、并联分流规律及串并联电路的总电阻、电流电压功率分配。",
+        "keywords": "串联,并联,分压分流,总电阻,功率分配",
+        "exam_type": "计算题,串并联"
+      },
+      {
+        "id": "K48",
+        "name": "闭合电路欧姆定律",
+        "type": "KnowledgePoint",
+        "module": "必修第三册(电学)",
+        "chapter": "电能(电路)",
+        "difficulty": 5,
+        "importance": 5,
+        "description": "掌握闭合电路欧姆定律I=E/(R+r)及路端电压与外电阻的关系,理解电源功率与效率。",
+        "keywords": "闭合电路欧姆定律,路端电压,内阻,电源功率",
+        "exam_type": "综合题,闭合电路"
+      },
+      {
+        "id": "K49",
+        "name": "焦耳定律与电功率",
+        "type": "KnowledgePoint",
+        "module": "必修第三册(电学)",
+        "chapter": "电能(电路)",
+        "difficulty": 3,
+        "importance": 4,
+        "description": "掌握焦耳定律Q=I²Rt及电功率P=UI、P=I²R的适用条件,区分纯电阻与非纯电阻电路。",
+        "keywords": "焦耳定律,电功率,热功率,纯电阻,非纯电阻",
+        "exam_type": "计算题,电功率焦耳热"
+      },
+      {
+        "id": "K50",
+        "name": "电流的磁效应与磁场",
+        "type": "KnowledgePoint",
+        "module": "必修第三册(电学)",
+        "chapter": "电磁感应与电磁波初步",
+        "difficulty": 3,
+        "importance": 3,
+        "description": "理解奥斯特实验与电流的磁效应,掌握磁场方向与磁感线,理解磁感应强度B的概念。",
+        "keywords": "电流磁效应,奥斯特,磁场,磁感线,磁感应强度",
+        "exam_type": "选择题,概念"
+      },
+      {
+        "id": "K51",
+        "name": "安培力",
+        "type": "KnowledgePoint",
+        "module": "必修第三册(电学)",
+        "chapter": "电磁感应与电磁波初步",
+        "difficulty": 4,
+        "importance": 4,
+        "description": "掌握安培力公式F=BIL及左手定则,能判断安培力方向并计算通电导线受力。",
+        "keywords": "安培力,F=BIL,左手定则,方向判断",
+        "exam_type": "计算题,安培力"
+      },
+      {
+        "id": "K52",
+        "name": "电磁感应现象",
+        "type": "KnowledgePoint",
+        "module": "必修第三册(电学)",
+        "chapter": "电磁感应与电磁波初步",
+        "difficulty": 4,
+        "importance": 4,
+        "description": "理解磁通量概念与电磁感应现象,掌握产生感应电流的条件(磁通量变化)。",
+        "keywords": "电磁感应,磁通量,感应电流,磁通量变化",
+        "exam_type": "选择题,电磁感应条件"
+      },
+      {
+        "id": "K53",
+        "name": "法拉第电磁感应定律",
+        "type": "KnowledgePoint",
+        "module": "必修第三册(电学)",
+        "chapter": "电磁感应与电磁波初步",
+        "difficulty": 5,
+        "importance": 5,
+        "description": "掌握法拉第定律E=nΔΦ/Δt及导体切割磁感线E=BLv,理解感应电动势方向(楞次定律)。",
+        "keywords": "法拉第定律,感应电动势,ΔΦ/Δt,BLv,楞次定律",
+        "exam_type": "综合题,电磁感应"
+      },
+      {
+        "id": "K54",
+        "name": "电磁波的产生与特点",
+        "type": "KnowledgePoint",
+        "module": "必修第三册(电学)",
+        "chapter": "电磁感应与电磁波初步",
+        "difficulty": 3,
+        "importance": 3,
+        "description": "理解电磁波的产生(振荡电路)与传播特点(真空中光速),了解电磁波谱及应用。",
+        "keywords": "电磁波,振荡电路,光速,电磁波谱",
+        "exam_type": "选择题,电磁波"
+      },
+      {
+        "id": "K55",
+        "name": "动量",
+        "type": "KnowledgePoint",
+        "module": "选择性必修第一册(动量振动光)",
+        "chapter": "动量守恒定律",
+        "difficulty": 3,
+        "importance": 4,
+        "description": "理解动量的概念p=mv及其矢量性,理解动量与动能的区别与联系。",
+        "keywords": "动量,p=mv,矢量,动能,区别联系",
+        "exam_type": "选择题,概念计算"
+      },
+      {
+        "id": "K56",
+        "name": "冲量与动量定理",
+        "type": "KnowledgePoint",
+        "module": "选择性必修第一册(动量振动光)",
+        "chapter": "动量守恒定律",
+        "difficulty": 4,
+        "importance": 5,
+        "description": "理解冲量I=Ft的概念,掌握动量定理Ft=Δp及其在缓冲、碰撞等问题中的应用。",
+        "keywords": "冲量,动量定理,Ft=Δp,缓冲,变力冲量",
+        "exam_type": "计算题,动量定理应用"
+      },
+      {
+        "id": "K57",
+        "name": "动量守恒定律",
+        "type": "KnowledgePoint",
+        "module": "选择性必修第一册(动量振动光)",
+        "chapter": "动量守恒定律",
+        "difficulty": 5,
+        "importance": 5,
+        "description": "掌握动量守恒的条件(系统不受外力或合外力为零)及守恒定律表达式,能解决碰撞问题。",
+        "keywords": "动量守恒,守恒条件,碰撞,系统内力",
+        "exam_type": "综合题,动量守恒碰撞"
+      },
+      {
+        "id": "K58",
+        "name": "反冲运动与火箭",
+        "type": "KnowledgePoint",
+        "module": "选择性必修第一册(动量振动光)",
+        "chapter": "动量守恒定律",
+        "difficulty": 3,
+        "importance": 3,
+        "description": "理解反冲运动原理,能利用动量守恒分析火箭发射等反冲现象。",
+        "keywords": "反冲运动,火箭,动量守恒,反冲速度",
+        "exam_type": "计算题,反冲运动"
+      },
+      {
+        "id": "K59",
+        "name": "简谐运动",
+        "type": "KnowledgePoint",
+        "module": "选择性必修第一册(动量振动光)",
+        "chapter": "机械振动与机械波",
+        "difficulty": 4,
+        "importance": 4,
+        "description": "理解简谐运动的特征(F=-kx)与回复力概念,掌握简谐运动的振幅、周期、频率及图象。",
+        "keywords": "简谐运动,回复力,F=-kx,振幅,周期,图象",
+        "exam_type": "选择题,计算题"
+      },
+      {
+        "id": "K60",
+        "name": "单摆",
+        "type": "KnowledgePoint",
+        "module": "选择性必修第一册(动量振动光)",
+        "chapter": "机械振动与机械波",
+        "difficulty": 4,
+        "importance": 4,
+        "description": "理解单摆模型与简谐运动的近似条件,掌握单摆周期公式T=2π√(L/g)及重力加速度测定。",
+        "keywords": "单摆,周期公式,T=2π√(L/g),等效力场",
+        "exam_type": "计算题,单摆周期"
+      },
+      {
+        "id": "K61",
+        "name": "机械波的形成与传播",
+        "type": "KnowledgePoint",
+        "module": "选择性必修第一册(动量振动光)",
+        "chapter": "机械振动与机械波",
+        "difficulty": 4,
+        "importance": 4,
+        "description": "理解机械波的形成条件与传播特点(传播振动形式与能量而非物质),区分横波与纵波。",
+        "keywords": "机械波,横波,纵波,传播能量,介质",
+        "exam_type": "选择题,概念"
+      },
+      {
+        "id": "K62",
+        "name": "波长、频率与波速",
+        "type": "KnowledgePoint",
+        "module": "选择性必修第一册(动量振动光)",
+        "chapter": "机械振动与机械波",
+        "difficulty": 4,
+        "importance": 4,
+        "description": "掌握波长、频率、波速的关系v=λf,理解波的周期性(时间周期性与空间周期性)。",
+        "keywords": "波长,频率,波速,v=λf,周期性",
+        "exam_type": "计算题,波速波长"
+      },
+      {
+        "id": "K63",
+        "name": "波的干涉与衍射",
+        "type": "KnowledgePoint",
+        "module": "选择性必修第一册(动量振动光)",
+        "chapter": "机械振动与机械波",
+        "difficulty": 4,
+        "importance": 4,
+        "description": "理解波的叠加原理、干涉现象(相干条件)与衍射现象(明显衍射条件),理解多普勒效应。",
+        "keywords": "干涉,衍射,叠加,相干波源,多普勒效应",
+        "exam_type": "选择题,干涉衍射"
+      },
+      {
+        "id": "K64",
+        "name": "光的折射",
+        "type": "KnowledgePoint",
+        "module": "选择性必修第一册(动量振动光)",
+        "chapter": "光",
+        "difficulty": 4,
+        "importance": 5,
+        "description": "掌握光的折射定律与折射率n=c/v=n1sinθ1=n2sinθ2,理解全反射与临界角。",
+        "keywords": "折射定律,折射率,全反射,临界角,光疏光密",
+        "exam_type": "计算题,折射全反射"
+      },
+      {
+        "id": "K65",
+        "name": "光的干涉",
+        "type": "KnowledgePoint",
+        "module": "选择性必修第一册(动量振动光)",
+        "chapter": "光",
+        "difficulty": 4,
+        "importance": 4,
+        "description": "理解光的干涉现象(杨氏双缝干涉)及干涉条纹间距公式,理解薄膜干涉与牛顿环。",
+        "keywords": "干涉,双缝干涉,条纹间距,薄膜干涉,光程差",
+        "exam_type": "选择题,计算题"
+      },
+      {
+        "id": "K66",
+        "name": "光的衍射与偏振",
+        "type": "KnowledgePoint",
+        "module": "选择性必修第一册(动量振动光)",
+        "chapter": "光",
+        "difficulty": 3,
+        "importance": 3,
+        "description": "理解光的衍射现象(单缝衍射)与偏振现象,理解偏振是横波的证据。",
+        "keywords": "衍射,单缝衍射,偏振,横波,偏振片",
+        "exam_type": "选择题,概念"
+      },
+      {
+        "id": "K67",
+        "name": "光的色散",
+        "type": "KnowledgePoint",
+        "module": "选择性必修第一册(动量振动光)",
+        "chapter": "光",
+        "difficulty": 3,
+        "importance": 3,
+        "description": "理解光的色散现象(棱镜色散)及折射率与频率、颜色的关系。",
+        "keywords": "色散,棱镜,折射率,频率,颜色",
+        "exam_type": "选择题,色散"
+      },
+      {
+        "id": "K68",
+        "name": "电磁场理论(麦克斯韦)",
+        "type": "KnowledgePoint",
+        "module": "选择性必修第二册(电磁场)",
+        "chapter": "电磁场与电磁波",
+        "difficulty": 4,
+        "importance": 3,
+        "description": "理解麦克斯韦电磁场理论的核心(变化的电场产生磁场、变化的磁场产生电场)。",
+        "keywords": "麦克斯韦,电磁场理论,变化电场磁场",
+        "exam_type": "选择题,概念"
+      },
+      {
+        "id": "K69",
+        "name": "电磁波谱",
+        "type": "KnowledgePoint",
+        "module": "选择性必修第二册(电磁场)",
+        "chapter": "电磁场与电磁波",
+        "difficulty": 3,
+        "importance": 3,
+        "description": "了解电磁波谱的排列(无线电波、微波、红外线、可见光、紫外线、X射线、γ射线)及特性应用。",
+        "keywords": "电磁波谱,无线电波,红外,紫外,X射线,γ射线",
+        "exam_type": "选择题,电磁波谱"
+      },
+      {
+        "id": "K70",
+        "name": "电磁波的发射与接收",
+        "type": "KnowledgePoint",
+        "module": "选择性必修第二册(电磁场)",
+        "chapter": "电磁场与电磁波",
+        "difficulty": 2,
+        "importance": 2,
+        "description": "了解电磁波的发射(调制)、传播(地波、天波、空间波)与接收(调谐、解调)的基本原理。",
+        "keywords": "发射,接收,调制,调谐,解调,传播方式",
+        "exam_type": "选择题,概念"
+      },
+      {
+        "id": "K71",
+        "name": "传感器的工作原理",
+        "type": "KnowledgePoint",
+        "module": "选择性必修第二册(电磁场)",
+        "chapter": "传感器",
+        "difficulty": 3,
+        "importance": 3,
+        "description": "理解传感器将非电学量转换为电学量的原理,了解常见敏感元件(光敏、热敏、力敏)。",
+        "keywords": "传感器,非电学量,电学量,光敏,热敏,力敏",
+        "exam_type": "选择题,概念"
+      },
+      {
+        "id": "K72",
+        "name": "常见传感器的应用",
+        "type": "KnowledgePoint",
+        "module": "选择性必修第二册(电磁场)",
+        "chapter": "传感器",
+        "difficulty": 2,
+        "importance": 2,
+        "description": "了解传感器在电子秤、自动门、火灾报警器、电饭锅等生活与工业中的应用实例。",
+        "keywords": "传感器应用,电子秤,自动门,报警器",
+        "exam_type": "选择题,应用"
+      },
+      {
+        "id": "K73",
+        "name": "固体的微观结构与晶体",
+        "type": "KnowledgePoint",
+        "module": "选择性必修第三册(热学原子)",
+        "chapter": "固体、液体、气体",
+        "difficulty": 3,
+        "importance": 3,
+        "description": "理解晶体与非晶体的区别(熔点、各向异性),了解单晶体与多晶体及晶体的微观结构。",
+        "keywords": "晶体,非晶体,各向异性,单晶多晶,微观结构",
+        "exam_type": "选择题,晶体"
+      },
+      {
+        "id": "K74",
+        "name": "液体的表面张力",
+        "type": "KnowledgePoint",
+        "module": "选择性必修第三册(热学原子)",
+        "chapter": "固体、液体、气体",
+        "difficulty": 2,
+        "importance": 2,
+        "description": "理解液体表面张力的产生原因与现象,了解浸润与不浸润、毛细现象。",
+        "keywords": "表面张力,浸润,不浸润,毛细现象",
+        "exam_type": "选择题,概念"
+      },
+      {
+        "id": "K75",
+        "name": "气体实验定律",
+        "type": "KnowledgePoint",
+        "module": "选择性必修第三册(热学原子)",
+        "chapter": "固体、液体、气体",
+        "difficulty": 4,
+        "importance": 4,
+        "description": "掌握玻意耳定律(pV=常量)、查理定律(p/T=常量)与盖-吕萨克定律(V/T=常量)及应用。",
+        "keywords": "玻意耳定律,查理定律,盖吕萨克定律,等温等容等压",
+        "exam_type": "计算题,气体定律"
+      },
+      {
+        "id": "K76",
+        "name": "理想气体状态方程",
+        "type": "KnowledgePoint",
+        "module": "选择性必修第三册(热学原子)",
+        "chapter": "固体、液体、气体",
+        "difficulty": 4,
+        "importance": 4,
+        "description": "掌握理想气体状态方程pV/T=常量及pV=nRT,理解理想气体模型与气体图象(p-V、p-T、V-T图)。",
+        "keywords": "理想气体,状态方程,pV/T,气体图象,摩尔",
+        "exam_type": "综合题,气体状态方程"
+      },
+      {
+        "id": "K77",
+        "name": "内能与分子动理论",
+        "type": "KnowledgePoint",
+        "module": "选择性必修第三册(热学原子)",
+        "chapter": "热力学定律",
+        "difficulty": 3,
+        "importance": 3,
+        "description": "理解分子动理论的基本观点,掌握内能的概念及其与温度、体积的关系。",
+        "keywords": "内能,分子动理论,温度,分子势能,分子动能",
+        "exam_type": "选择题,内能"
+      },
+      {
+        "id": "K78",
+        "name": "热力学第一定律",
+        "type": "KnowledgePoint",
+        "module": "选择性必修第三册(热学原子)",
+        "chapter": "热力学定律",
+        "difficulty": 4,
+        "importance": 4,
+        "description": "掌握热力学第一定律ΔU=Q+W,理解做功与热传递是改变内能的两种方式及符号法则。",
+        "keywords": "热力学第一定律,ΔU=Q+W,做功,热传递,符号法则",
+        "exam_type": "计算题,热力学第一定律"
+      },
+      {
+        "id": "K79",
+        "name": "热力学第二定律",
+        "type": "KnowledgePoint",
+        "module": "选择性必修第三册(热学原子)",
+        "chapter": "热力学定律",
+        "difficulty": 4,
+        "importance": 3,
+        "description": "理解热力学第二定律(克劳修斯表述与开尔文表述)的方向性,理解可逆与不可逆过程。",
+        "keywords": "热力学第二定律,方向性,克劳修斯,开尔文,可逆不可逆",
+        "exam_type": "选择题,概念"
+      },
+      {
+        "id": "K80",
+        "name": "能量耗散与熵",
+        "type": "KnowledgePoint",
+        "module": "选择性必修第三册(热学原子)",
+        "chapter": "热力学定律",
+        "difficulty": 3,
+        "importance": 2,
+        "description": "理解能量耗散与品质降低的概念,了解熵增原理与热力学第三定律(绝对零度不可达到)。",
+        "keywords": "能量耗散,熵,熵增原理,绝对零度,热力学第三定律",
+        "exam_type": "选择题,概念"
+      },
+      {
+        "id": "K81",
+        "name": "电子的发现",
+        "type": "KnowledgePoint",
+        "module": "选择性必修第三册(热学原子)",
+        "chapter": "原子结构",
+        "difficulty": 2,
+        "importance": 2,
+        "description": "了解阴极射线与电子的发现(汤姆孙),理解电子是原子的组成部分及比荷的测定。",
+        "keywords": "电子,阴极射线,汤姆孙,比荷",
+        "exam_type": "选择题,科学史"
+      },
+      {
+        "id": "K82",
+        "name": "原子的核式结构",
+        "type": "KnowledgePoint",
+        "module": "选择性必修第三册(热学原子)",
+        "chapter": "原子结构",
+        "difficulty": 3,
+        "importance": 3,
+        "description": "理解α粒子散射实验与卢瑟福的原子核式结构模型,理解原子核带正电且体积极小。",
+        "keywords": "α粒子散射,核式结构,卢瑟福,原子核",
+        "exam_type": "选择题,原子结构"
+      },
+      {
+        "id": "K83",
+        "name": "玻尔原子模型与氢光谱",
+        "type": "KnowledgePoint",
+        "module": "选择性必修第三册(热学原子)",
+        "chapter": "原子结构",
+        "difficulty": 4,
+        "importance": 4,
+        "description": "理解玻尔原子模型的三个假设(定态、跃迁、轨道量子化)及氢原子光谱规律。",
+        "keywords": "玻尔模型,定态,跃迁,能级,轨道量子化,氢光谱",
+        "exam_type": "选择题,计算题"
+      },
+      {
+        "id": "K84",
+        "name": "原子光谱",
+        "type": "KnowledgePoint",
+        "module": "选择性必修第三册(热学原子)",
+        "chapter": "原子结构",
+        "difficulty": 2,
+        "importance": 2,
+        "description": "理解原子光谱(发射光谱与吸收光谱)的特征及光谱分析的应用。",
+        "keywords": "原子光谱,发射光谱,吸收光谱,光谱分析",
+        "exam_type": "选择题,概念"
+      },
+      {
+        "id": "K85",
+        "name": "天然放射现象",
+        "type": "KnowledgePoint",
+        "module": "选择性必修第三册(热学原子)",
+        "chapter": "原子核",
+        "difficulty": 3,
+        "importance": 3,
+        "description": "了解天然放射现象与三种射线(α、β、γ射线)的性质,理解放射性的本质。",
+        "keywords": "天然放射,α射线,β射线,γ射线,放射性",
+        "exam_type": "选择题,射线性质"
+      },
+      {
+        "id": "K86",
+        "name": "原子核的组成",
+        "type": "KnowledgePoint",
+        "module": "选择性必修第三册(热学原子)",
+        "chapter": "原子核",
+        "difficulty": 2,
+        "importance": 3,
+        "description": "理解原子核由质子与中子组成,掌握质量数、电荷数、同位素的概念及核素表示。",
+        "keywords": "原子核,质子,中子,质量数,电荷数,同位素",
+        "exam_type": "选择题,概念"
+      },
+      {
+        "id": "K87",
+        "name": "放射性元素的衰变",
+        "type": "KnowledgePoint",
+        "module": "选择性必修第三册(热学原子)",
+        "chapter": "原子核",
+        "difficulty": 4,
+        "importance": 4,
+        "description": "掌握α衰变与β衰变的规律及衰变方程,理解半衰期概念及其统计意义。",
+        "keywords": "α衰变,β衰变,衰变方程,半衰期,质量数电荷数守恒",
+        "exam_type": "计算题,衰变半衰期"
+      },
+      {
+        "id": "K88",
+        "name": "核力与结合能",
+        "type": "KnowledgePoint",
+        "module": "选择性必修第三册(热学原子)",
+        "chapter": "原子核",
+        "difficulty": 4,
+        "importance": 4,
+        "description": "理解核力的性质与比结合能概念,掌握质能方程E=mc²及质量亏损与结合能的计算。",
+        "keywords": "核力,结合能,比结合能,质能方程,质量亏损",
+        "exam_type": "计算题,结合能"
+      },
+      {
+        "id": "K89",
+        "name": "核反应与核能(裂变与聚变)",
+        "type": "KnowledgePoint",
+        "module": "选择性必修第三册(热学原子)",
+        "chapter": "原子核",
+        "difficulty": 4,
+        "importance": 4,
+        "description": "理解重核裂变与轻核聚变,掌握链式反应条件与核能释放原理,了解核电站与氢弹原理。",
+        "keywords": "核裂变,核聚变,链式反应,核电站,临界体积",
+        "exam_type": "选择题,计算题"
+      }
+    ],
+    "edges": [
+      {
+        "source": "M1",
+        "target": "C1",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "模块[M1]包含章节[运动的描述]"
+      },
+      {
+        "source": "M1",
+        "target": "C2",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "模块[M1]包含章节[匀变速直线运动的研究]"
+      },
+      {
+        "source": "M1",
+        "target": "C3",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "模块[M1]包含章节[相互作用——力]"
+      },
+      {
+        "source": "M1",
+        "target": "C4",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "模块[M1]包含章节[牛顿运动定律]"
+      },
+      {
+        "source": "M2",
+        "target": "C5",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "模块[M2]包含章节[运动和力]"
+      },
+      {
+        "source": "M2",
+        "target": "C6",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "模块[M2]包含章节[抛体运动]"
+      },
+      {
+        "source": "M2",
+        "target": "C7",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "模块[M2]包含章节[圆周运动]"
+      },
+      {
+        "source": "M2",
+        "target": "C8",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "模块[M2]包含章节[万有引力与宇宙航行]"
+      },
+      {
+        "source": "M2",
+        "target": "C9",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "模块[M2]包含章节[机械能守恒定律]"
+      },
+      {
+        "source": "M3",
+        "target": "C10",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "模块[M3]包含章节[静电场]"
+      },
+      {
+        "source": "M3",
+        "target": "C11",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "模块[M3]包含章节[电能(电路)]"
+      },
+      {
+        "source": "M3",
+        "target": "C12",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "模块[M3]包含章节[电磁感应与电磁波初步]"
+      },
+      {
+        "source": "M4",
+        "target": "C13",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "模块[M4]包含章节[动量守恒定律]"
+      },
+      {
+        "source": "M4",
+        "target": "C14",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "模块[M4]包含章节[机械振动与机械波]"
+      },
+      {
+        "source": "M4",
+        "target": "C15",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "模块[M4]包含章节[光]"
+      },
+      {
+        "source": "M5",
+        "target": "C16",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "模块[M5]包含章节[电磁场与电磁波]"
+      },
+      {
+        "source": "M5",
+        "target": "C17",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "模块[M5]包含章节[传感器]"
+      },
+      {
+        "source": "M6",
+        "target": "C18",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "模块[M6]包含章节[固体、液体、气体]"
+      },
+      {
+        "source": "M6",
+        "target": "C19",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "模块[M6]包含章节[热力学定律]"
+      },
+      {
+        "source": "M6",
+        "target": "C20",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "模块[M6]包含章节[原子结构]"
+      },
+      {
+        "source": "M6",
+        "target": "C21",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "模块[M6]包含章节[原子核]"
+      },
+      {
+        "source": "C1",
+        "target": "K1",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[质点与参考系]"
+      },
+      {
+        "source": "C1",
+        "target": "K2",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[时间与时刻、坐标与位移]"
+      },
+      {
+        "source": "C1",
+        "target": "K3",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[速度]"
+      },
+      {
+        "source": "C1",
+        "target": "K4",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[加速度]"
+      },
+      {
+        "source": "C2",
+        "target": "K5",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[匀变速直线运动的速度与时间关系]"
+      },
+      {
+        "source": "C2",
+        "target": "K6",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[匀变速直线运动的位移与时间关系]"
+      },
+      {
+        "source": "C2",
+        "target": "K7",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[自由落体运动]"
+      },
+      {
+        "source": "C2",
+        "target": "K8",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[运动图象的分析]"
+      },
+      {
+        "source": "C3",
+        "target": "K9",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[重力]"
+      },
+      {
+        "source": "C3",
+        "target": "K10",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[弹力]"
+      },
+      {
+        "source": "C3",
+        "target": "K11",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[摩擦力(滑动与静摩擦力)]"
+      },
+      {
+        "source": "C3",
+        "target": "K12",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[力的合成与分解]"
+      },
+      {
+        "source": "C3",
+        "target": "K13",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[共点力的平衡]"
+      },
+      {
+        "source": "C4",
+        "target": "K14",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[牛顿第一定律与惯性]"
+      },
+      {
+        "source": "C4",
+        "target": "K15",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[牛顿第二定律]"
+      },
+      {
+        "source": "C4",
+        "target": "K16",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[牛顿第三定律]"
+      },
+      {
+        "source": "C4",
+        "target": "K17",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[力学单位制]"
+      },
+      {
+        "source": "C4",
+        "target": "K18",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[牛顿运动定律的应用(超重与失重)]"
+      },
+      {
+        "source": "C5",
+        "target": "K19",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[牛顿定律的综合应用]"
+      },
+      {
+        "source": "C6",
+        "target": "K20",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[曲线运动]"
+      },
+      {
+        "source": "C6",
+        "target": "K21",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[运动的合成与分解]"
+      },
+      {
+        "source": "C6",
+        "target": "K22",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[平抛运动]"
+      },
+      {
+        "source": "C7",
+        "target": "K23",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[圆周运动的描述]"
+      },
+      {
+        "source": "C7",
+        "target": "K24",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[向心加速度]"
+      },
+      {
+        "source": "C7",
+        "target": "K25",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[向心力]"
+      },
+      {
+        "source": "C7",
+        "target": "K26",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[圆周运动的实例分析]"
+      },
+      {
+        "source": "C8",
+        "target": "K27",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[行星的运动(开普勒定律)]"
+      },
+      {
+        "source": "C8",
+        "target": "K28",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[万有引力定律]"
+      },
+      {
+        "source": "C8",
+        "target": "K29",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[万有引力定律的应用(宇宙速度)]"
+      },
+      {
+        "source": "C8",
+        "target": "K30",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[经典力学的局限性]"
+      },
+      {
+        "source": "C9",
+        "target": "K31",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[功]"
+      },
+      {
+        "source": "C9",
+        "target": "K32",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[功率]"
+      },
+      {
+        "source": "C9",
+        "target": "K33",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[动能与动能定理]"
+      },
+      {
+        "source": "C9",
+        "target": "K34",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[重力势能]"
+      },
+      {
+        "source": "C9",
+        "target": "K35",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[机械能守恒定律]"
+      },
+      {
+        "source": "C9",
+        "target": "K36",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[功能关系与功能原理]"
+      },
+      {
+        "source": "C10",
+        "target": "K37",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[电荷与电荷守恒]"
+      },
+      {
+        "source": "C10",
+        "target": "K38",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[库仑定律]"
+      },
+      {
+        "source": "C10",
+        "target": "K39",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[电场与电场强度]"
+      },
+      {
+        "source": "C10",
+        "target": "K40",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[电势能与电势]"
+      },
+      {
+        "source": "C10",
+        "target": "K41",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[电势差与匀强电场]"
+      },
+      {
+        "source": "C10",
+        "target": "K42",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[电容器与电容]"
+      },
+      {
+        "source": "C10",
+        "target": "K43",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[带电粒子在电场中的运动]"
+      },
+      {
+        "source": "C11",
+        "target": "K44",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[电流与电源]"
+      },
+      {
+        "source": "C11",
+        "target": "K45",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[电阻与电阻定律]"
+      },
+      {
+        "source": "C11",
+        "target": "K46",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[部分电路欧姆定律]"
+      },
+      {
+        "source": "C11",
+        "target": "K47",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[串并联电路]"
+      },
+      {
+        "source": "C11",
+        "target": "K48",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[闭合电路欧姆定律]"
+      },
+      {
+        "source": "C11",
+        "target": "K49",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[焦耳定律与电功率]"
+      },
+      {
+        "source": "C12",
+        "target": "K50",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[电流的磁效应与磁场]"
+      },
+      {
+        "source": "C12",
+        "target": "K51",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[安培力]"
+      },
+      {
+        "source": "C12",
+        "target": "K52",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[电磁感应现象]"
+      },
+      {
+        "source": "C12",
+        "target": "K53",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[法拉第电磁感应定律]"
+      },
+      {
+        "source": "C12",
+        "target": "K54",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[电磁波的产生与特点]"
+      },
+      {
+        "source": "C13",
+        "target": "K55",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[动量]"
+      },
+      {
+        "source": "C13",
+        "target": "K56",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[冲量与动量定理]"
+      },
+      {
+        "source": "C13",
+        "target": "K57",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[动量守恒定律]"
+      },
+      {
+        "source": "C13",
+        "target": "K58",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[反冲运动与火箭]"
+      },
+      {
+        "source": "C14",
+        "target": "K59",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[简谐运动]"
+      },
+      {
+        "source": "C14",
+        "target": "K60",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[单摆]"
+      },
+      {
+        "source": "C14",
+        "target": "K61",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[机械波的形成与传播]"
+      },
+      {
+        "source": "C14",
+        "target": "K62",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[波长、频率与波速]"
+      },
+      {
+        "source": "C14",
+        "target": "K63",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[波的干涉与衍射]"
+      },
+      {
+        "source": "C15",
+        "target": "K64",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[光的折射]"
+      },
+      {
+        "source": "C15",
+        "target": "K65",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[光的干涉]"
+      },
+      {
+        "source": "C15",
+        "target": "K66",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[光的衍射与偏振]"
+      },
+      {
+        "source": "C15",
+        "target": "K67",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[光的色散]"
+      },
+      {
+        "source": "C16",
+        "target": "K68",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[电磁场理论(麦克斯韦)]"
+      },
+      {
+        "source": "C16",
+        "target": "K69",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[电磁波谱]"
+      },
+      {
+        "source": "C16",
+        "target": "K70",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[电磁波的发射与接收]"
+      },
+      {
+        "source": "C17",
+        "target": "K71",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[传感器的工作原理]"
+      },
+      {
+        "source": "C17",
+        "target": "K72",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[常见传感器的应用]"
+      },
+      {
+        "source": "C18",
+        "target": "K73",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[固体的微观结构与晶体]"
+      },
+      {
+        "source": "C18",
+        "target": "K74",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[液体的表面张力]"
+      },
+      {
+        "source": "C18",
+        "target": "K75",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[气体实验定律]"
+      },
+      {
+        "source": "C18",
+        "target": "K76",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[理想气体状态方程]"
+      },
+      {
+        "source": "C19",
+        "target": "K77",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[内能与分子动理论]"
+      },
+      {
+        "source": "C19",
+        "target": "K78",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[热力学第一定律]"
+      },
+      {
+        "source": "C19",
+        "target": "K79",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[热力学第二定律]"
+      },
+      {
+        "source": "C19",
+        "target": "K80",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[能量耗散与熵]"
+      },
+      {
+        "source": "C20",
+        "target": "K81",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[电子的发现]"
+      },
+      {
+        "source": "C20",
+        "target": "K82",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[原子的核式结构]"
+      },
+      {
+        "source": "C20",
+        "target": "K83",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[玻尔原子模型与氢光谱]"
+      },
+      {
+        "source": "C20",
+        "target": "K84",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[原子光谱]"
+      },
+      {
+        "source": "C21",
+        "target": "K85",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[天然放射现象]"
+      },
+      {
+        "source": "C21",
+        "target": "K86",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[原子核的组成]"
+      },
+      {
+        "source": "C21",
+        "target": "K87",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[放射性元素的衰变]"
+      },
+      {
+        "source": "C21",
+        "target": "K88",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[核力与结合能]"
+      },
+      {
+        "source": "C21",
+        "target": "K89",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[核反应与核能(裂变与聚变)]"
+      },
+      {
+        "source": "K1",
+        "target": "K3",
+        "relation": "PREREQUISITE",
+        "weight": 0.8,
+        "description": "质点与参考系是描述速度的基础"
+      },
+      {
+        "source": "K2",
+        "target": "K3",
+        "relation": "PREREQUISITE",
+        "weight": 0.7,
+        "description": "时间位移概念是理解速度的基础"
+      },
+      {
+        "source": "K3",
+        "target": "K4",
+        "relation": "PREREQUISITE",
+        "weight": 0.9,
+        "description": "速度是理解加速度的前提"
+      },
+      {
+        "source": "K4",
+        "target": "K5",
+        "relation": "PREREQUISITE",
+        "weight": 0.9,
+        "description": "加速度是匀变速运动规律的基础"
+      },
+      {
+        "source": "K5",
+        "target": "K6",
+        "relation": "PREREQUISITE",
+        "weight": 0.9,
+        "description": "速度公式是位移公式的基础"
+      },
+      {
+        "source": "K6",
+        "target": "K7",
+        "relation": "PREREQUISITE",
+        "weight": 0.8,
+        "description": "匀变速运动推广到自由落体"
+      },
+      {
+        "source": "K7",
+        "target": "K6",
+        "relation": "DERIVED_FROM",
+        "weight": 0.7,
+        "description": "自由落体是匀变速运动的特例"
+      },
+      {
+        "source": "K5",
+        "target": "K8",
+        "relation": "RELATED_TO",
+        "weight": 0.7,
+        "description": "速度公式与v-t图象相关"
+      },
+      {
+        "source": "K6",
+        "target": "K8",
+        "relation": "RELATED_TO",
+        "weight": 0.7,
+        "description": "位移公式与图象面积相关"
+      },
+      {
+        "source": "K9",
+        "target": "K11",
+        "relation": "PREREQUISITE",
+        "weight": 0.5,
+        "description": "重力概念与摩擦力都属常见力"
+      },
+      {
+        "source": "K10",
+        "target": "K12",
+        "relation": "PREREQUISITE",
+        "weight": 0.7,
+        "description": "弹力是力的合成分解的对象"
+      },
+      {
+        "source": "K11",
+        "target": "K13",
+        "relation": "PREREQUISITE",
+        "weight": 0.8,
+        "description": "摩擦力是平衡问题的常见力"
+      },
+      {
+        "source": "K12",
+        "target": "K13",
+        "relation": "PREREQUISITE",
+        "weight": 0.9,
+        "description": "力的合成分解是平衡问题的基础"
+      },
+      {
+        "source": "K13",
+        "target": "K15",
+        "relation": "PREREQUISITE",
+        "weight": 0.7,
+        "description": "平衡分析能力有助于理解牛顿第二定律"
+      },
+      {
+        "source": "K14",
+        "target": "K15",
+        "relation": "PREREQUISITE",
+        "weight": 0.9,
+        "description": "牛顿第一定律是第二定律的基础"
+      },
+      {
+        "source": "K15",
+        "target": "K16",
+        "relation": "PREREQUISITE",
+        "weight": 0.5,
+        "description": "第二与第三定律共同构成牛顿定律体系"
+      },
+      {
+        "source": "K15",
+        "target": "K18",
+        "relation": "PREREQUISITE",
+        "weight": 0.9,
+        "description": "牛顿第二定律是分析超重失重的基础"
+      },
+      {
+        "source": "K15",
+        "target": "K19",
+        "relation": "PREREQUISITE",
+        "weight": 0.9,
+        "description": "牛顿第二定律是动力学综合的核心"
+      },
+      {
+        "source": "K8",
+        "target": "K19",
+        "relation": "APPLIED_IN",
+        "weight": 0.6,
+        "description": "运动图象分析用于动力学综合"
+      },
+      {
+        "source": "K20",
+        "target": "K21",
+        "relation": "PREREQUISITE",
+        "weight": 0.8,
+        "description": "曲线运动是运动合成分解的基础"
+      },
+      {
+        "source": "K21",
+        "target": "K22",
+        "relation": "PREREQUISITE",
+        "weight": 0.9,
+        "description": "运动合成分解是平抛运动的基础"
+      },
+      {
+        "source": "K22",
+        "target": "K21",
+        "relation": "DERIVED_FROM",
+        "weight": 0.6,
+        "description": "平抛运动是运动合成分解的应用"
+      },
+      {
+        "source": "K4",
+        "target": "K24",
+        "relation": "PREREQUISITE",
+        "weight": 0.7,
+        "description": "加速度概念推广到向心加速度"
+      },
+      {
+        "source": "K23",
+        "target": "K24",
+        "relation": "PREREQUISITE",
+        "weight": 0.8,
+        "description": "圆周运动描述量是向心加速度的基础"
+      },
+      {
+        "source": "K24",
+        "target": "K25",
+        "relation": "PREREQUISITE",
+        "weight": 0.9,
+        "description": "向心加速度是向心力的基础"
+      },
+      {
+        "source": "K25",
+        "target": "K26",
+        "relation": "PREREQUISITE",
+        "weight": 0.9,
+        "description": "向心力是圆周运动实例分析的基础"
+      },
+      {
+        "source": "K15",
+        "target": "K25",
+        "relation": "PREREQUISITE",
+        "weight": 0.7,
+        "description": "牛顿第二定律用于向心力分析"
+      },
+      {
+        "source": "K28",
+        "target": "K29",
+        "relation": "PREREQUISITE",
+        "weight": 0.9,
+        "description": "万有引力定律是分析卫星运动的基础"
+      },
+      {
+        "source": "K27",
+        "target": "K29",
+        "relation": "RELATED_TO",
+        "weight": 0.5,
+        "description": "开普勒定律与万有引力应用于天体运动"
+      },
+      {
+        "source": "K28",
+        "target": "K27",
+        "relation": "DERIVED_FROM",
+        "weight": 0.5,
+        "description": "万有引力定律可由开普勒定律推导"
+      },
+      {
+        "source": "K31",
+        "target": "K32",
+        "relation": "PREREQUISITE",
+        "weight": 0.8,
+        "description": "功的概念是功率的基础"
+      },
+      {
+        "source": "K31",
+        "target": "K33",
+        "relation": "PREREQUISITE",
+        "weight": 0.9,
+        "description": "功的概念是动能定理的基础"
+      },
+      {
+        "source": "K33",
+        "target": "K31",
+        "relation": "DERIVED_FROM",
+        "weight": 0.7,
+        "description": "动能定理由功的概念推导"
+      },
+      {
+        "source": "K31",
+        "target": "K34",
+        "relation": "PREREQUISITE",
+        "weight": 0.6,
+        "description": "功与势能变化相关"
+      },
+      {
+        "source": "K33",
+        "target": "K35",
+        "relation": "PREREQUISITE",
+        "weight": 0.8,
+        "description": "动能定理是机械能守恒的基础"
+      },
+      {
+        "source": "K34",
+        "target": "K35",
+        "relation": "PREREQUISITE",
+        "weight": 0.8,
+        "description": "重力势能是机械能的组成部分"
+      },
+      {
+        "source": "K33",
+        "target": "K36",
+        "relation": "RELATED_TO",
+        "weight": 0.8,
+        "description": "动能定理与功能关系紧密相关"
+      },
+      {
+        "source": "K35",
+        "target": "K36",
+        "relation": "RELATED_TO",
+        "weight": 0.8,
+        "description": "机械能守恒与功能关系相关"
+      },
+      {
+        "source": "K35",
+        "target": "K22",
+        "relation": "APPLIED_IN",
+        "weight": 0.5,
+        "description": "机械能守恒可用于平抛运动分析"
+      },
+      {
+        "source": "K37",
+        "target": "K38",
+        "relation": "PREREQUISITE",
+        "weight": 0.8,
+        "description": "电荷概念是库仑定律的基础"
+      },
+      {
+        "source": "K38",
+        "target": "K39",
+        "relation": "PREREQUISITE",
+        "weight": 0.7,
+        "description": "库仑力是电场力的体现"
+      },
+      {
+        "source": "K39",
+        "target": "K40",
+        "relation": "PREREQUISITE",
+        "weight": 0.8,
+        "description": "电场强度是电势概念的基础"
+      },
+      {
+        "source": "K40",
+        "target": "K41",
+        "relation": "PREREQUISITE",
+        "weight": 0.9,
+        "description": "电势是电势差的基础"
+      },
+      {
+        "source": "K39",
+        "target": "K41",
+        "relation": "RELATED_TO",
+        "weight": 0.6,
+        "description": "电场强度与匀强电场电势差相关"
+      },
+      {
+        "source": "K41",
+        "target": "K42",
+        "relation": "PREREQUISITE",
+        "weight": 0.5,
+        "description": "电势差概念与电容器相关"
+      },
+      {
+        "source": "K39",
+        "target": "K43",
+        "relation": "PREREQUISITE",
+        "weight": 0.8,
+        "description": "电场强度是分析带电粒子运动的基础"
+      },
+      {
+        "source": "K41",
+        "target": "K43",
+        "relation": "APPLIED_IN",
+        "weight": 0.7,
+        "description": "电势差用于带电粒子加速"
+      },
+      {
+        "source": "K44",
+        "target": "K46",
+        "relation": "PREREQUISITE",
+        "weight": 0.7,
+        "description": "电流概念是欧姆定律的基础"
+      },
+      {
+        "source": "K45",
+        "target": "K46",
+        "relation": "PREREQUISITE",
+        "weight": 0.7,
+        "description": "电阻概念是欧姆定律的基础"
+      },
+      {
+        "source": "K46",
+        "target": "K47",
+        "relation": "PREREQUISITE",
+        "weight": 0.8,
+        "description": "欧姆定律是串并联电路的基础"
+      },
+      {
+        "source": "K47",
+        "target": "K48",
+        "relation": "PREREQUISITE",
+        "weight": 0.9,
+        "description": "串并联是闭合电路的基础"
+      },
+      {
+        "source": "K48",
+        "target": "K49",
+        "relation": "PREREQUISITE",
+        "weight": 0.7,
+        "description": "闭合电路与电功率相关"
+      },
+      {
+        "source": "K49",
+        "target": "K46",
+        "relation": "RELATED_TO",
+        "weight": 0.5,
+        "description": "焦耳定律与欧姆定律在纯电阻电路统一"
+      },
+      {
+        "source": "K50",
+        "target": "K51",
+        "relation": "PREREQUISITE",
+        "weight": 0.8,
+        "description": "磁场概念是安培力的基础"
+      },
+      {
+        "source": "K51",
+        "target": "K52",
+        "relation": "PREREQUISITE",
+        "weight": 0.6,
+        "description": "磁场与电磁感应相关"
+      },
+      {
+        "source": "K52",
+        "target": "K53",
+        "relation": "PREREQUISITE",
+        "weight": 0.9,
+        "description": "电磁感应现象是法拉第定律的基础"
+      },
+      {
+        "source": "K53",
+        "target": "K52",
+        "relation": "DERIVED_FROM",
+        "weight": 0.7,
+        "description": "法拉第定律由电磁感应现象发展"
+      },
+      {
+        "source": "K50",
+        "target": "K54",
+        "relation": "RELATED_TO",
+        "weight": 0.6,
+        "description": "磁场与电磁波都源于电磁现象"
+      },
+      {
+        "source": "K55",
+        "target": "K56",
+        "relation": "PREREQUISITE",
+        "weight": 0.9,
+        "description": "动量概念是动量定理的基础"
+      },
+      {
+        "source": "K56",
+        "target": "K55",
+        "relation": "DERIVED_FROM",
+        "weight": 0.7,
+        "description": "动量定理由动量概念推导"
+      },
+      {
+        "source": "K56",
+        "target": "K57",
+        "relation": "PREREQUISITE",
+        "weight": 0.9,
+        "description": "动量定理是动量守恒的基础"
+      },
+      {
+        "source": "K57",
+        "target": "K58",
+        "relation": "PREREQUISITE",
+        "weight": 0.8,
+        "description": "动量守恒是反冲运动的原理"
+      },
+      {
+        "source": "K33",
+        "target": "K56",
+        "relation": "RELATED_TO",
+        "weight": 0.6,
+        "description": "动能定理与动量定理都是力学重要定理"
+      },
+      {
+        "source": "K35",
+        "target": "K57",
+        "relation": "RELATED_TO",
+        "weight": 0.5,
+        "description": "机械能守恒与动量守恒常同时用于碰撞"
+      },
+      {
+        "source": "K59",
+        "target": "K60",
+        "relation": "PREREQUISITE",
+        "weight": 0.8,
+        "description": "简谐运动是单摆模型的基础"
+      },
+      {
+        "source": "K60",
+        "target": "K59",
+        "relation": "DERIVED_FROM",
+        "weight": 0.6,
+        "description": "单摆是简谐运动的应用实例"
+      },
+      {
+        "source": "K61",
+        "target": "K62",
+        "relation": "PREREQUISITE",
+        "weight": 0.9,
+        "description": "机械波形成是波长波速的基础"
+      },
+      {
+        "source": "K63",
+        "target": "K61",
+        "relation": "RELATED_TO",
+        "weight": 0.6,
+        "description": "干涉衍射基于波的叠加与传播"
+      },
+      {
+        "source": "K64",
+        "target": "K65",
+        "relation": "PREREQUISITE",
+        "weight": 0.5,
+        "description": "折射与干涉都属光的波动性"
+      },
+      {
+        "source": "K65",
+        "target": "K66",
+        "relation": "RELATED_TO",
+        "weight": 0.7,
+        "description": "干涉与衍射都证明光的波动性"
+      },
+      {
+        "source": "K66",
+        "target": "K67",
+        "relation": "RELATED_TO",
+        "weight": 0.5,
+        "description": "偏振与色散都属光的现象"
+      },
+      {
+        "source": "K54",
+        "target": "K68",
+        "relation": "RELATED_TO",
+        "weight": 0.6,
+        "description": "电磁波初步与电磁场理论相关"
+      },
+      {
+        "source": "K68",
+        "target": "K50",
+        "relation": "DERIVED_FROM",
+        "weight": 0.5,
+        "description": "麦克斯韦理论由电磁现象发展"
+      },
+      {
+        "source": "K68",
+        "target": "K69",
+        "relation": "RELATED_TO",
+        "weight": 0.7,
+        "description": "电磁场理论是电磁波谱的基础"
+      },
+      {
+        "source": "K71",
+        "target": "K72",
+        "relation": "PREREQUISITE",
+        "weight": 0.8,
+        "description": "传感器原理是应用的基础"
+      },
+      {
+        "source": "K51",
+        "target": "K72",
+        "relation": "APPLIED_IN",
+        "weight": 0.4,
+        "description": "安培力等电磁知识用于传感器"
+      },
+      {
+        "source": "K77",
+        "target": "K78",
+        "relation": "PREREQUISITE",
+        "weight": 0.8,
+        "description": "内能是热力学第一定律的基础"
+      },
+      {
+        "source": "K78",
+        "target": "K36",
+        "relation": "RELATED_TO",
+        "weight": 0.5,
+        "description": "热力学第一定律与功能关系都是能量守恒的体现"
+      },
+      {
+        "source": "K78",
+        "target": "K79",
+        "relation": "PREREQUISITE",
+        "weight": 0.7,
+        "description": "热力学第一定律是第二定律的基础"
+      },
+      {
+        "source": "K79",
+        "target": "K80",
+        "relation": "RELATED_TO",
+        "weight": 0.7,
+        "description": "热力学第二定律与熵增相关"
+      },
+      {
+        "source": "K81",
+        "target": "K82",
+        "relation": "PREREQUISITE",
+        "weight": 0.8,
+        "description": "电子发现是核式结构的基础"
+      },
+      {
+        "source": "K82",
+        "target": "K83",
+        "relation": "PREREQUISITE",
+        "weight": 0.8,
+        "description": "核式结构是玻尔模型的基础"
+      },
+      {
+        "source": "K83",
+        "target": "K82",
+        "relation": "DERIVED_FROM",
+        "weight": 0.5,
+        "description": "玻尔模型在核式结构基础上发展"
+      },
+      {
+        "source": "K83",
+        "target": "K84",
+        "relation": "PREREQUISITE",
+        "weight": 0.6,
+        "description": "玻尔模型与原子光谱相关"
+      },
+      {
+        "source": "K85",
+        "target": "K86",
+        "relation": "PREREQUISITE",
+        "weight": 0.7,
+        "description": "放射现象揭示原子核组成"
+      },
+      {
+        "source": "K86",
+        "target": "K87",
+        "relation": "PREREQUISITE",
+        "weight": 0.8,
+        "description": "原子核组成是衰变规律的基础"
+      },
+      {
+        "source": "K87",
+        "target": "K88",
+        "relation": "PREREQUISITE",
+        "weight": 0.7,
+        "description": "衰变与核力结合能相关"
+      },
+      {
+        "source": "K88",
+        "target": "K89",
+        "relation": "PREREQUISITE",
+        "weight": 0.8,
+        "description": "结合能概念是核反应核能的基础"
+      },
+      {
+        "source": "K83",
+        "target": "K89",
+        "relation": "RELATED_TO",
+        "weight": 0.4,
+        "description": "原子能级与核能都涉及质能关系"
+      },
+      {
+        "source": "K15",
+        "target": "K19",
+        "relation": "APPLIED_IN",
+        "weight": 0.9,
+        "description": "牛顿第二定律应用于动力学综合"
+      },
+      {
+        "source": "K25",
+        "target": "K26",
+        "relation": "APPLIED_IN",
+        "weight": 0.8,
+        "description": "向心力应用于圆周运动实例"
+      },
+      {
+        "source": "K53",
+        "target": "K43",
+        "relation": "APPLIED_IN",
+        "weight": 0.4,
+        "description": "电磁感应与带电粒子运动相关"
+      }
+    ],
+    "categories": [
+      "必修第一册(力学基础)",
+      "必修第二册(力学进阶)",
+      "必修第三册(电学)",
+      "选择性必修第一册(动量振动光)",
+      "选择性必修第二册(电磁场)",
+      "选择性必修第三册(热学原子)"
+    ],
+    "stats": {
+      "total_nodes": 116,
+      "total_edges": 202,
+      "modules": 6,
+      "chapters": 21,
+      "knowledge_points": 89
+    }
+  },
+  "化学": {
+    "color": "#3A7D5F",
+    "nodes": [
+      {
+        "id": "M1",
+        "name": "必修第一册(无机基础)",
+        "type": "Module",
+        "module": "必修第一册(无机基础)",
+        "chapter": "",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "物质变化、钠铁等元素化合物、物质结构与元素周期律。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "M2",
+        "name": "必修第二册(反应与有机)",
+        "type": "Module",
+        "module": "必修第二册(反应与有机)",
+        "chapter": "",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "化学反应与能量、有机化合物、化学与可持续发展。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "M3",
+        "name": "选择性必修1(化学反应原理)",
+        "type": "Module",
+        "module": "选择性必修1(化学反应原理)",
+        "chapter": "",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "反应热、反应速率、化学平衡、水溶液离子平衡、电化学。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "M4",
+        "name": "选择性必修2(物质结构与性质)",
+        "type": "Module",
+        "module": "选择性必修2(物质结构与性质)",
+        "chapter": "",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "原子结构、化学键与分子结构、晶体结构。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "M5",
+        "name": "选择性必修3(有机化学基础)",
+        "type": "Module",
+        "module": "选择性必修3(有机化学基础)",
+        "chapter": "",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "有机物结构特点、烃、烃的衍生物、生物大分子与合成高分子。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "C1",
+        "name": "物质及其变化",
+        "type": "Chapter",
+        "module": "必修第一册(无机基础)",
+        "chapter": "物质及其变化",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "物质分类、转化、离子反应、氧化还原反应。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "C2",
+        "name": "钠及其化合物",
+        "type": "Chapter",
+        "module": "必修第一册(无机基础)",
+        "chapter": "钠及其化合物",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "钠单质、氧化钠过氧化钠、碳酸钠碳酸氢钠、焰色试验。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "C3",
+        "name": "铁金属材料",
+        "type": "Chapter",
+        "module": "必修第一册(无机基础)",
+        "chapter": "铁金属材料",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "铁单质、铁的氧化物与氢氧化物、铁盐亚铁盐转化、合金。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "C4",
+        "name": "物质结构 元素周期律",
+        "type": "Chapter",
+        "module": "必修第一册(无机基础)",
+        "chapter": "物质结构 元素周期律",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "原子结构、核外电子排布、元素周期表与周期律、化学键。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "C5",
+        "name": "化学反应与能量",
+        "type": "Chapter",
+        "module": "必修第二册(反应与有机)",
+        "chapter": "化学反应与能量",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "化学反应能量变化、化学能与热能电能、反应速率初步。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "C6",
+        "name": "有机化合物",
+        "type": "Chapter",
+        "module": "必修第二册(反应与有机)",
+        "chapter": "有机化合物",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "甲烷、乙烯、苯、乙醇、乙酸、基本营养物质。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "C7",
+        "name": "化学与可持续发展",
+        "type": "Chapter",
+        "module": "必修第二册(反应与有机)",
+        "chapter": "化学与可持续发展",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "自然资源开发利用、化学品合成与环境保护。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "C8",
+        "name": "化学反应热",
+        "type": "Chapter",
+        "module": "选择性必修1(化学反应原理)",
+        "chapter": "化学反应热",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "反应热焓变、热化学方程式、盖斯定律。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "C9",
+        "name": "化学反应速率",
+        "type": "Chapter",
+        "module": "选择性必修1(化学反应原理)",
+        "chapter": "化学反应速率",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "反应速率概念计算、影响因素、速率方程与催化剂。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "C10",
+        "name": "化学平衡",
+        "type": "Chapter",
+        "module": "选择性必修1(化学反应原理)",
+        "chapter": "化学平衡",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "平衡状态、平衡常数、平衡移动、等效平衡。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "C11",
+        "name": "水溶液中的离子反应与平衡",
+        "type": "Chapter",
+        "module": "选择性必修1(化学反应原理)",
+        "chapter": "水溶液中的离子反应与平衡",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "弱电解质电离、水电离、pH、盐类水解、溶解平衡。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "C12",
+        "name": "电池与电解池(电化学)",
+        "type": "Chapter",
+        "module": "选择性必修1(化学反应原理)",
+        "chapter": "电池与电解池(电化学)",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "原电池原理、化学电源、电解原理及应用、金属腐蚀防护。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "C13",
+        "name": "原子结构与元素性质",
+        "type": "Chapter",
+        "module": "选择性必修2(物质结构与性质)",
+        "chapter": "原子结构与元素性质",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "构造原理、核外电子排布、周期表分区、电离能电负性。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "C14",
+        "name": "化学键与分子结构",
+        "type": "Chapter",
+        "module": "选择性必修2(物质结构与性质)",
+        "chapter": "化学键与分子结构",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "共价键类型与参数、VSEPR与杂化、分子极性与分子间作用力。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "C15",
+        "name": "晶体结构",
+        "type": "Chapter",
+        "module": "选择性必修2(物质结构与性质)",
+        "chapter": "晶体结构",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "晶体常识、离子晶体、原子晶体、分子晶体、金属晶体。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "C16",
+        "name": "有机化合物的结构特点",
+        "type": "Chapter",
+        "module": "选择性必修3(有机化学基础)",
+        "chapter": "有机化合物的结构特点",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "有机物分类、官能团、命名、同分异构体。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "C17",
+        "name": "烃",
+        "type": "Chapter",
+        "module": "选择性必修3(有机化学基础)",
+        "chapter": "烃",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "烷烃、烯烃、炔烃、苯及芳香烃、石油煤加工。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "C18",
+        "name": "烃的衍生物",
+        "type": "Chapter",
+        "module": "选择性必修3(有机化学基础)",
+        "chapter": "烃的衍生物",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "卤代烃、醇、酚、醛、羧酸、酯、有机合成。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "C19",
+        "name": "生物大分子与合成高分子",
+        "type": "Chapter",
+        "module": "选择性必修3(有机化学基础)",
+        "chapter": "生物大分子与合成高分子",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "糖类、蛋白质核酸、合成高分子化合物。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "K1",
+        "name": "物质的分类",
+        "type": "KnowledgePoint",
+        "module": "必修第一册(无机基础)",
+        "chapter": "物质及其变化",
+        "difficulty": 2,
+        "importance": 3,
+        "description": "掌握物质的简单分类(纯净物与混合物、单质与化合物、酸碱盐氧化物等),理解分类法的意义。",
+        "keywords": "分类,纯净物,混合物,单质,化合物,酸碱盐氧化物",
+        "exam_type": "选择题,分类判断"
+      },
+      {
+        "id": "K2",
+        "name": "物质的转化",
+        "type": "KnowledgePoint",
+        "module": "必修第一册(无机基础)",
+        "chapter": "物质及其变化",
+        "difficulty": 2,
+        "importance": 3,
+        "description": "理解物质转化的关系(无机反应基本类型),掌握酸碱盐氧化物间的转化规律。",
+        "keywords": "物质转化,反应类型,四类基本反应,转化关系",
+        "exam_type": "选择题,转化关系"
+      },
+      {
+        "id": "K3",
+        "name": "离子反应",
+        "type": "KnowledgePoint",
+        "module": "必修第一册(无机基础)",
+        "chapter": "物质及其变化",
+        "difficulty": 4,
+        "importance": 5,
+        "description": "理解电解质与非电解质概念,掌握离子反应发生的条件(生成沉淀、气体、水等)。",
+        "keywords": "离子反应,电解质,非电解质,复分解,沉淀气体水",
+        "exam_type": "选择题,离子共存"
+      },
+      {
+        "id": "K4",
+        "name": "离子方程式",
+        "type": "KnowledgePoint",
+        "module": "必修第一册(无机基础)",
+        "chapter": "物质及其变化",
+        "difficulty": 4,
+        "importance": 5,
+        "description": "掌握离子方程式的书写步骤与正误判断,理解离子方程式表示的意义。",
+        "keywords": "离子方程式,书写步骤,正误判断,拆分规则",
+        "exam_type": "选择题,书写离子方程式"
+      },
+      {
+        "id": "K5",
+        "name": "氧化还原反应",
+        "type": "KnowledgePoint",
+        "module": "必修第一册(无机基础)",
+        "chapter": "物质及其变化",
+        "difficulty": 5,
+        "importance": 5,
+        "description": "理解氧化还原反应的本质(电子转移)与特征(化合价变化),掌握双线桥与单线桥法。",
+        "keywords": "氧化还原,电子转移,化合价,氧化反应还原反应",
+        "exam_type": "选择题,氧化还原分析"
+      },
+      {
+        "id": "K6",
+        "name": "氧化剂与还原剂",
+        "type": "KnowledgePoint",
+        "module": "必修第一册(无机基础)",
+        "chapter": "物质及其变化",
+        "difficulty": 4,
+        "importance": 4,
+        "description": "理解氧化剂与还原剂的概念,掌握常见的氧化剂与还原剂及氧化还原反应的规律。",
+        "keywords": "氧化剂,还原剂,氧化性还原性,常见试剂",
+        "exam_type": "选择题,判断题"
+      },
+      {
+        "id": "K7",
+        "name": "钠的单质",
+        "type": "KnowledgePoint",
+        "module": "必修第一册(无机基础)",
+        "chapter": "钠及其化合物",
+        "difficulty": 3,
+        "importance": 4,
+        "description": "掌握钠的物理性质与化学性质(与水、氧气反应),理解钠的强还原性及保存方法。",
+        "keywords": "钠,物理性质,与水反应,与氧气反应,还原性",
+        "exam_type": "选择题,实验题,钠的性质"
+      },
+      {
+        "id": "K8",
+        "name": "氧化钠与过氧化钠",
+        "type": "KnowledgePoint",
+        "module": "必修第一册(无机基础)",
+        "chapter": "钠及其化合物",
+        "difficulty": 4,
+        "importance": 4,
+        "description": "掌握Na2O与Na2O2的性质差异,理解过氧化钠与水及二氧化碳反应的特殊性(供氧剂)。",
+        "keywords": "氧化钠,过氧化钠,过氧离子,供氧剂,反应",
+        "exam_type": "选择题,计算题,Na2O2反应"
+      },
+      {
+        "id": "K9",
+        "name": "碳酸钠与碳酸氢钠",
+        "type": "KnowledgePoint",
+        "module": "必修第一册(无机基础)",
+        "chapter": "钠及其化合物",
+        "difficulty": 4,
+        "importance": 5,
+        "description": "掌握Na2CO3与NaHCO3的性质差异(溶解度、热稳定性、与酸反应),理解相互转化。",
+        "keywords": "碳酸钠,碳酸氢钠,溶解度,热稳定性,转化",
+        "exam_type": "选择题,计算题,除杂鉴别"
+      },
+      {
+        "id": "K10",
+        "name": "焰色试验",
+        "type": "KnowledgePoint",
+        "module": "必修第一册(无机基础)",
+        "chapter": "钠及其化合物",
+        "difficulty": 2,
+        "importance": 3,
+        "description": "掌握焰色试验的操作方法与现象(钠黄色、钾紫色),理解其用于鉴别某些金属离子。",
+        "keywords": "焰色试验,钠黄色,钾紫色,鉴别,蓝色钴玻璃",
+        "exam_type": "选择题,实验鉴别"
+      },
+      {
+        "id": "K11",
+        "name": "钠的存在与用途",
+        "type": "KnowledgePoint",
+        "module": "必修第一册(无机基础)",
+        "chapter": "钠及其化合物",
+        "difficulty": 2,
+        "importance": 2,
+        "description": "了解钠在自然界以化合态存在(主要NaCl),理解钠的用途(制取钠化合物、电光源)。",
+        "keywords": "钠,化合态,用途,钠灯,制取",
+        "exam_type": "选择题,概念"
+      },
+      {
+        "id": "K12",
+        "name": "铁的单质",
+        "type": "KnowledgePoint",
+        "module": "必修第一册(无机基础)",
+        "chapter": "铁金属材料",
+        "difficulty": 2,
+        "importance": 3,
+        "description": "掌握铁的物理性质与化学性质(与氧气、氯气、水蒸气反应),理解铁的变价特征。",
+        "keywords": "铁,物理性质,化学性质,变价,与水蒸气反应",
+        "exam_type": "选择题,铁的性质"
+      },
+      {
+        "id": "K13",
+        "name": "铁的氧化物",
+        "type": "KnowledgePoint",
+        "module": "必修第一册(无机基础)",
+        "chapter": "铁金属材料",
+        "difficulty": 3,
+        "importance": 3,
+        "description": "掌握FeO、Fe2O3、Fe3O4的性质与颜色,理解它们与酸的反应及用途。",
+        "keywords": "铁的氧化物,FeO,Fe2O3,Fe3O4,颜色,用途",
+        "exam_type": "选择题,氧化物性质"
+      },
+      {
+        "id": "K14",
+        "name": "铁的氢氧化物",
+        "type": "KnowledgePoint",
+        "module": "必修第一册(无机基础)",
+        "chapter": "铁金属材料",
+        "difficulty": 3,
+        "importance": 4,
+        "description": "掌握Fe(OH)2与Fe(OH)3的制备、颜色变化(白色到灰绿色到红褐色)及性质。",
+        "keywords": "氢氧化亚铁,氢氧化铁,颜色变化,制备,氧化",
+        "exam_type": "选择题,实验题,Fe(OH)2制备"
+      },
+      {
+        "id": "K15",
+        "name": "铁盐与亚铁盐的相互转化",
+        "type": "KnowledgePoint",
+        "module": "必修第一册(无机基础)",
+        "chapter": "铁金属材料",
+        "difficulty": 5,
+        "importance": 5,
+        "description": "掌握Fe2+与Fe3+的检验方法(KSCN)及相互转化条件(氧化剂与还原剂),理解守恒法计算。",
+        "keywords": "铁盐,亚铁盐,Fe2+,Fe3+,KSCN检验,相互转化",
+        "exam_type": "综合题,推断题,Fe2+Fe3+转化"
+      },
+      {
+        "id": "K16",
+        "name": "合金与金属材料",
+        "type": "KnowledgePoint",
+        "module": "必修第一册(无机基础)",
+        "chapter": "铁金属材料",
+        "difficulty": 2,
+        "importance": 2,
+        "description": "理解合金的概念与特性(硬度大、熔点低),了解常见合金(钢、黄铜、硬铝)及新型材料。",
+        "keywords": "合金,硬度,熔点,钢,黄铜,硬铝,新型材料",
+        "exam_type": "选择题,概念"
+      },
+      {
+        "id": "K17",
+        "name": "原子结构",
+        "type": "KnowledgePoint",
+        "module": "必修第一册(无机基础)",
+        "chapter": "物质结构 元素周期律",
+        "difficulty": 3,
+        "importance": 4,
+        "description": "理解原子的构成(质子、中子、电子),掌握质子数、中子数、质量数、核电荷数的关系。",
+        "keywords": "原子结构,质子,中子,电子,质量数,核电荷数",
+        "exam_type": "选择题,原子结构计算"
+      },
+      {
+        "id": "K18",
+        "name": "核外电子排布(前18号)",
+        "type": "KnowledgePoint",
+        "module": "必修第一册(无机基础)",
+        "chapter": "物质结构 元素周期律",
+        "difficulty": 3,
+        "importance": 4,
+        "description": "掌握核外电子分层排布规律(能量最低原理、每层最多2n的平方个等),能书写前18号元素原子结构示意图。",
+        "keywords": "核外电子排布,KLM层,原子结构示意图,2n平方",
+        "exam_type": "选择题,画结构示意图"
+      },
+      {
+        "id": "K19",
+        "name": "元素周期表",
+        "type": "KnowledgePoint",
+        "module": "必修第一册(无机基础)",
+        "chapter": "物质结构 元素周期律",
+        "difficulty": 4,
+        "importance": 5,
+        "description": "掌握元素周期表的结构(周期、族),理解周期序与族序数与电子层、价电子的关系。",
+        "keywords": "元素周期表,周期,族,主族副族,周期序",
+        "exam_type": "选择题,周期表结构"
+      },
+      {
+        "id": "K20",
+        "name": "元素周期律",
+        "type": "KnowledgePoint",
+        "module": "必修第一册(无机基础)",
+        "chapter": "物质结构 元素周期律",
+        "difficulty": 4,
+        "importance": 5,
+        "description": "理解元素周期律(随原子序数递增元素性质呈周期性变化),掌握原子半径、化合价、金属性非金属性的递变规律。",
+        "keywords": "元素周期律,原子半径,化合价,金属性非金属性,递变",
+        "exam_type": "选择题,推断题,周期律"
+      },
+      {
+        "id": "K21",
+        "name": "化学键(离子键与共价键)",
+        "type": "KnowledgePoint",
+        "module": "必修第一册(无机基础)",
+        "chapter": "物质结构 元素周期律",
+        "difficulty": 4,
+        "importance": 5,
+        "description": "理解离子键与共价键的形成与本质,掌握电子式表示物质形成过程,区分离子化合物与共价化合物。",
+        "keywords": "离子键,共价键,电子式,离子化合物,共价化合物",
+        "exam_type": "选择题,电子式书写"
+      },
+      {
+        "id": "K22",
+        "name": "化学反应与能量变化",
+        "type": "KnowledgePoint",
+        "module": "必修第二册(反应与有机)",
+        "chapter": "化学反应与能量",
+        "difficulty": 3,
+        "importance": 4,
+        "description": "理解化学反应中能量变化(吸热与放热)的本质(反应物总能量与生成物总能量的相对大小)。",
+        "keywords": "能量变化,放热反应,吸热反应,反应物生成物总能量",
+        "exam_type": "选择题,能量变化判断"
+      },
+      {
+        "id": "K23",
+        "name": "化学能与热能",
+        "type": "KnowledgePoint",
+        "module": "必修第二册(反应与有机)",
+        "chapter": "化学反应与能量",
+        "difficulty": 2,
+        "importance": 3,
+        "description": "理解化学能与热能的转化,了解中和热测定实验及燃料的燃烧。",
+        "keywords": "化学能热能,中和热,燃烧,放热吸热",
+        "exam_type": "选择题,实验题"
+      },
+      {
+        "id": "K24",
+        "name": "化学能与电能(原电池初步)",
+        "type": "KnowledgePoint",
+        "module": "必修第二册(反应与有机)",
+        "chapter": "化学反应与能量",
+        "difficulty": 4,
+        "importance": 4,
+        "description": "理解原电池的原理(化学能转化为电能),掌握原电池的构成条件与电极反应。",
+        "keywords": "原电池,化学能电能,电极反应,构成条件",
+        "exam_type": "选择题,实验题,原电池"
+      },
+      {
+        "id": "K25",
+        "name": "化学反应速率(初步)",
+        "type": "KnowledgePoint",
+        "module": "必修第二册(反应与有机)",
+        "chapter": "化学反应与能量",
+        "difficulty": 3,
+        "importance": 3,
+        "description": "初步了解化学反应速率的概念与表示方法,了解影响反应速率的因素。",
+        "keywords": "反应速率,表示方法,影响因素,初步",
+        "exam_type": "选择题,概念"
+      },
+      {
+        "id": "K26",
+        "name": "甲烷",
+        "type": "KnowledgePoint",
+        "module": "必修第二册(反应与有机)",
+        "chapter": "有机化合物",
+        "difficulty": 3,
+        "importance": 4,
+        "description": "掌握甲烷的分子结构(正四面体)与化学性质(取代反应、氧化反应、受热分解)。",
+        "keywords": "甲烷,正四面体,取代反应,氧化反应,燃烧",
+        "exam_type": "选择题,甲烷性质"
+      },
+      {
+        "id": "K27",
+        "name": "乙烯",
+        "type": "KnowledgePoint",
+        "module": "必修第二册(反应与有机)",
+        "chapter": "有机化合物",
+        "difficulty": 4,
+        "importance": 4,
+        "description": "掌握乙烯的分子结构(平面型、碳碳双键)与化学性质(加成反应、聚合反应、氧化反应)。",
+        "keywords": "乙烯,碳碳双键,加成反应,聚合反应,加聚",
+        "exam_type": "选择题,计算题,乙烯性质"
+      },
+      {
+        "id": "K28",
+        "name": "苯",
+        "type": "KnowledgePoint",
+        "module": "必修第二册(反应与有机)",
+        "chapter": "有机化合物",
+        "difficulty": 4,
+        "importance": 4,
+        "description": "掌握苯的分子结构(环状、特殊键)与化学性质(取代、加成反应的特殊性)。",
+        "keywords": "苯,苯环结构,取代反应,加成反应,特殊键",
+        "exam_type": "选择题,苯的性质"
+      },
+      {
+        "id": "K29",
+        "name": "乙醇",
+        "type": "KnowledgePoint",
+        "module": "必修第二册(反应与有机)",
+        "chapter": "有机化合物",
+        "difficulty": 3,
+        "importance": 4,
+        "description": "掌握乙醇的分子结构(羟基官能团)与化学性质(与钠反应、消去反应、氧化反应)。",
+        "keywords": "乙醇,羟基,与钠反应,消去反应,氧化反应",
+        "exam_type": "选择题,计算题,乙醇性质"
+      },
+      {
+        "id": "K30",
+        "name": "乙酸",
+        "type": "KnowledgePoint",
+        "module": "必修第二册(反应与有机)",
+        "chapter": "有机化合物",
+        "difficulty": 3,
+        "importance": 4,
+        "description": "掌握乙酸的分子结构(羧基官能团)与酸性及酯化反应原理与条件。",
+        "keywords": "乙酸,羧基,酸性,酯化反应,可逆反应",
+        "exam_type": "选择题,实验题,酯化反应"
+      },
+      {
+        "id": "K31",
+        "name": "基本营养物质",
+        "type": "KnowledgePoint",
+        "module": "必修第二册(反应与有机)",
+        "chapter": "有机化合物",
+        "difficulty": 3,
+        "importance": 3,
+        "description": "了解糖类(葡萄糖、淀粉、纤维素)、油脂、蛋白质的组成、性质及在人体中的作用。",
+        "keywords": "营养物质,糖类,油脂,蛋白质,葡萄糖,淀粉",
+        "exam_type": "选择题,概念"
+      },
+      {
+        "id": "K32",
+        "name": "化学与自然资源开发利用",
+        "type": "KnowledgePoint",
+        "module": "必修第二册(反应与有机)",
+        "chapter": "化学与可持续发展",
+        "difficulty": 2,
+        "importance": 3,
+        "description": "了解海水资源的综合利用(海水提溴、提镁、提碘)、金属冶炼的方法。",
+        "keywords": "自然资源,海水提溴提镁提碘,金属冶炼,综合利用",
+        "exam_type": "选择题,工业流程"
+      },
+      {
+        "id": "K33",
+        "name": "化学品的合成与环境保护",
+        "type": "KnowledgePoint",
+        "module": "必修第二册(反应与有机)",
+        "chapter": "化学与可持续发展",
+        "difficulty": 2,
+        "importance": 2,
+        "description": "了解化肥、农药等化学品的合理使用及大气、水体污染的化学治理方法。",
+        "keywords": "化学品,化肥农药,环境保护,大气水污染,治理",
+        "exam_type": "选择题,概念"
+      },
+      {
+        "id": "K34",
+        "name": "反应热与焓变",
+        "type": "KnowledgePoint",
+        "module": "选择性必修1(化学反应原理)",
+        "chapter": "化学反应热",
+        "difficulty": 4,
+        "importance": 4,
+        "description": "理解反应热(焓变deltaH)的概念,掌握放热反应与吸热反应的判断及deltaH的正负号。",
+        "keywords": "反应热,焓变,deltaH,放热吸热,正负号",
+        "exam_type": "选择题,反应热判断"
+      },
+      {
+        "id": "K35",
+        "name": "热化学方程式",
+        "type": "KnowledgePoint",
+        "module": "选择性必修1(化学反应原理)",
+        "chapter": "化学反应热",
+        "difficulty": 4,
+        "importance": 5,
+        "description": "掌握热化学方程式的书写规则(注明状态、聚集状态、deltaH及单位、化学计量数含义)。",
+        "keywords": "热化学方程式,书写规则,聚集状态,化学计量数,deltaH",
+        "exam_type": "选择题,书写热化学方程式"
+      },
+      {
+        "id": "K36",
+        "name": "盖斯定律",
+        "type": "KnowledgePoint",
+        "module": "选择性必修1(化学反应原理)",
+        "chapter": "化学反应热",
+        "difficulty": 4,
+        "importance": 5,
+        "description": "理解盖斯定律(反应总热量只与始终态有关),能利用盖斯定律计算未知反应的反应热。",
+        "keywords": "盖斯定律,始终态,反应热计算,加和",
+        "exam_type": "计算题,盖斯定律应用"
+      },
+      {
+        "id": "K37",
+        "name": "反应热的计算",
+        "type": "KnowledgePoint",
+        "module": "选择性必修1(化学反应原理)",
+        "chapter": "化学反应热",
+        "difficulty": 4,
+        "importance": 4,
+        "description": "掌握利用键能计算反应热(反应物键能减生成物键能)及利用盖斯定律的综合计算。",
+        "keywords": "反应热计算,键能,燃烧热,中和热,盖斯定律",
+        "exam_type": "计算题,反应热综合计算"
+      },
+      {
+        "id": "K38",
+        "name": "化学反应速率的概念与计算",
+        "type": "KnowledgePoint",
+        "module": "选择性必修1(化学反应原理)",
+        "chapter": "化学反应速率",
+        "difficulty": 3,
+        "importance": 4,
+        "description": "掌握化学反应速率的定义v等于delta c除以delta t及其计算,理解速率的比值等于方程式计量数之比。",
+        "keywords": "反应速率,delta c除以delta t,计算,计量数之比",
+        "exam_type": "计算题,速率计算"
+      },
+      {
+        "id": "K39",
+        "name": "影响反应速率的因素",
+        "type": "KnowledgePoint",
+        "module": "选择性必修1(化学反应原理)",
+        "chapter": "化学反应速率",
+        "difficulty": 4,
+        "importance": 5,
+        "description": "掌握浓度、温度、压强、催化剂等因素对反应速率的影响,理解有效碰撞理论解释。",
+        "keywords": "影响速率,浓度,温度,压强,催化剂,有效碰撞",
+        "exam_type": "选择题,实验题,速率影响因素"
+      },
+      {
+        "id": "K40",
+        "name": "速率常数与反应速率方程",
+        "type": "KnowledgePoint",
+        "module": "选择性必修1(化学反应原理)",
+        "chapter": "化学反应速率",
+        "difficulty": 4,
+        "importance": 4,
+        "description": "理解速率方程v等于k乘以浓度幂及速率常数k的物理意义与影响因素。",
+        "keywords": "速率方程,速率常数k,反应级数,浓度幂",
+        "exam_type": "计算题,速率方程"
+      },
+      {
+        "id": "K41",
+        "name": "催化剂与反应速率",
+        "type": "KnowledgePoint",
+        "module": "选择性必修1(化学反应原理)",
+        "chapter": "化学反应速率",
+        "difficulty": 3,
+        "importance": 3,
+        "description": "理解催化剂改变反应速率的原理(降低活化能),了解催化剂的选择性与特性。",
+        "keywords": "催化剂,活化能,选择性,改变途径",
+        "exam_type": "选择题,催化剂原理"
+      },
+      {
+        "id": "K42",
+        "name": "化学平衡状态",
+        "type": "KnowledgePoint",
+        "module": "选择性必修1(化学反应原理)",
+        "chapter": "化学平衡",
+        "difficulty": 4,
+        "importance": 5,
+        "description": "理解可逆反应与化学平衡状态的概念,掌握判断平衡的标志(正逆反应速率相等)。",
+        "keywords": "化学平衡,可逆反应,平衡状态,正逆速率相等,判断标志",
+        "exam_type": "选择题,平衡判断"
+      },
+      {
+        "id": "K43",
+        "name": "化学平衡常数",
+        "type": "KnowledgePoint",
+        "module": "选择性必修1(化学反应原理)",
+        "chapter": "化学平衡",
+        "difficulty": 5,
+        "importance": 5,
+        "description": "掌握化学平衡常数K的表达式及其意义,理解K只受温度影响及转化率与K的关系。",
+        "keywords": "平衡常数,K,表达式,温度,转化率",
+        "exam_type": "计算题,平衡常数"
+      },
+      {
+        "id": "K44",
+        "name": "化学反应的方向",
+        "type": "KnowledgePoint",
+        "module": "选择性必修1(化学反应原理)",
+        "chapter": "化学平衡",
+        "difficulty": 3,
+        "importance": 3,
+        "description": "理解焓变、熵变及复合判据(deltaG等于deltaH减T乘deltaS)判断反应自发性的方法。",
+        "keywords": "反应方向,焓变,熵变,deltaG,自发性,复合判据",
+        "exam_type": "选择题,反应方向判断"
+      },
+      {
+        "id": "K45",
+        "name": "化学平衡的移动(勒夏特列原理)",
+        "type": "KnowledgePoint",
+        "module": "选择性必修1(化学反应原理)",
+        "chapter": "化学平衡",
+        "difficulty": 5,
+        "importance": 5,
+        "description": "掌握浓度、温度、压强对平衡移动的影响,理解勒夏特列原理及平衡移动方向判断。",
+        "keywords": "平衡移动,勒夏特列原理,浓度温度压强,移动方向",
+        "exam_type": "选择题,计算题,平衡移动"
+      },
+      {
+        "id": "K46",
+        "name": "等效平衡",
+        "type": "KnowledgePoint",
+        "module": "选择性必修1(化学反应原理)",
+        "chapter": "化学平衡",
+        "difficulty": 5,
+        "importance": 5,
+        "description": "理解等效平衡的概念与判断方法(恒温恒压、恒温恒容),能解决等效平衡问题。",
+        "keywords": "等效平衡,恒温恒压,恒温恒容,极限转换法",
+        "exam_type": "综合题,等效平衡"
+      },
+      {
+        "id": "K47",
+        "name": "弱电解质的电离",
+        "type": "KnowledgePoint",
+        "module": "选择性必修1(化学反应原理)",
+        "chapter": "水溶液中的离子反应与平衡",
+        "difficulty": 4,
+        "importance": 4,
+        "description": "理解强电解质与弱电解质的区别,掌握弱酸弱碱的电离平衡及电离常数Ka、Kb。",
+        "keywords": "弱电解质,电离平衡,电离常数,Ka,Kb,强弱电解质",
+        "exam_type": "选择题,计算题,电离平衡"
+      },
+      {
+        "id": "K48",
+        "name": "水的电离与溶液的酸碱性",
+        "type": "KnowledgePoint",
+        "module": "选择性必修1(化学反应原理)",
+        "chapter": "水溶液中的离子反应与平衡",
+        "difficulty": 4,
+        "importance": 4,
+        "description": "理解水的电离平衡与水的离子积常数Kw,理解溶液酸碱性与氢离子氢氧根浓度的关系。",
+        "keywords": "水电离,离子积Kw,酸碱性,氢离子,氢氧根",
+        "exam_type": "选择题,计算题"
+      },
+      {
+        "id": "K49",
+        "name": "溶液的pH",
+        "type": "KnowledgePoint",
+        "module": "选择性必修1(化学反应原理)",
+        "chapter": "水溶液中的离子反应与平衡",
+        "difficulty": 4,
+        "importance": 5,
+        "description": "掌握pH的定义(pH等于负对数氢离子浓度)及计算方法,理解pH与酸碱性强弱的关系。",
+        "keywords": "pH,定义,计算,负对数,酸碱性,pH试纸",
+        "exam_type": "计算题,pH计算"
+      },
+      {
+        "id": "K50",
+        "name": "盐类的水解",
+        "type": "KnowledgePoint",
+        "module": "选择性必修1(化学反应原理)",
+        "chapter": "水溶液中的离子反应与平衡",
+        "difficulty": 5,
+        "importance": 5,
+        "description": "理解盐类水解的本质(促进水的电离),掌握水解规律(有弱才水解)及影响因素。",
+        "keywords": "盐类水解,水解规律,有弱才水解,促进水电离,影响因素",
+        "exam_type": "选择题,计算题,水解平衡"
+      },
+      {
+        "id": "K51",
+        "name": "难溶电解质的溶解平衡",
+        "type": "KnowledgePoint",
+        "module": "选择性必修1(化学反应原理)",
+        "chapter": "水溶液中的离子反应与平衡",
+        "difficulty": 5,
+        "importance": 5,
+        "description": "理解沉淀溶解平衡与溶度积常数Ksp,掌握沉淀的生成、溶解与转化原理及应用。",
+        "keywords": "溶解平衡,溶度积Ksp,沉淀生成溶解转化,沉淀转化",
+        "exam_type": "综合题,溶解平衡Ksp"
+      },
+      {
+        "id": "K52",
+        "name": "原电池原理",
+        "type": "KnowledgePoint",
+        "module": "选择性必修1(化学反应原理)",
+        "chapter": "电池与电解池(电化学)",
+        "difficulty": 5,
+        "importance": 5,
+        "description": "掌握原电池的工作原理(正负极判断、电极反应式书写、电子与离子流向)及构成条件。",
+        "keywords": "原电池,正负极,电极反应式,电子流向,离子流向",
+        "exam_type": "选择题,实验题,原电池综合"
+      },
+      {
+        "id": "K53",
+        "name": "化学电源",
+        "type": "KnowledgePoint",
+        "module": "选择性必修1(化学反应原理)",
+        "chapter": "电池与电解池(电化学)",
+        "difficulty": 4,
+        "importance": 4,
+        "description": "了解一次电池、二次电池(蓄电池)与燃料电池的原理及常见化学电源(铅蓄电池、燃料电池)。",
+        "keywords": "化学电源,一次电池,二次电池,燃料电池,铅蓄电池",
+        "exam_type": "选择题,化学电源"
+      },
+      {
+        "id": "K54",
+        "name": "电解原理",
+        "type": "KnowledgePoint",
+        "module": "选择性必修1(化学反应原理)",
+        "chapter": "电池与电解池(电化学)",
+        "difficulty": 5,
+        "importance": 5,
+        "description": "掌握电解池的工作原理(阴阳极判断、电极反应、放电顺序)及电解规律。",
+        "keywords": "电解池,阴阳极,电极反应,放电顺序,电解规律",
+        "exam_type": "选择题,计算题,电解原理"
+      },
+      {
+        "id": "K55",
+        "name": "电解池的应用",
+        "type": "KnowledgePoint",
+        "module": "选择性必修1(化学反应原理)",
+        "chapter": "电池与电解池(电化学)",
+        "difficulty": 4,
+        "importance": 4,
+        "description": "掌握电镀、电解饱和食盐水(氯碱工业)、电冶金等电解池应用及电极反应式书写。",
+        "keywords": "电镀,电解食盐水,氯碱工业,电冶金,应用",
+        "exam_type": "选择题,实验题,电解应用"
+      },
+      {
+        "id": "K56",
+        "name": "金属的电化学腐蚀与防护",
+        "type": "KnowledgePoint",
+        "module": "选择性必修1(化学反应原理)",
+        "chapter": "电池与电解池(电化学)",
+        "difficulty": 4,
+        "importance": 4,
+        "description": "理解金属腐蚀(化学腐蚀与电化学腐蚀)的原理,掌握牺牲阳极与外加电流等防护方法。",
+        "keywords": "金属腐蚀,电化学腐蚀,吸氧腐蚀析氢腐蚀,防护,牺牲阳极",
+        "exam_type": "选择题,腐蚀防护"
+      },
+      {
+        "id": "K57",
+        "name": "原子核外电子排布(构造原理)",
+        "type": "KnowledgePoint",
+        "module": "选择性必修2(物质结构与性质)",
+        "chapter": "原子结构与元素性质",
+        "difficulty": 4,
+        "importance": 5,
+        "description": "掌握构造原理与能级顺序(1s2s2p3s3p4s等),能书写1-36号元素基态原子的电子排布式与轨道表示式。",
+        "keywords": "构造原理,能级,电子排布式,轨道表示式,基态激发态",
+        "exam_type": "选择题,书写电子排布"
+      },
+      {
+        "id": "K58",
+        "name": "原子结构与元素周期表",
+        "type": "KnowledgePoint",
+        "module": "选择性必修2(物质结构与性质)",
+        "chapter": "原子结构与元素性质",
+        "difficulty": 4,
+        "importance": 4,
+        "description": "理解价电子排布与周期表分区(s、p、d、ds、f区)的关系,能由电子排布推断元素位置。",
+        "keywords": "价电子,周期表分区,s区p区d区,族,位置推断",
+        "exam_type": "选择题,推断题"
+      },
+      {
+        "id": "K59",
+        "name": "元素周期律(原子半径电离能)",
+        "type": "KnowledgePoint",
+        "module": "选择性必修2(物质结构与性质)",
+        "chapter": "原子结构与元素性质",
+        "difficulty": 4,
+        "importance": 4,
+        "description": "掌握原子半径、第一电离能的递变规律及异常现象(如Be大于B、N大于O),理解其与电子排布的关系。",
+        "keywords": "原子半径,第一电离能,递变规律,异常,电子排布",
+        "exam_type": "选择题,周期律"
+      },
+      {
+        "id": "K60",
+        "name": "电负性",
+        "type": "KnowledgePoint",
+        "module": "选择性必修2(物质结构与性质)",
+        "chapter": "原子结构与元素性质",
+        "difficulty": 3,
+        "importance": 4,
+        "description": "理解电负性的概念与递变规律,能用电负性判断元素的吸引电子能力及化学键类型。",
+        "keywords": "电负性,递变规律,吸引电子,化学键类型判断",
+        "exam_type": "选择题,电负性应用"
+      },
+      {
+        "id": "K61",
+        "name": "共价键的本质与类型",
+        "type": "KnowledgePoint",
+        "module": "选择性必修2(物质结构与性质)",
+        "chapter": "化学键与分子结构",
+        "difficulty": 4,
+        "importance": 4,
+        "description": "理解共价键的本质(电子云重叠)与类型(sigma键与pi键),掌握配位键概念。",
+        "keywords": "共价键,电子云重叠,sigma键,pi键,配位键",
+        "exam_type": "选择题,共价键类型"
+      },
+      {
+        "id": "K62",
+        "name": "键参数(键长键能键角)",
+        "type": "KnowledgePoint",
+        "module": "选择性必修2(物质结构与性质)",
+        "chapter": "化学键与分子结构",
+        "difficulty": 3,
+        "importance": 3,
+        "description": "理解键长、键能、键角等键参数的含义,理解键参数与分子稳定性及空间构型的关系。",
+        "keywords": "键长,键能,键角,键参数,稳定性,构型",
+        "exam_type": "选择题,键参数"
+      },
+      {
+        "id": "K63",
+        "name": "分子的空间结构(VSEPR模型)",
+        "type": "KnowledgePoint",
+        "module": "选择性必修2(物质结构与性质)",
+        "chapter": "化学键与分子结构",
+        "difficulty": 5,
+        "importance": 5,
+        "description": "掌握价层电子对互斥(VSEPR)模型预测分子空间构型(直线、平面三角、四面体、三角双锥、八面体)。",
+        "keywords": "VSEPR,价层电子对,空间构型,直线平面三角四面体",
+        "exam_type": "选择题,推断分子构型"
+      },
+      {
+        "id": "K64",
+        "name": "杂化轨道理论",
+        "type": "KnowledgePoint",
+        "module": "选择性必修2(物质结构与性质)",
+        "chapter": "化学键与分子结构",
+        "difficulty": 5,
+        "importance": 5,
+        "description": "掌握sp、sp2、sp3杂化轨道类型及与分子空间构型的关系,能判断中心原子的杂化方式。",
+        "keywords": "杂化轨道,sp,sp2,sp3,杂化方式,构型关系",
+        "exam_type": "选择题,判断杂化"
+      },
+      {
+        "id": "K65",
+        "name": "分子的极性",
+        "type": "KnowledgePoint",
+        "module": "选择性必修2(物质结构与性质)",
+        "chapter": "化学键与分子结构",
+        "difficulty": 3,
+        "importance": 3,
+        "description": "理解极性键与非极性键,掌握极性分子与非极性分子的判断(键的极性与分子空间对称性)。",
+        "keywords": "极性键,非极性键,极性分子,非极性分子,对称性",
+        "exam_type": "选择题,极性判断"
+      },
+      {
+        "id": "K66",
+        "name": "分子间作用力与氢键",
+        "type": "KnowledgePoint",
+        "module": "选择性必修2(物质结构与性质)",
+        "chapter": "化学键与分子结构",
+        "difficulty": 4,
+        "importance": 4,
+        "description": "理解范德华力与氢键的概念及对物质熔沸点的影响,掌握氢键的形成条件与特点。",
+        "keywords": "范德华力,氢键,熔沸点,形成条件,分子间作用力",
+        "exam_type": "选择题,氢键判断"
+      },
+      {
+        "id": "K67",
+        "name": "晶体的常识",
+        "type": "KnowledgePoint",
+        "module": "选择性必修2(物质结构与性质)",
+        "chapter": "晶体结构",
+        "difficulty": 2,
+        "importance": 3,
+        "description": "理解晶体与非晶体的区别,掌握晶体的基本特征(自范性、各向异性、固定熔点)及四种晶体类型。",
+        "keywords": "晶体,非晶体,自范性,各向异性,四种晶体类型",
+        "exam_type": "选择题,晶体概念"
+      },
+      {
+        "id": "K68",
+        "name": "离子晶体",
+        "type": "KnowledgePoint",
+        "module": "选择性必修2(物质结构与性质)",
+        "chapter": "晶体结构",
+        "difficulty": 3,
+        "importance": 3,
+        "description": "理解离子晶体的结构特点与配位数,掌握离子晶体的物理性质(熔沸点、硬度、溶解性)。",
+        "keywords": "离子晶体,配位数,NaCl型,CsCl型,熔沸点",
+        "exam_type": "选择题,离子晶体性质"
+      },
+      {
+        "id": "K69",
+        "name": "原子晶体(共价晶体)",
+        "type": "KnowledgePoint",
+        "module": "选择性必修2(物质结构与性质)",
+        "chapter": "晶体结构",
+        "difficulty": 3,
+        "importance": 3,
+        "description": "理解原子晶体的结构特点(所有原子以共价键结合成空间网状),掌握金刚石、二氧化硅的性质。",
+        "keywords": "原子晶体,共价键,空间网状,金刚石,二氧化硅",
+        "exam_type": "选择题,原子晶体"
+      },
+      {
+        "id": "K70",
+        "name": "分子晶体",
+        "type": "KnowledgePoint",
+        "module": "选择性必修2(物质结构与性质)",
+        "chapter": "晶体结构",
+        "difficulty": 2,
+        "importance": 3,
+        "description": "理解分子晶体的结构特点(分子间以分子间作用力结合),掌握分子晶体的物理性质及冰的结构。",
+        "keywords": "分子晶体,分子间作用力,冰,熔沸点低,干冰",
+        "exam_type": "选择题,分子晶体"
+      },
+      {
+        "id": "K71",
+        "name": "金属晶体",
+        "type": "KnowledgePoint",
+        "module": "选择性必修2(物质结构与性质)",
+        "chapter": "晶体结构",
+        "difficulty": 3,
+        "importance": 3,
+        "description": "理解金属晶体的结构特点(金属阳离子与自由电子的金属键),理解金属通性与电子气理论。",
+        "keywords": "金属晶体,金属键,自由电子,电子气理论,金属通性",
+        "exam_type": "选择题,金属晶体"
+      },
+      {
+        "id": "K72",
+        "name": "有机化合物的分类",
+        "type": "KnowledgePoint",
+        "module": "选择性必修3(有机化学基础)",
+        "chapter": "有机化合物的结构特点",
+        "difficulty": 2,
+        "importance": 3,
+        "description": "掌握有机物按碳骨架(链状、环状)与官能团(烯、炔、醇、醛、酸、酯等)的分类方法。",
+        "keywords": "有机物分类,碳骨架,官能团,链状环状,烯炔醇醛酸酯",
+        "exam_type": "选择题,分类判断"
+      },
+      {
+        "id": "K73",
+        "name": "有机物中的官能团",
+        "type": "KnowledgePoint",
+        "module": "选择性必修3(有机化学基础)",
+        "chapter": "有机化合物的结构特点",
+        "difficulty": 3,
+        "importance": 4,
+        "description": "掌握常见官能团(碳碳双键、三键、羟基、醛基、羧基、酯基等)的结构与名称及特征反应。",
+        "keywords": "官能团,双键,三键,羟基,醛基,羧基,酯基,特征反应",
+        "exam_type": "选择题,官能团识别"
+      },
+      {
+        "id": "K74",
+        "name": "有机化合物的命名",
+        "type": "KnowledgePoint",
+        "module": "选择性必修3(有机化学基础)",
+        "chapter": "有机化合物的结构特点",
+        "difficulty": 3,
+        "importance": 4,
+        "description": "掌握有机物系统命名法(选主链、编号、写名称)及习惯命名法,能正确命名烷烃及含官能团有机物。",
+        "keywords": "系统命名,主链,编号,烷烃命名,含官能团命名",
+        "exam_type": "选择题,命名题"
+      },
+      {
+        "id": "K75",
+        "name": "同分异构体",
+        "type": "KnowledgePoint",
+        "module": "选择性必修3(有机化学基础)",
+        "chapter": "有机化合物的结构特点",
+        "difficulty": 5,
+        "importance": 5,
+        "description": "理解同分异构现象与同分异构体的概念,掌握碳链异构、位置异构、官能团异构及书写与计数方法。",
+        "keywords": "同分异构体,碳链异构,位置异构,官能团异构,计数",
+        "exam_type": "选择题,书写同分异构体"
+      },
+      {
+        "id": "K76",
+        "name": "烷烃",
+        "type": "KnowledgePoint",
+        "module": "选择性必修3(有机化学基础)",
+        "chapter": "烃",
+        "difficulty": 3,
+        "importance": 4,
+        "description": "掌握烷烃的通式、结构特点(饱和链状)、命名及化学性质(取代反应、氧化燃烧)。",
+        "keywords": "烷烃,通式,饱和,取代反应,命名,燃烧",
+        "exam_type": "选择题,计算题,烷烃"
+      },
+      {
+        "id": "K77",
+        "name": "烯烃",
+        "type": "KnowledgePoint",
+        "module": "选择性必修3(有机化学基础)",
+        "chapter": "烃",
+        "difficulty": 4,
+        "importance": 4,
+        "description": "掌握烯烃的通式、结构特点(碳碳双键)及化学性质(加成、加聚、氧化反应)。",
+        "keywords": "烯烃,双键,加成反应,加聚反应,氧化,马氏规则",
+        "exam_type": "选择题,计算题,烯烃"
+      },
+      {
+        "id": "K78",
+        "name": "炔烃",
+        "type": "KnowledgePoint",
+        "module": "选择性必修3(有机化学基础)",
+        "chapter": "烃",
+        "difficulty": 3,
+        "importance": 3,
+        "description": "掌握炔烃的通式、结构特点(碳碳三键)及化学性质(加成、氧化反应)。",
+        "keywords": "炔烃,三键,加成反应,氧化反应,乙炔",
+        "exam_type": "选择题,炔烃性质"
+      },
+      {
+        "id": "K79",
+        "name": "苯及芳香烃",
+        "type": "KnowledgePoint",
+        "module": "选择性必修3(有机化学基础)",
+        "chapter": "烃",
+        "difficulty": 4,
+        "importance": 4,
+        "description": "掌握苯的结构特点(大pi键)与化学性质(取代、加成反应的特殊性)及苯的同系物性质。",
+        "keywords": "苯,芳香烃,大pi键,取代反应,加成,苯的同系物",
+        "exam_type": "选择题,推断题,芳香烃"
+      },
+      {
+        "id": "K80",
+        "name": "石油与煤的加工",
+        "type": "KnowledgePoint",
+        "module": "选择性必修3(有机化学基础)",
+        "chapter": "烃",
+        "difficulty": 2,
+        "importance": 2,
+        "description": "了解石油的分馏、裂化、裂解及煤的干馏、气化、液化等加工方法及产物。",
+        "keywords": "石油,分馏,裂化,裂解,煤,干馏,气化,液化",
+        "exam_type": "选择题,工业概念"
+      },
+      {
+        "id": "K81",
+        "name": "卤代烃",
+        "type": "KnowledgePoint",
+        "module": "选择性必修3(有机化学基础)",
+        "chapter": "烃的衍生物",
+        "difficulty": 4,
+        "importance": 4,
+        "description": "掌握卤代烃的结构(卤素原子官能团)及化学性质(水解取代反应、消去反应)。",
+        "keywords": "卤代烃,卤素原子,水解反应,消去反应,检验卤素",
+        "exam_type": "选择题,实验题,卤代烃"
+      },
+      {
+        "id": "K82",
+        "name": "醇",
+        "type": "KnowledgePoint",
+        "module": "选择性必修3(有机化学基础)",
+        "chapter": "烃的衍生物",
+        "difficulty": 4,
+        "importance": 4,
+        "description": "掌握醇的结构(羟基)与化学性质(与钠反应、消去反应、催化氧化、酯化反应)。",
+        "keywords": "醇,羟基,与钠反应,消去,催化氧化,酯化",
+        "exam_type": "选择题,推断题,醇的性质"
+      },
+      {
+        "id": "K83",
+        "name": "酚",
+        "type": "KnowledgePoint",
+        "module": "选择性必修3(有机化学基础)",
+        "chapter": "烃的衍生物",
+        "difficulty": 3,
+        "importance": 3,
+        "description": "掌握酚的结构(苯环上直接连羟基)与化学性质(弱酸性、显色反应、取代反应)。",
+        "keywords": "酚,苯酚,弱酸性,显色反应,取代反应,苯环羟基",
+        "exam_type": "选择题,苯酚性质"
+      },
+      {
+        "id": "K84",
+        "name": "醛",
+        "type": "KnowledgePoint",
+        "module": "选择性必修3(有机化学基础)",
+        "chapter": "烃的衍生物",
+        "difficulty": 4,
+        "importance": 4,
+        "description": "掌握醛的结构(醛基)与化学性质(银镜反应、与新制氢氧化铜反应、加成还原反应)。",
+        "keywords": "醛,醛基,银镜反应,费林反应,加成还原,氧化还原",
+        "exam_type": "选择题,推断题,醛的性质"
+      },
+      {
+        "id": "K85",
+        "name": "羧酸",
+        "type": "KnowledgePoint",
+        "module": "选择性必修3(有机化学基础)",
+        "chapter": "烃的衍生物",
+        "difficulty": 3,
+        "importance": 3,
+        "description": "掌握羧酸的结构(羧基)与化学性质(酸性、酯化反应)及常见羧酸(甲酸、乙酸、苯甲酸)。",
+        "keywords": "羧酸,羧基,酸性,酯化反应,甲酸,乙酸,苯甲酸",
+        "exam_type": "选择题,推断题,羧酸"
+      },
+      {
+        "id": "K86",
+        "name": "酯",
+        "type": "KnowledgePoint",
+        "module": "选择性必修3(有机化学基础)",
+        "chapter": "烃的衍生物",
+        "difficulty": 4,
+        "importance": 4,
+        "description": "掌握酯的结构(酯基)与化学性质(水解反应),理解酯化反应与酯的水解是可逆关系。",
+        "keywords": "酯,酯基,水解反应,皂化,可逆反应,酯化水解",
+        "exam_type": "选择题,计算题,酯"
+      },
+      {
+        "id": "K87",
+        "name": "有机合成",
+        "type": "KnowledgePoint",
+        "module": "选择性必修3(有机化学基础)",
+        "chapter": "烃的衍生物",
+        "difficulty": 5,
+        "importance": 5,
+        "description": "掌握有机合成路线的设计方法(碳骨架构建、官能团引入与转化),理解逆合成分析法。",
+        "keywords": "有机合成,合成路线,逆合成分析,官能团转化,碳骨架",
+        "exam_type": "综合题,有机合成路线设计"
+      },
+      {
+        "id": "K88",
+        "name": "糖类",
+        "type": "KnowledgePoint",
+        "module": "选择性必修3(有机化学基础)",
+        "chapter": "生物大分子与合成高分子",
+        "difficulty": 3,
+        "importance": 3,
+        "description": "掌握糖类的分类(单糖、二糖、多糖)与葡萄糖、果糖、蔗糖、淀粉、纤维素的结构与性质。",
+        "keywords": "糖类,单糖,二糖,多糖,葡萄糖,淀粉,纤维素,银镜",
+        "exam_type": "选择题,计算题,糖类性质"
+      },
+      {
+        "id": "K89",
+        "name": "蛋白质与核酸",
+        "type": "KnowledgePoint",
+        "module": "选择性必修3(有机化学基础)",
+        "chapter": "生物大分子与合成高分子",
+        "difficulty": 3,
+        "importance": 3,
+        "description": "理解蛋白质的组成(氨基酸)与结构,掌握蛋白质的性质(盐析、变性、颜色反应)及核酸的功能。",
+        "keywords": "蛋白质,氨基酸,盐析,变性,颜色反应,核酸,DNA,RNA",
+        "exam_type": "选择题,蛋白质性质"
+      },
+      {
+        "id": "K90",
+        "name": "合成高分子化合物",
+        "type": "KnowledgePoint",
+        "module": "选择性必修3(有机化学基础)",
+        "chapter": "生物大分子与合成高分子",
+        "difficulty": 3,
+        "importance": 3,
+        "description": "理解加聚反应与缩聚反应的原理,了解塑料、合成纤维、合成橡胶等高分子材料的结构与性能。",
+        "keywords": "高分子,加聚反应,缩聚反应,塑料,合成纤维,合成橡胶,单体",
+        "exam_type": "选择题,高分子概念"
+      }
+    ],
+    "edges": [
+      {
+        "source": "M1",
+        "target": "C1",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "模块[M1]包含章节[物质及其变化]"
+      },
+      {
+        "source": "M1",
+        "target": "C2",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "模块[M1]包含章节[钠及其化合物]"
+      },
+      {
+        "source": "M1",
+        "target": "C3",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "模块[M1]包含章节[铁金属材料]"
+      },
+      {
+        "source": "M1",
+        "target": "C4",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "模块[M1]包含章节[物质结构 元素周期律]"
+      },
+      {
+        "source": "M2",
+        "target": "C5",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "模块[M2]包含章节[化学反应与能量]"
+      },
+      {
+        "source": "M2",
+        "target": "C6",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "模块[M2]包含章节[有机化合物]"
+      },
+      {
+        "source": "M2",
+        "target": "C7",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "模块[M2]包含章节[化学与可持续发展]"
+      },
+      {
+        "source": "M3",
+        "target": "C8",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "模块[M3]包含章节[化学反应热]"
+      },
+      {
+        "source": "M3",
+        "target": "C9",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "模块[M3]包含章节[化学反应速率]"
+      },
+      {
+        "source": "M3",
+        "target": "C10",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "模块[M3]包含章节[化学平衡]"
+      },
+      {
+        "source": "M3",
+        "target": "C11",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "模块[M3]包含章节[水溶液中的离子反应与平衡]"
+      },
+      {
+        "source": "M3",
+        "target": "C12",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "模块[M3]包含章节[电池与电解池(电化学)]"
+      },
+      {
+        "source": "M4",
+        "target": "C13",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "模块[M4]包含章节[原子结构与元素性质]"
+      },
+      {
+        "source": "M4",
+        "target": "C14",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "模块[M4]包含章节[化学键与分子结构]"
+      },
+      {
+        "source": "M4",
+        "target": "C15",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "模块[M4]包含章节[晶体结构]"
+      },
+      {
+        "source": "M5",
+        "target": "C16",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "模块[M5]包含章节[有机化合物的结构特点]"
+      },
+      {
+        "source": "M5",
+        "target": "C17",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "模块[M5]包含章节[烃]"
+      },
+      {
+        "source": "M5",
+        "target": "C18",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "模块[M5]包含章节[烃的衍生物]"
+      },
+      {
+        "source": "M5",
+        "target": "C19",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "模块[M5]包含章节[生物大分子与合成高分子]"
+      },
+      {
+        "source": "C1",
+        "target": "K1",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[物质的分类]"
+      },
+      {
+        "source": "C1",
+        "target": "K2",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[物质的转化]"
+      },
+      {
+        "source": "C1",
+        "target": "K3",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[离子反应]"
+      },
+      {
+        "source": "C1",
+        "target": "K4",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[离子方程式]"
+      },
+      {
+        "source": "C1",
+        "target": "K5",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[氧化还原反应]"
+      },
+      {
+        "source": "C1",
+        "target": "K6",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[氧化剂与还原剂]"
+      },
+      {
+        "source": "C2",
+        "target": "K7",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[钠的单质]"
+      },
+      {
+        "source": "C2",
+        "target": "K8",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[氧化钠与过氧化钠]"
+      },
+      {
+        "source": "C2",
+        "target": "K9",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[碳酸钠与碳酸氢钠]"
+      },
+      {
+        "source": "C2",
+        "target": "K10",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[焰色试验]"
+      },
+      {
+        "source": "C2",
+        "target": "K11",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[钠的存在与用途]"
+      },
+      {
+        "source": "C3",
+        "target": "K12",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[铁的单质]"
+      },
+      {
+        "source": "C3",
+        "target": "K13",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[铁的氧化物]"
+      },
+      {
+        "source": "C3",
+        "target": "K14",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[铁的氢氧化物]"
+      },
+      {
+        "source": "C3",
+        "target": "K15",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[铁盐与亚铁盐的相互转化]"
+      },
+      {
+        "source": "C3",
+        "target": "K16",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[合金与金属材料]"
+      },
+      {
+        "source": "C4",
+        "target": "K17",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[原子结构]"
+      },
+      {
+        "source": "C4",
+        "target": "K18",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[核外电子排布(前18号)]"
+      },
+      {
+        "source": "C4",
+        "target": "K19",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[元素周期表]"
+      },
+      {
+        "source": "C4",
+        "target": "K20",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[元素周期律]"
+      },
+      {
+        "source": "C4",
+        "target": "K21",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[化学键(离子键与共价键)]"
+      },
+      {
+        "source": "C5",
+        "target": "K22",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[化学反应与能量变化]"
+      },
+      {
+        "source": "C5",
+        "target": "K23",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[化学能与热能]"
+      },
+      {
+        "source": "C5",
+        "target": "K24",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[化学能与电能(原电池初步)]"
+      },
+      {
+        "source": "C5",
+        "target": "K25",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[化学反应速率(初步)]"
+      },
+      {
+        "source": "C6",
+        "target": "K26",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[甲烷]"
+      },
+      {
+        "source": "C6",
+        "target": "K27",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[乙烯]"
+      },
+      {
+        "source": "C6",
+        "target": "K28",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[苯]"
+      },
+      {
+        "source": "C6",
+        "target": "K29",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[乙醇]"
+      },
+      {
+        "source": "C6",
+        "target": "K30",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[乙酸]"
+      },
+      {
+        "source": "C6",
+        "target": "K31",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[基本营养物质]"
+      },
+      {
+        "source": "C7",
+        "target": "K32",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[化学与自然资源开发利用]"
+      },
+      {
+        "source": "C7",
+        "target": "K33",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[化学品的合成与环境保护]"
+      },
+      {
+        "source": "C8",
+        "target": "K34",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[反应热与焓变]"
+      },
+      {
+        "source": "C8",
+        "target": "K35",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[热化学方程式]"
+      },
+      {
+        "source": "C8",
+        "target": "K36",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[盖斯定律]"
+      },
+      {
+        "source": "C8",
+        "target": "K37",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[反应热的计算]"
+      },
+      {
+        "source": "C9",
+        "target": "K38",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[化学反应速率的概念与计算]"
+      },
+      {
+        "source": "C9",
+        "target": "K39",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[影响反应速率的因素]"
+      },
+      {
+        "source": "C9",
+        "target": "K40",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[速率常数与反应速率方程]"
+      },
+      {
+        "source": "C9",
+        "target": "K41",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[催化剂与反应速率]"
+      },
+      {
+        "source": "C10",
+        "target": "K42",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[化学平衡状态]"
+      },
+      {
+        "source": "C10",
+        "target": "K43",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[化学平衡常数]"
+      },
+      {
+        "source": "C10",
+        "target": "K44",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[化学反应的方向]"
+      },
+      {
+        "source": "C10",
+        "target": "K45",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[化学平衡的移动(勒夏特列原理)]"
+      },
+      {
+        "source": "C10",
+        "target": "K46",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[等效平衡]"
+      },
+      {
+        "source": "C11",
+        "target": "K47",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[弱电解质的电离]"
+      },
+      {
+        "source": "C11",
+        "target": "K48",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[水的电离与溶液的酸碱性]"
+      },
+      {
+        "source": "C11",
+        "target": "K49",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[溶液的pH]"
+      },
+      {
+        "source": "C11",
+        "target": "K50",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[盐类的水解]"
+      },
+      {
+        "source": "C11",
+        "target": "K51",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[难溶电解质的溶解平衡]"
+      },
+      {
+        "source": "C12",
+        "target": "K52",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[原电池原理]"
+      },
+      {
+        "source": "C12",
+        "target": "K53",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[化学电源]"
+      },
+      {
+        "source": "C12",
+        "target": "K54",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[电解原理]"
+      },
+      {
+        "source": "C12",
+        "target": "K55",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[电解池的应用]"
+      },
+      {
+        "source": "C12",
+        "target": "K56",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[金属的电化学腐蚀与防护]"
+      },
+      {
+        "source": "C13",
+        "target": "K57",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[原子核外电子排布(构造原理)]"
+      },
+      {
+        "source": "C13",
+        "target": "K58",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[原子结构与元素周期表]"
+      },
+      {
+        "source": "C13",
+        "target": "K59",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[元素周期律(原子半径电离能)]"
+      },
+      {
+        "source": "C13",
+        "target": "K60",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[电负性]"
+      },
+      {
+        "source": "C14",
+        "target": "K61",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[共价键的本质与类型]"
+      },
+      {
+        "source": "C14",
+        "target": "K62",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[键参数(键长键能键角)]"
+      },
+      {
+        "source": "C14",
+        "target": "K63",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[分子的空间结构(VSEPR模型)]"
+      },
+      {
+        "source": "C14",
+        "target": "K64",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[杂化轨道理论]"
+      },
+      {
+        "source": "C14",
+        "target": "K65",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[分子的极性]"
+      },
+      {
+        "source": "C14",
+        "target": "K66",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[分子间作用力与氢键]"
+      },
+      {
+        "source": "C15",
+        "target": "K67",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[晶体的常识]"
+      },
+      {
+        "source": "C15",
+        "target": "K68",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[离子晶体]"
+      },
+      {
+        "source": "C15",
+        "target": "K69",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[原子晶体(共价晶体)]"
+      },
+      {
+        "source": "C15",
+        "target": "K70",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[分子晶体]"
+      },
+      {
+        "source": "C15",
+        "target": "K71",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[金属晶体]"
+      },
+      {
+        "source": "C16",
+        "target": "K72",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[有机化合物的分类]"
+      },
+      {
+        "source": "C16",
+        "target": "K73",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[有机物中的官能团]"
+      },
+      {
+        "source": "C16",
+        "target": "K74",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[有机化合物的命名]"
+      },
+      {
+        "source": "C16",
+        "target": "K75",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[同分异构体]"
+      },
+      {
+        "source": "C17",
+        "target": "K76",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[烷烃]"
+      },
+      {
+        "source": "C17",
+        "target": "K77",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[烯烃]"
+      },
+      {
+        "source": "C17",
+        "target": "K78",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[炔烃]"
+      },
+      {
+        "source": "C17",
+        "target": "K79",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[苯及芳香烃]"
+      },
+      {
+        "source": "C17",
+        "target": "K80",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[石油与煤的加工]"
+      },
+      {
+        "source": "C18",
+        "target": "K81",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[卤代烃]"
+      },
+      {
+        "source": "C18",
+        "target": "K82",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[醇]"
+      },
+      {
+        "source": "C18",
+        "target": "K83",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[酚]"
+      },
+      {
+        "source": "C18",
+        "target": "K84",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[醛]"
+      },
+      {
+        "source": "C18",
+        "target": "K85",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[羧酸]"
+      },
+      {
+        "source": "C18",
+        "target": "K86",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[酯]"
+      },
+      {
+        "source": "C18",
+        "target": "K87",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[有机合成]"
+      },
+      {
+        "source": "C19",
+        "target": "K88",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[糖类]"
+      },
+      {
+        "source": "C19",
+        "target": "K89",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[蛋白质与核酸]"
+      },
+      {
+        "source": "C19",
+        "target": "K90",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点[合成高分子化合物]"
+      },
+      {
+        "source": "K1",
+        "target": "K3",
+        "relation": "PREREQUISITE",
+        "weight": 0.7,
+        "description": "物质分类是理解离子反应的基础"
+      },
+      {
+        "source": "K2",
+        "target": "K3",
+        "relation": "PREREQUISITE",
+        "weight": 0.7,
+        "description": "物质转化关系与离子反应相关"
+      },
+      {
+        "source": "K3",
+        "target": "K4",
+        "relation": "PREREQUISITE",
+        "weight": 0.9,
+        "description": "离子反应是书写离子方程式的基础"
+      },
+      {
+        "source": "K3",
+        "target": "K5",
+        "relation": "RELATED_TO",
+        "weight": 0.6,
+        "description": "离子反应与氧化还原都是反应原理"
+      },
+      {
+        "source": "K5",
+        "target": "K6",
+        "relation": "PREREQUISITE",
+        "weight": 0.9,
+        "description": "氧化还原概念是理解氧化剂还原剂的前提"
+      },
+      {
+        "source": "K5",
+        "target": "K15",
+        "relation": "PREREQUISITE",
+        "weight": 0.6,
+        "description": "氧化还原用于铁盐亚铁盐转化分析"
+      },
+      {
+        "source": "K7",
+        "target": "K8",
+        "relation": "PREREQUISITE",
+        "weight": 0.8,
+        "description": "钠单质性质是学习钠化合物的基础"
+      },
+      {
+        "source": "K8",
+        "target": "K9",
+        "relation": "PREREQUISITE",
+        "weight": 0.7,
+        "description": "氧化钠过氧化钠与碳酸盐相关"
+      },
+      {
+        "source": "K7",
+        "target": "K9",
+        "relation": "RELATED_TO",
+        "weight": 0.4,
+        "description": "钠及其化合物的性质关联"
+      },
+      {
+        "source": "K12",
+        "target": "K13",
+        "relation": "PREREQUISITE",
+        "weight": 0.8,
+        "description": "铁单质性质是铁氧化物的基础"
+      },
+      {
+        "source": "K13",
+        "target": "K14",
+        "relation": "PREREQUISITE",
+        "weight": 0.8,
+        "description": "铁氧化物是氢氧化物的基础"
+      },
+      {
+        "source": "K14",
+        "target": "K15",
+        "relation": "PREREQUISITE",
+        "weight": 0.8,
+        "description": "铁氢氧化物与铁盐亚铁盐转化相关"
+      },
+      {
+        "source": "K15",
+        "target": "K5",
+        "relation": "DERIVED_FROM",
+        "weight": 0.7,
+        "description": "铁盐亚铁盐转化基于氧化还原原理"
+      },
+      {
+        "source": "K17",
+        "target": "K18",
+        "relation": "PREREQUISITE",
+        "weight": 0.9,
+        "description": "原子结构是核外电子排布的基础"
+      },
+      {
+        "source": "K18",
+        "target": "K19",
+        "relation": "PREREQUISITE",
+        "weight": 0.8,
+        "description": "核外电子排布是周期表结构的基础"
+      },
+      {
+        "source": "K19",
+        "target": "K20",
+        "relation": "PREREQUISITE",
+        "weight": 0.9,
+        "description": "周期表结构是理解周期律的基础"
+      },
+      {
+        "source": "K20",
+        "target": "K18",
+        "relation": "DERIVED_FROM",
+        "weight": 0.7,
+        "description": "元素周期律由核外电子排布规律推导"
+      },
+      {
+        "source": "K21",
+        "target": "K18",
+        "relation": "RELATED_TO",
+        "weight": 0.5,
+        "description": "化学键与核外电子排布相关"
+      },
+      {
+        "source": "K22",
+        "target": "K23",
+        "relation": "PREREQUISITE",
+        "weight": 0.7,
+        "description": "能量变化是化学能热能的基础"
+      },
+      {
+        "source": "K22",
+        "target": "K34",
+        "relation": "RELATED_TO",
+        "weight": 0.6,
+        "description": "必修能量变化与选择性必修反应热相关"
+      },
+      {
+        "source": "K24",
+        "target": "K52",
+        "relation": "PREREQUISITE",
+        "weight": 0.5,
+        "description": "原电池初步与原电池原理衔接"
+      },
+      {
+        "source": "K25",
+        "target": "K38",
+        "relation": "PREREQUISITE",
+        "weight": 0.6,
+        "description": "反应速率初步与反应速率计算衔接"
+      },
+      {
+        "source": "K26",
+        "target": "K76",
+        "relation": "PREREQUISITE",
+        "weight": 0.6,
+        "description": "甲烷是烷烃的代表物"
+      },
+      {
+        "source": "K27",
+        "target": "K77",
+        "relation": "PREREQUISITE",
+        "weight": 0.7,
+        "description": "乙烯是烯烃的代表物"
+      },
+      {
+        "source": "K28",
+        "target": "K79",
+        "relation": "PREREQUISITE",
+        "weight": 0.7,
+        "description": "苯是芳香烃的代表物"
+      },
+      {
+        "source": "K29",
+        "target": "K82",
+        "relation": "PREREQUISITE",
+        "weight": 0.7,
+        "description": "乙醇是醇类的代表物"
+      },
+      {
+        "source": "K30",
+        "target": "K85",
+        "relation": "PREREQUISITE",
+        "weight": 0.7,
+        "description": "乙酸是羧酸的代表物"
+      },
+      {
+        "source": "K30",
+        "target": "K86",
+        "relation": "RELATED_TO",
+        "weight": 0.7,
+        "description": "乙酸酯化与酯的水解互为可逆"
+      },
+      {
+        "source": "K34",
+        "target": "K35",
+        "relation": "PREREQUISITE",
+        "weight": 0.9,
+        "description": "反应热概念是热化学方程式的基础"
+      },
+      {
+        "source": "K35",
+        "target": "K36",
+        "relation": "PREREQUISITE",
+        "weight": 0.9,
+        "description": "热化学方程式是盖斯定律的基础"
+      },
+      {
+        "source": "K36",
+        "target": "K37",
+        "relation": "PREREQUISITE",
+        "weight": 0.9,
+        "description": "盖斯定律是反应热计算的基础"
+      },
+      {
+        "source": "K34",
+        "target": "K37",
+        "relation": "RELATED_TO",
+        "weight": 0.5,
+        "description": "反应热概念与反应热计算相关"
+      },
+      {
+        "source": "K38",
+        "target": "K39",
+        "relation": "PREREQUISITE",
+        "weight": 0.8,
+        "description": "速率概念是研究影响因素的基础"
+      },
+      {
+        "source": "K39",
+        "target": "K40",
+        "relation": "PREREQUISITE",
+        "weight": 0.8,
+        "description": "影响因素与速率方程相关"
+      },
+      {
+        "source": "K39",
+        "target": "K41",
+        "relation": "RELATED_TO",
+        "weight": 0.7,
+        "description": "影响因素中催化剂与催化剂专节相关"
+      },
+      {
+        "source": "K25",
+        "target": "K42",
+        "relation": "PREREQUISITE",
+        "weight": 0.4,
+        "description": "反应速率初步与化学平衡衔接"
+      },
+      {
+        "source": "K38",
+        "target": "K42",
+        "relation": "PREREQUISITE",
+        "weight": 0.5,
+        "description": "反应速率与平衡都属反应原理"
+      },
+      {
+        "source": "K42",
+        "target": "K43",
+        "relation": "PREREQUISITE",
+        "weight": 0.9,
+        "description": "平衡状态是平衡常数的基础"
+      },
+      {
+        "source": "K43",
+        "target": "K45",
+        "relation": "PREREQUISITE",
+        "weight": 0.9,
+        "description": "平衡常数是平衡移动的基础"
+      },
+      {
+        "source": "K43",
+        "target": "K45",
+        "relation": "RELATED_TO",
+        "weight": 0.7,
+        "description": "平衡常数与平衡移动相互关联"
+      },
+      {
+        "source": "K44",
+        "target": "K42",
+        "relation": "PREREQUISITE",
+        "weight": 0.5,
+        "description": "反应方向与平衡状态相关"
+      },
+      {
+        "source": "K45",
+        "target": "K46",
+        "relation": "PREREQUISITE",
+        "weight": 0.7,
+        "description": "平衡移动是等效平衡的基础"
+      },
+      {
+        "source": "K48",
+        "target": "K49",
+        "relation": "PREREQUISITE",
+        "weight": 0.9,
+        "description": "水电离与酸碱性是pH的基础"
+      },
+      {
+        "source": "K47",
+        "target": "K50",
+        "relation": "PREREQUISITE",
+        "weight": 0.7,
+        "description": "弱电解质电离与盐类水解相关"
+      },
+      {
+        "source": "K50",
+        "target": "K48",
+        "relation": "DERIVED_FROM",
+        "weight": 0.7,
+        "description": "盐类水解促进水的电离"
+      },
+      {
+        "source": "K47",
+        "target": "K49",
+        "relation": "RELATED_TO",
+        "weight": 0.6,
+        "description": "弱电解质与pH计算相关"
+      },
+      {
+        "source": "K49",
+        "target": "K51",
+        "relation": "PREREQUISITE",
+        "weight": 0.6,
+        "description": "pH与溶解平衡都涉及离子浓度"
+      },
+      {
+        "source": "K50",
+        "target": "K51",
+        "relation": "RELATED_TO",
+        "weight": 0.6,
+        "description": "盐类水解与溶解平衡都属水溶液平衡"
+      },
+      {
+        "source": "K24",
+        "target": "K52",
+        "relation": "PREREQUISITE",
+        "weight": 0.6,
+        "description": "原电池初步是原电池原理的基础"
+      },
+      {
+        "source": "K52",
+        "target": "K24",
+        "relation": "DERIVED_FROM",
+        "weight": 0.6,
+        "description": "原电池原理由初步概念发展"
+      },
+      {
+        "source": "K52",
+        "target": "K53",
+        "relation": "PREREQUISITE",
+        "weight": 0.8,
+        "description": "原电池原理是化学电源的基础"
+      },
+      {
+        "source": "K52",
+        "target": "K54",
+        "relation": "PREREQUISITE",
+        "weight": 0.7,
+        "description": "原电池与电解池原理对比"
+      },
+      {
+        "source": "K52",
+        "target": "K56",
+        "relation": "RELATED_TO",
+        "weight": 0.6,
+        "description": "原电池原理用于分析金属腐蚀"
+      },
+      {
+        "source": "K54",
+        "target": "K55",
+        "relation": "PREREQUISITE",
+        "weight": 0.8,
+        "description": "电解原理是电解应用的基础"
+      },
+      {
+        "source": "K55",
+        "target": "K56",
+        "relation": "PREREQUISITE",
+        "weight": 0.5,
+        "description": "电解应用与金属电化学防护相关"
+      },
+      {
+        "source": "K18",
+        "target": "K57",
+        "relation": "PREREQUISITE",
+        "weight": 0.6,
+        "description": "必修电子排布与构造原理衔接"
+      },
+      {
+        "source": "K57",
+        "target": "K58",
+        "relation": "PREREQUISITE",
+        "weight": 0.9,
+        "description": "构造原理是周期表分区的基础"
+      },
+      {
+        "source": "K58",
+        "target": "K59",
+        "relation": "PREREQUISITE",
+        "weight": 0.8,
+        "description": "周期表与周期律递变相关"
+      },
+      {
+        "source": "K20",
+        "target": "K59",
+        "relation": "RELATED_TO",
+        "weight": 0.6,
+        "description": "必修周期律与选择性必修电离能递变衔接"
+      },
+      {
+        "source": "K59",
+        "target": "K60",
+        "relation": "PREREQUISITE",
+        "weight": 0.7,
+        "description": "电离能与电负性都描述原子性质"
+      },
+      {
+        "source": "K21",
+        "target": "K61",
+        "relation": "RELATED_TO",
+        "weight": 0.6,
+        "description": "必修化学键与选择性必修共价键深化"
+      },
+      {
+        "source": "K61",
+        "target": "K62",
+        "relation": "PREREQUISITE",
+        "weight": 0.8,
+        "description": "共价键类型是键参数的基础"
+      },
+      {
+        "source": "K62",
+        "target": "K63",
+        "relation": "PREREQUISITE",
+        "weight": 0.7,
+        "description": "键参数有助于理解分子构型"
+      },
+      {
+        "source": "K63",
+        "target": "K64",
+        "relation": "PREREQUISITE",
+        "weight": 0.8,
+        "description": "VSEPR与杂化轨道共同预测构型"
+      },
+      {
+        "source": "K63",
+        "target": "K64",
+        "relation": "RELATED_TO",
+        "weight": 0.8,
+        "description": "VSEPR与杂化理论互为补充"
+      },
+      {
+        "source": "K64",
+        "target": "K65",
+        "relation": "PREREQUISITE",
+        "weight": 0.7,
+        "description": "杂化与空间构型是判断极性的基础"
+      },
+      {
+        "source": "K65",
+        "target": "K66",
+        "relation": "RELATED_TO",
+        "weight": 0.5,
+        "description": "分子极性与分子间作用力相关"
+      },
+      {
+        "source": "K66",
+        "target": "K70",
+        "relation": "PREREQUISITE",
+        "weight": 0.5,
+        "description": "分子间作用力影响分子晶体性质"
+      },
+      {
+        "source": "K67",
+        "target": "K68",
+        "relation": "RELATED_TO",
+        "weight": 0.6,
+        "description": "晶体常识与离子晶体相关"
+      },
+      {
+        "source": "K67",
+        "target": "K69",
+        "relation": "RELATED_TO",
+        "weight": 0.6,
+        "description": "晶体常识与原子晶体相关"
+      },
+      {
+        "source": "K67",
+        "target": "K70",
+        "relation": "RELATED_TO",
+        "weight": 0.6,
+        "description": "晶体常识与分子晶体相关"
+      },
+      {
+        "source": "K67",
+        "target": "K71",
+        "relation": "RELATED_TO",
+        "weight": 0.6,
+        "description": "晶体常识与金属晶体相关"
+      },
+      {
+        "source": "K21",
+        "target": "K68",
+        "relation": "RELATED_TO",
+        "weight": 0.5,
+        "description": "离子键与离子晶体相关"
+      },
+      {
+        "source": "K61",
+        "target": "K69",
+        "relation": "RELATED_TO",
+        "weight": 0.5,
+        "description": "共价键与原子晶体相关"
+      },
+      {
+        "source": "K72",
+        "target": "K73",
+        "relation": "PREREQUISITE",
+        "weight": 0.8,
+        "description": "有机物分类是认识官能团的基础"
+      },
+      {
+        "source": "K73",
+        "target": "K74",
+        "relation": "PREREQUISITE",
+        "weight": 0.7,
+        "description": "官能团是命名的基础"
+      },
+      {
+        "source": "K74",
+        "target": "K75",
+        "relation": "PREREQUISITE",
+        "weight": 0.8,
+        "description": "命名是理解同分异构的基础"
+      },
+      {
+        "source": "K76",
+        "target": "K77",
+        "relation": "PREREQUISITE",
+        "weight": 0.7,
+        "description": "烷烃与烯烃结构对比"
+      },
+      {
+        "source": "K77",
+        "target": "K78",
+        "relation": "RELATED_TO",
+        "weight": 0.7,
+        "description": "烯烃与炔烃都含不饱和键"
+      },
+      {
+        "source": "K28",
+        "target": "K79",
+        "relation": "PREREQUISITE",
+        "weight": 0.6,
+        "description": "必修苯与选择性必修芳香烃衔接"
+      },
+      {
+        "source": "K76",
+        "target": "K79",
+        "relation": "RELATED_TO",
+        "weight": 0.4,
+        "description": "烷烃与芳香烃都属烃类"
+      },
+      {
+        "source": "K81",
+        "target": "K82",
+        "relation": "PREREQUISITE",
+        "weight": 0.7,
+        "description": "卤代烃与醇都含官能团转化关系"
+      },
+      {
+        "source": "K82",
+        "target": "K84",
+        "relation": "PREREQUISITE",
+        "weight": 0.7,
+        "description": "醇可氧化为醛"
+      },
+      {
+        "source": "K84",
+        "target": "K82",
+        "relation": "DERIVED_FROM",
+        "weight": 0.6,
+        "description": "醛由醇催化氧化得到"
+      },
+      {
+        "source": "K84",
+        "target": "K85",
+        "relation": "PREREQUISITE",
+        "weight": 0.8,
+        "description": "醛可氧化为羧酸"
+      },
+      {
+        "source": "K85",
+        "target": "K86",
+        "relation": "PREREQUISITE",
+        "weight": 0.9,
+        "description": "羧酸与醇酯化生成酯"
+      },
+      {
+        "source": "K86",
+        "target": "K85",
+        "relation": "DERIVED_FROM",
+        "weight": 0.7,
+        "description": "酯由羧酸酯化反应得到"
+      },
+      {
+        "source": "K82",
+        "target": "K83",
+        "relation": "RELATED_TO",
+        "weight": 0.6,
+        "description": "醇与酚都含羟基但性质不同"
+      },
+      {
+        "source": "K73",
+        "target": "K87",
+        "relation": "APPLIED_IN",
+        "weight": 0.6,
+        "description": "官能团知识用于有机合成设计"
+      },
+      {
+        "source": "K75",
+        "target": "K87",
+        "relation": "APPLIED_IN",
+        "weight": 0.5,
+        "description": "同分异构体知识用于合成路线"
+      },
+      {
+        "source": "K31",
+        "target": "K88",
+        "relation": "PREREQUISITE",
+        "weight": 0.5,
+        "description": "必修营养物质与选择性必修糖类衔接"
+      },
+      {
+        "source": "K88",
+        "target": "K89",
+        "relation": "PREREQUISITE",
+        "weight": 0.6,
+        "description": "糖类与蛋白质都属生物大分子"
+      },
+      {
+        "source": "K89",
+        "target": "K90",
+        "relation": "RELATED_TO",
+        "weight": 0.5,
+        "description": "天然与合成高分子对比"
+      },
+      {
+        "source": "K27",
+        "target": "K90",
+        "relation": "APPLIED_IN",
+        "weight": 0.5,
+        "description": "加聚反应原理用于合成高分子"
+      },
+      {
+        "source": "K5",
+        "target": "K50",
+        "relation": "RELATED_TO",
+        "weight": 0.4,
+        "description": "氧化还原与盐类水解都涉及电子或质子转移"
+      },
+      {
+        "source": "K9",
+        "target": "K50",
+        "relation": "RELATED_TO",
+        "weight": 0.4,
+        "description": "碳酸氢钠性质与盐类水解相关"
+      },
+      {
+        "source": "K45",
+        "target": "K51",
+        "relation": "APPLIED_IN",
+        "weight": 0.5,
+        "description": "平衡移动原理用于溶解平衡"
+      },
+      {
+        "source": "K43",
+        "target": "K51",
+        "relation": "RELATED_TO",
+        "weight": 0.5,
+        "description": "平衡常数与溶度积都属平衡常数"
+      }
+    ],
+    "categories": [
+      "必修第一册(无机基础)",
+      "必修第二册(反应与有机)",
+      "选择性必修1(化学反应原理)",
+      "选择性必修2(物质结构与性质)",
+      "选择性必修3(有机化学基础)"
+    ],
+    "stats": {
+      "total_nodes": 114,
+      "total_edges": 207,
+      "modules": 5,
+      "chapters": 19,
+      "knowledge_points": 90
+    }
+  },
+  "生物": {
+    "color": "#6B4E8C",
+    "nodes": [
+      {
+        "id": "M1",
+        "name": "必修1 分子与细胞",
+        "type": "Module",
+        "module": "必修1 分子与细胞",
+        "chapter": "",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "从分子水平研究细胞的结构与功能，涵盖组成细胞的分子、细胞结构、物质运输、能量代谢和细胞生命历程。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "M2",
+        "name": "必修2 遗传与进化",
+        "type": "Module",
+        "module": "必修2 遗传与进化",
+        "chapter": "",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "阐述遗传的基本规律、基因的本质与表达、变异类型及生物进化理论，揭示生命延续与多样性的分子机制。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "M3",
+        "name": "选择性必修1 稳态与调节",
+        "type": "Module",
+        "module": "选择性必修1 稳态与调节",
+        "chapter": "",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "研究生物个体水平的稳态维持机制，包括神经调节、体液调节、免疫调节及植物激素调节。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "M4",
+        "name": "选择性必修2 生物与环境",
+        "type": "Module",
+        "module": "选择性必修2 生物与环境",
+        "chapter": "",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "从种群、群落和生态系统层面研究生物与环境的关系，涵盖种群动态、群落演替、生态系统功能与稳定性。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "M5",
+        "name": "选择性必修3 生物技术与工程",
+        "type": "Module",
+        "module": "选择性必修3 生物技术与工程",
+        "chapter": "",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "介绍现代生物技术原理与应用，包括发酵工程、细胞工程、基因工程和胚胎工程。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "C1",
+        "name": "细胞中的元素与化合物",
+        "type": "Chapter",
+        "module": "必修1 分子与细胞",
+        "chapter": "细胞中的元素与化合物",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "组成细胞的元素、水、无机盐、糖类、脂质、蛋白质和核酸的种类与功能。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "C2",
+        "name": "细胞的基本结构",
+        "type": "Chapter",
+        "module": "必修1 分子与细胞",
+        "chapter": "细胞的基本结构",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "细胞学说、原核与真核细胞、细胞膜、细胞器、细胞核的结构与功能及生物膜系统。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "C3",
+        "name": "细胞的物质输入与输出",
+        "type": "Chapter",
+        "module": "必修1 分子与细胞",
+        "chapter": "细胞的物质输入与输出",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "渗透作用、质壁分离与复原、物质跨膜运输的多种方式。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "C4",
+        "name": "细胞的能量供应与利用",
+        "type": "Chapter",
+        "module": "必修1 分子与细胞",
+        "chapter": "细胞的能量供应与利用",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "酶的作用与特性、ATP、细胞呼吸与光合作用的原理及影响因素。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "C5",
+        "name": "细胞的生命历程",
+        "type": "Chapter",
+        "module": "必修1 分子与细胞",
+        "chapter": "细胞的生命历程",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "细胞增殖与有丝分裂、细胞分化、细胞全能性、细胞衰老凋亡与癌变。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "C6",
+        "name": "遗传因子的发现",
+        "type": "Chapter",
+        "module": "必修2 遗传与进化",
+        "chapter": "遗传因子的发现",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "孟德尔豌豆杂交实验、分离定律与自由组合定律的提出与验证。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "C7",
+        "name": "基因与染色体的关系",
+        "type": "Chapter",
+        "module": "必修2 遗传与进化",
+        "chapter": "基因与染色体的关系",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "减数分裂过程、基因在染色体上的位置关系及伴性遗传规律。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "C8",
+        "name": "基因的本质",
+        "type": "Chapter",
+        "module": "必修2 遗传与进化",
+        "chapter": "基因的本质",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "DNA作为遗传物质的实验证据、DNA分子结构与DNA复制机制。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "C9",
+        "name": "基因的表达",
+        "type": "Chapter",
+        "module": "必修2 遗传与进化",
+        "chapter": "基因的表达",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "转录与翻译过程、遗传密码、中心法则及基因表达调控。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "C10",
+        "name": "基因突变及其他变异",
+        "type": "Chapter",
+        "module": "必修2 遗传与进化",
+        "chapter": "基因突变及其他变异",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "基因突变、基因重组、染色体变异的类型与机制及人类遗传病。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "C11",
+        "name": "生物的进化",
+        "type": "Chapter",
+        "module": "必修2 遗传与进化",
+        "chapter": "生物的进化",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "现代生物进化理论的核心内容、种群基因频率变化、物种形成与生物多样性。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "C12",
+        "name": "人体的内环境与稳态",
+        "type": "Chapter",
+        "module": "选择性必修1 稳态与调节",
+        "chapter": "人体的内环境与稳态",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "内环境的组成与理化性质、稳态的概念与调节机制。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "C13",
+        "name": "神经调节",
+        "type": "Chapter",
+        "module": "选择性必修1 稳态与调节",
+        "chapter": "神经调节",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "反射弧、神经冲动的产生与传导、突触传递及神经系统的分级调节。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "C14",
+        "name": "体液调节",
+        "type": "Chapter",
+        "module": "选择性必修1 稳态与调节",
+        "chapter": "体液调节",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "激素调节的原理、主要激素及其生理作用、神经调节与体液调节的协调。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "C15",
+        "name": "免疫调节",
+        "type": "Chapter",
+        "module": "选择性必修1 稳态与调节",
+        "chapter": "免疫调节",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "免疫系统的组成、特异性免疫(体液免疫与细胞免疫)的过程及免疫失调。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "C16",
+        "name": "植物激素调节",
+        "type": "Chapter",
+        "module": "选择性必修1 稳态与调节",
+        "chapter": "植物激素调节",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "生长素的发现与作用、其他植物激素及植物激素在生产中的应用。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "C17",
+        "name": "种群及其动态",
+        "type": "Chapter",
+        "module": "选择性必修2 生物与环境",
+        "chapter": "种群及其动态",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "种群特征(数量特征与空间特征)、种群数量增长的J型与S型曲线。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "C18",
+        "name": "群落及其演替",
+        "type": "Chapter",
+        "module": "选择性必修2 生物与环境",
+        "chapter": "群落及其演替",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "群落的空间结构、种间关系、群落演替的类型与过程。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "C19",
+        "name": "生态系统及其稳定性",
+        "type": "Chapter",
+        "module": "选择性必修2 生物与环境",
+        "chapter": "生态系统及其稳定性",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "生态系统结构、能量流动、物质循环、信息传递及稳定性。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "C20",
+        "name": "人与环境",
+        "type": "Chapter",
+        "module": "选择性必修2 生物与环境",
+        "chapter": "人与环境",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "人类活动对生态环境的影响、生物多样性的价值与保护措施。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "C21",
+        "name": "发酵工程",
+        "type": "Chapter",
+        "module": "选择性必修3 生物技术与工程",
+        "chapter": "发酵工程",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "微生物的培养与分离技术、发酵工程的基本环节与应用。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "C22",
+        "name": "细胞工程",
+        "type": "Chapter",
+        "module": "选择性必修3 生物技术与工程",
+        "chapter": "细胞工程",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "植物细胞工程(组织培养、体细胞杂交)与动物细胞工程(细胞培养、单克隆抗体)。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "C23",
+        "name": "基因工程",
+        "type": "Chapter",
+        "module": "选择性必修3 生物技术与工程",
+        "chapter": "基因工程",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "DNA重组技术的基本工具、基因工程操作程序及应用。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "C24",
+        "name": "胚胎工程",
+        "type": "Chapter",
+        "module": "选择性必修3 生物技术与工程",
+        "chapter": "胚胎工程",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "体内受精与早期胚胎发育、体外受精、胚胎移植与胚胎分割。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "K1",
+        "name": "组成细胞的元素",
+        "type": "KnowledgePoint",
+        "module": "必修1 分子与细胞",
+        "chapter": "细胞中的元素与化合物",
+        "difficulty": 2,
+        "importance": 4,
+        "description": "掌握组成细胞的大量元素(C、H、O、N、P、S等)和微量元素(Fe、Mn、Zn等)的分类，理解C是构成细胞最基本元素的原因。",
+        "keywords": "大量元素,微量元素,碳元素,基本元素",
+        "exam_type": "选择题,元素判断"
+      },
+      {
+        "id": "K2",
+        "name": "组成细胞的化合物",
+        "type": "KnowledgePoint",
+        "module": "必修1 分子与细胞",
+        "chapter": "细胞中的元素与化合物",
+        "difficulty": 2,
+        "importance": 3,
+        "description": "了解细胞中水、无机盐、糖类、脂质、蛋白质和核酸的种类与含量比例，掌握各类化合物的元素组成。",
+        "keywords": "化合物,水,无机盐,糖类,脂质,蛋白质,核酸",
+        "exam_type": "选择题,含量判断"
+      },
+      {
+        "id": "K3",
+        "name": "水在细胞中的作用",
+        "type": "KnowledgePoint",
+        "module": "必修1 分子与细胞",
+        "chapter": "细胞中的元素与化合物",
+        "difficulty": 3,
+        "importance": 4,
+        "description": "区分自由水与结合水的功能差异，理解自由水/结合水比值与代谢速率、抗逆性的关系。",
+        "keywords": "自由水,结合水,代谢,抗逆性,比值",
+        "exam_type": "选择题,分析题"
+      },
+      {
+        "id": "K4",
+        "name": "无机盐的存在形式与功能",
+        "type": "KnowledgePoint",
+        "module": "必修1 分子与细胞",
+        "chapter": "细胞中的元素与化合物",
+        "difficulty": 3,
+        "importance": 3,
+        "description": "掌握无机盐以离子形式存在，理解其维持渗透压、酸碱平衡及作为复杂化合物组成部分的功能。",
+        "keywords": "无机盐,离子,渗透压,酸碱平衡,组成成分",
+        "exam_type": "选择题,功能判断"
+      },
+      {
+        "id": "K5",
+        "name": "糖类的种类与功能",
+        "type": "KnowledgePoint",
+        "module": "必修1 分子与细胞",
+        "chapter": "细胞中的元素与化合物",
+        "difficulty": 3,
+        "importance": 4,
+        "description": "区分单糖、二糖、多糖，掌握淀粉、糖原、纤维素等主要多糖的分布与功能，理解糖类是主要能源物质。",
+        "keywords": "单糖,二糖,多糖,淀粉,糖原,纤维素,能源物质",
+        "exam_type": "选择题,归类判断"
+      },
+      {
+        "id": "K6",
+        "name": "脂质的种类与功能",
+        "type": "KnowledgePoint",
+        "module": "必修1 分子与细胞",
+        "chapter": "细胞中的元素与化合物",
+        "difficulty": 3,
+        "importance": 4,
+        "description": "掌握脂肪(储能)、磷脂(构成膜)、固醇(胆固醇、性激素、维生素D)的功能，理解磷脂在生物膜中的重要性。",
+        "keywords": "脂肪,磷脂,固醇,储能,生物膜",
+        "exam_type": "选择题,功能配对"
+      },
+      {
+        "id": "K7",
+        "name": "蛋白质的结构与功能",
+        "type": "KnowledgePoint",
+        "module": "必修1 分子与细胞",
+        "chapter": "细胞中的元素与化合物",
+        "difficulty": 5,
+        "importance": 5,
+        "description": "掌握氨基酸结构通式、肽键形成、蛋白质的层级结构(一二三四级)，理解结构多样性与功能多样性的关系，能进行脱水缩合相关计算。",
+        "keywords": "氨基酸,肽键,脱水缩合,空间结构,多样性,计算",
+        "exam_type": "选择题,计算题,综合题"
+      },
+      {
+        "id": "K8",
+        "name": "核酸的结构与功能",
+        "type": "KnowledgePoint",
+        "module": "必修1 分子与细胞",
+        "chapter": "细胞中的元素与化合物",
+        "difficulty": 4,
+        "importance": 4,
+        "description": "区分DNA与RNA在组成、结构和功能上的差异，掌握核酸是遗传信息的载体，理解磷酸二酯键与碱基互补配对。",
+        "keywords": "DNA,RNA,核苷酸,碱基互补配对,遗传信息",
+        "exam_type": "选择题,比较题"
+      },
+      {
+        "id": "K9",
+        "name": "细胞学说",
+        "type": "KnowledgePoint",
+        "module": "必修1 分子与细胞",
+        "chapter": "细胞的基本结构",
+        "difficulty": 2,
+        "importance": 3,
+        "description": "掌握细胞学说的主要内容(三点)及其意义，了解细胞学说的建立过程，理解其揭示了生物界的统一性。",
+        "keywords": "细胞学说,统一性,主要内容,意义",
+        "exam_type": "选择题,判断题"
+      },
+      {
+        "id": "K10",
+        "name": "原核细胞与真核细胞",
+        "type": "KnowledgePoint",
+        "module": "必修1 分子与细胞",
+        "chapter": "细胞的基本结构",
+        "difficulty": 3,
+        "importance": 4,
+        "description": "区分原核细胞与真核细胞在细胞核、细胞器等方面的差异，掌握常见原核生物(细菌、蓝藻)与真核生物的代表。",
+        "keywords": "原核细胞,真核细胞,拟核,蓝藻,细菌",
+        "exam_type": "选择题,判断题"
+      },
+      {
+        "id": "K11",
+        "name": "细胞膜的结构与功能",
+        "type": "KnowledgePoint",
+        "module": "必修1 分子与细胞",
+        "chapter": "细胞的基本结构",
+        "difficulty": 4,
+        "importance": 5,
+        "description": "掌握流动镶嵌模型的基本内容，理解细胞膜作为系统边界的功能(物质运输、信息交流、屏障)，掌握糖蛋白的识别作用。",
+        "keywords": "流动镶嵌模型,磷脂双分子层,蛋白质,糖蛋白,信息交流",
+        "exam_type": "选择题,模型分析"
+      },
+      {
+        "id": "K12",
+        "name": "细胞器的结构与功能",
+        "type": "KnowledgePoint",
+        "module": "必修1 分子与细胞",
+        "chapter": "细胞的基本结构",
+        "difficulty": 4,
+        "importance": 5,
+        "description": "掌握线粒体、叶绿体、内质网、高尔基体、核糖体、溶酶体、液泡等细胞器的结构与功能，理解双层膜与单层膜细胞器的区别。",
+        "keywords": "线粒体,叶绿体,内质网,高尔基体,核糖体,溶酶体,液泡",
+        "exam_type": "选择题,功能配对,识图题"
+      },
+      {
+        "id": "K13",
+        "name": "细胞核的结构与功能",
+        "type": "KnowledgePoint",
+        "module": "必修1 分子与细胞",
+        "chapter": "细胞的基本结构",
+        "difficulty": 3,
+        "importance": 4,
+        "description": "掌握核膜、核仁、染色质的组成，理解细胞核作为遗传信息库和控制细胞代谢的功能。",
+        "keywords": "核膜,核仁,染色质,遗传信息库,代谢控制",
+        "exam_type": "选择题,功能分析"
+      },
+      {
+        "id": "K14",
+        "name": "生物膜系统",
+        "type": "KnowledgePoint",
+        "module": "必修1 分子与细胞",
+        "chapter": "细胞的基本结构",
+        "difficulty": 4,
+        "importance": 4,
+        "description": "理解生物膜系统的概念，掌握各种生物膜在结构上的联系(直接相连、间接相连)和功能上的协调配合(分泌蛋白的合成与运输)。",
+        "keywords": "生物膜系统,囊泡,分泌蛋白,结构联系,功能协调",
+        "exam_type": "选择题,综合分析题"
+      },
+      {
+        "id": "K15",
+        "name": "渗透作用",
+        "type": "KnowledgePoint",
+        "module": "必修1 分子与细胞",
+        "chapter": "细胞的物质输入与输出",
+        "difficulty": 4,
+        "importance": 4,
+        "description": "理解渗透作用发生的条件(半透膜、浓度差)，掌握原生质层相当于半透层，能分析成熟植物细胞的渗透系统。",
+        "keywords": "渗透作用,半透膜,浓度差,原生质层",
+        "exam_type": "选择题,分析题"
+      },
+      {
+        "id": "K16",
+        "name": "质壁分离与复原",
+        "type": "KnowledgePoint",
+        "module": "必修1 分子与细胞",
+        "chapter": "细胞的物质输入与输出",
+        "difficulty": 4,
+        "importance": 5,
+        "description": "掌握质壁分离与复原的原理及条件(活的成熟植物细胞、外界溶液浓度大于细胞液)，能进行实验设计与结果分析。",
+        "keywords": "质壁分离,质壁分离复原,原生质层,细胞壁,实验设计",
+        "exam_type": "实验题,选择题,分析题"
+      },
+      {
+        "id": "K17",
+        "name": "物质跨膜运输的方式",
+        "type": "KnowledgePoint",
+        "module": "必修1 分子与细胞",
+        "chapter": "细胞的物质输入与输出",
+        "difficulty": 5,
+        "importance": 5,
+        "description": "区分自由扩散、协助扩散、主动运输和胞吞胞吐的特点(方向、载体、能量)，能判断具体物质的运输方式并分析影响因素。",
+        "keywords": "自由扩散,协助扩散,主动运输,胞吞胞吐,载体,能量",
+        "exam_type": "选择题,曲线分析,综合题"
+      },
+      {
+        "id": "K18",
+        "name": "酶的作用与本质",
+        "type": "KnowledgePoint",
+        "module": "必修1 分子与细胞",
+        "chapter": "细胞的能量供应与利用",
+        "difficulty": 3,
+        "importance": 4,
+        "description": "理解酶是活细胞产生的具有催化作用的有机物(多数为蛋白质，少数为RNA)，掌握酶降低活化能的催化机制。",
+        "keywords": "酶,催化,活化能,蛋白质,RNA",
+        "exam_type": "选择题,实验分析"
+      },
+      {
+        "id": "K19",
+        "name": "酶的特性",
+        "type": "KnowledgePoint",
+        "module": "必修1 分子与细胞",
+        "chapter": "细胞的能量供应与利用",
+        "difficulty": 4,
+        "importance": 5,
+        "description": "掌握酶的高效性、专一性和作用条件温和的特性，能设计实验验证酶的特性并分析实验变量(自变量、因变量、无关变量)。",
+        "keywords": "高效性,专一性,温和性,实验设计,变量控制",
+        "exam_type": "实验题,选择题"
+      },
+      {
+        "id": "K20",
+        "name": "ATP的结构与功能",
+        "type": "KnowledgePoint",
+        "module": "必修1 分子与细胞",
+        "chapter": "细胞的能量供应与利用",
+        "difficulty": 3,
+        "importance": 4,
+        "description": "掌握ATP的结构简式(A-P~P~P)及高能磷酸键，理解ATP与ADP的相互转化及ATP作为直接能源物质的功能。",
+        "keywords": "ATP,ADP,高能磷酸键,直接能源,能量转化",
+        "exam_type": "选择题,综合分析"
+      },
+      {
+        "id": "K21",
+        "name": "细胞呼吸",
+        "type": "KnowledgePoint",
+        "module": "必修1 分子与细胞",
+        "chapter": "细胞的能量供应与利用",
+        "difficulty": 5,
+        "importance": 5,
+        "description": "掌握有氧呼吸三阶段(糖酵解、三羧酸循环、氧化磷酸化)的场所、反应物与产物，理解无氧呼吸的类型(酒精发酵、乳酸发酵)，能进行呼吸作用相关计算。",
+        "keywords": "有氧呼吸,无氧呼吸,糖酵解,三羧酸循环,酒精发酵,乳酸发酵",
+        "exam_type": "选择题,计算题,综合题"
+      },
+      {
+        "id": "K22",
+        "name": "光合作用",
+        "type": "KnowledgePoint",
+        "module": "必修1 分子与细胞",
+        "chapter": "细胞的能量供应与利用",
+        "difficulty": 5,
+        "importance": 5,
+        "description": "掌握光反应(类囊体薄膜:水的光解、ATP合成)与暗反应(基质:CO2固定、C3还原)的过程、场所与物质能量联系，理解光合作用总反应式。",
+        "keywords": "光反应,暗反应,类囊体,基质,CO2固定,C3还原,色素",
+        "exam_type": "选择题,综合分析题,实验题"
+      },
+      {
+        "id": "K23",
+        "name": "影响光合作用的因素",
+        "type": "KnowledgePoint",
+        "module": "必修1 分子与细胞",
+        "chapter": "细胞的能量供应与利用",
+        "difficulty": 5,
+        "importance": 5,
+        "description": "分析光照强度、CO2浓度、温度、矿质元素等因素对光合速率的影响，能解读光合速率曲线并应用于农业生产实践。",
+        "keywords": "光强,CO2浓度,温度,光补偿点,光饱和点,光合速率",
+        "exam_type": "曲线分析题,选择题,应用题"
+      },
+      {
+        "id": "K24",
+        "name": "细胞周期",
+        "type": "KnowledgePoint",
+        "module": "必修1 分子与细胞",
+        "chapter": "细胞的生命历程",
+        "difficulty": 3,
+        "importance": 4,
+        "description": "掌握细胞周期的概念(分裂间期与分裂期)及连续分裂细胞的特点，理解分裂间期占据大部分时间的原因(DNA复制和蛋白质合成)。",
+        "keywords": "细胞周期,分裂间期,分裂期,DNA复制",
+        "exam_type": "选择题,判断题"
+      },
+      {
+        "id": "K25",
+        "name": "有丝分裂",
+        "type": "KnowledgePoint",
+        "module": "必修1 分子与细胞",
+        "chapter": "细胞的生命历程",
+        "difficulty": 5,
+        "importance": 5,
+        "description": "掌握有丝分裂各时期(前、中、后、末)的染色体、DNA和染色单体的变化规律，能绘制和解读相关曲线，理解有丝分裂的意义。",
+        "keywords": "有丝分裂,染色体,DNA,染色单体,赤道板,纺锤体",
+        "exam_type": "选择题,曲线分析,综合题"
+      },
+      {
+        "id": "K26",
+        "name": "细胞分化",
+        "type": "KnowledgePoint",
+        "module": "必修1 分子与细胞",
+        "chapter": "细胞的生命历程",
+        "difficulty": 3,
+        "importance": 4,
+        "description": "理解细胞分化的概念(基因的选择性表达)、特点(持久性、不可逆性)和意义(形成不同组织器官)。",
+        "keywords": "细胞分化,基因选择性表达,持久性,组织器官",
+        "exam_type": "选择题,分析题"
+      },
+      {
+        "id": "K27",
+        "name": "细胞全能性",
+        "type": "KnowledgePoint",
+        "module": "必修1 分子与细胞",
+        "chapter": "细胞的生命历程",
+        "difficulty": 4,
+        "importance": 4,
+        "description": "理解细胞全能性的概念，掌握已分化细胞仍具有发育成完整个体的潜能，了解植物组织培养证明全能性的实例。",
+        "keywords": "全能性,已分化细胞,组织培养,潜能",
+        "exam_type": "选择题,分析题"
+      },
+      {
+        "id": "K28",
+        "name": "细胞衰老与凋亡",
+        "type": "KnowledgePoint",
+        "module": "必修1 分子与细胞",
+        "chapter": "细胞的生命历程",
+        "difficulty": 3,
+        "importance": 4,
+        "description": "掌握细胞衰老的特征(水分减少、酶活性降低、色素积累等)，理解细胞凋亡是基因决定的程序性死亡，区分凋亡与坏死。",
+        "keywords": "细胞衰老,细胞凋亡,程序性死亡,坏死,基因决定",
+        "exam_type": "选择题,判断题"
+      },
+      {
+        "id": "K29",
+        "name": "细胞癌变",
+        "type": "KnowledgePoint",
+        "module": "必修1 分子与细胞",
+        "chapter": "细胞的生命历程",
+        "difficulty": 4,
+        "importance": 4,
+        "description": "理解癌细胞的主要特征(无限增殖、形态结构改变、表面发生变化)，掌握致癌因子(物理、化学、病毒)及原癌基因与抑癌基因的作用。",
+        "keywords": "癌细胞,无限增殖,原癌基因,抑癌基因,致癌因子",
+        "exam_type": "选择题,综合分析"
+      },
+      {
+        "id": "K30",
+        "name": "孟德尔杂交实验",
+        "type": "KnowledgePoint",
+        "module": "必修2 遗传与进化",
+        "chapter": "遗传因子的发现",
+        "difficulty": 3,
+        "importance": 4,
+        "description": "了解孟德尔选用豌豆的原因(自花传粉、相对性状明显)，掌握一对相对性状杂交实验的过程与现象(F1全显、F2 3:1分离比)。",
+        "keywords": "豌豆,相对性状,杂交,F1,F2,3:1",
+        "exam_type": "选择题,实验分析"
+      },
+      {
+        "id": "K31",
+        "name": "分离定律",
+        "type": "KnowledgePoint",
+        "module": "必修2 遗传与进化",
+        "chapter": "遗传因子的发现",
+        "difficulty": 5,
+        "importance": 5,
+        "description": "掌握分离定律的实质(等位基因随同源染色体分离而分开)，能进行遗传概率计算(棋盘法、分支法)，能判断显隐性关系与基因型。",
+        "keywords": "分离定律,等位基因,同源染色体,概率计算,基因型推断",
+        "exam_type": "计算题,选择题,综合题"
+      },
+      {
+        "id": "K32",
+        "name": "自由组合定律",
+        "type": "KnowledgePoint",
+        "module": "必修2 遗传与进化",
+        "chapter": "遗传因子的发现",
+        "difficulty": 5,
+        "importance": 5,
+        "description": "掌握自由组合定律的实质(非同源染色体上非等位基因自由组合)，能进行多对基因遗传概率计算(9:3:3:1及其变式)。",
+        "keywords": "自由组合定律,非同源染色体,非等位基因,9:3:3:1,变式比例",
+        "exam_type": "计算题,选择题,综合题"
+      },
+      {
+        "id": "K33",
+        "name": "减数分裂",
+        "type": "KnowledgePoint",
+        "module": "必修2 遗传与进化",
+        "chapter": "基因与染色体的关系",
+        "difficulty": 5,
+        "importance": 5,
+        "description": "掌握减数第一次分裂(同源染色体分离)和减数第二次分裂(着丝粒分裂)的过程，理解联会、四分体、交叉互换的意义，能比较有丝分裂与减数分裂。",
+        "keywords": "减数分裂,同源染色体,联会,四分体,交叉互换,减I,减II",
+        "exam_type": "选择题,综合分析,曲线题"
+      },
+      {
+        "id": "K34",
+        "name": "基因在染色体上",
+        "type": "KnowledgePoint",
+        "module": "必修2 遗传与进化",
+        "chapter": "基因与染色体的关系",
+        "difficulty": 4,
+        "importance": 4,
+        "description": "理解萨顿假说(基因和染色体行为存在平行关系)和摩尔根果蝇实验证据，掌握基因在染色体上呈线性排列的结论。",
+        "keywords": "萨顿假说,摩尔根,果蝇,白眼基因,线性排列",
+        "exam_type": "选择题,分析题"
+      },
+      {
+        "id": "K35",
+        "name": "伴性遗传",
+        "type": "KnowledgePoint",
+        "module": "必修2 遗传与进化",
+        "chapter": "基因与染色体的关系",
+        "difficulty": 5,
+        "importance": 5,
+        "description": "掌握伴X染色体隐性遗传(色盲、血友病)、显性遗传和伴Y遗传的特点及判断方法，能进行家系图分析和概率计算。",
+        "keywords": "伴性遗传,X染色体,色盲,血友病,家系分析,概率",
+        "exam_type": "家系分析题,选择题,计算题"
+      },
+      {
+        "id": "K36",
+        "name": "DNA是主要遗传物质",
+        "type": "KnowledgePoint",
+        "module": "必修2 遗传与进化",
+        "chapter": "基因的本质",
+        "difficulty": 4,
+        "importance": 5,
+        "description": "掌握肺炎双球菌转化实验(格里菲思、艾弗里)和噬菌体侵染细菌实验(赫尔希、蔡斯)的原理与结论，理解DNA是遗传物质而RNA病毒以RNA为遗传物质。",
+        "keywords": "肺炎双球菌,转化实验,噬菌体侵染,DNA,遗传物质",
+        "exam_type": "选择题,实验分析"
+      },
+      {
+        "id": "K37",
+        "name": "DNA分子结构",
+        "type": "KnowledgePoint",
+        "module": "必修2 遗传与进化",
+        "chapter": "基因的本质",
+        "difficulty": 4,
+        "importance": 4,
+        "description": "掌握DNA双螺旋结构(沃森、克里克)的特点:两条链反向平行、磷酸脱氧核糖交替连接、碱基互补配对(A-T、G-C)，理解碱基计算规律。",
+        "keywords": "双螺旋,反向平行,碱基互补配对,A-T,G-C,碱基计算",
+        "exam_type": "选择题,计算题"
+      },
+      {
+        "id": "K38",
+        "name": "DNA复制",
+        "type": "KnowledgePoint",
+        "module": "必修2 遗传与进化",
+        "chapter": "基因的本质",
+        "difficulty": 4,
+        "importance": 5,
+        "description": "掌握DNA复制的时期(S期)、方式(半保留复制)、条件(模板、原料、酶、能量)和过程(解旋、合成)，能分析梅塞尔森-斯塔尔实验。",
+        "keywords": "半保留复制,解旋酶,DNA聚合酶,S期,梅塞尔森实验",
+        "exam_type": "选择题,实验分析,综合题"
+      },
+      {
+        "id": "K39",
+        "name": "转录与翻译",
+        "type": "KnowledgePoint",
+        "module": "必修2 遗传与进化",
+        "chapter": "基因的表达",
+        "difficulty": 5,
+        "importance": 5,
+        "description": "掌握转录(DNA→mRNA，场所为细胞核)和翻译(mRNA→蛋白质，场所为核糖体)的过程，理解tRNA的反密码子识别及氨基酸的连接。",
+        "keywords": "转录,翻译,mRNA,tRNA,核糖体,密码子,反密码子",
+        "exam_type": "选择题,综合分析,过程图解"
+      },
+      {
+        "id": "K40",
+        "name": "遗传密码",
+        "type": "KnowledgePoint",
+        "module": "必修2 遗传与进化",
+        "chapter": "基因的表达",
+        "difficulty": 3,
+        "importance": 3,
+        "description": "理解密码子的概念(64种，其中61种编码氨基酸，3种终止密码子)，掌握密码子的简并性、通用性与不重叠性。",
+        "keywords": "密码子,简并性,通用性,终止密码子,起始密码子",
+        "exam_type": "选择题,判断题"
+      },
+      {
+        "id": "K41",
+        "name": "中心法则",
+        "type": "KnowledgePoint",
+        "module": "必修2 遗传与进化",
+        "chapter": "基因的表达",
+        "difficulty": 4,
+        "importance": 4,
+        "description": "掌握中心法则的内容(复制、转录、翻译)及其补充(逆转录、RNA复制)，理解各类生物信息传递的特点。",
+        "keywords": "中心法则,复制,转录,翻译,逆转录,RNA复制",
+        "exam_type": "选择题,综合分析"
+      },
+      {
+        "id": "K42",
+        "name": "基因突变",
+        "type": "KnowledgePoint",
+        "module": "必修2 遗传与进化",
+        "chapter": "基因突变及其他变异",
+        "difficulty": 4,
+        "importance": 5,
+        "description": "掌握基因突变的概念(DNA碱基对的增添、缺失、替换)、特点(普遍性、随机性、低频性、不定向性、多害少利性)及意义(生物变异的根本来源)。",
+        "keywords": "基因突变,碱基对,增添,缺失,替换,变异来源",
+        "exam_type": "选择题,分析题"
+      },
+      {
+        "id": "K43",
+        "name": "基因重组",
+        "type": "KnowledgePoint",
+        "module": "必修2 遗传与进化",
+        "chapter": "基因突变及其他变异",
+        "difficulty": 4,
+        "importance": 4,
+        "description": "理解基因重组的类型(自由组合型、交叉互换型)及发生在减数分裂过程中的机制，掌握其作为有性生殖变异来源的意义。",
+        "keywords": "基因重组,自由组合,交叉互换,减数分裂,有性生殖",
+        "exam_type": "选择题,分析题"
+      },
+      {
+        "id": "K44",
+        "name": "染色体变异",
+        "type": "KnowledgePoint",
+        "module": "必修2 遗传与进化",
+        "chapter": "基因突变及其他变异",
+        "difficulty": 5,
+        "importance": 5,
+        "description": "掌握染色体结构变异(缺失、重复、倒位、易位)和数目变异(整倍体、非整倍体)的类型，理解单倍体、二倍体、多倍体的概念与育种应用。",
+        "keywords": "染色体结构变异,染色体数目变异,单倍体,多倍体,缺失,重复,倒位,易位",
+        "exam_type": "选择题,综合分析"
+      },
+      {
+        "id": "K45",
+        "name": "人类遗传病",
+        "type": "KnowledgePoint",
+        "module": "必修2 遗传与进化",
+        "chapter": "基因突变及其他变异",
+        "difficulty": 3,
+        "importance": 3,
+        "description": "掌握单基因遗传病(常染色体显/隐性、性染色体显/隐性)、多基因遗传病和染色体异常遗传病的分类及常见病例。",
+        "keywords": "单基因遗传病,多基因遗传病,染色体异常,常染色体,性染色体",
+        "exam_type": "选择题,判断题"
+      },
+      {
+        "id": "K46",
+        "name": "现代生物进化理论",
+        "type": "KnowledgePoint",
+        "module": "必修2 遗传与进化",
+        "chapter": "生物的进化",
+        "difficulty": 4,
+        "importance": 4,
+        "description": "掌握现代生物进化理论的核心内容:种群是进化的基本单位、突变和基因重组提供原材料、自然选择决定进化方向、隔离导致物种形成。",
+        "keywords": "进化理论,种群,突变,基因重组,自然选择,隔离",
+        "exam_type": "选择题,综合分析"
+      },
+      {
+        "id": "K47",
+        "name": "种群基因频率与进化",
+        "type": "KnowledgePoint",
+        "module": "必修2 遗传与进化",
+        "chapter": "生物的进化",
+        "difficulty": 5,
+        "importance": 5,
+        "description": "理解基因频率与基因型频率的概念，能进行基因频率计算，掌握 Hardy-Weinberg 平衡定律及影响基因频率变化的因素。",
+        "keywords": "基因频率,基因型频率,Hardy-Weinberg平衡,遗传平衡,计算",
+        "exam_type": "计算题,选择题"
+      },
+      {
+        "id": "K48",
+        "name": "物种形成",
+        "type": "KnowledgePoint",
+        "module": "必修2 遗传与进化",
+        "chapter": "生物的进化",
+        "difficulty": 4,
+        "importance": 4,
+        "description": "理解物种的概念、隔离的类型(地理隔离、生殖隔离)及物种形成的一般过程(地理隔离→基因频率差异→生殖隔离)。",
+        "keywords": "物种,地理隔离,生殖隔离,物种形成,基因频率",
+        "exam_type": "选择题,分析题"
+      },
+      {
+        "id": "K49",
+        "name": "共同进化与生物多样性",
+        "type": "KnowledgePoint",
+        "module": "必修2 遗传与进化",
+        "chapter": "生物的进化",
+        "difficulty": 3,
+        "importance": 3,
+        "description": "理解共同进化的概念(不同物种间、生物与无机环境间协同进化)，掌握生物多样性的三个层次(基因、物种、生态系统)及形成过程。",
+        "keywords": "共同进化,生物多样性,基因多样性,物种多样性,生态系统多样性",
+        "exam_type": "选择题,分析题"
+      },
+      {
+        "id": "K50",
+        "name": "内环境的组成",
+        "type": "KnowledgePoint",
+        "module": "选择性必修1 稳态与调节",
+        "chapter": "人体的内环境与稳态",
+        "difficulty": 3,
+        "importance": 4,
+        "description": "掌握体液的组成(细胞内液、外液)，理解血浆、组织液、淋巴三者之间的转化关系，掌握内环境的理化性质(渗透压、pH、温度)。",
+        "keywords": "内环境,血浆,组织液,淋巴,渗透压,pH,体液",
+        "exam_type": "选择题,综合分析"
+      },
+      {
+        "id": "K51",
+        "name": "内环境的稳态",
+        "type": "KnowledgePoint",
+        "module": "选择性必修1 稳态与调节",
+        "chapter": "人体的内环境与稳态",
+        "difficulty": 4,
+        "importance": 4,
+        "description": "理解稳态的概念及调节机制(神经-体液-免疫调节网络)，掌握稳态维持的意义和失调的表现。",
+        "keywords": "稳态,神经调节,体液调节,免疫调节,调节网络",
+        "exam_type": "选择题,分析题"
+      },
+      {
+        "id": "K52",
+        "name": "反射与反射弧",
+        "type": "KnowledgePoint",
+        "module": "选择性必修1 稳态与调节",
+        "chapter": "神经调节",
+        "difficulty": 3,
+        "importance": 4,
+        "description": "掌握反射的概念(条件反射与非条件反射)及反射弧的五个组成部分(感受器、传入神经、神经中枢、传出神经、效应器)。",
+        "keywords": "反射,条件反射,非条件反射,反射弧,感受器,效应器",
+        "exam_type": "选择题,分析题"
+      },
+      {
+        "id": "K53",
+        "name": "神经冲动的产生与传导",
+        "type": "KnowledgePoint",
+        "module": "选择性必修1 稳态与调节",
+        "chapter": "神经调节",
+        "difficulty": 5,
+        "importance": 5,
+        "description": "理解静息电位(K+外流)和动作电位(Na+内流)的产生机制，掌握兴奋在神经纤维上的传导(双向传导、局部电流)及特征。",
+        "keywords": "静息电位,动作电位,K+外流,Na+内流,局部电流,传导",
+        "exam_type": "选择题,曲线分析,综合题"
+      },
+      {
+        "id": "K54",
+        "name": "突触传递",
+        "type": "KnowledgePoint",
+        "module": "选择性必修1 稳态与调节",
+        "chapter": "神经调节",
+        "difficulty": 5,
+        "importance": 5,
+        "description": "掌握突触的结构(突触前膜、突触间隙、突触后膜)及兴奋在突触处的传递过程(电信号→化学信号→电信号)，理解单向传递的原因和神经递质的作用。",
+        "keywords": "突触,突触前膜,突触间隙,突触后膜,神经递质,单向传递",
+        "exam_type": "选择题,综合分析,过程图解"
+      },
+      {
+        "id": "K55",
+        "name": "神经系统的分级调节",
+        "type": "KnowledgePoint",
+        "module": "选择性必修1 稳态与调节",
+        "chapter": "神经调节",
+        "difficulty": 4,
+        "importance": 4,
+        "description": "理解中枢神经系统各部位的分工(大脑皮层、小脑、脑干、脊髓)及分级调节的关系，掌握大脑皮层作为最高级中枢的功能。",
+        "keywords": "分级调节,大脑皮层,小脑,脑干,脊髓,高级中枢",
+        "exam_type": "选择题,分析题"
+      },
+      {
+        "id": "K56",
+        "name": "激素调节的原理",
+        "type": "KnowledgePoint",
+        "module": "选择性必修1 稳态与调节",
+        "chapter": "体液调节",
+        "difficulty": 4,
+        "importance": 4,
+        "description": "理解激素调节的概念和特点(微量高效、通过体液运输、作用于靶器官靶细胞)，掌握激素间的协同与拮抗作用。",
+        "keywords": "激素调节,微量高效,靶器官,靶细胞,协同作用,拮抗作用",
+        "exam_type": "选择题,分析题"
+      },
+      {
+        "id": "K57",
+        "name": "主要激素及其作用",
+        "type": "KnowledgePoint",
+        "module": "选择性必修1 稳态与调节",
+        "chapter": "体液调节",
+        "difficulty": 4,
+        "importance": 5,
+        "description": "掌握甲状腺激素、胰岛素与胰高血糖素、生长激素、性激素等主要激素的分泌部位、生理作用及分泌异常的表现。",
+        "keywords": "甲状腺激素,胰岛素,胰高血糖素,生长激素,性激素,分泌异常",
+        "exam_type": "选择题,综合分析"
+      },
+      {
+        "id": "K58",
+        "name": "神经调节与体液调节的关系",
+        "type": "KnowledgePoint",
+        "module": "选择性必修1 稳态与调节",
+        "chapter": "体液调节",
+        "difficulty": 4,
+        "importance": 4,
+        "description": "理解神经调节与体液调节的区别与联系，掌握两者协调维持稳态的实例(血糖调节、体温调节、水盐调节)。",
+        "keywords": "神经调节,体液调节,血糖调节,体温调节,水盐调节,协调",
+        "exam_type": "选择题,综合分析"
+      },
+      {
+        "id": "K59",
+        "name": "免疫系统的组成",
+        "type": "KnowledgePoint",
+        "module": "选择性必修1 稳态与调节",
+        "chapter": "免疫调节",
+        "difficulty": 3,
+        "importance": 3,
+        "description": "掌握免疫器官(骨髓、胸腺、脾、淋巴结)、免疫细胞(淋巴细胞、吞噬细胞)和免疫活性物质(抗体、淋巴因子、溶菌酶)的组成。",
+        "keywords": "免疫器官,免疫细胞,淋巴细胞,吞噬细胞,抗体,淋巴因子",
+        "exam_type": "选择题,判断题"
+      },
+      {
+        "id": "K60",
+        "name": "特异性免疫",
+        "type": "KnowledgePoint",
+        "module": "选择性必修1 稳态与调节",
+        "chapter": "免疫调节",
+        "difficulty": 5,
+        "importance": 5,
+        "description": "掌握体液免疫(B细胞→浆细胞→抗体)和细胞免疫(T细胞→效应T细胞→裂解靶细胞)的过程及两者的协同关系，理解记忆细胞的功能。",
+        "keywords": "体液免疫,细胞免疫,B细胞,浆细胞,抗体,效应T细胞,记忆细胞",
+        "exam_type": "选择题,综合分析,过程图解"
+      },
+      {
+        "id": "K61",
+        "name": "免疫失调",
+        "type": "KnowledgePoint",
+        "module": "选择性必修1 稳态与调节",
+        "chapter": "免疫调节",
+        "difficulty": 3,
+        "importance": 3,
+        "description": "理解过敏反应(已免疫机体再次接触相同抗原)、自身免疫病(免疫系统攻击自身组织)和免疫缺陷病(艾滋病AIDS)的机制。",
+        "keywords": "过敏反应,自身免疫病,免疫缺陷病,艾滋病,过敏原",
+        "exam_type": "选择题,分析题"
+      },
+      {
+        "id": "K62",
+        "name": "生长素的发现与作用",
+        "type": "KnowledgePoint",
+        "module": "选择性必修1 稳态与调节",
+        "chapter": "植物激素调节",
+        "difficulty": 4,
+        "importance": 5,
+        "description": "了解生长素的发现历程(达尔文、詹森、拜耳、温特)，掌握生长素的产生(幼嫩芽叶)、运输(极性运输)和分布，理解两重性(低促高抑)。",
+        "keywords": "生长素,达尔文,温特,极性运输,两重性,顶端优势",
+        "exam_type": "选择题,实验分析,综合题"
+      },
+      {
+        "id": "K63",
+        "name": "其他植物激素",
+        "type": "KnowledgePoint",
+        "module": "选择性必修1 稳态与调节",
+        "chapter": "植物激素调节",
+        "difficulty": 3,
+        "importance": 3,
+        "description": "掌握赤霉素、细胞分裂素、脱落酸和乙烯的主要生理作用，理解植物激素间的协同与拮抗关系。",
+        "keywords": "赤霉素,细胞分裂素,脱落酸,乙烯,协同,拮抗",
+        "exam_type": "选择题,判断题"
+      },
+      {
+        "id": "K64",
+        "name": "植物激素的应用",
+        "type": "KnowledgePoint",
+        "module": "选择性必修1 稳态与调节",
+        "chapter": "植物激素调节",
+        "difficulty": 3,
+        "importance": 3,
+        "description": "掌握植物生长调节剂在农业生产中的应用实例(无子果实、催熟、除草等)，理解合理使用植物激素的意义。",
+        "keywords": "植物生长调节剂,无子果实,催熟,除草,农业应用",
+        "exam_type": "选择题,应用题"
+      },
+      {
+        "id": "K65",
+        "name": "种群特征",
+        "type": "KnowledgePoint",
+        "module": "选择性必修2 生物与环境",
+        "chapter": "种群及其动态",
+        "difficulty": 3,
+        "importance": 4,
+        "description": "掌握种群的数量特征(种群密度、出生率死亡率、年龄结构、性别比例)和空间特征(均匀分布、随机分布、集群分布)。",
+        "keywords": "种群密度,出生率,死亡率,年龄结构,性别比例,空间特征",
+        "exam_type": "选择题,分析题"
+      },
+      {
+        "id": "K66",
+        "name": "种群数量变化",
+        "type": "KnowledgePoint",
+        "module": "选择性必修2 生物与环境",
+        "chapter": "种群及其动态",
+        "difficulty": 5,
+        "importance": 5,
+        "description": "掌握J型曲线(理想条件:λ)和S型曲线(有限环境:K值)的数学模型，理解K值与K/2的实践意义(渔业捕捞、害虫防治)。",
+        "keywords": "J型曲线,S型曲线,K值,K/2,种群增长,数学模型",
+        "exam_type": "选择题,曲线分析,计算题"
+      },
+      {
+        "id": "K67",
+        "name": "群落的结构",
+        "type": "KnowledgePoint",
+        "module": "选择性必修2 生物与环境",
+        "chapter": "群落及其演替",
+        "difficulty": 4,
+        "importance": 4,
+        "description": "掌握群落的物种组成(优势种)、垂直结构(分层现象)和水平结构，理解种间关系(竞争、捕食、互利共生、寄生)及生态位概念。",
+        "keywords": "群落,优势种,垂直结构,水平结构,种间关系,生态位",
+        "exam_type": "选择题,综合分析"
+      },
+      {
+        "id": "K68",
+        "name": "群落的演替",
+        "type": "KnowledgePoint",
+        "module": "选择性必修2 生物与环境",
+        "chapter": "群落及其演替",
+        "difficulty": 3,
+        "importance": 3,
+        "description": "区分初生演替(从无到有，如火山岩、沙丘)和次生演替(原有土壤条件保留，如火灾后)的特点与过程。",
+        "keywords": "初生演替,次生演替,火山岩,沙丘,火灾后",
+        "exam_type": "选择题,分析题"
+      },
+      {
+        "id": "K69",
+        "name": "生态系统的结构",
+        "type": "KnowledgePoint",
+        "module": "选择性必修2 生物与环境",
+        "chapter": "生态系统及其稳定性",
+        "difficulty": 3,
+        "importance": 4,
+        "description": "掌握生态系统的组成成分(非生物物质和能量、生产者、消费者、分解者)及食物链和食物网的结构。",
+        "keywords": "生态系统,生产者,消费者,分解者,食物链,食物网",
+        "exam_type": "选择题,综合分析"
+      },
+      {
+        "id": "K70",
+        "name": "生态系统的能量流动",
+        "type": "KnowledgePoint",
+        "module": "选择性必修2 生物与环境",
+        "chapter": "生态系统及其稳定性",
+        "difficulty": 5,
+        "importance": 5,
+        "description": "掌握能量流动的过程(输入、传递、散失)和特点(单向流动、逐级递减，传递效率10%-20%)，能进行能量流动相关计算并应用于农业生产。",
+        "keywords": "能量流动,单向流动,逐级递减,10%-20%,传递效率,计算",
+        "exam_type": "选择题,计算题,综合分析"
+      },
+      {
+        "id": "K71",
+        "name": "生态系统的物质循环",
+        "type": "KnowledgePoint",
+        "module": "选择性必修2 生物与环境",
+        "chapter": "生态系统及其稳定性",
+        "difficulty": 4,
+        "importance": 4,
+        "description": "掌握碳循环(光合作用、呼吸作用、分解者分解、燃烧)的过程和特点(全球性、循环性)，理解物质循环与能量流动的关系。",
+        "keywords": "物质循环,碳循环,光合作用,呼吸作用,全球性,循环性",
+        "exam_type": "选择题,综合分析"
+      },
+      {
+        "id": "K72",
+        "name": "生态系统的信息传递",
+        "type": "KnowledgePoint",
+        "module": "选择性必修2 生物与环境",
+        "chapter": "生态系统及其稳定性",
+        "difficulty": 3,
+        "importance": 3,
+        "description": "掌握物理信息、化学信息和行为信息的分类及信息传递在生态系统中的作用(个体生命活动调节、种间关系、生物种群繁衍)。",
+        "keywords": "信息传递,物理信息,化学信息,行为信息,种间关系",
+        "exam_type": "选择题,判断题"
+      },
+      {
+        "id": "K73",
+        "name": "生态系统的稳定性",
+        "type": "KnowledgePoint",
+        "module": "选择性必修2 生物与环境",
+        "chapter": "生态系统及其稳定性",
+        "difficulty": 4,
+        "importance": 4,
+        "description": "理解抵抗力稳定性(结构复杂、稳定性高)和恢复力稳定性的概念及两者关系，掌握提高生态系统稳定性的措施。",
+        "keywords": "稳定性,抵抗力稳定性,恢复力稳定性,结构复杂",
+        "exam_type": "选择题,分析题"
+      },
+      {
+        "id": "K74",
+        "name": "人类活动对环境的影响",
+        "type": "KnowledgePoint",
+        "module": "选择性必修2 生物与环境",
+        "chapter": "人与环境",
+        "difficulty": 3,
+        "importance": 3,
+        "description": "理解人口增长对环境的影响，掌握富营养化、温室效应、酸雨等环境问题的成因及生物防治措施。",
+        "keywords": "人口增长,富营养化,温室效应,酸雨,环境问题",
+        "exam_type": "选择题,分析题"
+      },
+      {
+        "id": "K75",
+        "name": "生物多样性及其保护",
+        "type": "KnowledgePoint",
+        "module": "选择性必修2 生物与环境",
+        "chapter": "人与环境",
+        "difficulty": 3,
+        "importance": 4,
+        "description": "掌握生物多样性的三个层次及价值(潜在价值、间接价值、直接价值)，理解就地保护和迁地保护等保护措施。",
+        "keywords": "生物多样性,潜在价值,间接价值,就地保护,迁地保护",
+        "exam_type": "选择题,分析题"
+      },
+      {
+        "id": "K76",
+        "name": "微生物的培养技术",
+        "type": "KnowledgePoint",
+        "module": "选择性必修3 生物技术与工程",
+        "chapter": "发酵工程",
+        "difficulty": 4,
+        "importance": 4,
+        "description": "掌握培养基的配制原则(碳源、氮源、水、无机盐、生长因子)、消毒与灭菌的方法(高压蒸汽、干热、紫外线)及微生物的分离纯化技术。",
+        "keywords": "培养基,碳源,氮源,灭菌,消毒,分离纯化,接种",
+        "exam_type": "选择题,实验分析"
+      },
+      {
+        "id": "K77",
+        "name": "发酵工程的应用",
+        "type": "KnowledgePoint",
+        "module": "选择性必修3 生物技术与工程",
+        "chapter": "发酵工程",
+        "difficulty": 3,
+        "importance": 3,
+        "description": "了解发酵工程的基本环节(菌种选育、培养基配制、灭菌、扩大培养、发酵、分离提纯)及在医药、食品工业中的应用实例。",
+        "keywords": "发酵工程,菌种选育,扩大培养,分离提纯,医药,食品",
+        "exam_type": "选择题,分析题"
+      },
+      {
+        "id": "K78",
+        "name": "植物细胞工程",
+        "type": "KnowledgePoint",
+        "module": "选择性必修3 生物技术与工程",
+        "chapter": "细胞工程",
+        "difficulty": 4,
+        "importance": 4,
+        "description": "掌握植物组织培养(脱分化→愈伤组织→再分化→试管苗)的原理(全能性)和植物体细胞杂交(去壁、融合、筛选)的技术过程。",
+        "keywords": "植物组织培养,脱分化,愈伤组织,再分化,体细胞杂交,原生质体",
+        "exam_type": "选择题,综合分析"
+      },
+      {
+        "id": "K79",
+        "name": "动物细胞工程",
+        "type": "KnowledgePoint",
+        "module": "选择性必修3 生物技术与工程",
+        "chapter": "细胞工程",
+        "difficulty": 5,
+        "importance": 5,
+        "description": "掌握动物细胞培养技术、细胞融合和单克隆抗体制备(杂交瘤细胞:筛选→克隆→抗体)的原理与应用。",
+        "keywords": "动物细胞培养,细胞融合,单克隆抗体,杂交瘤细胞,HAT筛选",
+        "exam_type": "选择题,综合分析,过程图解"
+      },
+      {
+        "id": "K80",
+        "name": "DNA重组技术的基本工具",
+        "type": "KnowledgePoint",
+        "module": "选择性必修3 生物技术与工程",
+        "chapter": "基因工程",
+        "difficulty": 4,
+        "importance": 4,
+        "description": "掌握限制性内切核酸酶(识别特定序列、切割产生黏性末端或平末端)、DNA连接酶和运载体(质粒)的作用与特点。",
+        "keywords": "限制酶,DNA连接酶,运载体,质粒,黏性末端,平末端",
+        "exam_type": "选择题,分析题"
+      },
+      {
+        "id": "K81",
+        "name": "基因工程的操作程序",
+        "type": "KnowledgePoint",
+        "module": "选择性必修3 生物技术与工程",
+        "chapter": "基因工程",
+        "difficulty": 5,
+        "importance": 5,
+        "description": "掌握基因工程四步操作:目的基因的获取(PCR、人工合成)、表达载体的构建、导入受体细胞、目的基因的检测与鉴定。",
+        "keywords": "目的基因,PCR,表达载体,导入,检测鉴定,基因工程",
+        "exam_type": "选择题,综合分析,排序题"
+      },
+      {
+        "id": "K82",
+        "name": "基因工程的应用",
+        "type": "KnowledgePoint",
+        "module": "选择性必修3 生物技术与工程",
+        "chapter": "基因工程",
+        "difficulty": 3,
+        "importance": 3,
+        "description": "了解基因工程在农牧业(抗虫棉)、医药(胰岛素、干扰素)和环境保护(工程菌降解污染物)中的应用实例。",
+        "keywords": "抗虫棉,胰岛素,干扰素,工程菌,基因工程应用",
+        "exam_type": "选择题,分析题"
+      },
+      {
+        "id": "K83",
+        "name": "体内受精与早期胚胎发育",
+        "type": "KnowledgePoint",
+        "module": "选择性必修3 生物技术与工程",
+        "chapter": "胚胎工程",
+        "difficulty": 3,
+        "importance": 3,
+        "description": "掌握受精过程(精子获能、顶体反应、透明带反应、卵黄膜封闭作用)及早期胚胎发育阶段(桑椹胚、囊胚、原肠胚)。",
+        "keywords": "受精,精子获能,顶体反应,桑椹胚,囊胚,原肠胚",
+        "exam_type": "选择题,综合分析"
+      },
+      {
+        "id": "K84",
+        "name": "胚胎工程的应用",
+        "type": "KnowledgePoint",
+        "module": "选择性必修3 生物技术与工程",
+        "chapter": "胚胎工程",
+        "difficulty": 4,
+        "importance": 4,
+        "description": "掌握体外受精技术(卵母细胞采集、精子获能、受精)、胚胎移植(供体超数排卵、胚胎收集与移植)和胚胎分割的技术过程与意义。",
+        "keywords": "体外受精,胚胎移植,超数排卵,胚胎分割,试管动物",
+        "exam_type": "选择题,综合分析"
+      }
+    ],
+    "edges": [
+      {
+        "source": "M1",
+        "target": "C1",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "模块包含章节"
+      },
+      {
+        "source": "M1",
+        "target": "C2",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "模块包含章节"
+      },
+      {
+        "source": "M1",
+        "target": "C3",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "模块包含章节"
+      },
+      {
+        "source": "M1",
+        "target": "C4",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "模块包含章节"
+      },
+      {
+        "source": "M1",
+        "target": "C5",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "模块包含章节"
+      },
+      {
+        "source": "M2",
+        "target": "C6",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "模块包含章节"
+      },
+      {
+        "source": "M2",
+        "target": "C7",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "模块包含章节"
+      },
+      {
+        "source": "M2",
+        "target": "C8",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "模块包含章节"
+      },
+      {
+        "source": "M2",
+        "target": "C9",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "模块包含章节"
+      },
+      {
+        "source": "M2",
+        "target": "C10",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "模块包含章节"
+      },
+      {
+        "source": "M2",
+        "target": "C11",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "模块包含章节"
+      },
+      {
+        "source": "M3",
+        "target": "C12",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "模块包含章节"
+      },
+      {
+        "source": "M3",
+        "target": "C13",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "模块包含章节"
+      },
+      {
+        "source": "M3",
+        "target": "C14",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "模块包含章节"
+      },
+      {
+        "source": "M3",
+        "target": "C15",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "模块包含章节"
+      },
+      {
+        "source": "M3",
+        "target": "C16",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "模块包含章节"
+      },
+      {
+        "source": "M4",
+        "target": "C17",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "模块包含章节"
+      },
+      {
+        "source": "M4",
+        "target": "C18",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "模块包含章节"
+      },
+      {
+        "source": "M4",
+        "target": "C19",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "模块包含章节"
+      },
+      {
+        "source": "M4",
+        "target": "C20",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "模块包含章节"
+      },
+      {
+        "source": "M5",
+        "target": "C21",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "模块包含章节"
+      },
+      {
+        "source": "M5",
+        "target": "C22",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "模块包含章节"
+      },
+      {
+        "source": "M5",
+        "target": "C23",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "模块包含章节"
+      },
+      {
+        "source": "M5",
+        "target": "C24",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "模块包含章节"
+      },
+      {
+        "source": "C1",
+        "target": "K1",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C1",
+        "target": "K2",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C1",
+        "target": "K3",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C1",
+        "target": "K4",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C1",
+        "target": "K5",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C1",
+        "target": "K6",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C1",
+        "target": "K7",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C1",
+        "target": "K8",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C2",
+        "target": "K9",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C2",
+        "target": "K10",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C2",
+        "target": "K11",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C2",
+        "target": "K12",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C2",
+        "target": "K13",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C2",
+        "target": "K14",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C3",
+        "target": "K15",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C3",
+        "target": "K16",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C3",
+        "target": "K17",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C4",
+        "target": "K18",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C4",
+        "target": "K19",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C4",
+        "target": "K20",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C4",
+        "target": "K21",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C4",
+        "target": "K22",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C4",
+        "target": "K23",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C5",
+        "target": "K24",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C5",
+        "target": "K25",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C5",
+        "target": "K26",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C5",
+        "target": "K27",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C5",
+        "target": "K28",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C5",
+        "target": "K29",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C6",
+        "target": "K30",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C6",
+        "target": "K31",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C6",
+        "target": "K32",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C7",
+        "target": "K33",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C7",
+        "target": "K34",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C7",
+        "target": "K35",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C8",
+        "target": "K36",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C8",
+        "target": "K37",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C8",
+        "target": "K38",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C9",
+        "target": "K39",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C9",
+        "target": "K40",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C9",
+        "target": "K41",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C10",
+        "target": "K42",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C10",
+        "target": "K43",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C10",
+        "target": "K44",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C10",
+        "target": "K45",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C11",
+        "target": "K46",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C11",
+        "target": "K47",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C11",
+        "target": "K48",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C11",
+        "target": "K49",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C12",
+        "target": "K50",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C12",
+        "target": "K51",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C13",
+        "target": "K52",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C13",
+        "target": "K53",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C13",
+        "target": "K54",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C13",
+        "target": "K55",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C14",
+        "target": "K56",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C14",
+        "target": "K57",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C14",
+        "target": "K58",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C15",
+        "target": "K59",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C15",
+        "target": "K60",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C15",
+        "target": "K61",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C16",
+        "target": "K62",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C16",
+        "target": "K63",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C16",
+        "target": "K64",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C17",
+        "target": "K65",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C17",
+        "target": "K66",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C18",
+        "target": "K67",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C18",
+        "target": "K68",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C19",
+        "target": "K69",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C19",
+        "target": "K70",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C19",
+        "target": "K71",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C19",
+        "target": "K72",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C19",
+        "target": "K73",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C20",
+        "target": "K74",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C20",
+        "target": "K75",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C21",
+        "target": "K76",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C21",
+        "target": "K77",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C22",
+        "target": "K78",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C22",
+        "target": "K79",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C23",
+        "target": "K80",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C23",
+        "target": "K81",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C23",
+        "target": "K82",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C24",
+        "target": "K83",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C24",
+        "target": "K84",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "K2",
+        "target": "K3",
+        "relation": "PREREQUISITE",
+        "weight": 0.7,
+        "description": "化合物知识是理解水作用的基础"
+      },
+      {
+        "source": "K2",
+        "target": "K4",
+        "relation": "PREREQUISITE",
+        "weight": 0.7,
+        "description": "化合物知识是理解无机盐功能的基础"
+      },
+      {
+        "source": "K2",
+        "target": "K5",
+        "relation": "PREREQUISITE",
+        "weight": 0.8,
+        "description": "化合物分类是学习糖类的前提"
+      },
+      {
+        "source": "K2",
+        "target": "K6",
+        "relation": "PREREQUISITE",
+        "weight": 0.8,
+        "description": "化合物分类是学习脂质的前提"
+      },
+      {
+        "source": "K2",
+        "target": "K7",
+        "relation": "PREREQUISITE",
+        "weight": 0.6,
+        "description": "化合物知识为理解蛋白质做铺垫"
+      },
+      {
+        "source": "K2",
+        "target": "K8",
+        "relation": "PREREQUISITE",
+        "weight": 0.6,
+        "description": "化合物知识为理解核酸做铺垫"
+      },
+      {
+        "source": "K7",
+        "target": "K8",
+        "relation": "PREREQUISITE",
+        "weight": 0.5,
+        "description": "蛋白质结构知识有助于理解核酸功能"
+      },
+      {
+        "source": "K7",
+        "target": "K11",
+        "relation": "PREREQUISITE",
+        "weight": 0.6,
+        "description": "蛋白质知识是理解细胞膜组成的基础"
+      },
+      {
+        "source": "K8",
+        "target": "K13",
+        "relation": "PREREQUISITE",
+        "weight": 0.7,
+        "description": "核酸知识是理解细胞核中染色质的前提"
+      },
+      {
+        "source": "K7",
+        "target": "K12",
+        "relation": "PREREQUISITE",
+        "weight": 0.5,
+        "description": "蛋白质知识有助于理解细胞器功能"
+      },
+      {
+        "source": "K11",
+        "target": "K14",
+        "relation": "PREREQUISITE",
+        "weight": 0.8,
+        "description": "细胞膜结构是理解生物膜系统的基础"
+      },
+      {
+        "source": "K12",
+        "target": "K14",
+        "relation": "PREREQUISITE",
+        "weight": 0.7,
+        "description": "细胞器知识是理解生物膜系统的基础"
+      },
+      {
+        "source": "K11",
+        "target": "K15",
+        "relation": "PREREQUISITE",
+        "weight": 0.7,
+        "description": "细胞膜结构是理解渗透作用的前提"
+      },
+      {
+        "source": "K11",
+        "target": "K17",
+        "relation": "PREREQUISITE",
+        "weight": 0.8,
+        "description": "细胞膜结构是理解跨膜运输方式的基础"
+      },
+      {
+        "source": "K15",
+        "target": "K16",
+        "relation": "PREREQUISITE",
+        "weight": 0.9,
+        "description": "渗透作用原理是质壁分离实验的基础"
+      },
+      {
+        "source": "K15",
+        "target": "K17",
+        "relation": "PREREQUISITE",
+        "weight": 0.6,
+        "description": "渗透作用与跨膜运输原理相通"
+      },
+      {
+        "source": "K18",
+        "target": "K19",
+        "relation": "PREREQUISITE",
+        "weight": 0.8,
+        "description": "酶的作用本质是理解酶特性的前提"
+      },
+      {
+        "source": "K20",
+        "target": "K21",
+        "relation": "PREREQUISITE",
+        "weight": 0.7,
+        "description": "ATP知识是理解细胞呼吸能量转化的基础"
+      },
+      {
+        "source": "K20",
+        "target": "K22",
+        "relation": "PREREQUISITE",
+        "weight": 0.8,
+        "description": "ATP知识是理解光合作用中能量转化的基础"
+      },
+      {
+        "source": "K21",
+        "target": "K22",
+        "relation": "PREREQUISITE",
+        "weight": 0.6,
+        "description": "细胞呼吸与光合作用互为逆过程,相互关联"
+      },
+      {
+        "source": "K22",
+        "target": "K23",
+        "relation": "PREREQUISITE",
+        "weight": 0.9,
+        "description": "光合作用原理是分析影响因素的基础"
+      },
+      {
+        "source": "K24",
+        "target": "K25",
+        "relation": "PREREQUISITE",
+        "weight": 0.9,
+        "description": "细胞周期是有丝分裂学习的前提"
+      },
+      {
+        "source": "K25",
+        "target": "K26",
+        "relation": "PREREQUISITE",
+        "weight": 0.5,
+        "description": "有丝分裂与细胞分化相关"
+      },
+      {
+        "source": "K26",
+        "target": "K27",
+        "relation": "PREREQUISITE",
+        "weight": 0.8,
+        "description": "细胞分化是理解全能性的前提"
+      },
+      {
+        "source": "K26",
+        "target": "K28",
+        "relation": "PREREQUISITE",
+        "weight": 0.5,
+        "description": "细胞分化与衰老凋亡有联系"
+      },
+      {
+        "source": "K28",
+        "target": "K29",
+        "relation": "PREREQUISITE",
+        "weight": 0.6,
+        "description": "细胞凋亡与癌变机制相关"
+      },
+      {
+        "source": "K30",
+        "target": "K31",
+        "relation": "PREREQUISITE",
+        "weight": 0.9,
+        "description": "杂交实验是分离定律的基础"
+      },
+      {
+        "source": "K31",
+        "target": "K32",
+        "relation": "PREREQUISITE",
+        "weight": 0.8,
+        "description": "分离定律是自由组合定律的基础"
+      },
+      {
+        "source": "K31",
+        "target": "K33",
+        "relation": "PREREQUISITE",
+        "weight": 0.6,
+        "description": "分离定律与减数分裂中同源染色体分离一致"
+      },
+      {
+        "source": "K32",
+        "target": "K33",
+        "relation": "PREREQUISITE",
+        "weight": 0.5,
+        "description": "自由组合定律与减数分裂中非同源染色体自由组合一致"
+      },
+      {
+        "source": "K33",
+        "target": "K34",
+        "relation": "PREREQUISITE",
+        "weight": 0.7,
+        "description": "减数分裂为基因在染色体上提供细胞学基础"
+      },
+      {
+        "source": "K34",
+        "target": "K35",
+        "relation": "PREREQUISITE",
+        "weight": 0.8,
+        "description": "基因在染色体上是伴性遗传的前提"
+      },
+      {
+        "source": "K31",
+        "target": "K35",
+        "relation": "PREREQUISITE",
+        "weight": 0.6,
+        "description": "分离定律是分析伴性遗传的工具"
+      },
+      {
+        "source": "K34",
+        "target": "K36",
+        "relation": "PREREQUISITE",
+        "weight": 0.5,
+        "description": "基因在染色体上为寻找遗传物质提供方向"
+      },
+      {
+        "source": "K36",
+        "target": "K37",
+        "relation": "PREREQUISITE",
+        "weight": 0.8,
+        "description": "确认DNA为遗传物质是研究其结构的前提"
+      },
+      {
+        "source": "K37",
+        "target": "K38",
+        "relation": "PREREQUISITE",
+        "weight": 0.9,
+        "description": "DNA结构是理解复制机制的基础"
+      },
+      {
+        "source": "K38",
+        "target": "K39",
+        "relation": "PREREQUISITE",
+        "weight": 0.7,
+        "description": "DNA复制涉及模板,转录翻译也以DNA为模板"
+      },
+      {
+        "source": "K37",
+        "target": "K39",
+        "relation": "PREREQUISITE",
+        "weight": 0.6,
+        "description": "DNA结构是理解转录的基础"
+      },
+      {
+        "source": "K39",
+        "target": "K40",
+        "relation": "PREREQUISITE",
+        "weight": 0.7,
+        "description": "翻译过程涉及遗传密码"
+      },
+      {
+        "source": "K39",
+        "target": "K41",
+        "relation": "PREREQUISITE",
+        "weight": 0.8,
+        "description": "转录翻译是中心法则的核心环节"
+      },
+      {
+        "source": "K39",
+        "target": "K42",
+        "relation": "PREREQUISITE",
+        "weight": 0.5,
+        "description": "基因表达知识有助于理解基因突变"
+      },
+      {
+        "source": "K38",
+        "target": "K42",
+        "relation": "PREREQUISITE",
+        "weight": 0.6,
+        "description": "DNA复制过程可能发生基因突变"
+      },
+      {
+        "source": "K33",
+        "target": "K43",
+        "relation": "PREREQUISITE",
+        "weight": 0.7,
+        "description": "减数分裂中交叉互换导致基因重组"
+      },
+      {
+        "source": "K34",
+        "target": "K44",
+        "relation": "PREREQUISITE",
+        "weight": 0.6,
+        "description": "染色体行为知识是理解染色体变异的基础"
+      },
+      {
+        "source": "K42",
+        "target": "K45",
+        "relation": "PREREQUISITE",
+        "weight": 0.5,
+        "description": "基因突变导致遗传病"
+      },
+      {
+        "source": "K42",
+        "target": "K46",
+        "relation": "PREREQUISITE",
+        "weight": 0.7,
+        "description": "基因突变是进化的原材料"
+      },
+      {
+        "source": "K43",
+        "target": "K46",
+        "relation": "PREREQUISITE",
+        "weight": 0.6,
+        "description": "基因重组是进化的原材料"
+      },
+      {
+        "source": "K46",
+        "target": "K47",
+        "relation": "PREREQUISITE",
+        "weight": 0.8,
+        "description": "进化理论是基因频率分析的基础"
+      },
+      {
+        "source": "K47",
+        "target": "K48",
+        "relation": "PREREQUISITE",
+        "weight": 0.8,
+        "description": "基因频率变化是物种形成的微观机制"
+      },
+      {
+        "source": "K48",
+        "target": "K49",
+        "relation": "PREREQUISITE",
+        "weight": 0.7,
+        "description": "物种形成过程产生生物多样性"
+      },
+      {
+        "source": "K51",
+        "target": "K52",
+        "relation": "PREREQUISITE",
+        "weight": 0.7,
+        "description": "稳态概念是学习神经调节的前提"
+      },
+      {
+        "source": "K51",
+        "target": "K56",
+        "relation": "PREREQUISITE",
+        "weight": 0.7,
+        "description": "稳态概念是学习激素调节的前提"
+      },
+      {
+        "source": "K51",
+        "target": "K59",
+        "relation": "PREREQUISITE",
+        "weight": 0.5,
+        "description": "稳态概念是学习免疫调节的前提"
+      },
+      {
+        "source": "K52",
+        "target": "K53",
+        "relation": "PREREQUISITE",
+        "weight": 0.8,
+        "description": "反射弧是神经冲动传导的结构基础"
+      },
+      {
+        "source": "K53",
+        "target": "K54",
+        "relation": "PREREQUISITE",
+        "weight": 0.9,
+        "description": "神经冲动传导是突触传递的基础"
+      },
+      {
+        "source": "K54",
+        "target": "K55",
+        "relation": "PREREQUISITE",
+        "weight": 0.7,
+        "description": "突触传递是分级调节的基础"
+      },
+      {
+        "source": "K56",
+        "target": "K57",
+        "relation": "PREREQUISITE",
+        "weight": 0.8,
+        "description": "激素调节原理是学习具体激素的基础"
+      },
+      {
+        "source": "K56",
+        "target": "K58",
+        "relation": "PREREQUISITE",
+        "weight": 0.7,
+        "description": "激素调节原理是理解神经-体液协调的基础"
+      },
+      {
+        "source": "K55",
+        "target": "K58",
+        "relation": "PREREQUISITE",
+        "weight": 0.5,
+        "description": "神经分级调节参与多种稳态调节"
+      },
+      {
+        "source": "K59",
+        "target": "K60",
+        "relation": "PREREQUISITE",
+        "weight": 0.8,
+        "description": "免疫系统组成是学习特异性免疫的基础"
+      },
+      {
+        "source": "K60",
+        "target": "K61",
+        "relation": "PREREQUISITE",
+        "weight": 0.6,
+        "description": "特异性免疫机制有助于理解免疫失调"
+      },
+      {
+        "source": "K62",
+        "target": "K63",
+        "relation": "PREREQUISITE",
+        "weight": 0.6,
+        "description": "生长素知识是理解其他激素的参照"
+      },
+      {
+        "source": "K63",
+        "target": "K64",
+        "relation": "PREREQUISITE",
+        "weight": 0.6,
+        "description": "各类激素知识是农业应用的基础"
+      },
+      {
+        "source": "K65",
+        "target": "K66",
+        "relation": "PREREQUISITE",
+        "weight": 0.8,
+        "description": "种群特征是分析数量变化的基础"
+      },
+      {
+        "source": "K66",
+        "target": "K67",
+        "relation": "PREREQUISITE",
+        "weight": 0.5,
+        "description": "种群动态与群落结构相关"
+      },
+      {
+        "source": "K67",
+        "target": "K69",
+        "relation": "PREREQUISITE",
+        "weight": 0.6,
+        "description": "群落结构知识有助于理解生态系统结构"
+      },
+      {
+        "source": "K68",
+        "target": "K73",
+        "relation": "PREREQUISITE",
+        "weight": 0.4,
+        "description": "群落演替影响生态系统稳定性"
+      },
+      {
+        "source": "K69",
+        "target": "K70",
+        "relation": "PREREQUISITE",
+        "weight": 0.9,
+        "description": "生态系统结构是能量流动的基础"
+      },
+      {
+        "source": "K69",
+        "target": "K71",
+        "relation": "PREREQUISITE",
+        "weight": 0.8,
+        "description": "生态系统结构是物质循环的基础"
+      },
+      {
+        "source": "K70",
+        "target": "K71",
+        "relation": "PREREQUISITE",
+        "weight": 0.6,
+        "description": "能量流动与物质循环密切相关"
+      },
+      {
+        "source": "K69",
+        "target": "K73",
+        "relation": "PREREQUISITE",
+        "weight": 0.5,
+        "description": "生态系统结构影响稳定性"
+      },
+      {
+        "source": "K73",
+        "target": "K74",
+        "relation": "PREREQUISITE",
+        "weight": 0.5,
+        "description": "生态系统稳定性受人类活动影响"
+      },
+      {
+        "source": "K69",
+        "target": "K75",
+        "relation": "PREREQUISITE",
+        "weight": 0.5,
+        "description": "生态系统结构知识有助于理解生物多样性保护"
+      },
+      {
+        "source": "K78",
+        "target": "K81",
+        "relation": "PREREQUISITE",
+        "weight": 0.5,
+        "description": "细胞工程技术与基因工程有交叉"
+      },
+      {
+        "source": "K79",
+        "target": "K81",
+        "relation": "PREREQUISITE",
+        "weight": 0.4,
+        "description": "动物细胞培养技术是基因工程受体细胞培养的基础"
+      },
+      {
+        "source": "K80",
+        "target": "K81",
+        "relation": "PREREQUISITE",
+        "weight": 0.9,
+        "description": "DNA重组工具是基因工程操作的基础"
+      },
+      {
+        "source": "K81",
+        "target": "K82",
+        "relation": "PREREQUISITE",
+        "weight": 0.8,
+        "description": "操作程序是理解应用的基础"
+      },
+      {
+        "source": "K78",
+        "target": "K84",
+        "relation": "PREREQUISITE",
+        "weight": 0.4,
+        "description": "细胞工程与胚胎工程有技术交叉"
+      },
+      {
+        "source": "K83",
+        "target": "K84",
+        "relation": "PREREQUISITE",
+        "weight": 0.8,
+        "description": "受精与早期胚胎发育是胚胎工程的基础"
+      },
+      {
+        "source": "K7",
+        "target": "K39",
+        "relation": "PREREQUISITE",
+        "weight": 0.6,
+        "description": "蛋白质知识是理解翻译过程的基础"
+      },
+      {
+        "source": "K8",
+        "target": "K36",
+        "relation": "PREREQUISITE",
+        "weight": 0.5,
+        "description": "核酸知识为理解DNA作为遗传物质做铺垫"
+      },
+      {
+        "source": "K22",
+        "target": "K70",
+        "relation": "PREREQUISITE",
+        "weight": 0.5,
+        "description": "光合作用原理与生态系统能量流动相关"
+      },
+      {
+        "source": "K25",
+        "target": "K33",
+        "relation": "PREREQUISITE",
+        "weight": 0.7,
+        "description": "有丝分裂知识是理解减数分裂的基础"
+      },
+      {
+        "source": "K26",
+        "target": "K78",
+        "relation": "PREREQUISITE",
+        "weight": 0.4,
+        "description": "细胞分化与全能性是植物组织培养的理论基础"
+      },
+      {
+        "source": "K17",
+        "target": "K50",
+        "relation": "PREREQUISITE",
+        "weight": 0.4,
+        "description": "物质跨膜运输与内环境物质交换相关"
+      },
+      {
+        "source": "K3",
+        "target": "K4",
+        "relation": "RELATED_TO",
+        "weight": 0.5,
+        "description": "水与无机盐共同维持细胞内环境"
+      },
+      {
+        "source": "K5",
+        "target": "K6",
+        "relation": "RELATED_TO",
+        "weight": 0.4,
+        "description": "糖类与脂质都是能源物质"
+      },
+      {
+        "source": "K12",
+        "target": "K17",
+        "relation": "RELATED_TO",
+        "weight": 0.5,
+        "description": "细胞器与跨膜运输方式相关"
+      },
+      {
+        "source": "K18",
+        "target": "K21",
+        "relation": "RELATED_TO",
+        "weight": 0.5,
+        "description": "酶参与细胞呼吸各阶段"
+      },
+      {
+        "source": "K18",
+        "target": "K22",
+        "relation": "RELATED_TO",
+        "weight": 0.5,
+        "description": "酶参与光合作用暗反应"
+      },
+      {
+        "source": "K31",
+        "target": "K32",
+        "relation": "RELATED_TO",
+        "weight": 0.6,
+        "description": "分离定律与自由组合定律都是遗传规律"
+      },
+      {
+        "source": "K37",
+        "target": "K38",
+        "relation": "RELATED_TO",
+        "weight": 0.7,
+        "description": "DNA结构与复制紧密关联"
+      },
+      {
+        "source": "K42",
+        "target": "K43",
+        "relation": "RELATED_TO",
+        "weight": 0.5,
+        "description": "基因突变与基因重组都是变异类型"
+      },
+      {
+        "source": "K43",
+        "target": "K44",
+        "relation": "RELATED_TO",
+        "weight": 0.5,
+        "description": "基因重组与染色体变异都是变异类型"
+      },
+      {
+        "source": "K52",
+        "target": "K56",
+        "relation": "RELATED_TO",
+        "weight": 0.4,
+        "description": "神经调节与体液调节都是稳态调节方式"
+      },
+      {
+        "source": "K56",
+        "target": "K60",
+        "relation": "RELATED_TO",
+        "weight": 0.4,
+        "description": "激素调节与免疫调节都参与稳态维持"
+      },
+      {
+        "source": "K66",
+        "target": "K73",
+        "relation": "RELATED_TO",
+        "weight": 0.4,
+        "description": "种群数量变化与生态系统稳定性相关"
+      },
+      {
+        "source": "K70",
+        "target": "K73",
+        "relation": "RELATED_TO",
+        "weight": 0.5,
+        "description": "能量流动与生态系统稳定性相关"
+      },
+      {
+        "source": "K71",
+        "target": "K74",
+        "relation": "RELATED_TO",
+        "weight": 0.5,
+        "description": "物质循环与人类活动影响相关"
+      },
+      {
+        "source": "K76",
+        "target": "K77",
+        "relation": "RELATED_TO",
+        "weight": 0.7,
+        "description": "微生物培养是发酵工程的基础环节"
+      },
+      {
+        "source": "K80",
+        "target": "K81",
+        "relation": "RELATED_TO",
+        "weight": 0.6,
+        "description": "工具与操作程序紧密关联"
+      },
+      {
+        "source": "K21",
+        "target": "K22",
+        "relation": "RELATED_TO",
+        "weight": 0.6,
+        "description": "细胞呼吸与光合作用是细胞能量代谢的核心"
+      },
+      {
+        "source": "K60",
+        "target": "K61",
+        "relation": "RELATED_TO",
+        "weight": 0.5,
+        "description": "免疫机制与免疫失调紧密关联"
+      },
+      {
+        "source": "K62",
+        "target": "K64",
+        "relation": "RELATED_TO",
+        "weight": 0.5,
+        "description": "生长素理论与植物激素应用相关"
+      },
+      {
+        "source": "K47",
+        "target": "K48",
+        "relation": "RELATED_TO",
+        "weight": 0.6,
+        "description": "基因频率变化与物种形成紧密关联"
+      },
+      {
+        "source": "K31",
+        "target": "K30",
+        "relation": "DERIVED_FROM",
+        "weight": 0.9,
+        "description": "分离定律由孟德尔杂交实验推导得出"
+      },
+      {
+        "source": "K32",
+        "target": "K30",
+        "relation": "DERIVED_FROM",
+        "weight": 0.8,
+        "description": "自由组合定律由孟德尔杂交实验推导得出"
+      },
+      {
+        "source": "K47",
+        "target": "K46",
+        "relation": "DERIVED_FROM",
+        "weight": 0.8,
+        "description": "基因频率分析由进化理论推导而来"
+      },
+      {
+        "source": "K25",
+        "target": "K24",
+        "relation": "DERIVED_FROM",
+        "weight": 0.8,
+        "description": "有丝分裂各期特征由细胞周期推导而来"
+      },
+      {
+        "source": "K23",
+        "target": "K66",
+        "relation": "APPLIED_IN",
+        "weight": 0.5,
+        "description": "光合作用影响因素分析应用于种群数量研究"
+      },
+      {
+        "source": "K17",
+        "target": "K50",
+        "relation": "APPLIED_IN",
+        "weight": 0.4,
+        "description": "跨膜运输原理应用于内环境稳态分析"
+      },
+      {
+        "source": "K64",
+        "target": "K77",
+        "relation": "APPLIED_IN",
+        "weight": 0.4,
+        "description": "植物激素调节应用于发酵工程菌种选育"
+      },
+      {
+        "source": "K44",
+        "target": "K78",
+        "relation": "APPLIED_IN",
+        "weight": 0.5,
+        "description": "染色体变异理论应用于植物细胞工程育种"
+      }
+    ],
+    "categories": [
+      "必修1 分子与细胞",
+      "必修2 遗传与进化",
+      "选择性必修1 稳态与调节",
+      "选择性必修2 生物与环境",
+      "选择性必修3 生物技术与工程"
+    ],
+    "stats": {
+      "total_nodes": 113,
+      "total_edges": 221,
+      "modules": 5,
+      "chapters": 24,
+      "knowledge_points": 84
+    }
+  },
+  "语文": {
+    "color": "#C4A35A",
+    "nodes": [
+      {
+        "id": "M1",
+        "name": "必修上册",
+        "type": "Module",
+        "module": "必修上册",
+        "chapter": "",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "涵盖青春价值、劳动光荣、生命诗意、家乡文化生活、学习之道、自然情怀、词语与文化等单元，兼及现代诗歌、古诗词、散文、议论文、文言文等文体。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "M2",
+        "name": "必修下册",
+        "type": "Module",
+        "module": "必修下册",
+        "chapter": "",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "围绕中华文明之光、责任担当、探索创新、媒介素养、传统文化、小说鉴赏、剧本欣赏等单元，深化文言文与文学鉴赏能力。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "M3",
+        "name": "选择性必修上册",
+        "type": "Module",
+        "module": "选择性必修上册",
+        "chapter": "",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "聚焦中国革命传统作品、逻辑思维训练与小说欣赏，提升理论文章阅读与逻辑分析能力。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "M4",
+        "name": "选择性必修中册",
+        "type": "Module",
+        "module": "选择性必修中册",
+        "chapter": "",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "涵盖理论的价值、苦难与新生、历史的回响、丰富的心灵，深入理论文章、现代诗歌、咏史诗与外国小说鉴赏。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "M5",
+        "name": "选择性必修下册",
+        "type": "Module",
+        "module": "选择性必修下册",
+        "chapter": "",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "包括诗散文鉴赏、语言鉴赏、中国现代作家作品与外国作家作品，侧重语言运用与比较文学阅读。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "C1",
+        "name": "青春价值",
+        "type": "Chapter",
+        "module": "必修上册",
+        "chapter": "青春价值",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "以现代诗歌为主，学习意象、意境与抒情方式，把握青春主题的情感表达。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "C2",
+        "name": "劳动光荣",
+        "type": "Chapter",
+        "module": "必修上册",
+        "chapter": "劳动光荣",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "学习新闻通讯与报告文学，掌握新闻文体特点与人物通讯写作方法。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "C3",
+        "name": "生命的诗意",
+        "type": "Chapter",
+        "module": "必修上册",
+        "chapter": "生命的诗意",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "学习古诗词，掌握意象分析、炼字艺术与用典手法。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "C4",
+        "name": "家乡文化生活与整本书阅读",
+        "type": "Chapter",
+        "module": "必修上册",
+        "chapter": "家乡文化生活与整本书阅读",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "开展社会调查与整本书阅读(《乡土中国》)，掌握调查报告与学术著作阅读方法。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "C5",
+        "name": "学习之道",
+        "type": "Chapter",
+        "module": "必修上册",
+        "chapter": "学习之道",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "学习议论文，掌握论点提炼、论证方法与议论文结构。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "C6",
+        "name": "自然情怀",
+        "type": "Chapter",
+        "module": "必修上册",
+        "chapter": "自然情怀",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "学习散文，掌握形散神聚、线索结构及借景抒情手法。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "C7",
+        "name": "词语与文化",
+        "type": "Chapter",
+        "module": "必修上册",
+        "chapter": "词语与文化",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "学习文言文，掌握实词虚词、特殊句式与词类活用。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "C8",
+        "name": "中华文明之光",
+        "type": "Chapter",
+        "module": "必修下册",
+        "chapter": "中华文明之光",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "学习先秦诸子散文，掌握说理方法与文言文翻译技巧。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "C9",
+        "name": "责任与担当",
+        "type": "Chapter",
+        "module": "必修下册",
+        "chapter": "责任与担当",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "学习古代记叙散文与传记，掌握叙事艺术与史传文学特点。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "C10",
+        "name": "探索与创新",
+        "type": "Chapter",
+        "module": "必修下册",
+        "chapter": "探索与创新",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "学习科普文章，掌握说明方法与说明顺序。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "C11",
+        "name": "媒介素养",
+        "type": "Chapter",
+        "module": "必修下册",
+        "chapter": "媒介素养",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "学习新闻消息与媒体信息辨析，掌握消息结构与信息评价方法。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "C12",
+        "name": "中华优秀传统文化",
+        "type": "Chapter",
+        "module": "必修下册",
+        "chapter": "中华优秀传统文化",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "学习传统文化常识与对联创作，掌握对联格律。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "C13",
+        "name": "小说鉴赏",
+        "type": "Chapter",
+        "module": "必修下册",
+        "chapter": "小说鉴赏",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "学习小说三要素、人物形象分析、环境描写与叙事视角。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "C14",
+        "name": "剧本欣赏",
+        "type": "Chapter",
+        "module": "必修下册",
+        "chapter": "剧本欣赏",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "学习戏剧冲突、戏剧语言特点与人物形象分析。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "C15",
+        "name": "中国革命传统作品",
+        "type": "Chapter",
+        "module": "选择性必修上册",
+        "chapter": "中国革命传统作品",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "学习革命文学与纪实文学，掌握时代背景分析与纪实写作特点。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "C16",
+        "name": "逻辑思维",
+        "type": "Chapter",
+        "module": "选择性必修上册",
+        "chapter": "逻辑思维",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "学习形式逻辑基本规律、推理方法与逻辑谬误识别。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "C17",
+        "name": "小说欣赏",
+        "type": "Chapter",
+        "module": "选择性必修上册",
+        "chapter": "小说欣赏",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "深入小说主题多义性与叙述技巧分析。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "C18",
+        "name": "理论的价值",
+        "type": "Chapter",
+        "module": "选择性必修中册",
+        "chapter": "理论的价值",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "学习理论文章的阅读方法与论证逻辑。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "C19",
+        "name": "苦难与新生",
+        "type": "Chapter",
+        "module": "选择性必修中册",
+        "chapter": "苦难与新生",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "学习现代诗歌象征手法与抒情诗鉴赏。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "C20",
+        "name": "历史的回响",
+        "type": "Chapter",
+        "module": "选择性必修中册",
+        "chapter": "历史的回响",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "学习咏史诗特点与怀古用典手法。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "C21",
+        "name": "丰富的心灵",
+        "type": "Chapter",
+        "module": "选择性必修中册",
+        "chapter": "丰富的心灵",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "学习外国小说鉴赏与心理描写方法。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "C22",
+        "name": "诗散文鉴赏",
+        "type": "Chapter",
+        "module": "选择性必修下册",
+        "chapter": "诗散文鉴赏",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "学习现代散文诗与现当代诗歌鉴赏。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "C23",
+        "name": "语言鉴赏",
+        "type": "Chapter",
+        "module": "选择性必修下册",
+        "chapter": "语言鉴赏",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "学习词语色彩义、句式变换与修辞手法。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "C24",
+        "name": "中国现代作家作品",
+        "type": "Chapter",
+        "module": "选择性必修下册",
+        "chapter": "中国现代作家作品",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "学习鲁迅小说批判性、现代散文流派与现代话剧成就。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "C25",
+        "name": "外国作家作品",
+        "type": "Chapter",
+        "module": "选择性必修下册",
+        "chapter": "外国作家作品",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "学习外国小说流派、外国诗歌鉴赏与比较文学阅读方法。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "K1",
+        "name": "现代诗歌的意象与意境",
+        "type": "KnowledgePoint",
+        "module": "必修上册",
+        "chapter": "青春价值",
+        "difficulty": 3,
+        "importance": 4,
+        "description": "掌握意象(融入主观情感的客观物象)与意境(由意象构成的整体氛围)的概念，能分析现代诗歌中意象的组合方式与意境营造。",
+        "keywords": "意象,意境,客观物象,主观情感,氛围营造",
+        "exam_type": "诗歌鉴赏题,选择题"
+      },
+      {
+        "id": "K2",
+        "name": "诗歌的抒情方式",
+        "type": "KnowledgePoint",
+        "module": "必修上册",
+        "chapter": "青春价值",
+        "difficulty": 3,
+        "importance": 4,
+        "description": "区分直抒胸臆与间接抒情(借景抒情、托物言志、借古抒怀)，能判断诗歌中的抒情方式并分析其效果。",
+        "keywords": "直抒胸臆,借景抒情,托物言志,借古抒怀,间接抒情",
+        "exam_type": "诗歌鉴赏题,选择题"
+      },
+      {
+        "id": "K3",
+        "name": "青春主题作品的情感把握",
+        "type": "KnowledgePoint",
+        "module": "必修上册",
+        "chapter": "青春价值",
+        "difficulty": 2,
+        "importance": 3,
+        "description": "理解青春题材作品中理想与现实、激情与困惑等情感主题，能结合时代背景分析作品情感基调。",
+        "keywords": "青春,理想,激情,情感主题,时代背景",
+        "exam_type": "阅读理解题,鉴赏题"
+      },
+      {
+        "id": "K4",
+        "name": "新闻通讯的特点与结构",
+        "type": "KnowledgePoint",
+        "module": "必修上册",
+        "chapter": "劳动光荣",
+        "difficulty": 3,
+        "importance": 3,
+        "description": "掌握新闻通讯的特点(真实性与文学性结合、详细深入)及结构(导语、主体、背景、结尾)，区分通讯与消息的差异。",
+        "keywords": "新闻通讯,真实性,文学性,导语,主体,背景",
+        "exam_type": "选择题,阅读分析题"
+      },
+      {
+        "id": "K5",
+        "name": "报告文学的真实性与文学性",
+        "type": "KnowledgePoint",
+        "module": "必修上册",
+        "chapter": "劳动光荣",
+        "difficulty": 3,
+        "importance": 3,
+        "description": "理解报告文学兼具新闻真实性与文学艺术性的特征，掌握其在叙事中合理运用虚构手法的边界。",
+        "keywords": "报告文学,真实性,文学性,新闻性,虚构边界",
+        "exam_type": "选择题,分析题"
+      },
+      {
+        "id": "K6",
+        "name": "人物通讯的写作方法",
+        "type": "KnowledgePoint",
+        "module": "必修上册",
+        "chapter": "劳动光荣",
+        "difficulty": 3,
+        "importance": 3,
+        "description": "掌握人物通讯通过典型事例、细节描写和语言行动刻画人物形象的写作方法，能进行人物通讯片段写作。",
+        "keywords": "人物通讯,典型事例,细节描写,语言行动,人物形象",
+        "exam_type": "写作题,阅读分析题"
+      },
+      {
+        "id": "K7",
+        "name": "古诗词意象分析",
+        "type": "KnowledgePoint",
+        "module": "必修上册",
+        "chapter": "生命的诗意",
+        "difficulty": 4,
+        "importance": 5,
+        "description": "掌握古诗词中常见意象(月、柳、梅、菊、松等)的固定寓意与文化内涵，能分析意象的组合方式与表现效果。",
+        "keywords": "意象,月,柳,梅,菊,松,固定寓意,文化内涵",
+        "exam_type": "诗歌鉴赏题,选择题"
+      },
+      {
+        "id": "K8",
+        "name": "古典诗歌的炼字艺术",
+        "type": "KnowledgePoint",
+        "module": "必修上册",
+        "chapter": "生命的诗意",
+        "difficulty": 4,
+        "importance": 5,
+        "description": "掌握炼字(动词、形容词、数量词、叠词)的分析方法，能赏析关键字词在表情达意上的精妙之处。",
+        "keywords": "炼字,动词,形容词,叠词,诗眼,表情达意",
+        "exam_type": "诗歌鉴赏题,分析题"
+      },
+      {
+        "id": "K9",
+        "name": "诗歌的用典手法",
+        "type": "KnowledgePoint",
+        "module": "必修上册",
+        "chapter": "生命的诗意",
+        "difficulty": 4,
+        "importance": 4,
+        "description": "理解用典(借用历史故事或前人语句表达情感)的作用(含蓄凝练、借古讽今、以古喻今)，能分析诗歌中的典故及其表达效果。",
+        "keywords": "用典,典故,借古讽今,以古喻今,含蓄凝练",
+        "exam_type": "诗歌鉴赏题,分析题"
+      },
+      {
+        "id": "K10",
+        "name": "社会调查报告的写作",
+        "type": "KnowledgePoint",
+        "module": "必修上册",
+        "chapter": "家乡文化生活与整本书阅读",
+        "difficulty": 3,
+        "importance": 3,
+        "description": "掌握社会调查的基本方法(问卷、访谈、实地考察)及调查报告的结构(标题、前言、主体、结尾、附件)，能撰写规范的调查报告。",
+        "keywords": "社会调查,问卷,访谈,调查报告,结构,前言,主体",
+        "exam_type": "写作题,应用文"
+      },
+      {
+        "id": "K11",
+        "name": "整本书阅读方法",
+        "type": "KnowledgePoint",
+        "module": "必修上册",
+        "chapter": "家乡文化生活与整本书阅读",
+        "difficulty": 3,
+        "importance": 3,
+        "description": "掌握整本书阅读的基本方法(通读、精读、批注、思维导图、专题探究)，以《乡土中国》为例理解学术著作的阅读策略。",
+        "keywords": "整本书阅读,通读,精读,批注,思维导图,乡土中国",
+        "exam_type": "阅读理解题,综合题"
+      },
+      {
+        "id": "K12",
+        "name": "学术著作的阅读策略",
+        "type": "KnowledgePoint",
+        "module": "必修上册",
+        "chapter": "家乡文化生活与整本书阅读",
+        "difficulty": 4,
+        "importance": 4,
+        "description": "掌握学术著作的阅读策略(把握核心概念、梳理论证逻辑、联系现实思考)，理解《乡土中国》中差序格局、礼俗社会等核心概念。",
+        "keywords": "学术著作,核心概念,差序格局,礼俗社会,论证逻辑",
+        "exam_type": "选择题,阅读分析题"
+      },
+      {
+        "id": "K13",
+        "name": "议论文的论点提炼",
+        "type": "KnowledgePoint",
+        "module": "必修上册",
+        "chapter": "学习之道",
+        "difficulty": 3,
+        "importance": 4,
+        "description": "掌握论点(中心论点与分论点)的提炼方法，能从材料中准确概括论点并判断论点是否鲜明、正确、新颖。",
+        "keywords": "论点,中心论点,分论点,提炼,鲜明,正确,新颖",
+        "exam_type": "选择题,写作题"
+      },
+      {
+        "id": "K14",
+        "name": "议论文的论证方法",
+        "type": "KnowledgePoint",
+        "module": "必修上册",
+        "chapter": "学习之道",
+        "difficulty": 4,
+        "importance": 5,
+        "description": "掌握举例论证、道理论证、对比论证、比喻论证等论证方法的特点与运用技巧，能分析论证的有效性。",
+        "keywords": "举例论证,道理论证,对比论证,比喻论证,论证有效性",
+        "exam_type": "阅读分析题,选择题,写作题"
+      },
+      {
+        "id": "K15",
+        "name": "议论文的结构",
+        "type": "KnowledgePoint",
+        "module": "必修上册",
+        "chapter": "学习之道",
+        "difficulty": 3,
+        "importance": 4,
+        "description": "掌握议论文的基本结构(总分总式、并列式、递进式、对照式)，能分析文章论证思路并运用结构进行写作。",
+        "keywords": "总分总,并列式,递进式,对照式,论证思路",
+        "exam_type": "选择题,阅读分析题,写作题"
+      },
+      {
+        "id": "K16",
+        "name": "散文的形散神聚",
+        "type": "KnowledgePoint",
+        "module": "必修上册",
+        "chapter": "自然情怀",
+        "difficulty": 3,
+        "importance": 4,
+        "description": "理解散文'形散'(选材广泛、表达自由)与'神聚'(主题集中、线索统一)的特征，能分析散文的形神关系。",
+        "keywords": "散文,形散,神聚,选材,主题,线索",
+        "exam_type": "阅读分析题,选择题"
+      },
+      {
+        "id": "K17",
+        "name": "散文的线索与结构",
+        "type": "KnowledgePoint",
+        "module": "必修上册",
+        "chapter": "自然情怀",
+        "difficulty": 3,
+        "importance": 3,
+        "description": "掌握散文常见线索类型(时间线、空间线、情感线、事物线、人物线)及结构安排(纵式、横式、纵横交错式)。",
+        "keywords": "散文线索,时间线,空间线,情感线,事物线,结构安排",
+        "exam_type": "阅读分析题,选择题"
+      },
+      {
+        "id": "K18",
+        "name": "借景抒情的写作手法",
+        "type": "KnowledgePoint",
+        "module": "必修上册",
+        "chapter": "自然情怀",
+        "difficulty": 3,
+        "importance": 4,
+        "description": "掌握借景抒情(融情于景、情景交融)的手法，能分析景物描写中蕴含的情感并运用该手法进行写作。",
+        "keywords": "借景抒情,融情于景,情景交融,景物描写,情感",
+        "exam_type": "阅读分析题,写作题"
+      },
+      {
+        "id": "K19",
+        "name": "文言实词一词多义",
+        "type": "KnowledgePoint",
+        "module": "必修上册",
+        "chapter": "词语与文化",
+        "difficulty": 4,
+        "importance": 5,
+        "description": "掌握常见文言实词(如\"发\"\"辞\"\"信\"\"乘\"等)的一词多义现象，能根据语境推断词义并积累常用实词。",
+        "keywords": "文言实词,一词多义,语境推断,词义,积累",
+        "exam_type": "文言文翻译题,选择题"
+      },
+      {
+        "id": "K20",
+        "name": "文言虚词的用法",
+        "type": "KnowledgePoint",
+        "module": "必修上册",
+        "chapter": "词语与文化",
+        "difficulty": 4,
+        "importance": 5,
+        "description": "掌握常见文言虚词(之、乎、者、也、而、以、于、其、为、则等)的多种用法及语法功能，能判断虚词在具体语境中的意义。",
+        "keywords": "文言虚词,之,乎,者,也,而,以,于,其,语法功能",
+        "exam_type": "选择题,文言文翻译题"
+      },
+      {
+        "id": "K21",
+        "name": "文言特殊句式",
+        "type": "KnowledgePoint",
+        "module": "必修上册",
+        "chapter": "词语与文化",
+        "difficulty": 5,
+        "importance": 5,
+        "description": "掌握判断句、被动句、倒装句(宾语前置、定语后置、状语后置、主谓倒装)和省略句等文言特殊句式，能准确翻译和识别。",
+        "keywords": "判断句,被动句,倒装句,宾语前置,定语后置,省略句",
+        "exam_type": "文言文翻译题,选择题"
+      },
+      {
+        "id": "K22",
+        "name": "文言词类活用",
+        "type": "KnowledgePoint",
+        "module": "必修上册",
+        "chapter": "词语与文化",
+        "difficulty": 4,
+        "importance": 5,
+        "description": "掌握名词作动词、形容词作动词、名词作状语、使动用法、意动用法等词类活用类型，能在翻译中准确体现。",
+        "keywords": "词类活用,名词作动词,名词作状语,使动用法,意动用法",
+        "exam_type": "文言文翻译题,选择题"
+      },
+      {
+        "id": "K23",
+        "name": "诸子散文的说理方法",
+        "type": "KnowledgePoint",
+        "module": "必修下册",
+        "chapter": "中华文明之光",
+        "difficulty": 4,
+        "importance": 4,
+        "description": "掌握先秦诸子散文(儒、道、法等)的说理方法(比喻说理、类比说理、正反对比说理、寓言说理)，能分析论证特色。",
+        "keywords": "诸子散文,比喻说理,类比说理,对比说理,寓言说理,儒家,道家",
+        "exam_type": "阅读分析题,选择题"
+      },
+      {
+        "id": "K24",
+        "name": "文言文翻译的原则和方法",
+        "type": "KnowledgePoint",
+        "module": "必修下册",
+        "chapter": "中华文明之光",
+        "difficulty": 5,
+        "importance": 5,
+        "description": "掌握文言文翻译的'信、达、雅'原则和'留、删、换、调、补、对'六字方法，能准确翻译文言文段落。",
+        "keywords": "翻译原则,信达雅,留删换调补对,翻译方法",
+        "exam_type": "文言文翻译题"
+      },
+      {
+        "id": "K25",
+        "name": "先秦思想流派比较",
+        "type": "KnowledgePoint",
+        "module": "必修下册",
+        "chapter": "中华文明之光",
+        "difficulty": 4,
+        "importance": 4,
+        "description": "理解儒、道、法、墨等先秦思想流派的核心理念差异(儒家仁礼、道家无为、法家法治、墨家兼爱)，能结合文本分析思想内涵。",
+        "keywords": "儒家,道家,法家,墨家,仁礼,无为,法治,兼爱",
+        "exam_type": "选择题,综合分析题"
+      },
+      {
+        "id": "K26",
+        "name": "古代传记的叙事艺术",
+        "type": "KnowledgePoint",
+        "module": "必修下册",
+        "chapter": "责任与担当",
+        "difficulty": 4,
+        "importance": 4,
+        "description": "掌握古代传记(如《鸿门宴》《廉颇蔺相如列传》)的叙事艺术(剪裁详略、人物刻画、矛盾冲突组织)，能分析叙事特色。",
+        "keywords": "古代传记,叙事艺术,剪裁详略,人物刻画,矛盾冲突",
+        "exam_type": "阅读分析题,综合题"
+      },
+      {
+        "id": "K27",
+        "name": "史传文学的真实与虚构",
+        "type": "KnowledgePoint",
+        "module": "必修下册",
+        "chapter": "责任与担当",
+        "difficulty": 3,
+        "importance": 3,
+        "description": "理解史传文学在尊重史实基础上合理虚构(细节描写、心理刻画、对话设计)的特点，能辨析真实与虚构的边界。",
+        "keywords": "史传文学,真实,虚构,史实,细节描写",
+        "exam_type": "选择题,分析题"
+      },
+      {
+        "id": "K28",
+        "name": "科普文章的说明方法",
+        "type": "KnowledgePoint",
+        "module": "必修下册",
+        "chapter": "探索与创新",
+        "difficulty": 3,
+        "importance": 3,
+        "description": "掌握下定义、分类别、作比较、举例子、列数字、打比方、画图表等说明方法及其表达效果。",
+        "keywords": "说明方法,下定义,分类别,作比较,举例子,列数字,打比方",
+        "exam_type": "选择题,阅读分析题"
+      },
+      {
+        "id": "K29",
+        "name": "说明文的说明顺序",
+        "type": "KnowledgePoint",
+        "module": "必修下册",
+        "chapter": "探索与创新",
+        "difficulty": 3,
+        "importance": 3,
+        "description": "掌握时间顺序、空间顺序、逻辑顺序(从现象到本质、从原因到结果、从概括到具体等)及综合运用。",
+        "keywords": "说明顺序,时间顺序,空间顺序,逻辑顺序,从现象到本质",
+        "exam_type": "选择题,阅读分析题"
+      },
+      {
+        "id": "K30",
+        "name": "新闻消息的结构",
+        "type": "KnowledgePoint",
+        "module": "必修下册",
+        "chapter": "媒介素养",
+        "difficulty": 2,
+        "importance": 3,
+        "description": "掌握消息的结构(标题、导语、主体、背景、结语)及倒金字塔结构的特点，能分析消息的构成要素。",
+        "keywords": "消息,标题,导语,主体,背景,结语,倒金字塔",
+        "exam_type": "选择题,阅读分析题"
+      },
+      {
+        "id": "K31",
+        "name": "媒体信息的辨析与评价",
+        "type": "KnowledgePoint",
+        "module": "必修下册",
+        "chapter": "媒介素养",
+        "difficulty": 3,
+        "importance": 3,
+        "description": "掌握辨析媒体信息可信度的方法(信源可靠性、证据充分性、逻辑严密性、立场客观性)，能对媒体信息进行批判性评价。",
+        "keywords": "媒体信息,信源可靠性,证据充分,批判性评价,信息辨析",
+        "exam_type": "选择题,综合分析题"
+      },
+      {
+        "id": "K32",
+        "name": "传统文化常识",
+        "type": "KnowledgePoint",
+        "module": "必修下册",
+        "chapter": "中华优秀传统文化",
+        "difficulty": 2,
+        "importance": 3,
+        "description": "掌握古代称谓、科举制度、历法节气、传统节日、礼仪习俗等传统文化常识，能运用于文言文阅读与写作。",
+        "keywords": "传统文化,称谓,科举,历法节气,传统节日,礼仪",
+        "exam_type": "选择题,文化常识题"
+      },
+      {
+        "id": "K33",
+        "name": "对联的格律与创作",
+        "type": "KnowledgePoint",
+        "module": "必修下册",
+        "chapter": "中华优秀传统文化",
+        "difficulty": 3,
+        "importance": 3,
+        "description": "掌握对联的基本格律(字数相等、词性相对、平仄相协、仄起平收)及创作方法，能判断对联优劣并进行简单创作。",
+        "keywords": "对联,格律,字数相等,词性相对,平仄相协,仄起平收",
+        "exam_type": "选择题,写作题"
+      },
+      {
+        "id": "K34",
+        "name": "小说的三要素",
+        "type": "KnowledgePoint",
+        "module": "必修下册",
+        "chapter": "小说鉴赏",
+        "difficulty": 3,
+        "importance": 4,
+        "description": "掌握小说三要素(人物、情节、环境)及其相互关系，能分析三要素在小说中的作用。",
+        "keywords": "小说三要素,人物,情节,环境,相互关系",
+        "exam_type": "选择题,阅读分析题"
+      },
+      {
+        "id": "K35",
+        "name": "小说人物形象分析",
+        "type": "KnowledgePoint",
+        "module": "必修下册",
+        "chapter": "小说鉴赏",
+        "difficulty": 4,
+        "importance": 5,
+        "description": "掌握通过肖像、语言、行动、心理、细节描写分析人物形象的方法，能概括人物性格特征并评价人物的社会意义。",
+        "keywords": "人物形象,肖像描写,语言描写,行动描写,心理描写,性格特征",
+        "exam_type": "阅读分析题,综合题"
+      },
+      {
+        "id": "K36",
+        "name": "小说的环境描写作用",
+        "type": "KnowledgePoint",
+        "module": "必修下册",
+        "chapter": "小说鉴赏",
+        "difficulty": 4,
+        "importance": 4,
+        "description": "掌握环境描写(自然环境与社会环境)的作用(交代背景、渲染气氛、烘托心情、推动情节、暗示主题)，能分析环境描写在小说中的功能。",
+        "keywords": "环境描写,自然环境,社会环境,渲染气氛,烘托心情,推动情节,暗示主题",
+        "exam_type": "阅读分析题,综合题"
+      },
+      {
+        "id": "K37",
+        "name": "小说的叙事视角",
+        "type": "KnowledgePoint",
+        "module": "必修下册",
+        "chapter": "小说鉴赏",
+        "difficulty": 4,
+        "importance": 4,
+        "description": "区分第一人称、第二人称、第三人称(全知视角与有限视角)叙事的特点与效果，能分析叙事视角对小说表达的影响。",
+        "keywords": "叙事视角,第一人称,第二人称,第三人称,全知视角,有限视角",
+        "exam_type": "选择题,阅读分析题"
+      },
+      {
+        "id": "K38",
+        "name": "戏剧冲突的构成",
+        "type": "KnowledgePoint",
+        "module": "必修下册",
+        "chapter": "剧本欣赏",
+        "difficulty": 4,
+        "importance": 4,
+        "description": "理解戏剧冲突(人物与环境的冲突、人物间的冲突、人物内心冲突)是戏剧的核心，能分析戏剧冲突的组织与推进。",
+        "keywords": "戏剧冲突,人物与环境,人物间冲突,内心冲突,戏剧核心",
+        "exam_type": "阅读分析题,选择题"
+      },
+      {
+        "id": "K39",
+        "name": "戏剧语言的特点",
+        "type": "KnowledgePoint",
+        "module": "必修下册",
+        "chapter": "剧本欣赏",
+        "difficulty": 3,
+        "importance": 3,
+        "description": "掌握戏剧语言(人物台词与舞台说明)的个性化(符合人物身份性格)和动作性(推动剧情发展)特点，能分析戏剧语言的功能。",
+        "keywords": "戏剧语言,台词,舞台说明,个性化,动作性",
+        "exam_type": "选择题,阅读分析题"
+      },
+      {
+        "id": "K40",
+        "name": "戏剧人物形象分析",
+        "type": "KnowledgePoint",
+        "module": "必修下册",
+        "chapter": "剧本欣赏",
+        "difficulty": 3,
+        "importance": 3,
+        "description": "掌握通过戏剧冲突和台词分析人物性格与命运的方法，能评价戏剧人物的典型意义与悲剧/喜剧色彩。",
+        "keywords": "戏剧人物,性格分析,典型意义,悲剧,喜剧",
+        "exam_type": "阅读分析题,综合题"
+      },
+      {
+        "id": "K41",
+        "name": "革命文学作品的时代背景",
+        "type": "KnowledgePoint",
+        "module": "选择性必修上册",
+        "chapter": "中国革命传统作品",
+        "difficulty": 3,
+        "importance": 3,
+        "description": "理解中国革命不同历史时期(建党、土地革命、抗日战争、解放战争)的社会背景，能结合时代背景解读革命文学作品。",
+        "keywords": "革命文学,时代背景,土地革命,抗日战争,解放战争",
+        "exam_type": "选择题,阅读分析题"
+      },
+      {
+        "id": "K42",
+        "name": "纪实文学的写作特点",
+        "type": "KnowledgePoint",
+        "module": "选择性必修上册",
+        "chapter": "中国革命传统作品",
+        "difficulty": 3,
+        "importance": 3,
+        "description": "掌握纪实文学以真实事件为基础、运用文学手法增强感染力的写作特点，能区分纪实文学与虚构文学的边界。",
+        "keywords": "纪实文学,真实事件,文学手法,感染力,虚构边界",
+        "exam_type": "选择题,分析题"
+      },
+      {
+        "id": "K43",
+        "name": "形式逻辑基本规律",
+        "type": "KnowledgePoint",
+        "module": "选择性必修上册",
+        "chapter": "逻辑思维",
+        "difficulty": 4,
+        "importance": 4,
+        "description": "掌握同一律(A是A)、矛盾律(A不是非A)、排中律(A或非A)三大形式逻辑基本规律，能识别违反规律的逻辑错误。",
+        "keywords": "形式逻辑,同一律,矛盾律,排中律,逻辑错误",
+        "exam_type": "选择题,分析题"
+      },
+      {
+        "id": "K44",
+        "name": "演绎推理与归纳推理",
+        "type": "KnowledgePoint",
+        "module": "选择性必修上册",
+        "chapter": "逻辑思维",
+        "difficulty": 4,
+        "importance": 4,
+        "description": "掌握演绎推理(三段论:大前提、小前提、结论)与归纳推理(完全归纳与不完全归纳)的方法与区别，能进行推理分析。",
+        "keywords": "演绎推理,归纳推理,三段论,大前提,小前提,完全归纳,不完全归纳",
+        "exam_type": "选择题,分析题"
+      },
+      {
+        "id": "K45",
+        "name": "逻辑谬误的识别",
+        "type": "KnowledgePoint",
+        "module": "选择性必修上册",
+        "chapter": "逻辑思维",
+        "difficulty": 3,
+        "importance": 4,
+        "description": "掌握常见逻辑谬误(以偏概全、偷换概念、因果倒置、诉诸权威、人身攻击、滑坡谬误等)的类型与特征，能识别并分析论证中的谬误。",
+        "keywords": "逻辑谬误,以偏概全,偷换概念,因果倒置,诉诸权威,人身攻击",
+        "exam_type": "选择题,分析题"
+      },
+      {
+        "id": "K46",
+        "name": "复言命题推理",
+        "type": "KnowledgePoint",
+        "module": "选择性必修上册",
+        "chapter": "逻辑思维",
+        "difficulty": 4,
+        "importance": 4,
+        "description": "掌握联言命题、选言命题、假言命题(充分条件、必要条件、充要条件)的推理规则，能进行复合命题的逻辑推理。",
+        "keywords": "复言命题,联言命题,选言命题,假言命题,充分条件,必要条件",
+        "exam_type": "选择题,分析题"
+      },
+      {
+        "id": "K47",
+        "name": "论证的加强和削弱",
+        "type": "KnowledgePoint",
+        "module": "选择性必修上册",
+        "chapter": "逻辑思维",
+        "difficulty": 4,
+        "importance": 4,
+        "description": "掌握加强论证(补充论据、建立因果联系、排除他因)和削弱论证(反驳论据、切断因果联系、提出他因)的方法。",
+        "keywords": "论证加强,论证削弱,补充论据,因果联系,排除他因",
+        "exam_type": "选择题,分析题"
+      },
+      {
+        "id": "K48",
+        "name": "小说主题的多义性",
+        "type": "KnowledgePoint",
+        "module": "选择性必修上册",
+        "chapter": "小说欣赏",
+        "difficulty": 4,
+        "importance": 4,
+        "description": "理解小说主题的多义性(可从社会、人性、哲学等多角度解读)，能结合文本进行多角度主题分析。",
+        "keywords": "小说主题,多义性,多角度解读,社会,人性,哲学",
+        "exam_type": "阅读分析题,综合题"
+      },
+      {
+        "id": "K49",
+        "name": "小说叙述技巧",
+        "type": "KnowledgePoint",
+        "module": "选择性必修上册",
+        "chapter": "小说欣赏",
+        "difficulty": 4,
+        "importance": 4,
+        "description": "掌握伏笔与照应、悬念与铺垫、巧合与突转、插叙与倒叙等叙述技巧，能分析技巧在情节安排中的效果。",
+        "keywords": "叙述技巧,伏笔,照应,悬念,铺垫,巧合,突转,插叙,倒叙",
+        "exam_type": "阅读分析题,选择题"
+      },
+      {
+        "id": "K50",
+        "name": "理论文章的阅读方法",
+        "type": "KnowledgePoint",
+        "module": "选择性必修中册",
+        "chapter": "理论的价值",
+        "difficulty": 3,
+        "importance": 3,
+        "description": "掌握理论文章的阅读方法(把握核心论点、梳理论证框架、理解理论概念、联系实践思考)，能分析理论文章的逻辑结构。",
+        "keywords": "理论文章,核心论点,论证框架,理论概念,逻辑结构",
+        "exam_type": "阅读分析题,选择题"
+      },
+      {
+        "id": "K51",
+        "name": "理论文章的论证逻辑",
+        "type": "KnowledgePoint",
+        "module": "选择性必修中册",
+        "chapter": "理论的价值",
+        "difficulty": 4,
+        "importance": 4,
+        "description": "掌握理论文章从概念界定到判断推理再到结论的论证逻辑，能分析理论论证的严密性与说服力。",
+        "keywords": "论证逻辑,概念界定,判断推理,严密性,说服力",
+        "exam_type": "阅读分析题,综合题"
+      },
+      {
+        "id": "K52",
+        "name": "现代诗歌的象征手法",
+        "type": "KnowledgePoint",
+        "module": "选择性必修中册",
+        "chapter": "苦难与新生",
+        "difficulty": 4,
+        "importance": 4,
+        "description": "理解象征(以具体事物暗示抽象意义)在诗歌中的作用，能分析现代诗中象征意象的多层含义与整体象征效果。",
+        "keywords": "象征手法,具体事物,抽象意义,象征意象,多层含义",
+        "exam_type": "诗歌鉴赏题,分析题"
+      },
+      {
+        "id": "K53",
+        "name": "抒情诗的鉴赏",
+        "type": "KnowledgePoint",
+        "module": "选择性必修中册",
+        "chapter": "苦难与新生",
+        "difficulty": 3,
+        "importance": 3,
+        "description": "掌握抒情诗鉴赏的角度(情感基调、意象选取、节奏韵律、修辞手法)，能进行抒情诗的综合鉴赏。",
+        "keywords": "抒情诗,情感基调,意象,节奏韵律,修辞手法,综合鉴赏",
+        "exam_type": "诗歌鉴赏题,综合题"
+      },
+      {
+        "id": "K54",
+        "name": "咏史诗的特点",
+        "type": "KnowledgePoint",
+        "module": "选择性必修中册",
+        "chapter": "历史的回响",
+        "difficulty": 3,
+        "importance": 3,
+        "description": "掌握咏史诗(怀古诗)的特点(借古讽今、以古喻今、借古抒怀、感慨兴亡)，能分析咏史诗的题材特征与表现手法。",
+        "keywords": "咏史诗,怀古诗,借古讽今,以古喻今,借古抒怀,感慨兴亡",
+        "exam_type": "诗歌鉴赏题,选择题"
+      },
+      {
+        "id": "K55",
+        "name": "古代诗歌的用典与怀古",
+        "type": "KnowledgePoint",
+        "module": "选择性必修中册",
+        "chapter": "历史的回响",
+        "difficulty": 4,
+        "importance": 4,
+        "description": "深入理解怀古诗中用典的类型(正用与反用)及效果，能分析典故与怀古主题之间的关系。",
+        "keywords": "用典,怀古,正用,反用,典故,怀古主题",
+        "exam_type": "诗歌鉴赏题,分析题"
+      },
+      {
+        "id": "K56",
+        "name": "外国小说的鉴赏",
+        "type": "KnowledgePoint",
+        "module": "选择性必修中册",
+        "chapter": "丰富的心灵",
+        "difficulty": 4,
+        "importance": 4,
+        "description": "掌握外国小说鉴赏的角度(文化背景、叙事传统、人物塑造、主题表达)，能结合文化背景分析外国小说特色。",
+        "keywords": "外国小说,文化背景,叙事传统,人物塑造,主题表达",
+        "exam_type": "阅读分析题,综合题"
+      },
+      {
+        "id": "K57",
+        "name": "心理描写方法",
+        "type": "KnowledgePoint",
+        "module": "选择性必修中册",
+        "chapter": "丰富的心灵",
+        "difficulty": 3,
+        "importance": 3,
+        "description": "掌握直接心理描写(内心独白、心理分析)与间接心理描写(动作暗示、环境烘托、梦境幻觉)的方法与效果。",
+        "keywords": "心理描写,内心独白,心理分析,动作暗示,环境烘托,梦境幻觉",
+        "exam_type": "阅读分析题,写作题"
+      },
+      {
+        "id": "K58",
+        "name": "现代散文诗的特点",
+        "type": "KnowledgePoint",
+        "module": "选择性必修下册",
+        "chapter": "诗散文鉴赏",
+        "difficulty": 3,
+        "importance": 3,
+        "description": "理解散文诗兼有散文的自由与诗的意境的特点，能分析散文诗的意象组合与情感表达方式。",
+        "keywords": "散文诗,散文自由,诗歌意境,意象组合,情感表达",
+        "exam_type": "诗歌鉴赏题,选择题"
+      },
+      {
+        "id": "K59",
+        "name": "中国现当代诗歌鉴赏",
+        "type": "KnowledgePoint",
+        "module": "选择性必修下册",
+        "chapter": "诗散文鉴赏",
+        "difficulty": 4,
+        "importance": 4,
+        "description": "掌握现当代诗歌(新月派、朦胧诗等)的流派特点与鉴赏角度(意象、节奏、主题、语言创新)，能进行综合鉴赏。",
+        "keywords": "现当代诗歌,新月派,朦胧诗,意象,节奏,语言创新",
+        "exam_type": "诗歌鉴赏题,综合题"
+      },
+      {
+        "id": "K60",
+        "name": "词语的色彩义",
+        "type": "KnowledgePoint",
+        "module": "选择性必修下册",
+        "chapter": "语言鉴赏",
+        "difficulty": 3,
+        "importance": 3,
+        "description": "掌握词语的感情色彩(褒义、贬义、中性)、语体色彩(口语、书面语)和形象色彩，能分析词语色彩义在表达中的作用。",
+        "keywords": "词语色彩义,感情色彩,褒义,贬义,语体色彩,形象色彩",
+        "exam_type": "选择题,语言运用题"
+      },
+      {
+        "id": "K61",
+        "name": "句式的选择与变换",
+        "type": "KnowledgePoint",
+        "module": "选择性必修下册",
+        "chapter": "语言鉴赏",
+        "difficulty": 4,
+        "importance": 4,
+        "description": "掌握常式句与变式句、长句与短句、整句与散句的特点与表达效果，能进行句式变换并分析其表达作用。",
+        "keywords": "句式变换,常式句,变式句,长句,短句,整句,散句",
+        "exam_type": "语言运用题,选择题"
+      },
+      {
+        "id": "K62",
+        "name": "修辞手法(一):比喻比拟借代夸张对偶排比",
+        "type": "KnowledgePoint",
+        "module": "选择性必修下册",
+        "chapter": "语言鉴赏",
+        "difficulty": 4,
+        "importance": 5,
+        "description": "掌握比喻(明喻、暗喻、借喻)、比拟(拟人、拟物)、借代、夸张、对偶、排比等修辞手法的辨识与表达效果分析。",
+        "keywords": "修辞手法,比喻,明喻,暗喻,借喻,比拟,拟人,借代,夸张,对偶,排比",
+        "exam_type": "选择题,语言运用题,鉴赏题"
+      },
+      {
+        "id": "K63",
+        "name": "修辞手法(二):反复设问反问反语",
+        "type": "KnowledgePoint",
+        "module": "选择性必修下册",
+        "chapter": "语言鉴赏",
+        "difficulty": 3,
+        "importance": 3,
+        "description": "掌握反复、设问、反问、反语、双关、通感等修辞手法的特点与表达效果，能辨析并赏析修辞手法。",
+        "keywords": "反复,设问,反问,反语,双关,通感,修辞赏析",
+        "exam_type": "选择题,语言运用题"
+      },
+      {
+        "id": "K64",
+        "name": "语言得体性原则",
+        "type": "KnowledgePoint",
+        "module": "选择性必修下册",
+        "chapter": "语言鉴赏",
+        "difficulty": 3,
+        "importance": 3,
+        "description": "掌握语言得体的要求(符合对象、场合、目的、身份)，能判断语言使用是否得体并进行修改。",
+        "keywords": "语言得体,对象,场合,目的,身份,语体",
+        "exam_type": "语言运用题,选择题"
+      },
+      {
+        "id": "K65",
+        "name": "语体风格",
+        "type": "KnowledgePoint",
+        "module": "选择性必修下册",
+        "chapter": "语言鉴赏",
+        "difficulty": 3,
+        "importance": 3,
+        "description": "区分口语语体与书面语语体、文艺语体与实用语体、政论语体与科技语体的特征，能根据语境选择恰当的语体。",
+        "keywords": "语体风格,口语,书面语,文艺语体,实用语体,政论语体,科技语体",
+        "exam_type": "选择题,语言运用题"
+      },
+      {
+        "id": "K66",
+        "name": "鲁迅小说的批判性",
+        "type": "KnowledgePoint",
+        "module": "选择性必修下册",
+        "chapter": "中国现代作家作品",
+        "difficulty": 4,
+        "importance": 4,
+        "description": "理解鲁迅小说以批判国民性为核心的创作特色(揭示精神麻木、批判封建礼教、反思文化传统)，能分析代表作的批判意蕴。",
+        "keywords": "鲁迅小说,批判性,国民性,精神麻木,封建礼教,文化传统",
+        "exam_type": "阅读分析题,综合题"
+      },
+      {
+        "id": "K67",
+        "name": "现代散文流派特点",
+        "type": "KnowledgePoint",
+        "module": "选择性必修下册",
+        "chapter": "中国现代作家作品",
+        "difficulty": 3,
+        "importance": 3,
+        "description": "了解现代散文的主要流派(语丝派、京派、海派等)及代表作家的创作风格，能比较不同流派的散文特色。",
+        "keywords": "现代散文,语丝派,京派,海派,创作风格,流派比较",
+        "exam_type": "选择题,分析题"
+      },
+      {
+        "id": "K68",
+        "name": "现代话剧的艺术成就",
+        "type": "KnowledgePoint",
+        "module": "选择性必修下册",
+        "chapter": "中国现代作家作品",
+        "difficulty": 3,
+        "importance": 3,
+        "description": "了解中国现代话剧(曹禺《雷雨》、老舍《茶馆》等)的代表作品与艺术成就，能分析现代话剧的民族化探索。",
+        "keywords": "现代话剧,曹禺,雷雨,老舍,茶馆,民族化",
+        "exam_type": "选择题,分析题"
+      },
+      {
+        "id": "K69",
+        "name": "外国小说的流派",
+        "type": "KnowledgePoint",
+        "module": "选择性必修下册",
+        "chapter": "外国作家作品",
+        "difficulty": 4,
+        "importance": 4,
+        "description": "了解外国小说的主要流派(现实主义、浪漫主义、自然主义、意识流、魔幻现实主义等)的特征与代表作品，能辨析流派风格。",
+        "keywords": "外国小说流派,现实主义,浪漫主义,自然主义,意识流,魔幻现实主义",
+        "exam_type": "选择题,分析题"
+      },
+      {
+        "id": "K70",
+        "name": "外国诗歌的鉴赏",
+        "type": "KnowledgePoint",
+        "module": "选择性必修下册",
+        "chapter": "外国作家作品",
+        "difficulty": 3,
+        "importance": 3,
+        "description": "掌握外国诗歌鉴赏的角度(文化背景、诗歌传统、意象隐喻、自由诗与格律诗)，能比较中外诗歌的异同。",
+        "keywords": "外国诗歌,文化背景,意象隐喻,自由诗,格律诗,中外比较",
+        "exam_type": "诗歌鉴赏题,综合题"
+      },
+      {
+        "id": "K71",
+        "name": "比较文学阅读方法",
+        "type": "KnowledgePoint",
+        "module": "选择性必修下册",
+        "chapter": "外国作家作品",
+        "difficulty": 4,
+        "importance": 4,
+        "description": "掌握比较文学阅读的基本方法(平行研究:同类主题/文体比较;影响研究:渊源与流传比较)，能进行中外文学作品的比较分析。",
+        "keywords": "比较文学,平行研究,影响研究,主题比较,文体比较,渊源流传",
+        "exam_type": "综合分析题,论述题"
+      }
+    ],
+    "edges": [
+      {
+        "source": "M1",
+        "target": "C1",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "模块包含章节"
+      },
+      {
+        "source": "M1",
+        "target": "C2",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "模块包含章节"
+      },
+      {
+        "source": "M1",
+        "target": "C3",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "模块包含章节"
+      },
+      {
+        "source": "M1",
+        "target": "C4",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "模块包含章节"
+      },
+      {
+        "source": "M1",
+        "target": "C5",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "模块包含章节"
+      },
+      {
+        "source": "M1",
+        "target": "C6",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "模块包含章节"
+      },
+      {
+        "source": "M1",
+        "target": "C7",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "模块包含章节"
+      },
+      {
+        "source": "M2",
+        "target": "C8",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "模块包含章节"
+      },
+      {
+        "source": "M2",
+        "target": "C9",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "模块包含章节"
+      },
+      {
+        "source": "M2",
+        "target": "C10",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "模块包含章节"
+      },
+      {
+        "source": "M2",
+        "target": "C11",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "模块包含章节"
+      },
+      {
+        "source": "M2",
+        "target": "C12",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "模块包含章节"
+      },
+      {
+        "source": "M2",
+        "target": "C13",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "模块包含章节"
+      },
+      {
+        "source": "M2",
+        "target": "C14",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "模块包含章节"
+      },
+      {
+        "source": "M3",
+        "target": "C15",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "模块包含章节"
+      },
+      {
+        "source": "M3",
+        "target": "C16",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "模块包含章节"
+      },
+      {
+        "source": "M3",
+        "target": "C17",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "模块包含章节"
+      },
+      {
+        "source": "M4",
+        "target": "C18",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "模块包含章节"
+      },
+      {
+        "source": "M4",
+        "target": "C19",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "模块包含章节"
+      },
+      {
+        "source": "M4",
+        "target": "C20",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "模块包含章节"
+      },
+      {
+        "source": "M4",
+        "target": "C21",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "模块包含章节"
+      },
+      {
+        "source": "M5",
+        "target": "C22",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "模块包含章节"
+      },
+      {
+        "source": "M5",
+        "target": "C23",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "模块包含章节"
+      },
+      {
+        "source": "M5",
+        "target": "C24",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "模块包含章节"
+      },
+      {
+        "source": "M5",
+        "target": "C25",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "模块包含章节"
+      },
+      {
+        "source": "C1",
+        "target": "K1",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C1",
+        "target": "K2",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C1",
+        "target": "K3",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C2",
+        "target": "K4",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C2",
+        "target": "K5",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C2",
+        "target": "K6",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C3",
+        "target": "K7",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C3",
+        "target": "K8",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C3",
+        "target": "K9",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C4",
+        "target": "K10",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C4",
+        "target": "K11",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C4",
+        "target": "K12",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C5",
+        "target": "K13",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C5",
+        "target": "K14",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C5",
+        "target": "K15",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C6",
+        "target": "K16",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C6",
+        "target": "K17",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C6",
+        "target": "K18",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C7",
+        "target": "K19",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C7",
+        "target": "K20",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C7",
+        "target": "K21",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C7",
+        "target": "K22",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C8",
+        "target": "K23",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C8",
+        "target": "K24",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C8",
+        "target": "K25",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C9",
+        "target": "K26",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C9",
+        "target": "K27",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C10",
+        "target": "K28",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C10",
+        "target": "K29",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C11",
+        "target": "K30",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C11",
+        "target": "K31",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C12",
+        "target": "K32",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C12",
+        "target": "K33",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C13",
+        "target": "K34",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C13",
+        "target": "K35",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C13",
+        "target": "K36",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C13",
+        "target": "K37",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C14",
+        "target": "K38",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C14",
+        "target": "K39",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C14",
+        "target": "K40",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C15",
+        "target": "K41",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C15",
+        "target": "K42",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C16",
+        "target": "K43",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C16",
+        "target": "K44",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C16",
+        "target": "K45",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C16",
+        "target": "K46",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C16",
+        "target": "K47",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C17",
+        "target": "K48",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C17",
+        "target": "K49",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C18",
+        "target": "K50",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C18",
+        "target": "K51",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C19",
+        "target": "K52",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C19",
+        "target": "K53",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C20",
+        "target": "K54",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C20",
+        "target": "K55",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C21",
+        "target": "K56",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C21",
+        "target": "K57",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C22",
+        "target": "K58",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C22",
+        "target": "K59",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C23",
+        "target": "K60",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C23",
+        "target": "K61",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C23",
+        "target": "K62",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C23",
+        "target": "K63",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C23",
+        "target": "K64",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C23",
+        "target": "K65",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C24",
+        "target": "K66",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C24",
+        "target": "K67",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C24",
+        "target": "K68",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C25",
+        "target": "K69",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C25",
+        "target": "K70",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C25",
+        "target": "K71",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "K1",
+        "target": "K2",
+        "relation": "PREREQUISITE",
+        "weight": 0.7,
+        "description": "意象意境知识是理解抒情方式的基础"
+      },
+      {
+        "source": "K2",
+        "target": "K3",
+        "relation": "PREREQUISITE",
+        "weight": 0.6,
+        "description": "抒情方式知识有助于分析青春主题作品"
+      },
+      {
+        "source": "K1",
+        "target": "K7",
+        "relation": "PREREQUISITE",
+        "weight": 0.7,
+        "description": "现代诗歌意象知识是学习古诗词意象的基础"
+      },
+      {
+        "source": "K2",
+        "target": "K8",
+        "relation": "PREREQUISITE",
+        "weight": 0.5,
+        "description": "抒情方式与炼字艺术在表情达意上相通"
+      },
+      {
+        "source": "K7",
+        "target": "K8",
+        "relation": "PREREQUISITE",
+        "weight": 0.7,
+        "description": "意象分析是炼字赏析的基础"
+      },
+      {
+        "source": "K7",
+        "target": "K9",
+        "relation": "PREREQUISITE",
+        "weight": 0.6,
+        "description": "意象知识有助于理解用典"
+      },
+      {
+        "source": "K8",
+        "target": "K9",
+        "relation": "PREREQUISITE",
+        "weight": 0.5,
+        "description": "炼字与用典都是诗歌鉴赏的基本功"
+      },
+      {
+        "source": "K13",
+        "target": "K14",
+        "relation": "PREREQUISITE",
+        "weight": 0.8,
+        "description": "论点提炼是学习论证方法的前提"
+      },
+      {
+        "source": "K14",
+        "target": "K15",
+        "relation": "PREREQUISITE",
+        "weight": 0.7,
+        "description": "论证方法是构建议论文结构的基础"
+      },
+      {
+        "source": "K16",
+        "target": "K17",
+        "relation": "PREREQUISITE",
+        "weight": 0.8,
+        "description": "形散神聚是理解散文线索结构的前提"
+      },
+      {
+        "source": "K17",
+        "target": "K18",
+        "relation": "PREREQUISITE",
+        "weight": 0.6,
+        "description": "线索结构知识有助于分析借景抒情"
+      },
+      {
+        "source": "K19",
+        "target": "K21",
+        "relation": "PREREQUISITE",
+        "weight": 0.6,
+        "description": "实词知识是理解特殊句式的基础"
+      },
+      {
+        "source": "K20",
+        "target": "K21",
+        "relation": "PREREQUISITE",
+        "weight": 0.7,
+        "description": "虚词用法是分析句式结构的基础"
+      },
+      {
+        "source": "K19",
+        "target": "K22",
+        "relation": "PREREQUISITE",
+        "weight": 0.6,
+        "description": "实词知识是理解词类活用的前提"
+      },
+      {
+        "source": "K19",
+        "target": "K24",
+        "relation": "PREREQUISITE",
+        "weight": 0.7,
+        "description": "实词积累是文言文翻译的基础"
+      },
+      {
+        "source": "K20",
+        "target": "K24",
+        "relation": "PREREQUISITE",
+        "weight": 0.7,
+        "description": "虚词用法是文言文翻译的基础"
+      },
+      {
+        "source": "K21",
+        "target": "K24",
+        "relation": "PREREQUISITE",
+        "weight": 0.8,
+        "description": "特殊句式是文言文翻译的关键"
+      },
+      {
+        "source": "K22",
+        "target": "K24",
+        "relation": "PREREQUISITE",
+        "weight": 0.7,
+        "description": "词类活用是文言文翻译的难点"
+      },
+      {
+        "source": "K23",
+        "target": "K25",
+        "relation": "PREREQUISITE",
+        "weight": 0.6,
+        "description": "诸子散文说理方法有助于理解思想流派"
+      },
+      {
+        "source": "K24",
+        "target": "K26",
+        "relation": "PREREQUISITE",
+        "weight": 0.5,
+        "description": "文言翻译能力是阅读古代传记的基础"
+      },
+      {
+        "source": "K28",
+        "target": "K29",
+        "relation": "PREREQUISITE",
+        "weight": 0.6,
+        "description": "说明方法是安排说明顺序的手段"
+      },
+      {
+        "source": "K34",
+        "target": "K35",
+        "relation": "PREREQUISITE",
+        "weight": 0.8,
+        "description": "三要素知识是人物形象分析的基础"
+      },
+      {
+        "source": "K34",
+        "target": "K36",
+        "relation": "PREREQUISITE",
+        "weight": 0.7,
+        "description": "三要素知识是环境描写分析的基础"
+      },
+      {
+        "source": "K34",
+        "target": "K37",
+        "relation": "PREREQUISITE",
+        "weight": 0.6,
+        "description": "三要素知识是理解叙事视角的前提"
+      },
+      {
+        "source": "K35",
+        "target": "K40",
+        "relation": "PREREQUISITE",
+        "weight": 0.5,
+        "description": "小说人物分析方法可迁移至戏剧人物分析"
+      },
+      {
+        "source": "K38",
+        "target": "K40",
+        "relation": "PREREQUISITE",
+        "weight": 0.6,
+        "description": "戏剧冲突是分析戏剧人物的基础"
+      },
+      {
+        "source": "K39",
+        "target": "K40",
+        "relation": "PREREQUISITE",
+        "weight": 0.6,
+        "description": "戏剧语言特点有助于分析人物性格"
+      },
+      {
+        "source": "K34",
+        "target": "K48",
+        "relation": "PREREQUISITE",
+        "weight": 0.6,
+        "description": "三要素知识是分析主题多义性的基础"
+      },
+      {
+        "source": "K35",
+        "target": "K49",
+        "relation": "PREREQUISITE",
+        "weight": 0.5,
+        "description": "人物分析有助于理解叙述技巧"
+      },
+      {
+        "source": "K43",
+        "target": "K44",
+        "relation": "PREREQUISITE",
+        "weight": 0.7,
+        "description": "逻辑基本规律是学习推理方法的前提"
+      },
+      {
+        "source": "K43",
+        "target": "K45",
+        "relation": "PREREQUISITE",
+        "weight": 0.8,
+        "description": "基本规律是识别谬误的基础"
+      },
+      {
+        "source": "K44",
+        "target": "K46",
+        "relation": "PREREQUISITE",
+        "weight": 0.6,
+        "description": "推理方法是复言命题推理的基础"
+      },
+      {
+        "source": "K44",
+        "target": "K47",
+        "relation": "PREREQUISITE",
+        "weight": 0.7,
+        "description": "推理方法是论证加强削弱的基础"
+      },
+      {
+        "source": "K46",
+        "target": "K47",
+        "relation": "PREREQUISITE",
+        "weight": 0.5,
+        "description": "复言命题推理有助于分析论证逻辑"
+      },
+      {
+        "source": "K44",
+        "target": "K51",
+        "relation": "PREREQUISITE",
+        "weight": 0.6,
+        "description": "推理方法是分析理论论证逻辑的工具"
+      },
+      {
+        "source": "K45",
+        "target": "K51",
+        "relation": "PREREQUISITE",
+        "weight": 0.5,
+        "description": "谬误识别有助于评估论证严密性"
+      },
+      {
+        "source": "K52",
+        "target": "K53",
+        "relation": "PREREQUISITE",
+        "weight": 0.6,
+        "description": "象征手法是抒情诗鉴赏的角度之一"
+      },
+      {
+        "source": "K54",
+        "target": "K55",
+        "relation": "PREREQUISITE",
+        "weight": 0.8,
+        "description": "咏史诗特点是深入分析用典怀古的前提"
+      },
+      {
+        "source": "K9",
+        "target": "K55",
+        "relation": "PREREQUISITE",
+        "weight": 0.5,
+        "description": "用典手法知识可迁移至怀古诗鉴赏"
+      },
+      {
+        "source": "K56",
+        "target": "K57",
+        "relation": "PREREQUISITE",
+        "weight": 0.5,
+        "description": "外国小说鉴赏与心理描写分析相关"
+      },
+      {
+        "source": "K58",
+        "target": "K59",
+        "relation": "PREREQUISITE",
+        "weight": 0.6,
+        "description": "散文诗特点有助于现当代诗歌鉴赏"
+      },
+      {
+        "source": "K1",
+        "target": "K59",
+        "relation": "PREREQUISITE",
+        "weight": 0.5,
+        "description": "意象意境知识是现当代诗歌鉴赏的基础"
+      },
+      {
+        "source": "K60",
+        "target": "K62",
+        "relation": "PREREQUISITE",
+        "weight": 0.5,
+        "description": "词语色彩义是理解修辞表达效果的基础"
+      },
+      {
+        "source": "K60",
+        "target": "K64",
+        "relation": "PREREQUISITE",
+        "weight": 0.6,
+        "description": "词语色彩义是语言得体的要素"
+      },
+      {
+        "source": "K62",
+        "target": "K63",
+        "relation": "PREREQUISITE",
+        "weight": 0.7,
+        "description": "修辞手法(一)是学习修辞手法(二)的基础"
+      },
+      {
+        "source": "K64",
+        "target": "K65",
+        "relation": "PREREQUISITE",
+        "weight": 0.6,
+        "description": "语言得体是语体风格选择的要求"
+      },
+      {
+        "source": "K66",
+        "target": "K67",
+        "relation": "PREREQUISITE",
+        "weight": 0.4,
+        "description": "鲁迅小说与现代散文流派有时代关联"
+      },
+      {
+        "source": "K40",
+        "target": "K68",
+        "relation": "PREREQUISITE",
+        "weight": 0.4,
+        "description": "戏剧人物分析有助于理解现代话剧"
+      },
+      {
+        "source": "K69",
+        "target": "K71",
+        "relation": "PREREQUISITE",
+        "weight": 0.6,
+        "description": "了解外国小说流派是比较文学阅读的基础"
+      },
+      {
+        "source": "K70",
+        "target": "K71",
+        "relation": "PREREQUISITE",
+        "weight": 0.5,
+        "description": "外国诗歌鉴赏是比较文学阅读的能力基础"
+      },
+      {
+        "source": "K56",
+        "target": "K69",
+        "relation": "PREREQUISITE",
+        "weight": 0.6,
+        "description": "外国小说鉴赏是学习流派的延伸"
+      },
+      {
+        "source": "K14",
+        "target": "K51",
+        "relation": "PREREQUISITE",
+        "weight": 0.4,
+        "description": "论证方法有助于分析理论文章的论证逻辑"
+      },
+      {
+        "source": "K15",
+        "target": "K50",
+        "relation": "PREREQUISITE",
+        "weight": 0.4,
+        "description": "议论文结构有助于理解理论文章的阅读方法"
+      },
+      {
+        "source": "K9",
+        "target": "K52",
+        "relation": "PREREQUISITE",
+        "weight": 0.4,
+        "description": "用典与象征都是含蓄表达手法"
+      },
+      {
+        "source": "K7",
+        "target": "K52",
+        "relation": "PREREQUISITE",
+        "weight": 0.5,
+        "description": "意象分析与象征手法密切相关"
+      },
+      {
+        "source": "K7",
+        "target": "K54",
+        "relation": "PREREQUISITE",
+        "weight": 0.4,
+        "description": "意象分析是咏史诗鉴赏的基础"
+      },
+      {
+        "source": "K2",
+        "target": "K18",
+        "relation": "RELATED_TO",
+        "weight": 0.5,
+        "description": "借景抒情与抒情方式都属于抒情手法"
+      },
+      {
+        "source": "K4",
+        "target": "K30",
+        "relation": "RELATED_TO",
+        "weight": 0.6,
+        "description": "通讯与消息都是新闻文体"
+      },
+      {
+        "source": "K4",
+        "target": "K5",
+        "relation": "RELATED_TO",
+        "weight": 0.6,
+        "description": "通讯与报告文学都有新闻性与文学性"
+      },
+      {
+        "source": "K5",
+        "target": "K42",
+        "relation": "RELATED_TO",
+        "weight": 0.5,
+        "description": "报告文学与纪实文学都强调真实性与文学性"
+      },
+      {
+        "source": "K7",
+        "target": "K58",
+        "relation": "RELATED_TO",
+        "weight": 0.5,
+        "description": "古诗词意象与散文诗意象在意象运用上相通"
+      },
+      {
+        "source": "K13",
+        "target": "K50",
+        "relation": "RELATED_TO",
+        "weight": 0.4,
+        "description": "议论文论点提炼与理论文章核心论点把握相关"
+      },
+      {
+        "source": "K14",
+        "target": "K23",
+        "relation": "RELATED_TO",
+        "weight": 0.4,
+        "description": "论证方法与诸子说理方法在说理技巧上相通"
+      },
+      {
+        "source": "K14",
+        "target": "K47",
+        "relation": "RELATED_TO",
+        "weight": 0.5,
+        "description": "论证方法与论证加强削弱在逻辑分析上相关"
+      },
+      {
+        "source": "K16",
+        "target": "K58",
+        "relation": "RELATED_TO",
+        "weight": 0.4,
+        "description": "散文形散神聚与散文诗特点相关"
+      },
+      {
+        "source": "K17",
+        "target": "K49",
+        "relation": "RELATED_TO",
+        "weight": 0.4,
+        "description": "散文线索结构与小说叙述技巧都涉及结构安排"
+      },
+      {
+        "source": "K19",
+        "target": "K32",
+        "relation": "RELATED_TO",
+        "weight": 0.4,
+        "description": "文言实词与传统文化常识在文言阅读中相关"
+      },
+      {
+        "source": "K21",
+        "target": "K33",
+        "relation": "RELATED_TO",
+        "weight": 0.4,
+        "description": "文言特殊句式与对联格律都涉及语言结构"
+      },
+      {
+        "source": "K26",
+        "target": "K27",
+        "relation": "RELATED_TO",
+        "weight": 0.7,
+        "description": "古代传记叙事艺术与史传文学真实虚构紧密关联"
+      },
+      {
+        "source": "K28",
+        "target": "K29",
+        "relation": "RELATED_TO",
+        "weight": 0.7,
+        "description": "说明方法与说明顺序紧密关联"
+      },
+      {
+        "source": "K30",
+        "target": "K31",
+        "relation": "RELATED_TO",
+        "weight": 0.5,
+        "description": "消息结构与媒体信息辨析都属于媒介素养"
+      },
+      {
+        "source": "K35",
+        "target": "K57",
+        "relation": "RELATED_TO",
+        "weight": 0.4,
+        "description": "小说人物分析与心理描写方法都涉及人物刻画"
+      },
+      {
+        "source": "K38",
+        "target": "K39",
+        "relation": "RELATED_TO",
+        "weight": 0.6,
+        "description": "戏剧冲突与戏剧语言紧密关联"
+      },
+      {
+        "source": "K43",
+        "target": "K44",
+        "relation": "RELATED_TO",
+        "weight": 0.6,
+        "description": "逻辑基本规律与推理方法紧密关联"
+      },
+      {
+        "source": "K52",
+        "target": "K59",
+        "relation": "RELATED_TO",
+        "weight": 0.5,
+        "description": "现代诗歌象征与现当代诗歌鉴赏相关"
+      },
+      {
+        "source": "K54",
+        "target": "K9",
+        "relation": "RELATED_TO",
+        "weight": 0.5,
+        "description": "咏史诗用典与一般诗歌用典相关"
+      },
+      {
+        "source": "K62",
+        "target": "K63",
+        "relation": "RELATED_TO",
+        "weight": 0.7,
+        "description": "两类修辞手法紧密关联"
+      },
+      {
+        "source": "K66",
+        "target": "K69",
+        "relation": "RELATED_TO",
+        "weight": 0.3,
+        "description": "中国现代小说与外国小说在小说鉴赏上相关"
+      },
+      {
+        "source": "K60",
+        "target": "K65",
+        "relation": "RELATED_TO",
+        "weight": 0.5,
+        "description": "词语色彩义与语体风格在语言运用上相关"
+      },
+      {
+        "source": "K25",
+        "target": "K23",
+        "relation": "DERIVED_FROM",
+        "weight": 0.7,
+        "description": "思想流派比较由诸子散文说理方法延伸而来"
+      },
+      {
+        "source": "K48",
+        "target": "K34",
+        "relation": "DERIVED_FROM",
+        "weight": 0.7,
+        "description": "主题多义性分析由小说三要素延伸而来"
+      },
+      {
+        "source": "K55",
+        "target": "K9",
+        "relation": "DERIVED_FROM",
+        "weight": 0.6,
+        "description": "怀古用典分析由一般用典手法延伸而来"
+      },
+      {
+        "source": "K47",
+        "target": "K44",
+        "relation": "DERIVED_FROM",
+        "weight": 0.7,
+        "description": "论证加强削弱由推理方法延伸而来"
+      },
+      {
+        "source": "K14",
+        "target": "K51",
+        "relation": "APPLIED_IN",
+        "weight": 0.5,
+        "description": "论证方法应用于理论文章论证逻辑分析"
+      },
+      {
+        "source": "K21",
+        "target": "K24",
+        "relation": "APPLIED_IN",
+        "weight": 0.8,
+        "description": "特殊句式知识应用于文言文翻译"
+      },
+      {
+        "source": "K22",
+        "target": "K24",
+        "relation": "APPLIED_IN",
+        "weight": 0.8,
+        "description": "词类活用知识应用于文言文翻译"
+      },
+      {
+        "source": "K44",
+        "target": "K45",
+        "relation": "APPLIED_IN",
+        "weight": 0.6,
+        "description": "推理方法应用于逻辑谬误识别"
+      },
+      {
+        "source": "K35",
+        "target": "K40",
+        "relation": "APPLIED_IN",
+        "weight": 0.5,
+        "description": "人物形象分析方法应用于戏剧人物分析"
+      },
+      {
+        "source": "K62",
+        "target": "K8",
+        "relation": "APPLIED_IN",
+        "weight": 0.4,
+        "description": "修辞手法应用于古典诗歌炼字赏析"
+      }
+    ],
+    "categories": [
+      "必修上册",
+      "必修下册",
+      "选择性必修上册",
+      "选择性必修中册",
+      "选择性必修下册"
+    ],
+    "stats": {
+      "total_nodes": 101,
+      "total_edges": 185,
+      "modules": 5,
+      "chapters": 25,
+      "knowledge_points": 71
+    }
+  },
+  "英语": {
+    "color": "#D97706",
+    "nodes": [
+      {
+        "id": "M1",
+        "name": "必修第一册",
+        "type": "Module",
+        "module": "必修第一册",
+        "chapter": "",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "主题涵盖青少年生活、环球旅行、运动健身、自然灾害与世界语言，融入基本时态、情态动词、被动语态等语法及阅读写作策略训练。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "M2",
+        "name": "必修第二册",
+        "type": "Module",
+        "module": "必修第二册",
+        "chapter": "",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "主题包括文化遗产、野生动植物保护、互联网与音乐，融入定语从句、现在完成时被动语态、宾语从句与状语从句等语法。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "M3",
+        "name": "必修第三册",
+        "type": "Module",
+        "module": "必修第三册",
+        "chapter": "",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "主题涉及节日庆典、道德美德、多元文化与太空探索，融入定语从句(关系副词)、虚拟语气、主谓一致与不定式等语法。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "M4",
+        "name": "选择性必修1-2",
+        "type": "Module",
+        "module": "选择性必修1-2",
+        "chapter": "",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "主题涵盖杰出人物、未来展望、迷人公园与标志性景观，融入非谓语动词、将来时态、倒装句与同位语从句等高级语法。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "M5",
+        "name": "选择性必修3-4",
+        "type": "Module",
+        "module": "选择性必修3-4",
+        "chapter": "",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "主题涉及艺术、逆境与勇气、科学探索与幽默，融入强调句型、虚拟语气扩展、名词性从句综合与修辞应用等语法。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "C1",
+        "name": "Teenage Life",
+        "type": "Chapter",
+        "module": "必修第一册",
+        "chapter": "Teenage Life",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "围绕青少年校园生活与课外活动，学习校园生活主题词汇、一般现在时与现在进行时、略读策略与建议信写作。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "C2",
+        "name": "Travelling Around",
+        "type": "Chapter",
+        "module": "必修第一册",
+        "chapter": "Travelling Around",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "围绕旅游与交通，学习旅游主题词汇、将来时态表达、扫读策略与旅行计划写作。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "C3",
+        "name": "Sports and Fitness",
+        "type": "Chapter",
+        "module": "必修第一册",
+        "chapter": "Sports and Fitness",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "围绕体育运动与健康，学习体育主题词汇、情态动词、猜词策略与说明文写作。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "C4",
+        "name": "Natural Disasters",
+        "type": "Chapter",
+        "module": "必修第一册",
+        "chapter": "Natural Disasters",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "围绕自然灾害与救援，学习灾害主题词汇、过去时态、篇章结构识别与新闻报道写作。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "C5",
+        "name": "Languages Around the World",
+        "type": "Chapter",
+        "module": "必修第一册",
+        "chapter": "Languages Around the World",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "围绕语言与交流，学习语言主题词汇、被动语态、推断作者态度策略与说明文写作。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "C6",
+        "name": "Cultural Heritage",
+        "type": "Chapter",
+        "module": "必修第二册",
+        "chapter": "Cultural Heritage",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "围绕文化遗产与保护，学习文化遗产主题词汇、定语从句(关系代词)、事实与观点区分及议论文写作。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "C7",
+        "name": "Wildlife Protection",
+        "type": "Chapter",
+        "module": "必修第二册",
+        "chapter": "Wildlife Protection",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "围绕野生动植物保护，学习生态主题词汇、现在完成时被动语态、因果关系识别与图表作文写作。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "C8",
+        "name": "The Internet",
+        "type": "Chapter",
+        "module": "必修第二册",
+        "chapter": "The Internet",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "围绕互联网与信息技术，学习网络主题词汇、宾语从句、论证方法识别与倡议书写作。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "C9",
+        "name": "Music",
+        "type": "Chapter",
+        "module": "必修第二册",
+        "chapter": "Music",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "围绕音乐类型与表达，学习音乐主题词汇、状语从句、修辞手法理解与应用文写作。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "C10",
+        "name": "Festivals and Celebrations",
+        "type": "Chapter",
+        "module": "必修第三册",
+        "chapter": "Festivals and Celebrations",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "围绕节日文化与庆祝，学习节日主题词汇、定语从句(关系副词)、跨文化理解与节日介绍文写作。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "C11",
+        "name": "Morals and Virtues",
+        "type": "Chapter",
+        "module": "必修第三册",
+        "chapter": "Morals and Virtues",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "围绕道德品质与价值，学习道德主题词汇、虚拟语气(if条件句)、人物性格分析与记叙文写作。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "C12",
+        "name": "Diverse Cultures",
+        "type": "Chapter",
+        "module": "必修第三册",
+        "chapter": "Diverse Cultures",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "围绕多元文化与融合，学习文化主题词汇、主谓一致、文化差异比较与对比类作文写作。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "C13",
+        "name": "Space Exploration",
+        "type": "Chapter",
+        "module": "必修第三册",
+        "chapter": "Space Exploration",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "围绕太空探索与科技，学习太空主题词汇、不定式作主语和定语、科普文章理解与科普说明文写作。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "C14",
+        "name": "People of Achievement",
+        "type": "Chapter",
+        "module": "选择性必修1-2",
+        "chapter": "People of Achievement",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "围绕杰出人物与成就，学习人物主题词汇、非谓语动词(动名词、分词)、人物传记阅读与人物介绍文写作。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "C15",
+        "name": "Looking into the Future",
+        "type": "Chapter",
+        "module": "选择性必修1-2",
+        "chapter": "Looking into the Future",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "围绕未来科技与生活，学习未来主题词汇、将来完成时与进行时、预测推断策略与预测类作文写作。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "C16",
+        "name": "Fascinating Parks",
+        "type": "Chapter",
+        "module": "选择性必修1-2",
+        "chapter": "Fascinating Parks",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "围绕自然公园与景观，学习自然主题词汇、倒装句、描写性语言欣赏与描写文写作。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "C17",
+        "name": "Iconic Attractions",
+        "type": "Chapter",
+        "module": "选择性必修1-2",
+        "chapter": "Iconic Attractions",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "围绕标志性景观与旅游，学习旅游主题词汇、同位语从句、综合理解策略与旅游宣传文写作。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "C18",
+        "name": "Art",
+        "type": "Chapter",
+        "module": "选择性必修3-4",
+        "chapter": "Art",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "围绕艺术与审美，学习艺术主题词汇、强调句型、艺术评论阅读与艺术评论写作。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "C19",
+        "name": "Adversity and Courage",
+        "type": "Chapter",
+        "module": "选择性必修3-4",
+        "chapter": "Adversity and Courage",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "围绕逆境与勇气，学习勇气主题词汇、虚拟语气扩展(wish, as if)、叙事结构分析与读后感写作。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "C20",
+        "name": "Scientific Exploration",
+        "type": "Chapter",
+        "module": "选择性必修3-4",
+        "chapter": "Scientific Exploration",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "围绕科学探索与发现，学习科学主题词汇、名词性从句综合、科普文逻辑分析与实验报告写作。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "C21",
+        "name": "Humour",
+        "type": "Chapter",
+        "module": "选择性必修3-4",
+        "chapter": "Humour",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "围绕幽默与智慧，学习幽默主题词汇、修辞手法应用、幽默讽刺识别与幽默短文写作。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "K1",
+        "name": "主题词汇:校园生活与课外活动",
+        "type": "KnowledgePoint",
+        "module": "必修第一册",
+        "chapter": "Teenage Life",
+        "difficulty": 2,
+        "importance": 3,
+        "description": "掌握校园生活相关词汇(club, volunteer, debate, schedule, assignment, extracurricular等)及搭配用法，能运用于口语和写作表达。",
+        "keywords": "club, volunteer, debate, schedule, assignment, extracurricular, campus",
+        "exam_type": "词汇选择题,完形填空"
+      },
+      {
+        "id": "K2",
+        "name": "语法:一般现在时与现在进行时",
+        "type": "KnowledgePoint",
+        "module": "必修第一册",
+        "chapter": "Teenage Life",
+        "difficulty": 3,
+        "importance": 4,
+        "description": "掌握一般现在时(习惯性动作、客观事实)与现在进行时(此时此刻正在进行、近期趋势)的形式、用法与区别，能正确运用。",
+        "keywords": "一般现在时,现在进行时,习惯性动作,客观事实,正在进行",
+        "exam_type": "语法选择题,改错题"
+      },
+      {
+        "id": "K3",
+        "name": "阅读策略:略读获取主旨大意",
+        "type": "KnowledgePoint",
+        "module": "必修第一册",
+        "chapter": "Teenage Life",
+        "difficulty": 3,
+        "importance": 4,
+        "description": "掌握略读(skimming)技巧:快速浏览标题、首尾段、每段首句，在短时间内获取文章主旨大意和中心思想。",
+        "keywords": "略读,skimming,主旨大意,标题,首尾段,中心思想",
+        "exam_type": "阅读理解题"
+      },
+      {
+        "id": "K4",
+        "name": "写作:建议信的写作",
+        "type": "KnowledgePoint",
+        "module": "必修第一册",
+        "chapter": "Teenage Life",
+        "difficulty": 3,
+        "importance": 3,
+        "description": "掌握建议信的结构(开头引出问题、正文提出建议及理由、结尾表达期望)与语言特点(委婉语气:You'd better.../I suggest...)，能撰写规范的建议信。",
+        "keywords": "建议信,结构,委婉语气,I suggest,You'd better,开头结尾",
+        "exam_type": "写作题"
+      },
+      {
+        "id": "K5",
+        "name": "主题词汇:旅游与交通",
+        "type": "KnowledgePoint",
+        "module": "必修第一册",
+        "chapter": "Travelling Around",
+        "difficulty": 2,
+        "importance": 3,
+        "description": "掌握旅游交通相关词汇(destination, itinerary, accommodation, souvenir, transport, depart, arrive等)及搭配用法。",
+        "keywords": "destination, itinerary, accommodation, souvenir, transport, depart, arrive",
+        "exam_type": "词汇选择题,完形填空"
+      },
+      {
+        "id": "K6",
+        "name": "语法:将来时态的表达",
+        "type": "KnowledgePoint",
+        "module": "必修第一册",
+        "chapter": "Travelling Around",
+        "difficulty": 3,
+        "importance": 4,
+        "description": "掌握will+do(临时决定/预测)、be going to+do(计划打算/有迹象的预测)、be doing(按计划即将发生)三种将来时态的用法区别。",
+        "keywords": "将来时,will,be going to,be doing,临时决定,计划打算,预测",
+        "exam_type": "语法选择题,改错题"
+      },
+      {
+        "id": "K7",
+        "name": "阅读策略:扫读查找具体信息",
+        "type": "KnowledgePoint",
+        "module": "必修第一册",
+        "chapter": "Travelling Around",
+        "difficulty": 3,
+        "importance": 4,
+        "description": "掌握扫读(scanning)技巧:带着具体问题快速搜索文本中的关键词(数字、人名、地名、时间等)，定位并提取特定信息。",
+        "keywords": "扫读,scanning,具体信息,关键词,数字,人名,地名,定位",
+        "exam_type": "阅读理解题"
+      },
+      {
+        "id": "K8",
+        "name": "写作:旅行计划与游记",
+        "type": "KnowledgePoint",
+        "module": "必修第一册",
+        "chapter": "Travelling Around",
+        "difficulty": 3,
+        "importance": 3,
+        "description": "掌握旅行计划(行程安排:时间、地点、活动)与游记(按时间或空间顺序记述见闻感受)的写作要素与语言特征。",
+        "keywords": "旅行计划,游记,行程安排,时间空间顺序,见闻感受",
+        "exam_type": "写作题"
+      },
+      {
+        "id": "K9",
+        "name": "主题词汇:体育运动与健康",
+        "type": "KnowledgePoint",
+        "module": "必修第一册",
+        "chapter": "Sports and Fitness",
+        "difficulty": 2,
+        "importance": 3,
+        "description": "掌握体育运动与健康相关词汇(athlete, championship, fitness, nutrition, strength, endurance, referee等)及搭配用法。",
+        "keywords": "athlete, championship, fitness, nutrition, strength, endurance, referee",
+        "exam_type": "词汇选择题,完形填空"
+      },
+      {
+        "id": "K10",
+        "name": "语法:情态动词",
+        "type": "KnowledgePoint",
+        "module": "必修第一册",
+        "chapter": "Sports and Fitness",
+        "difficulty": 4,
+        "importance": 4,
+        "description": "掌握can/could(能力、请求)、should/ought to(建议、义务)、must(必须、肯定推测)、may/might(可能)等情态动词的用法及推测用法。",
+        "keywords": "情态动词,can,could,should,must,may,might,推测用法",
+        "exam_type": "语法选择题,改错题"
+      },
+      {
+        "id": "K11",
+        "name": "阅读策略:根据上下文猜测词义",
+        "type": "KnowledgePoint",
+        "module": "必修第一册",
+        "chapter": "Sports and Fitness",
+        "difficulty": 4,
+        "importance": 4,
+        "description": "掌握猜词策略:利用定义/解释信号词(is, means, refers to)、同义反义关系、举例信号词(for example)、构词法(词根词缀)推断生词含义。",
+        "keywords": "猜词,上下文,定义解释,同义反义,举例,构词法,词根词缀",
+        "exam_type": "阅读理解题,词汇题"
+      },
+      {
+        "id": "K12",
+        "name": "写作:说明文(运动益处)",
+        "type": "KnowledgePoint",
+        "module": "必修第一册",
+        "chapter": "Sports and Fitness",
+        "difficulty": 3,
+        "importance": 3,
+        "description": "掌握说明文写作要素(主题句、支撑句、结论句)及说明方法(举例、列数字、因果分析)，能撰写关于运动益处的说明文。",
+        "keywords": "说明文,主题句,支撑句,结论句,举例,列数字,因果分析",
+        "exam_type": "写作题"
+      },
+      {
+        "id": "K13",
+        "name": "主题词汇:自然灾害与救援",
+        "type": "KnowledgePoint",
+        "module": "必修第一册",
+        "chapter": "Natural Disasters",
+        "difficulty": 2,
+        "importance": 3,
+        "description": "掌握自然灾害与救援相关词汇(earthquake, flood, hurricane, rescue, evacuate, casualty, shelter, emergency等)及搭配用法。",
+        "keywords": "earthquake, flood, hurricane, rescue, evacuate, casualty, shelter, emergency",
+        "exam_type": "词汇选择题,完形填空"
+      },
+      {
+        "id": "K14",
+        "name": "语法:过去时态",
+        "type": "KnowledgePoint",
+        "module": "必修第一册",
+        "chapter": "Natural Disasters",
+        "difficulty": 4,
+        "importance": 4,
+        "description": "掌握一般过去时(过去事实/动作)和过去进行时(过去某时正在进行的动作)的形式与用法，能区分并正确运用。",
+        "keywords": "一般过去时,过去进行时,过去事实,正在进行,was/were doing",
+        "exam_type": "语法选择题,改错题"
+      },
+      {
+        "id": "K15",
+        "name": "阅读策略:识别篇章结构",
+        "type": "KnowledgePoint",
+        "module": "必修第一册",
+        "chapter": "Natural Disasters",
+        "difficulty": 3,
+        "importance": 3,
+        "description": "掌握识别篇章结构的方法:分析段落间的逻辑关系(总分、并列、递进、转折、因果)，判断文章组织模式。",
+        "keywords": "篇章结构,段落逻辑,总分,并列,递进,转折,因果,组织模式",
+        "exam_type": "阅读理解题,结构排序题"
+      },
+      {
+        "id": "K16",
+        "name": "写作:新闻报道写作",
+        "type": "KnowledgePoint",
+        "module": "必修第一册",
+        "chapter": "Natural Disasters",
+        "difficulty": 3,
+        "importance": 3,
+        "description": "掌握新闻报道的结构(headline, lead导语含5W1H, body主体, tail结尾)与语言特征(客观、简洁、第三人称)，能撰写英文新闻报道。",
+        "keywords": "新闻报道,headline,lead,导语,5W1H,body,客观简洁,第三人称",
+        "exam_type": "写作题"
+      },
+      {
+        "id": "K17",
+        "name": "主题词汇:语言与交流",
+        "type": "KnowledgePoint",
+        "module": "必修第一册",
+        "chapter": "Languages Around the World",
+        "difficulty": 2,
+        "importance": 3,
+        "description": "掌握语言交流相关词汇(fluency, accent, dialect, bilingual, translation, interpret, communicate等)及搭配用法。",
+        "keywords": "fluency, accent, dialect, bilingual, translation, interpret, communicate",
+        "exam_type": "词汇选择题,完形填空"
+      },
+      {
+        "id": "K18",
+        "name": "语法:被动语态",
+        "type": "KnowledgePoint",
+        "module": "必修第一册",
+        "chapter": "Languages Around the World",
+        "difficulty": 4,
+        "importance": 4,
+        "description": "掌握一般现在时与一般过去时的被动语态(be + done)的构成与用法，理解被动语态使用的语境(强调动作承受者、不知道动作执行者)。",
+        "keywords": "被动语态,be done,一般现在时,一般过去时,动作承受者,动作执行者",
+        "exam_type": "语法选择题,句型转换题"
+      },
+      {
+        "id": "K19",
+        "name": "阅读策略:推断作者态度与意图",
+        "type": "KnowledgePoint",
+        "module": "必修第一册",
+        "chapter": "Languages Around the World",
+        "difficulty": 4,
+        "importance": 4,
+        "description": "掌握推断作者态度的方法:分析措辞色彩(褒义/贬义/中性)、识别语气词(unfortunately/surprisingly)、结合主旨判断作者态度与写作意图。",
+        "keywords": "推断,作者态度,写作意图,措辞色彩,褒义贬义,语气词",
+        "exam_type": "阅读理解题"
+      },
+      {
+        "id": "K20",
+        "name": "写作:说明文(语言现象)",
+        "type": "KnowledgePoint",
+        "module": "必修第一册",
+        "chapter": "Languages Around the World",
+        "difficulty": 3,
+        "importance": 3,
+        "description": "能运用说明文写作方法(定义、分类、比较、举例)阐述语言现象(如英语的全球传播、方言差异等)。",
+        "keywords": "说明文,语言现象,定义,分类,比较,举例,全球传播,方言",
+        "exam_type": "写作题"
+      },
+      {
+        "id": "K21",
+        "name": "主题词汇:文化遗产与保护",
+        "type": "KnowledgePoint",
+        "module": "必修第二册",
+        "chapter": "Cultural Heritage",
+        "difficulty": 2,
+        "importance": 3,
+        "description": "掌握文化遗产相关词汇(heritage, preserve, monument, temple, architecture, archaeology, restore等)及搭配用法。",
+        "keywords": "heritage, preserve, monument, temple, architecture, archaeology, restore",
+        "exam_type": "词汇选择题,完形填空"
+      },
+      {
+        "id": "K22",
+        "name": "语法:定语从句(关系代词)",
+        "type": "KnowledgePoint",
+        "module": "必修第二册",
+        "chapter": "Cultural Heritage",
+        "difficulty": 5,
+        "importance": 5,
+        "description": "掌握定语从句中关系代词who(人,主格)、whom(人,宾格)、whose(所属)、which(物)、that(人或物)的用法及that与which的区别。",
+        "keywords": "定语从句,关系代词,who,whom,whose,which,that,主格宾格",
+        "exam_type": "语法选择题,完形填空,改错题"
+      },
+      {
+        "id": "K23",
+        "name": "阅读策略:区分事实与观点",
+        "type": "KnowledgePoint",
+        "module": "必修第二册",
+        "chapter": "Cultural Heritage",
+        "difficulty": 4,
+        "importance": 4,
+        "description": "掌握区分事实(可验证的客观陈述)与观点(主观判断与评价)的方法:识别观点标志词(I think/in my view/arguably)与事实表述特征。",
+        "keywords": "事实,观点,区分,可验证,主观判断,观点标志词,I think,in my view",
+        "exam_type": "阅读理解题"
+      },
+      {
+        "id": "K24",
+        "name": "写作:议论文(文化遗产保护)",
+        "type": "KnowledgePoint",
+        "module": "必修第二册",
+        "chapter": "Cultural Heritage",
+        "difficulty": 4,
+        "importance": 4,
+        "description": "掌握议论文结构(引论提出论点、本论展开论证、结论重申论点)及论证方法(举例、对比、因果)，能撰写文化遗产保护议论文。",
+        "keywords": "议论文,引论,本论,结论,论点,论证方法,举例,对比,因果",
+        "exam_type": "写作题"
+      },
+      {
+        "id": "K25",
+        "name": "主题词汇:野生动植物与保护",
+        "type": "KnowledgePoint",
+        "module": "必修第二册",
+        "chapter": "Wildlife Protection",
+        "difficulty": 2,
+        "importance": 3,
+        "description": "掌握野生动植物保护相关词汇(extinct, endangered, habitat, biodiversity, conservation, species, poach等)及搭配用法。",
+        "keywords": "extinct, endangered, habitat, biodiversity, conservation, species, poach",
+        "exam_type": "词汇选择题,完形填空"
+      },
+      {
+        "id": "K26",
+        "name": "语法:现在完成时的被动语态",
+        "type": "KnowledgePoint",
+        "module": "必修第二册",
+        "chapter": "Wildlife Protection",
+        "difficulty": 4,
+        "importance": 4,
+        "description": "掌握现在完成时被动语态(have/has been + done)的构成与用法，表示过去发生的动作对现在造成的影响或结果，且主语是动作承受者。",
+        "keywords": "现在完成时,被动语态,have been done,has been done,影响结果",
+        "exam_type": "语法选择题,句型转换题"
+      },
+      {
+        "id": "K27",
+        "name": "阅读策略:识别因果关系",
+        "type": "KnowledgePoint",
+        "module": "必修第二册",
+        "chapter": "Wildlife Protection",
+        "difficulty": 3,
+        "importance": 3,
+        "description": "掌握识别因果关系的信号词(because, since, as, due to, result in, lead to, consequently)及隐性因果推断方法。",
+        "keywords": "因果关系,信号词,because,since,due to,result in,lead to,隐性因果",
+        "exam_type": "阅读理解题"
+      },
+      {
+        "id": "K28",
+        "name": "写作:图表作文",
+        "type": "KnowledgePoint",
+        "module": "必修第二册",
+        "chapter": "Wildlife Protection",
+        "difficulty": 4,
+        "importance": 4,
+        "description": "掌握图表作文写作步骤(描述图表数据-分析原因-得出结论/提出建议)及数据描述语言(as shown in.../account for.../compared with...)。",
+        "keywords": "图表作文,描述数据,分析原因,结论建议,as shown in,account for",
+        "exam_type": "写作题"
+      },
+      {
+        "id": "K29",
+        "name": "主题词汇:互联网与信息技术",
+        "type": "KnowledgePoint",
+        "module": "必修第二册",
+        "chapter": "The Internet",
+        "difficulty": 2,
+        "importance": 3,
+        "description": "掌握互联网相关词汇(download, upload, browse, network, database, privacy, cyber, online, offline等)及搭配用法。",
+        "keywords": "download, upload, browse, network, database, privacy, cyber, online",
+        "exam_type": "词汇选择题,完形填空"
+      },
+      {
+        "id": "K30",
+        "name": "语法:宾语从句",
+        "type": "KnowledgePoint",
+        "module": "必修第二册",
+        "chapter": "The Internet",
+        "difficulty": 4,
+        "importance": 4,
+        "description": "掌握宾语从句的引导词(that引导陈述句、whether/if引导一般疑问句、wh-词引导特殊疑问句)、语序(陈述语序)和时态一致性原则。",
+        "keywords": "宾语从句,引导词,that,whether,if,wh-词,陈述语序,时态一致",
+        "exam_type": "语法选择题,完形填空,改错题"
+      },
+      {
+        "id": "K31",
+        "name": "阅读策略:识别论证方法",
+        "type": "KnowledgePoint",
+        "module": "必修第二册",
+        "chapter": "The Internet",
+        "difficulty": 3,
+        "importance": 3,
+        "description": "掌握识别文章中论证方法(举例论证for example/for instance、引用论证according to、数据论证statistics show)的技巧。",
+        "keywords": "论证方法,举例论证,引用论证,数据论证,for example,according to",
+        "exam_type": "阅读理解题"
+      },
+      {
+        "id": "K32",
+        "name": "写作:网络安全倡议书",
+        "type": "KnowledgePoint",
+        "module": "必修第二册",
+        "chapter": "The Internet",
+        "difficulty": 3,
+        "importance": 3,
+        "description": "掌握倡议书的结构(背景问题-倡议内容-号召呼吁)与语言特点(祈使句、情态动词should/must)，能撰写网络安全倡议书。",
+        "keywords": "倡议书,背景问题,倡议内容,号召呼吁,祈使句,情态动词",
+        "exam_type": "写作题"
+      },
+      {
+        "id": "K33",
+        "name": "主题词汇:音乐类型与表达",
+        "type": "KnowledgePoint",
+        "module": "必修第二册",
+        "chapter": "Music",
+        "difficulty": 2,
+        "importance": 3,
+        "description": "掌握音乐相关词汇(classical, jazz, rock, symphony, melody, rhythm, compose, perform等)及搭配用法。",
+        "keywords": "classical, jazz, rock, symphony, melody, rhythm, compose, perform",
+        "exam_type": "词汇选择题,完形填空"
+      },
+      {
+        "id": "K34",
+        "name": "语法:状语从句",
+        "type": "KnowledgePoint",
+        "module": "必修第二册",
+        "chapter": "Music",
+        "difficulty": 4,
+        "importance": 4,
+        "description": "掌握时间状语从句(when/while/as/before/after)、原因状语从句(because/since/as)、条件状语从句(if/unless)的用法与主从句时态规则。",
+        "keywords": "状语从句,时间状语,原因状语,条件状语,when,while,because,if,unless",
+        "exam_type": "语法选择题,完形填空,改错题"
+      },
+      {
+        "id": "K35",
+        "name": "阅读策略:理解修辞手法",
+        "type": "KnowledgePoint",
+        "module": "必修第二册",
+        "chapter": "Music",
+        "difficulty": 3,
+        "importance": 3,
+        "description": "掌握识别并理解英语常见修辞手法(simile明喻、metaphor暗喻、personification拟人、hyperbole夸张)在文本中的表达效果。",
+        "keywords": "修辞手法,simile,metaphor,personification,hyperbole,明喻,暗喻,拟人",
+        "exam_type": "阅读理解题"
+      },
+      {
+        "id": "K36",
+        "name": "写作:应用文(活动介绍)",
+        "type": "KnowledgePoint",
+        "module": "必修第二册",
+        "chapter": "Music",
+        "difficulty": 3,
+        "importance": 3,
+        "description": "掌握活动介绍应用文的结构(活动概况-活动内容-活动意义)与语言特点，能撰写音乐节等活动的介绍文。",
+        "keywords": "应用文,活动介绍,活动概况,活动内容,活动意义",
+        "exam_type": "写作题"
+      },
+      {
+        "id": "K37",
+        "name": "主题词汇:节日文化与庆祝",
+        "type": "KnowledgePoint",
+        "module": "必修第三册",
+        "chapter": "Festivals and Celebrations",
+        "difficulty": 2,
+        "importance": 3,
+        "description": "掌握节日相关词汇(celebration, tradition, custom, ceremony, costume, feast, fireworks, parade等)及搭配用法。",
+        "keywords": "celebration, tradition, custom, ceremony, costume, feast, fireworks, parade",
+        "exam_type": "词汇选择题,完形填空"
+      },
+      {
+        "id": "K38",
+        "name": "语法:定语从句(关系副词)",
+        "type": "KnowledgePoint",
+        "module": "必修第三册",
+        "chapter": "Festivals and Celebrations",
+        "difficulty": 5,
+        "importance": 5,
+        "description": "掌握关系副词when(时间,=介词+which)、where(地点,=介词+which)、why(原因,=for which)引导定语从句的用法及与关系代词的区分。",
+        "keywords": "定语从句,关系副词,when,where,why,介词+which,关系代词区分",
+        "exam_type": "语法选择题,完形填空,改错题"
+      },
+      {
+        "id": "K39",
+        "name": "阅读策略:跨文化理解",
+        "type": "KnowledgePoint",
+        "module": "必修第三册",
+        "chapter": "Festivals and Celebrations",
+        "difficulty": 3,
+        "importance": 3,
+        "description": "掌握跨文化理解的阅读策略:理解文化背景差异、尊重文化多样性、比较中外节日文化异同、避免文化偏见。",
+        "keywords": "跨文化理解,文化背景,文化多样性,中外比较,文化偏见",
+        "exam_type": "阅读理解题,综合题"
+      },
+      {
+        "id": "K40",
+        "name": "写作:节日介绍文",
+        "type": "KnowledgePoint",
+        "module": "必修第三册",
+        "chapter": "Festivals and Celebrations",
+        "difficulty": 3,
+        "importance": 3,
+        "description": "掌握节日介绍文的结构(节日概述-庆祝方式-文化意义)与语言特征，能撰写中外节日介绍文。",
+        "keywords": "节日介绍,节日概述,庆祝方式,文化意义",
+        "exam_type": "写作题"
+      },
+      {
+        "id": "K41",
+        "name": "主题词汇:道德品质与价值",
+        "type": "KnowledgePoint",
+        "module": "必修第三册",
+        "chapter": "Morals and Virtues",
+        "difficulty": 2,
+        "importance": 3,
+        "description": "掌握道德品质相关词汇(virtue, integrity, honesty, responsibility, compassion, sacrifice, ethical, moral等)及搭配用法。",
+        "keywords": "virtue, integrity, honesty, responsibility, compassion, sacrifice, ethical, moral",
+        "exam_type": "词汇选择题,完形填空"
+      },
+      {
+        "id": "K42",
+        "name": "语法:虚拟语气(if条件句)",
+        "type": "KnowledgePoint",
+        "module": "必修第三册",
+        "chapter": "Morals and Virtues",
+        "difficulty": 5,
+        "importance": 5,
+        "description": "掌握虚拟语气在if条件句中的三种情况:与现在相反(if+过去时,would+do)、与过去相反(if+had done,would have done)、与将来相反(if+were to do/would+do)。",
+        "keywords": "虚拟语气,if条件句,与现在相反,与过去相反,与将来相反,would+do,had done",
+        "exam_type": "语法选择题,改错题,翻译题"
+      },
+      {
+        "id": "K43",
+        "name": "阅读策略:人物性格分析",
+        "type": "KnowledgePoint",
+        "module": "必修第三册",
+        "chapter": "Morals and Virtues",
+        "difficulty": 3,
+        "importance": 3,
+        "description": "掌握通过人物言行(description, dialogue, action)、他人评价和情节发展分析人物性格特征的阅读方法。",
+        "keywords": "人物性格,言行分析,description,dialogue,action,他人评价,情节发展",
+        "exam_type": "阅读理解题"
+      },
+      {
+        "id": "K44",
+        "name": "写作:记叙文(道德故事)",
+        "type": "KnowledgePoint",
+        "module": "必修第三册",
+        "chapter": "Morals and Virtues",
+        "difficulty": 3,
+        "importance": 3,
+        "description": "掌握记叙文写作要素(时间、地点、人物、事件起因经过结果)及叙事技巧(细节描写、对话、情感表达)，能撰写道德主题记叙文。",
+        "keywords": "记叙文,六要素,时间地点人物,起因经过结果,细节描写,对话,情感",
+        "exam_type": "写作题"
+      },
+      {
+        "id": "K45",
+        "name": "主题词汇:多元文化与融合",
+        "type": "KnowledgePoint",
+        "module": "必修第三册",
+        "chapter": "Diverse Cultures",
+        "difficulty": 2,
+        "importance": 3,
+        "description": "掌握多元文化相关词汇(diverse, multicultural, fusion, immigration, ethnic, harmony, tolerance, identity等)及搭配用法。",
+        "keywords": "diverse, multicultural, fusion, immigration, ethnic, harmony, tolerance, identity",
+        "exam_type": "词汇选择题,完形填空"
+      },
+      {
+        "id": "K46",
+        "name": "语法:主谓一致",
+        "type": "KnowledgePoint",
+        "module": "必修第三册",
+        "chapter": "Diverse Cultures",
+        "difficulty": 4,
+        "importance": 4,
+        "description": "掌握主谓一致的三原则:语法一致(单数主语+单数谓语)、意义一致(集合名词根据意义)、就近原则(either...or.../neither...nor.../not only...but also...)。",
+        "keywords": "主谓一致,语法一致,意义一致,就近原则,集合名词,either or,neither nor",
+        "exam_type": "语法选择题,改错题"
+      },
+      {
+        "id": "K47",
+        "name": "阅读策略:比较文化差异",
+        "type": "KnowledgePoint",
+        "module": "必修第三册",
+        "chapter": "Diverse Cultures",
+        "difficulty": 3,
+        "importance": 3,
+        "description": "掌握比较文化差异的阅读方法:提取不同文化的特征信息、建立比较框架(异同点)、分析差异成因、形成文化理解。",
+        "keywords": "文化差异,比较框架,异同点,差异成因,文化理解",
+        "exam_type": "阅读理解题,综合题"
+      },
+      {
+        "id": "K48",
+        "name": "写作:对比类作文",
+        "type": "KnowledgePoint",
+        "module": "必修第三册",
+        "chapter": "Diverse Cultures",
+        "difficulty": 4,
+        "importance": 4,
+        "description": "掌握对比类作文的结构(引出比较对象-分析相同点-分析不同点-得出结论)及对比连接词(similarly, however, in contrast, on the other hand)。",
+        "keywords": "对比作文,比较对象,相同点,不同点,similarly,however,in contrast,on the other hand",
+        "exam_type": "写作题"
+      },
+      {
+        "id": "K49",
+        "name": "主题词汇:太空探索与科技",
+        "type": "KnowledgePoint",
+        "module": "必修第三册",
+        "chapter": "Space Exploration",
+        "difficulty": 2,
+        "importance": 3,
+        "description": "掌握太空探索相关词汇(astronaut, orbit, spacecraft, satellite, galaxy, universe, gravity, launch等)及搭配用法。",
+        "keywords": "astronaut, orbit, spacecraft, satellite, galaxy, universe, gravity, launch",
+        "exam_type": "词汇选择题,完形填空"
+      },
+      {
+        "id": "K50",
+        "name": "语法:不定式作主语和定语",
+        "type": "KnowledgePoint",
+        "module": "必修第三册",
+        "chapter": "Space Exploration",
+        "difficulty": 4,
+        "importance": 4,
+        "description": "掌握不定式(to do)作主语(It is + adj + to do.../To do... is...)和作定语(修饰名词，放名词后，如the first man to land on...)的用法。",
+        "keywords": "不定式,作主语,作定语,It is adj to do,the first to do",
+        "exam_type": "语法选择题,改错题"
+      },
+      {
+        "id": "K51",
+        "name": "阅读策略:理解科普文章",
+        "type": "KnowledgePoint",
+        "module": "必修第三册",
+        "chapter": "Space Exploration",
+        "difficulty": 3,
+        "importance": 3,
+        "description": "掌握科普文章阅读方法:理解科学概念、把握实验或观测过程、分析数据结论、评估科普文章的可靠性与通俗性。",
+        "keywords": "科普文章,科学概念,实验过程,数据结论,可靠性,通俗性",
+        "exam_type": "阅读理解题"
+      },
+      {
+        "id": "K52",
+        "name": "写作:科普说明文",
+        "type": "KnowledgePoint",
+        "module": "必修第三册",
+        "chapter": "Space Exploration",
+        "difficulty": 4,
+        "importance": 3,
+        "description": "掌握科普说明文写作特点(准确用语、逻辑清晰、图文结合、通俗表达)，能撰写太空探索主题的科普说明文。",
+        "keywords": "科普说明文,准确用语,逻辑清晰,图文结合,通俗表达",
+        "exam_type": "写作题"
+      },
+      {
+        "id": "K53",
+        "name": "主题词汇:杰出人物与成就",
+        "type": "KnowledgePoint",
+        "module": "选择性必修1-2",
+        "chapter": "People of Achievement",
+        "difficulty": 2,
+        "importance": 3,
+        "description": "掌握杰出人物相关词汇(achievement, contribution, breakthrough, pioneer, dedicate, overcome, inspire, legacy等)及搭配用法。",
+        "keywords": "achievement, contribution, breakthrough, pioneer, dedicate, overcome, inspire, legacy",
+        "exam_type": "词汇选择题,完形填空"
+      },
+      {
+        "id": "K54",
+        "name": "语法:非谓语动词(动名词与分词)",
+        "type": "KnowledgePoint",
+        "module": "选择性必修1-2",
+        "chapter": "People of Achievement",
+        "difficulty": 5,
+        "importance": 5,
+        "description": "掌握动名词(v-ing作主语/宾语)与分词(v-ing现在分词表主动进行/ed过去分词表被动完成，作定语/状语/宾补)的形式与用法区别。",
+        "keywords": "非谓语动词,动名词,现在分词,过去分词,作主语,作宾语,作定语,作状语,主动被动",
+        "exam_type": "语法选择题,完形填空,改错题"
+      },
+      {
+        "id": "K55",
+        "name": "阅读策略:人物传记阅读",
+        "type": "KnowledgePoint",
+        "module": "选择性必修1-2",
+        "chapter": "People of Achievement",
+        "difficulty": 3,
+        "importance": 3,
+        "description": "掌握人物传记阅读方法:梳理生平时间线、分析成就贡献、理解人物精神品质、评价历史地位与影响。",
+        "keywords": "人物传记,生平时间线,成就贡献,精神品质,历史地位",
+        "exam_type": "阅读理解题,综合题"
+      },
+      {
+        "id": "K56",
+        "name": "写作:人物介绍文",
+        "type": "KnowledgePoint",
+        "module": "选择性必修1-2",
+        "chapter": "People of Achievement",
+        "difficulty": 3,
+        "importance": 3,
+        "description": "掌握人物介绍文的结构(基本信息-主要成就-品质评价)与语言特点，能撰写杰出人物介绍文。",
+        "keywords": "人物介绍,基本信息,主要成就,品质评价",
+        "exam_type": "写作题"
+      },
+      {
+        "id": "K57",
+        "name": "主题词汇:未来科技与生活",
+        "type": "KnowledgePoint",
+        "module": "选择性必修1-2",
+        "chapter": "Looking into the Future",
+        "difficulty": 2,
+        "importance": 3,
+        "description": "掌握未来科技相关词汇(artificial intelligence, automation, virtual reality, sustainable, innovation, breakthrough等)及搭配用法。",
+        "keywords": "artificial intelligence, automation, virtual reality, sustainable, innovation, breakthrough",
+        "exam_type": "词汇选择题,完形填空"
+      },
+      {
+        "id": "K58",
+        "name": "语法:将来完成时与进行时",
+        "type": "KnowledgePoint",
+        "module": "选择性必修1-2",
+        "chapter": "Looking into the Future",
+        "difficulty": 4,
+        "importance": 4,
+        "description": "掌握将来完成时(will have done:到将来某时已完成)和将来进行时(will be doing:将来某时正在进行)的构成与用法。",
+        "keywords": "将来完成时,将来进行时,will have done,will be doing,将来某时",
+        "exam_type": "语法选择题,改错题"
+      },
+      {
+        "id": "K59",
+        "name": "阅读策略:预测与推断",
+        "type": "KnowledgePoint",
+        "module": "选择性必修1-2",
+        "chapter": "Looking into the Future",
+        "difficulty": 3,
+        "importance": 3,
+        "description": "掌握预测(根据标题/图表/首段预测内容)与推断(根据文本信息推断未来趋势和可能发展)的阅读策略。",
+        "keywords": "预测,推断,标题图表,首段,未来趋势,可能发展",
+        "exam_type": "阅读理解题"
+      },
+      {
+        "id": "K60",
+        "name": "写作:预测类作文",
+        "type": "KnowledgePoint",
+        "module": "选择性必修1-2",
+        "chapter": "Looking into the Future",
+        "difficulty": 3,
+        "importance": 3,
+        "description": "掌握预测类作文的结构(现状描述-预测趋势-分析影响-个人看法)与预测表达语言(will/may/might/are likely to...)。",
+        "keywords": "预测作文,现状描述,预测趋势,分析影响,will,may,might,are likely to",
+        "exam_type": "写作题"
+      },
+      {
+        "id": "K61",
+        "name": "主题词汇:自然公园与景观",
+        "type": "KnowledgePoint",
+        "module": "选择性必修1-2",
+        "chapter": "Fascinating Parks",
+        "difficulty": 2,
+        "importance": 3,
+        "description": "掌握自然景观相关词汇(scenery, landscape, wilderness, spectacular, breathtaking, trail, canyon, glacier等)及搭配用法。",
+        "keywords": "scenery, landscape, wilderness, spectacular, breathtaking, trail, canyon, glacier",
+        "exam_type": "词汇选择题,完形填空"
+      },
+      {
+        "id": "K62",
+        "name": "语法:倒装句",
+        "type": "KnowledgePoint",
+        "module": "选择性必修1-2",
+        "chapter": "Fascinating Parks",
+        "difficulty": 5,
+        "importance": 4,
+        "description": "掌握完全倒装(地点/方向副词放句首:Here comes the bus)和部分倒装(否定词/only/so...that等放句首:Never have I seen...)的用法。",
+        "keywords": "倒装句,完全倒装,部分倒装,否定词,only,so that,Here comes",
+        "exam_type": "语法选择题,改错题,翻译题"
+      },
+      {
+        "id": "K63",
+        "name": "阅读策略:欣赏描写性语言",
+        "type": "KnowledgePoint",
+        "module": "选择性必修1-2",
+        "chapter": "Fascinating Parks",
+        "difficulty": 3,
+        "importance": 3,
+        "description": "掌握欣赏描写性语言的方法:分析感官描写(视觉/听觉/触觉)、修辞手法运用、词语搭配与画面感营造。",
+        "keywords": "描写性语言,感官描写,视觉听觉触觉,修辞手法,画面感",
+        "exam_type": "阅读理解题,鉴赏题"
+      },
+      {
+        "id": "K64",
+        "name": "写作:描写文",
+        "type": "KnowledgePoint",
+        "module": "选择性必修1-2",
+        "chapter": "Fascinating Parks",
+        "difficulty": 4,
+        "importance": 3,
+        "description": "掌握描写文写作技巧(空间顺序、多感官描写、生动词汇与修辞)，能撰写自然景观的描写文。",
+        "keywords": "描写文,空间顺序,多感官描写,生动词汇,修辞",
+        "exam_type": "写作题"
+      },
+      {
+        "id": "K65",
+        "name": "主题词汇:标志性景观与旅游",
+        "type": "KnowledgePoint",
+        "module": "选择性必修1-2",
+        "chapter": "Iconic Attractions",
+        "difficulty": 2,
+        "importance": 3,
+        "description": "掌握旅游景观相关词汇(iconic, landmark, spectacular, destination, heritage, magnificent, unique等)及搭配用法。",
+        "keywords": "iconic, landmark, spectacular, destination, heritage, magnificent, unique",
+        "exam_type": "词汇选择题,完形填空"
+      },
+      {
+        "id": "K66",
+        "name": "语法:同位语从句",
+        "type": "KnowledgePoint",
+        "module": "选择性必修1-2",
+        "chapter": "Iconic Attractions",
+        "difficulty": 4,
+        "importance": 4,
+        "description": "掌握同位语从句(对名词进行解释说明:the fact that.../the idea that.../the news that...)的引导词用法及与定语从句的区别。",
+        "keywords": "同位语从句,the fact that,the idea that,解释说明,定语从句区别",
+        "exam_type": "语法选择题,改错题"
+      },
+      {
+        "id": "K67",
+        "name": "阅读策略:综合理解",
+        "type": "KnowledgePoint",
+        "module": "选择性必修1-2",
+        "chapter": "Iconic Attractions",
+        "difficulty": 3,
+        "importance": 4,
+        "description": "综合运用略读、扫读、推断、概括等策略进行文本深层理解，能整合多段落信息形成整体理解。",
+        "keywords": "综合理解,略读,扫读,推断,概括,深层理解,信息整合",
+        "exam_type": "阅读理解题,综合题"
+      },
+      {
+        "id": "K68",
+        "name": "写作:旅游宣传文",
+        "type": "KnowledgePoint",
+        "module": "选择性必修1-2",
+        "chapter": "Iconic Attractions",
+        "difficulty": 3,
+        "importance": 3,
+        "description": "掌握旅游宣传文的结构(景点亮点-特色体验-游览建议-号召参观)与宣传语言特色(生动形容词、祈使号召句)，能撰写旅游宣传文。",
+        "keywords": "旅游宣传,景点亮点,特色体验,游览建议,号召参观,宣传语言",
+        "exam_type": "写作题"
+      },
+      {
+        "id": "K69",
+        "name": "主题词汇:艺术与审美",
+        "type": "KnowledgePoint",
+        "module": "选择性必修3-4",
+        "chapter": "Art",
+        "difficulty": 2,
+        "importance": 3,
+        "description": "掌握艺术相关词汇(aesthetic, masterpiece, sculpture, exhibition, gallery, abstract, contemporary, portrait等)及搭配用法。",
+        "keywords": "aesthetic, masterpiece, sculpture, exhibition, gallery, abstract, contemporary, portrait",
+        "exam_type": "词汇选择题,完形填空"
+      },
+      {
+        "id": "K70",
+        "name": "语法:强调句型",
+        "type": "KnowledgePoint",
+        "module": "选择性必修3-4",
+        "chapter": "Art",
+        "difficulty": 4,
+        "importance": 4,
+        "description": "掌握强调句型It is/was + 被强调部分 + that/who + 句子其余部分的结构，能区分强调句与主语从句并运用强调句进行表达。",
+        "keywords": "强调句型,It is that,被强调部分,主语从句区分",
+        "exam_type": "语法选择题,改错题,翻译题"
+      },
+      {
+        "id": "K71",
+        "name": "阅读策略:艺术评论阅读",
+        "type": "KnowledgePoint",
+        "module": "选择性必修3-4",
+        "chapter": "Art",
+        "difficulty": 3,
+        "importance": 3,
+        "description": "掌握艺术评论的阅读方法:理解评论者的审美判断、分析评价标准与论据、识别评论中的主观与客观成分。",
+        "keywords": "艺术评论,审美判断,评价标准,论据,主观客观",
+        "exam_type": "阅读理解题"
+      },
+      {
+        "id": "K72",
+        "name": "写作:艺术评论",
+        "type": "KnowledgePoint",
+        "module": "选择性必修3-4",
+        "chapter": "Art",
+        "difficulty": 4,
+        "importance": 4,
+        "description": "掌握艺术评论写作要素(作品概述-形式分析-内容解读-评价结论)与评论语言特征(专业术语、评价性词汇)，能撰写简短艺术评论。",
+        "keywords": "艺术评论,作品概述,形式分析,内容解读,评价结论,专业术语",
+        "exam_type": "写作题"
+      },
+      {
+        "id": "K73",
+        "name": "主题词汇:逆境与勇气",
+        "type": "KnowledgePoint",
+        "module": "选择性必修3-4",
+        "chapter": "Adversity and Courage",
+        "difficulty": 2,
+        "importance": 3,
+        "description": "掌握逆境勇气相关词汇(adversity, hardship, persevere, resilient, determination, overcome, endurance, sacrifice等)及搭配用法。",
+        "keywords": "adversity, hardship, persevere, resilient, determination, overcome, endurance, sacrifice",
+        "exam_type": "词汇选择题,完形填空"
+      },
+      {
+        "id": "K74",
+        "name": "语法:虚拟语气扩展(wish与as if)",
+        "type": "KnowledgePoint",
+        "module": "选择性必修3-4",
+        "chapter": "Adversity and Courage",
+        "difficulty": 4,
+        "importance": 4,
+        "description": "掌握wish后虚拟语气(wish+过去时表示现在愿望/wish+had done表示过去愿望/wish+would do表示将来愿望)及as if/as though引导虚拟的用法。",
+        "keywords": "虚拟语气扩展,wish,as if,as though,现在愿望,过去愿望,将来愿望",
+        "exam_type": "语法选择题,改错题"
+      },
+      {
+        "id": "K75",
+        "name": "阅读策略:叙事结构分析",
+        "type": "KnowledgePoint",
+        "module": "选择性必修3-4",
+        "chapter": "Adversity and Courage",
+        "difficulty": 3,
+        "importance": 3,
+        "description": "掌握叙事结构分析的方法:识别叙事线索(主线与副线)、分析情节发展阶段(开端-发展-高潮-结局)、理解叙事节奏与悬念设置。",
+        "keywords": "叙事结构,叙事线索,主线副线,开端发展高潮结局,叙事节奏,悬念",
+        "exam_type": "阅读理解题,综合题"
+      },
+      {
+        "id": "K76",
+        "name": "写作:读后感",
+        "type": "KnowledgePoint",
+        "module": "选择性必修3-4",
+        "chapter": "Adversity and Courage",
+        "difficulty": 3,
+        "importance": 3,
+        "description": "掌握读后感的结构(引述原文-分析评论-联系实际-总结感悟)与写作要求(观点明确、有感而发、叙议结合)，能撰写英文读后感。",
+        "keywords": "读后感,引述原文,分析评论,联系实际,总结感悟,叙议结合",
+        "exam_type": "写作题"
+      },
+      {
+        "id": "K77",
+        "name": "主题词汇:科学探索与发现",
+        "type": "KnowledgePoint",
+        "module": "选择性必修3-4",
+        "chapter": "Scientific Exploration",
+        "difficulty": 2,
+        "importance": 3,
+        "description": "掌握科学探索相关词汇(hypothesis, experiment, observation, evidence, conclusion, theory, phenomenon, discovery等)及搭配用法。",
+        "keywords": "hypothesis, experiment, observation, evidence, conclusion, theory, phenomenon, discovery",
+        "exam_type": "词汇选择题,完形填空"
+      },
+      {
+        "id": "K78",
+        "name": "语法:名词性从句综合",
+        "type": "KnowledgePoint",
+        "module": "选择性必修3-4",
+        "chapter": "Scientific Exploration",
+        "difficulty": 5,
+        "importance": 5,
+        "description": "综合掌握主语从句(It is + adj/noun + that...)、宾语从句、表语从句和同位语从句的引导词选择、语序和时态一致性，能进行名词性从句的辨析与转换。",
+        "keywords": "名词性从句,主语从句,宾语从句,表语从句,同位语从句,引导词,时态一致",
+        "exam_type": "语法选择题,完形填空,改错题"
+      },
+      {
+        "id": "K79",
+        "name": "阅读策略:科普文逻辑分析",
+        "type": "KnowledgePoint",
+        "module": "选择性必修3-4",
+        "chapter": "Scientific Exploration",
+        "difficulty": 4,
+        "importance": 4,
+        "description": "掌握科普文逻辑分析方法:识别假设-验证-结论的逻辑链条、分析因果推理过程、评估论据与结论的匹配度。",
+        "keywords": "科普文逻辑,假设验证结论,逻辑链条,因果推理,论据结论匹配",
+        "exam_type": "阅读理解题,综合题"
+      },
+      {
+        "id": "K80",
+        "name": "写作:实验报告",
+        "type": "KnowledgePoint",
+        "module": "选择性必修3-4",
+        "chapter": "Scientific Exploration",
+        "difficulty": 4,
+        "importance": 4,
+        "description": "掌握实验报告的结构(目的Objective-方法Method-结果Result-讨论Discussion-结论Conclusion)与学术语言特征，能撰写英文实验报告。",
+        "keywords": "实验报告,Objective,Method,Result,Discussion,Conclusion,学术语言",
+        "exam_type": "写作题"
+      },
+      {
+        "id": "K81",
+        "name": "主题词汇:幽默与智慧",
+        "type": "KnowledgePoint",
+        "module": "选择性必修3-4",
+        "chapter": "Humour",
+        "difficulty": 2,
+        "importance": 3,
+        "description": "掌握幽默相关词汇(humour, witty, irony, satire, punchline, anecdote, amusing, hilarious等)及搭配用法。",
+        "keywords": "humour, witty, irony, satire, punchline, anecdote, amusing, hilarious",
+        "exam_type": "词汇选择题,完形填空"
+      },
+      {
+        "id": "K82",
+        "name": "修辞手法在英语中的应用",
+        "type": "KnowledgePoint",
+        "module": "选择性必修3-4",
+        "chapter": "Humour",
+        "difficulty": 4,
+        "importance": 4,
+        "description": "掌握修辞手法(双关pun、反讽irony、夸张hyperbole、对比contrast、排比parallelism)在幽默表达中的运用技巧与效果。",
+        "keywords": "修辞应用,双关,反讽,夸张,对比,排比,幽默表达",
+        "exam_type": "选择题,阅读理解题,写作题"
+      },
+      {
+        "id": "K83",
+        "name": "阅读策略:识别幽默与讽刺",
+        "type": "KnowledgePoint",
+        "module": "选择性必修3-4",
+        "chapter": "Humour",
+        "difficulty": 3,
+        "importance": 3,
+        "description": "掌握识别幽默与讽刺的方法:分析语境反差、识别语气转折(but/however)、理解言外之意与弦外之音、辨析讽刺与赞美的边界。",
+        "keywords": "幽默讽刺,语境反差,语气转折,言外之意,讽刺赞美辨析",
+        "exam_type": "阅读理解题,综合题"
+      },
+      {
+        "id": "K84",
+        "name": "写作:幽默短文",
+        "type": "KnowledgePoint",
+        "module": "选择性必修3-4",
+        "chapter": "Humour",
+        "difficulty": 3,
+        "importance": 3,
+        "description": "掌握幽默短文写作技巧(设置反差、运用双关、制造意外结局、控制节奏)，能撰写简短的英文幽默短文。",
+        "keywords": "幽默短文,设置反差,运用双关,意外结局,控制节奏",
+        "exam_type": "写作题"
+      }
+    ],
+    "edges": [
+      {
+        "source": "M1",
+        "target": "C1",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "模块包含章节"
+      },
+      {
+        "source": "M1",
+        "target": "C2",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "模块包含章节"
+      },
+      {
+        "source": "M1",
+        "target": "C3",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "模块包含章节"
+      },
+      {
+        "source": "M1",
+        "target": "C4",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "模块包含章节"
+      },
+      {
+        "source": "M1",
+        "target": "C5",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "模块包含章节"
+      },
+      {
+        "source": "M2",
+        "target": "C6",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "模块包含章节"
+      },
+      {
+        "source": "M2",
+        "target": "C7",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "模块包含章节"
+      },
+      {
+        "source": "M2",
+        "target": "C8",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "模块包含章节"
+      },
+      {
+        "source": "M2",
+        "target": "C9",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "模块包含章节"
+      },
+      {
+        "source": "M3",
+        "target": "C10",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "模块包含章节"
+      },
+      {
+        "source": "M3",
+        "target": "C11",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "模块包含章节"
+      },
+      {
+        "source": "M3",
+        "target": "C12",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "模块包含章节"
+      },
+      {
+        "source": "M3",
+        "target": "C13",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "模块包含章节"
+      },
+      {
+        "source": "M4",
+        "target": "C14",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "模块包含章节"
+      },
+      {
+        "source": "M4",
+        "target": "C15",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "模块包含章节"
+      },
+      {
+        "source": "M4",
+        "target": "C16",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "模块包含章节"
+      },
+      {
+        "source": "M4",
+        "target": "C17",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "模块包含章节"
+      },
+      {
+        "source": "M5",
+        "target": "C18",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "模块包含章节"
+      },
+      {
+        "source": "M5",
+        "target": "C19",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "模块包含章节"
+      },
+      {
+        "source": "M5",
+        "target": "C20",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "模块包含章节"
+      },
+      {
+        "source": "M5",
+        "target": "C21",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "模块包含章节"
+      },
+      {
+        "source": "C1",
+        "target": "K1",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C1",
+        "target": "K2",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C1",
+        "target": "K3",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C1",
+        "target": "K4",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C2",
+        "target": "K5",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C2",
+        "target": "K6",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C2",
+        "target": "K7",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C2",
+        "target": "K8",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C3",
+        "target": "K9",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C3",
+        "target": "K10",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C3",
+        "target": "K11",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C3",
+        "target": "K12",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C4",
+        "target": "K13",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C4",
+        "target": "K14",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C4",
+        "target": "K15",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C4",
+        "target": "K16",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C5",
+        "target": "K17",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C5",
+        "target": "K18",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C5",
+        "target": "K19",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C5",
+        "target": "K20",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C6",
+        "target": "K21",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C6",
+        "target": "K22",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C6",
+        "target": "K23",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C6",
+        "target": "K24",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C7",
+        "target": "K25",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C7",
+        "target": "K26",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C7",
+        "target": "K27",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C7",
+        "target": "K28",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C8",
+        "target": "K29",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C8",
+        "target": "K30",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C8",
+        "target": "K31",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C8",
+        "target": "K32",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C9",
+        "target": "K33",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C9",
+        "target": "K34",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C9",
+        "target": "K35",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C9",
+        "target": "K36",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C10",
+        "target": "K37",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C10",
+        "target": "K38",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C10",
+        "target": "K39",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C10",
+        "target": "K40",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C11",
+        "target": "K41",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C11",
+        "target": "K42",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C11",
+        "target": "K43",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C11",
+        "target": "K44",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C12",
+        "target": "K45",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C12",
+        "target": "K46",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C12",
+        "target": "K47",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C12",
+        "target": "K48",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C13",
+        "target": "K49",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C13",
+        "target": "K50",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C13",
+        "target": "K51",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C13",
+        "target": "K52",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C14",
+        "target": "K53",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C14",
+        "target": "K54",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C14",
+        "target": "K55",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C14",
+        "target": "K56",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C15",
+        "target": "K57",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C15",
+        "target": "K58",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C15",
+        "target": "K59",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C15",
+        "target": "K60",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C16",
+        "target": "K61",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C16",
+        "target": "K62",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C16",
+        "target": "K63",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C16",
+        "target": "K64",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C17",
+        "target": "K65",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C17",
+        "target": "K66",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C17",
+        "target": "K67",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C17",
+        "target": "K68",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C18",
+        "target": "K69",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C18",
+        "target": "K70",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C18",
+        "target": "K71",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C18",
+        "target": "K72",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C19",
+        "target": "K73",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C19",
+        "target": "K74",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C19",
+        "target": "K75",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C19",
+        "target": "K76",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C20",
+        "target": "K77",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C20",
+        "target": "K78",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C20",
+        "target": "K79",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C20",
+        "target": "K80",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C21",
+        "target": "K81",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C21",
+        "target": "K82",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C21",
+        "target": "K83",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "C21",
+        "target": "K84",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节包含知识点"
+      },
+      {
+        "source": "K2",
+        "target": "K3",
+        "relation": "PREREQUISITE",
+        "weight": 0.5,
+        "description": "时态基础有助于理解阅读策略"
+      },
+      {
+        "source": "K3",
+        "target": "K4",
+        "relation": "PREREQUISITE",
+        "weight": 0.4,
+        "description": "阅读策略有助于写作中的素材组织"
+      },
+      {
+        "source": "K3",
+        "target": "K7",
+        "relation": "PREREQUISITE",
+        "weight": 0.6,
+        "description": "略读与扫读都是基本阅读策略"
+      },
+      {
+        "source": "K2",
+        "target": "K6",
+        "relation": "PREREQUISITE",
+        "weight": 0.5,
+        "description": "现在时是学习将来时态的基础"
+      },
+      {
+        "source": "K5",
+        "target": "K8",
+        "relation": "PREREQUISITE",
+        "weight": 0.4,
+        "description": "旅游词汇是旅行写作的基础"
+      },
+      {
+        "source": "K6",
+        "target": "K8",
+        "relation": "PREREQUISITE",
+        "weight": 0.5,
+        "description": "将来时态是旅行计划写作的语法基础"
+      },
+      {
+        "source": "K11",
+        "target": "K12",
+        "relation": "PREREQUISITE",
+        "weight": 0.5,
+        "description": "猜词策略有助于说明文阅读与写作"
+      },
+      {
+        "source": "K10",
+        "target": "K12",
+        "relation": "PREREQUISITE",
+        "weight": 0.4,
+        "description": "情态动词有助于说明文中的建议表达"
+      },
+      {
+        "source": "K14",
+        "target": "K16",
+        "relation": "PREREQUISITE",
+        "weight": 0.5,
+        "description": "过去时态是新闻报道写作的基础"
+      },
+      {
+        "source": "K15",
+        "target": "K16",
+        "relation": "PREREQUISITE",
+        "weight": 0.4,
+        "description": "篇章结构识别有助于新闻报道组织"
+      },
+      {
+        "source": "K18",
+        "target": "K20",
+        "relation": "PREREQUISITE",
+        "weight": 0.5,
+        "description": "被动语态常用于说明文表达"
+      },
+      {
+        "source": "K19",
+        "target": "K20",
+        "relation": "PREREQUISITE",
+        "weight": 0.4,
+        "description": "推断策略有助于说明文写作的素材选择"
+      },
+      {
+        "source": "K2",
+        "target": "K18",
+        "relation": "PREREQUISITE",
+        "weight": 0.5,
+        "description": "一般现在时是学习被动语态的基础"
+      },
+      {
+        "source": "K14",
+        "target": "K18",
+        "relation": "PREREQUISITE",
+        "weight": 0.5,
+        "description": "一般过去时是学习过去被动语态的基础"
+      },
+      {
+        "source": "K22",
+        "target": "K24",
+        "relation": "PREREQUISITE",
+        "weight": 0.5,
+        "description": "定语从句有助于议论文的句式丰富"
+      },
+      {
+        "source": "K23",
+        "target": "K24",
+        "relation": "PREREQUISITE",
+        "weight": 0.5,
+        "description": "区分事实观点有助于议论文论证"
+      },
+      {
+        "source": "K26",
+        "target": "K28",
+        "relation": "PREREQUISITE",
+        "weight": 0.5,
+        "description": "现在完成时被动语态可用于图表描述"
+      },
+      {
+        "source": "K27",
+        "target": "K28",
+        "relation": "PREREQUISITE",
+        "weight": 0.5,
+        "description": "因果识别有助于图表作文的因果分析"
+      },
+      {
+        "source": "K22",
+        "target": "K26",
+        "relation": "PREREQUISITE",
+        "weight": 0.6,
+        "description": "定语从句基础有助于学习被动语态"
+      },
+      {
+        "source": "K30",
+        "target": "K32",
+        "relation": "PREREQUISITE",
+        "weight": 0.4,
+        "description": "宾语从句可用于倡议书中的建议表达"
+      },
+      {
+        "source": "K31",
+        "target": "K32",
+        "relation": "PREREQUISITE",
+        "weight": 0.4,
+        "description": "论证方法识别有助于倡议书的论证"
+      },
+      {
+        "source": "K34",
+        "target": "K36",
+        "relation": "PREREQUISITE",
+        "weight": 0.4,
+        "description": "状语从句有助于应用文中的逻辑表达"
+      },
+      {
+        "source": "K35",
+        "target": "K36",
+        "relation": "PREREQUISITE",
+        "weight": 0.4,
+        "description": "修辞理解有助于应用文写作的表达"
+      },
+      {
+        "source": "K22",
+        "target": "K38",
+        "relation": "PREREQUISITE",
+        "weight": 0.7,
+        "description": "关系代词是学习关系副词的基础"
+      },
+      {
+        "source": "K37",
+        "target": "K40",
+        "relation": "PREREQUISITE",
+        "weight": 0.4,
+        "description": "节日词汇是节日介绍文的基础"
+      },
+      {
+        "source": "K39",
+        "target": "K40",
+        "relation": "PREREQUISITE",
+        "weight": 0.4,
+        "description": "跨文化理解有助于节日介绍文写作"
+      },
+      {
+        "source": "K42",
+        "target": "K44",
+        "relation": "PREREQUISITE",
+        "weight": 0.5,
+        "description": "虚拟语气可用于记叙文中的假设表达"
+      },
+      {
+        "source": "K43",
+        "target": "K44",
+        "relation": "PREREQUISITE",
+        "weight": 0.5,
+        "description": "人物性格分析有助于记叙文人物塑造"
+      },
+      {
+        "source": "K46",
+        "target": "K48",
+        "relation": "PREREQUISITE",
+        "weight": 0.4,
+        "description": "主谓一致是对比作文的语法基础"
+      },
+      {
+        "source": "K47",
+        "target": "K48",
+        "relation": "PREREQUISITE",
+        "weight": 0.5,
+        "description": "文化差异比较策略有助于对比作文"
+      },
+      {
+        "source": "K50",
+        "target": "K52",
+        "relation": "PREREQUISITE",
+        "weight": 0.4,
+        "description": "不定式语法有助于科普说明文写作"
+      },
+      {
+        "source": "K51",
+        "target": "K52",
+        "relation": "PREREQUISITE",
+        "weight": 0.5,
+        "description": "科普文章理解有助于科普说明文写作"
+      },
+      {
+        "source": "K42",
+        "target": "K74",
+        "relation": "PREREQUISITE",
+        "weight": 0.7,
+        "description": "if条件句虚拟语气是学习wish/as if虚拟的基础"
+      },
+      {
+        "source": "K54",
+        "target": "K56",
+        "relation": "PREREQUISITE",
+        "weight": 0.5,
+        "description": "非谓语动词有助于人物介绍文的句式表达"
+      },
+      {
+        "source": "K55",
+        "target": "K56",
+        "relation": "PREREQUISITE",
+        "weight": 0.5,
+        "description": "人物传记阅读策略有助于人物介绍文写作"
+      },
+      {
+        "source": "K58",
+        "target": "K60",
+        "relation": "PREREQUISITE",
+        "weight": 0.5,
+        "description": "将来时态是预测作文的语法基础"
+      },
+      {
+        "source": "K59",
+        "target": "K60",
+        "relation": "PREREQUISITE",
+        "weight": 0.5,
+        "description": "预测推断策略有助于预测作文写作"
+      },
+      {
+        "source": "K6",
+        "target": "K58",
+        "relation": "PREREQUISITE",
+        "weight": 0.5,
+        "description": "一般将来时是学习将来完成/进行时的基础"
+      },
+      {
+        "source": "K62",
+        "target": "K64",
+        "relation": "PREREQUISITE",
+        "weight": 0.4,
+        "description": "倒装句有助于描写文的句式变化"
+      },
+      {
+        "source": "K63",
+        "target": "K64",
+        "relation": "PREREQUISITE",
+        "weight": 0.6,
+        "description": "描写性语言欣赏是描写文写作的基础"
+      },
+      {
+        "source": "K66",
+        "target": "K68",
+        "relation": "PREREQUISITE",
+        "weight": 0.4,
+        "description": "同位语从句有助于宣传文的表达"
+      },
+      {
+        "source": "K67",
+        "target": "K68",
+        "relation": "PREREQUISITE",
+        "weight": 0.5,
+        "description": "综合理解策略有助于宣传文写作"
+      },
+      {
+        "source": "K30",
+        "target": "K66",
+        "relation": "PREREQUISITE",
+        "weight": 0.5,
+        "description": "宾语从句是学习同位语从句的基础"
+      },
+      {
+        "source": "K70",
+        "target": "K72",
+        "relation": "PREREQUISITE",
+        "weight": 0.5,
+        "description": "强调句型有助于艺术评论的表达"
+      },
+      {
+        "source": "K71",
+        "target": "K72",
+        "relation": "PREREQUISITE",
+        "weight": 0.5,
+        "description": "艺术评论阅读有助于艺术评论写作"
+      },
+      {
+        "source": "K74",
+        "target": "K76",
+        "relation": "PREREQUISITE",
+        "weight": 0.4,
+        "description": "虚拟语气扩展有助于读后感中的假设表达"
+      },
+      {
+        "source": "K75",
+        "target": "K76",
+        "relation": "PREREQUISITE",
+        "weight": 0.6,
+        "description": "叙事结构分析有助于读后感中的评论"
+      },
+      {
+        "source": "K78",
+        "target": "K80",
+        "relation": "PREREQUISITE",
+        "weight": 0.5,
+        "description": "名词性从句综合有助于实验报告的表达"
+      },
+      {
+        "source": "K79",
+        "target": "K80",
+        "relation": "PREREQUISITE",
+        "weight": 0.5,
+        "description": "科普文逻辑分析有助于实验报告写作"
+      },
+      {
+        "source": "K30",
+        "target": "K78",
+        "relation": "PREREQUISITE",
+        "weight": 0.6,
+        "description": "宾语从句是名词性从句综合的基础"
+      },
+      {
+        "source": "K66",
+        "target": "K78",
+        "relation": "PREREQUISITE",
+        "weight": 0.6,
+        "description": "同位语从句是名词性从句综合的基础"
+      },
+      {
+        "source": "K82",
+        "target": "K84",
+        "relation": "PREREQUISITE",
+        "weight": 0.5,
+        "description": "修辞应用有助于幽默短文写作"
+      },
+      {
+        "source": "K83",
+        "target": "K84",
+        "relation": "PREREQUISITE",
+        "weight": 0.5,
+        "description": "幽默讽刺识别有助于幽默短文写作"
+      },
+      {
+        "source": "K35",
+        "target": "K82",
+        "relation": "PREREQUISITE",
+        "weight": 0.6,
+        "description": "修辞手法理解是修辞应用的基础"
+      },
+      {
+        "source": "K18",
+        "target": "K26",
+        "relation": "PREREQUISITE",
+        "weight": 0.5,
+        "description": "被动语态基础有助于学习现在完成时被动语态"
+      },
+      {
+        "source": "K14",
+        "target": "K75",
+        "relation": "PREREQUISITE",
+        "weight": 0.3,
+        "description": "过去时态知识有助于叙事结构中的时态分析"
+      },
+      {
+        "source": "K24",
+        "target": "K48",
+        "relation": "PREREQUISITE",
+        "weight": 0.4,
+        "description": "议论文写作是对比作文写作的基础"
+      },
+      {
+        "source": "K24",
+        "target": "K28",
+        "relation": "PREREQUISITE",
+        "weight": 0.3,
+        "description": "议论文论证方法有助于图表作文分析"
+      },
+      {
+        "source": "K2",
+        "target": "K14",
+        "relation": "RELATED_TO",
+        "weight": 0.5,
+        "description": "现在时与过去时都是基本时态"
+      },
+      {
+        "source": "K6",
+        "target": "K58",
+        "relation": "RELATED_TO",
+        "weight": 0.5,
+        "description": "将来时态与将来完成/进行时相关"
+      },
+      {
+        "source": "K3",
+        "target": "K7",
+        "relation": "RELATED_TO",
+        "weight": 0.6,
+        "description": "略读与扫读是互补的阅读策略"
+      },
+      {
+        "source": "K3",
+        "target": "K67",
+        "relation": "RELATED_TO",
+        "weight": 0.4,
+        "description": "略读是综合理解策略的组成"
+      },
+      {
+        "source": "K7",
+        "target": "K67",
+        "relation": "RELATED_TO",
+        "weight": 0.4,
+        "description": "扫读是综合理解策略的组成"
+      },
+      {
+        "source": "K11",
+        "target": "K19",
+        "relation": "RELATED_TO",
+        "weight": 0.4,
+        "description": "猜词与推断都是深层阅读策略"
+      },
+      {
+        "source": "K15",
+        "target": "K79",
+        "relation": "RELATED_TO",
+        "weight": 0.4,
+        "description": "篇章结构识别与科普文逻辑分析相关"
+      },
+      {
+        "source": "K18",
+        "target": "K26",
+        "relation": "RELATED_TO",
+        "weight": 0.6,
+        "description": "被动语态与现在完成时被动语态紧密关联"
+      },
+      {
+        "source": "K22",
+        "target": "K38",
+        "relation": "RELATED_TO",
+        "weight": 0.7,
+        "description": "关系代词与关系副词都是定语从句的引导词"
+      },
+      {
+        "source": "K22",
+        "target": "K66",
+        "relation": "RELATED_TO",
+        "weight": 0.5,
+        "description": "定语从句与同位语从句都涉及that引导词"
+      },
+      {
+        "source": "K30",
+        "target": "K78",
+        "relation": "RELATED_TO",
+        "weight": 0.6,
+        "description": "宾语从句与名词性从句综合紧密关联"
+      },
+      {
+        "source": "K34",
+        "target": "K42",
+        "relation": "RELATED_TO",
+        "weight": 0.4,
+        "description": "状语从句与虚拟语气if条件句在条件表达上相关"
+      },
+      {
+        "source": "K35",
+        "target": "K82",
+        "relation": "RELATED_TO",
+        "weight": 0.5,
+        "description": "修辞手法理解与修辞应用紧密关联"
+      },
+      {
+        "source": "K39",
+        "target": "K47",
+        "relation": "RELATED_TO",
+        "weight": 0.5,
+        "description": "跨文化理解与文化差异比较都是文化主题阅读策略"
+      },
+      {
+        "source": "K42",
+        "target": "K74",
+        "relation": "RELATED_TO",
+        "weight": 0.6,
+        "description": "if虚拟与wish/as if虚拟都是虚拟语气"
+      },
+      {
+        "source": "K44",
+        "target": "K76",
+        "relation": "RELATED_TO",
+        "weight": 0.4,
+        "description": "记叙文写作与读后感写作都涉及叙事"
+      },
+      {
+        "source": "K51",
+        "target": "K79",
+        "relation": "RELATED_TO",
+        "weight": 0.5,
+        "description": "科普文章理解与科普文逻辑分析紧密关联"
+      },
+      {
+        "source": "K52",
+        "target": "K80",
+        "relation": "RELATED_TO",
+        "weight": 0.4,
+        "description": "科普说明文与实验报告在科技写作上相关"
+      },
+      {
+        "source": "K55",
+        "target": "K43",
+        "relation": "RELATED_TO",
+        "weight": 0.4,
+        "description": "人物传记阅读与人物性格分析在人物分析上相关"
+      },
+      {
+        "source": "K63",
+        "target": "K35",
+        "relation": "RELATED_TO",
+        "weight": 0.4,
+        "description": "描写性语言欣赏与修辞手法理解都涉及语言鉴赏"
+      },
+      {
+        "source": "K12",
+        "target": "K20",
+        "relation": "RELATED_TO",
+        "weight": 0.5,
+        "description": "说明文写作在不同主题间相通"
+      },
+      {
+        "source": "K24",
+        "target": "K60",
+        "relation": "RELATED_TO",
+        "weight": 0.3,
+        "description": "议论文与预测作文在论证结构上相关"
+      },
+      {
+        "source": "K38",
+        "target": "K22",
+        "relation": "DERIVED_FROM",
+        "weight": 0.8,
+        "description": "关系副词定语从句由关系代词定语从句发展而来"
+      },
+      {
+        "source": "K74",
+        "target": "K42",
+        "relation": "DERIVED_FROM",
+        "weight": 0.7,
+        "description": "虚拟语气扩展由if条件句虚拟语气延伸而来"
+      },
+      {
+        "source": "K78",
+        "target": "K30",
+        "relation": "DERIVED_FROM",
+        "weight": 0.7,
+        "description": "名词性从句综合由宾语从句发展而来"
+      },
+      {
+        "source": "K26",
+        "target": "K18",
+        "relation": "DERIVED_FROM",
+        "weight": 0.6,
+        "description": "现在完成时被动语态由一般被动语态发展而来"
+      },
+      {
+        "source": "K58",
+        "target": "K6",
+        "relation": "DERIVED_FROM",
+        "weight": 0.6,
+        "description": "将来完成/进行时由一般将来时发展而来"
+      },
+      {
+        "source": "K22",
+        "target": "K24",
+        "relation": "APPLIED_IN",
+        "weight": 0.5,
+        "description": "定语从句应用于议论文写作丰富句式"
+      },
+      {
+        "source": "K18",
+        "target": "K16",
+        "relation": "APPLIED_IN",
+        "weight": 0.5,
+        "description": "被动语态应用于新闻报道写作"
+      },
+      {
+        "source": "K34",
+        "target": "K36",
+        "relation": "APPLIED_IN",
+        "weight": 0.4,
+        "description": "状语从句应用于应用文写作"
+      },
+      {
+        "source": "K54",
+        "target": "K56",
+        "relation": "APPLIED_IN",
+        "weight": 0.5,
+        "description": "非谓语动词应用于人物介绍文写作"
+      },
+      {
+        "source": "K82",
+        "target": "K84",
+        "relation": "APPLIED_IN",
+        "weight": 0.6,
+        "description": "修辞手法应用于幽默短文写作"
+      },
+      {
+        "source": "K78",
+        "target": "K80",
+        "relation": "APPLIED_IN",
+        "weight": 0.5,
+        "description": "名词性从句应用于实验报告写作"
+      },
+      {
+        "source": "K35",
+        "target": "K63",
+        "relation": "APPLIED_IN",
+        "weight": 0.4,
+        "description": "修辞手法理解应用于描写性语言欣赏"
+      }
+    ],
+    "categories": [
+      "必修第一册",
+      "必修第二册",
+      "必修第三册",
+      "选择性必修1-2",
+      "选择性必修3-4"
+    ],
+    "stats": {
+      "total_nodes": 110,
+      "total_edges": 197,
+      "modules": 5,
+      "chapters": 21,
+      "knowledge_points": 84
+    }
+  },
+  "政治": {
+    "color": "#B91C1C",
+    "nodes": [
+      {
+        "id": "P_M1",
+        "name": "中国特色社会主义",
+        "type": "Module",
+        "module": "中国特色社会主义",
+        "chapter": "",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "必修1。阐述科学社会主义从空想到科学到现实的发展历程，中国特色社会主义道路、理论、制度、文化的开创与发展，以及新时代的奋斗目标与中国梦。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "P_M2",
+        "name": "经济与社会",
+        "type": "Module",
+        "module": "经济与社会",
+        "chapter": "",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "必修2。阐述我国基本经济制度、社会主义市场经济体制，以及贯彻新发展理念、推动经济发展与社会进步。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "P_M3",
+        "name": "政治与法治",
+        "type": "Module",
+        "module": "政治与法治",
+        "chapter": "",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "必修3。阐述中国共产党的领导、人民当家作主、全面依法治国三者的有机统一。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "P_M4",
+        "name": "哲学与文化",
+        "type": "Module",
+        "module": "哲学与文化",
+        "chapter": "",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "必修4。阐述马克思主义哲学基本原理（唯物论、认识论、辩证法、唯物史观、价值观）及文化传承与文化创新。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "P_M5",
+        "name": "当代国际政治与经济",
+        "type": "Module",
+        "module": "当代国际政治与经济",
+        "chapter": "",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "选择性必修1。阐述世界多极化、经济全球化及主要国际组织。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "P_M6",
+        "name": "法律生活与逻辑思维",
+        "type": "Module",
+        "module": "法律生活与逻辑思维",
+        "chapter": "",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "选择性必修2《法律与生活》与选择性必修3《逻辑与思维》。阐述民事权利义务、家庭婚姻就业与争议解决，以及科学思维、形式逻辑、辩证思维与创新思维。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "P_C1_1",
+        "name": "社会主义从空想到科学到现实",
+        "type": "Chapter",
+        "module": "中国特色社会主义",
+        "chapter": "社会主义从空想到科学到现实",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "梳理空想社会主义、科学社会主义诞生及从理论到现实、从一国到多国的发展。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "P_C1_2",
+        "name": "中国特色社会主义的开创与发展",
+        "type": "Chapter",
+        "module": "中国特色社会主义",
+        "chapter": "中国特色社会主义的开创与发展",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "新民主主义革命向社会主义过渡、改革开放决策、中国特色社会主义道路与理论体系。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "P_C1_3",
+        "name": "新时代中国特色社会主义与中国梦",
+        "type": "Chapter",
+        "module": "中国特色社会主义",
+        "chapter": "新时代中国特色社会主义与中国梦",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "新时代社会主要矛盾、习近平新时代中国特色社会主义思想、新征程与中国梦。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "P_C2_1",
+        "name": "我国的基本经济制度",
+        "type": "Chapter",
+        "module": "经济与社会",
+        "chapter": "我国的基本经济制度",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "公有制为主体多种所有制经济共同发展、社会主义市场经济体制、宏观调控。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "P_C2_2",
+        "name": "经济发展与社会进步",
+        "type": "Chapter",
+        "module": "经济与社会",
+        "chapter": "经济发展与社会进步",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "新发展理念、现代化经济体系、供给侧结构性改革、分配制度与社会保障。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "P_C3_1",
+        "name": "中国共产党的领导",
+        "type": "Chapter",
+        "module": "政治与法治",
+        "chapter": "中国共产党的领导",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "党的性质宗旨、执政地位与领导方式、全面从严治党。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "P_C3_2",
+        "name": "人民当家作主",
+        "type": "Chapter",
+        "module": "政治与法治",
+        "chapter": "人民当家作主",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "人民代表大会制度、政党制度、民族区域自治、基层群众自治及国家机构。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "P_C3_3",
+        "name": "全面依法治国",
+        "type": "Chapter",
+        "module": "政治与法治",
+        "chapter": "全面依法治国",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "依法治国总目标、法治国家政府社会一体建设、新十六字方针、依宪治国。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "P_C4_1",
+        "name": "时代精神的精华",
+        "type": "Chapter",
+        "module": "哲学与文化",
+        "chapter": "时代精神的精华",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "哲学与世界观方法论、哲学基本问题、唯物唯心分歧、马克思主义哲学。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "P_C4_2",
+        "name": "探索世界与追求真理",
+        "type": "Chapter",
+        "module": "哲学与文化",
+        "chapter": "探索世界与追求真理",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "唯物论（物质意识）、认识论（实践与真理）。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "P_C4_3",
+        "name": "联系发展矛盾（唯物辩证法）",
+        "type": "Chapter",
+        "module": "哲学与文化",
+        "chapter": "联系发展矛盾（唯物辩证法）",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "联系观、发展观、矛盾观、辩证否定与创新。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "P_C4_4",
+        "name": "社会历史与人生价值",
+        "type": "Chapter",
+        "module": "哲学与文化",
+        "chapter": "社会历史与人生价值",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "唯物史观（社会存在意识、基本矛盾、群众史观）与价值观、人生价值。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "P_C4_5",
+        "name": "文化传承与文化创新",
+        "type": "Chapter",
+        "module": "哲学与文化",
+        "chapter": "文化传承与文化创新",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "文化的内涵功能、传统文化继承、中华文化特征、文化创新与文化自信。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "P_C5_1",
+        "name": "世界多极化",
+        "type": "Chapter",
+        "module": "当代国际政治与经济",
+        "chapter": "世界多极化",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "多极化趋势、综合国力竞争、我国独立自主和平外交政策。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "P_C5_2",
+        "name": "经济全球化",
+        "type": "Chapter",
+        "module": "当代国际政治与经济",
+        "chapter": "经济全球化",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "全球化的表现动因、影响、发展更高层次开放型经济。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "P_C5_3",
+        "name": "国际组织",
+        "type": "Chapter",
+        "module": "当代国际政治与经济",
+        "chapter": "国际组织",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "联合国、世贸组织、区域组织及中国与国际组织。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "P_C6_1",
+        "name": "民事权利与义务",
+        "type": "Chapter",
+        "module": "法律生活与逻辑思维",
+        "chapter": "民事权利与义务",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "民事权利能力与行为能力、人身权、物权、合同、侵权责任。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "P_C6_2",
+        "name": "家庭婚姻就业与争议解决",
+        "type": "Chapter",
+        "module": "法律生活与逻辑思维",
+        "chapter": "家庭婚姻就业与争议解决",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "婚姻家庭关系、劳动法与劳动合同、争议解决方式。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "P_C6_3",
+        "name": "科学思维与形式逻辑",
+        "type": "Chapter",
+        "module": "法律生活与逻辑思维",
+        "chapter": "科学思维与形式逻辑",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "科学思维特征、概念判断、形式逻辑基本规律、演绎与归纳推理。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "P_C6_4",
+        "name": "辩证思维与创新思维",
+        "type": "Chapter",
+        "module": "法律生活与逻辑思维",
+        "chapter": "辩证思维与创新思维",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "辩证思维的整体动态性、分析与综合、创新思维与超前思维。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "P_K1_1_1",
+        "name": "空想社会主义的代表与局限",
+        "type": "KnowledgePoint",
+        "module": "中国特色社会主义",
+        "chapter": "社会主义从空想到科学到现实",
+        "difficulty": 2,
+        "importance": 3,
+        "description": "以圣西门、傅立叶、欧文为代表的空想社会主义对资本主义进行批判并构想了未来社会，但未揭示资本主义根本矛盾，未找到变革社会的现实力量。",
+        "keywords": "空想社会主义,圣西门,傅立叶,欧文,历史局限",
+        "exam_type": "选择题、材料分析题"
+      },
+      {
+        "id": "P_K1_1_2",
+        "name": "科学社会主义的诞生",
+        "type": "KnowledgePoint",
+        "module": "中国特色社会主义",
+        "chapter": "社会主义从空想到科学到现实",
+        "difficulty": 3,
+        "importance": 4,
+        "description": "1848年《共产党宣言》发表标志科学社会主义诞生；其两大理论基石是唯物史观和剩余价值学说。",
+        "keywords": "共产党宣言,唯物史观,剩余价值学说,科学社会主义",
+        "exam_type": "选择题、简答题"
+      },
+      {
+        "id": "P_K1_1_3",
+        "name": "科学社会主义从理论到现实",
+        "type": "KnowledgePoint",
+        "module": "中国特色社会主义",
+        "chapter": "社会主义从空想到科学到现实",
+        "difficulty": 3,
+        "importance": 4,
+        "description": "1917年俄国十月革命把马克思主义关于无产阶级革命的理论变为现实，建立世界上第一个社会主义国家。",
+        "keywords": "十月革命,理论到现实,第一个社会主义国家",
+        "exam_type": "选择题"
+      },
+      {
+        "id": "P_K1_1_4",
+        "name": "社会主义从一国到多国",
+        "type": "KnowledgePoint",
+        "module": "中国特色社会主义",
+        "chapter": "社会主义从空想到科学到现实",
+        "difficulty": 2,
+        "importance": 2,
+        "description": "二战后社会主义越出一国范围形成阵营，历史性飞跃体现了社会主义发展的曲折性与前进性。",
+        "keywords": "一国到多国,社会主义阵营,曲折前进",
+        "exam_type": "选择题"
+      },
+      {
+        "id": "P_K1_2_1",
+        "name": "新民主主义革命向社会主义过渡",
+        "type": "KnowledgePoint",
+        "module": "中国特色社会主义",
+        "chapter": "中国特色社会主义的开创与发展",
+        "difficulty": 3,
+        "importance": 4,
+        "description": "过渡时期总路线一化三改；1956年三大改造基本完成，社会主义制度在我国确立。",
+        "keywords": "过渡时期总路线,三大改造,社会主义制度确立,1956",
+        "exam_type": "材料分析题、选择题"
+      },
+      {
+        "id": "P_K1_2_2",
+        "name": "改革开放的伟大决策",
+        "type": "KnowledgePoint",
+        "module": "中国特色社会主义",
+        "chapter": "中国特色社会主义的开创与发展",
+        "difficulty": 3,
+        "importance": 5,
+        "description": "1978年十一届三中全会作出把工作重心转移到经济建设上来、实行改革开放的伟大决策。",
+        "keywords": "十一届三中全会,改革开放,工作重心转移,1978",
+        "exam_type": "选择题、材料分析题"
+      },
+      {
+        "id": "P_K1_2_3",
+        "name": "中国特色社会主义道路的开辟",
+        "type": "KnowledgePoint",
+        "module": "中国特色社会主义",
+        "chapter": "中国特色社会主义的开创与发展",
+        "difficulty": 3,
+        "importance": 4,
+        "description": "以邓小平理论为指导开辟中国特色社会主义道路，回答了什么是社会主义、怎样建设社会主义。",
+        "keywords": "中国特色社会主义道路,邓小平理论",
+        "exam_type": "选择题、简答题"
+      },
+      {
+        "id": "P_K1_2_4",
+        "name": "中国特色社会主义理论体系",
+        "type": "KnowledgePoint",
+        "module": "中国特色社会主义",
+        "chapter": "中国特色社会主义的开创与发展",
+        "difficulty": 4,
+        "importance": 4,
+        "description": "包括邓小平理论、三个代表重要思想、科学发展观、习近平新时代中国特色社会主义思想，是马克思主义中国化的成果。",
+        "keywords": "理论体系,三个代表,科学发展观,马克思主义中国化",
+        "exam_type": "选择题、论述题"
+      },
+      {
+        "id": "P_K1_3_1",
+        "name": "新时代我国社会主要矛盾",
+        "type": "KnowledgePoint",
+        "module": "中国特色社会主义",
+        "chapter": "新时代中国特色社会主义与中国梦",
+        "difficulty": 4,
+        "importance": 5,
+        "description": "新时代我国社会主要矛盾已转化为人民日益增长的美好生活需要和不平衡不充分的发展之间的矛盾。",
+        "keywords": "社会主要矛盾,美好生活需要,不平衡不充分",
+        "exam_type": "材料分析题、选择题"
+      },
+      {
+        "id": "P_K1_3_2",
+        "name": "习近平新时代中国特色社会主义思想",
+        "type": "KnowledgePoint",
+        "module": "中国特色社会主义",
+        "chapter": "新时代中国特色社会主义与中国梦",
+        "difficulty": 4,
+        "importance": 5,
+        "description": "马克思主义中国化时代化的最新成果，核心要义体现为八个明确、十四个坚持，是党和国家必须长期坚持的指导思想。",
+        "keywords": "八个明确,十四个坚持,指导思想,马克思主义中国化",
+        "exam_type": "选择题、材料分析题"
+      },
+      {
+        "id": "P_K1_3_3",
+        "name": "新征程两步走战略安排",
+        "type": "KnowledgePoint",
+        "module": "中国特色社会主义",
+        "chapter": "新时代中国特色社会主义与中国梦",
+        "difficulty": 3,
+        "importance": 4,
+        "description": "在全面建成小康社会基础上，分两步走到本世纪中叶建成富强民主文明和谐美丽的社会主义现代化强国。",
+        "keywords": "两个一百年,两步走,社会主义现代化强国",
+        "exam_type": "选择题、简答题"
+      },
+      {
+        "id": "P_K1_3_4",
+        "name": "中国梦的本质",
+        "type": "KnowledgePoint",
+        "module": "中国特色社会主义",
+        "chapter": "新时代中国特色社会主义与中国梦",
+        "difficulty": 2,
+        "importance": 3,
+        "description": "中国梦的本质是国家富强、民族振兴、人民幸福；实现中国梦必须走中国道路、弘扬中国精神、凝聚中国力量。",
+        "keywords": "中国梦,国家富强,民族振兴,人民幸福",
+        "exam_type": "选择题、简答题"
+      },
+      {
+        "id": "P_K2_1_1",
+        "name": "公有制为主体多种所有制经济共同发展",
+        "type": "KnowledgePoint",
+        "module": "经济与社会",
+        "chapter": "我国的基本经济制度",
+        "difficulty": 3,
+        "importance": 4,
+        "description": "公有制是社会主义经济制度基础，国有经济是主导力量；非公有制是重要组成部分，二者地位平等。",
+        "keywords": "公有制,国有经济,非公有制,基本经济制度",
+        "exam_type": "选择题、材料分析题"
+      },
+      {
+        "id": "P_K2_1_2",
+        "name": "公有制经济的实现形式",
+        "type": "KnowledgePoint",
+        "module": "经济与社会",
+        "chapter": "我国的基本经济制度",
+        "difficulty": 3,
+        "importance": 3,
+        "description": "股份制是公有制主要实现形式，发展混合所有制经济有利于放大国有资本功能。",
+        "keywords": "股份制,混合所有制,实现形式",
+        "exam_type": "选择题"
+      },
+      {
+        "id": "P_K2_1_3",
+        "name": "两个毫不动摇",
+        "type": "KnowledgePoint",
+        "module": "经济与社会",
+        "chapter": "我国的基本经济制度",
+        "difficulty": 2,
+        "importance": 3,
+        "description": "毫不动摇巩固和发展公有制经济，毫不动摇鼓励支持引导非公有制经济发展。",
+        "keywords": "两个毫不动摇,公有制,非公有制",
+        "exam_type": "选择题、简答题"
+      },
+      {
+        "id": "P_K2_1_4",
+        "name": "社会主义市场经济体制",
+        "type": "KnowledgePoint",
+        "module": "经济与社会",
+        "chapter": "我国的基本经济制度",
+        "difficulty": 4,
+        "importance": 5,
+        "description": "使市场在资源配置中起决定性作用，更好发挥政府作用；坚持社会主义制度与市场经济结合。",
+        "keywords": "市场决定性作用,政府作用,社会主义市场经济",
+        "exam_type": "材料分析题、论述题"
+      },
+      {
+        "id": "P_K2_1_5",
+        "name": "宏观调控的目标与手段",
+        "type": "KnowledgePoint",
+        "module": "经济与社会",
+        "chapter": "我国的基本经济制度",
+        "difficulty": 4,
+        "importance": 4,
+        "description": "主要目标为促进经济增长、增加就业、稳定物价、保持国际收支平衡；运用经济、法律、行政手段。",
+        "keywords": "宏观调控,四大目标,经济法律行政手段",
+        "exam_type": "材料分析题、选择题"
+      },
+      {
+        "id": "P_K2_2_1",
+        "name": "新发展理念",
+        "type": "KnowledgePoint",
+        "module": "经济与社会",
+        "chapter": "经济发展与社会进步",
+        "difficulty": 4,
+        "importance": 5,
+        "description": "创新、协调、绿色、开放、共享五大发展理念，关系我国发展全局的一场深刻变革。",
+        "keywords": "创新,协调,绿色,开放,共享,新发展理念",
+        "exam_type": "材料分析题、选择题"
+      },
+      {
+        "id": "P_K2_2_2",
+        "name": "建设现代化经济体系",
+        "type": "KnowledgePoint",
+        "module": "经济与社会",
+        "chapter": "经济发展与社会进步",
+        "difficulty": 4,
+        "importance": 4,
+        "description": "建设创新引领、协同发展的产业体系，统一开放竞争有序的市场体系等，推动经济高质量发展。",
+        "keywords": "现代化经济体系,产业体系,高质量发展",
+        "exam_type": "材料分析题、简答题"
+      },
+      {
+        "id": "P_K2_2_3",
+        "name": "供给侧结构性改革",
+        "type": "KnowledgePoint",
+        "module": "经济与社会",
+        "chapter": "经济发展与社会进步",
+        "difficulty": 4,
+        "importance": 5,
+        "description": "通过三去一降一补（去产能去库存去杠杆降成本补短板）优化供给结构，提高供给体系质量。",
+        "keywords": "供给侧结构性改革,三去一降一补,供给质量",
+        "exam_type": "材料分析题、论述题"
+      },
+      {
+        "id": "P_K2_2_4",
+        "name": "我国的分配制度",
+        "type": "KnowledgePoint",
+        "module": "经济与社会",
+        "chapter": "经济发展与社会进步",
+        "difficulty": 4,
+        "importance": 5,
+        "description": "按劳分配为主体、多种分配方式并存；劳动、资本、土地、知识、技术、管理、数据等生产要素参与分配。",
+        "keywords": "按劳分配,生产要素分配,分配制度",
+        "exam_type": "选择题、材料分析题"
+      },
+      {
+        "id": "P_K2_2_5",
+        "name": "社会保障制度",
+        "type": "KnowledgePoint",
+        "module": "经济与社会",
+        "chapter": "经济发展与社会进步",
+        "difficulty": 3,
+        "importance": 3,
+        "description": "包括社会保险、社会救助、社会福利、社会优抚，是社会的安全网和调节器。",
+        "keywords": "社会保障,社会保险,社会救助,社会福利,社会优抚",
+        "exam_type": "选择题、简答题"
+      },
+      {
+        "id": "P_K3_1_1",
+        "name": "中国共产党的性质与宗旨",
+        "type": "KnowledgePoint",
+        "module": "政治与法治",
+        "chapter": "中国共产党的领导",
+        "difficulty": 3,
+        "importance": 4,
+        "description": "中国共产党是中国工人阶级的先锋队，同时是中国人民和中华民族的先锋队；宗旨是全心全意为人民服务。",
+        "keywords": "先锋队,性质,宗旨,为人民服务",
+        "exam_type": "选择题、简答题"
+      },
+      {
+        "id": "P_K3_1_2",
+        "name": "党的领导方式与执政方式",
+        "type": "KnowledgePoint",
+        "module": "政治与法治",
+        "chapter": "中国共产党的领导",
+        "difficulty": 3,
+        "importance": 4,
+        "description": "党实行政治、思想、组织领导；坚持科学执政、民主执政、依法执政，依法执政是基本方式。",
+        "keywords": "政治领导,科学执政,民主执政,依法执政",
+        "exam_type": "选择题、材料分析题"
+      },
+      {
+        "id": "P_K3_1_3",
+        "name": "党的领导是社会主义最本质特征",
+        "type": "KnowledgePoint",
+        "module": "政治与法治",
+        "chapter": "中国共产党的领导",
+        "difficulty": 3,
+        "importance": 4,
+        "description": "中国共产党的领导是中国特色社会主义最本质的特征，是中国特色社会主义制度的最大优势。",
+        "keywords": "最本质特征,最大优势,党的领导",
+        "exam_type": "选择题、论述题"
+      },
+      {
+        "id": "P_K3_1_4",
+        "name": "全面从严治党",
+        "type": "KnowledgePoint",
+        "module": "政治与法治",
+        "chapter": "中国共产党的领导",
+        "difficulty": 3,
+        "importance": 4,
+        "description": "以党的政治建设为统领，全面推进党的各项建设，把党建设得更加坚强有力。",
+        "keywords": "全面从严治党,政治建设,党的建设",
+        "exam_type": "选择题、材料分析题"
+      },
+      {
+        "id": "P_K3_2_1",
+        "name": "人民代表大会制度",
+        "type": "KnowledgePoint",
+        "module": "政治与法治",
+        "chapter": "人民当家作主",
+        "difficulty": 4,
+        "importance": 5,
+        "description": "我国的根本政治制度；人大是国家权力机关，行使立法权、决定权、任免权、监督权。",
+        "keywords": "人民代表大会制度,根本政治制度,立法决定任免监督",
+        "exam_type": "选择题、材料分析题"
+      },
+      {
+        "id": "P_K3_2_2",
+        "name": "人大代表的权利与义务",
+        "type": "KnowledgePoint",
+        "module": "政治与法治",
+        "chapter": "人民当家作主",
+        "difficulty": 2,
+        "importance": 3,
+        "description": "人大代表依法行使审议权、表决权、提案权、质询权，同时履行协助宪法法律实施等义务。",
+        "keywords": "人大代表,审议权,表决权,提案权,质询权",
+        "exam_type": "选择题"
+      },
+      {
+        "id": "P_K3_2_3",
+        "name": "政党制度",
+        "type": "KnowledgePoint",
+        "module": "政治与法治",
+        "chapter": "人民当家作主",
+        "difficulty": 4,
+        "importance": 4,
+        "description": "中国共产党领导的多党合作和政治协商制度是我国基本政治制度，人民政协是统一战线组织。",
+        "keywords": "多党合作,政治协商,基本政治制度,人民政协",
+        "exam_type": "选择题、材料分析题"
+      },
+      {
+        "id": "P_K3_2_4",
+        "name": "民族区域自治制度",
+        "type": "KnowledgePoint",
+        "module": "政治与法治",
+        "chapter": "人民当家作主",
+        "difficulty": 3,
+        "importance": 4,
+        "description": "在国家统一领导下设立自治机关行使自治权，是我国基本政治制度，符合国情和民族关系。",
+        "keywords": "民族区域自治,自治机关,自治权,基本政治制度",
+        "exam_type": "选择题、简答题"
+      },
+      {
+        "id": "P_K3_2_5",
+        "name": "基层群众自治制度",
+        "type": "KnowledgePoint",
+        "module": "政治与法治",
+        "chapter": "人民当家作主",
+        "difficulty": 3,
+        "importance": 4,
+        "description": "以村委会、居委会为主要形式，实行自我管理自我服务自我教育自我监督，是基本政治制度。",
+        "keywords": "基层群众自治,村委会,居委会,自我管理",
+        "exam_type": "选择题、材料分析题"
+      },
+      {
+        "id": "P_K3_2_6",
+        "name": "国家机构及其关系",
+        "type": "KnowledgePoint",
+        "module": "政治与法治",
+        "chapter": "人民当家作主",
+        "difficulty": 4,
+        "importance": 4,
+        "description": "人大产生并监督一府一委两院（政府、监察委、法院、检察院），监察委是国家监察机关。",
+        "keywords": "国家机构,一府一委两院,监察委,权力机关",
+        "exam_type": "选择题、材料分析题"
+      },
+      {
+        "id": "P_K3_3_1",
+        "name": "全面依法治国总目标",
+        "type": "KnowledgePoint",
+        "module": "政治与法治",
+        "chapter": "全面依法治国",
+        "difficulty": 3,
+        "importance": 4,
+        "description": "建设中国特色社会主义法治体系、建设社会主义法治国家。",
+        "keywords": "依法治国,法治体系,法治国家,总目标",
+        "exam_type": "选择题、简答题"
+      },
+      {
+        "id": "P_K3_3_2",
+        "name": "法治国家法治政府法治社会一体建设",
+        "type": "KnowledgePoint",
+        "module": "政治与法治",
+        "chapter": "全面依法治国",
+        "difficulty": 3,
+        "importance": 4,
+        "description": "三者相互联系相互促进，法治政府是重点，法治社会是基础。",
+        "keywords": "法治国家,法治政府,法治社会,一体建设",
+        "exam_type": "选择题、材料分析题"
+      },
+      {
+        "id": "P_K3_3_3",
+        "name": "新十六字方针",
+        "type": "KnowledgePoint",
+        "module": "政治与法治",
+        "chapter": "全面依法治国",
+        "difficulty": 4,
+        "importance": 5,
+        "description": "科学立法、严格执法、公正司法、全民守法，是新时代全面依法治国的工作布局。",
+        "keywords": "科学立法,严格执法,公正司法,全民守法,新十六字方针",
+        "exam_type": "选择题、材料分析题"
+      },
+      {
+        "id": "P_K3_3_4",
+        "name": "宪法是国家的根本法",
+        "type": "KnowledgePoint",
+        "module": "政治与法治",
+        "chapter": "全面依法治国",
+        "difficulty": 3,
+        "importance": 4,
+        "description": "宪法具有最高法律效力，坚持依法治国首先要坚持依宪治国，依法执政首先要依宪执政。",
+        "keywords": "宪法,根本法,依宪治国,依宪执政",
+        "exam_type": "选择题、简答题"
+      },
+      {
+        "id": "P_K4_1_1",
+        "name": "哲学是世界观与方法论的统一",
+        "type": "KnowledgePoint",
+        "module": "哲学与文化",
+        "chapter": "时代精神的精华",
+        "difficulty": 2,
+        "importance": 3,
+        "description": "哲学是关于世界观的学问，是系统化理论化的世界观，又是人们认识和改造世界的世界观方法论。",
+        "keywords": "哲学,世界观,方法论,统一",
+        "exam_type": "选择题"
+      },
+      {
+        "id": "P_K4_1_2",
+        "name": "哲学的基本问题",
+        "type": "KnowledgePoint",
+        "module": "哲学与文化",
+        "chapter": "时代精神的精华",
+        "difficulty": 4,
+        "importance": 5,
+        "description": "思维和存在的关系问题是哲学基本问题，包括何者为本原（第一性）和能否同一（可知论不可知论）两方面。",
+        "keywords": "哲学基本问题,思维与存在,第一性,可知论",
+        "exam_type": "选择题、辨析题"
+      },
+      {
+        "id": "P_K4_1_3",
+        "name": "唯物主义与唯心主义的分歧",
+        "type": "KnowledgePoint",
+        "module": "哲学与文化",
+        "chapter": "时代精神的精华",
+        "difficulty": 3,
+        "importance": 4,
+        "description": "围绕物质和意识何者为本原，形成唯物主义（物质本原）与唯心主义（意识本原）两大基本派别。",
+        "keywords": "唯物主义,唯心主义,基本派别,本原",
+        "exam_type": "选择题、辨析题"
+      },
+      {
+        "id": "P_K4_1_4",
+        "name": "马克思主义哲学的产生与特征",
+        "type": "KnowledgePoint",
+        "module": "哲学与文化",
+        "chapter": "时代精神的精华",
+        "difficulty": 3,
+        "importance": 4,
+        "description": "以实践为基础的科学性和革命性的统一，实现了唯物主义与辩证法、唯物辩证的自然观与历史观有机统一。",
+        "keywords": "马克思主义哲学,实践性,科学性,革命性",
+        "exam_type": "选择题、简答题"
+      },
+      {
+        "id": "P_K4_2_1",
+        "name": "世界的物质性",
+        "type": "KnowledgePoint",
+        "module": "哲学与文化",
+        "chapter": "探索世界与追求真理",
+        "difficulty": 3,
+        "importance": 4,
+        "description": "物质是不依赖于人的意识并能为人的意识所反映的客观实在；世界的真正统一性在于物质性。",
+        "keywords": "物质,客观实在,物质性,物质决定意识",
+        "exam_type": "选择题、辨析题"
+      },
+      {
+        "id": "P_K4_2_2",
+        "name": "意识的本质与作用",
+        "type": "KnowledgePoint",
+        "module": "哲学与文化",
+        "chapter": "探索世界与追求真理",
+        "difficulty": 4,
+        "importance": 5,
+        "description": "意识是物质世界长期发展的产物，是人脑的机能，是客观存在的反映；意识具有能动作用（能动认识世界和改造世界）。",
+        "keywords": "意识,人脑机能,客观反映,能动作用",
+        "exam_type": "选择题、材料分析题"
+      },
+      {
+        "id": "P_K4_2_3",
+        "name": "一切从实际出发实事求是",
+        "type": "KnowledgePoint",
+        "module": "哲学与文化",
+        "chapter": "探索世界与追求真理",
+        "difficulty": 3,
+        "importance": 4,
+        "description": "物质决定意识要求我们一切从实际出发，实事求是，这是马克思主义的根本观点。",
+        "keywords": "从实际出发,实事求是,物质决定意识",
+        "exam_type": "材料分析题、辨析题"
+      },
+      {
+        "id": "P_K4_2_4",
+        "name": "实践的含义与特点",
+        "type": "KnowledgePoint",
+        "module": "哲学与文化",
+        "chapter": "探索世界与追求真理",
+        "difficulty": 3,
+        "importance": 4,
+        "description": "实践是人们改造客观世界的物质性活动，具有客观物质性、主观能动性、社会历史性。",
+        "keywords": "实践,改造客观世界,客观物质性,社会历史性",
+        "exam_type": "选择题、简答题"
+      },
+      {
+        "id": "P_K4_2_5",
+        "name": "实践是认识的基础",
+        "type": "KnowledgePoint",
+        "module": "哲学与文化",
+        "chapter": "探索世界与追求真理",
+        "difficulty": 4,
+        "importance": 5,
+        "description": "实践是认识的来源、动力、检验真理的唯一标准、认识的目的。",
+        "keywords": "实践是认识基础,来源,动力,标准,目的",
+        "exam_type": "选择题、材料分析题"
+      },
+      {
+        "id": "P_K4_2_6",
+        "name": "真理的客观性具体性条件性",
+        "type": "KnowledgePoint",
+        "module": "哲学与文化",
+        "chapter": "探索世界与追求真理",
+        "difficulty": 4,
+        "importance": 4,
+        "description": "真理是标志主观同客观相符合的哲学范畴，最基本属性是客观性；真理是有条件的、具体的。",
+        "keywords": "真理,客观性,具体性,条件性",
+        "exam_type": "选择题、辨析题"
+      },
+      {
+        "id": "P_K4_2_7",
+        "name": "认识的反复性与无限性",
+        "type": "KnowledgePoint",
+        "module": "哲学与文化",
+        "chapter": "探索世界与追求真理",
+        "difficulty": 3,
+        "importance": 4,
+        "description": "认识具有反复性、无限性和上升性，追求真理是一个波浪式前进、螺旋式上升的过程。",
+        "keywords": "认识反复性,无限性,螺旋式上升,追求真理",
+        "exam_type": "选择题、材料分析题"
+      },
+      {
+        "id": "P_K4_3_1",
+        "name": "联系的普遍性客观性多样性",
+        "type": "KnowledgePoint",
+        "module": "哲学与文化",
+        "chapter": "联系发展矛盾（唯物辩证法）",
+        "difficulty": 4,
+        "importance": 5,
+        "description": "事物是普遍联系的，联系是客观的，又是多样的；要用联系的观点看问题。",
+        "keywords": "联系,普遍性,客观性,多样性",
+        "exam_type": "选择题、材料分析题"
+      },
+      {
+        "id": "P_K4_3_2",
+        "name": "整体与部分的辩证关系",
+        "type": "KnowledgePoint",
+        "module": "哲学与文化",
+        "chapter": "联系发展矛盾（唯物辩证法）",
+        "difficulty": 4,
+        "importance": 5,
+        "description": "整体与部分相互区别又相互联系；树立全局观念，掌握系统优化的方法。",
+        "keywords": "整体与部分,全局观念,系统优化",
+        "exam_type": "选择题、材料分析题"
+      },
+      {
+        "id": "P_K4_3_3",
+        "name": "发展的实质与量变质变",
+        "type": "KnowledgePoint",
+        "module": "哲学与文化",
+        "chapter": "联系发展矛盾（唯物辩证法）",
+        "difficulty": 4,
+        "importance": 5,
+        "description": "发展的实质是事物的前进上升、新事物产生旧事物灭亡；量变是质变的必要准备，质变是量变的必然结果。",
+        "keywords": "发展实质,量变,质变,新事物",
+        "exam_type": "选择题、材料分析题"
+      },
+      {
+        "id": "P_K4_3_4",
+        "name": "前进性与曲折性的统一",
+        "type": "KnowledgePoint",
+        "module": "哲学与文化",
+        "chapter": "联系发展矛盾（唯物辩证法）",
+        "difficulty": 3,
+        "importance": 4,
+        "description": "事物发展是前进性与曲折性的统一，前途光明、道路曲折。",
+        "keywords": "前进性,曲折性,前途光明道路曲折",
+        "exam_type": "选择题、辨析题"
+      },
+      {
+        "id": "P_K4_3_5",
+        "name": "矛盾的普遍性与特殊性",
+        "type": "KnowledgePoint",
+        "module": "哲学与文化",
+        "chapter": "联系发展矛盾（唯物辩证法）",
+        "difficulty": 5,
+        "importance": 5,
+        "description": "矛盾普遍性指矛盾无处不在无时不有，特殊性指矛盾各有特点；二者相互联结，是矛盾问题的精髓。",
+        "keywords": "矛盾普遍性,矛盾特殊性,矛盾精髓,共性与个性",
+        "exam_type": "材料分析题、辨析题、论述题"
+      },
+      {
+        "id": "P_K4_3_6",
+        "name": "主次矛盾与矛盾的主次方面",
+        "type": "KnowledgePoint",
+        "module": "哲学与文化",
+        "chapter": "联系发展矛盾（唯物辩证法）",
+        "difficulty": 4,
+        "importance": 5,
+        "description": "主要矛盾决定事物发展进程，矛盾主要方面决定事物性质；坚持两点论与重点论统一。",
+        "keywords": "主要矛盾,次要矛盾,矛盾主要方面,两点论重点论",
+        "exam_type": "选择题、材料分析题"
+      },
+      {
+        "id": "P_K4_3_7",
+        "name": "矛盾的同一性与斗争性",
+        "type": "KnowledgePoint",
+        "module": "哲学与文化",
+        "chapter": "联系发展矛盾（唯物辩证法）",
+        "difficulty": 4,
+        "importance": 4,
+        "description": "矛盾的两个基本属性：同一性指矛盾双方相互依存相互转化，斗争性指双方相互排斥相互对立。",
+        "keywords": "矛盾,同一性,斗争性,基本属性",
+        "exam_type": "选择题、辨析题"
+      },
+      {
+        "id": "P_K4_3_8",
+        "name": "辩证的否定与创新",
+        "type": "KnowledgePoint",
+        "module": "哲学与文化",
+        "chapter": "联系发展矛盾（唯物辩证法）",
+        "difficulty": 4,
+        "importance": 5,
+        "description": "辩证的否定是事物自身的否定，实质是扬弃；创新是引领发展的第一动力。",
+        "keywords": "辩证否定,扬弃,创新,第一动力",
+        "exam_type": "材料分析题、论述题"
+      },
+      {
+        "id": "P_K4_4_1",
+        "name": "社会存在与社会意识",
+        "type": "KnowledgePoint",
+        "module": "哲学与文化",
+        "chapter": "社会历史与人生价值",
+        "difficulty": 4,
+        "importance": 4,
+        "description": "社会存在决定社会意识，社会意识具有相对独立性并对社会存在有反作用。",
+        "keywords": "社会存在,社会意识,相对独立性",
+        "exam_type": "选择题、材料分析题"
+      },
+      {
+        "id": "P_K4_4_2",
+        "name": "社会基本矛盾",
+        "type": "KnowledgePoint",
+        "module": "哲学与文化",
+        "chapter": "社会历史与人生价值",
+        "difficulty": 4,
+        "importance": 5,
+        "description": "生产力和生产关系的矛盾、经济基础和上层建筑的矛盾是贯穿人类社会的基本矛盾。",
+        "keywords": "生产力,生产关系,经济基础,上层建筑,基本矛盾",
+        "exam_type": "选择题、材料分析题"
+      },
+      {
+        "id": "P_K4_4_3",
+        "name": "人民群众是历史的创造者",
+        "type": "KnowledgePoint",
+        "module": "哲学与文化",
+        "chapter": "社会历史与人生价值",
+        "difficulty": 3,
+        "importance": 4,
+        "description": "人民群众是社会物质财富和精神财富的创造者，是社会变革的决定力量；坚持群众观点群众路线。",
+        "keywords": "人民群众,历史创造者,群众观点,群众路线",
+        "exam_type": "选择题、简答题"
+      },
+      {
+        "id": "P_K4_4_4",
+        "name": "价值观的导向作用",
+        "type": "KnowledgePoint",
+        "module": "哲学与文化",
+        "chapter": "社会历史与人生价值",
+        "difficulty": 3,
+        "importance": 4,
+        "description": "价值观对人们认识和改造世界、对人生道路的选择具有重要导向作用。",
+        "keywords": "价值观,导向作用,认识和改造世界",
+        "exam_type": "选择题、辨析题"
+      },
+      {
+        "id": "P_K4_4_5",
+        "name": "价值判断与价值选择",
+        "type": "KnowledgePoint",
+        "module": "哲学与文化",
+        "chapter": "社会历史与人生价值",
+        "difficulty": 4,
+        "importance": 4,
+        "description": "具有社会历史性、阶级性，最高标准是自觉遵循社会发展客观规律、自觉站在最广大人民立场。",
+        "keywords": "价值判断,价值选择,社会历史性,最高标准",
+        "exam_type": "选择题、材料分析题"
+      },
+      {
+        "id": "P_K4_4_6",
+        "name": "人生的真正价值在于贡献",
+        "type": "KnowledgePoint",
+        "module": "哲学与文化",
+        "chapter": "社会历史与人生价值",
+        "difficulty": 3,
+        "importance": 4,
+        "description": "人的价值在于创造价值，在于对社会的责任和贡献；在劳动和奉献中、在个人与社会的统一中实现价值。",
+        "keywords": "人生价值,贡献,价值实现,劳动奉献",
+        "exam_type": "材料分析题、论述题"
+      },
+      {
+        "id": "P_K4_5_1",
+        "name": "文化的内涵与功能",
+        "type": "KnowledgePoint",
+        "module": "哲学与文化",
+        "chapter": "文化传承与文化创新",
+        "difficulty": 2,
+        "importance": 3,
+        "description": "文化是人类社会实践的产物，具有引领风尚、教育人民、服务社会、推动发展的功能。",
+        "keywords": "文化,社会实践,文化功能",
+        "exam_type": "选择题"
+      },
+      {
+        "id": "P_K4_5_2",
+        "name": "文化与经济政治的关系",
+        "type": "KnowledgePoint",
+        "module": "哲学与文化",
+        "chapter": "文化传承与文化创新",
+        "difficulty": 3,
+        "importance": 4,
+        "description": "经济政治决定文化，文化反作用于经济政治；文化与经济政治相互交融。",
+        "keywords": "文化与经济政治,决定,反作用,相互交融",
+        "exam_type": "选择题、辨析题"
+      },
+      {
+        "id": "P_K4_5_3",
+        "name": "传统文化的继承与发展",
+        "type": "KnowledgePoint",
+        "module": "哲学与文化",
+        "chapter": "文化传承与文化创新",
+        "difficulty": 3,
+        "importance": 4,
+        "description": "对待传统文化取其精华去其糟粕，推陈出新革故鼎新，在继承基础上发展、发展中继承。",
+        "keywords": "传统文化,取其精华去其糟粕,推陈出新,革故鼎新",
+        "exam_type": "选择题、材料分析题"
+      },
+      {
+        "id": "P_K4_5_4",
+        "name": "中华文化的特征",
+        "type": "KnowledgePoint",
+        "module": "哲学与文化",
+        "chapter": "文化传承与文化创新",
+        "difficulty": 3,
+        "importance": 4,
+        "description": "源远流长、博大精深；其独特性、区域性、民族性和包容性造就中华文化博大精深。",
+        "keywords": "中华文化,源远流长,博大精深,包容性",
+        "exam_type": "选择题、简答题"
+      },
+      {
+        "id": "P_K4_5_5",
+        "name": "文化创新的途径",
+        "type": "KnowledgePoint",
+        "module": "哲学与文化",
+        "chapter": "文化传承与文化创新",
+        "difficulty": 4,
+        "importance": 5,
+        "description": "根本途径是立足社会实践；基本途径是继承传统推陈出新、面向世界博采众长。",
+        "keywords": "文化创新,根本途径,基本途径,社会实践",
+        "exam_type": "材料分析题、论述题"
+      },
+      {
+        "id": "P_K4_5_6",
+        "name": "坚定文化自信建设文化强国",
+        "type": "KnowledgePoint",
+        "module": "哲学与文化",
+        "chapter": "文化传承与文化创新",
+        "difficulty": 3,
+        "importance": 4,
+        "description": "文化自信是对自身文化生命力的坚定信念；坚持马克思主义指导，走中国特色社会主义文化发展道路。",
+        "keywords": "文化自信,文化强国,文化发展道路",
+        "exam_type": "选择题、材料分析题"
+      },
+      {
+        "id": "P_K5_1_1",
+        "name": "世界多极化趋势",
+        "type": "KnowledgePoint",
+        "module": "当代国际政治与经济",
+        "chapter": "世界多极化",
+        "difficulty": 3,
+        "importance": 4,
+        "description": "世界多极化深入发展是当今国际形势的突出特点，多极化有利于世界和平与发展。",
+        "keywords": "世界多极化,国际形势,和平发展",
+        "exam_type": "选择题、材料分析题"
+      },
+      {
+        "id": "P_K5_1_2",
+        "name": "当代国际竞争的实质",
+        "type": "KnowledgePoint",
+        "module": "当代国际政治与经济",
+        "chapter": "世界多极化",
+        "difficulty": 3,
+        "importance": 4,
+        "description": "实质是以经济和科技实力为基础的综合国力的较量。",
+        "keywords": "国际竞争,综合国力,经济科技",
+        "exam_type": "选择题、简答题"
+      },
+      {
+        "id": "P_K5_1_3",
+        "name": "我国的外交政策",
+        "type": "KnowledgePoint",
+        "module": "当代国际政治与经济",
+        "chapter": "世界多极化",
+        "difficulty": 3,
+        "importance": 4,
+        "description": "独立自主的和平外交政策，宗旨是维护世界和平促进共同发展，基本立场独立自主，基本准则和平共处五项原则。",
+        "keywords": "独立自主,和平外交,和平共处五项原则,宗旨",
+        "exam_type": "选择题、材料分析题"
+      },
+      {
+        "id": "P_K5_2_1",
+        "name": "经济全球化的表现与动因",
+        "type": "KnowledgePoint",
+        "module": "当代国际政治与经济",
+        "chapter": "经济全球化",
+        "difficulty": 3,
+        "importance": 4,
+        "description": "表现为生产、贸易、资本全球化；跨国公司是其主要载体，生产力发展和科技进步是根本动力。",
+        "keywords": "经济全球化,生产贸易资本全球化,跨国公司",
+        "exam_type": "选择题、简答题"
+      },
+      {
+        "id": "P_K5_2_2",
+        "name": "经济全球化的影响",
+        "type": "KnowledgePoint",
+        "module": "当代国际政治与经济",
+        "chapter": "经济全球化",
+        "difficulty": 4,
+        "importance": 4,
+        "description": "经济全球化是把双刃剑，既是机遇也带来风险，使世界经济波动性、不平衡、不确定性加剧。",
+        "keywords": "双刃剑,机遇与挑战,经济风险",
+        "exam_type": "材料分析题、论述题"
+      },
+      {
+        "id": "P_K5_2_3",
+        "name": "发展更高层次开放型经济",
+        "type": "KnowledgePoint",
+        "module": "当代国际政治与经济",
+        "chapter": "经济全球化",
+        "difficulty": 3,
+        "importance": 4,
+        "description": "我国以一带一路建设为重点，坚持引进来和走出去并重，推动形成全面开放新格局。",
+        "keywords": "开放型经济,一带一路,引进来走出去",
+        "exam_type": "材料分析题"
+      },
+      {
+        "id": "P_K5_3_1",
+        "name": "联合国的宗旨与原则",
+        "type": "KnowledgePoint",
+        "module": "当代国际政治与经济",
+        "chapter": "国际组织",
+        "difficulty": 3,
+        "importance": 4,
+        "description": "维护国际和平安全、发展国际友好关系；原则包括主权平等、和平解决争端等。",
+        "keywords": "联合国,宗旨,原则,主权平等",
+        "exam_type": "选择题、简答题"
+      },
+      {
+        "id": "P_K5_3_2",
+        "name": "世界贸易组织的基本原则",
+        "type": "KnowledgePoint",
+        "module": "当代国际政治与经济",
+        "chapter": "国际组织",
+        "difficulty": 3,
+        "importance": 4,
+        "description": "非歧视（最惠国待遇、国民待遇）、透明度、自由贸易、公平竞争等原则。",
+        "keywords": "WTO,非歧视,最惠国待遇,国民待遇",
+        "exam_type": "选择题"
+      },
+      {
+        "id": "P_K5_3_3",
+        "name": "主要区域国际组织",
+        "type": "KnowledgePoint",
+        "module": "当代国际政治与经济",
+        "chapter": "国际组织",
+        "difficulty": 3,
+        "importance": 3,
+        "description": "欧盟、东盟、亚太经合组织、非盟等区域组织的性质与作用。",
+        "keywords": "欧盟,东盟,亚太经合组织,区域组织",
+        "exam_type": "选择题"
+      },
+      {
+        "id": "P_K5_3_4",
+        "name": "中国与国际组织",
+        "type": "KnowledgePoint",
+        "module": "当代国际政治与经济",
+        "chapter": "国际组织",
+        "difficulty": 2,
+        "importance": 3,
+        "description": "中国是联合国安理会常任理事国，积极推动一带一路、金砖、上合等多边合作。",
+        "keywords": "中国,联合国常任理事国,一带一路,金砖,上合",
+        "exam_type": "选择题、简答题"
+      },
+      {
+        "id": "P_K6_1_1",
+        "name": "民事权利能力与行为能力",
+        "type": "KnowledgePoint",
+        "module": "法律生活与逻辑思维",
+        "chapter": "民事权利与义务",
+        "difficulty": 3,
+        "importance": 4,
+        "description": "民事权利能力是享有民事权利承担民事义务的资格；行为能力按年龄智力分为完全、限制、无行为能力人。",
+        "keywords": "民事权利能力,民事行为能力,完全限制无",
+        "exam_type": "选择题、材料分析题"
+      },
+      {
+        "id": "P_K6_1_2",
+        "name": "人身权",
+        "type": "KnowledgePoint",
+        "module": "法律生活与逻辑思维",
+        "chapter": "民事权利与义务",
+        "difficulty": 3,
+        "importance": 4,
+        "description": "包括生命权、身体权、健康权、姓名权、肖像权、名誉权、荣誉权、隐私权等。",
+        "keywords": "人身权,生命健康权,姓名肖像名誉隐私权",
+        "exam_type": "选择题、案例分析题"
+      },
+      {
+        "id": "P_K6_1_3",
+        "name": "物权",
+        "type": "KnowledgePoint",
+        "module": "法律生活与逻辑思维",
+        "chapter": "民事权利与义务",
+        "difficulty": 4,
+        "importance": 4,
+        "description": "物权是权利人依法对特定物直接支配和排他的权利，包括所有权、用益物权、担保物权。",
+        "keywords": "物权,所有权,用益物权,担保物权",
+        "exam_type": "选择题、案例分析题"
+      },
+      {
+        "id": "P_K6_1_4",
+        "name": "合同",
+        "type": "KnowledgePoint",
+        "module": "法律生活与逻辑思维",
+        "chapter": "民事权利与义务",
+        "difficulty": 4,
+        "importance": 5,
+        "description": "合同是民事主体之间设立变更终止民事法律关系的协议，包括订立、履行、违约责任。",
+        "keywords": "合同,订立履行,违约责任,要约承诺",
+        "exam_type": "案例分析题、选择题"
+      },
+      {
+        "id": "P_K6_1_5",
+        "name": "侵权责任",
+        "type": "KnowledgePoint",
+        "module": "法律生活与逻辑思维",
+        "chapter": "民事权利与义务",
+        "difficulty": 3,
+        "importance": 4,
+        "description": "承担侵权责任的方式有停止侵害、排除妨碍、赔偿损失等；归责原则包括过错责任和无过错责任。",
+        "keywords": "侵权责任,归责原则,过错责任,赔偿损失",
+        "exam_type": "案例分析题、选择题"
+      },
+      {
+        "id": "P_K6_2_1",
+        "name": "婚姻法基本原则与结婚条件",
+        "type": "KnowledgePoint",
+        "module": "法律生活与逻辑思维",
+        "chapter": "家庭婚姻就业与争议解决",
+        "difficulty": 3,
+        "importance": 3,
+        "description": "婚姻自由、一夫一妻、男女平等；法定婚龄男22女20，禁止一定范围内的近亲属结婚。",
+        "keywords": "婚姻自由,一夫一妻,法定婚龄,结婚条件",
+        "exam_type": "选择题、案例分析题"
+      },
+      {
+        "id": "P_K6_2_2",
+        "name": "家庭关系",
+        "type": "KnowledgePoint",
+        "module": "法律生活与逻辑思维",
+        "chapter": "家庭婚姻就业与争议解决",
+        "difficulty": 3,
+        "importance": 3,
+        "description": "夫妻财产制（共同财产与个人财产）、父母子女间的权利义务关系。",
+        "keywords": "夫妻财产制,共同财产,父母子女关系,抚养赡养",
+        "exam_type": "选择题、案例分析题"
+      },
+      {
+        "id": "P_K6_2_3",
+        "name": "劳动合同与劳动者权利",
+        "type": "KnowledgePoint",
+        "module": "法律生活与逻辑思维",
+        "chapter": "家庭婚姻就业与争议解决",
+        "difficulty": 4,
+        "importance": 4,
+        "description": "劳动合同的订立、变更、解除；劳动者享有平等就业、取得报酬、休息休假、社会保险等权利。",
+        "keywords": "劳动合同,订立解除,劳动者权利,劳动报酬",
+        "exam_type": "案例分析题、选择题"
+      },
+      {
+        "id": "P_K6_2_4",
+        "name": "争议解决方式",
+        "type": "KnowledgePoint",
+        "module": "法律生活与逻辑思维",
+        "chapter": "家庭婚姻就业与争议解决",
+        "difficulty": 3,
+        "importance": 4,
+        "description": "协商、调解、仲裁、诉讼；区分民事仲裁（或裁或审）与劳动仲裁（仲裁前置）。",
+        "keywords": "争议解决,协商调解仲裁诉讼,劳动仲裁前置",
+        "exam_type": "选择题、案例分析题"
+      },
+      {
+        "id": "P_K6_3_1",
+        "name": "科学思维的特征与意义",
+        "type": "KnowledgePoint",
+        "module": "法律生活与逻辑思维",
+        "chapter": "科学思维与形式逻辑",
+        "difficulty": 2,
+        "importance": 3,
+        "description": "科学思维具有客观性、预见性、可检验性；有助于把握事物本质、推动认识和实践创新。",
+        "keywords": "科学思维,客观性,预见性,可检验性",
+        "exam_type": "选择题"
+      },
+      {
+        "id": "P_K6_3_2",
+        "name": "概念的内涵与外延",
+        "type": "KnowledgePoint",
+        "module": "法律生活与逻辑思维",
+        "chapter": "科学思维与形式逻辑",
+        "difficulty": 3,
+        "importance": 4,
+        "description": "概念的内涵是事物的特有属性，外延是概念所指对象范围；概念间有全同、属种、交叉、矛盾、反对等关系。",
+        "keywords": "概念,内涵,外延,概念间关系",
+        "exam_type": "选择题"
+      },
+      {
+        "id": "P_K6_3_3",
+        "name": "简单判断",
+        "type": "KnowledgePoint",
+        "module": "法律生活与逻辑思维",
+        "chapter": "科学思维与形式逻辑",
+        "difficulty": 3,
+        "importance": 3,
+        "description": "包括性质判断（单称、特称、全称；肯定否定）和关系判断。",
+        "keywords": "性质判断,关系判断,单称特称全称",
+        "exam_type": "选择题"
+      },
+      {
+        "id": "P_K6_3_4",
+        "name": "复合判断",
+        "type": "KnowledgePoint",
+        "module": "法律生活与逻辑思维",
+        "chapter": "科学思维与形式逻辑",
+        "difficulty": 3,
+        "importance": 4,
+        "description": "联言判断、选言判断（相容不相容）、假言判断（充分必要条件）。",
+        "keywords": "联言判断,选言判断,假言判断,充分必要条件",
+        "exam_type": "选择题、案例分析题"
+      },
+      {
+        "id": "P_K6_3_5",
+        "name": "形式逻辑的基本规律",
+        "type": "KnowledgePoint",
+        "module": "法律生活与逻辑思维",
+        "chapter": "科学思维与形式逻辑",
+        "difficulty": 4,
+        "importance": 5,
+        "description": "同一律（思想确定性）、矛盾律（不可同真）、排中律（不可同假），是正确思维的必要条件。",
+        "keywords": "同一律,矛盾律,排中律,思维规律",
+        "exam_type": "选择题、辨析题"
+      },
+      {
+        "id": "P_K6_3_6",
+        "name": "演绎推理与归纳推理",
+        "type": "KnowledgePoint",
+        "module": "法律生活与逻辑思维",
+        "chapter": "科学思维与形式逻辑",
+        "difficulty": 4,
+        "importance": 5,
+        "description": "演绎推理从一般到个别（如三段论），归纳推理从个别到一般（完全归纳与不完全归纳）。",
+        "keywords": "演绎推理,三段论,归纳推理,完全不完全归纳",
+        "exam_type": "选择题、案例分析题"
+      },
+      {
+        "id": "P_K6_4_1",
+        "name": "辩证思维的整体性与动态性",
+        "type": "KnowledgePoint",
+        "module": "法律生活与逻辑思维",
+        "chapter": "辩证思维与创新思维",
+        "difficulty": 3,
+        "importance": 4,
+        "description": "辩证思维用联系发展全面的观点看问题，坚持整体性与动态性相统一。",
+        "keywords": "辩证思维,整体性,动态性,联系发展",
+        "exam_type": "选择题、简答题"
+      },
+      {
+        "id": "P_K6_4_2",
+        "name": "分析与综合的辩证统一",
+        "type": "KnowledgePoint",
+        "module": "法律生活与逻辑思维",
+        "chapter": "辩证思维与创新思维",
+        "difficulty": 3,
+        "importance": 4,
+        "description": "分析是把整体分解为部分，综合是把部分联结为整体；二者是方向相反又相互依存的思维方法。",
+        "keywords": "分析,综合,辩证统一,思维方法",
+        "exam_type": "选择题、论述题"
+      },
+      {
+        "id": "P_K6_4_3",
+        "name": "创新思维的思维方式",
+        "type": "KnowledgePoint",
+        "module": "法律生活与逻辑思维",
+        "chapter": "辩证思维与创新思维",
+        "difficulty": 3,
+        "importance": 4,
+        "description": "包括逆向思维、发散思维、聚合思维、联想思维等，是多向性、跨越性的思维。",
+        "keywords": "创新思维,逆向思维,发散思维,聚合思维",
+        "exam_type": "选择题、案例分析题"
+      },
+      {
+        "id": "P_K6_4_4",
+        "name": "超前思维",
+        "type": "KnowledgePoint",
+        "module": "法律生活与逻辑思维",
+        "chapter": "辩证思维与创新思维",
+        "difficulty": 2,
+        "importance": 2,
+        "description": "超前思维是具有预见性的思维方式，有助于把握趋势、科学决策。",
+        "keywords": "超前思维,预见性,科学决策",
+        "exam_type": "选择题"
+      }
+    ],
+    "edges": [
+      {
+        "source": "P_M1",
+        "target": "P_C1_1",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "模块【中国特色社会主义】包含章节【社会主义从空想到科学到现实】"
+      },
+      {
+        "source": "P_M1",
+        "target": "P_C1_2",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "模块【中国特色社会主义】包含章节【中国特色社会主义的开创与发展】"
+      },
+      {
+        "source": "P_M1",
+        "target": "P_C1_3",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "模块【中国特色社会主义】包含章节【新时代中国特色社会主义与中国梦】"
+      },
+      {
+        "source": "P_M2",
+        "target": "P_C2_1",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "模块【经济与社会】包含章节【我国的基本经济制度】"
+      },
+      {
+        "source": "P_M2",
+        "target": "P_C2_2",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "模块【经济与社会】包含章节【经济发展与社会进步】"
+      },
+      {
+        "source": "P_M3",
+        "target": "P_C3_1",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "模块【政治与法治】包含章节【中国共产党的领导】"
+      },
+      {
+        "source": "P_M3",
+        "target": "P_C3_2",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "模块【政治与法治】包含章节【人民当家作主】"
+      },
+      {
+        "source": "P_M3",
+        "target": "P_C3_3",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "模块【政治与法治】包含章节【全面依法治国】"
+      },
+      {
+        "source": "P_M4",
+        "target": "P_C4_1",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "模块【哲学与文化】包含章节【时代精神的精华】"
+      },
+      {
+        "source": "P_M4",
+        "target": "P_C4_2",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "模块【哲学与文化】包含章节【探索世界与追求真理】"
+      },
+      {
+        "source": "P_M4",
+        "target": "P_C4_3",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "模块【哲学与文化】包含章节【联系发展矛盾（唯物辩证法）】"
+      },
+      {
+        "source": "P_M4",
+        "target": "P_C4_4",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "模块【哲学与文化】包含章节【社会历史与人生价值】"
+      },
+      {
+        "source": "P_M4",
+        "target": "P_C4_5",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "模块【哲学与文化】包含章节【文化传承与文化创新】"
+      },
+      {
+        "source": "P_M5",
+        "target": "P_C5_1",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "模块【当代国际政治与经济】包含章节【世界多极化】"
+      },
+      {
+        "source": "P_M5",
+        "target": "P_C5_2",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "模块【当代国际政治与经济】包含章节【经济全球化】"
+      },
+      {
+        "source": "P_M5",
+        "target": "P_C5_3",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "模块【当代国际政治与经济】包含章节【国际组织】"
+      },
+      {
+        "source": "P_M6",
+        "target": "P_C6_1",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "模块【法律生活与逻辑思维】包含章节【民事权利与义务】"
+      },
+      {
+        "source": "P_M6",
+        "target": "P_C6_2",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "模块【法律生活与逻辑思维】包含章节【家庭婚姻就业与争议解决】"
+      },
+      {
+        "source": "P_M6",
+        "target": "P_C6_3",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "模块【法律生活与逻辑思维】包含章节【科学思维与形式逻辑】"
+      },
+      {
+        "source": "P_M6",
+        "target": "P_C6_4",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "模块【法律生活与逻辑思维】包含章节【辩证思维与创新思维】"
+      },
+      {
+        "source": "P_C1_1",
+        "target": "P_K1_1_1",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【社会主义从空想到科学到现实】包含知识点【空想社会主义的代表与局限】"
+      },
+      {
+        "source": "P_C1_1",
+        "target": "P_K1_1_2",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【社会主义从空想到科学到现实】包含知识点【科学社会主义的诞生】"
+      },
+      {
+        "source": "P_C1_1",
+        "target": "P_K1_1_3",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【社会主义从空想到科学到现实】包含知识点【科学社会主义从理论到现实】"
+      },
+      {
+        "source": "P_C1_1",
+        "target": "P_K1_1_4",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【社会主义从空想到科学到现实】包含知识点【社会主义从一国到多国】"
+      },
+      {
+        "source": "P_C1_2",
+        "target": "P_K1_2_1",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【中国特色社会主义的开创与发展】包含知识点【新民主主义革命向社会主义过渡】"
+      },
+      {
+        "source": "P_C1_2",
+        "target": "P_K1_2_2",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【中国特色社会主义的开创与发展】包含知识点【改革开放的伟大决策】"
+      },
+      {
+        "source": "P_C1_2",
+        "target": "P_K1_2_3",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【中国特色社会主义的开创与发展】包含知识点【中国特色社会主义道路的开辟】"
+      },
+      {
+        "source": "P_C1_2",
+        "target": "P_K1_2_4",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【中国特色社会主义的开创与发展】包含知识点【中国特色社会主义理论体系】"
+      },
+      {
+        "source": "P_C1_3",
+        "target": "P_K1_3_1",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【新时代中国特色社会主义与中国梦】包含知识点【新时代我国社会主要矛盾】"
+      },
+      {
+        "source": "P_C1_3",
+        "target": "P_K1_3_2",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【新时代中国特色社会主义与中国梦】包含知识点【习近平新时代中国特色社会主义思想】"
+      },
+      {
+        "source": "P_C1_3",
+        "target": "P_K1_3_3",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【新时代中国特色社会主义与中国梦】包含知识点【新征程两步走战略安排】"
+      },
+      {
+        "source": "P_C1_3",
+        "target": "P_K1_3_4",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【新时代中国特色社会主义与中国梦】包含知识点【中国梦的本质】"
+      },
+      {
+        "source": "P_C2_1",
+        "target": "P_K2_1_1",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【我国的基本经济制度】包含知识点【公有制为主体多种所有制经济共同发展】"
+      },
+      {
+        "source": "P_C2_1",
+        "target": "P_K2_1_2",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【我国的基本经济制度】包含知识点【公有制经济的实现形式】"
+      },
+      {
+        "source": "P_C2_1",
+        "target": "P_K2_1_3",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【我国的基本经济制度】包含知识点【两个毫不动摇】"
+      },
+      {
+        "source": "P_C2_1",
+        "target": "P_K2_1_4",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【我国的基本经济制度】包含知识点【社会主义市场经济体制】"
+      },
+      {
+        "source": "P_C2_1",
+        "target": "P_K2_1_5",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【我国的基本经济制度】包含知识点【宏观调控的目标与手段】"
+      },
+      {
+        "source": "P_C2_2",
+        "target": "P_K2_2_1",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【经济发展与社会进步】包含知识点【新发展理念】"
+      },
+      {
+        "source": "P_C2_2",
+        "target": "P_K2_2_2",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【经济发展与社会进步】包含知识点【建设现代化经济体系】"
+      },
+      {
+        "source": "P_C2_2",
+        "target": "P_K2_2_3",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【经济发展与社会进步】包含知识点【供给侧结构性改革】"
+      },
+      {
+        "source": "P_C2_2",
+        "target": "P_K2_2_4",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【经济发展与社会进步】包含知识点【我国的分配制度】"
+      },
+      {
+        "source": "P_C2_2",
+        "target": "P_K2_2_5",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【经济发展与社会进步】包含知识点【社会保障制度】"
+      },
+      {
+        "source": "P_C3_1",
+        "target": "P_K3_1_1",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【中国共产党的领导】包含知识点【中国共产党的性质与宗旨】"
+      },
+      {
+        "source": "P_C3_1",
+        "target": "P_K3_1_2",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【中国共产党的领导】包含知识点【党的领导方式与执政方式】"
+      },
+      {
+        "source": "P_C3_1",
+        "target": "P_K3_1_3",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【中国共产党的领导】包含知识点【党的领导是社会主义最本质特征】"
+      },
+      {
+        "source": "P_C3_1",
+        "target": "P_K3_1_4",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【中国共产党的领导】包含知识点【全面从严治党】"
+      },
+      {
+        "source": "P_C3_2",
+        "target": "P_K3_2_1",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【人民当家作主】包含知识点【人民代表大会制度】"
+      },
+      {
+        "source": "P_C3_2",
+        "target": "P_K3_2_2",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【人民当家作主】包含知识点【人大代表的权利与义务】"
+      },
+      {
+        "source": "P_C3_2",
+        "target": "P_K3_2_3",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【人民当家作主】包含知识点【政党制度】"
+      },
+      {
+        "source": "P_C3_2",
+        "target": "P_K3_2_4",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【人民当家作主】包含知识点【民族区域自治制度】"
+      },
+      {
+        "source": "P_C3_2",
+        "target": "P_K3_2_5",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【人民当家作主】包含知识点【基层群众自治制度】"
+      },
+      {
+        "source": "P_C3_2",
+        "target": "P_K3_2_6",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【人民当家作主】包含知识点【国家机构及其关系】"
+      },
+      {
+        "source": "P_C3_3",
+        "target": "P_K3_3_1",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【全面依法治国】包含知识点【全面依法治国总目标】"
+      },
+      {
+        "source": "P_C3_3",
+        "target": "P_K3_3_2",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【全面依法治国】包含知识点【法治国家法治政府法治社会一体建设】"
+      },
+      {
+        "source": "P_C3_3",
+        "target": "P_K3_3_3",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【全面依法治国】包含知识点【新十六字方针】"
+      },
+      {
+        "source": "P_C3_3",
+        "target": "P_K3_3_4",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【全面依法治国】包含知识点【宪法是国家的根本法】"
+      },
+      {
+        "source": "P_C4_1",
+        "target": "P_K4_1_1",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【时代精神的精华】包含知识点【哲学是世界观与方法论的统一】"
+      },
+      {
+        "source": "P_C4_1",
+        "target": "P_K4_1_2",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【时代精神的精华】包含知识点【哲学的基本问题】"
+      },
+      {
+        "source": "P_C4_1",
+        "target": "P_K4_1_3",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【时代精神的精华】包含知识点【唯物主义与唯心主义的分歧】"
+      },
+      {
+        "source": "P_C4_1",
+        "target": "P_K4_1_4",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【时代精神的精华】包含知识点【马克思主义哲学的产生与特征】"
+      },
+      {
+        "source": "P_C4_2",
+        "target": "P_K4_2_1",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【探索世界与追求真理】包含知识点【世界的物质性】"
+      },
+      {
+        "source": "P_C4_2",
+        "target": "P_K4_2_2",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【探索世界与追求真理】包含知识点【意识的本质与作用】"
+      },
+      {
+        "source": "P_C4_2",
+        "target": "P_K4_2_3",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【探索世界与追求真理】包含知识点【一切从实际出发实事求是】"
+      },
+      {
+        "source": "P_C4_2",
+        "target": "P_K4_2_4",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【探索世界与追求真理】包含知识点【实践的含义与特点】"
+      },
+      {
+        "source": "P_C4_2",
+        "target": "P_K4_2_5",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【探索世界与追求真理】包含知识点【实践是认识的基础】"
+      },
+      {
+        "source": "P_C4_2",
+        "target": "P_K4_2_6",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【探索世界与追求真理】包含知识点【真理的客观性具体性条件性】"
+      },
+      {
+        "source": "P_C4_2",
+        "target": "P_K4_2_7",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【探索世界与追求真理】包含知识点【认识的反复性与无限性】"
+      },
+      {
+        "source": "P_C4_3",
+        "target": "P_K4_3_1",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【联系发展矛盾（唯物辩证法）】包含知识点【联系的普遍性客观性多样性】"
+      },
+      {
+        "source": "P_C4_3",
+        "target": "P_K4_3_2",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【联系发展矛盾（唯物辩证法）】包含知识点【整体与部分的辩证关系】"
+      },
+      {
+        "source": "P_C4_3",
+        "target": "P_K4_3_3",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【联系发展矛盾（唯物辩证法）】包含知识点【发展的实质与量变质变】"
+      },
+      {
+        "source": "P_C4_3",
+        "target": "P_K4_3_4",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【联系发展矛盾（唯物辩证法）】包含知识点【前进性与曲折性的统一】"
+      },
+      {
+        "source": "P_C4_3",
+        "target": "P_K4_3_5",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【联系发展矛盾（唯物辩证法）】包含知识点【矛盾的普遍性与特殊性】"
+      },
+      {
+        "source": "P_C4_3",
+        "target": "P_K4_3_6",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【联系发展矛盾（唯物辩证法）】包含知识点【主次矛盾与矛盾的主次方面】"
+      },
+      {
+        "source": "P_C4_3",
+        "target": "P_K4_3_7",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【联系发展矛盾（唯物辩证法）】包含知识点【矛盾的同一性与斗争性】"
+      },
+      {
+        "source": "P_C4_3",
+        "target": "P_K4_3_8",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【联系发展矛盾（唯物辩证法）】包含知识点【辩证的否定与创新】"
+      },
+      {
+        "source": "P_C4_4",
+        "target": "P_K4_4_1",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【社会历史与人生价值】包含知识点【社会存在与社会意识】"
+      },
+      {
+        "source": "P_C4_4",
+        "target": "P_K4_4_2",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【社会历史与人生价值】包含知识点【社会基本矛盾】"
+      },
+      {
+        "source": "P_C4_4",
+        "target": "P_K4_4_3",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【社会历史与人生价值】包含知识点【人民群众是历史的创造者】"
+      },
+      {
+        "source": "P_C4_4",
+        "target": "P_K4_4_4",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【社会历史与人生价值】包含知识点【价值观的导向作用】"
+      },
+      {
+        "source": "P_C4_4",
+        "target": "P_K4_4_5",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【社会历史与人生价值】包含知识点【价值判断与价值选择】"
+      },
+      {
+        "source": "P_C4_4",
+        "target": "P_K4_4_6",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【社会历史与人生价值】包含知识点【人生的真正价值在于贡献】"
+      },
+      {
+        "source": "P_C4_5",
+        "target": "P_K4_5_1",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【文化传承与文化创新】包含知识点【文化的内涵与功能】"
+      },
+      {
+        "source": "P_C4_5",
+        "target": "P_K4_5_2",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【文化传承与文化创新】包含知识点【文化与经济政治的关系】"
+      },
+      {
+        "source": "P_C4_5",
+        "target": "P_K4_5_3",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【文化传承与文化创新】包含知识点【传统文化的继承与发展】"
+      },
+      {
+        "source": "P_C4_5",
+        "target": "P_K4_5_4",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【文化传承与文化创新】包含知识点【中华文化的特征】"
+      },
+      {
+        "source": "P_C4_5",
+        "target": "P_K4_5_5",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【文化传承与文化创新】包含知识点【文化创新的途径】"
+      },
+      {
+        "source": "P_C4_5",
+        "target": "P_K4_5_6",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【文化传承与文化创新】包含知识点【坚定文化自信建设文化强国】"
+      },
+      {
+        "source": "P_C5_1",
+        "target": "P_K5_1_1",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【世界多极化】包含知识点【世界多极化趋势】"
+      },
+      {
+        "source": "P_C5_1",
+        "target": "P_K5_1_2",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【世界多极化】包含知识点【当代国际竞争的实质】"
+      },
+      {
+        "source": "P_C5_1",
+        "target": "P_K5_1_3",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【世界多极化】包含知识点【我国的外交政策】"
+      },
+      {
+        "source": "P_C5_2",
+        "target": "P_K5_2_1",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【经济全球化】包含知识点【经济全球化的表现与动因】"
+      },
+      {
+        "source": "P_C5_2",
+        "target": "P_K5_2_2",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【经济全球化】包含知识点【经济全球化的影响】"
+      },
+      {
+        "source": "P_C5_2",
+        "target": "P_K5_2_3",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【经济全球化】包含知识点【发展更高层次开放型经济】"
+      },
+      {
+        "source": "P_C5_3",
+        "target": "P_K5_3_1",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【国际组织】包含知识点【联合国的宗旨与原则】"
+      },
+      {
+        "source": "P_C5_3",
+        "target": "P_K5_3_2",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【国际组织】包含知识点【世界贸易组织的基本原则】"
+      },
+      {
+        "source": "P_C5_3",
+        "target": "P_K5_3_3",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【国际组织】包含知识点【主要区域国际组织】"
+      },
+      {
+        "source": "P_C5_3",
+        "target": "P_K5_3_4",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【国际组织】包含知识点【中国与国际组织】"
+      },
+      {
+        "source": "P_C6_1",
+        "target": "P_K6_1_1",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【民事权利与义务】包含知识点【民事权利能力与行为能力】"
+      },
+      {
+        "source": "P_C6_1",
+        "target": "P_K6_1_2",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【民事权利与义务】包含知识点【人身权】"
+      },
+      {
+        "source": "P_C6_1",
+        "target": "P_K6_1_3",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【民事权利与义务】包含知识点【物权】"
+      },
+      {
+        "source": "P_C6_1",
+        "target": "P_K6_1_4",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【民事权利与义务】包含知识点【合同】"
+      },
+      {
+        "source": "P_C6_1",
+        "target": "P_K6_1_5",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【民事权利与义务】包含知识点【侵权责任】"
+      },
+      {
+        "source": "P_C6_2",
+        "target": "P_K6_2_1",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【家庭婚姻就业与争议解决】包含知识点【婚姻法基本原则与结婚条件】"
+      },
+      {
+        "source": "P_C6_2",
+        "target": "P_K6_2_2",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【家庭婚姻就业与争议解决】包含知识点【家庭关系】"
+      },
+      {
+        "source": "P_C6_2",
+        "target": "P_K6_2_3",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【家庭婚姻就业与争议解决】包含知识点【劳动合同与劳动者权利】"
+      },
+      {
+        "source": "P_C6_2",
+        "target": "P_K6_2_4",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【家庭婚姻就业与争议解决】包含知识点【争议解决方式】"
+      },
+      {
+        "source": "P_C6_3",
+        "target": "P_K6_3_1",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【科学思维与形式逻辑】包含知识点【科学思维的特征与意义】"
+      },
+      {
+        "source": "P_C6_3",
+        "target": "P_K6_3_2",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【科学思维与形式逻辑】包含知识点【概念的内涵与外延】"
+      },
+      {
+        "source": "P_C6_3",
+        "target": "P_K6_3_3",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【科学思维与形式逻辑】包含知识点【简单判断】"
+      },
+      {
+        "source": "P_C6_3",
+        "target": "P_K6_3_4",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【科学思维与形式逻辑】包含知识点【复合判断】"
+      },
+      {
+        "source": "P_C6_3",
+        "target": "P_K6_3_5",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【科学思维与形式逻辑】包含知识点【形式逻辑的基本规律】"
+      },
+      {
+        "source": "P_C6_3",
+        "target": "P_K6_3_6",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【科学思维与形式逻辑】包含知识点【演绎推理与归纳推理】"
+      },
+      {
+        "source": "P_C6_4",
+        "target": "P_K6_4_1",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【辩证思维与创新思维】包含知识点【辩证思维的整体性与动态性】"
+      },
+      {
+        "source": "P_C6_4",
+        "target": "P_K6_4_2",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【辩证思维与创新思维】包含知识点【分析与综合的辩证统一】"
+      },
+      {
+        "source": "P_C6_4",
+        "target": "P_K6_4_3",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【辩证思维与创新思维】包含知识点【创新思维的思维方式】"
+      },
+      {
+        "source": "P_C6_4",
+        "target": "P_K6_4_4",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【辩证思维与创新思维】包含知识点【超前思维】"
+      },
+      {
+        "source": "P_K1_1_2",
+        "target": "P_K1_1_1",
+        "relation": "PREREQUISITE",
+        "weight": 0.8,
+        "description": "科学社会主义的诞生建立在对空想社会主义批判继承之上"
+      },
+      {
+        "source": "P_K1_1_3",
+        "target": "P_K1_1_2",
+        "relation": "PREREQUISITE",
+        "weight": 0.8,
+        "description": "理解科学社会主义从理论到现实需先掌握其诞生"
+      },
+      {
+        "source": "P_K1_1_4",
+        "target": "P_K1_1_3",
+        "relation": "PREREQUISITE",
+        "weight": 0.7,
+        "description": "从一国到多国是在十月革命现实基础上的扩展"
+      },
+      {
+        "source": "P_K1_2_1",
+        "target": "P_K1_1_3",
+        "relation": "PREREQUISITE",
+        "weight": 0.7,
+        "description": "我国社会主义制度确立以科学社会主义现实发展为前提"
+      },
+      {
+        "source": "P_K1_2_3",
+        "target": "P_K1_2_2",
+        "relation": "PREREQUISITE",
+        "weight": 0.8,
+        "description": "中国特色社会主义道路开辟以改革开放决策为前提"
+      },
+      {
+        "source": "P_K1_2_4",
+        "target": "P_K1_2_3",
+        "relation": "DERIVED_FROM",
+        "weight": 0.7,
+        "description": "理论体系在道路开辟实践中提炼形成"
+      },
+      {
+        "source": "P_K1_3_2",
+        "target": "P_K1_3_1",
+        "relation": "DERIVED_FROM",
+        "weight": 0.8,
+        "description": "习近平新时代中国特色社会主义思想立足于新时代主要矛盾判断"
+      },
+      {
+        "source": "P_K2_2_1",
+        "target": "P_K1_3_1",
+        "relation": "APPLIED_IN",
+        "weight": 0.7,
+        "description": "新发展理念是解决新时代社会主要矛盾的实践要求"
+      },
+      {
+        "source": "P_K2_2_3",
+        "target": "P_K2_1_4",
+        "relation": "APPLIED_IN",
+        "weight": 0.8,
+        "description": "供给侧结构性改革是完善社会主义市场经济体制的实践"
+      },
+      {
+        "source": "P_K2_2_3",
+        "target": "P_K2_2_1",
+        "relation": "DERIVED_FROM",
+        "weight": 0.7,
+        "description": "供给侧结构性改革贯彻新发展理念"
+      },
+      {
+        "source": "P_K2_2_2",
+        "target": "P_K2_2_1",
+        "relation": "DERIVED_FROM",
+        "weight": 0.7,
+        "description": "现代化经济体系建设以新发展理念为指导"
+      },
+      {
+        "source": "P_K2_1_5",
+        "target": "P_K2_1_4",
+        "relation": "DERIVED_FROM",
+        "weight": 0.8,
+        "description": "宏观调控是社会主义市场经济体制中政府作用的体现"
+      },
+      {
+        "source": "P_K3_2_1",
+        "target": "P_K3_1_3",
+        "relation": "RELATED_TO",
+        "weight": 0.7,
+        "description": "人民代表大会制度是党领导人民当家作主的制度载体"
+      },
+      {
+        "source": "P_K3_2_3",
+        "target": "P_K3_1_1",
+        "relation": "RELATED_TO",
+        "weight": 0.6,
+        "description": "多党合作制度体现党的领导与统一战线"
+      },
+      {
+        "source": "P_K3_3_3",
+        "target": "P_K3_3_1",
+        "relation": "DERIVED_FROM",
+        "weight": 0.8,
+        "description": "新十六字方针是依法治国总目标的工作布局"
+      },
+      {
+        "source": "P_K3_3_4",
+        "target": "P_K3_3_1",
+        "relation": "RELATED_TO",
+        "weight": 0.8,
+        "description": "依宪治国是依法治国总目标的核心"
+      },
+      {
+        "source": "P_K3_3_2",
+        "target": "P_K3_3_3",
+        "relation": "RELATED_TO",
+        "weight": 0.7,
+        "description": "法治国家政府社会一体建设贯穿新十六字方针"
+      },
+      {
+        "source": "P_K4_2_2",
+        "target": "P_K4_2_1",
+        "relation": "PREREQUISITE",
+        "weight": 0.8,
+        "description": "理解意识能动作用需先掌握物质决定意识"
+      },
+      {
+        "source": "P_K4_2_3",
+        "target": "P_K4_2_1",
+        "relation": "DERIVED_FROM",
+        "weight": 0.7,
+        "description": "一切从实际出发由物质决定意识推导而来"
+      },
+      {
+        "source": "P_K4_2_5",
+        "target": "P_K4_2_4",
+        "relation": "PREREQUISITE",
+        "weight": 0.8,
+        "description": "把握实践是认识基础需先理解实践含义特点"
+      },
+      {
+        "source": "P_K4_2_6",
+        "target": "P_K4_2_5",
+        "relation": "PREREQUISITE",
+        "weight": 0.7,
+        "description": "真理的检验依赖实践是认识的基础"
+      },
+      {
+        "source": "P_K4_2_7",
+        "target": "P_K4_2_6",
+        "relation": "PREREQUISITE",
+        "weight": 0.6,
+        "description": "认识的反复无限性建立在真理条件性之上"
+      },
+      {
+        "source": "P_K4_3_2",
+        "target": "P_K4_3_1",
+        "relation": "PREREQUISITE",
+        "weight": 0.7,
+        "description": "整体部分关系以联系观点为基础"
+      },
+      {
+        "source": "P_K4_3_3",
+        "target": "P_K4_3_2",
+        "relation": "RELATED_TO",
+        "weight": 0.6,
+        "description": "量变质变与整体部分都是辩证法范畴"
+      },
+      {
+        "source": "P_K4_3_5",
+        "target": "P_K4_3_7",
+        "relation": "PREREQUISITE",
+        "weight": 0.8,
+        "description": "矛盾普遍性特殊性以同一性斗争性为基础"
+      },
+      {
+        "source": "P_K4_3_6",
+        "target": "P_K4_3_5",
+        "relation": "DERIVED_FROM",
+        "weight": 0.8,
+        "description": "主次矛盾、主次方面是矛盾普遍性特殊性的具体运用"
+      },
+      {
+        "source": "P_K4_3_8",
+        "target": "P_K4_3_5",
+        "relation": "RELATED_TO",
+        "weight": 0.6,
+        "description": "辩证否定与创新是矛盾运动的体现"
+      },
+      {
+        "source": "P_K4_4_1",
+        "target": "P_K4_4_2",
+        "relation": "PREREQUISITE",
+        "weight": 0.7,
+        "description": "社会存在意识关系是基本矛盾的引论"
+      },
+      {
+        "source": "P_K4_4_3",
+        "target": "P_K4_4_2",
+        "relation": "DERIVED_FROM",
+        "weight": 0.7,
+        "description": "群众史观由社会基本矛盾运动主体推导"
+      },
+      {
+        "source": "P_K4_4_5",
+        "target": "P_K4_4_4",
+        "relation": "PREREQUISITE",
+        "weight": 0.8,
+        "description": "价值判断选择以价值观导向为前提"
+      },
+      {
+        "source": "P_K4_4_6",
+        "target": "P_K4_4_5",
+        "relation": "DERIVED_FROM",
+        "weight": 0.7,
+        "description": "人生价值实现建立在正确价值判断选择之上"
+      },
+      {
+        "source": "P_K4_5_5",
+        "target": "P_K4_5_3",
+        "relation": "DERIVED_FROM",
+        "weight": 0.8,
+        "description": "文化创新基本途径以传统文化继承发展为基础"
+      },
+      {
+        "source": "P_K4_5_6",
+        "target": "P_K4_5_4",
+        "relation": "RELATED_TO",
+        "weight": 0.7,
+        "description": "文化自信建立在中华文化源远流长博大精深基础上"
+      },
+      {
+        "source": "P_K6_3_6",
+        "target": "P_K6_3_4",
+        "relation": "PREREQUISITE",
+        "weight": 0.7,
+        "description": "演绎归纳推理以判断为基础"
+      },
+      {
+        "source": "P_K6_4_2",
+        "target": "P_K4_3_2",
+        "relation": "RELATED_TO",
+        "weight": 0.7,
+        "description": "分析与综合统一呼应整体与部分辩证关系"
+      },
+      {
+        "source": "P_K6_4_3",
+        "target": "P_K4_3_8",
+        "relation": "RELATED_TO",
+        "weight": 0.7,
+        "description": "创新思维与辩证否定创新观相通"
+      },
+      {
+        "source": "P_K6_4_1",
+        "target": "P_K4_3_1",
+        "relation": "RELATED_TO",
+        "weight": 0.6,
+        "description": "辩证思维的整体动态性以联系发展观为基础"
+      },
+      {
+        "source": "P_K5_2_2",
+        "target": "P_K5_2_1",
+        "relation": "PREREQUISITE",
+        "weight": 0.8,
+        "description": "分析全球化影响需先掌握其表现动因"
+      },
+      {
+        "source": "P_K5_2_3",
+        "target": "P_K5_2_2",
+        "relation": "DERIVED_FROM",
+        "weight": 0.6,
+        "description": "发展开放型经济是应对全球化影响的对策"
+      },
+      {
+        "source": "P_K5_3_4",
+        "target": "P_K5_3_1",
+        "relation": "RELATED_TO",
+        "weight": 0.6,
+        "description": "中国与国际组织关系以联合国为重要平台"
+      },
+      {
+        "source": "P_K6_2_4",
+        "target": "P_K6_1_4",
+        "relation": "APPLIED_IN",
+        "weight": 0.6,
+        "description": "合同争议是争议解决方式的典型适用场景"
+      },
+      {
+        "source": "P_K3_3_2",
+        "target": "P_K3_1_4",
+        "relation": "RELATED_TO",
+        "weight": 0.5,
+        "description": "法治建设与全面从严治党相互促进"
+      }
+    ],
+    "categories": [
+      "中国特色社会主义",
+      "经济与社会",
+      "政治与法治",
+      "哲学与文化",
+      "当代国际政治与经济",
+      "法律生活与逻辑思维"
+    ],
+    "stats": {
+      "total_nodes": 122,
+      "total_edges": 158,
+      "modules": 6,
+      "chapters": 20,
+      "knowledge_points": 96
+    }
+  },
+  "历史": {
+    "color": "#92400E",
+    "nodes": [
+      {
+        "id": "H_M1",
+        "name": "中外历史纲要(上)——中国史",
+        "type": "Module",
+        "module": "中外历史纲要(上)——中国史",
+        "chapter": "",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "必修上册。按通史体例梳理中国从中华文明起源到中华民族伟大复兴的历史进程。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "H_M2",
+        "name": "中外历史纲要(下)——世界史",
+        "type": "Module",
+        "module": "中外历史纲要(下)——世界史",
+        "chapter": "",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "必修下册。按通史体例梳理世界从古代文明到当代全球化的发展进程。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "H_M3",
+        "name": "国家制度与社会治理",
+        "type": "Module",
+        "module": "国家制度与社会治理",
+        "chapter": "",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "选择性必修1。专题梳理政治制度、官员选拔、法律教化、民族外交与基层治理。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "H_M4",
+        "name": "经济与社会生活",
+        "type": "Module",
+        "module": "经济与社会生活",
+        "chapter": "",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "选择性必修2。专题梳理食物生产、生产工具、商业贸易、居住环境、交通通信与医疗卫生。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "H_M5",
+        "name": "文化交流与传播",
+        "type": "Module",
+        "module": "文化交流与传播",
+        "chapter": "",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "选择性必修3。专题梳理中华文化与外来文化交流、人口迁徙商路贸易战争中的文化传播及文化遗产。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "H_C1_1",
+        "name": "中华文明的起源与早期国家",
+        "type": "Chapter",
+        "module": "中外历史纲要(上)——中国史",
+        "chapter": "中华文明的起源与早期国家",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "旧新石器时代文化遗存、文明起源标志、夏商西周政治制度。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "H_C1_2",
+        "name": "统一多民族封建国家的形成与巩固",
+        "type": "Chapter",
+        "module": "中外历史纲要(上)——中国史",
+        "chapter": "统一多民族封建国家的形成与巩固",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "秦的统一与专制集权、汉武帝大一统、丝绸之路。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "H_C1_3",
+        "name": "三国两晋南北朝至隋唐",
+        "type": "Chapter",
+        "module": "中外历史纲要(上)——中国史",
+        "chapter": "三国两晋南北朝至隋唐",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "民族交融、隋朝建制、唐朝繁荣开放及由盛转衰。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "H_C1_4",
+        "name": "辽宋夏金元时期",
+        "type": "Chapter",
+        "module": "中外历史纲要(上)——中国史",
+        "chapter": "辽宋夏金元时期",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "多民族政权并立到元朝统一、行省制度、宋元经济科技文化。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "H_C1_5",
+        "name": "明清时期",
+        "type": "Chapter",
+        "module": "中外历史纲要(上)——中国史",
+        "chapter": "明清时期",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "加强皇权、赋税改革、对外关系与危机。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "H_C1_6",
+        "name": "晚清至民国（救亡图存与革命）",
+        "type": "Chapter",
+        "module": "中外历史纲要(上)——中国史",
+        "chapter": "晚清至民国（救亡图存与革命）",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "列强侵略与不平等条约、太平天国、洋务、维新、辛亥革命、新文化五四、国共合作与革命、抗日战争、解放战争。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "H_C1_7",
+        "name": "中华人民共和国的成立与发展",
+        "type": "Chapter",
+        "module": "中外历史纲要(上)——中国史",
+        "chapter": "中华人民共和国的成立与发展",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "新中国政权巩固、三大改造、一五计划、改革开放、一国两制与外交。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "H_C2_1",
+        "name": "古代文明的产生与发展",
+        "type": "Chapter",
+        "module": "中外历史纲要(下)——世界史",
+        "chapter": "古代文明的产生与发展",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "早期文明区域及文明扩展交往。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "H_C2_2",
+        "name": "中古时期的世界",
+        "type": "Chapter",
+        "module": "中外历史纲要(下)——世界史",
+        "chapter": "中古时期的世界",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "西欧封建社会、拜占庭俄罗斯、阿拉伯奥斯曼、中古日本印度。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "H_C2_3",
+        "name": "走向整体的世界",
+        "type": "Chapter",
+        "module": "中外历史纲要(下)——世界史",
+        "chapter": "走向整体的世界",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "新航路开辟的动因、过程与影响。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "H_C2_4",
+        "name": "资本主义制度的确立与工业革命",
+        "type": "Chapter",
+        "module": "中外历史纲要(下)——世界史",
+        "chapter": "资本主义制度的确立与工业革命",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "英法美资产阶级革命与制度确立、两次工业革命。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "H_C2_5",
+        "name": "马克思主义的诞生与国际工人运动",
+        "type": "Chapter",
+        "module": "中外历史纲要(下)——世界史",
+        "chapter": "马克思主义的诞生与国际工人运动",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "《共产党宣言》、第一国际、巴黎公社、列宁主义与十月革命。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "H_C2_6",
+        "name": "两次世界大战与冷战",
+        "type": "Chapter",
+        "module": "中外历史纲要(下)——世界史",
+        "chapter": "两次世界大战与冷战",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "一战与凡华体系、经济大危机与罗斯福新政、二战、冷战。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "H_C2_7",
+        "name": "当代世界的发展特点与主要趋势",
+        "type": "Chapter",
+        "module": "中外历史纲要(下)——世界史",
+        "chapter": "当代世界的发展特点与主要趋势",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "冷战结束、多极化、全球化与全球性问题。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "H_C3_1",
+        "name": "政治制度",
+        "type": "Chapter",
+        "module": "国家制度与社会治理",
+        "chapter": "政治制度",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "中国古代与西方近现代政治制度演变。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "H_C3_2",
+        "name": "官员选拔与管理",
+        "type": "Chapter",
+        "module": "国家制度与社会治理",
+        "chapter": "官员选拔与管理",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "察举九品中正、科举制、西方文官制度。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "H_C3_3",
+        "name": "法律教化",
+        "type": "Chapter",
+        "module": "国家制度与社会治理",
+        "chapter": "法律教化",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "中国古代礼法、近代法律、西方法律传统。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "H_C3_4",
+        "name": "民族外交与基层治理",
+        "type": "Chapter",
+        "module": "国家制度与社会治理",
+        "chapter": "民族外交与基层治理",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "民族政策、外交、基层治理与社会保障。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "H_C4_1",
+        "name": "食物生产与社会生活",
+        "type": "Chapter",
+        "module": "经济与社会生活",
+        "chapter": "食物生产与社会生活",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "农业起源、区域食物生产、物种大交换。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "H_C4_2",
+        "name": "生产工具与劳作方式",
+        "type": "Chapter",
+        "module": "经济与社会生活",
+        "chapter": "生产工具与劳作方式",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "农业工具、手工业工具、工业革命与机器大生产。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "H_C4_3",
+        "name": "商业贸易与居住环境",
+        "type": "Chapter",
+        "module": "经济与社会生活",
+        "chapter": "商业贸易与居住环境",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "古代商业、世界市场、城市化与居住环境。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "H_C4_4",
+        "name": "交通通信与医疗卫生",
+        "type": "Chapter",
+        "module": "经济与社会生活",
+        "chapter": "交通通信与医疗卫生",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "交通通信进步、医疗卫生进步、习俗变迁。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "H_C5_1",
+        "name": "中华文化与外来文化交流",
+        "type": "Chapter",
+        "module": "文化交流与传播",
+        "chapter": "中华文化与外来文化交流",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "中华文化的传播、外来文化的传入与本土化。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "H_C5_2",
+        "name": "迁徙、贸易与战争中的文化交流",
+        "type": "Chapter",
+        "module": "文化交流与传播",
+        "chapter": "迁徙、贸易与战争中的文化交流",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "人口迁徙、商路贸易、战争冲突中的文化碰撞。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "H_C5_3",
+        "name": "文化遗产",
+        "type": "Chapter",
+        "module": "文化交流与传播",
+        "chapter": "文化遗产",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "世界遗产保护与中华优秀传统文化保护。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "H_K1_1_1",
+        "name": "石器时代文化遗存",
+        "type": "KnowledgePoint",
+        "module": "中外历史纲要(上)——中国史",
+        "chapter": "中华文明的起源与早期国家",
+        "difficulty": 2,
+        "importance": 4,
+        "description": "元谋人、北京人属旧石器时代；仰韶、龙山、河姆渡等属新石器时代，反映中华文明多元一体起源。",
+        "keywords": "旧石器,新石器,元谋人,北京人,仰韶,龙山,河姆渡,多元一体",
+        "exam_type": "选择题、史料分析题"
+      },
+      {
+        "id": "H_K1_1_2",
+        "name": "文明起源与早期国家",
+        "type": "KnowledgePoint",
+        "module": "中外历史纲要(上)——中国史",
+        "chapter": "中华文明的起源与早期国家",
+        "difficulty": 3,
+        "importance": 4,
+        "description": "私有制、阶级和国家的出现是文明诞生的标志；夏商西周进入早期国家阶段。",
+        "keywords": "文明起源,私有制,阶级,国家,早期国家",
+        "exam_type": "选择题、材料分析题"
+      },
+      {
+        "id": "H_K1_1_3",
+        "name": "夏商西周政治制度",
+        "type": "KnowledgePoint",
+        "module": "中外历史纲要(上)——中国史",
+        "chapter": "中华文明的起源与早期国家",
+        "difficulty": 4,
+        "importance": 5,
+        "description": "王位世袭制取代禅让制；西周实行分封制、宗法制、礼乐制度，宗法制核心是嫡长子继承制。",
+        "keywords": "王位世袭,分封制,宗法制,嫡长子继承,礼乐制度",
+        "exam_type": "选择题、材料分析题"
+      },
+      {
+        "id": "H_K1_1_4",
+        "name": "商周青铜文明与甲骨文",
+        "type": "KnowledgePoint",
+        "module": "中外历史纲要(上)——中国史",
+        "chapter": "中华文明的起源与早期国家",
+        "difficulty": 2,
+        "importance": 3,
+        "description": "青铜器代表商周手工业最高水平，甲骨文是成熟文字体系，印证商史为信史。",
+        "keywords": "青铜文明,甲骨文,司母戊鼎,信史",
+        "exam_type": "选择题"
+      },
+      {
+        "id": "H_K1_1_5",
+        "name": "春秋战国变革与百家争鸣",
+        "type": "KnowledgePoint",
+        "module": "中外历史纲要(上)——中国史",
+        "chapter": "中华文明的起源与早期国家",
+        "difficulty": 4,
+        "importance": 5,
+        "description": "铁犁牛耕出现、井田制瓦解；商鞅变法；儒家道家法家墨家等百家争鸣是思想解放潮流。",
+        "keywords": "铁犁牛耕,井田制瓦解,商鞅变法,百家争鸣,诸子百家",
+        "exam_type": "材料分析题、选择题"
+      },
+      {
+        "id": "H_K1_2_1",
+        "name": "秦统一与专制主义中央集权制度",
+        "type": "KnowledgePoint",
+        "module": "中外历史纲要(上)——中国史",
+        "chapter": "统一多民族封建国家的形成与巩固",
+        "difficulty": 5,
+        "importance": 5,
+        "description": "秦始皇统一；建立皇帝制度、三公九卿制、郡县制，奠定大一统国家治理基本框架。",
+        "keywords": "秦统一,皇帝制,三公九卿,郡县制,专制主义中央集权",
+        "exam_type": "材料分析题、选择题"
+      },
+      {
+        "id": "H_K1_2_2",
+        "name": "汉武帝大一统",
+        "type": "KnowledgePoint",
+        "module": "中外历史纲要(上)——中国史",
+        "chapter": "统一多民族封建国家的形成与巩固",
+        "difficulty": 4,
+        "importance": 5,
+        "description": "颁布推恩令解决王国问题、罢黜百家独尊儒术、设刺史、盐铁官营，巩固大一统。",
+        "keywords": "汉武帝,推恩令,罢黜百家独尊儒术,盐铁官营,刺史",
+        "exam_type": "材料分析题、选择题"
+      },
+      {
+        "id": "H_K1_2_3",
+        "name": "两汉选官制度",
+        "type": "KnowledgePoint",
+        "module": "中外历史纲要(上)——中国史",
+        "chapter": "统一多民族封建国家的形成与巩固",
+        "difficulty": 2,
+        "importance": 3,
+        "description": "实行察举制与征辟制，以品德才学为标准选拔官吏。",
+        "keywords": "察举制,征辟制,孝廉,选官",
+        "exam_type": "选择题"
+      },
+      {
+        "id": "H_K1_2_4",
+        "name": "丝绸之路",
+        "type": "KnowledgePoint",
+        "module": "中外历史纲要(上)——中国史",
+        "chapter": "统一多民族封建国家的形成与巩固",
+        "difficulty": 4,
+        "importance": 4,
+        "description": "张骞通西域开辟陆上丝绸之路，促进中西方经济文化交流，是中外交流的重要通道。",
+        "keywords": "张骞,丝绸之路,西域,中外交流",
+        "exam_type": "选择题、材料分析题"
+      },
+      {
+        "id": "H_K1_3_1",
+        "name": "北魏孝文帝改革与民族交融",
+        "type": "KnowledgePoint",
+        "module": "中外历史纲要(上)——中国史",
+        "chapter": "三国两晋南北朝至隋唐",
+        "difficulty": 4,
+        "importance": 4,
+        "description": "迁都洛阳、推行汉化政策（说汉语、穿汉服、改汉姓、通汉婚），促进民族交融。",
+        "keywords": "北魏孝文帝改革,迁都洛阳,汉化政策,民族交融",
+        "exam_type": "材料分析题、选择题"
+      },
+      {
+        "id": "H_K1_3_2",
+        "name": "隋朝建制",
+        "type": "KnowledgePoint",
+        "module": "中外历史纲要(上)——中国史",
+        "chapter": "三国两晋南北朝至隋唐",
+        "difficulty": 4,
+        "importance": 5,
+        "description": "隋朝统一、创立科举制、开凿大运河，开创制度影响深远。",
+        "keywords": "隋朝统一,科举制创立,大运河",
+        "exam_type": "选择题、材料分析题"
+      },
+      {
+        "id": "H_K1_3_3",
+        "name": "唐朝三省六部制与盛世",
+        "type": "KnowledgePoint",
+        "module": "中外历史纲要(上)——中国史",
+        "chapter": "三国两晋南北朝至隋唐",
+        "difficulty": 4,
+        "importance": 5,
+        "description": "三省六部制分割相权加强皇权；贞观之治、开元盛世体现唐朝繁荣开放。",
+        "keywords": "三省六部制,贞观之治,开元盛世,分割相权",
+        "exam_type": "选择题、材料分析题"
+      },
+      {
+        "id": "H_K1_3_4",
+        "name": "唐朝民族关系与对外交流",
+        "type": "KnowledgePoint",
+        "module": "中外历史纲要(上)——中国史",
+        "chapter": "三国两晋南北朝至隋唐",
+        "difficulty": 3,
+        "importance": 4,
+        "description": "文成公主入藏、册封制度；遣唐使、鉴真东渡、玄奘西行体现开放包容。",
+        "keywords": "文成公主,遣唐使,鉴真东渡,玄奘西行,对外开放",
+        "exam_type": "选择题、材料分析题"
+      },
+      {
+        "id": "H_K1_3_5",
+        "name": "安史之乱与藩镇割据",
+        "type": "KnowledgePoint",
+        "module": "中外历史纲要(上)——中国史",
+        "chapter": "三国两晋南北朝至隋唐",
+        "difficulty": 3,
+        "importance": 3,
+        "description": "安史之乱使唐朝由盛转衰，此后形成藩镇割据，中央集权削弱。",
+        "keywords": "安史之乱,藩镇割据,由盛转衰",
+        "exam_type": "选择题"
+      },
+      {
+        "id": "H_K1_4_1",
+        "name": "北宋加强中央集权",
+        "type": "KnowledgePoint",
+        "module": "中外历史纲要(上)——中国史",
+        "chapter": "辽宋夏金元时期",
+        "difficulty": 4,
+        "importance": 4,
+        "description": "通过分化事权、设转运使收财权、杯酒释兵权等措施加强中央集权，导致积贫积弱。",
+        "keywords": "北宋,分化事权,转运使,杯酒释兵权,积贫积弱",
+        "exam_type": "选择题、材料分析题"
+      },
+      {
+        "id": "H_K1_4_2",
+        "name": "宋代科举制与文官政治",
+        "type": "KnowledgePoint",
+        "module": "中外历史纲要(上)——中国史",
+        "chapter": "辽宋夏金元时期",
+        "difficulty": 3,
+        "importance": 3,
+        "description": "科举规模扩大、糊名誊录完善，形成文官政治，促进社会流动。",
+        "keywords": "宋代科举,糊名誊录,文官政治,社会流动",
+        "exam_type": "选择题"
+      },
+      {
+        "id": "H_K1_4_3",
+        "name": "辽夏金的制度",
+        "type": "KnowledgePoint",
+        "module": "中外历史纲要(上)——中国史",
+        "chapter": "辽宋夏金元时期",
+        "difficulty": 2,
+        "importance": 3,
+        "description": "辽实行南北面官（蕃汉分治）、金行猛安谋克制，体现因俗而治。",
+        "keywords": "辽,南北面官,猛安谋克,因俗而治",
+        "exam_type": "选择题"
+      },
+      {
+        "id": "H_K1_4_4",
+        "name": "元朝统一与行省制度",
+        "type": "KnowledgePoint",
+        "module": "中外历史纲要(上)——中国史",
+        "chapter": "辽宋夏金元时期",
+        "difficulty": 4,
+        "importance": 5,
+        "description": "元朝完成大一统；推行行省制度加强边疆管辖，是中国省制开端。",
+        "keywords": "元朝统一,行省制度,省制开端,边疆管辖",
+        "exam_type": "选择题、材料分析题"
+      },
+      {
+        "id": "H_K1_4_5",
+        "name": "宋元经济科技文化",
+        "type": "KnowledgePoint",
+        "module": "中外历史纲要(上)——中国史",
+        "chapter": "辽宋夏金元时期",
+        "difficulty": 4,
+        "importance": 5,
+        "description": "交子是世界上最早纸币；三大发明（活字印刷、指南针、火药）发展；程朱理学成为官方哲学。",
+        "keywords": "交子,活字印刷,指南针,火药,程朱理学",
+        "exam_type": "选择题、材料分析题"
+      },
+      {
+        "id": "H_K1_5_1",
+        "name": "明朝加强皇权",
+        "type": "KnowledgePoint",
+        "module": "中外历史纲要(上)——中国史",
+        "chapter": "明清时期",
+        "difficulty": 4,
+        "importance": 4,
+        "description": "废丞相设三司、设内阁、锦衣卫东厂等特务机构，君主专制空前加强。",
+        "keywords": "废丞相,三司,内阁,锦衣卫东厂,君主专制",
+        "exam_type": "选择题、材料分析题"
+      },
+      {
+        "id": "H_K1_5_2",
+        "name": "清朝军机处",
+        "type": "KnowledgePoint",
+        "module": "中外历史纲要(上)——中国史",
+        "chapter": "明清时期",
+        "difficulty": 4,
+        "importance": 5,
+        "description": "雍正设军机处，君主专制达到顶峰，标志专制主义中央集权发展到顶峰。",
+        "keywords": "军机处,雍正,君主专制顶峰",
+        "exam_type": "选择题、材料分析题"
+      },
+      {
+        "id": "H_K1_5_3",
+        "name": "明清赋税改革",
+        "type": "KnowledgePoint",
+        "module": "中外历史纲要(上)——中国史",
+        "chapter": "明清时期",
+        "difficulty": 3,
+        "importance": 4,
+        "description": "明张居正一条鞭法赋役合并征银；清摊丁入亩废除人头税，促进人口增长与商品经济。",
+        "keywords": "一条鞭法,张居正,摊丁入亩,人头税",
+        "exam_type": "选择题、材料分析题"
+      },
+      {
+        "id": "H_K1_5_4",
+        "name": "明清对外关系",
+        "type": "KnowledgePoint",
+        "module": "中外历史纲要(上)——中国史",
+        "chapter": "明清时期",
+        "difficulty": 3,
+        "importance": 4,
+        "description": "郑和下西洋为宣扬国威；明实行海禁、清闭关锁国；郑成功收复台湾。",
+        "keywords": "郑和下西洋,海禁,闭关锁国,郑成功收复台湾",
+        "exam_type": "选择题、材料分析题"
+      },
+      {
+        "id": "H_K1_6_1",
+        "name": "两次鸦片战争与不平等条约",
+        "type": "KnowledgePoint",
+        "module": "中外历史纲要(上)——中国史",
+        "chapter": "晚清至民国（救亡图存与革命）",
+        "difficulty": 5,
+        "importance": 5,
+        "description": "鸦片战争《南京条约》使中国开始沦为半殖民地半封建社会；《马关条约》大大加深；《辛丑条约》完全沦为。",
+        "keywords": "鸦片战争,南京条约,马关条约,辛丑条约,半殖民地半封建",
+        "exam_type": "材料分析题、选择题"
+      },
+      {
+        "id": "H_K1_6_2",
+        "name": "太平天国运动",
+        "type": "KnowledgePoint",
+        "module": "中外历史纲要(上)——中国史",
+        "chapter": "晚清至民国（救亡图存与革命）",
+        "difficulty": 3,
+        "importance": 4,
+        "description": "颁布《天朝田亩制度》（绝对平均主义空想）和《资政新篇》（提出发展资本主义），失败于中外反动势力联合绞杀。",
+        "keywords": "太平天国,天朝田亩制度,资政新篇,农民起义",
+        "exam_type": "选择题、材料分析题"
+      },
+      {
+        "id": "H_K1_6_3",
+        "name": "洋务运动",
+        "type": "KnowledgePoint",
+        "module": "中外历史纲要(上)——中国史",
+        "chapter": "晚清至民国（救亡图存与革命）",
+        "difficulty": 4,
+        "importance": 4,
+        "description": "以中体西用为指导创办军事民用工业、新式海军，是中国近代化开端，但甲午战败标志其破产。",
+        "keywords": "洋务运动,中体西用,近代化开端,军事民用工业",
+        "exam_type": "材料分析题、选择题"
+      },
+      {
+        "id": "H_K1_6_4",
+        "name": "戊戌变法与义和团运动",
+        "type": "KnowledgePoint",
+        "module": "中外历史纲要(上)——中国史",
+        "chapter": "晚清至民国（救亡图存与革命）",
+        "difficulty": 3,
+        "importance": 3,
+        "description": "戊戌变法是救亡图存的资产阶级改良运动；义和团运动打击列强瓜分图谋。",
+        "keywords": "戊戌变法,义和团,救亡图存,改良运动",
+        "exam_type": "选择题"
+      },
+      {
+        "id": "H_K1_6_5",
+        "name": "辛亥革命",
+        "type": "KnowledgePoint",
+        "module": "中外历史纲要(上)——中国史",
+        "chapter": "晚清至民国（救亡图存与革命）",
+        "difficulty": 5,
+        "importance": 5,
+        "description": "武昌起义推翻清王朝；颁布《中华民国临时约法》（中国第一部资产阶级宪法）；终结君主专制但未改变社会性质。",
+        "keywords": "辛亥革命,武昌起义,临时约法,推翻君主专制,资产阶级革命",
+        "exam_type": "材料分析题、论述题"
+      },
+      {
+        "id": "H_K1_6_6",
+        "name": "新文化运动与五四运动",
+        "type": "KnowledgePoint",
+        "module": "中外历史纲要(上)——中国史",
+        "chapter": "晚清至民国（救亡图存与革命）",
+        "difficulty": 4,
+        "importance": 5,
+        "description": "新文化运动高举民主科学，动摇封建正统思想；五四运动是彻底反帝反封建的伟大爱国革命运动，促进马克思主义传播。",
+        "keywords": "新文化运动,民主科学,五四运动,反帝反封建,马克思主义传播",
+        "exam_type": "材料分析题、选择题"
+      },
+      {
+        "id": "H_K1_6_7",
+        "name": "国民革命",
+        "type": "KnowledgePoint",
+        "module": "中外历史纲要(上)——中国史",
+        "chapter": "晚清至民国（救亡图存与革命）",
+        "difficulty": 3,
+        "importance": 3,
+        "description": "国共第一次合作推动北伐战争基本推翻北洋军阀统治，但国民党右派叛变致革命失败。",
+        "keywords": "国共合作,北伐战争,国民革命",
+        "exam_type": "选择题、材料分析题"
+      },
+      {
+        "id": "H_K1_6_8",
+        "name": "土地革命与红军长征",
+        "type": "KnowledgePoint",
+        "module": "中外历史纲要(上)——中国史",
+        "chapter": "晚清至民国（救亡图存与革命）",
+        "difficulty": 4,
+        "importance": 5,
+        "description": "井冈山革命道路（农村包围城市武装夺取政权）；遵义会议确立毛泽东领导地位；红军长征。",
+        "keywords": "土地革命,井冈山道路,农村包围城市,遵义会议,长征",
+        "exam_type": "材料分析题、选择题"
+      },
+      {
+        "id": "H_K1_6_9",
+        "name": "抗日战争",
+        "type": "KnowledgePoint",
+        "module": "中外历史纲要(上)——中国史",
+        "chapter": "晚清至民国（救亡图存与革命）",
+        "difficulty": 5,
+        "importance": 5,
+        "description": "1931九一八到1945抗战胜利；正面战场与敌后战场相互配合；全民族抗战；抗战胜利是近代反侵略首次完全胜利。",
+        "keywords": "抗日战争,九一八,正面战场,敌后战场,全民族抗战,抗战胜利",
+        "exam_type": "材料分析题、论述题"
+      },
+      {
+        "id": "H_K1_6_10",
+        "name": "解放战争",
+        "type": "KnowledgePoint",
+        "module": "中外历史纲要(上)——中国史",
+        "chapter": "晚清至民国（救亡图存与革命）",
+        "difficulty": 4,
+        "importance": 4,
+        "description": "重庆谈判、三大战役、渡江战役；1949新政协通过《共同纲领》，新中国成立。",
+        "keywords": "解放战争,重庆谈判,三大战役,共同纲领,新中国成立",
+        "exam_type": "材料分析题、选择题"
+      },
+      {
+        "id": "H_K1_7_1",
+        "name": "新中国政权巩固",
+        "type": "KnowledgePoint",
+        "module": "中外历史纲要(上)——中国史",
+        "chapter": "中华人民共和国的成立与发展",
+        "difficulty": 3,
+        "importance": 4,
+        "description": "土地改革、抗美援朝、镇压反革命三大运动巩固新生政权。",
+        "keywords": "土地改革,抗美援朝,镇压反革命,政权巩固",
+        "exam_type": "选择题、材料分析题"
+      },
+      {
+        "id": "H_K1_7_2",
+        "name": "三大改造",
+        "type": "KnowledgePoint",
+        "module": "中外历史纲要(上)——中国史",
+        "chapter": "中华人民共和国的成立与发展",
+        "difficulty": 4,
+        "importance": 5,
+        "description": "1956年三大改造基本完成，社会主义公有制确立，社会主义制度在我国基本建立。",
+        "keywords": "三大改造,1956,社会主义制度建立,公有制",
+        "exam_type": "选择题、材料分析题"
+      },
+      {
+        "id": "H_K1_7_3",
+        "name": "一五计划与建设成就",
+        "type": "KnowledgePoint",
+        "module": "中外历史纲要(上)——中国史",
+        "chapter": "中华人民共和国的成立与发展",
+        "difficulty": 3,
+        "importance": 4,
+        "description": "一五计划优先发展重工业，奠定工业化初步基础；鞍钢、长春一汽等成就。",
+        "keywords": "一五计划,重工业,工业化初步基础",
+        "exam_type": "选择题"
+      },
+      {
+        "id": "H_K1_7_4",
+        "name": "改革开放",
+        "type": "KnowledgePoint",
+        "module": "中外历史纲要(上)——中国史",
+        "chapter": "中华人民共和国的成立与发展",
+        "difficulty": 5,
+        "importance": 5,
+        "description": "农村实行家庭联产承包责任制；城市国企改革；形成经济特区—沿海开放城市—沿海经济开放区开放格局。",
+        "keywords": "改革开放,家庭联产承包责任制,国企改革,经济特区,对外开放格局",
+        "exam_type": "材料分析题、论述题"
+      },
+      {
+        "id": "H_K1_7_5",
+        "name": "一国两制与祖国统一",
+        "type": "KnowledgePoint",
+        "module": "中外历史纲要(上)——中国史",
+        "chapter": "中华人民共和国的成立与发展",
+        "difficulty": 3,
+        "importance": 4,
+        "description": "一国两制构想实现港澳回归；海峡两岸关系发展，反台独促统一。",
+        "keywords": "一国两制,港澳回归,海峡两岸,祖国统一",
+        "exam_type": "选择题、材料分析题"
+      },
+      {
+        "id": "H_K1_7_6",
+        "name": "新中国外交",
+        "type": "KnowledgePoint",
+        "module": "中外历史纲要(上)——中国史",
+        "chapter": "中华人民共和国的成立与发展",
+        "difficulty": 4,
+        "importance": 5,
+        "description": "和平共处五项原则是外交准则；1971恢复联合国合法席位；1972中美关系正常化、中日建交。",
+        "keywords": "和平共处五项原则,联合国合法席位,中美关系正常化,新中国外交",
+        "exam_type": "选择题、材料分析题"
+      },
+      {
+        "id": "H_K2_1_1",
+        "name": "古代早期文明",
+        "type": "KnowledgePoint",
+        "module": "中外历史纲要(下)——世界史",
+        "chapter": "古代文明的产生与发展",
+        "difficulty": 3,
+        "importance": 4,
+        "description": "两河流域苏美尔楔形文字、《汉谟拉比法典》；古埃及金字塔象形文字；古印度种姓制度；古希腊城邦民主。",
+        "keywords": "两河流域,汉谟拉比法典,古埃及,种姓制度,古希腊城邦",
+        "exam_type": "选择题、材料分析题"
+      },
+      {
+        "id": "H_K2_1_2",
+        "name": "古代文明的扩展与交往",
+        "type": "KnowledgePoint",
+        "module": "中外历史纲要(下)——世界史",
+        "chapter": "古代文明的产生与发展",
+        "difficulty": 2,
+        "importance": 3,
+        "description": "通过武力扩张、移民、贸易等方式扩展，促进不同文明交往。",
+        "keywords": "文明扩展,移民,贸易,文明交往",
+        "exam_type": "选择题"
+      },
+      {
+        "id": "H_K2_2_1",
+        "name": "中古西欧封建社会",
+        "type": "KnowledgePoint",
+        "module": "中外历史纲要(下)——世界史",
+        "chapter": "中古时期的世界",
+        "difficulty": 4,
+        "importance": 4,
+        "description": "封君封臣制、庄园与农奴制、基督教会在中世纪占据支配地位，是西欧封建社会特征。",
+        "keywords": "封君封臣,庄园农奴制,基督教,中世纪西欧",
+        "exam_type": "选择题、材料分析题"
+      },
+      {
+        "id": "H_K2_2_2",
+        "name": "拜占庭与俄罗斯",
+        "type": "KnowledgePoint",
+        "module": "中外历史纲要(下)——世界史",
+        "chapter": "中古时期的世界",
+        "difficulty": 2,
+        "importance": 2,
+        "description": "拜占庭帝国《查士丁尼法典》；俄罗斯基辅罗斯受东正教影响发展为沙皇俄国。",
+        "keywords": "拜占庭,查士丁尼法典,基辅罗斯,沙皇俄国",
+        "exam_type": "选择题"
+      },
+      {
+        "id": "H_K2_2_3",
+        "name": "阿拉伯帝国与奥斯曼帝国",
+        "type": "KnowledgePoint",
+        "module": "中外历史纲要(下)——世界史",
+        "chapter": "中古时期的世界",
+        "difficulty": 3,
+        "importance": 3,
+        "description": "阿拉伯帝国沟通东西方文化；奥斯曼帝国攻灭拜占庭并控制东西方商路。",
+        "keywords": "阿拉伯帝国,东西方文化,奥斯曼帝国,东西方商路",
+        "exam_type": "选择题"
+      },
+      {
+        "id": "H_K2_2_4",
+        "name": "中古日本与印度",
+        "type": "KnowledgePoint",
+        "module": "中外历史纲要(下)——世界史",
+        "chapter": "中古时期的世界",
+        "difficulty": 2,
+        "importance": 2,
+        "description": "日本大化改新仿唐制建立中央集权，后形成幕府统治；印度德里苏丹国伊斯兰化。",
+        "keywords": "大化改新,幕府统治,德里苏丹国,中古日本印度",
+        "exam_type": "选择题"
+      },
+      {
+        "id": "H_K2_3_1",
+        "name": "新航路开辟的动因与条件",
+        "type": "KnowledgePoint",
+        "module": "中外历史纲要(下)——世界史",
+        "chapter": "走向整体的世界",
+        "difficulty": 3,
+        "importance": 4,
+        "description": "动因是商品经济发展和寻金热、传播天主教；条件是航海造船技术进步、地理知识增长、王室支持。",
+        "keywords": "新航路,动因,寻金热,航海技术,王室支持",
+        "exam_type": "选择题、材料分析题"
+      },
+      {
+        "id": "H_K2_3_2",
+        "name": "新航路开辟的过程",
+        "type": "KnowledgePoint",
+        "module": "中外历史纲要(下)——世界史",
+        "chapter": "走向整体的世界",
+        "difficulty": 4,
+        "importance": 5,
+        "description": "迪亚士达好望角、达伽马到印度、哥伦布发现美洲、麦哲伦船队环球航行。",
+        "keywords": "迪亚士,达伽马,哥伦布,麦哲伦,环球航行",
+        "exam_type": "选择题"
+      },
+      {
+        "id": "H_K2_3_3",
+        "name": "新航路开辟的影响",
+        "type": "KnowledgePoint",
+        "module": "中外历史纲要(下)——世界史",
+        "chapter": "走向整体的世界",
+        "difficulty": 4,
+        "importance": 5,
+        "description": "引发商业革命和价格革命，世界由分散走向整体，加速资本主义发展和殖民扩张。",
+        "keywords": "商业革命,价格革命,世界走向整体,殖民扩张",
+        "exam_type": "材料分析题、选择题"
+      },
+      {
+        "id": "H_K2_4_1",
+        "name": "英国君主立宪制",
+        "type": "KnowledgePoint",
+        "module": "中外历史纲要(下)——世界史",
+        "chapter": "资本主义制度的确立与工业革命",
+        "difficulty": 4,
+        "importance": 5,
+        "description": "《权利法案》限制王权确立议会主权，责任内阁制使行政权转移到首相内阁。",
+        "keywords": "权利法案,议会主权,责任内阁制,君主立宪",
+        "exam_type": "选择题、材料分析题"
+      },
+      {
+        "id": "H_K2_4_2",
+        "name": "美国共和制",
+        "type": "KnowledgePoint",
+        "module": "中外历史纲要(下)——世界史",
+        "chapter": "资本主义制度的确立与工业革命",
+        "difficulty": 4,
+        "importance": 5,
+        "description": "《1787年宪法》确立联邦制和三权分立相互制衡，是世界上第一部成文资产阶级共和国宪法。",
+        "keywords": "1787年宪法,联邦制,三权分立,制衡,共和国",
+        "exam_type": "选择题、材料分析题"
+      },
+      {
+        "id": "H_K2_4_3",
+        "name": "法国大革命与《人权宣言》",
+        "type": "KnowledgePoint",
+        "module": "中外历史纲要(下)——世界史",
+        "chapter": "资本主义制度的确立与工业革命",
+        "difficulty": 3,
+        "importance": 4,
+        "description": "法国大革命推翻封建专制，《人权宣言》宣扬天赋人权自由平等，确立资本主义政治原则。",
+        "keywords": "法国大革命,人权宣言,天赋人权,自由平等",
+        "exam_type": "选择题、材料分析题"
+      },
+      {
+        "id": "H_K2_4_4",
+        "name": "第一次工业革命",
+        "type": "KnowledgePoint",
+        "module": "中外历史纲要(下)——世界史",
+        "chapter": "资本主义制度的确立与工业革命",
+        "difficulty": 4,
+        "importance": 5,
+        "description": "蒸汽机的广泛使用标志进入蒸汽时代，工厂制度确立，推动世界市场初步形成。",
+        "keywords": "第一次工业革命,蒸汽机,蒸汽时代,工厂制度,世界市场初步形成",
+        "exam_type": "选择题、材料分析题"
+      },
+      {
+        "id": "H_K2_4_5",
+        "name": "第二次工业革命",
+        "type": "KnowledgePoint",
+        "module": "中外历史纲要(下)——世界史",
+        "chapter": "资本主义制度的确立与工业革命",
+        "difficulty": 4,
+        "importance": 5,
+        "description": "电力的广泛应用标志进入电气时代，垄断组织产生，世界市场最终形成。",
+        "keywords": "第二次工业革命,电力,电气时代,垄断组织,世界市场最终形成",
+        "exam_type": "选择题、材料分析题"
+      },
+      {
+        "id": "H_K2_4_6",
+        "name": "资本主义的扩展",
+        "type": "KnowledgePoint",
+        "module": "中外历史纲要(下)——世界史",
+        "chapter": "资本主义制度的确立与工业革命",
+        "difficulty": 3,
+        "importance": 3,
+        "description": "俄国1861农奴制改革、日本明治维新走上资本主义发展道路。",
+        "keywords": "俄国农奴制改革,日本明治维新,资本主义扩展",
+        "exam_type": "选择题"
+      },
+      {
+        "id": "H_K2_5_1",
+        "name": "马克思主义的诞生",
+        "type": "KnowledgePoint",
+        "module": "中外历史纲要(下)——世界史",
+        "chapter": "马克思主义的诞生与国际工人运动",
+        "difficulty": 4,
+        "importance": 5,
+        "description": "《共产党宣言》标志马克思主义诞生；第一国际推动国际工人运动；巴黎公社是无产阶级专政首次尝试。",
+        "keywords": "共产党宣言,马克思主义诞生,第一国际,巴黎公社",
+        "exam_type": "选择题、材料分析题"
+      },
+      {
+        "id": "H_K2_5_2",
+        "name": "列宁主义与十月革命",
+        "type": "KnowledgePoint",
+        "module": "中外历史纲要(下)——世界史",
+        "chapter": "马克思主义的诞生与国际工人运动",
+        "difficulty": 4,
+        "importance": 5,
+        "description": "列宁主义发展马克思主义；十月革命建立世界上第一个社会主义国家，开辟人类历史新纪元。",
+        "keywords": "列宁主义,十月革命,第一个社会主义国家,人类历史新纪元",
+        "exam_type": "选择题、材料分析题"
+      },
+      {
+        "id": "H_K2_5_3",
+        "name": "国际工人运动发展",
+        "type": "KnowledgePoint",
+        "module": "中外历史纲要(下)——世界史",
+        "chapter": "马克思主义的诞生与国际工人运动",
+        "difficulty": 2,
+        "importance": 2,
+        "description": "第二国际推动各国工人政党建立；十月革命后共产国际成立推动世界无产阶级革命。",
+        "keywords": "第二国际,共产国际,国际工人运动",
+        "exam_type": "选择题"
+      },
+      {
+        "id": "H_K2_6_1",
+        "name": "第一次世界大战与凡华体系",
+        "type": "KnowledgePoint",
+        "module": "中外历史纲要(下)——世界史",
+        "chapter": "两次世界大战与冷战",
+        "difficulty": 4,
+        "importance": 4,
+        "description": "一战是帝国主义争夺霸权结果；战后形成凡尔赛—华盛顿体系暂时调整列强在欧亚秩序。",
+        "keywords": "第一次世界大战,帝国主义战争,凡尔赛华盛顿体系",
+        "exam_type": "选择题、材料分析题"
+      },
+      {
+        "id": "H_K2_6_2",
+        "name": "经济大危机与罗斯福新政",
+        "type": "KnowledgePoint",
+        "module": "中外历史纲要(下)——世界史",
+        "chapter": "两次世界大战与冷战",
+        "difficulty": 4,
+        "importance": 5,
+        "description": "1929—1933年资本主义经济大危机；罗斯福新政以国家干预经济方式开创资本主义自我调节新模式。",
+        "keywords": "经济大危机,罗斯福新政,国家干预经济,自我调节",
+        "exam_type": "材料分析题、选择题"
+      },
+      {
+        "id": "H_K2_6_3",
+        "name": "法西斯主义与二战",
+        "type": "KnowledgePoint",
+        "module": "中外历史纲要(下)——世界史",
+        "chapter": "两次世界大战与冷战",
+        "difficulty": 4,
+        "importance": 5,
+        "description": "德意日法西斯上台对外侵略；世界反法西斯同盟取得二战胜利，确立雅尔塔体系。",
+        "keywords": "法西斯主义,第二次世界大战,反法西斯同盟,雅尔塔体系",
+        "exam_type": "选择题、材料分析题"
+      },
+      {
+        "id": "H_K2_6_4",
+        "name": "冷战",
+        "type": "KnowledgePoint",
+        "module": "中外历史纲要(下)——世界史",
+        "chapter": "两次世界大战与冷战",
+        "difficulty": 4,
+        "importance": 5,
+        "description": "杜鲁门主义标志冷战开始；马歇尔计划、北约与华约对峙，两极格局形成。",
+        "keywords": "冷战,杜鲁门主义,马歇尔计划,北约华约,两极格局",
+        "exam_type": "选择题、材料分析题"
+      },
+      {
+        "id": "H_K2_6_5",
+        "name": "冷战中的热战与多极化",
+        "type": "KnowledgePoint",
+        "module": "中外历史纲要(下)——世界史",
+        "chapter": "两次世界大战与冷战",
+        "difficulty": 3,
+        "importance": 3,
+        "description": "朝鲜战争、越南战争等局部热战；西欧日本崛起、不结盟运动推动多极化趋势出现。",
+        "keywords": "朝鲜战争,越南战争,西欧日本崛起,不结盟运动,多极化趋势",
+        "exam_type": "选择题"
+      },
+      {
+        "id": "H_K2_7_1",
+        "name": "冷战结束与多极化加强",
+        "type": "KnowledgePoint",
+        "module": "中外历史纲要(下)——世界史",
+        "chapter": "当代世界的发展特点与主要趋势",
+        "difficulty": 3,
+        "importance": 4,
+        "description": "东欧剧变苏联解体标志冷战结束；世界多极化趋势继续发展，一超多强格局。",
+        "keywords": "冷战结束,苏联解体,一超多强,多极化",
+        "exam_type": "选择题、材料分析题"
+      },
+      {
+        "id": "H_K2_7_2",
+        "name": "经济全球化与区域集团化",
+        "type": "KnowledgePoint",
+        "module": "中外历史纲要(下)——世界史",
+        "chapter": "当代世界的发展特点与主要趋势",
+        "difficulty": 3,
+        "importance": 4,
+        "description": "世贸组织推动全球化；欧盟、北美自由贸易区、亚太经合等区域经济集团化发展。",
+        "keywords": "经济全球化,世贸组织,区域经济集团化,欧盟",
+        "exam_type": "选择题、材料分析题"
+      },
+      {
+        "id": "H_K2_7_3",
+        "name": "当代全球性问题",
+        "type": "KnowledgePoint",
+        "module": "中外历史纲要(下)——世界史",
+        "chapter": "当代世界的发展特点与主要趋势",
+        "difficulty": 2,
+        "importance": 3,
+        "description": "南北差距、恐怖主义、环境、粮食等全球性问题需要国际合作。",
+        "keywords": "全球性问题,南北差距,恐怖主义,国际合作",
+        "exam_type": "选择题、简答题"
+      },
+      {
+        "id": "H_K3_1_1",
+        "name": "中国古代政治制度演变",
+        "type": "KnowledgePoint",
+        "module": "国家制度与社会治理",
+        "chapter": "政治制度",
+        "difficulty": 4,
+        "importance": 5,
+        "description": "从分封宗法制到专制主义中央集权制度的演进：秦确立、汉巩固、隋唐完善、宋加强、明清强化到顶峰。",
+        "keywords": "专制主义中央集权,分封宗法制,演变,加强强化",
+        "exam_type": "材料分析题、选择题"
+      },
+      {
+        "id": "H_K3_1_2",
+        "name": "西方政治制度",
+        "type": "KnowledgePoint",
+        "module": "国家制度与社会治理",
+        "chapter": "政治制度",
+        "difficulty": 4,
+        "importance": 4,
+        "description": "比较英君主立宪、美总统共和、法半总统制、德君主立宪等资产阶级代议制。",
+        "keywords": "代议制,君主立宪,总统共和,半总统制,西方政治制度",
+        "exam_type": "选择题、材料分析题"
+      },
+      {
+        "id": "H_K3_1_3",
+        "name": "中国近现代政治制度",
+        "type": "KnowledgePoint",
+        "module": "国家制度与社会治理",
+        "chapter": "政治制度",
+        "difficulty": 3,
+        "importance": 4,
+        "description": "从《临时约法》到人大制度、政党制度、民族区域自治、基层群众自治的发展。",
+        "keywords": "临时约法,人民代表大会制度,政党制度,近现代政治制度",
+        "exam_type": "选择题、材料分析题"
+      },
+      {
+        "id": "H_K3_2_1",
+        "name": "察举制与九品中正制",
+        "type": "KnowledgePoint",
+        "module": "国家制度与社会治理",
+        "chapter": "官员选拔与管理",
+        "difficulty": 3,
+        "importance": 3,
+        "description": "汉武帝察举制以孝廉为标准；魏晋九品中正制后期沦为门阀政治，选官看重门第。",
+        "keywords": "察举制,九品中正制,门阀政治,选官",
+        "exam_type": "选择题"
+      },
+      {
+        "id": "H_K3_2_2",
+        "name": "科举制的演变与影响",
+        "type": "KnowledgePoint",
+        "module": "国家制度与社会治理",
+        "chapter": "官员选拔与管理",
+        "difficulty": 5,
+        "importance": 5,
+        "description": "隋创立、唐完善、宋发展、明清八股取士、1905废除；扩大统治基础、促进社会流动、影响东亚及西方文官制度。",
+        "keywords": "科举制,隋创唐完善,八股取士,1905废除,社会流动",
+        "exam_type": "材料分析题、选择题"
+      },
+      {
+        "id": "H_K3_2_3",
+        "name": "西方文官制度",
+        "type": "KnowledgePoint",
+        "module": "国家制度与社会治理",
+        "chapter": "官员选拔与管理",
+        "difficulty": 3,
+        "importance": 3,
+        "description": "英国1855年建立文官制度，实行考试录用、政治中立、常任，影响各国人事管理。",
+        "keywords": "西方文官制度,英国,考试录用,政治中立,常任",
+        "exam_type": "选择题"
+      },
+      {
+        "id": "H_K3_3_1",
+        "name": "中国古代法律与教化",
+        "type": "KnowledgePoint",
+        "module": "国家制度与社会治理",
+        "chapter": "法律教化",
+        "difficulty": 3,
+        "importance": 4,
+        "description": "以德主刑辅、礼法并施为原则；《唐律疏议》是中华法系代表。",
+        "keywords": "德主刑辅,礼法并施,唐律疏议,中华法系",
+        "exam_type": "选择题、材料分析题"
+      },
+      {
+        "id": "H_K3_3_2",
+        "name": "近代中国的法律与教化",
+        "type": "KnowledgePoint",
+        "module": "国家制度与社会治理",
+        "chapter": "法律教化",
+        "difficulty": 2,
+        "importance": 2,
+        "description": "清末修律开启法律近代化；南京临时政府、北洋、国民政府法律演变。",
+        "keywords": "清末修律,法律近代化,近代法律",
+        "exam_type": "选择题"
+      },
+      {
+        "id": "H_K3_3_3",
+        "name": "西方法律传统",
+        "type": "KnowledgePoint",
+        "module": "国家制度与社会治理",
+        "chapter": "法律教化",
+        "difficulty": 4,
+        "importance": 4,
+        "description": "罗马法从《十二铜表法》到《查士丁尼民法大全》；大陆法系与英美法系（判例法）的差异。",
+        "keywords": "罗马法,十二铜表法,查士丁尼民法大全,大陆法系,英美法系",
+        "exam_type": "选择题、材料分析题"
+      },
+      {
+        "id": "H_K3_4_1",
+        "name": "民族政策与外交",
+        "type": "KnowledgePoint",
+        "module": "国家制度与社会治理",
+        "chapter": "民族外交与基层治理",
+        "difficulty": 3,
+        "importance": 3,
+        "description": "我国民族区域自治制度与和平外交；古代朝贡体系与近代外交转型。",
+        "keywords": "民族区域自治,和平外交,朝贡体系,外交转型",
+        "exam_type": "选择题、材料分析题"
+      },
+      {
+        "id": "H_K3_4_2",
+        "name": "基层治理与社会保障",
+        "type": "KnowledgePoint",
+        "module": "国家制度与社会治理",
+        "chapter": "民族外交与基层治理",
+        "difficulty": 2,
+        "importance": 3,
+        "description": "中国古代乡里制度、西方社区自治；现代社会保障制度（福利国家）。",
+        "keywords": "乡里制度,社区自治,社会保障,福利国家",
+        "exam_type": "选择题"
+      },
+      {
+        "id": "H_K4_1_1",
+        "name": "农业的起源",
+        "type": "KnowledgePoint",
+        "module": "经济与社会生活",
+        "chapter": "食物生产与社会生活",
+        "difficulty": 3,
+        "importance": 3,
+        "description": "农业起源南稻北粟，是文明产生的重要标志，促进人类定居和人口增长。",
+        "keywords": "农业起源,南稻北粟,文明产生,定居",
+        "exam_type": "选择题"
+      },
+      {
+        "id": "H_K4_1_2",
+        "name": "古代区域食物生产",
+        "type": "KnowledgePoint",
+        "module": "经济与社会生活",
+        "chapter": "食物生产与社会生活",
+        "difficulty": 2,
+        "importance": 2,
+        "description": "不同文明区形成各具特色的食物生产与饮食结构。",
+        "keywords": "食物生产,饮食结构,文明区域",
+        "exam_type": "选择题"
+      },
+      {
+        "id": "H_K4_1_3",
+        "name": "物种大交换",
+        "type": "KnowledgePoint",
+        "module": "经济与社会生活",
+        "chapter": "食物生产与社会生活",
+        "difficulty": 4,
+        "importance": 4,
+        "description": "新航路开辟后哥伦布大交换使玉米马铃薯番茄等在全球传播，引发食物革命。",
+        "keywords": "哥伦布大交换,玉米马铃薯,食物革命,物种交流",
+        "exam_type": "选择题、材料分析题"
+      },
+      {
+        "id": "H_K4_2_1",
+        "name": "农业工具演变",
+        "type": "KnowledgePoint",
+        "module": "经济与社会生活",
+        "chapter": "生产工具与劳作方式",
+        "difficulty": 3,
+        "importance": 3,
+        "description": "从石器、骨器到铁器、铁犁牛耕，再到近代农业机械，反映生产力进步。",
+        "keywords": "农业工具,石器铁器,铁犁牛耕,农业机械,生产力",
+        "exam_type": "选择题"
+      },
+      {
+        "id": "H_K4_2_2",
+        "name": "手工业工具与技术",
+        "type": "KnowledgePoint",
+        "module": "经济与社会生活",
+        "chapter": "生产工具与劳作方式",
+        "difficulty": 2,
+        "importance": 2,
+        "description": "纺织、冶炼、制瓷等手工业工具进步，中国古代手工业长期领先。",
+        "keywords": "手工业工具,纺织冶炼制瓷,手工业技术",
+        "exam_type": "选择题"
+      },
+      {
+        "id": "H_K4_2_3",
+        "name": "工业革命与机器大生产",
+        "type": "KnowledgePoint",
+        "module": "经济与社会生活",
+        "chapter": "生产工具与劳作方式",
+        "difficulty": 4,
+        "importance": 4,
+        "description": "工业革命用机器取代手工劳动，工厂制度确立，深刻改变生产方式与社会结构。",
+        "keywords": "工业革命,机器大生产,工厂制度,生产方式",
+        "exam_type": "选择题、材料分析题"
+      },
+      {
+        "id": "H_K4_3_1",
+        "name": "古代商业贸易",
+        "type": "KnowledgePoint",
+        "module": "经济与社会生活",
+        "chapter": "商业贸易与居住环境",
+        "difficulty": 3,
+        "importance": 4,
+        "description": "从市坊分离到市坊界限打破，明清商帮（晋商徽商）兴起，丝绸之路贸易繁荣。",
+        "keywords": "古代商业,市坊,商帮,晋商徽商,丝绸之路贸易",
+        "exam_type": "选择题、材料分析题"
+      },
+      {
+        "id": "H_K4_3_2",
+        "name": "世界市场形成",
+        "type": "KnowledgePoint",
+        "module": "经济与社会生活",
+        "chapter": "商业贸易与居住环境",
+        "difficulty": 4,
+        "importance": 4,
+        "description": "新航路开辟到两次工业革命，资本主义世界市场从雏形、初步形成到最终形成。",
+        "keywords": "世界市场,雏形,初步形成,最终形成",
+        "exam_type": "选择题、材料分析题"
+      },
+      {
+        "id": "H_K4_3_3",
+        "name": "居住环境演变",
+        "type": "KnowledgePoint",
+        "module": "经济与社会生活",
+        "chapter": "商业贸易与居住环境",
+        "difficulty": 2,
+        "importance": 2,
+        "description": "从村落到城市，近代以来城市化加速，居住条件和基础设施改善。",
+        "keywords": "居住环境,村落城市,城市化,基础设施",
+        "exam_type": "选择题"
+      },
+      {
+        "id": "H_K4_4_1",
+        "name": "交通通信进步",
+        "type": "KnowledgePoint",
+        "module": "经济与社会生活",
+        "chapter": "交通通信与医疗卫生",
+        "difficulty": 3,
+        "importance": 3,
+        "description": "铁路、轮船、飞机、电报电话出现，缩短时空距离，改变社会生活。",
+        "keywords": "铁路轮船飞机,电报电话,交通通信,时空距离",
+        "exam_type": "选择题、材料分析题"
+      },
+      {
+        "id": "H_K4_4_2",
+        "name": "医疗卫生进步",
+        "type": "KnowledgePoint",
+        "module": "经济与社会生活",
+        "chapter": "交通通信与医疗卫生",
+        "difficulty": 3,
+        "importance": 3,
+        "description": "近代医学进步（抗生素、疫苗）、公共卫生体系建立，人均寿命延长。",
+        "keywords": "医疗卫生,抗生素疫苗,公共卫生,人均寿命",
+        "exam_type": "选择题"
+      },
+      {
+        "id": "H_K4_4_3",
+        "name": "习俗变迁",
+        "type": "KnowledgePoint",
+        "module": "经济与社会生活",
+        "chapter": "交通通信与医疗卫生",
+        "difficulty": 2,
+        "importance": 2,
+        "description": "近代以来断发易服、婚丧礼俗变革体现社会观念转变。",
+        "keywords": "习俗变迁,断发易服,婚丧礼俗,社会观念",
+        "exam_type": "选择题"
+      },
+      {
+        "id": "H_K5_1_1",
+        "name": "中华文化的传播",
+        "type": "KnowledgePoint",
+        "module": "文化交流与传播",
+        "chapter": "中华文化与外来文化交流",
+        "difficulty": 3,
+        "importance": 4,
+        "description": "汉字、儒学东传朝鲜日本越南，四大发明西传推动欧洲社会变革。",
+        "keywords": "汉字儒学东传,四大发明西传,中华文化影响",
+        "exam_type": "选择题、材料分析题"
+      },
+      {
+        "id": "H_K5_1_2",
+        "name": "外来文化的传入与本土化",
+        "type": "KnowledgePoint",
+        "module": "文化交流与传播",
+        "chapter": "中华文化与外来文化交流",
+        "difficulty": 3,
+        "importance": 4,
+        "description": "佛教传入并中国化；明清西学东渐；近代西方科技思想传入推动中国近代化。",
+        "keywords": "佛教中国化,西学东渐,外来文化本土化,近代化",
+        "exam_type": "选择题、材料分析题"
+      },
+      {
+        "id": "H_K5_2_1",
+        "name": "人口迁徙与文化交流",
+        "type": "KnowledgePoint",
+        "module": "文化交流与传播",
+        "chapter": "迁徙、贸易与战争中的文化交流",
+        "difficulty": 3,
+        "importance": 3,
+        "description": "印欧人迁徙、匈奴西迁、华人下南洋等人口迁徙促进民族融合与文化交流。",
+        "keywords": "人口迁徙,印欧人,华人下南洋,文化交流",
+        "exam_type": "选择题"
+      },
+      {
+        "id": "H_K5_2_2",
+        "name": "商路贸易与文化交流",
+        "type": "KnowledgePoint",
+        "module": "文化交流与传播",
+        "chapter": "迁徙、贸易与战争中的文化交流",
+        "difficulty": 4,
+        "importance": 4,
+        "description": "丝绸之路、茶叶瓷器香料贸易不仅交换商品也传播文化技术。",
+        "keywords": "丝绸之路贸易,茶叶瓷器香料,商路,文化传播",
+        "exam_type": "选择题、材料分析题"
+      },
+      {
+        "id": "H_K5_2_3",
+        "name": "战争冲突与文化碰撞",
+        "type": "KnowledgePoint",
+        "module": "文化交流与传播",
+        "chapter": "迁徙、贸易与战争中的文化交流",
+        "difficulty": 3,
+        "importance": 3,
+        "description": "亚历山大东征、蒙古西征、十字军东征等在破坏中也带来文化交流。",
+        "keywords": "亚历山大东征,蒙古西征,十字军东征,文化碰撞",
+        "exam_type": "选择题"
+      },
+      {
+        "id": "H_K5_3_1",
+        "name": "文化遗产保护",
+        "type": "KnowledgePoint",
+        "module": "文化交流与传播",
+        "chapter": "文化遗产",
+        "difficulty": 2,
+        "importance": 3,
+        "description": "1972年《世界遗产公约》建立世界遗产保护制度；文化遗产是全人类共同财富。",
+        "keywords": "世界遗产公约,文化遗产保护,全人类共同财富",
+        "exam_type": "选择题、简答题"
+      },
+      {
+        "id": "H_K5_3_2",
+        "name": "中华优秀传统文化保护",
+        "type": "KnowledgePoint",
+        "module": "文化交流与传播",
+        "chapter": "文化遗产",
+        "difficulty": 2,
+        "importance": 3,
+        "description": "我国通过立法、非遗名录等方式保护传统文化，传承中华文脉。",
+        "keywords": "传统文化保护,非物质文化遗产,传承文脉",
+        "exam_type": "选择题、简答题"
+      }
+    ],
+    "edges": [
+      {
+        "source": "H_M1",
+        "target": "H_C1_1",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "模块【中外历史纲要(上)——中国史】包含章节【中华文明的起源与早期国家】"
+      },
+      {
+        "source": "H_M1",
+        "target": "H_C1_2",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "模块【中外历史纲要(上)——中国史】包含章节【统一多民族封建国家的形成与巩固】"
+      },
+      {
+        "source": "H_M1",
+        "target": "H_C1_3",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "模块【中外历史纲要(上)——中国史】包含章节【三国两晋南北朝至隋唐】"
+      },
+      {
+        "source": "H_M1",
+        "target": "H_C1_4",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "模块【中外历史纲要(上)——中国史】包含章节【辽宋夏金元时期】"
+      },
+      {
+        "source": "H_M1",
+        "target": "H_C1_5",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "模块【中外历史纲要(上)——中国史】包含章节【明清时期】"
+      },
+      {
+        "source": "H_M1",
+        "target": "H_C1_6",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "模块【中外历史纲要(上)——中国史】包含章节【晚清至民国（救亡图存与革命）】"
+      },
+      {
+        "source": "H_M1",
+        "target": "H_C1_7",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "模块【中外历史纲要(上)——中国史】包含章节【中华人民共和国的成立与发展】"
+      },
+      {
+        "source": "H_M2",
+        "target": "H_C2_1",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "模块【中外历史纲要(下)——世界史】包含章节【古代文明的产生与发展】"
+      },
+      {
+        "source": "H_M2",
+        "target": "H_C2_2",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "模块【中外历史纲要(下)——世界史】包含章节【中古时期的世界】"
+      },
+      {
+        "source": "H_M2",
+        "target": "H_C2_3",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "模块【中外历史纲要(下)——世界史】包含章节【走向整体的世界】"
+      },
+      {
+        "source": "H_M2",
+        "target": "H_C2_4",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "模块【中外历史纲要(下)——世界史】包含章节【资本主义制度的确立与工业革命】"
+      },
+      {
+        "source": "H_M2",
+        "target": "H_C2_5",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "模块【中外历史纲要(下)——世界史】包含章节【马克思主义的诞生与国际工人运动】"
+      },
+      {
+        "source": "H_M2",
+        "target": "H_C2_6",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "模块【中外历史纲要(下)——世界史】包含章节【两次世界大战与冷战】"
+      },
+      {
+        "source": "H_M2",
+        "target": "H_C2_7",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "模块【中外历史纲要(下)——世界史】包含章节【当代世界的发展特点与主要趋势】"
+      },
+      {
+        "source": "H_M3",
+        "target": "H_C3_1",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "模块【国家制度与社会治理】包含章节【政治制度】"
+      },
+      {
+        "source": "H_M3",
+        "target": "H_C3_2",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "模块【国家制度与社会治理】包含章节【官员选拔与管理】"
+      },
+      {
+        "source": "H_M3",
+        "target": "H_C3_3",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "模块【国家制度与社会治理】包含章节【法律教化】"
+      },
+      {
+        "source": "H_M3",
+        "target": "H_C3_4",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "模块【国家制度与社会治理】包含章节【民族外交与基层治理】"
+      },
+      {
+        "source": "H_M4",
+        "target": "H_C4_1",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "模块【经济与社会生活】包含章节【食物生产与社会生活】"
+      },
+      {
+        "source": "H_M4",
+        "target": "H_C4_2",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "模块【经济与社会生活】包含章节【生产工具与劳作方式】"
+      },
+      {
+        "source": "H_M4",
+        "target": "H_C4_3",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "模块【经济与社会生活】包含章节【商业贸易与居住环境】"
+      },
+      {
+        "source": "H_M4",
+        "target": "H_C4_4",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "模块【经济与社会生活】包含章节【交通通信与医疗卫生】"
+      },
+      {
+        "source": "H_M5",
+        "target": "H_C5_1",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "模块【文化交流与传播】包含章节【中华文化与外来文化交流】"
+      },
+      {
+        "source": "H_M5",
+        "target": "H_C5_2",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "模块【文化交流与传播】包含章节【迁徙、贸易与战争中的文化交流】"
+      },
+      {
+        "source": "H_M5",
+        "target": "H_C5_3",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "模块【文化交流与传播】包含章节【文化遗产】"
+      },
+      {
+        "source": "H_C1_1",
+        "target": "H_K1_1_1",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【中华文明的起源与早期国家】包含知识点【石器时代文化遗存】"
+      },
+      {
+        "source": "H_C1_1",
+        "target": "H_K1_1_2",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【中华文明的起源与早期国家】包含知识点【文明起源与早期国家】"
+      },
+      {
+        "source": "H_C1_1",
+        "target": "H_K1_1_3",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【中华文明的起源与早期国家】包含知识点【夏商西周政治制度】"
+      },
+      {
+        "source": "H_C1_1",
+        "target": "H_K1_1_4",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【中华文明的起源与早期国家】包含知识点【商周青铜文明与甲骨文】"
+      },
+      {
+        "source": "H_C1_1",
+        "target": "H_K1_1_5",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【中华文明的起源与早期国家】包含知识点【春秋战国变革与百家争鸣】"
+      },
+      {
+        "source": "H_C1_2",
+        "target": "H_K1_2_1",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【统一多民族封建国家的形成与巩固】包含知识点【秦统一与专制主义中央集权制度】"
+      },
+      {
+        "source": "H_C1_2",
+        "target": "H_K1_2_2",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【统一多民族封建国家的形成与巩固】包含知识点【汉武帝大一统】"
+      },
+      {
+        "source": "H_C1_2",
+        "target": "H_K1_2_3",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【统一多民族封建国家的形成与巩固】包含知识点【两汉选官制度】"
+      },
+      {
+        "source": "H_C1_2",
+        "target": "H_K1_2_4",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【统一多民族封建国家的形成与巩固】包含知识点【丝绸之路】"
+      },
+      {
+        "source": "H_C1_3",
+        "target": "H_K1_3_1",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【三国两晋南北朝至隋唐】包含知识点【北魏孝文帝改革与民族交融】"
+      },
+      {
+        "source": "H_C1_3",
+        "target": "H_K1_3_2",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【三国两晋南北朝至隋唐】包含知识点【隋朝建制】"
+      },
+      {
+        "source": "H_C1_3",
+        "target": "H_K1_3_3",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【三国两晋南北朝至隋唐】包含知识点【唐朝三省六部制与盛世】"
+      },
+      {
+        "source": "H_C1_3",
+        "target": "H_K1_3_4",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【三国两晋南北朝至隋唐】包含知识点【唐朝民族关系与对外交流】"
+      },
+      {
+        "source": "H_C1_3",
+        "target": "H_K1_3_5",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【三国两晋南北朝至隋唐】包含知识点【安史之乱与藩镇割据】"
+      },
+      {
+        "source": "H_C1_4",
+        "target": "H_K1_4_1",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【辽宋夏金元时期】包含知识点【北宋加强中央集权】"
+      },
+      {
+        "source": "H_C1_4",
+        "target": "H_K1_4_2",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【辽宋夏金元时期】包含知识点【宋代科举制与文官政治】"
+      },
+      {
+        "source": "H_C1_4",
+        "target": "H_K1_4_3",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【辽宋夏金元时期】包含知识点【辽夏金的制度】"
+      },
+      {
+        "source": "H_C1_4",
+        "target": "H_K1_4_4",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【辽宋夏金元时期】包含知识点【元朝统一与行省制度】"
+      },
+      {
+        "source": "H_C1_4",
+        "target": "H_K1_4_5",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【辽宋夏金元时期】包含知识点【宋元经济科技文化】"
+      },
+      {
+        "source": "H_C1_5",
+        "target": "H_K1_5_1",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【明清时期】包含知识点【明朝加强皇权】"
+      },
+      {
+        "source": "H_C1_5",
+        "target": "H_K1_5_2",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【明清时期】包含知识点【清朝军机处】"
+      },
+      {
+        "source": "H_C1_5",
+        "target": "H_K1_5_3",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【明清时期】包含知识点【明清赋税改革】"
+      },
+      {
+        "source": "H_C1_5",
+        "target": "H_K1_5_4",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【明清时期】包含知识点【明清对外关系】"
+      },
+      {
+        "source": "H_C1_6",
+        "target": "H_K1_6_1",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【晚清至民国（救亡图存与革命）】包含知识点【两次鸦片战争与不平等条约】"
+      },
+      {
+        "source": "H_C1_6",
+        "target": "H_K1_6_2",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【晚清至民国（救亡图存与革命）】包含知识点【太平天国运动】"
+      },
+      {
+        "source": "H_C1_6",
+        "target": "H_K1_6_3",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【晚清至民国（救亡图存与革命）】包含知识点【洋务运动】"
+      },
+      {
+        "source": "H_C1_6",
+        "target": "H_K1_6_4",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【晚清至民国（救亡图存与革命）】包含知识点【戊戌变法与义和团运动】"
+      },
+      {
+        "source": "H_C1_6",
+        "target": "H_K1_6_5",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【晚清至民国（救亡图存与革命）】包含知识点【辛亥革命】"
+      },
+      {
+        "source": "H_C1_6",
+        "target": "H_K1_6_6",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【晚清至民国（救亡图存与革命）】包含知识点【新文化运动与五四运动】"
+      },
+      {
+        "source": "H_C1_6",
+        "target": "H_K1_6_7",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【晚清至民国（救亡图存与革命）】包含知识点【国民革命】"
+      },
+      {
+        "source": "H_C1_6",
+        "target": "H_K1_6_8",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【晚清至民国（救亡图存与革命）】包含知识点【土地革命与红军长征】"
+      },
+      {
+        "source": "H_C1_6",
+        "target": "H_K1_6_9",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【晚清至民国（救亡图存与革命）】包含知识点【抗日战争】"
+      },
+      {
+        "source": "H_C1_6",
+        "target": "H_K1_6_10",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【晚清至民国（救亡图存与革命）】包含知识点【解放战争】"
+      },
+      {
+        "source": "H_C1_7",
+        "target": "H_K1_7_1",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【中华人民共和国的成立与发展】包含知识点【新中国政权巩固】"
+      },
+      {
+        "source": "H_C1_7",
+        "target": "H_K1_7_2",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【中华人民共和国的成立与发展】包含知识点【三大改造】"
+      },
+      {
+        "source": "H_C1_7",
+        "target": "H_K1_7_3",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【中华人民共和国的成立与发展】包含知识点【一五计划与建设成就】"
+      },
+      {
+        "source": "H_C1_7",
+        "target": "H_K1_7_4",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【中华人民共和国的成立与发展】包含知识点【改革开放】"
+      },
+      {
+        "source": "H_C1_7",
+        "target": "H_K1_7_5",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【中华人民共和国的成立与发展】包含知识点【一国两制与祖国统一】"
+      },
+      {
+        "source": "H_C1_7",
+        "target": "H_K1_7_6",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【中华人民共和国的成立与发展】包含知识点【新中国外交】"
+      },
+      {
+        "source": "H_C2_1",
+        "target": "H_K2_1_1",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【古代文明的产生与发展】包含知识点【古代早期文明】"
+      },
+      {
+        "source": "H_C2_1",
+        "target": "H_K2_1_2",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【古代文明的产生与发展】包含知识点【古代文明的扩展与交往】"
+      },
+      {
+        "source": "H_C2_2",
+        "target": "H_K2_2_1",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【中古时期的世界】包含知识点【中古西欧封建社会】"
+      },
+      {
+        "source": "H_C2_2",
+        "target": "H_K2_2_2",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【中古时期的世界】包含知识点【拜占庭与俄罗斯】"
+      },
+      {
+        "source": "H_C2_2",
+        "target": "H_K2_2_3",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【中古时期的世界】包含知识点【阿拉伯帝国与奥斯曼帝国】"
+      },
+      {
+        "source": "H_C2_2",
+        "target": "H_K2_2_4",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【中古时期的世界】包含知识点【中古日本与印度】"
+      },
+      {
+        "source": "H_C2_3",
+        "target": "H_K2_3_1",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【走向整体的世界】包含知识点【新航路开辟的动因与条件】"
+      },
+      {
+        "source": "H_C2_3",
+        "target": "H_K2_3_2",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【走向整体的世界】包含知识点【新航路开辟的过程】"
+      },
+      {
+        "source": "H_C2_3",
+        "target": "H_K2_3_3",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【走向整体的世界】包含知识点【新航路开辟的影响】"
+      },
+      {
+        "source": "H_C2_4",
+        "target": "H_K2_4_1",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【资本主义制度的确立与工业革命】包含知识点【英国君主立宪制】"
+      },
+      {
+        "source": "H_C2_4",
+        "target": "H_K2_4_2",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【资本主义制度的确立与工业革命】包含知识点【美国共和制】"
+      },
+      {
+        "source": "H_C2_4",
+        "target": "H_K2_4_3",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【资本主义制度的确立与工业革命】包含知识点【法国大革命与《人权宣言》】"
+      },
+      {
+        "source": "H_C2_4",
+        "target": "H_K2_4_4",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【资本主义制度的确立与工业革命】包含知识点【第一次工业革命】"
+      },
+      {
+        "source": "H_C2_4",
+        "target": "H_K2_4_5",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【资本主义制度的确立与工业革命】包含知识点【第二次工业革命】"
+      },
+      {
+        "source": "H_C2_4",
+        "target": "H_K2_4_6",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【资本主义制度的确立与工业革命】包含知识点【资本主义的扩展】"
+      },
+      {
+        "source": "H_C2_5",
+        "target": "H_K2_5_1",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【马克思主义的诞生与国际工人运动】包含知识点【马克思主义的诞生】"
+      },
+      {
+        "source": "H_C2_5",
+        "target": "H_K2_5_2",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【马克思主义的诞生与国际工人运动】包含知识点【列宁主义与十月革命】"
+      },
+      {
+        "source": "H_C2_5",
+        "target": "H_K2_5_3",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【马克思主义的诞生与国际工人运动】包含知识点【国际工人运动发展】"
+      },
+      {
+        "source": "H_C2_6",
+        "target": "H_K2_6_1",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【两次世界大战与冷战】包含知识点【第一次世界大战与凡华体系】"
+      },
+      {
+        "source": "H_C2_6",
+        "target": "H_K2_6_2",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【两次世界大战与冷战】包含知识点【经济大危机与罗斯福新政】"
+      },
+      {
+        "source": "H_C2_6",
+        "target": "H_K2_6_3",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【两次世界大战与冷战】包含知识点【法西斯主义与二战】"
+      },
+      {
+        "source": "H_C2_6",
+        "target": "H_K2_6_4",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【两次世界大战与冷战】包含知识点【冷战】"
+      },
+      {
+        "source": "H_C2_6",
+        "target": "H_K2_6_5",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【两次世界大战与冷战】包含知识点【冷战中的热战与多极化】"
+      },
+      {
+        "source": "H_C2_7",
+        "target": "H_K2_7_1",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【当代世界的发展特点与主要趋势】包含知识点【冷战结束与多极化加强】"
+      },
+      {
+        "source": "H_C2_7",
+        "target": "H_K2_7_2",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【当代世界的发展特点与主要趋势】包含知识点【经济全球化与区域集团化】"
+      },
+      {
+        "source": "H_C2_7",
+        "target": "H_K2_7_3",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【当代世界的发展特点与主要趋势】包含知识点【当代全球性问题】"
+      },
+      {
+        "source": "H_C3_1",
+        "target": "H_K3_1_1",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【政治制度】包含知识点【中国古代政治制度演变】"
+      },
+      {
+        "source": "H_C3_1",
+        "target": "H_K3_1_2",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【政治制度】包含知识点【西方政治制度】"
+      },
+      {
+        "source": "H_C3_1",
+        "target": "H_K3_1_3",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【政治制度】包含知识点【中国近现代政治制度】"
+      },
+      {
+        "source": "H_C3_2",
+        "target": "H_K3_2_1",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【官员选拔与管理】包含知识点【察举制与九品中正制】"
+      },
+      {
+        "source": "H_C3_2",
+        "target": "H_K3_2_2",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【官员选拔与管理】包含知识点【科举制的演变与影响】"
+      },
+      {
+        "source": "H_C3_2",
+        "target": "H_K3_2_3",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【官员选拔与管理】包含知识点【西方文官制度】"
+      },
+      {
+        "source": "H_C3_3",
+        "target": "H_K3_3_1",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【法律教化】包含知识点【中国古代法律与教化】"
+      },
+      {
+        "source": "H_C3_3",
+        "target": "H_K3_3_2",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【法律教化】包含知识点【近代中国的法律与教化】"
+      },
+      {
+        "source": "H_C3_3",
+        "target": "H_K3_3_3",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【法律教化】包含知识点【西方法律传统】"
+      },
+      {
+        "source": "H_C3_4",
+        "target": "H_K3_4_1",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【民族外交与基层治理】包含知识点【民族政策与外交】"
+      },
+      {
+        "source": "H_C3_4",
+        "target": "H_K3_4_2",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【民族外交与基层治理】包含知识点【基层治理与社会保障】"
+      },
+      {
+        "source": "H_C4_1",
+        "target": "H_K4_1_1",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【食物生产与社会生活】包含知识点【农业的起源】"
+      },
+      {
+        "source": "H_C4_1",
+        "target": "H_K4_1_2",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【食物生产与社会生活】包含知识点【古代区域食物生产】"
+      },
+      {
+        "source": "H_C4_1",
+        "target": "H_K4_1_3",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【食物生产与社会生活】包含知识点【物种大交换】"
+      },
+      {
+        "source": "H_C4_2",
+        "target": "H_K4_2_1",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【生产工具与劳作方式】包含知识点【农业工具演变】"
+      },
+      {
+        "source": "H_C4_2",
+        "target": "H_K4_2_2",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【生产工具与劳作方式】包含知识点【手工业工具与技术】"
+      },
+      {
+        "source": "H_C4_2",
+        "target": "H_K4_2_3",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【生产工具与劳作方式】包含知识点【工业革命与机器大生产】"
+      },
+      {
+        "source": "H_C4_3",
+        "target": "H_K4_3_1",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【商业贸易与居住环境】包含知识点【古代商业贸易】"
+      },
+      {
+        "source": "H_C4_3",
+        "target": "H_K4_3_2",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【商业贸易与居住环境】包含知识点【世界市场形成】"
+      },
+      {
+        "source": "H_C4_3",
+        "target": "H_K4_3_3",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【商业贸易与居住环境】包含知识点【居住环境演变】"
+      },
+      {
+        "source": "H_C4_4",
+        "target": "H_K4_4_1",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【交通通信与医疗卫生】包含知识点【交通通信进步】"
+      },
+      {
+        "source": "H_C4_4",
+        "target": "H_K4_4_2",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【交通通信与医疗卫生】包含知识点【医疗卫生进步】"
+      },
+      {
+        "source": "H_C4_4",
+        "target": "H_K4_4_3",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【交通通信与医疗卫生】包含知识点【习俗变迁】"
+      },
+      {
+        "source": "H_C5_1",
+        "target": "H_K5_1_1",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【中华文化与外来文化交流】包含知识点【中华文化的传播】"
+      },
+      {
+        "source": "H_C5_1",
+        "target": "H_K5_1_2",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【中华文化与外来文化交流】包含知识点【外来文化的传入与本土化】"
+      },
+      {
+        "source": "H_C5_2",
+        "target": "H_K5_2_1",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【迁徙、贸易与战争中的文化交流】包含知识点【人口迁徙与文化交流】"
+      },
+      {
+        "source": "H_C5_2",
+        "target": "H_K5_2_2",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【迁徙、贸易与战争中的文化交流】包含知识点【商路贸易与文化交流】"
+      },
+      {
+        "source": "H_C5_2",
+        "target": "H_K5_2_3",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【迁徙、贸易与战争中的文化交流】包含知识点【战争冲突与文化碰撞】"
+      },
+      {
+        "source": "H_C5_3",
+        "target": "H_K5_3_1",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【文化遗产】包含知识点【文化遗产保护】"
+      },
+      {
+        "source": "H_C5_3",
+        "target": "H_K5_3_2",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【文化遗产】包含知识点【中华优秀传统文化保护】"
+      },
+      {
+        "source": "H_K1_2_1",
+        "target": "H_K1_1_3",
+        "relation": "DERIVED_FROM",
+        "weight": 0.8,
+        "description": "秦郡县制取代分封宗法制，建立专制集权"
+      },
+      {
+        "source": "H_K1_2_2",
+        "target": "H_K1_2_1",
+        "relation": "RELATED_TO",
+        "weight": 0.7,
+        "description": "汉大一统巩固秦开创的中央集权"
+      },
+      {
+        "source": "H_K1_3_3",
+        "target": "H_K1_2_1",
+        "relation": "DERIVED_FROM",
+        "weight": 0.7,
+        "description": "三省六部制发展完善专制集权"
+      },
+      {
+        "source": "H_K1_5_1",
+        "target": "H_K1_3_3",
+        "relation": "DERIVED_FROM",
+        "weight": 0.7,
+        "description": "明废丞相是相权皇权矛盾演变的产物"
+      },
+      {
+        "source": "H_K1_5_2",
+        "target": "H_K1_5_1",
+        "relation": "DERIVED_FROM",
+        "weight": 0.8,
+        "description": "军机处使明代加强的皇权达到顶峰"
+      },
+      {
+        "source": "H_K3_1_1",
+        "target": "H_K1_5_2",
+        "relation": "RELATED_TO",
+        "weight": 0.8,
+        "description": "古代政治制度演变专题涵盖军机处这一顶峰"
+      },
+      {
+        "source": "H_K3_1_1",
+        "target": "H_K1_2_1",
+        "relation": "RELATED_TO",
+        "weight": 0.8,
+        "description": "古代政治制度演变涵盖秦确立"
+      },
+      {
+        "source": "H_K3_1_1",
+        "target": "H_K1_3_3",
+        "relation": "RELATED_TO",
+        "weight": 0.7,
+        "description": "古代政治制度演变涵盖隋唐完善"
+      },
+      {
+        "source": "H_K3_2_2",
+        "target": "H_K1_3_2",
+        "relation": "DERIVED_FROM",
+        "weight": 0.8,
+        "description": "科举制演变专题以隋创立为起点"
+      },
+      {
+        "source": "H_K3_2_2",
+        "target": "H_K1_4_2",
+        "relation": "RELATED_TO",
+        "weight": 0.7,
+        "description": "科举制演变涵盖宋代发展"
+      },
+      {
+        "source": "H_K3_2_2",
+        "target": "H_K3_2_3",
+        "relation": "RELATED_TO",
+        "weight": 0.7,
+        "description": "科举制影响西方文官制度形成"
+      },
+      {
+        "source": "H_K3_3_3",
+        "target": "H_K3_3_1",
+        "relation": "RELATED_TO",
+        "weight": 0.6,
+        "description": "罗马法与中国古代法比较"
+      },
+      {
+        "source": "H_K2_3_3",
+        "target": "H_K2_3_2",
+        "relation": "PREREQUISITE",
+        "weight": 0.8,
+        "description": "分析新航路影响需先掌握开辟过程"
+      },
+      {
+        "source": "H_K2_3_2",
+        "target": "H_K2_3_1",
+        "relation": "PREREQUISITE",
+        "weight": 0.7,
+        "description": "掌握开辟过程需先理解动因条件"
+      },
+      {
+        "source": "H_K4_3_2",
+        "target": "H_K2_3_3",
+        "relation": "RELATED_TO",
+        "weight": 0.8,
+        "description": "世界市场形成以新航路开辟为起点"
+      },
+      {
+        "source": "H_K2_4_4",
+        "target": "H_K4_3_2",
+        "relation": "RELATED_TO",
+        "weight": 0.7,
+        "description": "第一次工业革命推动世界市场初步形成"
+      },
+      {
+        "source": "H_K2_4_5",
+        "target": "H_K4_3_2",
+        "relation": "RELATED_TO",
+        "weight": 0.8,
+        "description": "第二次工业革命推动世界市场最终形成"
+      },
+      {
+        "source": "H_K2_4_5",
+        "target": "H_K2_4_4",
+        "relation": "PREREQUISITE",
+        "weight": 0.7,
+        "description": "第二次工业革命建立在第一次基础上"
+      },
+      {
+        "source": "H_K4_2_3",
+        "target": "H_K2_4_4",
+        "relation": "DERIVED_FROM",
+        "weight": 0.8,
+        "description": "机器大生产是工业革命的核心"
+      },
+      {
+        "source": "H_K2_4_1",
+        "target": "H_K3_1_2",
+        "relation": "RELATED_TO",
+        "weight": 0.7,
+        "description": "英君主立宪是西方政治制度典型案例"
+      },
+      {
+        "source": "H_K2_4_2",
+        "target": "H_K3_1_2",
+        "relation": "RELATED_TO",
+        "weight": 0.7,
+        "description": "美共和制是西方政治制度典型案例"
+      },
+      {
+        "source": "H_K1_6_3",
+        "target": "H_K2_4_6",
+        "relation": "RELATED_TO",
+        "weight": 0.6,
+        "description": "洋务运动与日本明治维新是同时期近代化探索"
+      },
+      {
+        "source": "H_K1_6_5",
+        "target": "H_K1_6_3",
+        "relation": "PREREQUISITE",
+        "weight": 0.6,
+        "description": "辛亥革命继承洋务运动以来的救亡图存"
+      },
+      {
+        "source": "H_K1_6_6",
+        "target": "H_K1_6_5",
+        "relation": "PREREQUISITE",
+        "weight": 0.7,
+        "description": "新文化五四运动在辛亥革命后推动思想解放"
+      },
+      {
+        "source": "H_K1_6_9",
+        "target": "H_K2_6_3",
+        "relation": "RELATED_TO",
+        "weight": 0.7,
+        "description": "中国抗战是世界反法西斯战争重要组成部分"
+      },
+      {
+        "source": "H_K1_6_8",
+        "target": "H_K1_6_6",
+        "relation": "PREREQUISITE",
+        "weight": 0.6,
+        "description": "土地革命在新文化五四思想解放后展开"
+      },
+      {
+        "source": "H_K1_6_10",
+        "target": "H_K1_6_8",
+        "relation": "PREREQUISITE",
+        "weight": 0.6,
+        "description": "解放战争承接土地革命时期革命力量"
+      },
+      {
+        "source": "H_K1_7_2",
+        "target": "H_K1_7_1",
+        "relation": "PREREQUISITE",
+        "weight": 0.7,
+        "description": "三大改造在政权巩固基础上进行"
+      },
+      {
+        "source": "H_K1_7_4",
+        "target": "H_K1_6_10",
+        "relation": "RELATED_TO",
+        "weight": 0.5,
+        "description": "改革开放建立在新中国体制基础上"
+      },
+      {
+        "source": "H_K2_5_2",
+        "target": "H_K2_5_1",
+        "relation": "DERIVED_FROM",
+        "weight": 0.8,
+        "description": "列宁主义十月革命发展马克思主义"
+      },
+      {
+        "source": "H_K2_6_1",
+        "target": "H_K2_4_5",
+        "relation": "RELATED_TO",
+        "weight": 0.6,
+        "description": "一战是第二次工业革命后列强矛盾产物"
+      },
+      {
+        "source": "H_K2_6_4",
+        "target": "H_K2_6_3",
+        "relation": "DERIVED_FROM",
+        "weight": 0.8,
+        "description": "冷战格局由二战后雅尔塔体系演变而来"
+      },
+      {
+        "source": "H_K2_6_2",
+        "target": "H_K2_4_5",
+        "relation": "RELATED_TO",
+        "weight": 0.5,
+        "description": "罗斯福新政应对垄断资本主义矛盾"
+      },
+      {
+        "source": "H_K5_2_2",
+        "target": "H_K1_2_4",
+        "relation": "RELATED_TO",
+        "weight": 0.7,
+        "description": "丝绸之路既是商路贸易也是文化交流通道"
+      },
+      {
+        "source": "H_K5_1_1",
+        "target": "H_K1_3_4",
+        "relation": "RELATED_TO",
+        "weight": 0.7,
+        "description": "唐代对外交流体现中华文化对外传播"
+      },
+      {
+        "source": "H_K5_3_2",
+        "target": "H_K5_1_1",
+        "relation": "RELATED_TO",
+        "weight": 0.6,
+        "description": "中华优秀传统文化保护与中华文化对外传播相辅相成"
+      },
+      {
+        "source": "H_K5_3_1",
+        "target": "H_K5_1_2",
+        "relation": "RELATED_TO",
+        "weight": 0.5,
+        "description": "文化遗产保护涉及外来文化本土化遗存"
+      }
+    ],
+    "categories": [
+      "中外历史纲要(上)——中国史",
+      "中外历史纲要(下)——世界史",
+      "国家制度与社会治理",
+      "经济与社会生活",
+      "文化交流与传播"
+    ],
+    "stats": {
+      "total_nodes": 125,
+      "total_edges": 157,
+      "modules": 5,
+      "chapters": 25,
+      "knowledge_points": 95
+    }
+  },
+  "地理": {
+    "color": "#1D4ED8",
+    "nodes": [
+      {
+        "id": "G_M1",
+        "name": "必修第一册——自然地理基础",
+        "type": "Module",
+        "module": "必修第一册——自然地理基础",
+        "chapter": "",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "必修第一册。阐述宇宙中的地球、大气、水、地貌、植被与土壤、自然灾害等自然地理基础。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "G_M2",
+        "name": "必修第二册——人文地理",
+        "type": "Module",
+        "module": "必修第二册——人文地理",
+        "chapter": "",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "必修第二册。阐述人口、乡村和城镇、产业区位因素、环境与发展等人文地理内容。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "G_M3",
+        "name": "选择性必修1 自然地理原理",
+        "type": "Module",
+        "module": "选择性必修1 自然地理原理",
+        "chapter": "",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "选必1。阐述地球运动、地表形态塑造、大气受热与运动、洋流水体运动、自然环境的整体性与差异性。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "G_M4",
+        "name": "选择性必修2 区域发展",
+        "type": "Module",
+        "module": "选择性必修2 区域发展",
+        "chapter": "",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "选必2。阐述区域与区域发展、生态脆弱区治理、资源枯竭型城市转型、产业转移。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "G_M5",
+        "name": "选择性必修3 资源、环境与国家安全",
+        "type": "Module",
+        "module": "选择性必修3 资源、环境与国家安全",
+        "chapter": "",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "选必3。阐述资源安全、环境安全及保障国家安全的资源环境行动。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "G_C1_1",
+        "name": "宇宙中的地球",
+        "type": "Chapter",
+        "module": "必修第一册——自然地理基础",
+        "chapter": "宇宙中的地球",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "天体系统、太阳辐射与活动、地球圈层结构、生命存在条件。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "G_C1_2",
+        "name": "地球上的大气",
+        "type": "Chapter",
+        "module": "必修第一册——自然地理基础",
+        "chapter": "地球上的大气",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "大气组成与垂直分层、受热过程、热力环流与风。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "G_C1_3",
+        "name": "地球上的水",
+        "type": "Chapter",
+        "module": "必修第一册——自然地理基础",
+        "chapter": "地球上的水",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "水循环、海水性质与运动。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "G_C1_4",
+        "name": "地貌",
+        "type": "Chapter",
+        "module": "必修第一册——自然地理基础",
+        "chapter": "地貌",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "常见地貌类型、河流地貌发育、地貌观察与等高线。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "G_C1_5",
+        "name": "植被与土壤",
+        "type": "Chapter",
+        "module": "必修第一册——自然地理基础",
+        "chapter": "植被与土壤",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "主要植被类型、土壤组成与形成、土壤剖面。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "G_C1_6",
+        "name": "自然灾害",
+        "type": "Chapter",
+        "module": "必修第一册——自然地理基础",
+        "chapter": "自然灾害",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "气象灾害与地质灾害的成因、监测防御与救援。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "G_C2_1",
+        "name": "人口",
+        "type": "Chapter",
+        "module": "必修第二册——人文地理",
+        "chapter": "人口",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "人口分布、迁移、数量变化与人口容量。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "G_C2_2",
+        "name": "乡村和城镇",
+        "type": "Chapter",
+        "module": "必修第二册——人文地理",
+        "chapter": "乡村和城镇",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "城乡空间结构、城镇化及问题、地域文化与城乡景观。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "G_C2_3",
+        "name": "产业区位因素",
+        "type": "Chapter",
+        "module": "必修第二册——人文地理",
+        "chapter": "产业区位因素",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "农业、工业、服务业区位及交通运输布局影响。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "G_C2_4",
+        "name": "环境与发展",
+        "type": "Chapter",
+        "module": "必修第二册——人文地理",
+        "chapter": "环境与发展",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "主要环境问题、可持续发展、国家发展战略。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "G_C3_1",
+        "name": "地球的运动",
+        "type": "Chapter",
+        "module": "选择性必修1 自然地理原理",
+        "chapter": "地球的运动",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "地球自转与公转的地理意义、黄赤交角。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "G_C3_2",
+        "name": "地表形态的塑造",
+        "type": "Chapter",
+        "module": "选择性必修1 自然地理原理",
+        "chapter": "地表形态的塑造",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "内力作用、外力作用、山地形成、河流地貌。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "G_C3_3",
+        "name": "大气的受热过程与运动",
+        "type": "Chapter",
+        "module": "选择性必修1 自然地理原理",
+        "chapter": "大气的受热过程与运动",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "受热过程保温、热力环流、大气环流、季风、天气系统。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "G_C3_4",
+        "name": "洋流与水体运动",
+        "type": "Chapter",
+        "module": "选择性必修1 自然地理原理",
+        "chapter": "洋流与水体运动",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "水循环、洋流成因分布与影响、河流补给、水资源利用。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "G_C3_5",
+        "name": "自然环境的整体性与差异性",
+        "type": "Chapter",
+        "module": "选择性必修1 自然地理原理",
+        "chapter": "自然环境的整体性与差异性",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "整体性、地域分异规律、非地带性。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "G_C4_1",
+        "name": "区域与区域发展",
+        "type": "Chapter",
+        "module": "选择性必修2 区域发展",
+        "chapter": "区域与区域发展",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "区域特征类型、发展阶段与产业结构、发展条件。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "G_C4_2",
+        "name": "生态脆弱区的治理",
+        "type": "Chapter",
+        "module": "选择性必修2 区域发展",
+        "chapter": "生态脆弱区的治理",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "生态脆弱区成因特征、黄土高原、荒漠化、湿地治理。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "G_C4_3",
+        "name": "资源枯竭型城市转型",
+        "type": "Chapter",
+        "module": "选择性必修2 区域发展",
+        "chapter": "资源枯竭型城市转型",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "资源枯竭型城市转型发展、可持续发展对策。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "G_C4_4",
+        "name": "产业转移与区域发展",
+        "type": "Chapter",
+        "module": "选择性必修2 区域发展",
+        "chapter": "产业转移与区域发展",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "产业转移影响因素、对区域影响、东亚路径。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "G_C5_1",
+        "name": "资源安全",
+        "type": "Chapter",
+        "module": "选择性必修3 资源、环境与国家安全",
+        "chapter": "资源安全",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "水资源能源耕地安全、战略性矿产与粮食安全。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "G_C5_2",
+        "name": "环境安全",
+        "type": "Chapter",
+        "module": "选择性必修3 资源、环境与国家安全",
+        "chapter": "环境安全",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "环境污染生态破坏、全球性环境问题、污染防治。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "G_C5_3",
+        "name": "保障国家安全的资源环境行动",
+        "type": "Chapter",
+        "module": "选择性必修3 资源、环境与国家安全",
+        "chapter": "保障国家安全的资源环境行动",
+        "difficulty": 0,
+        "importance": 0,
+        "description": "保障途径、国家战略与公众参与。",
+        "keywords": "",
+        "exam_type": ""
+      },
+      {
+        "id": "G_K1_1_1",
+        "name": "天体与天体系统",
+        "type": "KnowledgePoint",
+        "module": "必修第一册——自然地理基础",
+        "chapter": "宇宙中的地球",
+        "difficulty": 2,
+        "importance": 3,
+        "description": "宇宙中恒星、行星、星云等为天体；天体相互吸引相互绕转形成地月系、太阳系、银河系等天体系统。",
+        "keywords": "天体,恒星行星星云,天体系统,地月系太阳系银河系",
+        "exam_type": "选择题"
+      },
+      {
+        "id": "G_K1_1_2",
+        "name": "太阳辐射及其影响",
+        "type": "KnowledgePoint",
+        "module": "必修第一册——自然地理基础",
+        "chapter": "宇宙中的地球",
+        "difficulty": 3,
+        "importance": 4,
+        "description": "太阳辐射是地球大气运动水循环和生物活动的主要能量来源，维持地表温度。",
+        "keywords": "太阳辐射,能量来源,大气运动,水循环",
+        "exam_type": "选择题、综合题"
+      },
+      {
+        "id": "G_K1_1_3",
+        "name": "太阳活动对地球的影响",
+        "type": "KnowledgePoint",
+        "module": "必修第一册——自然地理基础",
+        "chapter": "宇宙中的地球",
+        "difficulty": 3,
+        "importance": 4,
+        "description": "黑子耀斑等太阳活动影响无线电短波通信、干扰磁场、产生极光，与气候有一定相关性。",
+        "keywords": "太阳活动,黑子,耀斑,无线电通信,极光",
+        "exam_type": "选择题"
+      },
+      {
+        "id": "G_K1_1_4",
+        "name": "地球的圈层结构",
+        "type": "KnowledgePoint",
+        "module": "必修第一册——自然地理基础",
+        "chapter": "宇宙中的地球",
+        "difficulty": 3,
+        "importance": 4,
+        "description": "内部圈层分地壳、地幔、地核（以莫霍面、古登堡面为界）；外部圈层为大气圈、水圈、生物圈。",
+        "keywords": "圈层结构,地壳地幔地核,莫霍面古登堡面,大气水生物圈",
+        "exam_type": "选择题、综合题"
+      },
+      {
+        "id": "G_K1_1_5",
+        "name": "地球存在生命的条件",
+        "type": "KnowledgePoint",
+        "module": "必修第一册——自然地理基础",
+        "chapter": "宇宙中的地球",
+        "difficulty": 3,
+        "importance": 4,
+        "description": "外部条件是太阳光照稳定、行星各行其道互不干扰；自身条件是适宜温度、液态水、适合呼吸的大气。",
+        "keywords": "生命条件,外部条件,自身条件,适宜温度液态水大气",
+        "exam_type": "选择题、综合题"
+      },
+      {
+        "id": "G_K1_2_1",
+        "name": "大气组成与垂直分层",
+        "type": "KnowledgePoint",
+        "module": "必修第一册——自然地理基础",
+        "chapter": "地球上的大气",
+        "difficulty": 3,
+        "importance": 4,
+        "description": "干洁空气、水汽、固体杂质组成大气；垂直分对流层（气温递减、对流）、平流层（升温、航空）、高层大气。",
+        "keywords": "大气组成,对流层,平流层,高层大气,气温垂直变化",
+        "exam_type": "选择题、综合题"
+      },
+      {
+        "id": "G_K1_2_2",
+        "name": "大气的受热过程",
+        "type": "KnowledgePoint",
+        "module": "必修第一册——自然地理基础",
+        "chapter": "地球上的大气",
+        "difficulty": 4,
+        "importance": 5,
+        "description": "太阳短波辐射经大气削弱到达地面，地面增温后以长波辐射加热大气，大气逆辐射对地面起保温作用。",
+        "keywords": "受热过程,短波辐射,长波辐射,地面辐射,大气逆辐射,保温作用",
+        "exam_type": "综合题、选择题"
+      },
+      {
+        "id": "G_K1_2_3",
+        "name": "热力环流",
+        "type": "KnowledgePoint",
+        "module": "必修第一册——自然地理基础",
+        "chapter": "地球上的大气",
+        "difficulty": 4,
+        "importance": 5,
+        "description": "地面冷热不均引起大气上升下沉运动，形成同一水平面气压差异，进而形成热力环流，是大气运动最简单形式。",
+        "keywords": "热力环流,冷热不均,上升下沉,气压差异,大气运动",
+        "exam_type": "综合题、选择题"
+      },
+      {
+        "id": "G_K1_2_4",
+        "name": "大气的水平运动——风",
+        "type": "KnowledgePoint",
+        "module": "必修第一册——自然地理基础",
+        "chapter": "地球上的大气",
+        "difficulty": 4,
+        "importance": 4,
+        "description": "水平气压梯度力是风形成的直接原因；高空风受气压梯度力与地转偏向力影响，近地面风还受摩擦力影响。",
+        "keywords": "风,水平气压梯度力,地转偏向力,摩擦力,风向",
+        "exam_type": "综合题、选择题"
+      },
+      {
+        "id": "G_K1_3_1",
+        "name": "水循环",
+        "type": "KnowledgePoint",
+        "module": "必修第一册——自然地理基础",
+        "chapter": "地球上的水",
+        "difficulty": 4,
+        "importance": 5,
+        "description": "包括蒸发、水汽输送、降水、地表径流、下渗、地下径流等环节；分海上内循环、陆地内循环、海陆间循环，意义在于维持全球水量平衡、塑造地表形态。",
+        "keywords": "水循环,环节,海陆间循环,水量平衡,塑造地表",
+        "exam_type": "综合题、选择题"
+      },
+      {
+        "id": "G_K1_3_2",
+        "name": "海水的性质",
+        "type": "KnowledgePoint",
+        "module": "必修第一册——自然地理基础",
+        "chapter": "地球上的水",
+        "difficulty": 3,
+        "importance": 4,
+        "description": "海水温度随纬度升高而降低、随深度增加而降低；盐度以副热带海区最高；密度随温度降低盐度升高而增大。",
+        "keywords": "海水温度,海水盐度,海水密度,分布规律",
+        "exam_type": "选择题、综合题"
+      },
+      {
+        "id": "G_K1_3_3",
+        "name": "海水的运动",
+        "type": "KnowledgePoint",
+        "module": "必修第一册——自然地理基础",
+        "chapter": "地球上的水",
+        "difficulty": 3,
+        "importance": 3,
+        "description": "海水运动形式有波浪、潮汐、洋流，对航运、海岸地貌、海洋生物有重要影响。",
+        "keywords": "海水运动,波浪,潮汐,洋流",
+        "exam_type": "选择题"
+      },
+      {
+        "id": "G_K1_4_1",
+        "name": "常见地貌类型",
+        "type": "KnowledgePoint",
+        "module": "必修第一册——自然地理基础",
+        "chapter": "地貌",
+        "difficulty": 3,
+        "importance": 4,
+        "description": "喀斯特地貌、河流地貌、风成地貌、海岸地貌等的成因与形态特征。",
+        "keywords": "喀斯特地貌,河流地貌,风成地貌,海岸地貌",
+        "exam_type": "选择题、综合题"
+      },
+      {
+        "id": "G_K1_4_2",
+        "name": "河流地貌的发育",
+        "type": "KnowledgePoint",
+        "module": "必修第一册——自然地理基础",
+        "chapter": "地貌",
+        "difficulty": 4,
+        "importance": 5,
+        "description": "上游侵蚀形成V型谷，中游侧蚀拓宽河道，下游堆积形成冲积平原、三角洲。",
+        "keywords": "河流地貌,V型谷,冲积平原,三角洲,侵蚀堆积",
+        "exam_type": "综合题、选择题"
+      },
+      {
+        "id": "G_K1_4_3",
+        "name": "地貌观察与等高线",
+        "type": "KnowledgePoint",
+        "module": "必修第一册——自然地理基础",
+        "chapter": "地貌",
+        "difficulty": 3,
+        "importance": 4,
+        "description": "通过等高线地形图判断山顶山脊山谷鞍部陡崖，观察地貌的坡度、走向与组合。",
+        "keywords": "等高线,山顶山脊山谷,鞍部陡崖,地貌观察",
+        "exam_type": "综合题、选择题"
+      },
+      {
+        "id": "G_K1_5_1",
+        "name": "主要植被类型与环境",
+        "type": "KnowledgePoint",
+        "module": "必修第一册——自然地理基础",
+        "chapter": "植被与土壤",
+        "difficulty": 3,
+        "importance": 3,
+        "description": "森林、草原、荒漠等植被类型与气候水分条件相适应，植被是自然环境的一面镜子。",
+        "keywords": "植被,森林草原荒漠,气候水分,自然环境镜子",
+        "exam_type": "选择题、综合题"
+      },
+      {
+        "id": "G_K1_5_2",
+        "name": "土壤的组成与形成因素",
+        "type": "KnowledgePoint",
+        "module": "必修第一册——自然地理基础",
+        "chapter": "植被与土壤",
+        "difficulty": 4,
+        "importance": 4,
+        "description": "土壤由矿物质、有机质、水分、空气组成；成土母质、气候、生物、地形、时间是其形成因素。",
+        "keywords": "土壤组成,矿物质有机质,成土母质,成土因素",
+        "exam_type": "选择题、综合题"
+      },
+      {
+        "id": "G_K1_5_3",
+        "name": "土壤剖面与质地",
+        "type": "KnowledgePoint",
+        "module": "必修第一册——自然地理基础",
+        "chapter": "植被与土壤",
+        "difficulty": 2,
+        "importance": 3,
+        "description": "自然土壤剖面分枯枝落叶层、腐殖质层、淋溶层、淀积层、母质层；土壤质地分砂土、壤土、黏土。",
+        "keywords": "土壤剖面,腐殖质层,淋溶淀积,土壤质地,砂土壤土黏土",
+        "exam_type": "选择题"
+      },
+      {
+        "id": "G_K1_6_1",
+        "name": "气象灾害",
+        "type": "KnowledgePoint",
+        "module": "必修第一册——自然地理基础",
+        "chapter": "自然灾害",
+        "difficulty": 4,
+        "importance": 4,
+        "description": "洪涝、干旱、台风、寒潮等气象灾害的成因、时空分布与危害。",
+        "keywords": "气象灾害,洪涝干旱台风寒潮,成因分布危害",
+        "exam_type": "综合题、选择题"
+      },
+      {
+        "id": "G_K1_6_2",
+        "name": "地质灾害",
+        "type": "KnowledgePoint",
+        "module": "必修第一册——自然地理基础",
+        "chapter": "自然灾害",
+        "difficulty": 4,
+        "importance": 4,
+        "description": "地震、滑坡、泥石流等地质灾害的成因、分布与危害，常与气象灾害链发。",
+        "keywords": "地质灾害,地震滑坡泥石流,成因分布,灾害链",
+        "exam_type": "综合题、选择题"
+      },
+      {
+        "id": "G_K1_6_3",
+        "name": "灾害监测防御与救援",
+        "type": "KnowledgePoint",
+        "module": "必修第一册——自然地理基础",
+        "chapter": "自然灾害",
+        "difficulty": 2,
+        "importance": 3,
+        "description": "通过遥感等监测手段、工程与非工程防御措施及灾后救援减轻灾害损失。",
+        "keywords": "灾害监测,遥感,防御措施,灾后救援",
+        "exam_type": "选择题、简答题"
+      },
+      {
+        "id": "G_K2_1_1",
+        "name": "人口分布的影响因素",
+        "type": "KnowledgePoint",
+        "module": "必修第二册——人文地理",
+        "chapter": "人口",
+        "difficulty": 3,
+        "importance": 4,
+        "description": "自然因素（气候、地形、水源、土壤）和社会经济因素（经济、交通、历史）共同影响人口分布。",
+        "keywords": "人口分布,自然因素,社会经济因素",
+        "exam_type": "选择题、综合题"
+      },
+      {
+        "id": "G_K2_1_2",
+        "name": "人口迁移及其影响因素",
+        "type": "KnowledgePoint",
+        "module": "必修第二册——人文地理",
+        "chapter": "人口",
+        "difficulty": 4,
+        "importance": 5,
+        "description": "人口迁移受推力（经济落后、灾害、战争）和拉力（经济发达、资源、政策）影响。",
+        "keywords": "人口迁移,推力拉力,影响因素",
+        "exam_type": "综合题、选择题"
+      },
+      {
+        "id": "G_K2_1_3",
+        "name": "人口数量变化",
+        "type": "KnowledgePoint",
+        "module": "必修第二册——人文地理",
+        "chapter": "人口",
+        "difficulty": 3,
+        "importance": 4,
+        "description": "人口数量变化由自然增长（出生率减死亡率）和机械增长（迁移）决定；人口增长模式分原始、传统、现代型。",
+        "keywords": "人口数量变化,自然增长,机械增长,人口增长模式",
+        "exam_type": "选择题、综合题"
+      },
+      {
+        "id": "G_K2_1_4",
+        "name": "人口容量",
+        "type": "KnowledgePoint",
+        "module": "必修第二册——人文地理",
+        "chapter": "人口",
+        "difficulty": 4,
+        "importance": 4,
+        "description": "环境承载力决定环境人口容量，合理人口容量是使人类活动与环境协调的最适宜人口数。",
+        "keywords": "人口容量,环境承载力,合理人口容量",
+        "exam_type": "综合题、选择题"
+      },
+      {
+        "id": "G_K2_2_1",
+        "name": "城乡空间结构",
+        "type": "KnowledgePoint",
+        "module": "必修第二册——人文地理",
+        "chapter": "乡村和城镇",
+        "difficulty": 4,
+        "importance": 5,
+        "description": "城镇分住宅区、商业区、工业区等功能区，受地租、交通通达度、知名度等因素影响分布。",
+        "keywords": "城乡空间结构,住宅区商业区工业区,地租,功能分区",
+        "exam_type": "综合题、选择题"
+      },
+      {
+        "id": "G_K2_2_2",
+        "name": "城镇化及问题",
+        "type": "KnowledgePoint",
+        "module": "必修第二册——人文地理",
+        "chapter": "乡村和城镇",
+        "difficulty": 4,
+        "importance": 5,
+        "description": "城镇化是人口向城镇集聚和乡村变城镇的过程；带来环境污染、交通拥挤、住房紧张等问题。",
+        "keywords": "城镇化,人口集聚,环境污染,交通拥挤,城市化问题",
+        "exam_type": "综合题、选择题"
+      },
+      {
+        "id": "G_K2_2_3",
+        "name": "地域文化与城乡景观",
+        "type": "KnowledgePoint",
+        "module": "必修第二册——人文地理",
+        "chapter": "乡村和城镇",
+        "difficulty": 2,
+        "importance": 3,
+        "description": "地域文化影响建筑风格、空间布局，形成各具特色的城乡景观。",
+        "keywords": "地域文化,建筑风格,城乡景观",
+        "exam_type": "选择题"
+      },
+      {
+        "id": "G_K2_3_1",
+        "name": "农业区位因素",
+        "type": "KnowledgePoint",
+        "module": "必修第二册——人文地理",
+        "chapter": "产业区位因素",
+        "difficulty": 4,
+        "importance": 5,
+        "description": "自然因素（气候、地形、水源、土壤）和社会经济因素（市场、交通、劳动力、政策、技术）影响农业生产。",
+        "keywords": "农业区位,自然因素,社会经济因素,农业地域类型",
+        "exam_type": "综合题、选择题"
+      },
+      {
+        "id": "G_K2_3_2",
+        "name": "工业区位因素",
+        "type": "KnowledgePoint",
+        "module": "必修第二册——人文地理",
+        "chapter": "产业区位因素",
+        "difficulty": 4,
+        "importance": 5,
+        "description": "原料、动力、劳动力、市场、交通、土地、水源、政策等影响工业区位选择，主导因素决定工业类型。",
+        "keywords": "工业区位,原料动力,市场交通,主导因素,工业地域",
+        "exam_type": "综合题、选择题"
+      },
+      {
+        "id": "G_K2_3_3",
+        "name": "服务业区位因素",
+        "type": "KnowledgePoint",
+        "module": "必修第二册——人文地理",
+        "chapter": "产业区位因素",
+        "difficulty": 3,
+        "importance": 3,
+        "description": "服务业区位主要受市场、交通、劳动力、集聚等因素影响，商业中心趋向人口密集交通便捷处。",
+        "keywords": "服务业区位,市场交通,集聚,商业中心",
+        "exam_type": "选择题、综合题"
+      },
+      {
+        "id": "G_K2_3_4",
+        "name": "交通运输布局的影响",
+        "type": "KnowledgePoint",
+        "module": "必修第二册——人文地理",
+        "chapter": "产业区位因素",
+        "difficulty": 3,
+        "importance": 4,
+        "description": "交通运输方式和布局变化影响聚落空间形态、商业网点分布和区域经济发展。",
+        "keywords": "交通运输,布局,聚落形态,商业网点,区域发展",
+        "exam_type": "综合题、选择题"
+      },
+      {
+        "id": "G_K2_4_1",
+        "name": "主要环境问题",
+        "type": "KnowledgePoint",
+        "module": "必修第二册——人文地理",
+        "chapter": "环境与发展",
+        "difficulty": 3,
+        "importance": 4,
+        "description": "资源短缺、环境污染、生态破坏等环境问题威胁人类生存发展。",
+        "keywords": "环境问题,资源短缺,环境污染,生态破坏",
+        "exam_type": "选择题、综合题"
+      },
+      {
+        "id": "G_K2_4_2",
+        "name": "可持续发展",
+        "type": "KnowledgePoint",
+        "module": "必修第二册——人文地理",
+        "chapter": "环境与发展",
+        "difficulty": 4,
+        "importance": 5,
+        "description": "既满足当代人需求又不损害后代人满足其需求能力的发展，核心是实现人地协调，遵循公平性持续性共同性原则。",
+        "keywords": "可持续发展,人地协调,公平性持续性共同性",
+        "exam_type": "综合题、选择题"
+      },
+      {
+        "id": "G_K2_4_3",
+        "name": "国家发展战略",
+        "type": "KnowledgePoint",
+        "module": "必修第二册——人文地理",
+        "chapter": "环境与发展",
+        "difficulty": 3,
+        "importance": 4,
+        "description": "如长江经济带、京津冀协同、乡村振兴、西部大开发等体现区域协调与可持续发展。",
+        "keywords": "国家战略,长江经济带,乡村振兴,区域协调",
+        "exam_type": "综合题、选择题"
+      },
+      {
+        "id": "G_K3_1_1",
+        "name": "地球自转的地理意义",
+        "type": "KnowledgePoint",
+        "module": "选择性必修1 自然地理原理",
+        "chapter": "地球的运动",
+        "difficulty": 4,
+        "importance": 5,
+        "description": "地球自转产生昼夜交替、地方时差异、沿地表水平运动物体的地转偏向现象。",
+        "keywords": "地球自转,昼夜交替,地方时,地转偏向力",
+        "exam_type": "综合题、选择题"
+      },
+      {
+        "id": "G_K3_1_2",
+        "name": "地球公转的地理意义",
+        "type": "KnowledgePoint",
+        "module": "选择性必修1 自然地理原理",
+        "chapter": "地球的运动",
+        "difficulty": 5,
+        "importance": 5,
+        "description": "地球公转导致昼夜长短变化、正午太阳高度变化、四季更替和五带划分。",
+        "keywords": "地球公转,昼夜长短,正午太阳高度,四季五带",
+        "exam_type": "综合题、选择题"
+      },
+      {
+        "id": "G_K3_1_3",
+        "name": "黄赤交角与直射点回归运动",
+        "type": "KnowledgePoint",
+        "module": "选择性必修1 自然地理原理",
+        "chapter": "地球的运动",
+        "difficulty": 4,
+        "importance": 4,
+        "description": "黄赤交角存在使太阳直射点在南北回归线之间往返运动，是四季更替根本原因。",
+        "keywords": "黄赤交角,太阳直射点,回归运动,四季更替",
+        "exam_type": "综合题、选择题"
+      },
+      {
+        "id": "G_K3_2_1",
+        "name": "内力作用与板块构造",
+        "type": "KnowledgePoint",
+        "module": "选择性必修1 自然地理原理",
+        "chapter": "地表形态的塑造",
+        "difficulty": 4,
+        "importance": 4,
+        "description": "内力作用包括地壳运动、岩浆活动、变质作用；板块构造学说解释海陆分布和山脉海沟形成。",
+        "keywords": "内力作用,地壳运动,岩浆活动,板块构造,海陆形成",
+        "exam_type": "综合题、选择题"
+      },
+      {
+        "id": "G_K3_2_2",
+        "name": "外力作用与地表形态",
+        "type": "KnowledgePoint",
+        "module": "选择性必修1 自然地理原理",
+        "chapter": "地表形态的塑造",
+        "difficulty": 4,
+        "importance": 5,
+        "description": "外力作用通过风化、侵蚀、搬运、堆积塑造地表，形成各种侵蚀堆积地貌。",
+        "keywords": "外力作用,风化侵蚀搬运堆积,地表形态,侵蚀堆积地貌",
+        "exam_type": "综合题、选择题"
+      },
+      {
+        "id": "G_K3_2_3",
+        "name": "山地的形成",
+        "type": "KnowledgePoint",
+        "module": "选择性必修1 自然地理原理",
+        "chapter": "地表形态的塑造",
+        "difficulty": 3,
+        "importance": 4,
+        "description": "褶皱山、断块山、火山等的形成机制与地貌特征，背斜向斜的构造意义。",
+        "keywords": "褶皱山,断块山,火山,背斜向斜",
+        "exam_type": "选择题、综合题"
+      },
+      {
+        "id": "G_K3_2_4",
+        "name": "河流侵蚀与堆积地貌",
+        "type": "KnowledgePoint",
+        "module": "选择性必修1 自然地理原理",
+        "chapter": "地表形态的塑造",
+        "difficulty": 4,
+        "importance": 5,
+        "description": "河流侵蚀形成V型谷、峡谷，堆积形成冲积扇、冲积平原、三角洲、河漫滩平原。",
+        "keywords": "河流地貌,V型谷,冲积扇,冲积平原,三角洲",
+        "exam_type": "综合题、选择题"
+      },
+      {
+        "id": "G_K3_3_1",
+        "name": "大气受热过程与保温作用",
+        "type": "KnowledgePoint",
+        "module": "选择性必修1 自然地理原理",
+        "chapter": "大气的受热过程与运动",
+        "difficulty": 4,
+        "importance": 5,
+        "description": "太阳辐射、地面辐射、大气辐射、大气逆辐射的能量传递过程，大气逆辐射起保温作用。",
+        "keywords": "受热过程,地面辐射,大气逆辐射,保温作用,温室效应",
+        "exam_type": "综合题、选择题"
+      },
+      {
+        "id": "G_K3_3_2",
+        "name": "大气热力环流与风",
+        "type": "KnowledgePoint",
+        "module": "选择性必修1 自然地理原理",
+        "chapter": "大气的受热过程与运动",
+        "difficulty": 3,
+        "importance": 4,
+        "description": "热力环流原理及海陆风、山谷风、城市风的形成；近地面与高空风向受力差异。",
+        "keywords": "热力环流,海陆风,山谷风,城市风,风向",
+        "exam_type": "综合题、选择题"
+      },
+      {
+        "id": "G_K3_3_3",
+        "name": "三圈环流与气压带风带",
+        "type": "KnowledgePoint",
+        "module": "选择性必修1 自然地理原理",
+        "chapter": "大气的受热过程与运动",
+        "difficulty": 5,
+        "importance": 5,
+        "description": "全球形成七个气压带六个风带，气压带风带随太阳直射点移动而季节移动，是气候形成重要因素。",
+        "keywords": "三圈环流,气压带风带,季节移动,气候形成",
+        "exam_type": "综合题、选择题"
+      },
+      {
+        "id": "G_K3_3_4",
+        "name": "季风环流",
+        "type": "KnowledgePoint",
+        "module": "选择性必修1 自然地理原理",
+        "chapter": "大气的受热过程与运动",
+        "difficulty": 4,
+        "importance": 5,
+        "description": "东亚季风（海陆热力性质差异）冬干夏雨；南亚季风（海陆差异与气压带风带移动）形成热带季风气候。",
+        "keywords": "季风环流,东亚季风,南亚季风,海陆热力差异,热带季风",
+        "exam_type": "综合题、选择题"
+      },
+      {
+        "id": "G_K3_3_5",
+        "name": "常见天气系统",
+        "type": "KnowledgePoint",
+        "module": "选择性必修1 自然地理原理",
+        "chapter": "大气的受热过程与运动",
+        "difficulty": 5,
+        "importance": 5,
+        "description": "锋面系统（冷锋、暖锋、准静止锋）与气旋反气旋，决定天气变化与降水分布。",
+        "keywords": "锋面系统,冷锋暖锋准静止锋,气旋反气旋,天气变化",
+        "exam_type": "综合题、选择题"
+      },
+      {
+        "id": "G_K3_4_1",
+        "name": "水循环的类型与意义",
+        "type": "KnowledgePoint",
+        "module": "选择性必修1 自然地理原理",
+        "chapter": "洋流与水体运动",
+        "difficulty": 4,
+        "importance": 5,
+        "description": "水循环联系水圈大气圈岩石圈生物圈，促进水体更新、能量交换和物质迁移。",
+        "keywords": "水循环,海陆间循环,陆地内循环,海上内循环,物质能量交换",
+        "exam_type": "综合题、选择题"
+      },
+      {
+        "id": "G_K3_4_2",
+        "name": "洋流的成因与分布规律",
+        "type": "KnowledgePoint",
+        "module": "选择性必修1 自然地理原理",
+        "chapter": "洋流与水体运动",
+        "difficulty": 5,
+        "importance": 5,
+        "description": "洋流按成因分风海流、密度流、补偿流；副热带与副极地环流分布规律，中低纬顺时针中高纬逆时针（北半球）。",
+        "keywords": "洋流,风海流密度流补偿流,副热带环流,副极地环流,分布规律",
+        "exam_type": "综合题、选择题"
+      },
+      {
+        "id": "G_K3_4_3",
+        "name": "洋流对地理环境的影响",
+        "type": "KnowledgePoint",
+        "module": "选择性必修1 自然地理原理",
+        "chapter": "洋流与水体运动",
+        "difficulty": 4,
+        "importance": 5,
+        "description": "洋流影响气候（暖流增温增湿寒流降温减湿）、形成渔场、影响航海和海洋污染净化。",
+        "keywords": "洋流影响,气候,渔场,航海,海洋污染",
+        "exam_type": "综合题、选择题"
+      },
+      {
+        "id": "G_K3_4_4",
+        "name": "河流补给与径流变化",
+        "type": "KnowledgePoint",
+        "module": "选择性必修1 自然地理原理",
+        "chapter": "洋流与水体运动",
+        "difficulty": 3,
+        "importance": 4,
+        "description": "河流补给类型有大气降水、冰雪融水、地下水、湖泊水，影响径流季节变化与年际变化。",
+        "keywords": "河流补给,降水补给,冰雪融水,径流变化",
+        "exam_type": "综合题、选择题"
+      },
+      {
+        "id": "G_K3_4_5",
+        "name": "水资源的合理利用",
+        "type": "KnowledgePoint",
+        "module": "选择性必修1 自然地理原理",
+        "chapter": "洋流与水体运动",
+        "difficulty": 3,
+        "importance": 4,
+        "description": "通过跨流域调水、修建水库、节水技术等缓解水资源短缺，实现水资源可持续利用。",
+        "keywords": "水资源,跨流域调水,水库,节水,可持续利用",
+        "exam_type": "综合题、选择题"
+      },
+      {
+        "id": "G_K3_5_1",
+        "name": "自然环境的整体性",
+        "type": "KnowledgePoint",
+        "module": "选择性必修1 自然地理原理",
+        "chapter": "自然环境的整体性与差异性",
+        "difficulty": 4,
+        "importance": 5,
+        "description": "地理环境各要素通过水循环、生物循环、岩石圈物质循环进行物质能量交换，一要素变化牵动整体。",
+        "keywords": "整体性,要素,物质能量交换,牵一发而动全身",
+        "exam_type": "综合题、选择题"
+      },
+      {
+        "id": "G_K3_5_2",
+        "name": "地域分异规律",
+        "type": "KnowledgePoint",
+        "module": "选择性必修1 自然地理原理",
+        "chapter": "自然环境的整体性与差异性",
+        "difficulty": 5,
+        "importance": 5,
+        "description": "由赤道到两极、由沿海到内陆、山地垂直地域分异规律的形成基础与分布特点。",
+        "keywords": "地域分异,纬度地带性,经度地带性,垂直地域分异",
+        "exam_type": "综合题、选择题"
+      },
+      {
+        "id": "G_K3_5_3",
+        "name": "非地带性分异现象",
+        "type": "KnowledgePoint",
+        "module": "选择性必修1 自然地理原理",
+        "chapter": "自然环境的整体性与差异性",
+        "difficulty": 3,
+        "importance": 4,
+        "description": "受海陆分布、地形起伏、洋流等影响出现非地带性现象，如绿洲、荒漠中的绿洲。",
+        "keywords": "非地带性,海陆分布,地形起伏,洋流",
+        "exam_type": "选择题、综合题"
+      },
+      {
+        "id": "G_K4_1_1",
+        "name": "区域的特征与类型",
+        "type": "KnowledgePoint",
+        "module": "选择性必修2 区域发展",
+        "chapter": "区域与区域发展",
+        "difficulty": 3,
+        "importance": 3,
+        "description": "区域具有一定面积形状范围界线，具有整体性差异性和开放性，分均质区功能区。",
+        "keywords": "区域,整体性差异性开放性,均质区功能区",
+        "exam_type": "选择题"
+      },
+      {
+        "id": "G_K4_1_2",
+        "name": "区域发展阶段与产业结构",
+        "type": "KnowledgePoint",
+        "module": "选择性必修2 区域发展",
+        "chapter": "区域与区域发展",
+        "difficulty": 3,
+        "importance": 4,
+        "description": "区域经历初期、成长、转型、衰退等阶段，产业结构由第一产业向二三产业演进。",
+        "keywords": "区域发展阶段,初期成长转型,产业结构演进",
+        "exam_type": "综合题、选择题"
+      },
+      {
+        "id": "G_K4_1_3",
+        "name": "区域发展的优势与限制因素",
+        "type": "KnowledgePoint",
+        "module": "选择性必修2 区域发展",
+        "chapter": "区域与区域发展",
+        "difficulty": 2,
+        "importance": 3,
+        "description": "区位条件、资源禀赋是优势，生态环境脆弱、基础设施薄弱等是限制因素。",
+        "keywords": "区域发展,区位条件,资源禀赋,优势与限制",
+        "exam_type": "选择题、综合题"
+      },
+      {
+        "id": "G_K4_2_1",
+        "name": "生态脆弱区的成因与特征",
+        "type": "KnowledgePoint",
+        "module": "选择性必修2 区域发展",
+        "chapter": "生态脆弱区的治理",
+        "difficulty": 3,
+        "importance": 4,
+        "description": "生态脆弱区生态环境抗干扰能力弱，自然条件恶劣与人类不合理活动叠加易退化。",
+        "keywords": "生态脆弱区,抗干扰能力弱,生态退化,自然与人为叠加",
+        "exam_type": "选择题、综合题"
+      },
+      {
+        "id": "G_K4_2_2",
+        "name": "黄土高原水土流失治理",
+        "type": "KnowledgePoint",
+        "module": "选择性必修2 区域发展",
+        "chapter": "生态脆弱区的治理",
+        "difficulty": 4,
+        "importance": 5,
+        "description": "黄土高原水土流失由土质疏松、降水集中、植被破坏导致，通过工程（打坝淤地）、生物（植树种草）、农业技术措施综合治理。",
+        "keywords": "黄土高原,水土流失,打坝淤地,植树种草,综合治理",
+        "exam_type": "综合题、选择题"
+      },
+      {
+        "id": "G_K4_2_3",
+        "name": "荒漠化的治理",
+        "type": "KnowledgePoint",
+        "module": "选择性必修2 区域发展",
+        "chapter": "生态脆弱区的治理",
+        "difficulty": 4,
+        "importance": 5,
+        "description": "西北地区荒漠化由气候干旱、过度放牧开垦引起，通过合理利用水资源、设置沙障、恢复植被治理。",
+        "keywords": "荒漠化,西北地区,过度放牧开垦,沙障,恢复植被",
+        "exam_type": "综合题、选择题"
+      },
+      {
+        "id": "G_K4_2_4",
+        "name": "湿地的开发与保护",
+        "type": "KnowledgePoint",
+        "module": "选择性必修2 区域发展",
+        "chapter": "生态脆弱区的治理",
+        "difficulty": 3,
+        "importance": 4,
+        "description": "湿地具有蓄洪防旱、调节气候、净化水质等功能，围垦污染导致退化，需退田还湿保护。",
+        "keywords": "湿地,蓄洪防旱,调节气候,退化,退田还湿",
+        "exam_type": "综合题、选择题"
+      },
+      {
+        "id": "G_K4_3_1",
+        "name": "资源枯竭型城市转型",
+        "type": "KnowledgePoint",
+        "module": "选择性必修2 区域发展",
+        "chapter": "资源枯竭型城市转型",
+        "difficulty": 3,
+        "importance": 4,
+        "description": "以大庆（石油）、阜新（煤炭）为例，资源枯竭后通过培育新产业、发展接续产业实现转型。",
+        "keywords": "资源枯竭型城市,大庆,阜新,接续产业,转型",
+        "exam_type": "综合题、选择题"
+      },
+      {
+        "id": "G_K4_3_2",
+        "name": "资源型城市可持续发展对策",
+        "type": "KnowledgePoint",
+        "module": "选择性必修2 区域发展",
+        "chapter": "资源枯竭型城市转型",
+        "difficulty": 2,
+        "importance": 3,
+        "description": "通过产业结构调整、生态修复、发展多元经济延长产业链实现可持续发展。",
+        "keywords": "资源型城市,产业结构调整,生态修复,延长产业链,可持续发展",
+        "exam_type": "综合题、选择题"
+      },
+      {
+        "id": "G_K4_4_1",
+        "name": "产业转移的影响因素",
+        "type": "KnowledgePoint",
+        "module": "选择性必修2 区域发展",
+        "chapter": "产业转移与区域发展",
+        "difficulty": 4,
+        "importance": 4,
+        "description": "劳动力成本、内部交易成本、市场、地价、政策等影响产业转移方向与规模。",
+        "keywords": "产业转移,劳动力成本,内部交易成本,市场,地价政策",
+        "exam_type": "综合题、选择题"
+      },
+      {
+        "id": "G_K4_4_2",
+        "name": "产业转移对区域发展的影响",
+        "type": "KnowledgePoint",
+        "module": "选择性必修2 区域发展",
+        "chapter": "产业转移与区域发展",
+        "difficulty": 4,
+        "importance": 5,
+        "description": "对迁出区促进产业升级但可能就业减少，对迁入区促进经济但带来环境压力。",
+        "keywords": "产业转移影响,产业升级,就业,环境压力,区域发展",
+        "exam_type": "综合题、选择题"
+      },
+      {
+        "id": "G_K4_4_3",
+        "name": "东亚产业转移路径",
+        "type": "KnowledgePoint",
+        "module": "选择性必修2 区域发展",
+        "chapter": "产业转移与区域发展",
+        "difficulty": 3,
+        "importance": 3,
+        "description": "东亚产业由日韩向中国东南沿海再向东南亚转移，体现比较优势变化。",
+        "keywords": "东亚产业转移,日韩,中国东南沿海,东南亚,比较优势",
+        "exam_type": "选择题、综合题"
+      },
+      {
+        "id": "G_K5_1_1",
+        "name": "资源安全问题",
+        "type": "KnowledgePoint",
+        "module": "选择性必修3 资源、环境与国家安全",
+        "chapter": "资源安全",
+        "difficulty": 3,
+        "importance": 4,
+        "description": "水资源、能源、耕地等资源因供给不足或破坏威胁国家安全与社会稳定。",
+        "keywords": "资源安全,水资源,能源,耕地安全",
+        "exam_type": "选择题、综合题"
+      },
+      {
+        "id": "G_K5_1_2",
+        "name": "战略性矿产与能源安全",
+        "type": "KnowledgePoint",
+        "module": "选择性必修3 资源、环境与国家安全",
+        "chapter": "资源安全",
+        "difficulty": 3,
+        "importance": 4,
+        "description": "石油天然气等战略性矿产对外依存度高影响国家能源安全，需多元化进口与储备。",
+        "keywords": "战略性矿产,石油天然气,对外依存,能源安全,战略储备",
+        "exam_type": "综合题、选择题"
+      },
+      {
+        "id": "G_K5_1_3",
+        "name": "耕地安全与粮食安全",
+        "type": "KnowledgePoint",
+        "module": "选择性必修3 资源、环境与国家安全",
+        "chapter": "资源安全",
+        "difficulty": 3,
+        "importance": 4,
+        "description": "严守18亿亩耕地红线，保障耕地数量质量，是粮食安全的基础。",
+        "keywords": "耕地安全,耕地红线,粮食安全,18亿亩",
+        "exam_type": "综合题、选择题"
+      },
+      {
+        "id": "G_K5_2_1",
+        "name": "环境安全问题",
+        "type": "KnowledgePoint",
+        "module": "选择性必修3 资源、环境与国家安全",
+        "chapter": "环境安全",
+        "difficulty": 3,
+        "importance": 4,
+        "description": "环境污染和生态破坏威胁人类健康和生态系统稳定，影响国家安全。",
+        "keywords": "环境安全,环境污染,生态破坏,国家安全",
+        "exam_type": "选择题、综合题"
+      },
+      {
+        "id": "G_K5_2_2",
+        "name": "全球性环境问题",
+        "type": "KnowledgePoint",
+        "module": "选择性必修3 资源、环境与国家安全",
+        "chapter": "环境安全",
+        "difficulty": 4,
+        "importance": 5,
+        "description": "全球气候变暖、臭氧层破坏、酸雨、生物多样性减少等需全球共同应对。",
+        "keywords": "全球环境问题,气候变暖,臭氧层破坏,酸雨,生物多样性",
+        "exam_type": "综合题、选择题"
+      },
+      {
+        "id": "G_K5_2_3",
+        "name": "环境污染的防治",
+        "type": "KnowledgePoint",
+        "module": "选择性必修3 资源、环境与国家安全",
+        "chapter": "环境安全",
+        "difficulty": 3,
+        "importance": 3,
+        "description": "通过清洁生产、循环经济、末端治理等方式减少污染物排放。",
+        "keywords": "污染防治,清洁生产,循环经济,末端治理",
+        "exam_type": "选择题、综合题"
+      },
+      {
+        "id": "G_K5_3_1",
+        "name": "保障资源环境安全的途径",
+        "type": "KnowledgePoint",
+        "module": "选择性必修3 资源、环境与国家安全",
+        "chapter": "保障国家安全的资源环境行动",
+        "difficulty": 3,
+        "importance": 3,
+        "description": "通过开源节流、保护修复、国际合作等途径保障国家资源环境安全。",
+        "keywords": "资源环境安全,开源节流,保护修复,国际合作",
+        "exam_type": "综合题、选择题"
+      },
+      {
+        "id": "G_K5_3_2",
+        "name": "国家战略与资源环境安全",
+        "type": "KnowledgePoint",
+        "module": "选择性必修3 资源、环境与国家安全",
+        "chapter": "保障国家安全的资源环境行动",
+        "difficulty": 3,
+        "importance": 4,
+        "description": "生态保护红线、主体功能区规划、海洋权益维护等保障国家安全的战略举措。",
+        "keywords": "国家战略,生态保护红线,主体功能区,海洋权益",
+        "exam_type": "综合题、选择题"
+      },
+      {
+        "id": "G_K5_3_3",
+        "name": "公众参与与可持续发展",
+        "type": "KnowledgePoint",
+        "module": "选择性必修3 资源、环境与国家安全",
+        "chapter": "保障国家安全的资源环境行动",
+        "difficulty": 2,
+        "importance": 3,
+        "description": "公众通过绿色消费、垃圾分类、环保监督等方式参与资源环境保护。",
+        "keywords": "公众参与,绿色消费,垃圾分类,环保监督,可持续发展",
+        "exam_type": "选择题、简答题"
+      }
+    ],
+    "edges": [
+      {
+        "source": "G_M1",
+        "target": "G_C1_1",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "模块【必修第一册——自然地理基础】包含章节【宇宙中的地球】"
+      },
+      {
+        "source": "G_M1",
+        "target": "G_C1_2",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "模块【必修第一册——自然地理基础】包含章节【地球上的大气】"
+      },
+      {
+        "source": "G_M1",
+        "target": "G_C1_3",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "模块【必修第一册——自然地理基础】包含章节【地球上的水】"
+      },
+      {
+        "source": "G_M1",
+        "target": "G_C1_4",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "模块【必修第一册——自然地理基础】包含章节【地貌】"
+      },
+      {
+        "source": "G_M1",
+        "target": "G_C1_5",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "模块【必修第一册——自然地理基础】包含章节【植被与土壤】"
+      },
+      {
+        "source": "G_M1",
+        "target": "G_C1_6",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "模块【必修第一册——自然地理基础】包含章节【自然灾害】"
+      },
+      {
+        "source": "G_M2",
+        "target": "G_C2_1",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "模块【必修第二册——人文地理】包含章节【人口】"
+      },
+      {
+        "source": "G_M2",
+        "target": "G_C2_2",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "模块【必修第二册——人文地理】包含章节【乡村和城镇】"
+      },
+      {
+        "source": "G_M2",
+        "target": "G_C2_3",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "模块【必修第二册——人文地理】包含章节【产业区位因素】"
+      },
+      {
+        "source": "G_M2",
+        "target": "G_C2_4",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "模块【必修第二册——人文地理】包含章节【环境与发展】"
+      },
+      {
+        "source": "G_M3",
+        "target": "G_C3_1",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "模块【选择性必修1 自然地理原理】包含章节【地球的运动】"
+      },
+      {
+        "source": "G_M3",
+        "target": "G_C3_2",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "模块【选择性必修1 自然地理原理】包含章节【地表形态的塑造】"
+      },
+      {
+        "source": "G_M3",
+        "target": "G_C3_3",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "模块【选择性必修1 自然地理原理】包含章节【大气的受热过程与运动】"
+      },
+      {
+        "source": "G_M3",
+        "target": "G_C3_4",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "模块【选择性必修1 自然地理原理】包含章节【洋流与水体运动】"
+      },
+      {
+        "source": "G_M3",
+        "target": "G_C3_5",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "模块【选择性必修1 自然地理原理】包含章节【自然环境的整体性与差异性】"
+      },
+      {
+        "source": "G_M4",
+        "target": "G_C4_1",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "模块【选择性必修2 区域发展】包含章节【区域与区域发展】"
+      },
+      {
+        "source": "G_M4",
+        "target": "G_C4_2",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "模块【选择性必修2 区域发展】包含章节【生态脆弱区的治理】"
+      },
+      {
+        "source": "G_M4",
+        "target": "G_C4_3",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "模块【选择性必修2 区域发展】包含章节【资源枯竭型城市转型】"
+      },
+      {
+        "source": "G_M4",
+        "target": "G_C4_4",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "模块【选择性必修2 区域发展】包含章节【产业转移与区域发展】"
+      },
+      {
+        "source": "G_M5",
+        "target": "G_C5_1",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "模块【选择性必修3 资源、环境与国家安全】包含章节【资源安全】"
+      },
+      {
+        "source": "G_M5",
+        "target": "G_C5_2",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "模块【选择性必修3 资源、环境与国家安全】包含章节【环境安全】"
+      },
+      {
+        "source": "G_M5",
+        "target": "G_C5_3",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "模块【选择性必修3 资源、环境与国家安全】包含章节【保障国家安全的资源环境行动】"
+      },
+      {
+        "source": "G_C1_1",
+        "target": "G_K1_1_1",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【宇宙中的地球】包含知识点【天体与天体系统】"
+      },
+      {
+        "source": "G_C1_1",
+        "target": "G_K1_1_2",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【宇宙中的地球】包含知识点【太阳辐射及其影响】"
+      },
+      {
+        "source": "G_C1_1",
+        "target": "G_K1_1_3",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【宇宙中的地球】包含知识点【太阳活动对地球的影响】"
+      },
+      {
+        "source": "G_C1_1",
+        "target": "G_K1_1_4",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【宇宙中的地球】包含知识点【地球的圈层结构】"
+      },
+      {
+        "source": "G_C1_1",
+        "target": "G_K1_1_5",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【宇宙中的地球】包含知识点【地球存在生命的条件】"
+      },
+      {
+        "source": "G_C1_2",
+        "target": "G_K1_2_1",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【地球上的大气】包含知识点【大气组成与垂直分层】"
+      },
+      {
+        "source": "G_C1_2",
+        "target": "G_K1_2_2",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【地球上的大气】包含知识点【大气的受热过程】"
+      },
+      {
+        "source": "G_C1_2",
+        "target": "G_K1_2_3",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【地球上的大气】包含知识点【热力环流】"
+      },
+      {
+        "source": "G_C1_2",
+        "target": "G_K1_2_4",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【地球上的大气】包含知识点【大气的水平运动——风】"
+      },
+      {
+        "source": "G_C1_3",
+        "target": "G_K1_3_1",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【地球上的水】包含知识点【水循环】"
+      },
+      {
+        "source": "G_C1_3",
+        "target": "G_K1_3_2",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【地球上的水】包含知识点【海水的性质】"
+      },
+      {
+        "source": "G_C1_3",
+        "target": "G_K1_3_3",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【地球上的水】包含知识点【海水的运动】"
+      },
+      {
+        "source": "G_C1_4",
+        "target": "G_K1_4_1",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【地貌】包含知识点【常见地貌类型】"
+      },
+      {
+        "source": "G_C1_4",
+        "target": "G_K1_4_2",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【地貌】包含知识点【河流地貌的发育】"
+      },
+      {
+        "source": "G_C1_4",
+        "target": "G_K1_4_3",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【地貌】包含知识点【地貌观察与等高线】"
+      },
+      {
+        "source": "G_C1_5",
+        "target": "G_K1_5_1",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【植被与土壤】包含知识点【主要植被类型与环境】"
+      },
+      {
+        "source": "G_C1_5",
+        "target": "G_K1_5_2",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【植被与土壤】包含知识点【土壤的组成与形成因素】"
+      },
+      {
+        "source": "G_C1_5",
+        "target": "G_K1_5_3",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【植被与土壤】包含知识点【土壤剖面与质地】"
+      },
+      {
+        "source": "G_C1_6",
+        "target": "G_K1_6_1",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【自然灾害】包含知识点【气象灾害】"
+      },
+      {
+        "source": "G_C1_6",
+        "target": "G_K1_6_2",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【自然灾害】包含知识点【地质灾害】"
+      },
+      {
+        "source": "G_C1_6",
+        "target": "G_K1_6_3",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【自然灾害】包含知识点【灾害监测防御与救援】"
+      },
+      {
+        "source": "G_C2_1",
+        "target": "G_K2_1_1",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【人口】包含知识点【人口分布的影响因素】"
+      },
+      {
+        "source": "G_C2_1",
+        "target": "G_K2_1_2",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【人口】包含知识点【人口迁移及其影响因素】"
+      },
+      {
+        "source": "G_C2_1",
+        "target": "G_K2_1_3",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【人口】包含知识点【人口数量变化】"
+      },
+      {
+        "source": "G_C2_1",
+        "target": "G_K2_1_4",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【人口】包含知识点【人口容量】"
+      },
+      {
+        "source": "G_C2_2",
+        "target": "G_K2_2_1",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【乡村和城镇】包含知识点【城乡空间结构】"
+      },
+      {
+        "source": "G_C2_2",
+        "target": "G_K2_2_2",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【乡村和城镇】包含知识点【城镇化及问题】"
+      },
+      {
+        "source": "G_C2_2",
+        "target": "G_K2_2_3",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【乡村和城镇】包含知识点【地域文化与城乡景观】"
+      },
+      {
+        "source": "G_C2_3",
+        "target": "G_K2_3_1",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【产业区位因素】包含知识点【农业区位因素】"
+      },
+      {
+        "source": "G_C2_3",
+        "target": "G_K2_3_2",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【产业区位因素】包含知识点【工业区位因素】"
+      },
+      {
+        "source": "G_C2_3",
+        "target": "G_K2_3_3",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【产业区位因素】包含知识点【服务业区位因素】"
+      },
+      {
+        "source": "G_C2_3",
+        "target": "G_K2_3_4",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【产业区位因素】包含知识点【交通运输布局的影响】"
+      },
+      {
+        "source": "G_C2_4",
+        "target": "G_K2_4_1",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【环境与发展】包含知识点【主要环境问题】"
+      },
+      {
+        "source": "G_C2_4",
+        "target": "G_K2_4_2",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【环境与发展】包含知识点【可持续发展】"
+      },
+      {
+        "source": "G_C2_4",
+        "target": "G_K2_4_3",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【环境与发展】包含知识点【国家发展战略】"
+      },
+      {
+        "source": "G_C3_1",
+        "target": "G_K3_1_1",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【地球的运动】包含知识点【地球自转的地理意义】"
+      },
+      {
+        "source": "G_C3_1",
+        "target": "G_K3_1_2",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【地球的运动】包含知识点【地球公转的地理意义】"
+      },
+      {
+        "source": "G_C3_1",
+        "target": "G_K3_1_3",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【地球的运动】包含知识点【黄赤交角与直射点回归运动】"
+      },
+      {
+        "source": "G_C3_2",
+        "target": "G_K3_2_1",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【地表形态的塑造】包含知识点【内力作用与板块构造】"
+      },
+      {
+        "source": "G_C3_2",
+        "target": "G_K3_2_2",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【地表形态的塑造】包含知识点【外力作用与地表形态】"
+      },
+      {
+        "source": "G_C3_2",
+        "target": "G_K3_2_3",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【地表形态的塑造】包含知识点【山地的形成】"
+      },
+      {
+        "source": "G_C3_2",
+        "target": "G_K3_2_4",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【地表形态的塑造】包含知识点【河流侵蚀与堆积地貌】"
+      },
+      {
+        "source": "G_C3_3",
+        "target": "G_K3_3_1",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【大气的受热过程与运动】包含知识点【大气受热过程与保温作用】"
+      },
+      {
+        "source": "G_C3_3",
+        "target": "G_K3_3_2",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【大气的受热过程与运动】包含知识点【大气热力环流与风】"
+      },
+      {
+        "source": "G_C3_3",
+        "target": "G_K3_3_3",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【大气的受热过程与运动】包含知识点【三圈环流与气压带风带】"
+      },
+      {
+        "source": "G_C3_3",
+        "target": "G_K3_3_4",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【大气的受热过程与运动】包含知识点【季风环流】"
+      },
+      {
+        "source": "G_C3_3",
+        "target": "G_K3_3_5",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【大气的受热过程与运动】包含知识点【常见天气系统】"
+      },
+      {
+        "source": "G_C3_4",
+        "target": "G_K3_4_1",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【洋流与水体运动】包含知识点【水循环的类型与意义】"
+      },
+      {
+        "source": "G_C3_4",
+        "target": "G_K3_4_2",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【洋流与水体运动】包含知识点【洋流的成因与分布规律】"
+      },
+      {
+        "source": "G_C3_4",
+        "target": "G_K3_4_3",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【洋流与水体运动】包含知识点【洋流对地理环境的影响】"
+      },
+      {
+        "source": "G_C3_4",
+        "target": "G_K3_4_4",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【洋流与水体运动】包含知识点【河流补给与径流变化】"
+      },
+      {
+        "source": "G_C3_4",
+        "target": "G_K3_4_5",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【洋流与水体运动】包含知识点【水资源的合理利用】"
+      },
+      {
+        "source": "G_C3_5",
+        "target": "G_K3_5_1",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【自然环境的整体性与差异性】包含知识点【自然环境的整体性】"
+      },
+      {
+        "source": "G_C3_5",
+        "target": "G_K3_5_2",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【自然环境的整体性与差异性】包含知识点【地域分异规律】"
+      },
+      {
+        "source": "G_C3_5",
+        "target": "G_K3_5_3",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【自然环境的整体性与差异性】包含知识点【非地带性分异现象】"
+      },
+      {
+        "source": "G_C4_1",
+        "target": "G_K4_1_1",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【区域与区域发展】包含知识点【区域的特征与类型】"
+      },
+      {
+        "source": "G_C4_1",
+        "target": "G_K4_1_2",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【区域与区域发展】包含知识点【区域发展阶段与产业结构】"
+      },
+      {
+        "source": "G_C4_1",
+        "target": "G_K4_1_3",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【区域与区域发展】包含知识点【区域发展的优势与限制因素】"
+      },
+      {
+        "source": "G_C4_2",
+        "target": "G_K4_2_1",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【生态脆弱区的治理】包含知识点【生态脆弱区的成因与特征】"
+      },
+      {
+        "source": "G_C4_2",
+        "target": "G_K4_2_2",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【生态脆弱区的治理】包含知识点【黄土高原水土流失治理】"
+      },
+      {
+        "source": "G_C4_2",
+        "target": "G_K4_2_3",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【生态脆弱区的治理】包含知识点【荒漠化的治理】"
+      },
+      {
+        "source": "G_C4_2",
+        "target": "G_K4_2_4",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【生态脆弱区的治理】包含知识点【湿地的开发与保护】"
+      },
+      {
+        "source": "G_C4_3",
+        "target": "G_K4_3_1",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【资源枯竭型城市转型】包含知识点【资源枯竭型城市转型】"
+      },
+      {
+        "source": "G_C4_3",
+        "target": "G_K4_3_2",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【资源枯竭型城市转型】包含知识点【资源型城市可持续发展对策】"
+      },
+      {
+        "source": "G_C4_4",
+        "target": "G_K4_4_1",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【产业转移与区域发展】包含知识点【产业转移的影响因素】"
+      },
+      {
+        "source": "G_C4_4",
+        "target": "G_K4_4_2",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【产业转移与区域发展】包含知识点【产业转移对区域发展的影响】"
+      },
+      {
+        "source": "G_C4_4",
+        "target": "G_K4_4_3",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【产业转移与区域发展】包含知识点【东亚产业转移路径】"
+      },
+      {
+        "source": "G_C5_1",
+        "target": "G_K5_1_1",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【资源安全】包含知识点【资源安全问题】"
+      },
+      {
+        "source": "G_C5_1",
+        "target": "G_K5_1_2",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【资源安全】包含知识点【战略性矿产与能源安全】"
+      },
+      {
+        "source": "G_C5_1",
+        "target": "G_K5_1_3",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【资源安全】包含知识点【耕地安全与粮食安全】"
+      },
+      {
+        "source": "G_C5_2",
+        "target": "G_K5_2_1",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【环境安全】包含知识点【环境安全问题】"
+      },
+      {
+        "source": "G_C5_2",
+        "target": "G_K5_2_2",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【环境安全】包含知识点【全球性环境问题】"
+      },
+      {
+        "source": "G_C5_2",
+        "target": "G_K5_2_3",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【环境安全】包含知识点【环境污染的防治】"
+      },
+      {
+        "source": "G_C5_3",
+        "target": "G_K5_3_1",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【保障国家安全的资源环境行动】包含知识点【保障资源环境安全的途径】"
+      },
+      {
+        "source": "G_C5_3",
+        "target": "G_K5_3_2",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【保障国家安全的资源环境行动】包含知识点【国家战略与资源环境安全】"
+      },
+      {
+        "source": "G_C5_3",
+        "target": "G_K5_3_3",
+        "relation": "CONTAINS",
+        "weight": 1.0,
+        "description": "章节【保障国家安全的资源环境行动】包含知识点【公众参与与可持续发展】"
+      },
+      {
+        "source": "G_K3_3_2",
+        "target": "G_K1_2_3",
+        "relation": "RELATED_TO",
+        "weight": 0.8,
+        "description": "选必热力环流原理深化必修热力环流"
+      },
+      {
+        "source": "G_K3_3_1",
+        "target": "G_K1_2_2",
+        "relation": "RELATED_TO",
+        "weight": 0.8,
+        "description": "选必受热过程深化必修受热过程"
+      },
+      {
+        "source": "G_K3_3_3",
+        "target": "G_K1_2_3",
+        "relation": "PREREQUISITE",
+        "weight": 0.8,
+        "description": "三圈环流以热力环流为基础"
+      },
+      {
+        "source": "G_K3_3_3",
+        "target": "G_K3_3_2",
+        "relation": "PREREQUISITE",
+        "weight": 0.7,
+        "description": "三圈环流建立在热力环流与风之上"
+      },
+      {
+        "source": "G_K3_3_4",
+        "target": "G_K3_3_3",
+        "relation": "PREREQUISITE",
+        "weight": 0.8,
+        "description": "季风环流以气压带风带为基础"
+      },
+      {
+        "source": "G_K3_3_5",
+        "target": "G_K3_3_4",
+        "relation": "RELATED_TO",
+        "weight": 0.6,
+        "description": "锋面系统与季风共同影响天气"
+      },
+      {
+        "source": "G_K3_4_2",
+        "target": "G_K1_3_3",
+        "relation": "RELATED_TO",
+        "weight": 0.7,
+        "description": "选必洋流深化必修海水运动"
+      },
+      {
+        "source": "G_K3_4_3",
+        "target": "G_K3_4_2",
+        "relation": "PREREQUISITE",
+        "weight": 0.8,
+        "description": "分析洋流影响需先掌握洋流分布规律"
+      },
+      {
+        "source": "G_K3_4_1",
+        "target": "G_K1_3_1",
+        "relation": "RELATED_TO",
+        "weight": 0.7,
+        "description": "选必水循环深化必修水循环"
+      },
+      {
+        "source": "G_K3_5_1",
+        "target": "G_K1_5_2",
+        "relation": "RELATED_TO",
+        "weight": 0.6,
+        "description": "整体性体现于土壤植被等要素间联系"
+      },
+      {
+        "source": "G_K3_5_2",
+        "target": "G_K1_5_1",
+        "relation": "RELATED_TO",
+        "weight": 0.7,
+        "description": "地域分异决定植被分布规律"
+      },
+      {
+        "source": "G_K3_5_1",
+        "target": "G_K3_5_2",
+        "relation": "RELATED_TO",
+        "weight": 0.7,
+        "description": "整体性与差异性是自然环境两个侧面"
+      },
+      {
+        "source": "G_K3_2_2",
+        "target": "G_K1_4_1",
+        "relation": "RELATED_TO",
+        "weight": 0.7,
+        "description": "外力作用塑造常见地貌类型"
+      },
+      {
+        "source": "G_K3_2_4",
+        "target": "G_K1_4_2",
+        "relation": "RELATED_TO",
+        "weight": 0.8,
+        "description": "选必河流地貌深化必修河流地貌发育"
+      },
+      {
+        "source": "G_K3_2_1",
+        "target": "G_K1_4_1",
+        "relation": "RELATED_TO",
+        "weight": 0.6,
+        "description": "内力作用与地貌类型关联"
+      },
+      {
+        "source": "G_K4_2_2",
+        "target": "G_K3_5_1",
+        "relation": "APPLIED_IN",
+        "weight": 0.7,
+        "description": "黄土高原治理运用自然环境整体性原理"
+      },
+      {
+        "source": "G_K4_2_3",
+        "target": "G_K3_5_2",
+        "relation": "APPLIED_IN",
+        "weight": 0.6,
+        "description": "荒漠化治理运用地域分异规律"
+      },
+      {
+        "source": "G_K2_3_1",
+        "target": "G_K3_5_2",
+        "relation": "APPLIED_IN",
+        "weight": 0.6,
+        "description": "农业区位受气候植被等地域分异影响"
+      },
+      {
+        "source": "G_K2_1_2",
+        "target": "G_K4_4_1",
+        "relation": "RELATED_TO",
+        "weight": 0.5,
+        "description": "人口迁移与产业转移相互影响"
+      },
+      {
+        "source": "G_K2_2_2",
+        "target": "G_K2_1_3",
+        "relation": "RELATED_TO",
+        "weight": 0.6,
+        "description": "城镇化与人口数量变化相互关联"
+      },
+      {
+        "source": "G_K2_3_2",
+        "target": "G_K4_4_1",
+        "relation": "RELATED_TO",
+        "weight": 0.6,
+        "description": "工业区位与产业转移影响因素相通"
+      },
+      {
+        "source": "G_K4_4_2",
+        "target": "G_K2_2_2",
+        "relation": "APPLIED_IN",
+        "weight": 0.5,
+        "description": "产业转移影响迁入区城镇化"
+      },
+      {
+        "source": "G_K5_2_2",
+        "target": "G_K3_5_1",
+        "relation": "APPLIED_IN",
+        "weight": 0.6,
+        "description": "全球气候变暖体现自然环境整体性"
+      },
+      {
+        "source": "G_K1_6_1",
+        "target": "G_K3_3_5",
+        "relation": "RELATED_TO",
+        "weight": 0.6,
+        "description": "台风等气象灾害与气旋等天气系统关联"
+      },
+      {
+        "source": "G_K1_6_2",
+        "target": "G_K3_2_2",
+        "relation": "RELATED_TO",
+        "weight": 0.5,
+        "description": "泥石流等地质灾害与外力作用相关"
+      },
+      {
+        "source": "G_K5_1_1",
+        "target": "G_K3_4_5",
+        "relation": "RELATED_TO",
+        "weight": 0.6,
+        "description": "水资源安全与水资源合理利用相通"
+      },
+      {
+        "source": "G_K5_3_2",
+        "target": "G_K2_4_3",
+        "relation": "RELATED_TO",
+        "weight": 0.5,
+        "description": "国家战略与国家发展战略衔接"
+      },
+      {
+        "source": "G_K5_1_3",
+        "target": "G_K2_3_1",
+        "relation": "RELATED_TO",
+        "weight": 0.5,
+        "description": "耕地安全与农业区位因素关联"
+      },
+      {
+        "source": "G_K3_1_1",
+        "target": "G_K1_2_4",
+        "relation": "PREREQUISITE",
+        "weight": 0.6,
+        "description": "地球自转地转偏向力是近地面风向的受力基础"
+      },
+      {
+        "source": "G_K3_4_4",
+        "target": "G_K3_4_1",
+        "relation": "RELATED_TO",
+        "weight": 0.6,
+        "description": "河流补给与水循环环节相通"
+      },
+      {
+        "source": "G_K4_1_2",
+        "target": "G_K4_4_2",
+        "relation": "RELATED_TO",
+        "weight": 0.5,
+        "description": "区域发展阶段与产业转移影响衔接"
+      },
+      {
+        "source": "G_K2_4_2",
+        "target": "G_K5_3_3",
+        "relation": "DERIVED_FROM",
+        "weight": 0.5,
+        "description": "公众参与是可持续发展原则的落实"
+      },
+      {
+        "source": "G_K4_3_1",
+        "target": "G_K5_1_2",
+        "relation": "RELATED_TO",
+        "weight": 0.5,
+        "description": "资源枯竭城市与能源矿产安全关联"
+      }
+    ],
+    "categories": [
+      "必修第一册——自然地理基础",
+      "必修第二册——人文地理",
+      "选择性必修1 自然地理原理",
+      "选择性必修2 区域发展",
+      "选择性必修3 资源、环境与国家安全"
+    ],
+    "stats": {
+      "total_nodes": 103,
+      "total_edges": 131,
+      "modules": 5,
+      "chapters": 22,
+      "knowledge_points": 76
+    }
+  }
+};

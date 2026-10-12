@@ -1,0 +1,2395 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+  <key id="name" attr.name="name" attr.type="string" for="node"/>
+  <key id="type" attr.name="type" attr.type="string" for="node"/>
+  <key id="subject" attr.name="subject" attr.type="string" for="node"/>
+  <key id="module" attr.name="module" attr.type="string" for="node"/>
+  <key id="chapter" attr.name="chapter" attr.type="string" for="node"/>
+  <key id="difficulty" attr.name="difficulty" attr.type="int" for="node"/>
+  <key id="description" attr.name="description" attr.type="string" for="node"/>
+  <key id="keywords" attr.name="keywords" attr.type="string" for="node"/>
+  <key id="exam_type" attr.name="exam_type" attr.type="string" for="node"/>
+  <key id="importance" attr.name="importance" attr.type="int" for="node"/>
+  <key id="textbook_source" attr.name="textbook_source" attr.type="string" for="node"/>
+  <key id="relation" attr.name="relation" attr.type="string" for="edge"/>
+  <key id="weight" attr.name="weight" attr.type="double" for="edge"/>
+  <key id="description" attr.name="description" attr.type="string" for="edge"/>
+  <graph id="G" edgedefault="directed">
+    <node id="P_M1">
+      <data key="name">中国特色社会主义</data>
+      <data key="type">Module</data>
+      <data key="subject">政治</data>
+      <data key="description">必修1。阐述科学社会主义从空想到科学到现实的发展历程，中国特色社会主义道路、理论、制度、文化的开创与发展，以及新时代的奋斗目标与中国梦。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="module">中国特色社会主义</data>
+      <data key="chapter"/>
+      <data key="textbook_source"/>
+    </node>
+    <node id="P_M2">
+      <data key="name">经济与社会</data>
+      <data key="type">Module</data>
+      <data key="subject">政治</data>
+      <data key="description">必修2。阐述我国基本经济制度、社会主义市场经济体制，以及贯彻新发展理念、推动经济发展与社会进步。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="module">经济与社会</data>
+      <data key="chapter"/>
+      <data key="textbook_source"/>
+    </node>
+    <node id="P_M3">
+      <data key="name">政治与法治</data>
+      <data key="type">Module</data>
+      <data key="subject">政治</data>
+      <data key="description">必修3。阐述中国共产党的领导、人民当家作主、全面依法治国三者的有机统一。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="module">政治与法治</data>
+      <data key="chapter"/>
+      <data key="textbook_source"/>
+    </node>
+    <node id="P_M4">
+      <data key="name">哲学与文化</data>
+      <data key="type">Module</data>
+      <data key="subject">政治</data>
+      <data key="description">必修4。阐述马克思主义哲学基本原理（唯物论、认识论、辩证法、唯物史观、价值观）及文化传承与文化创新。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="module">哲学与文化</data>
+      <data key="chapter"/>
+      <data key="textbook_source"/>
+    </node>
+    <node id="P_M5">
+      <data key="name">当代国际政治与经济</data>
+      <data key="type">Module</data>
+      <data key="subject">政治</data>
+      <data key="description">选择性必修1。阐述世界多极化、经济全球化及主要国际组织。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="module">当代国际政治与经济</data>
+      <data key="chapter"/>
+      <data key="textbook_source"/>
+    </node>
+    <node id="P_M6">
+      <data key="name">法律生活与逻辑思维</data>
+      <data key="type">Module</data>
+      <data key="subject">政治</data>
+      <data key="description">选择性必修2《法律与生活》与选择性必修3《逻辑与思维》。阐述民事权利义务、家庭婚姻就业与争议解决，以及科学思维、形式逻辑、辩证思维与创新思维。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="module">法律生活与逻辑思维</data>
+      <data key="chapter"/>
+      <data key="textbook_source"/>
+    </node>
+    <node id="P_C1_1">
+      <data key="name">社会主义从空想到科学到现实</data>
+      <data key="type">Chapter</data>
+      <data key="subject">政治</data>
+      <data key="module">中国特色社会主义</data>
+      <data key="chapter">社会主义从空想到科学到现实</data>
+      <data key="description">梳理空想社会主义、科学社会主义诞生及从理论到现实、从一国到多国的发展。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="textbook_source">必修1 第一课</data>
+    </node>
+    <node id="P_C1_2">
+      <data key="name">中国特色社会主义的开创与发展</data>
+      <data key="type">Chapter</data>
+      <data key="subject">政治</data>
+      <data key="module">中国特色社会主义</data>
+      <data key="chapter">中国特色社会主义的开创与发展</data>
+      <data key="description">新民主主义革命向社会主义过渡、改革开放决策、中国特色社会主义道路与理论体系。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="textbook_source">必修1 第二课</data>
+    </node>
+    <node id="P_C1_3">
+      <data key="name">新时代中国特色社会主义与中国梦</data>
+      <data key="type">Chapter</data>
+      <data key="subject">政治</data>
+      <data key="module">中国特色社会主义</data>
+      <data key="chapter">新时代中国特色社会主义与中国梦</data>
+      <data key="description">新时代社会主要矛盾、习近平新时代中国特色社会主义思想、新征程与中国梦。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="textbook_source">必修1 第三课、第四课</data>
+    </node>
+    <node id="P_C2_1">
+      <data key="name">我国的基本经济制度</data>
+      <data key="type">Chapter</data>
+      <data key="subject">政治</data>
+      <data key="module">经济与社会</data>
+      <data key="chapter">我国的基本经济制度</data>
+      <data key="description">公有制为主体多种所有制经济共同发展、社会主义市场经济体制、宏观调控。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="textbook_source">必修2 第一课、第二课</data>
+    </node>
+    <node id="P_C2_2">
+      <data key="name">经济发展与社会进步</data>
+      <data key="type">Chapter</data>
+      <data key="subject">政治</data>
+      <data key="module">经济与社会</data>
+      <data key="chapter">经济发展与社会进步</data>
+      <data key="description">新发展理念、现代化经济体系、供给侧结构性改革、分配制度与社会保障。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="textbook_source">必修2 第三课、第四课</data>
+    </node>
+    <node id="P_C3_1">
+      <data key="name">中国共产党的领导</data>
+      <data key="type">Chapter</data>
+      <data key="subject">政治</data>
+      <data key="module">政治与法治</data>
+      <data key="chapter">中国共产党的领导</data>
+      <data key="description">党的性质宗旨、执政地位与领导方式、全面从严治党。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="textbook_source">必修3 第一课、第二课</data>
+    </node>
+    <node id="P_C3_2">
+      <data key="name">人民当家作主</data>
+      <data key="type">Chapter</data>
+      <data key="subject">政治</data>
+      <data key="module">政治与法治</data>
+      <data key="chapter">人民当家作主</data>
+      <data key="description">人民代表大会制度、政党制度、民族区域自治、基层群众自治及国家机构。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="textbook_source">必修3 第三课、第四课、第五课</data>
+    </node>
+    <node id="P_C3_3">
+      <data key="name">全面依法治国</data>
+      <data key="type">Chapter</data>
+      <data key="subject">政治</data>
+      <data key="module">政治与法治</data>
+      <data key="chapter">全面依法治国</data>
+      <data key="description">依法治国总目标、法治国家政府社会一体建设、新十六字方针、依宪治国。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="textbook_source">必修3 第七课、第八课、第九课</data>
+    </node>
+    <node id="P_C4_1">
+      <data key="name">时代精神的精华</data>
+      <data key="type">Chapter</data>
+      <data key="subject">政治</data>
+      <data key="module">哲学与文化</data>
+      <data key="chapter">时代精神的精华</data>
+      <data key="description">哲学与世界观方法论、哲学基本问题、唯物唯心分歧、马克思主义哲学。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="textbook_source">必修4 第一课</data>
+    </node>
+    <node id="P_C4_2">
+      <data key="name">探索世界与追求真理</data>
+      <data key="type">Chapter</data>
+      <data key="subject">政治</data>
+      <data key="module">哲学与文化</data>
+      <data key="chapter">探索世界与追求真理</data>
+      <data key="description">唯物论（物质意识）、认识论（实践与真理）。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="textbook_source">必修4 第二课、第三课、第四课</data>
+    </node>
+    <node id="P_C4_3">
+      <data key="name">联系发展矛盾（唯物辩证法）</data>
+      <data key="type">Chapter</data>
+      <data key="subject">政治</data>
+      <data key="module">哲学与文化</data>
+      <data key="chapter">联系发展矛盾（唯物辩证法）</data>
+      <data key="description">联系观、发展观、矛盾观、辩证否定与创新。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="textbook_source">必修4 第五课、第六课、第七课、第八课</data>
+    </node>
+    <node id="P_C4_4">
+      <data key="name">社会历史与人生价值</data>
+      <data key="type">Chapter</data>
+      <data key="subject">政治</data>
+      <data key="module">哲学与文化</data>
+      <data key="chapter">社会历史与人生价值</data>
+      <data key="description">唯物史观（社会存在意识、基本矛盾、群众史观）与价值观、人生价值。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="textbook_source">必修4 第九课、第十一课、第十二课</data>
+    </node>
+    <node id="P_C4_5">
+      <data key="name">文化传承与文化创新</data>
+      <data key="type">Chapter</data>
+      <data key="subject">政治</data>
+      <data key="module">哲学与文化</data>
+      <data key="chapter">文化传承与文化创新</data>
+      <data key="description">文化的内涵功能、传统文化继承、中华文化特征、文化创新与文化自信。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="textbook_source">必修4 第十三课、第十四课、第十五课</data>
+    </node>
+    <node id="P_C5_1">
+      <data key="name">世界多极化</data>
+      <data key="type">Chapter</data>
+      <data key="subject">政治</data>
+      <data key="module">当代国际政治与经济</data>
+      <data key="chapter">世界多极化</data>
+      <data key="description">多极化趋势、综合国力竞争、我国独立自主和平外交政策。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="textbook_source">选必1 第一单元</data>
+    </node>
+    <node id="P_C5_2">
+      <data key="name">经济全球化</data>
+      <data key="type">Chapter</data>
+      <data key="subject">政治</data>
+      <data key="module">当代国际政治与经济</data>
+      <data key="chapter">经济全球化</data>
+      <data key="description">全球化的表现动因、影响、发展更高层次开放型经济。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="textbook_source">选必1 第二单元</data>
+    </node>
+    <node id="P_C5_3">
+      <data key="name">国际组织</data>
+      <data key="type">Chapter</data>
+      <data key="subject">政治</data>
+      <data key="module">当代国际政治与经济</data>
+      <data key="chapter">国际组织</data>
+      <data key="description">联合国、世贸组织、区域组织及中国与国际组织。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="textbook_source">选必1 第三单元</data>
+    </node>
+    <node id="P_C6_1">
+      <data key="name">民事权利与义务</data>
+      <data key="type">Chapter</data>
+      <data key="subject">政治</data>
+      <data key="module">法律生活与逻辑思维</data>
+      <data key="chapter">民事权利与义务</data>
+      <data key="description">民事权利能力与行为能力、人身权、物权、合同、侵权责任。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="textbook_source">选必2 第一单元</data>
+    </node>
+    <node id="P_C6_2">
+      <data key="name">家庭婚姻就业与争议解决</data>
+      <data key="type">Chapter</data>
+      <data key="subject">政治</data>
+      <data key="module">法律生活与逻辑思维</data>
+      <data key="chapter">家庭婚姻就业与争议解决</data>
+      <data key="description">婚姻家庭关系、劳动法与劳动合同、争议解决方式。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="textbook_source">选必2 第二、三、四单元</data>
+    </node>
+    <node id="P_C6_3">
+      <data key="name">科学思维与形式逻辑</data>
+      <data key="type">Chapter</data>
+      <data key="subject">政治</data>
+      <data key="module">法律生活与逻辑思维</data>
+      <data key="chapter">科学思维与形式逻辑</data>
+      <data key="description">科学思维特征、概念判断、形式逻辑基本规律、演绎与归纳推理。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="textbook_source">选必3 第一、二单元</data>
+    </node>
+    <node id="P_C6_4">
+      <data key="name">辩证思维与创新思维</data>
+      <data key="type">Chapter</data>
+      <data key="subject">政治</data>
+      <data key="module">法律生活与逻辑思维</data>
+      <data key="chapter">辩证思维与创新思维</data>
+      <data key="description">辩证思维的整体动态性、分析与综合、创新思维与超前思维。</data>
+      <data key="difficulty">0</data>
+      <data key="importance">0</data>
+      <data key="keywords"/>
+      <data key="exam_type"/>
+      <data key="textbook_source">选必3 第三、四单元</data>
+    </node>
+    <node id="P_K1_1_1">
+      <data key="name">空想社会主义的代表与局限</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">政治</data>
+      <data key="module">中国特色社会主义</data>
+      <data key="chapter">社会主义从空想到科学到现实</data>
+      <data key="difficulty">2</data>
+      <data key="description">以圣西门、傅立叶、欧文为代表的空想社会主义对资本主义进行批判并构想了未来社会，但未揭示资本主义根本矛盾，未找到变革社会的现实力量。</data>
+      <data key="keywords">空想社会主义,圣西门,傅立叶,欧文,历史局限</data>
+      <data key="exam_type">选择题、材料分析题</data>
+      <data key="importance">3</data>
+      <data key="textbook_source">必修1 第一课</data>
+    </node>
+    <node id="P_K1_1_2">
+      <data key="name">科学社会主义的诞生</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">政治</data>
+      <data key="module">中国特色社会主义</data>
+      <data key="chapter">社会主义从空想到科学到现实</data>
+      <data key="difficulty">3</data>
+      <data key="description">1848年《共产党宣言》发表标志科学社会主义诞生；其两大理论基石是唯物史观和剩余价值学说。</data>
+      <data key="keywords">共产党宣言,唯物史观,剩余价值学说,科学社会主义</data>
+      <data key="exam_type">选择题、简答题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">必修1 第一课</data>
+    </node>
+    <node id="P_K1_1_3">
+      <data key="name">科学社会主义从理论到现实</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">政治</data>
+      <data key="module">中国特色社会主义</data>
+      <data key="chapter">社会主义从空想到科学到现实</data>
+      <data key="difficulty">3</data>
+      <data key="description">1917年俄国十月革命把马克思主义关于无产阶级革命的理论变为现实，建立世界上第一个社会主义国家。</data>
+      <data key="keywords">十月革命,理论到现实,第一个社会主义国家</data>
+      <data key="exam_type">选择题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">必修1 第一课</data>
+    </node>
+    <node id="P_K1_1_4">
+      <data key="name">社会主义从一国到多国</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">政治</data>
+      <data key="module">中国特色社会主义</data>
+      <data key="chapter">社会主义从空想到科学到现实</data>
+      <data key="difficulty">2</data>
+      <data key="description">二战后社会主义越出一国范围形成阵营，历史性飞跃体现了社会主义发展的曲折性与前进性。</data>
+      <data key="keywords">一国到多国,社会主义阵营,曲折前进</data>
+      <data key="exam_type">选择题</data>
+      <data key="importance">2</data>
+      <data key="textbook_source">必修1 第一课</data>
+    </node>
+    <node id="P_K1_2_1">
+      <data key="name">新民主主义革命向社会主义过渡</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">政治</data>
+      <data key="module">中国特色社会主义</data>
+      <data key="chapter">中国特色社会主义的开创与发展</data>
+      <data key="difficulty">3</data>
+      <data key="description">过渡时期总路线一化三改；1956年三大改造基本完成，社会主义制度在我国确立。</data>
+      <data key="keywords">过渡时期总路线,三大改造,社会主义制度确立,1956</data>
+      <data key="exam_type">材料分析题、选择题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">必修1 第二课</data>
+    </node>
+    <node id="P_K1_2_2">
+      <data key="name">改革开放的伟大决策</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">政治</data>
+      <data key="module">中国特色社会主义</data>
+      <data key="chapter">中国特色社会主义的开创与发展</data>
+      <data key="difficulty">3</data>
+      <data key="description">1978年十一届三中全会作出把工作重心转移到经济建设上来、实行改革开放的伟大决策。</data>
+      <data key="keywords">十一届三中全会,改革开放,工作重心转移,1978</data>
+      <data key="exam_type">选择题、材料分析题</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">必修1 第二课</data>
+    </node>
+    <node id="P_K1_2_3">
+      <data key="name">中国特色社会主义道路的开辟</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">政治</data>
+      <data key="module">中国特色社会主义</data>
+      <data key="chapter">中国特色社会主义的开创与发展</data>
+      <data key="difficulty">3</data>
+      <data key="description">以邓小平理论为指导开辟中国特色社会主义道路，回答了什么是社会主义、怎样建设社会主义。</data>
+      <data key="keywords">中国特色社会主义道路,邓小平理论</data>
+      <data key="exam_type">选择题、简答题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">必修1 第二课</data>
+    </node>
+    <node id="P_K1_2_4">
+      <data key="name">中国特色社会主义理论体系</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">政治</data>
+      <data key="module">中国特色社会主义</data>
+      <data key="chapter">中国特色社会主义的开创与发展</data>
+      <data key="difficulty">4</data>
+      <data key="description">包括邓小平理论、三个代表重要思想、科学发展观、习近平新时代中国特色社会主义思想，是马克思主义中国化的成果。</data>
+      <data key="keywords">理论体系,三个代表,科学发展观,马克思主义中国化</data>
+      <data key="exam_type">选择题、论述题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">必修1 第二课</data>
+    </node>
+    <node id="P_K1_3_1">
+      <data key="name">新时代我国社会主要矛盾</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">政治</data>
+      <data key="module">中国特色社会主义</data>
+      <data key="chapter">新时代中国特色社会主义与中国梦</data>
+      <data key="difficulty">4</data>
+      <data key="description">新时代我国社会主要矛盾已转化为人民日益增长的美好生活需要和不平衡不充分的发展之间的矛盾。</data>
+      <data key="keywords">社会主要矛盾,美好生活需要,不平衡不充分</data>
+      <data key="exam_type">材料分析题、选择题</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">必修1 第三课</data>
+    </node>
+    <node id="P_K1_3_2">
+      <data key="name">习近平新时代中国特色社会主义思想</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">政治</data>
+      <data key="module">中国特色社会主义</data>
+      <data key="chapter">新时代中国特色社会主义与中国梦</data>
+      <data key="difficulty">4</data>
+      <data key="description">马克思主义中国化时代化的最新成果，核心要义体现为八个明确、十四个坚持，是党和国家必须长期坚持的指导思想。</data>
+      <data key="keywords">八个明确,十四个坚持,指导思想,马克思主义中国化</data>
+      <data key="exam_type">选择题、材料分析题</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">必修1 第三课</data>
+    </node>
+    <node id="P_K1_3_3">
+      <data key="name">新征程两步走战略安排</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">政治</data>
+      <data key="module">中国特色社会主义</data>
+      <data key="chapter">新时代中国特色社会主义与中国梦</data>
+      <data key="difficulty">3</data>
+      <data key="description">在全面建成小康社会基础上，分两步走到本世纪中叶建成富强民主文明和谐美丽的社会主义现代化强国。</data>
+      <data key="keywords">两个一百年,两步走,社会主义现代化强国</data>
+      <data key="exam_type">选择题、简答题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">必修1 第四课</data>
+    </node>
+    <node id="P_K1_3_4">
+      <data key="name">中国梦的本质</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">政治</data>
+      <data key="module">中国特色社会主义</data>
+      <data key="chapter">新时代中国特色社会主义与中国梦</data>
+      <data key="difficulty">2</data>
+      <data key="description">中国梦的本质是国家富强、民族振兴、人民幸福；实现中国梦必须走中国道路、弘扬中国精神、凝聚中国力量。</data>
+      <data key="keywords">中国梦,国家富强,民族振兴,人民幸福</data>
+      <data key="exam_type">选择题、简答题</data>
+      <data key="importance">3</data>
+      <data key="textbook_source">必修1 第四课</data>
+    </node>
+    <node id="P_K2_1_1">
+      <data key="name">公有制为主体多种所有制经济共同发展</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">政治</data>
+      <data key="module">经济与社会</data>
+      <data key="chapter">我国的基本经济制度</data>
+      <data key="difficulty">3</data>
+      <data key="description">公有制是社会主义经济制度基础，国有经济是主导力量；非公有制是重要组成部分，二者地位平等。</data>
+      <data key="keywords">公有制,国有经济,非公有制,基本经济制度</data>
+      <data key="exam_type">选择题、材料分析题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">必修2 第一课</data>
+    </node>
+    <node id="P_K2_1_2">
+      <data key="name">公有制经济的实现形式</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">政治</data>
+      <data key="module">经济与社会</data>
+      <data key="chapter">我国的基本经济制度</data>
+      <data key="difficulty">3</data>
+      <data key="description">股份制是公有制主要实现形式，发展混合所有制经济有利于放大国有资本功能。</data>
+      <data key="keywords">股份制,混合所有制,实现形式</data>
+      <data key="exam_type">选择题</data>
+      <data key="importance">3</data>
+      <data key="textbook_source">必修2 第一课</data>
+    </node>
+    <node id="P_K2_1_3">
+      <data key="name">两个毫不动摇</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">政治</data>
+      <data key="module">经济与社会</data>
+      <data key="chapter">我国的基本经济制度</data>
+      <data key="difficulty">2</data>
+      <data key="description">毫不动摇巩固和发展公有制经济，毫不动摇鼓励支持引导非公有制经济发展。</data>
+      <data key="keywords">两个毫不动摇,公有制,非公有制</data>
+      <data key="exam_type">选择题、简答题</data>
+      <data key="importance">3</data>
+      <data key="textbook_source">必修2 第一课</data>
+    </node>
+    <node id="P_K2_1_4">
+      <data key="name">社会主义市场经济体制</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">政治</data>
+      <data key="module">经济与社会</data>
+      <data key="chapter">我国的基本经济制度</data>
+      <data key="difficulty">4</data>
+      <data key="description">使市场在资源配置中起决定性作用，更好发挥政府作用；坚持社会主义制度与市场经济结合。</data>
+      <data key="keywords">市场决定性作用,政府作用,社会主义市场经济</data>
+      <data key="exam_type">材料分析题、论述题</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">必修2 第二课</data>
+    </node>
+    <node id="P_K2_1_5">
+      <data key="name">宏观调控的目标与手段</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">政治</data>
+      <data key="module">经济与社会</data>
+      <data key="chapter">我国的基本经济制度</data>
+      <data key="difficulty">4</data>
+      <data key="description">主要目标为促进经济增长、增加就业、稳定物价、保持国际收支平衡；运用经济、法律、行政手段。</data>
+      <data key="keywords">宏观调控,四大目标,经济法律行政手段</data>
+      <data key="exam_type">材料分析题、选择题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">必修2 第二课</data>
+    </node>
+    <node id="P_K2_2_1">
+      <data key="name">新发展理念</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">政治</data>
+      <data key="module">经济与社会</data>
+      <data key="chapter">经济发展与社会进步</data>
+      <data key="difficulty">4</data>
+      <data key="description">创新、协调、绿色、开放、共享五大发展理念，关系我国发展全局的一场深刻变革。</data>
+      <data key="keywords">创新,协调,绿色,开放,共享,新发展理念</data>
+      <data key="exam_type">材料分析题、选择题</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">必修2 第三课</data>
+    </node>
+    <node id="P_K2_2_2">
+      <data key="name">建设现代化经济体系</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">政治</data>
+      <data key="module">经济与社会</data>
+      <data key="chapter">经济发展与社会进步</data>
+      <data key="difficulty">4</data>
+      <data key="description">建设创新引领、协同发展的产业体系，统一开放竞争有序的市场体系等，推动经济高质量发展。</data>
+      <data key="keywords">现代化经济体系,产业体系,高质量发展</data>
+      <data key="exam_type">材料分析题、简答题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">必修2 第三课</data>
+    </node>
+    <node id="P_K2_2_3">
+      <data key="name">供给侧结构性改革</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">政治</data>
+      <data key="module">经济与社会</data>
+      <data key="chapter">经济发展与社会进步</data>
+      <data key="difficulty">4</data>
+      <data key="description">通过三去一降一补（去产能去库存去杠杆降成本补短板）优化供给结构，提高供给体系质量。</data>
+      <data key="keywords">供给侧结构性改革,三去一降一补,供给质量</data>
+      <data key="exam_type">材料分析题、论述题</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">必修2 第三课</data>
+    </node>
+    <node id="P_K2_2_4">
+      <data key="name">我国的分配制度</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">政治</data>
+      <data key="module">经济与社会</data>
+      <data key="chapter">经济发展与社会进步</data>
+      <data key="difficulty">4</data>
+      <data key="description">按劳分配为主体、多种分配方式并存；劳动、资本、土地、知识、技术、管理、数据等生产要素参与分配。</data>
+      <data key="keywords">按劳分配,生产要素分配,分配制度</data>
+      <data key="exam_type">选择题、材料分析题</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">必修2 第四课</data>
+    </node>
+    <node id="P_K2_2_5">
+      <data key="name">社会保障制度</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">政治</data>
+      <data key="module">经济与社会</data>
+      <data key="chapter">经济发展与社会进步</data>
+      <data key="difficulty">3</data>
+      <data key="description">包括社会保险、社会救助、社会福利、社会优抚，是社会的安全网和调节器。</data>
+      <data key="keywords">社会保障,社会保险,社会救助,社会福利,社会优抚</data>
+      <data key="exam_type">选择题、简答题</data>
+      <data key="importance">3</data>
+      <data key="textbook_source">必修2 第四课</data>
+    </node>
+    <node id="P_K3_1_1">
+      <data key="name">中国共产党的性质与宗旨</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">政治</data>
+      <data key="module">政治与法治</data>
+      <data key="chapter">中国共产党的领导</data>
+      <data key="difficulty">3</data>
+      <data key="description">中国共产党是中国工人阶级的先锋队，同时是中国人民和中华民族的先锋队；宗旨是全心全意为人民服务。</data>
+      <data key="keywords">先锋队,性质,宗旨,为人民服务</data>
+      <data key="exam_type">选择题、简答题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">必修3 第一课</data>
+    </node>
+    <node id="P_K3_1_2">
+      <data key="name">党的领导方式与执政方式</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">政治</data>
+      <data key="module">政治与法治</data>
+      <data key="chapter">中国共产党的领导</data>
+      <data key="difficulty">3</data>
+      <data key="description">党实行政治、思想、组织领导；坚持科学执政、民主执政、依法执政，依法执政是基本方式。</data>
+      <data key="keywords">政治领导,科学执政,民主执政,依法执政</data>
+      <data key="exam_type">选择题、材料分析题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">必修3 第一课</data>
+    </node>
+    <node id="P_K3_1_3">
+      <data key="name">党的领导是社会主义最本质特征</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">政治</data>
+      <data key="module">政治与法治</data>
+      <data key="chapter">中国共产党的领导</data>
+      <data key="difficulty">3</data>
+      <data key="description">中国共产党的领导是中国特色社会主义最本质的特征，是中国特色社会主义制度的最大优势。</data>
+      <data key="keywords">最本质特征,最大优势,党的领导</data>
+      <data key="exam_type">选择题、论述题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">必修3 第一课</data>
+    </node>
+    <node id="P_K3_1_4">
+      <data key="name">全面从严治党</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">政治</data>
+      <data key="module">政治与法治</data>
+      <data key="chapter">中国共产党的领导</data>
+      <data key="difficulty">3</data>
+      <data key="description">以党的政治建设为统领，全面推进党的各项建设，把党建设得更加坚强有力。</data>
+      <data key="keywords">全面从严治党,政治建设,党的建设</data>
+      <data key="exam_type">选择题、材料分析题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">必修3 第二课</data>
+    </node>
+    <node id="P_K3_2_1">
+      <data key="name">人民代表大会制度</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">政治</data>
+      <data key="module">政治与法治</data>
+      <data key="chapter">人民当家作主</data>
+      <data key="difficulty">4</data>
+      <data key="description">我国的根本政治制度；人大是国家权力机关，行使立法权、决定权、任免权、监督权。</data>
+      <data key="keywords">人民代表大会制度,根本政治制度,立法决定任免监督</data>
+      <data key="exam_type">选择题、材料分析题</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">必修3 第四课</data>
+    </node>
+    <node id="P_K3_2_2">
+      <data key="name">人大代表的权利与义务</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">政治</data>
+      <data key="module">政治与法治</data>
+      <data key="chapter">人民当家作主</data>
+      <data key="difficulty">2</data>
+      <data key="description">人大代表依法行使审议权、表决权、提案权、质询权，同时履行协助宪法法律实施等义务。</data>
+      <data key="keywords">人大代表,审议权,表决权,提案权,质询权</data>
+      <data key="exam_type">选择题</data>
+      <data key="importance">3</data>
+      <data key="textbook_source">必修3 第四课</data>
+    </node>
+    <node id="P_K3_2_3">
+      <data key="name">政党制度</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">政治</data>
+      <data key="module">政治与法治</data>
+      <data key="chapter">人民当家作主</data>
+      <data key="difficulty">4</data>
+      <data key="description">中国共产党领导的多党合作和政治协商制度是我国基本政治制度，人民政协是统一战线组织。</data>
+      <data key="keywords">多党合作,政治协商,基本政治制度,人民政协</data>
+      <data key="exam_type">选择题、材料分析题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">必修3 第五课</data>
+    </node>
+    <node id="P_K3_2_4">
+      <data key="name">民族区域自治制度</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">政治</data>
+      <data key="module">政治与法治</data>
+      <data key="chapter">人民当家作主</data>
+      <data key="difficulty">3</data>
+      <data key="description">在国家统一领导下设立自治机关行使自治权，是我国基本政治制度，符合国情和民族关系。</data>
+      <data key="keywords">民族区域自治,自治机关,自治权,基本政治制度</data>
+      <data key="exam_type">选择题、简答题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">必修3 第五课</data>
+    </node>
+    <node id="P_K3_2_5">
+      <data key="name">基层群众自治制度</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">政治</data>
+      <data key="module">政治与法治</data>
+      <data key="chapter">人民当家作主</data>
+      <data key="difficulty">3</data>
+      <data key="description">以村委会、居委会为主要形式，实行自我管理自我服务自我教育自我监督，是基本政治制度。</data>
+      <data key="keywords">基层群众自治,村委会,居委会,自我管理</data>
+      <data key="exam_type">选择题、材料分析题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">必修3 第五课</data>
+    </node>
+    <node id="P_K3_2_6">
+      <data key="name">国家机构及其关系</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">政治</data>
+      <data key="module">政治与法治</data>
+      <data key="chapter">人民当家作主</data>
+      <data key="difficulty">4</data>
+      <data key="description">人大产生并监督一府一委两院（政府、监察委、法院、检察院），监察委是国家监察机关。</data>
+      <data key="keywords">国家机构,一府一委两院,监察委,权力机关</data>
+      <data key="exam_type">选择题、材料分析题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">必修3 第三课</data>
+    </node>
+    <node id="P_K3_3_1">
+      <data key="name">全面依法治国总目标</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">政治</data>
+      <data key="module">政治与法治</data>
+      <data key="chapter">全面依法治国</data>
+      <data key="difficulty">3</data>
+      <data key="description">建设中国特色社会主义法治体系、建设社会主义法治国家。</data>
+      <data key="keywords">依法治国,法治体系,法治国家,总目标</data>
+      <data key="exam_type">选择题、简答题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">必修3 第七课</data>
+    </node>
+    <node id="P_K3_3_2">
+      <data key="name">法治国家法治政府法治社会一体建设</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">政治</data>
+      <data key="module">政治与法治</data>
+      <data key="chapter">全面依法治国</data>
+      <data key="difficulty">3</data>
+      <data key="description">三者相互联系相互促进，法治政府是重点，法治社会是基础。</data>
+      <data key="keywords">法治国家,法治政府,法治社会,一体建设</data>
+      <data key="exam_type">选择题、材料分析题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">必修3 第七课</data>
+    </node>
+    <node id="P_K3_3_3">
+      <data key="name">新十六字方针</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">政治</data>
+      <data key="module">政治与法治</data>
+      <data key="chapter">全面依法治国</data>
+      <data key="difficulty">4</data>
+      <data key="description">科学立法、严格执法、公正司法、全民守法，是新时代全面依法治国的工作布局。</data>
+      <data key="keywords">科学立法,严格执法,公正司法,全民守法,新十六字方针</data>
+      <data key="exam_type">选择题、材料分析题</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">必修3 第八课</data>
+    </node>
+    <node id="P_K3_3_4">
+      <data key="name">宪法是国家的根本法</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">政治</data>
+      <data key="module">政治与法治</data>
+      <data key="chapter">全面依法治国</data>
+      <data key="difficulty">3</data>
+      <data key="description">宪法具有最高法律效力，坚持依法治国首先要坚持依宪治国，依法执政首先要依宪执政。</data>
+      <data key="keywords">宪法,根本法,依宪治国,依宪执政</data>
+      <data key="exam_type">选择题、简答题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">必修3 第九课</data>
+    </node>
+    <node id="P_K4_1_1">
+      <data key="name">哲学是世界观与方法论的统一</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">政治</data>
+      <data key="module">哲学与文化</data>
+      <data key="chapter">时代精神的精华</data>
+      <data key="difficulty">2</data>
+      <data key="description">哲学是关于世界观的学问，是系统化理论化的世界观，又是人们认识和改造世界的世界观方法论。</data>
+      <data key="keywords">哲学,世界观,方法论,统一</data>
+      <data key="exam_type">选择题</data>
+      <data key="importance">3</data>
+      <data key="textbook_source">必修4 第一课</data>
+    </node>
+    <node id="P_K4_1_2">
+      <data key="name">哲学的基本问题</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">政治</data>
+      <data key="module">哲学与文化</data>
+      <data key="chapter">时代精神的精华</data>
+      <data key="difficulty">4</data>
+      <data key="description">思维和存在的关系问题是哲学基本问题，包括何者为本原（第一性）和能否同一（可知论不可知论）两方面。</data>
+      <data key="keywords">哲学基本问题,思维与存在,第一性,可知论</data>
+      <data key="exam_type">选择题、辨析题</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">必修4 第一课</data>
+    </node>
+    <node id="P_K4_1_3">
+      <data key="name">唯物主义与唯心主义的分歧</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">政治</data>
+      <data key="module">哲学与文化</data>
+      <data key="chapter">时代精神的精华</data>
+      <data key="difficulty">3</data>
+      <data key="description">围绕物质和意识何者为本原，形成唯物主义（物质本原）与唯心主义（意识本原）两大基本派别。</data>
+      <data key="keywords">唯物主义,唯心主义,基本派别,本原</data>
+      <data key="exam_type">选择题、辨析题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">必修4 第一课</data>
+    </node>
+    <node id="P_K4_1_4">
+      <data key="name">马克思主义哲学的产生与特征</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">政治</data>
+      <data key="module">哲学与文化</data>
+      <data key="chapter">时代精神的精华</data>
+      <data key="difficulty">3</data>
+      <data key="description">以实践为基础的科学性和革命性的统一，实现了唯物主义与辩证法、唯物辩证的自然观与历史观有机统一。</data>
+      <data key="keywords">马克思主义哲学,实践性,科学性,革命性</data>
+      <data key="exam_type">选择题、简答题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">必修4 第一课</data>
+    </node>
+    <node id="P_K4_2_1">
+      <data key="name">世界的物质性</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">政治</data>
+      <data key="module">哲学与文化</data>
+      <data key="chapter">探索世界与追求真理</data>
+      <data key="difficulty">3</data>
+      <data key="description">物质是不依赖于人的意识并能为人的意识所反映的客观实在；世界的真正统一性在于物质性。</data>
+      <data key="keywords">物质,客观实在,物质性,物质决定意识</data>
+      <data key="exam_type">选择题、辨析题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">必修4 第二课</data>
+    </node>
+    <node id="P_K4_2_2">
+      <data key="name">意识的本质与作用</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">政治</data>
+      <data key="module">哲学与文化</data>
+      <data key="chapter">探索世界与追求真理</data>
+      <data key="difficulty">4</data>
+      <data key="description">意识是物质世界长期发展的产物，是人脑的机能，是客观存在的反映；意识具有能动作用（能动认识世界和改造世界）。</data>
+      <data key="keywords">意识,人脑机能,客观反映,能动作用</data>
+      <data key="exam_type">选择题、材料分析题</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">必修4 第二课</data>
+    </node>
+    <node id="P_K4_2_3">
+      <data key="name">一切从实际出发实事求是</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">政治</data>
+      <data key="module">哲学与文化</data>
+      <data key="chapter">探索世界与追求真理</data>
+      <data key="difficulty">3</data>
+      <data key="description">物质决定意识要求我们一切从实际出发，实事求是，这是马克思主义的根本观点。</data>
+      <data key="keywords">从实际出发,实事求是,物质决定意识</data>
+      <data key="exam_type">材料分析题、辨析题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">必修4 第二课</data>
+    </node>
+    <node id="P_K4_2_4">
+      <data key="name">实践的含义与特点</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">政治</data>
+      <data key="module">哲学与文化</data>
+      <data key="chapter">探索世界与追求真理</data>
+      <data key="difficulty">3</data>
+      <data key="description">实践是人们改造客观世界的物质性活动，具有客观物质性、主观能动性、社会历史性。</data>
+      <data key="keywords">实践,改造客观世界,客观物质性,社会历史性</data>
+      <data key="exam_type">选择题、简答题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">必修4 第三课</data>
+    </node>
+    <node id="P_K4_2_5">
+      <data key="name">实践是认识的基础</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">政治</data>
+      <data key="module">哲学与文化</data>
+      <data key="chapter">探索世界与追求真理</data>
+      <data key="difficulty">4</data>
+      <data key="description">实践是认识的来源、动力、检验真理的唯一标准、认识的目的。</data>
+      <data key="keywords">实践是认识基础,来源,动力,标准,目的</data>
+      <data key="exam_type">选择题、材料分析题</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">必修4 第四课</data>
+    </node>
+    <node id="P_K4_2_6">
+      <data key="name">真理的客观性具体性条件性</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">政治</data>
+      <data key="module">哲学与文化</data>
+      <data key="chapter">探索世界与追求真理</data>
+      <data key="difficulty">4</data>
+      <data key="description">真理是标志主观同客观相符合的哲学范畴，最基本属性是客观性；真理是有条件的、具体的。</data>
+      <data key="keywords">真理,客观性,具体性,条件性</data>
+      <data key="exam_type">选择题、辨析题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">必修4 第四课</data>
+    </node>
+    <node id="P_K4_2_7">
+      <data key="name">认识的反复性与无限性</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">政治</data>
+      <data key="module">哲学与文化</data>
+      <data key="chapter">探索世界与追求真理</data>
+      <data key="difficulty">3</data>
+      <data key="description">认识具有反复性、无限性和上升性，追求真理是一个波浪式前进、螺旋式上升的过程。</data>
+      <data key="keywords">认识反复性,无限性,螺旋式上升,追求真理</data>
+      <data key="exam_type">选择题、材料分析题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">必修4 第四课</data>
+    </node>
+    <node id="P_K4_3_1">
+      <data key="name">联系的普遍性客观性多样性</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">政治</data>
+      <data key="module">哲学与文化</data>
+      <data key="chapter">联系发展矛盾（唯物辩证法）</data>
+      <data key="difficulty">4</data>
+      <data key="description">事物是普遍联系的，联系是客观的，又是多样的；要用联系的观点看问题。</data>
+      <data key="keywords">联系,普遍性,客观性,多样性</data>
+      <data key="exam_type">选择题、材料分析题</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">必修4 第五课</data>
+    </node>
+    <node id="P_K4_3_2">
+      <data key="name">整体与部分的辩证关系</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">政治</data>
+      <data key="module">哲学与文化</data>
+      <data key="chapter">联系发展矛盾（唯物辩证法）</data>
+      <data key="difficulty">4</data>
+      <data key="description">整体与部分相互区别又相互联系；树立全局观念，掌握系统优化的方法。</data>
+      <data key="keywords">整体与部分,全局观念,系统优化</data>
+      <data key="exam_type">选择题、材料分析题</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">必修4 第五课</data>
+    </node>
+    <node id="P_K4_3_3">
+      <data key="name">发展的实质与量变质变</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">政治</data>
+      <data key="module">哲学与文化</data>
+      <data key="chapter">联系发展矛盾（唯物辩证法）</data>
+      <data key="difficulty">4</data>
+      <data key="description">发展的实质是事物的前进上升、新事物产生旧事物灭亡；量变是质变的必要准备，质变是量变的必然结果。</data>
+      <data key="keywords">发展实质,量变,质变,新事物</data>
+      <data key="exam_type">选择题、材料分析题</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">必修4 第六课</data>
+    </node>
+    <node id="P_K4_3_4">
+      <data key="name">前进性与曲折性的统一</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">政治</data>
+      <data key="module">哲学与文化</data>
+      <data key="chapter">联系发展矛盾（唯物辩证法）</data>
+      <data key="difficulty">3</data>
+      <data key="description">事物发展是前进性与曲折性的统一，前途光明、道路曲折。</data>
+      <data key="keywords">前进性,曲折性,前途光明道路曲折</data>
+      <data key="exam_type">选择题、辨析题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">必修4 第六课</data>
+    </node>
+    <node id="P_K4_3_5">
+      <data key="name">矛盾的普遍性与特殊性</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">政治</data>
+      <data key="module">哲学与文化</data>
+      <data key="chapter">联系发展矛盾（唯物辩证法）</data>
+      <data key="difficulty">5</data>
+      <data key="description">矛盾普遍性指矛盾无处不在无时不有，特殊性指矛盾各有特点；二者相互联结，是矛盾问题的精髓。</data>
+      <data key="keywords">矛盾普遍性,矛盾特殊性,矛盾精髓,共性与个性</data>
+      <data key="exam_type">材料分析题、辨析题、论述题</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">必修4 第七课</data>
+    </node>
+    <node id="P_K4_3_6">
+      <data key="name">主次矛盾与矛盾的主次方面</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">政治</data>
+      <data key="module">哲学与文化</data>
+      <data key="chapter">联系发展矛盾（唯物辩证法）</data>
+      <data key="difficulty">4</data>
+      <data key="description">主要矛盾决定事物发展进程，矛盾主要方面决定事物性质；坚持两点论与重点论统一。</data>
+      <data key="keywords">主要矛盾,次要矛盾,矛盾主要方面,两点论重点论</data>
+      <data key="exam_type">选择题、材料分析题</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">必修4 第七课</data>
+    </node>
+    <node id="P_K4_3_7">
+      <data key="name">矛盾的同一性与斗争性</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">政治</data>
+      <data key="module">哲学与文化</data>
+      <data key="chapter">联系发展矛盾（唯物辩证法）</data>
+      <data key="difficulty">4</data>
+      <data key="description">矛盾的两个基本属性：同一性指矛盾双方相互依存相互转化，斗争性指双方相互排斥相互对立。</data>
+      <data key="keywords">矛盾,同一性,斗争性,基本属性</data>
+      <data key="exam_type">选择题、辨析题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">必修4 第七课</data>
+    </node>
+    <node id="P_K4_3_8">
+      <data key="name">辩证的否定与创新</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">政治</data>
+      <data key="module">哲学与文化</data>
+      <data key="chapter">联系发展矛盾（唯物辩证法）</data>
+      <data key="difficulty">4</data>
+      <data key="description">辩证的否定是事物自身的否定，实质是扬弃；创新是引领发展的第一动力。</data>
+      <data key="keywords">辩证否定,扬弃,创新,第一动力</data>
+      <data key="exam_type">材料分析题、论述题</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">必修4 第八课</data>
+    </node>
+    <node id="P_K4_4_1">
+      <data key="name">社会存在与社会意识</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">政治</data>
+      <data key="module">哲学与文化</data>
+      <data key="chapter">社会历史与人生价值</data>
+      <data key="difficulty">4</data>
+      <data key="description">社会存在决定社会意识，社会意识具有相对独立性并对社会存在有反作用。</data>
+      <data key="keywords">社会存在,社会意识,相对独立性</data>
+      <data key="exam_type">选择题、材料分析题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">必修4 第九课</data>
+    </node>
+    <node id="P_K4_4_2">
+      <data key="name">社会基本矛盾</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">政治</data>
+      <data key="module">哲学与文化</data>
+      <data key="chapter">社会历史与人生价值</data>
+      <data key="difficulty">4</data>
+      <data key="description">生产力和生产关系的矛盾、经济基础和上层建筑的矛盾是贯穿人类社会的基本矛盾。</data>
+      <data key="keywords">生产力,生产关系,经济基础,上层建筑,基本矛盾</data>
+      <data key="exam_type">选择题、材料分析题</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">必修4 第十课</data>
+    </node>
+    <node id="P_K4_4_3">
+      <data key="name">人民群众是历史的创造者</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">政治</data>
+      <data key="module">哲学与文化</data>
+      <data key="chapter">社会历史与人生价值</data>
+      <data key="difficulty">3</data>
+      <data key="description">人民群众是社会物质财富和精神财富的创造者，是社会变革的决定力量；坚持群众观点群众路线。</data>
+      <data key="keywords">人民群众,历史创造者,群众观点,群众路线</data>
+      <data key="exam_type">选择题、简答题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">必修4 第十课</data>
+    </node>
+    <node id="P_K4_4_4">
+      <data key="name">价值观的导向作用</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">政治</data>
+      <data key="module">哲学与文化</data>
+      <data key="chapter">社会历史与人生价值</data>
+      <data key="difficulty">3</data>
+      <data key="description">价值观对人们认识和改造世界、对人生道路的选择具有重要导向作用。</data>
+      <data key="keywords">价值观,导向作用,认识和改造世界</data>
+      <data key="exam_type">选择题、辨析题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">必修4 第十二课</data>
+    </node>
+    <node id="P_K4_4_5">
+      <data key="name">价值判断与价值选择</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">政治</data>
+      <data key="module">哲学与文化</data>
+      <data key="chapter">社会历史与人生价值</data>
+      <data key="difficulty">4</data>
+      <data key="description">具有社会历史性、阶级性，最高标准是自觉遵循社会发展客观规律、自觉站在最广大人民立场。</data>
+      <data key="keywords">价值判断,价值选择,社会历史性,最高标准</data>
+      <data key="exam_type">选择题、材料分析题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">必修4 第十二课</data>
+    </node>
+    <node id="P_K4_4_6">
+      <data key="name">人生的真正价值在于贡献</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">政治</data>
+      <data key="module">哲学与文化</data>
+      <data key="chapter">社会历史与人生价值</data>
+      <data key="difficulty">3</data>
+      <data key="description">人的价值在于创造价值，在于对社会的责任和贡献；在劳动和奉献中、在个人与社会的统一中实现价值。</data>
+      <data key="keywords">人生价值,贡献,价值实现,劳动奉献</data>
+      <data key="exam_type">材料分析题、论述题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">必修4 第十二课</data>
+    </node>
+    <node id="P_K4_5_1">
+      <data key="name">文化的内涵与功能</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">政治</data>
+      <data key="module">哲学与文化</data>
+      <data key="chapter">文化传承与文化创新</data>
+      <data key="difficulty">2</data>
+      <data key="description">文化是人类社会实践的产物，具有引领风尚、教育人民、服务社会、推动发展的功能。</data>
+      <data key="keywords">文化,社会实践,文化功能</data>
+      <data key="exam_type">选择题</data>
+      <data key="importance">3</data>
+      <data key="textbook_source">必修4 第十三课</data>
+    </node>
+    <node id="P_K4_5_2">
+      <data key="name">文化与经济政治的关系</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">政治</data>
+      <data key="module">哲学与文化</data>
+      <data key="chapter">文化传承与文化创新</data>
+      <data key="difficulty">3</data>
+      <data key="description">经济政治决定文化，文化反作用于经济政治；文化与经济政治相互交融。</data>
+      <data key="keywords">文化与经济政治,决定,反作用,相互交融</data>
+      <data key="exam_type">选择题、辨析题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">必修4 第十三课</data>
+    </node>
+    <node id="P_K4_5_3">
+      <data key="name">传统文化的继承与发展</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">政治</data>
+      <data key="module">哲学与文化</data>
+      <data key="chapter">文化传承与文化创新</data>
+      <data key="difficulty">3</data>
+      <data key="description">对待传统文化取其精华去其糟粕，推陈出新革故鼎新，在继承基础上发展、发展中继承。</data>
+      <data key="keywords">传统文化,取其精华去其糟粕,推陈出新,革故鼎新</data>
+      <data key="exam_type">选择题、材料分析题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">必修4 第十四课</data>
+    </node>
+    <node id="P_K4_5_4">
+      <data key="name">中华文化的特征</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">政治</data>
+      <data key="module">哲学与文化</data>
+      <data key="chapter">文化传承与文化创新</data>
+      <data key="difficulty">3</data>
+      <data key="description">源远流长、博大精深；其独特性、区域性、民族性和包容性造就中华文化博大精深。</data>
+      <data key="keywords">中华文化,源远流长,博大精深,包容性</data>
+      <data key="exam_type">选择题、简答题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">必修4 第十四课</data>
+    </node>
+    <node id="P_K4_5_5">
+      <data key="name">文化创新的途径</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">政治</data>
+      <data key="module">哲学与文化</data>
+      <data key="chapter">文化传承与文化创新</data>
+      <data key="difficulty">4</data>
+      <data key="description">根本途径是立足社会实践；基本途径是继承传统推陈出新、面向世界博采众长。</data>
+      <data key="keywords">文化创新,根本途径,基本途径,社会实践</data>
+      <data key="exam_type">材料分析题、论述题</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">必修4 第十五课</data>
+    </node>
+    <node id="P_K4_5_6">
+      <data key="name">坚定文化自信建设文化强国</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">政治</data>
+      <data key="module">哲学与文化</data>
+      <data key="chapter">文化传承与文化创新</data>
+      <data key="difficulty">3</data>
+      <data key="description">文化自信是对自身文化生命力的坚定信念；坚持马克思主义指导，走中国特色社会主义文化发展道路。</data>
+      <data key="keywords">文化自信,文化强国,文化发展道路</data>
+      <data key="exam_type">选择题、材料分析题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">必修4 第十五课</data>
+    </node>
+    <node id="P_K5_1_1">
+      <data key="name">世界多极化趋势</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">政治</data>
+      <data key="module">当代国际政治与经济</data>
+      <data key="chapter">世界多极化</data>
+      <data key="difficulty">3</data>
+      <data key="description">世界多极化深入发展是当今国际形势的突出特点，多极化有利于世界和平与发展。</data>
+      <data key="keywords">世界多极化,国际形势,和平发展</data>
+      <data key="exam_type">选择题、材料分析题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">选必1 第一单元</data>
+    </node>
+    <node id="P_K5_1_2">
+      <data key="name">当代国际竞争的实质</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">政治</data>
+      <data key="module">当代国际政治与经济</data>
+      <data key="chapter">世界多极化</data>
+      <data key="difficulty">3</data>
+      <data key="description">实质是以经济和科技实力为基础的综合国力的较量。</data>
+      <data key="keywords">国际竞争,综合国力,经济科技</data>
+      <data key="exam_type">选择题、简答题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">选必1 第一单元</data>
+    </node>
+    <node id="P_K5_1_3">
+      <data key="name">我国的外交政策</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">政治</data>
+      <data key="module">当代国际政治与经济</data>
+      <data key="chapter">世界多极化</data>
+      <data key="difficulty">3</data>
+      <data key="description">独立自主的和平外交政策，宗旨是维护世界和平促进共同发展，基本立场独立自主，基本准则和平共处五项原则。</data>
+      <data key="keywords">独立自主,和平外交,和平共处五项原则,宗旨</data>
+      <data key="exam_type">选择题、材料分析题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">选必1 第一单元</data>
+    </node>
+    <node id="P_K5_2_1">
+      <data key="name">经济全球化的表现与动因</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">政治</data>
+      <data key="module">当代国际政治与经济</data>
+      <data key="chapter">经济全球化</data>
+      <data key="difficulty">3</data>
+      <data key="description">表现为生产、贸易、资本全球化；跨国公司是其主要载体，生产力发展和科技进步是根本动力。</data>
+      <data key="keywords">经济全球化,生产贸易资本全球化,跨国公司</data>
+      <data key="exam_type">选择题、简答题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">选必1 第二单元</data>
+    </node>
+    <node id="P_K5_2_2">
+      <data key="name">经济全球化的影响</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">政治</data>
+      <data key="module">当代国际政治与经济</data>
+      <data key="chapter">经济全球化</data>
+      <data key="difficulty">4</data>
+      <data key="description">经济全球化是把双刃剑，既是机遇也带来风险，使世界经济波动性、不平衡、不确定性加剧。</data>
+      <data key="keywords">双刃剑,机遇与挑战,经济风险</data>
+      <data key="exam_type">材料分析题、论述题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">选必1 第二单元</data>
+    </node>
+    <node id="P_K5_2_3">
+      <data key="name">发展更高层次开放型经济</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">政治</data>
+      <data key="module">当代国际政治与经济</data>
+      <data key="chapter">经济全球化</data>
+      <data key="difficulty">3</data>
+      <data key="description">我国以一带一路建设为重点，坚持引进来和走出去并重，推动形成全面开放新格局。</data>
+      <data key="keywords">开放型经济,一带一路,引进来走出去</data>
+      <data key="exam_type">材料分析题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">选必1 第二单元</data>
+    </node>
+    <node id="P_K5_3_1">
+      <data key="name">联合国的宗旨与原则</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">政治</data>
+      <data key="module">当代国际政治与经济</data>
+      <data key="chapter">国际组织</data>
+      <data key="difficulty">3</data>
+      <data key="description">维护国际和平安全、发展国际友好关系；原则包括主权平等、和平解决争端等。</data>
+      <data key="keywords">联合国,宗旨,原则,主权平等</data>
+      <data key="exam_type">选择题、简答题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">选必1 第三单元</data>
+    </node>
+    <node id="P_K5_3_2">
+      <data key="name">世界贸易组织的基本原则</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">政治</data>
+      <data key="module">当代国际政治与经济</data>
+      <data key="chapter">国际组织</data>
+      <data key="difficulty">3</data>
+      <data key="description">非歧视（最惠国待遇、国民待遇）、透明度、自由贸易、公平竞争等原则。</data>
+      <data key="keywords">WTO,非歧视,最惠国待遇,国民待遇</data>
+      <data key="exam_type">选择题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">选必1 第三单元</data>
+    </node>
+    <node id="P_K5_3_3">
+      <data key="name">主要区域国际组织</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">政治</data>
+      <data key="module">当代国际政治与经济</data>
+      <data key="chapter">国际组织</data>
+      <data key="difficulty">3</data>
+      <data key="description">欧盟、东盟、亚太经合组织、非盟等区域组织的性质与作用。</data>
+      <data key="keywords">欧盟,东盟,亚太经合组织,区域组织</data>
+      <data key="exam_type">选择题</data>
+      <data key="importance">3</data>
+      <data key="textbook_source">选必1 第三单元</data>
+    </node>
+    <node id="P_K5_3_4">
+      <data key="name">中国与国际组织</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">政治</data>
+      <data key="module">当代国际政治与经济</data>
+      <data key="chapter">国际组织</data>
+      <data key="difficulty">2</data>
+      <data key="description">中国是联合国安理会常任理事国，积极推动一带一路、金砖、上合等多边合作。</data>
+      <data key="keywords">中国,联合国常任理事国,一带一路,金砖,上合</data>
+      <data key="exam_type">选择题、简答题</data>
+      <data key="importance">3</data>
+      <data key="textbook_source">选必1 第三单元</data>
+    </node>
+    <node id="P_K6_1_1">
+      <data key="name">民事权利能力与行为能力</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">政治</data>
+      <data key="module">法律生活与逻辑思维</data>
+      <data key="chapter">民事权利与义务</data>
+      <data key="difficulty">3</data>
+      <data key="description">民事权利能力是享有民事权利承担民事义务的资格；行为能力按年龄智力分为完全、限制、无行为能力人。</data>
+      <data key="keywords">民事权利能力,民事行为能力,完全限制无</data>
+      <data key="exam_type">选择题、材料分析题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">选必2 第一单元</data>
+    </node>
+    <node id="P_K6_1_2">
+      <data key="name">人身权</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">政治</data>
+      <data key="module">法律生活与逻辑思维</data>
+      <data key="chapter">民事权利与义务</data>
+      <data key="difficulty">3</data>
+      <data key="description">包括生命权、身体权、健康权、姓名权、肖像权、名誉权、荣誉权、隐私权等。</data>
+      <data key="keywords">人身权,生命健康权,姓名肖像名誉隐私权</data>
+      <data key="exam_type">选择题、案例分析题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">选必2 第一单元</data>
+    </node>
+    <node id="P_K6_1_3">
+      <data key="name">物权</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">政治</data>
+      <data key="module">法律生活与逻辑思维</data>
+      <data key="chapter">民事权利与义务</data>
+      <data key="difficulty">4</data>
+      <data key="description">物权是权利人依法对特定物直接支配和排他的权利，包括所有权、用益物权、担保物权。</data>
+      <data key="keywords">物权,所有权,用益物权,担保物权</data>
+      <data key="exam_type">选择题、案例分析题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">选必2 第一单元</data>
+    </node>
+    <node id="P_K6_1_4">
+      <data key="name">合同</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">政治</data>
+      <data key="module">法律生活与逻辑思维</data>
+      <data key="chapter">民事权利与义务</data>
+      <data key="difficulty">4</data>
+      <data key="description">合同是民事主体之间设立变更终止民事法律关系的协议，包括订立、履行、违约责任。</data>
+      <data key="keywords">合同,订立履行,违约责任,要约承诺</data>
+      <data key="exam_type">案例分析题、选择题</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">选必2 第一单元</data>
+    </node>
+    <node id="P_K6_1_5">
+      <data key="name">侵权责任</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">政治</data>
+      <data key="module">法律生活与逻辑思维</data>
+      <data key="chapter">民事权利与义务</data>
+      <data key="difficulty">3</data>
+      <data key="description">承担侵权责任的方式有停止侵害、排除妨碍、赔偿损失等；归责原则包括过错责任和无过错责任。</data>
+      <data key="keywords">侵权责任,归责原则,过错责任,赔偿损失</data>
+      <data key="exam_type">案例分析题、选择题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">选必2 第一单元</data>
+    </node>
+    <node id="P_K6_2_1">
+      <data key="name">婚姻法基本原则与结婚条件</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">政治</data>
+      <data key="module">法律生活与逻辑思维</data>
+      <data key="chapter">家庭婚姻就业与争议解决</data>
+      <data key="difficulty">3</data>
+      <data key="description">婚姻自由、一夫一妻、男女平等；法定婚龄男22女20，禁止一定范围内的近亲属结婚。</data>
+      <data key="keywords">婚姻自由,一夫一妻,法定婚龄,结婚条件</data>
+      <data key="exam_type">选择题、案例分析题</data>
+      <data key="importance">3</data>
+      <data key="textbook_source">选必2 第二单元</data>
+    </node>
+    <node id="P_K6_2_2">
+      <data key="name">家庭关系</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">政治</data>
+      <data key="module">法律生活与逻辑思维</data>
+      <data key="chapter">家庭婚姻就业与争议解决</data>
+      <data key="difficulty">3</data>
+      <data key="description">夫妻财产制（共同财产与个人财产）、父母子女间的权利义务关系。</data>
+      <data key="keywords">夫妻财产制,共同财产,父母子女关系,抚养赡养</data>
+      <data key="exam_type">选择题、案例分析题</data>
+      <data key="importance">3</data>
+      <data key="textbook_source">选必2 第二单元</data>
+    </node>
+    <node id="P_K6_2_3">
+      <data key="name">劳动合同与劳动者权利</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">政治</data>
+      <data key="module">法律生活与逻辑思维</data>
+      <data key="chapter">家庭婚姻就业与争议解决</data>
+      <data key="difficulty">4</data>
+      <data key="description">劳动合同的订立、变更、解除；劳动者享有平等就业、取得报酬、休息休假、社会保险等权利。</data>
+      <data key="keywords">劳动合同,订立解除,劳动者权利,劳动报酬</data>
+      <data key="exam_type">案例分析题、选择题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">选必2 第三单元</data>
+    </node>
+    <node id="P_K6_2_4">
+      <data key="name">争议解决方式</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">政治</data>
+      <data key="module">法律生活与逻辑思维</data>
+      <data key="chapter">家庭婚姻就业与争议解决</data>
+      <data key="difficulty">3</data>
+      <data key="description">协商、调解、仲裁、诉讼；区分民事仲裁（或裁或审）与劳动仲裁（仲裁前置）。</data>
+      <data key="keywords">争议解决,协商调解仲裁诉讼,劳动仲裁前置</data>
+      <data key="exam_type">选择题、案例分析题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">选必2 第四单元</data>
+    </node>
+    <node id="P_K6_3_1">
+      <data key="name">科学思维的特征与意义</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">政治</data>
+      <data key="module">法律生活与逻辑思维</data>
+      <data key="chapter">科学思维与形式逻辑</data>
+      <data key="difficulty">2</data>
+      <data key="description">科学思维具有客观性、预见性、可检验性；有助于把握事物本质、推动认识和实践创新。</data>
+      <data key="keywords">科学思维,客观性,预见性,可检验性</data>
+      <data key="exam_type">选择题</data>
+      <data key="importance">3</data>
+      <data key="textbook_source">选必3 第一单元</data>
+    </node>
+    <node id="P_K6_3_2">
+      <data key="name">概念的内涵与外延</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">政治</data>
+      <data key="module">法律生活与逻辑思维</data>
+      <data key="chapter">科学思维与形式逻辑</data>
+      <data key="difficulty">3</data>
+      <data key="description">概念的内涵是事物的特有属性，外延是概念所指对象范围；概念间有全同、属种、交叉、矛盾、反对等关系。</data>
+      <data key="keywords">概念,内涵,外延,概念间关系</data>
+      <data key="exam_type">选择题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">选必3 第二单元</data>
+    </node>
+    <node id="P_K6_3_3">
+      <data key="name">简单判断</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">政治</data>
+      <data key="module">法律生活与逻辑思维</data>
+      <data key="chapter">科学思维与形式逻辑</data>
+      <data key="difficulty">3</data>
+      <data key="description">包括性质判断（单称、特称、全称；肯定否定）和关系判断。</data>
+      <data key="keywords">性质判断,关系判断,单称特称全称</data>
+      <data key="exam_type">选择题</data>
+      <data key="importance">3</data>
+      <data key="textbook_source">选必3 第二单元</data>
+    </node>
+    <node id="P_K6_3_4">
+      <data key="name">复合判断</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">政治</data>
+      <data key="module">法律生活与逻辑思维</data>
+      <data key="chapter">科学思维与形式逻辑</data>
+      <data key="difficulty">3</data>
+      <data key="description">联言判断、选言判断（相容不相容）、假言判断（充分必要条件）。</data>
+      <data key="keywords">联言判断,选言判断,假言判断,充分必要条件</data>
+      <data key="exam_type">选择题、案例分析题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">选必3 第二单元</data>
+    </node>
+    <node id="P_K6_3_5">
+      <data key="name">形式逻辑的基本规律</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">政治</data>
+      <data key="module">法律生活与逻辑思维</data>
+      <data key="chapter">科学思维与形式逻辑</data>
+      <data key="difficulty">4</data>
+      <data key="description">同一律（思想确定性）、矛盾律（不可同真）、排中律（不可同假），是正确思维的必要条件。</data>
+      <data key="keywords">同一律,矛盾律,排中律,思维规律</data>
+      <data key="exam_type">选择题、辨析题</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">选必3 第二单元</data>
+    </node>
+    <node id="P_K6_3_6">
+      <data key="name">演绎推理与归纳推理</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">政治</data>
+      <data key="module">法律生活与逻辑思维</data>
+      <data key="chapter">科学思维与形式逻辑</data>
+      <data key="difficulty">4</data>
+      <data key="description">演绎推理从一般到个别（如三段论），归纳推理从个别到一般（完全归纳与不完全归纳）。</data>
+      <data key="keywords">演绎推理,三段论,归纳推理,完全不完全归纳</data>
+      <data key="exam_type">选择题、案例分析题</data>
+      <data key="importance">5</data>
+      <data key="textbook_source">选必3 第二单元</data>
+    </node>
+    <node id="P_K6_4_1">
+      <data key="name">辩证思维的整体性与动态性</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">政治</data>
+      <data key="module">法律生活与逻辑思维</data>
+      <data key="chapter">辩证思维与创新思维</data>
+      <data key="difficulty">3</data>
+      <data key="description">辩证思维用联系发展全面的观点看问题，坚持整体性与动态性相统一。</data>
+      <data key="keywords">辩证思维,整体性,动态性,联系发展</data>
+      <data key="exam_type">选择题、简答题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">选必3 第三单元</data>
+    </node>
+    <node id="P_K6_4_2">
+      <data key="name">分析与综合的辩证统一</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">政治</data>
+      <data key="module">法律生活与逻辑思维</data>
+      <data key="chapter">辩证思维与创新思维</data>
+      <data key="difficulty">3</data>
+      <data key="description">分析是把整体分解为部分，综合是把部分联结为整体；二者是方向相反又相互依存的思维方法。</data>
+      <data key="keywords">分析,综合,辩证统一,思维方法</data>
+      <data key="exam_type">选择题、论述题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">选必3 第三单元</data>
+    </node>
+    <node id="P_K6_4_3">
+      <data key="name">创新思维的思维方式</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">政治</data>
+      <data key="module">法律生活与逻辑思维</data>
+      <data key="chapter">辩证思维与创新思维</data>
+      <data key="difficulty">3</data>
+      <data key="description">包括逆向思维、发散思维、聚合思维、联想思维等，是多向性、跨越性的思维。</data>
+      <data key="keywords">创新思维,逆向思维,发散思维,聚合思维</data>
+      <data key="exam_type">选择题、案例分析题</data>
+      <data key="importance">4</data>
+      <data key="textbook_source">选必3 第四单元</data>
+    </node>
+    <node id="P_K6_4_4">
+      <data key="name">超前思维</data>
+      <data key="type">KnowledgePoint</data>
+      <data key="subject">政治</data>
+      <data key="module">法律生活与逻辑思维</data>
+      <data key="chapter">辩证思维与创新思维</data>
+      <data key="difficulty">2</data>
+      <data key="description">超前思维是具有预见性的思维方式，有助于把握趋势、科学决策。</data>
+      <data key="keywords">超前思维,预见性,科学决策</data>
+      <data key="exam_type">选择题</data>
+      <data key="importance">2</data>
+      <data key="textbook_source">选必3 第四单元</data>
+    </node>
+    <edge source="P_M1" target="P_C1_1">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">模块【中国特色社会主义】包含章节【社会主义从空想到科学到现实】</data>
+    </edge>
+    <edge source="P_M1" target="P_C1_2">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">模块【中国特色社会主义】包含章节【中国特色社会主义的开创与发展】</data>
+    </edge>
+    <edge source="P_M1" target="P_C1_3">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">模块【中国特色社会主义】包含章节【新时代中国特色社会主义与中国梦】</data>
+    </edge>
+    <edge source="P_M2" target="P_C2_1">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">模块【经济与社会】包含章节【我国的基本经济制度】</data>
+    </edge>
+    <edge source="P_M2" target="P_C2_2">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">模块【经济与社会】包含章节【经济发展与社会进步】</data>
+    </edge>
+    <edge source="P_M3" target="P_C3_1">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">模块【政治与法治】包含章节【中国共产党的领导】</data>
+    </edge>
+    <edge source="P_M3" target="P_C3_2">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">模块【政治与法治】包含章节【人民当家作主】</data>
+    </edge>
+    <edge source="P_M3" target="P_C3_3">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">模块【政治与法治】包含章节【全面依法治国】</data>
+    </edge>
+    <edge source="P_M4" target="P_C4_1">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">模块【哲学与文化】包含章节【时代精神的精华】</data>
+    </edge>
+    <edge source="P_M4" target="P_C4_2">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">模块【哲学与文化】包含章节【探索世界与追求真理】</data>
+    </edge>
+    <edge source="P_M4" target="P_C4_3">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">模块【哲学与文化】包含章节【联系发展矛盾（唯物辩证法）】</data>
+    </edge>
+    <edge source="P_M4" target="P_C4_4">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">模块【哲学与文化】包含章节【社会历史与人生价值】</data>
+    </edge>
+    <edge source="P_M4" target="P_C4_5">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">模块【哲学与文化】包含章节【文化传承与文化创新】</data>
+    </edge>
+    <edge source="P_M5" target="P_C5_1">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">模块【当代国际政治与经济】包含章节【世界多极化】</data>
+    </edge>
+    <edge source="P_M5" target="P_C5_2">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">模块【当代国际政治与经济】包含章节【经济全球化】</data>
+    </edge>
+    <edge source="P_M5" target="P_C5_3">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">模块【当代国际政治与经济】包含章节【国际组织】</data>
+    </edge>
+    <edge source="P_M6" target="P_C6_1">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">模块【法律生活与逻辑思维】包含章节【民事权利与义务】</data>
+    </edge>
+    <edge source="P_M6" target="P_C6_2">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">模块【法律生活与逻辑思维】包含章节【家庭婚姻就业与争议解决】</data>
+    </edge>
+    <edge source="P_M6" target="P_C6_3">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">模块【法律生活与逻辑思维】包含章节【科学思维与形式逻辑】</data>
+    </edge>
+    <edge source="P_M6" target="P_C6_4">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">模块【法律生活与逻辑思维】包含章节【辩证思维与创新思维】</data>
+    </edge>
+    <edge source="P_C1_1" target="P_K1_1_1">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【社会主义从空想到科学到现实】包含知识点【空想社会主义的代表与局限】</data>
+    </edge>
+    <edge source="P_C1_1" target="P_K1_1_2">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【社会主义从空想到科学到现实】包含知识点【科学社会主义的诞生】</data>
+    </edge>
+    <edge source="P_C1_1" target="P_K1_1_3">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【社会主义从空想到科学到现实】包含知识点【科学社会主义从理论到现实】</data>
+    </edge>
+    <edge source="P_C1_1" target="P_K1_1_4">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【社会主义从空想到科学到现实】包含知识点【社会主义从一国到多国】</data>
+    </edge>
+    <edge source="P_C1_2" target="P_K1_2_1">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【中国特色社会主义的开创与发展】包含知识点【新民主主义革命向社会主义过渡】</data>
+    </edge>
+    <edge source="P_C1_2" target="P_K1_2_2">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【中国特色社会主义的开创与发展】包含知识点【改革开放的伟大决策】</data>
+    </edge>
+    <edge source="P_C1_2" target="P_K1_2_3">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【中国特色社会主义的开创与发展】包含知识点【中国特色社会主义道路的开辟】</data>
+    </edge>
+    <edge source="P_C1_2" target="P_K1_2_4">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【中国特色社会主义的开创与发展】包含知识点【中国特色社会主义理论体系】</data>
+    </edge>
+    <edge source="P_C1_3" target="P_K1_3_1">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【新时代中国特色社会主义与中国梦】包含知识点【新时代我国社会主要矛盾】</data>
+    </edge>
+    <edge source="P_C1_3" target="P_K1_3_2">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【新时代中国特色社会主义与中国梦】包含知识点【习近平新时代中国特色社会主义思想】</data>
+    </edge>
+    <edge source="P_C1_3" target="P_K1_3_3">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【新时代中国特色社会主义与中国梦】包含知识点【新征程两步走战略安排】</data>
+    </edge>
+    <edge source="P_C1_3" target="P_K1_3_4">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【新时代中国特色社会主义与中国梦】包含知识点【中国梦的本质】</data>
+    </edge>
+    <edge source="P_C2_1" target="P_K2_1_1">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【我国的基本经济制度】包含知识点【公有制为主体多种所有制经济共同发展】</data>
+    </edge>
+    <edge source="P_C2_1" target="P_K2_1_2">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【我国的基本经济制度】包含知识点【公有制经济的实现形式】</data>
+    </edge>
+    <edge source="P_C2_1" target="P_K2_1_3">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【我国的基本经济制度】包含知识点【两个毫不动摇】</data>
+    </edge>
+    <edge source="P_C2_1" target="P_K2_1_4">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【我国的基本经济制度】包含知识点【社会主义市场经济体制】</data>
+    </edge>
+    <edge source="P_C2_1" target="P_K2_1_5">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【我国的基本经济制度】包含知识点【宏观调控的目标与手段】</data>
+    </edge>
+    <edge source="P_C2_2" target="P_K2_2_1">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【经济发展与社会进步】包含知识点【新发展理念】</data>
+    </edge>
+    <edge source="P_C2_2" target="P_K2_2_2">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【经济发展与社会进步】包含知识点【建设现代化经济体系】</data>
+    </edge>
+    <edge source="P_C2_2" target="P_K2_2_3">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【经济发展与社会进步】包含知识点【供给侧结构性改革】</data>
+    </edge>
+    <edge source="P_C2_2" target="P_K2_2_4">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【经济发展与社会进步】包含知识点【我国的分配制度】</data>
+    </edge>
+    <edge source="P_C2_2" target="P_K2_2_5">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【经济发展与社会进步】包含知识点【社会保障制度】</data>
+    </edge>
+    <edge source="P_C3_1" target="P_K3_1_1">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【中国共产党的领导】包含知识点【中国共产党的性质与宗旨】</data>
+    </edge>
+    <edge source="P_C3_1" target="P_K3_1_2">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【中国共产党的领导】包含知识点【党的领导方式与执政方式】</data>
+    </edge>
+    <edge source="P_C3_1" target="P_K3_1_3">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【中国共产党的领导】包含知识点【党的领导是社会主义最本质特征】</data>
+    </edge>
+    <edge source="P_C3_1" target="P_K3_1_4">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【中国共产党的领导】包含知识点【全面从严治党】</data>
+    </edge>
+    <edge source="P_C3_2" target="P_K3_2_1">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【人民当家作主】包含知识点【人民代表大会制度】</data>
+    </edge>
+    <edge source="P_C3_2" target="P_K3_2_2">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【人民当家作主】包含知识点【人大代表的权利与义务】</data>
+    </edge>
+    <edge source="P_C3_2" target="P_K3_2_3">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【人民当家作主】包含知识点【政党制度】</data>
+    </edge>
+    <edge source="P_C3_2" target="P_K3_2_4">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【人民当家作主】包含知识点【民族区域自治制度】</data>
+    </edge>
+    <edge source="P_C3_2" target="P_K3_2_5">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【人民当家作主】包含知识点【基层群众自治制度】</data>
+    </edge>
+    <edge source="P_C3_2" target="P_K3_2_6">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【人民当家作主】包含知识点【国家机构及其关系】</data>
+    </edge>
+    <edge source="P_C3_3" target="P_K3_3_1">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【全面依法治国】包含知识点【全面依法治国总目标】</data>
+    </edge>
+    <edge source="P_C3_3" target="P_K3_3_2">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【全面依法治国】包含知识点【法治国家法治政府法治社会一体建设】</data>
+    </edge>
+    <edge source="P_C3_3" target="P_K3_3_3">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【全面依法治国】包含知识点【新十六字方针】</data>
+    </edge>
+    <edge source="P_C3_3" target="P_K3_3_4">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【全面依法治国】包含知识点【宪法是国家的根本法】</data>
+    </edge>
+    <edge source="P_C4_1" target="P_K4_1_1">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【时代精神的精华】包含知识点【哲学是世界观与方法论的统一】</data>
+    </edge>
+    <edge source="P_C4_1" target="P_K4_1_2">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【时代精神的精华】包含知识点【哲学的基本问题】</data>
+    </edge>
+    <edge source="P_C4_1" target="P_K4_1_3">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【时代精神的精华】包含知识点【唯物主义与唯心主义的分歧】</data>
+    </edge>
+    <edge source="P_C4_1" target="P_K4_1_4">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【时代精神的精华】包含知识点【马克思主义哲学的产生与特征】</data>
+    </edge>
+    <edge source="P_C4_2" target="P_K4_2_1">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【探索世界与追求真理】包含知识点【世界的物质性】</data>
+    </edge>
+    <edge source="P_C4_2" target="P_K4_2_2">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【探索世界与追求真理】包含知识点【意识的本质与作用】</data>
+    </edge>
+    <edge source="P_C4_2" target="P_K4_2_3">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【探索世界与追求真理】包含知识点【一切从实际出发实事求是】</data>
+    </edge>
+    <edge source="P_C4_2" target="P_K4_2_4">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【探索世界与追求真理】包含知识点【实践的含义与特点】</data>
+    </edge>
+    <edge source="P_C4_2" target="P_K4_2_5">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【探索世界与追求真理】包含知识点【实践是认识的基础】</data>
+    </edge>
+    <edge source="P_C4_2" target="P_K4_2_6">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【探索世界与追求真理】包含知识点【真理的客观性具体性条件性】</data>
+    </edge>
+    <edge source="P_C4_2" target="P_K4_2_7">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【探索世界与追求真理】包含知识点【认识的反复性与无限性】</data>
+    </edge>
+    <edge source="P_C4_3" target="P_K4_3_1">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【联系发展矛盾（唯物辩证法）】包含知识点【联系的普遍性客观性多样性】</data>
+    </edge>
+    <edge source="P_C4_3" target="P_K4_3_2">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【联系发展矛盾（唯物辩证法）】包含知识点【整体与部分的辩证关系】</data>
+    </edge>
+    <edge source="P_C4_3" target="P_K4_3_3">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【联系发展矛盾（唯物辩证法）】包含知识点【发展的实质与量变质变】</data>
+    </edge>
+    <edge source="P_C4_3" target="P_K4_3_4">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【联系发展矛盾（唯物辩证法）】包含知识点【前进性与曲折性的统一】</data>
+    </edge>
+    <edge source="P_C4_3" target="P_K4_3_5">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【联系发展矛盾（唯物辩证法）】包含知识点【矛盾的普遍性与特殊性】</data>
+    </edge>
+    <edge source="P_C4_3" target="P_K4_3_6">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【联系发展矛盾（唯物辩证法）】包含知识点【主次矛盾与矛盾的主次方面】</data>
+    </edge>
+    <edge source="P_C4_3" target="P_K4_3_7">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【联系发展矛盾（唯物辩证法）】包含知识点【矛盾的同一性与斗争性】</data>
+    </edge>
+    <edge source="P_C4_3" target="P_K4_3_8">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【联系发展矛盾（唯物辩证法）】包含知识点【辩证的否定与创新】</data>
+    </edge>
+    <edge source="P_C4_4" target="P_K4_4_1">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【社会历史与人生价值】包含知识点【社会存在与社会意识】</data>
+    </edge>
+    <edge source="P_C4_4" target="P_K4_4_2">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【社会历史与人生价值】包含知识点【社会基本矛盾】</data>
+    </edge>
+    <edge source="P_C4_4" target="P_K4_4_3">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【社会历史与人生价值】包含知识点【人民群众是历史的创造者】</data>
+    </edge>
+    <edge source="P_C4_4" target="P_K4_4_4">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【社会历史与人生价值】包含知识点【价值观的导向作用】</data>
+    </edge>
+    <edge source="P_C4_4" target="P_K4_4_5">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【社会历史与人生价值】包含知识点【价值判断与价值选择】</data>
+    </edge>
+    <edge source="P_C4_4" target="P_K4_4_6">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【社会历史与人生价值】包含知识点【人生的真正价值在于贡献】</data>
+    </edge>
+    <edge source="P_C4_5" target="P_K4_5_1">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【文化传承与文化创新】包含知识点【文化的内涵与功能】</data>
+    </edge>
+    <edge source="P_C4_5" target="P_K4_5_2">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【文化传承与文化创新】包含知识点【文化与经济政治的关系】</data>
+    </edge>
+    <edge source="P_C4_5" target="P_K4_5_3">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【文化传承与文化创新】包含知识点【传统文化的继承与发展】</data>
+    </edge>
+    <edge source="P_C4_5" target="P_K4_5_4">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【文化传承与文化创新】包含知识点【中华文化的特征】</data>
+    </edge>
+    <edge source="P_C4_5" target="P_K4_5_5">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【文化传承与文化创新】包含知识点【文化创新的途径】</data>
+    </edge>
+    <edge source="P_C4_5" target="P_K4_5_6">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【文化传承与文化创新】包含知识点【坚定文化自信建设文化强国】</data>
+    </edge>
+    <edge source="P_C5_1" target="P_K5_1_1">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【世界多极化】包含知识点【世界多极化趋势】</data>
+    </edge>
+    <edge source="P_C5_1" target="P_K5_1_2">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【世界多极化】包含知识点【当代国际竞争的实质】</data>
+    </edge>
+    <edge source="P_C5_1" target="P_K5_1_3">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【世界多极化】包含知识点【我国的外交政策】</data>
+    </edge>
+    <edge source="P_C5_2" target="P_K5_2_1">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【经济全球化】包含知识点【经济全球化的表现与动因】</data>
+    </edge>
+    <edge source="P_C5_2" target="P_K5_2_2">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【经济全球化】包含知识点【经济全球化的影响】</data>
+    </edge>
+    <edge source="P_C5_2" target="P_K5_2_3">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【经济全球化】包含知识点【发展更高层次开放型经济】</data>
+    </edge>
+    <edge source="P_C5_3" target="P_K5_3_1">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【国际组织】包含知识点【联合国的宗旨与原则】</data>
+    </edge>
+    <edge source="P_C5_3" target="P_K5_3_2">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【国际组织】包含知识点【世界贸易组织的基本原则】</data>
+    </edge>
+    <edge source="P_C5_3" target="P_K5_3_3">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【国际组织】包含知识点【主要区域国际组织】</data>
+    </edge>
+    <edge source="P_C5_3" target="P_K5_3_4">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【国际组织】包含知识点【中国与国际组织】</data>
+    </edge>
+    <edge source="P_C6_1" target="P_K6_1_1">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【民事权利与义务】包含知识点【民事权利能力与行为能力】</data>
+    </edge>
+    <edge source="P_C6_1" target="P_K6_1_2">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【民事权利与义务】包含知识点【人身权】</data>
+    </edge>
+    <edge source="P_C6_1" target="P_K6_1_3">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【民事权利与义务】包含知识点【物权】</data>
+    </edge>
+    <edge source="P_C6_1" target="P_K6_1_4">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【民事权利与义务】包含知识点【合同】</data>
+    </edge>
+    <edge source="P_C6_1" target="P_K6_1_5">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【民事权利与义务】包含知识点【侵权责任】</data>
+    </edge>
+    <edge source="P_C6_2" target="P_K6_2_1">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【家庭婚姻就业与争议解决】包含知识点【婚姻法基本原则与结婚条件】</data>
+    </edge>
+    <edge source="P_C6_2" target="P_K6_2_2">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【家庭婚姻就业与争议解决】包含知识点【家庭关系】</data>
+    </edge>
+    <edge source="P_C6_2" target="P_K6_2_3">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【家庭婚姻就业与争议解决】包含知识点【劳动合同与劳动者权利】</data>
+    </edge>
+    <edge source="P_C6_2" target="P_K6_2_4">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【家庭婚姻就业与争议解决】包含知识点【争议解决方式】</data>
+    </edge>
+    <edge source="P_C6_3" target="P_K6_3_1">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【科学思维与形式逻辑】包含知识点【科学思维的特征与意义】</data>
+    </edge>
+    <edge source="P_C6_3" target="P_K6_3_2">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【科学思维与形式逻辑】包含知识点【概念的内涵与外延】</data>
+    </edge>
+    <edge source="P_C6_3" target="P_K6_3_3">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【科学思维与形式逻辑】包含知识点【简单判断】</data>
+    </edge>
+    <edge source="P_C6_3" target="P_K6_3_4">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【科学思维与形式逻辑】包含知识点【复合判断】</data>
+    </edge>
+    <edge source="P_C6_3" target="P_K6_3_5">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【科学思维与形式逻辑】包含知识点【形式逻辑的基本规律】</data>
+    </edge>
+    <edge source="P_C6_3" target="P_K6_3_6">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【科学思维与形式逻辑】包含知识点【演绎推理与归纳推理】</data>
+    </edge>
+    <edge source="P_C6_4" target="P_K6_4_1">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【辩证思维与创新思维】包含知识点【辩证思维的整体性与动态性】</data>
+    </edge>
+    <edge source="P_C6_4" target="P_K6_4_2">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【辩证思维与创新思维】包含知识点【分析与综合的辩证统一】</data>
+    </edge>
+    <edge source="P_C6_4" target="P_K6_4_3">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【辩证思维与创新思维】包含知识点【创新思维的思维方式】</data>
+    </edge>
+    <edge source="P_C6_4" target="P_K6_4_4">
+      <data key="relation">CONTAINS</data>
+      <data key="weight">1.0</data>
+      <data key="description">章节【辩证思维与创新思维】包含知识点【超前思维】</data>
+    </edge>
+    <edge source="P_K1_1_2" target="P_K1_1_1">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.8</data>
+      <data key="description">科学社会主义的诞生建立在对空想社会主义批判继承之上</data>
+    </edge>
+    <edge source="P_K1_1_3" target="P_K1_1_2">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.8</data>
+      <data key="description">理解科学社会主义从理论到现实需先掌握其诞生</data>
+    </edge>
+    <edge source="P_K1_1_4" target="P_K1_1_3">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.7</data>
+      <data key="description">从一国到多国是在十月革命现实基础上的扩展</data>
+    </edge>
+    <edge source="P_K1_2_1" target="P_K1_1_3">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.7</data>
+      <data key="description">我国社会主义制度确立以科学社会主义现实发展为前提</data>
+    </edge>
+    <edge source="P_K1_2_3" target="P_K1_2_2">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.8</data>
+      <data key="description">中国特色社会主义道路开辟以改革开放决策为前提</data>
+    </edge>
+    <edge source="P_K1_2_4" target="P_K1_2_3">
+      <data key="relation">DERIVED_FROM</data>
+      <data key="weight">0.7</data>
+      <data key="description">理论体系在道路开辟实践中提炼形成</data>
+    </edge>
+    <edge source="P_K1_3_2" target="P_K1_3_1">
+      <data key="relation">DERIVED_FROM</data>
+      <data key="weight">0.8</data>
+      <data key="description">习近平新时代中国特色社会主义思想立足于新时代主要矛盾判断</data>
+    </edge>
+    <edge source="P_K2_2_1" target="P_K1_3_1">
+      <data key="relation">APPLIED_IN</data>
+      <data key="weight">0.7</data>
+      <data key="description">新发展理念是解决新时代社会主要矛盾的实践要求</data>
+    </edge>
+    <edge source="P_K2_2_3" target="P_K2_1_4">
+      <data key="relation">APPLIED_IN</data>
+      <data key="weight">0.8</data>
+      <data key="description">供给侧结构性改革是完善社会主义市场经济体制的实践</data>
+    </edge>
+    <edge source="P_K2_2_3" target="P_K2_2_1">
+      <data key="relation">DERIVED_FROM</data>
+      <data key="weight">0.7</data>
+      <data key="description">供给侧结构性改革贯彻新发展理念</data>
+    </edge>
+    <edge source="P_K2_2_2" target="P_K2_2_1">
+      <data key="relation">DERIVED_FROM</data>
+      <data key="weight">0.7</data>
+      <data key="description">现代化经济体系建设以新发展理念为指导</data>
+    </edge>
+    <edge source="P_K2_1_5" target="P_K2_1_4">
+      <data key="relation">DERIVED_FROM</data>
+      <data key="weight">0.8</data>
+      <data key="description">宏观调控是社会主义市场经济体制中政府作用的体现</data>
+    </edge>
+    <edge source="P_K3_2_1" target="P_K3_1_3">
+      <data key="relation">RELATED_TO</data>
+      <data key="weight">0.7</data>
+      <data key="description">人民代表大会制度是党领导人民当家作主的制度载体</data>
+    </edge>
+    <edge source="P_K3_2_3" target="P_K3_1_1">
+      <data key="relation">RELATED_TO</data>
+      <data key="weight">0.6</data>
+      <data key="description">多党合作制度体现党的领导与统一战线</data>
+    </edge>
+    <edge source="P_K3_3_3" target="P_K3_3_1">
+      <data key="relation">DERIVED_FROM</data>
+      <data key="weight">0.8</data>
+      <data key="description">新十六字方针是依法治国总目标的工作布局</data>
+    </edge>
+    <edge source="P_K3_3_4" target="P_K3_3_1">
+      <data key="relation">RELATED_TO</data>
+      <data key="weight">0.8</data>
+      <data key="description">依宪治国是依法治国总目标的核心</data>
+    </edge>
+    <edge source="P_K3_3_2" target="P_K3_3_3">
+      <data key="relation">RELATED_TO</data>
+      <data key="weight">0.7</data>
+      <data key="description">法治国家政府社会一体建设贯穿新十六字方针</data>
+    </edge>
+    <edge source="P_K4_2_2" target="P_K4_2_1">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.8</data>
+      <data key="description">理解意识能动作用需先掌握物质决定意识</data>
+    </edge>
+    <edge source="P_K4_2_3" target="P_K4_2_1">
+      <data key="relation">DERIVED_FROM</data>
+      <data key="weight">0.7</data>
+      <data key="description">一切从实际出发由物质决定意识推导而来</data>
+    </edge>
+    <edge source="P_K4_2_5" target="P_K4_2_4">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.8</data>
+      <data key="description">把握实践是认识基础需先理解实践含义特点</data>
+    </edge>
+    <edge source="P_K4_2_6" target="P_K4_2_5">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.7</data>
+      <data key="description">真理的检验依赖实践是认识的基础</data>
+    </edge>
+    <edge source="P_K4_2_7" target="P_K4_2_6">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.6</data>
+      <data key="description">认识的反复无限性建立在真理条件性之上</data>
+    </edge>
+    <edge source="P_K4_3_2" target="P_K4_3_1">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.7</data>
+      <data key="description">整体部分关系以联系观点为基础</data>
+    </edge>
+    <edge source="P_K4_3_3" target="P_K4_3_2">
+      <data key="relation">RELATED_TO</data>
+      <data key="weight">0.6</data>
+      <data key="description">量变质变与整体部分都是辩证法范畴</data>
+    </edge>
+    <edge source="P_K4_3_5" target="P_K4_3_7">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.8</data>
+      <data key="description">矛盾普遍性特殊性以同一性斗争性为基础</data>
+    </edge>
+    <edge source="P_K4_3_6" target="P_K4_3_5">
+      <data key="relation">DERIVED_FROM</data>
+      <data key="weight">0.8</data>
+      <data key="description">主次矛盾、主次方面是矛盾普遍性特殊性的具体运用</data>
+    </edge>
+    <edge source="P_K4_3_8" target="P_K4_3_5">
+      <data key="relation">RELATED_TO</data>
+      <data key="weight">0.6</data>
+      <data key="description">辩证否定与创新是矛盾运动的体现</data>
+    </edge>
+    <edge source="P_K4_4_1" target="P_K4_4_2">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.7</data>
+      <data key="description">社会存在意识关系是基本矛盾的引论</data>
+    </edge>
+    <edge source="P_K4_4_3" target="P_K4_4_2">
+      <data key="relation">DERIVED_FROM</data>
+      <data key="weight">0.7</data>
+      <data key="description">群众史观由社会基本矛盾运动主体推导</data>
+    </edge>
+    <edge source="P_K4_4_5" target="P_K4_4_4">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.8</data>
+      <data key="description">价值判断选择以价值观导向为前提</data>
+    </edge>
+    <edge source="P_K4_4_6" target="P_K4_4_5">
+      <data key="relation">DERIVED_FROM</data>
+      <data key="weight">0.7</data>
+      <data key="description">人生价值实现建立在正确价值判断选择之上</data>
+    </edge>
+    <edge source="P_K4_5_5" target="P_K4_5_3">
+      <data key="relation">DERIVED_FROM</data>
+      <data key="weight">0.8</data>
+      <data key="description">文化创新基本途径以传统文化继承发展为基础</data>
+    </edge>
+    <edge source="P_K4_5_6" target="P_K4_5_4">
+      <data key="relation">RELATED_TO</data>
+      <data key="weight">0.7</data>
+      <data key="description">文化自信建立在中华文化源远流长博大精深基础上</data>
+    </edge>
+    <edge source="P_K6_3_6" target="P_K6_3_4">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.7</data>
+      <data key="description">演绎归纳推理以判断为基础</data>
+    </edge>
+    <edge source="P_K6_4_2" target="P_K4_3_2">
+      <data key="relation">RELATED_TO</data>
+      <data key="weight">0.7</data>
+      <data key="description">分析与综合统一呼应整体与部分辩证关系</data>
+    </edge>
+    <edge source="P_K6_4_3" target="P_K4_3_8">
+      <data key="relation">RELATED_TO</data>
+      <data key="weight">0.7</data>
+      <data key="description">创新思维与辩证否定创新观相通</data>
+    </edge>
+    <edge source="P_K6_4_1" target="P_K4_3_1">
+      <data key="relation">RELATED_TO</data>
+      <data key="weight">0.6</data>
+      <data key="description">辩证思维的整体动态性以联系发展观为基础</data>
+    </edge>
+    <edge source="P_K5_2_2" target="P_K5_2_1">
+      <data key="relation">PREREQUISITE</data>
+      <data key="weight">0.8</data>
+      <data key="description">分析全球化影响需先掌握其表现动因</data>
+    </edge>
+    <edge source="P_K5_2_3" target="P_K5_2_2">
+      <data key="relation">DERIVED_FROM</data>
+      <data key="weight">0.6</data>
+      <data key="description">发展开放型经济是应对全球化影响的对策</data>
+    </edge>
+    <edge source="P_K5_3_4" target="P_K5_3_1">
+      <data key="relation">RELATED_TO</data>
+      <data key="weight">0.6</data>
+      <data key="description">中国与国际组织关系以联合国为重要平台</data>
+    </edge>
+    <edge source="P_K6_2_4" target="P_K6_1_4">
+      <data key="relation">APPLIED_IN</data>
+      <data key="weight">0.6</data>
+      <data key="description">合同争议是争议解决方式的典型适用场景</data>
+    </edge>
+    <edge source="P_K3_3_2" target="P_K3_1_4">
+      <data key="relation">RELATED_TO</data>
+      <data key="weight">0.5</data>
+      <data key="description">法治建设与全面从严治党相互促进</data>
+    </edge>
+  </graph>
+</graphml>

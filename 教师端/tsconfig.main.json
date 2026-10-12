@@ -1,0 +1,12 @@
+{
+  "//": "Electron 主进程/预加载 严格类型检查与构建：tsc -p tsconfig.main.json（产物写回 electron/）",
+  "extends": "./tsconfig.base.json",
+  "compilerOptions": {
+    "lib": ["ES2020"],
+    "module": "commonjs",
+    "types": ["node"],
+    "rootDir": "src/main",
+    "outDir": "electron"
+  },
+  "include": ["src/main/**/*.ts", "src/types/**/*.d.ts"]
+}

@@ -1,0 +1,111 @@
+{
+  "name": "edu-agent-teacher",
+  "version": "1.2.0",
+  "description": "教育智能体·教师端桌面应用",
+  "main": "electron/main.js",
+  "author": "百舸",
+  "license": "MIT",
+  "scripts": {
+    "typecheck": "tsc -p tsconfig.json --noEmit && tsc -p tsconfig.main.json --noEmit",
+    "build:renderer": "tsc -p tsconfig.renderer-sandbox.json && tsc -p tsconfig.renderer-app.json && tsc -p tsconfig.renderer-shell.json",
+    "build:main": "tsc -p tsconfig.main.json",
+    "build:ts": "npm run build:renderer && npm run build:main",
+    "start": "npm run build:ts && electron . --dev",
+    "start:prod": "electron .",
+    "build": "npm run build:ts && electron-builder --win",
+    "build:portable": "npm run build:ts && electron-builder --win portable",
+    "build:nsis": "npm run build:ts && electron-builder --win nsis",
+    "postinstall": "electron-builder install-app-deps"
+  },
+  "devDependencies": {
+    "electron": "^31.3.0",
+    "electron-builder": "^24.13.3"
+  },
+  "build": {
+    "appId": "com.baige.edu-agent-teacher",
+    "productName": "教育智能体教师端",
+    "copyright": "Copyright © 2026 百舸",
+    "publish": null,
+    "directories": {
+      "output": "dist",
+      "buildResources": "build"
+    },
+    "files": [
+      "electron/**/*",
+      "index.html",
+      "悬浮球.js",
+      "教育大模型logo.png",
+      "!**/__pycache__/**",
+      "!**/*.log",
+      "!dist/**",
+      "!dist_backup_*/**",
+      "!备课产物/**",
+      "!输出/**",
+      "!tests/**",
+      "!data/**",
+      "!_agent_layout_test.html"
+    ],
+    "extraResources": [
+      {
+        "from": "index.html",
+        "to": "www/index.html"
+      },
+      {
+        "from": "悬浮球.js",
+        "to": "www/悬浮球.js"
+      },
+      {
+        "from": "教育大模型logo.png",
+        "to": "www/教育大模型logo.png"
+      },
+      {
+        "from": "teacher-agent-sandbox",
+        "to": "www/teacher-agent-sandbox",
+        "filter": ["**/*", "!**/__pycache__/**", "!**/*.log"]
+      },
+      {
+        "from": "backend",
+        "to": "backend",
+        "filter": ["**/*", "!**/__pycache__/**", "!**/*.log", "!data/**"]
+      },
+      {
+        "from": "workflow.py",
+        "to": "workflow.py"
+      }
+    ],
+    "win": {
+      "icon": "build/icon.ico",
+      "target": [
+        {
+          "target": "nsis",
+          "arch": ["x64"]
+        },
+        {
+          "target": "portable",
+          "arch": ["x64"]
+        }
+      ],
+      "artifactName": "教育智能体教师端-${version}-${arch}.${ext}"
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": false,
+      "allowElevation": true,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "教育智能体教师端",
+      "installerIcon": "build/icon.ico",
+      "uninstallerIcon": "build/icon.ico",
+      "installerHeaderIcon": "build/icon.ico",
+      "installerLanguages": ["zh_CN"],
+      "language": "2052"
+    },
+    "portable": {
+      "artifactName": "教育智能体教师端-${version}-portable.exe"
+    }
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

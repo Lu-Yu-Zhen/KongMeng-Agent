@@ -1,0 +1,1249 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>教案模板</title>
+    <style>
+        /* ============================================================
+           全局样式重置与基础设置
+           ============================================================ */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #2c5f8a;
+            --primary-light: #e8f0f7;
+            --accent-color: #c0392b;
+            --accent-light: #fdf2f0;
+            --text-color: #2c3e50;
+            --text-light: #5d6d7e;
+            --border-color: #d5dbdb;
+            --bg-color: #fafbfc;
+            --bg-section: #ffffff;
+            --success-color: #27ae60;
+            --warning-color: #f39c12;
+            --shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+            --radius: 8px;
+        }
+
+        body {
+            font-family: "Microsoft YaHei", "PingFang SC", "Helvetica Neue", Arial, sans-serif;
+            font-size: 14px;
+            line-height: 1.8;
+            color: var(--text-color);
+            background: var(--bg-color);
+            padding: 20px;
+        }
+
+        /* ============================================================
+           教案主容器
+           ============================================================ */
+        .lesson-plan {
+            max-width: 900px;
+            margin: 0 auto;
+            background: var(--bg-section);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            overflow: hidden;
+        }
+
+        /* ============================================================
+           教案头部
+           ============================================================ */
+        .lp-header {
+            background: linear-gradient(135deg, var(--primary-color) 0%, #1a3d5c 100%);
+            color: #fff;
+            padding: 30px 40px;
+            text-align: center;
+        }
+
+        .lp-header h1 {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+        }
+
+        .lp-header .subtitle {
+            font-size: 13px;
+            opacity: 0.85;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .lp-header .subtitle span {
+            background: rgba(255, 255, 255, 0.15);
+            padding: 3px 12px;
+            border-radius: 20px;
+        }
+
+        /* ============================================================
+           模块通用样式
+           ============================================================ */
+        .module {
+            padding: 25px 40px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .module:last-child {
+            border-bottom: none;
+        }
+
+        .module-title {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 18px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--primary-light);
+        }
+
+        .module-title .module-number {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 28px;
+            height: 28px;
+            background: var(--primary-color);
+            color: #fff;
+            border-radius: 50%;
+            font-size: 14px;
+            font-weight: 700;
+        }
+
+        .module-title .module-tag {
+            font-size: 11px;
+            font-weight: 400;
+            color: var(--text-light);
+            margin-left: auto;
+            background: var(--primary-light);
+            padding: 2px 10px;
+            border-radius: 10px;
+        }
+
+        /* ============================================================
+           子标题样式
+           ============================================================ */
+        .sub-title {
+            font-size: 15px;
+            font-weight: 600;
+            color: var(--text-color);
+            margin: 15px 0 8px 0;
+            padding-left: 12px;
+            border-left: 3px solid var(--primary-color);
+        }
+
+        /* ============================================================
+           表格样式
+           ============================================================ */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 10px 0;
+            font-size: 13px;
+        }
+
+        th {
+            background: var(--primary-light);
+            color: var(--primary-color);
+            font-weight: 600;
+            padding: 10px 12px;
+            text-align: left;
+            border: 1px solid var(--border-color);
+        }
+
+        td {
+            padding: 8px 12px;
+            border: 1px solid var(--border-color);
+            vertical-align: top;
+        }
+
+        tr:nth-child(even) td {
+            background: #f8f9fa;
+        }
+
+        /* ============================================================
+           占位符与输入样式
+           ============================================================ */
+        .placeholder {
+            color: #b0b8bf;
+            font-style: italic;
+            border-bottom: 1px dashed var(--border-color);
+            padding: 0 4px;
+            min-width: 80px;
+            display: inline-block;
+        }
+
+        .fill-line {
+            display: block;
+            border-bottom: 1px dashed var(--border-color);
+            margin: 6px 0;
+            min-height: 20px;
+        }
+
+        /* ============================================================
+           信息卡片样式（基本信息模块）
+           ============================================================ */
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+            margin-top: 10px;
+        }
+
+        .info-item {
+            display: flex;
+            align-items: center;
+            background: var(--bg-color);
+            padding: 8px 14px;
+            border-radius: 6px;
+            border: 1px solid var(--border-color);
+        }
+
+        .info-item .label {
+            font-weight: 600;
+            color: var(--primary-color);
+            min-width: 75px;
+            flex-shrink: 0;
+        }
+
+        .info-item .value {
+            flex: 1;
+            margin-left: 8px;
+        }
+
+        /* ============================================================
+           教学目标样式
+           ============================================================ */
+        .objective-group {
+            background: var(--bg-color);
+            border-radius: 6px;
+            padding: 12px 16px;
+            margin: 10px 0;
+            border-left: 3px solid var(--primary-color);
+        }
+
+        .objective-group .obj-label {
+            font-weight: 600;
+            color: var(--primary-color);
+            font-size: 14px;
+            margin-bottom: 6px;
+        }
+
+        .objective-group ol {
+            padding-left: 20px;
+        }
+
+        .objective-group li {
+            margin: 4px 0;
+        }
+
+        /* ============================================================
+           重难点样式
+           ============================================================ */
+        .key-point {
+            background: var(--primary-light);
+            border-radius: 6px;
+            padding: 12px 16px;
+            margin: 8px 0;
+            border-left: 3px solid var(--primary-color);
+        }
+
+        .difficulty-point {
+            background: var(--accent-light);
+            border-radius: 6px;
+            padding: 12px 16px;
+            margin: 8px 0;
+            border-left: 3px solid var(--accent-color);
+        }
+
+        .point-header {
+            font-weight: 600;
+            margin-bottom: 6px;
+        }
+
+        .key-point .point-header {
+            color: var(--primary-color);
+        }
+
+        .difficulty-point .point-header {
+            color: var(--accent-color);
+        }
+
+        .strategy-box {
+            background: #eafaf1;
+            border: 1px solid #abebc6;
+            border-radius: 4px;
+            padding: 6px 12px;
+            margin-top: 8px;
+            font-size: 13px;
+        }
+
+        .strategy-box strong {
+            color: var(--success-color);
+        }
+
+        /* ============================================================
+           教学过程样式
+           ============================================================ */
+        .process-overview {
+            margin-bottom: 20px;
+        }
+
+        .process-overview table td:first-child {
+            font-weight: 600;
+            color: var(--primary-color);
+        }
+
+        .process-overview tr.total-row td {
+            background: var(--primary-light);
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+
+        .process-step {
+            background: var(--bg-color);
+            border-radius: 8px;
+            padding: 16px 20px;
+            margin: 14px 0;
+            border: 1px solid var(--border-color);
+            position: relative;
+        }
+
+        .process-step .step-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 12px;
+        }
+
+        .process-step .step-number {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 24px;
+            height: 24px;
+            background: var(--primary-color);
+            color: #fff;
+            border-radius: 50%;
+            font-size: 12px;
+            font-weight: 700;
+        }
+
+        .process-step .step-title {
+            font-size: 15px;
+            font-weight: 600;
+            color: var(--text-color);
+        }
+
+        .process-step .step-time {
+            margin-left: auto;
+            background: var(--warning-color);
+            color: #fff;
+            padding: 2px 10px;
+            border-radius: 10px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        .activity-section {
+            margin: 8px 0;
+        }
+
+        .activity-label {
+            font-weight: 600;
+            color: var(--primary-color);
+            font-size: 13px;
+            margin-bottom: 4px;
+        }
+
+        .activity-content {
+            padding-left: 16px;
+            font-size: 13px;
+        }
+
+        .activity-content ol {
+            padding-left: 18px;
+        }
+
+        .activity-content li {
+            margin: 3px 0;
+        }
+
+        .key-question {
+            background: #fef9e7;
+            border: 1px solid #f9e79f;
+            border-radius: 4px;
+            padding: 6px 12px;
+            margin: 6px 0;
+            font-size: 13px;
+        }
+
+        .key-question strong {
+            color: var(--warning-color);
+        }
+
+        /* ============================================================
+           板书设计样式
+           ============================================================ */
+        .blackboard {
+            background: #2c3e50;
+            color: #ecf0f1;
+            border-radius: 6px;
+            padding: 20px;
+            margin: 10px 0;
+            font-family: "Courier New", monospace;
+            font-size: 13px;
+            white-space: pre;
+            overflow-x: auto;
+            line-height: 1.6;
+        }
+
+        .blackboard .board-divider {
+            color: #7f8c8d;
+        }
+
+        /* ============================================================
+           教学反思样式
+           ============================================================ */
+        .reflection-checklist {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin: 6px 0;
+        }
+
+        .checkbox-item {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            font-size: 13px;
+        }
+
+        .checkbox-item input[type="checkbox"] {
+            width: 14px;
+            height: 14px;
+            accent-color: var(--primary-color);
+        }
+
+        /* ============================================================
+           提示框样式
+           ============================================================ */
+        .tip-box {
+            background: #fef9e7;
+            border: 1px solid #f9e79f;
+            border-left: 4px solid var(--warning-color);
+            border-radius: 4px;
+            padding: 10px 14px;
+            margin: 12px 0;
+            font-size: 13px;
+        }
+
+        .tip-box strong {
+            color: var(--warning-color);
+        }
+
+        /* ============================================================
+           清单样式
+           ============================================================ */
+        .checklist {
+            list-style: none;
+            padding: 0;
+        }
+
+        .checklist li {
+            padding: 4px 0;
+            padding-left: 24px;
+            position: relative;
+            font-size: 13px;
+        }
+
+        .checklist li::before {
+            content: "\2610";
+            position: absolute;
+            left: 0;
+            font-size: 16px;
+            color: var(--primary-color);
+        }
+
+        /* ============================================================
+           页脚样式
+           ============================================================ */
+        .lp-footer {
+            background: var(--bg-color);
+            padding: 15px 40px;
+            text-align: center;
+            font-size: 12px;
+            color: var(--text-light);
+            border-top: 1px solid var(--border-color);
+        }
+
+        /* ============================================================
+           打印样式
+           ============================================================ */
+        @media print {
+            body {
+                background: #fff;
+                padding: 0;
+                font-size: 12px;
+            }
+
+            .lesson-plan {
+                box-shadow: none;
+                border-radius: 0;
+                max-width: 100%;
+            }
+
+            .module {
+                padding: 15px 25px;
+                page-break-inside: avoid;
+            }
+
+            .lp-header {
+                background: var(--primary-color) !important;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+                padding: 20px 25px;
+            }
+
+            .process-step {
+                page-break-inside: avoid;
+            }
+
+            th {
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+
+            .info-item,
+            .objective-group,
+            .key-point,
+            .difficulty-point,
+            .process-step {
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+
+            .lp-header .subtitle span {
+                border: 1px solid rgba(255, 255, 255, 0.3);
+            }
+        }
+
+        /* ============================================================
+           响应式样式
+           ============================================================ */
+        @media (max-width: 600px) {
+            body {
+                padding: 10px;
+            }
+
+            .module {
+                padding: 15px 20px;
+            }
+
+            .lp-header {
+                padding: 20px;
+            }
+
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .module-title {
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="lesson-plan">
+
+    <!-- ============================================================
+         教案头部
+         ============================================================ -->
+    <div class="lp-header">
+        <h1>【学科】教案：课题名称</h1>
+        <div class="subtitle">
+            <span>年级</span>
+            <span>课型</span>
+            <span>教材版本</span>
+            <span>40分钟</span>
+        </div>
+    </div>
+
+    <!-- ============================================================
+         模块一：基本信息
+         ============================================================ -->
+    <div class="module">
+        <div class="module-title">
+            <span class="module-number">1</span>
+            基本信息
+        </div>
+        <div class="info-grid">
+            <div class="info-item">
+                <span class="label">课题名称</span>
+                <span class="value"><span class="placeholder">填写课题</span></span>
+            </div>
+            <div class="info-item">
+                <span class="label">学科</span>
+                <span class="value"><span class="placeholder">填写学科</span></span>
+            </div>
+            <div class="info-item">
+                <span class="label">年级</span>
+                <span class="value"><span class="placeholder">填写年级</span></span>
+            </div>
+            <div class="info-item">
+                <span class="label">课时</span>
+                <span class="value"><span class="placeholder">40分钟</span></span>
+            </div>
+            <div class="info-item">
+                <span class="label">课型</span>
+                <span class="value"><span class="placeholder">新授课/复习课/实验课/习题课</span></span>
+            </div>
+            <div class="info-item">
+                <span class="label">教材版本</span>
+                <span class="value"><span class="placeholder">人教版/北师大版</span></span>
+            </div>
+            <div class="info-item">
+                <span class="label">编写日期</span>
+                <span class="value"><span class="placeholder">YYYY-MM-DD</span></span>
+            </div>
+            <div class="info-item">
+                <span class="label">执教教师</span>
+                <span class="value"><span class="placeholder">填写姓名</span></span>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================
+         模块二：教材分析
+         ============================================================ -->
+    <div class="module">
+        <div class="module-title">
+            <span class="module-number">2</span>
+            教材分析
+        </div>
+
+        <div class="sub-title">1. 本节课在教材中的地位与作用</div>
+        <p><span class="placeholder">说明本课题在教材中的位置、在知识体系中的地位及其功能价值（100-200字）</span></p>
+
+        <div class="sub-title">2. 知识的前后联系</div>
+        <table>
+            <tr>
+                <th style="width:25%">承接内容</th>
+                <td><span class="placeholder">本节课所承接的已学知识</span></td>
+            </tr>
+            <tr>
+                <th>本节核心</th>
+                <td><span class="placeholder">本节课的核心知识要点</span></td>
+            </tr>
+            <tr>
+                <th>后续铺垫</th>
+                <td><span class="placeholder">本节课为哪些后续知识做铺垫</span></td>
+            </tr>
+        </table>
+
+        <div class="sub-title">3. 教材内容核心要点</div>
+        <ol>
+            <li><span class="placeholder">核心知识点一</span></li>
+            <li><span class="placeholder">核心知识点二</span></li>
+            <li><span class="placeholder">核心知识点三</span></li>
+        </ol>
+
+        <div class="sub-title">4. 教材编排特点</div>
+        <p><span class="placeholder">分析教材的编写思路和呈现方式（50-100字）</span></p>
+    </div>
+
+    <!-- ============================================================
+         模块三：学情分析
+         ============================================================ -->
+    <div class="module">
+        <div class="module-title">
+            <span class="module-number">3</span>
+            学情分析
+        </div>
+
+        <div class="sub-title">1. 学生已有知识基础</div>
+        <p><span class="placeholder">分析学生已学过哪些与本节相关的知识、掌握程度如何</span></p>
+
+        <div class="sub-title">2. 学生认知特点与思维水平</div>
+        <ul>
+            <li><span class="placeholder">该年龄段学生的认知发展阶段和思维特点</span></li>
+            <li><span class="placeholder">对本课题内容的认知准备情况</span></li>
+        </ul>
+
+        <div class="sub-title">3. 可能存在的学习障碍与困难点</div>
+        <table>
+            <tr>
+                <th style="width:25%">障碍类型</th>
+                <th>具体分析</th>
+            </tr>
+            <tr>
+                <td>概念理解障碍</td>
+                <td><span class="placeholder">学生可能难以理解的概念</span></td>
+            </tr>
+            <tr>
+                <td>方法运用障碍</td>
+                <td><span class="placeholder">学生可能难以掌握的方法</span></td>
+            </tr>
+            <tr>
+                <td>思维转换障碍</td>
+                <td><span class="placeholder">思维转换可能存在的困难</span></td>
+            </tr>
+        </table>
+
+        <div class="sub-title">4. 学生学习兴趣与动机分析</div>
+        <p><span class="placeholder">分析学生对本课题的兴趣水平和激发策略</span></p>
+    </div>
+
+    <!-- ============================================================
+         模块四：教学目标
+         ============================================================ -->
+    <div class="module">
+        <div class="module-title">
+            <span class="module-number">4</span>
+            教学目标
+            <span class="module-tag">三维目标 + 核心素养</span>
+        </div>
+
+        <div class="tip-box">
+            <strong>编写提示：</strong>教学目标应使用可观察、可测量的行为动词（如"能说出""能运用""能分析"），避免使用"了解""体会"等模糊词汇。
+        </div>
+
+        <div class="objective-group">
+            <div class="obj-label">知识与技能目标</div>
+            <ol>
+                <li>能<span class="placeholder">行为动词 + 具体知识 + 达成标准</span></li>
+                <li>能<span class="placeholder">行为动词 + 具体技能 + 达成标准</span></li>
+                <li>能<span class="placeholder">行为动词 + 具体内容 + 达成标准</span></li>
+            </ol>
+        </div>
+
+        <div class="objective-group">
+            <div class="obj-label">过程与方法目标</div>
+            <ol>
+                <li>通过<span class="placeholder">具体活动过程</span>，经历/体验<span class="placeholder">活动内容</span>，提升/发展<span class="placeholder">能力</span></li>
+                <li>运用<span class="placeholder">思维方法/学习方法</span>，分析/解决<span class="placeholder">问题/任务</span></li>
+            </ol>
+        </div>
+
+        <div class="objective-group">
+            <div class="obj-label">情感态度与价值观目标</div>
+            <ol>
+                <li>通过<span class="placeholder">教学活动</span>，感受/体验/领悟<span class="placeholder">具体情感/态度</span></li>
+                <li>结合<span class="placeholder">教学内容</span>，培养/树立/增强<span class="placeholder">具体品质/观念</span></li>
+            </ol>
+        </div>
+
+        <div class="sub-title">核心素养落实说明</div>
+        <table>
+            <tr>
+                <th style="width:35%">核心素养维度</th>
+                <th>落实要点</th>
+            </tr>
+            <tr>
+                <td><span class="placeholder">维度名称</span></td>
+                <td><span class="placeholder">具体落实方式</span></td>
+            </tr>
+            <tr>
+                <td><span class="placeholder">维度名称</span></td>
+                <td><span class="placeholder">具体落实方式</span></td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- ============================================================
+         模块五：教学重难点
+         ============================================================ -->
+    <div class="module">
+        <div class="module-title">
+            <span class="module-number">5</span>
+            教学重难点
+        </div>
+
+        <div class="sub-title">教学重点</div>
+        <div class="key-point">
+            <div class="point-header">重点一：<span class="placeholder">核心知识点/技能</span></div>
+            <p>重点分析：<span class="placeholder">说明为什么是重点</span></p>
+        </div>
+        <div class="key-point">
+            <div class="point-header">重点二：<span class="placeholder">核心知识点/技能</span></div>
+            <p>重点分析：<span class="placeholder">说明为什么是重点</span></p>
+        </div>
+
+        <div class="sub-title">教学难点</div>
+        <div class="difficulty-point">
+            <div class="point-header">难点一：<span class="placeholder">难点内容</span></div>
+            <p>难点成因：<span class="placeholder">分析学生为什么觉得难</span></p>
+            <div class="strategy-box">
+                <strong>突破策略：</strong>采用<span class="placeholder">方法</span>方法，通过<span class="placeholder">途径</span>，帮助学生<span class="placeholder">效果</span>
+            </div>
+        </div>
+        <div class="difficulty-point">
+            <div class="point-header">难点二：<span class="placeholder">难点内容</span></div>
+            <p>难点成因：<span class="placeholder">分析学生为什么觉得难</span></p>
+            <div class="strategy-box">
+                <strong>突破策略：</strong><span class="placeholder">具体突破方法</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================
+         模块六：教学准备
+         ============================================================ -->
+    <div class="module">
+        <div class="module-title">
+            <span class="module-number">6</span>
+            教学准备
+        </div>
+
+        <div class="sub-title">教师准备</div>
+        <ul class="checklist">
+            <li>多媒体课件（PPT/微课视频）</li>
+            <li>教具：<span class="placeholder">填写具体教具</span></li>
+            <li>演示材料/实验器材：<span class="placeholder">填写具体材料</span></li>
+            <li>学习任务单/导学案</li>
+            <li>分层练习题</li>
+        </ul>
+
+        <div class="sub-title">学生准备</div>
+        <ul class="checklist">
+            <li>预习教材第<span class="placeholder">__</span>页至第<span class="placeholder">__</span>页</li>
+            <li>收集相关资料：<span class="placeholder">填写具体资料</span></li>
+            <li>准备学具：<span class="placeholder">填写具体学具</span></li>
+            <li>完成预习自测题</li>
+        </ul>
+
+        <div class="sub-title">教学环境准备</div>
+        <p><span class="placeholder">多媒体设备检查/实验室器材调试/课桌椅摆放方式</span></p>
+    </div>
+
+    <!-- ============================================================
+         模块七：教学过程
+         ============================================================ -->
+    <div class="module">
+        <div class="module-title">
+            <span class="module-number">7</span>
+            教学过程
+            <span class="module-tag">核心模块</span>
+        </div>
+
+        <div class="process-overview">
+            <div class="sub-title">教学环节总览</div>
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width:20%">环节</th>
+                        <th style="width:15%">时间</th>
+                        <th>设计意图</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>导入新课</td>
+                        <td>5分钟</td>
+                        <td><span class="placeholder">情境创设，激发兴趣，引出课题</span></td>
+                    </tr>
+                    <tr>
+                        <td>新知探究</td>
+                        <td>18分钟</td>
+                        <td><span class="placeholder">分层次呈现新知识，教师引导与学生探究结合</span></td>
+                    </tr>
+                    <tr>
+                        <td>巩固练习</td>
+                        <td>10分钟</td>
+                        <td><span class="placeholder">基础题面向全体，提高题分层拓展</span></td>
+                    </tr>
+                    <tr>
+                        <td>课堂小结</td>
+                        <td>4分钟</td>
+                        <td><span class="placeholder">师生共同梳理知识脉络</span></td>
+                    </tr>
+                    <tr>
+                        <td>布置作业</td>
+                        <td>3分钟</td>
+                        <td><span class="placeholder">基础作业与拓展作业分层布置</span></td>
+                    </tr>
+                    <tr class="total-row">
+                        <td>合计</td>
+                        <td>40分钟</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="sub-title">各环节详细设计</div>
+
+        <!-- 环节一 -->
+        <div class="process-step">
+            <div class="step-header">
+                <span class="step-number">1</span>
+                <span class="step-title">导入新课</span>
+                <span class="step-time">5分钟</span>
+            </div>
+            <div class="activity-section">
+                <div class="activity-label">设计意图</div>
+                <div class="activity-content"><span class="placeholder">情境创设，激发兴趣，引出课题</span></div>
+            </div>
+            <div class="activity-section">
+                <div class="activity-label">教师活动</div>
+                <div class="activity-content">
+                    <ol>
+                        <li>创设情境：<span class="placeholder">生活实例/故事/实验演示/问题驱动</span></li>
+                        <li>提出问题：<span class="placeholder">设计1-2个有启发性的关键问题</span></li>
+                        <li>引出课题：板书课题</li>
+                    </ol>
+                </div>
+            </div>
+            <div class="activity-section">
+                <div class="activity-label">学生活动</div>
+                <div class="activity-content">
+                    <ol>
+                        <li><span class="placeholder">观察/倾听/思考</span></li>
+                        <li><span class="placeholder">回答问题/参与互动</span></li>
+                    </ol>
+                </div>
+            </div>
+            <div class="key-question">
+                <strong>关键问题：</strong><span class="placeholder">设计有启发性的问题</span>
+            </div>
+        </div>
+
+        <!-- 环节二 -->
+        <div class="process-step">
+            <div class="step-header">
+                <span class="step-number">2</span>
+                <span class="step-title">新知探究</span>
+                <span class="step-time">18分钟</span>
+            </div>
+            <div class="activity-section">
+                <div class="activity-label">设计意图</div>
+                <div class="activity-content"><span class="placeholder">分层次呈现新知识，教师引导与学生探究相结合</span></div>
+            </div>
+            <div class="activity-section">
+                <div class="activity-label">教师活动</div>
+                <div class="activity-content">
+                    <ol>
+                        <li>引导观察/思考：<span class="placeholder">具体引导内容</span></li>
+                        <li>组织活动：<span class="placeholder">讨论/实验/操作</span></li>
+                        <li>归纳总结：<span class="placeholder">总结要点</span></li>
+                    </ol>
+                </div>
+            </div>
+            <div class="activity-section">
+                <div class="activity-label">学生活动</div>
+                <div class="activity-content">
+                    <ol>
+                        <li><span class="placeholder">独立思考/小组讨论</span></li>
+                        <li><span class="placeholder">动手操作/展示交流</span></li>
+                    </ol>
+                </div>
+            </div>
+            <div class="key-question">
+                <strong>关键问题：</strong><span class="placeholder">设计有思维含量的探究问题</span>
+            </div>
+        </div>
+
+        <!-- 环节三 -->
+        <div class="process-step">
+            <div class="step-header">
+                <span class="step-number">3</span>
+                <span class="step-title">巩固练习</span>
+                <span class="step-time">10分钟</span>
+            </div>
+            <div class="activity-section">
+                <div class="activity-label">设计意图</div>
+                <div class="activity-content"><span class="placeholder">基础题面向全体，提高题分层拓展</span></div>
+            </div>
+            <div class="activity-section">
+                <div class="activity-label">教师活动</div>
+                <div class="activity-content">
+                    <ol>
+                        <li>出示练习题：<span class="placeholder">基础题/提高题分层设计</span></li>
+                        <li>巡视指导，关注学困生</li>
+                        <li>组织反馈与讲评</li>
+                    </ol>
+                </div>
+            </div>
+            <div class="activity-section">
+                <div class="activity-label">学生活动</div>
+                <div class="activity-content">
+                    <ol>
+                        <li><span class="placeholder">独立完成基础题</span></li>
+                        <li><span class="placeholder">挑战提高题/板演展示</span></li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+
+        <!-- 环节四 -->
+        <div class="process-step">
+            <div class="step-header">
+                <span class="step-number">4</span>
+                <span class="step-title">课堂小结</span>
+                <span class="step-time">4分钟</span>
+            </div>
+            <div class="activity-section">
+                <div class="activity-label">设计意图</div>
+                <div class="activity-content"><span class="placeholder">师生共同梳理知识脉络</span></div>
+            </div>
+            <div class="activity-section">
+                <div class="activity-label">教师活动</div>
+                <div class="activity-content">
+                    <ol>
+                        <li>引导学生回顾本节课所学内容</li>
+                        <li>用思维导图/表格/口诀梳理知识脉络</li>
+                        <li>强调重点，提醒易错点</li>
+                    </ol>
+                </div>
+            </div>
+            <div class="activity-section">
+                <div class="activity-label">学生活动</div>
+                <div class="activity-content">
+                    <ol>
+                        <li><span class="placeholder">回顾归纳/补充完善</span></li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+
+        <!-- 环节五 -->
+        <div class="process-step">
+            <div class="step-header">
+                <span class="step-number">5</span>
+                <span class="step-title">布置作业</span>
+                <span class="step-time">3分钟</span>
+            </div>
+            <div class="activity-section">
+                <div class="activity-label">分层作业设计</div>
+                <div class="activity-content">
+                    <table>
+                        <tr>
+                            <th style="width:20%">类型</th>
+                            <th style="width:15%">面向对象</th>
+                            <th>内容</th>
+                        </tr>
+                        <tr>
+                            <td>基础作业</td>
+                            <td>全体学生</td>
+                            <td><span class="placeholder">填写基础作业内容</span></td>
+                        </tr>
+                        <tr>
+                            <td>拓展作业</td>
+                            <td>学有余力</td>
+                            <td><span class="placeholder">填写拓展作业内容</span></td>
+                        </tr>
+                        <tr>
+                            <td>实践/探究</td>
+                            <td>选做</td>
+                            <td><span class="placeholder">填写实践性作业</span></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- 分层教学设计 -->
+        <div class="sub-title">分层教学设计</div>
+        <table>
+            <tr>
+                <th style="width:20%">层次</th>
+                <th style="width:30%">目标要求</th>
+                <th>活动设计</th>
+            </tr>
+            <tr>
+                <td>基础层</td>
+                <td><span class="placeholder">达成基本目标</span></td>
+                <td><span class="placeholder">活动设计</span></td>
+            </tr>
+            <tr>
+                <td>提高层</td>
+                <td><span class="placeholder">灵活运用知识</span></td>
+                <td><span class="placeholder">活动设计</span></td>
+            </tr>
+            <tr>
+                <td>拓展层</td>
+                <td><span class="placeholder">综合与创新能力</span></td>
+                <td><span class="placeholder">活动设计</span></td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- ============================================================
+         模块八：板书设计
+         ============================================================ -->
+    <div class="module">
+        <div class="module-title">
+            <span class="module-number">8</span>
+            板书设计
+        </div>
+
+        <div class="blackboard">┌─────────────────────────────────────────┐
+│              主板书区域                    │
+│                                            │
+│            《课题名称》                     │
+│                                            │
+│  一、核心概念一        三、核心概念三       │
+│                                            │
+│  二、核心概念二        四、核心方法/规律    │
+│                                            │
+│        （知识脉络图/思维导图）              │
+<span class="board-divider">├─────────────────────────────────────────┤</span>
+│              副板书区域                    │
+│                                            │
+│  演示过程 / 例题板演 / 学生板演 / 补充      │
+└─────────────────────────────────────────┘</div>
+
+        <div class="sub-title">板书设计说明</div>
+        <table>
+            <tr>
+                <th style="width:20%">项目</th>
+                <th>说明</th>
+            </tr>
+            <tr>
+                <td>主板书</td>
+                <td><span class="placeholder">呈现核心知识结构，保留至课终</span></td>
+            </tr>
+            <tr>
+                <td>副板书</td>
+                <td><span class="placeholder">用于演算、补充，可随时擦除</span></td>
+            </tr>
+            <tr>
+                <td>设计理念</td>
+                <td><span class="placeholder">体现知识逻辑关系，帮助构建知识网络</span></td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- ============================================================
+         模块九：教学反思
+         ============================================================ -->
+    <div class="module">
+        <div class="module-title">
+            <span class="module-number">9</span>
+            教学反思
+            <span class="module-tag">课后填写</span>
+        </div>
+
+        <div class="sub-title">1. 教学目标达成情况</div>
+        <table>
+            <tr>
+                <th style="width:30%">目标维度</th>
+                <th style="width:35%">达成情况</th>
+                <th>评价依据</th>
+            </tr>
+            <tr>
+                <td>知识与技能</td>
+                <td>
+                    <div class="reflection-checklist">
+                        <label class="checkbox-item"><input type="checkbox"> 完全达成</label>
+                        <label class="checkbox-item"><input type="checkbox"> 基本达成</label>
+                        <label class="checkbox-item"><input type="checkbox"> 未达成</label>
+                    </div>
+                </td>
+                <td><span class="placeholder">评价依据</span></td>
+            </tr>
+            <tr>
+                <td>过程与方法</td>
+                <td>
+                    <div class="reflection-checklist">
+                        <label class="checkbox-item"><input type="checkbox"> 完全达成</label>
+                        <label class="checkbox-item"><input type="checkbox"> 基本达成</label>
+                        <label class="checkbox-item"><input type="checkbox"> 未达成</label>
+                    </div>
+                </td>
+                <td><span class="placeholder">评价依据</span></td>
+            </tr>
+            <tr>
+                <td>情感态度与价值观</td>
+                <td>
+                    <div class="reflection-checklist">
+                        <label class="checkbox-item"><input type="checkbox"> 完全达成</label>
+                        <label class="checkbox-item"><input type="checkbox"> 基本达成</label>
+                        <label class="checkbox-item"><input type="checkbox"> 未达成</label>
+                    </div>
+                </td>
+                <td><span class="placeholder">评价依据</span></td>
+            </tr>
+        </table>
+
+        <div class="sub-title">2. 教学过程亮点</div>
+        <div class="fill-line"></div>
+        <div class="fill-line"></div>
+
+        <div class="sub-title">3. 教学过程不足</div>
+        <div class="fill-line"></div>
+        <div class="fill-line"></div>
+
+        <div class="sub-title">4. 学生反馈与学情再分析</div>
+        <table>
+            <tr>
+                <th style="width:25%">课堂参与度</th>
+                <td>
+                    <div class="reflection-checklist">
+                        <label class="checkbox-item"><input type="checkbox"> 高</label>
+                        <label class="checkbox-item"><input type="checkbox"> 中</label>
+                        <label class="checkbox-item"><input type="checkbox"> 低</label>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <th>学生疑问集中</th>
+                <td><span class="placeholder">填写学生疑问</span></td>
+            </tr>
+            <tr>
+                <th>意外生成与处理</th>
+                <td><span class="placeholder">填写意外情况</span></td>
+            </tr>
+        </table>
+
+        <div class="sub-title">5. 改进措施与后续调整</div>
+        <table>
+            <tr>
+                <th style="width:35%">不足之处</th>
+                <th style="width:40%">改进措施</th>
+                <th>调整时间</th>
+            </tr>
+            <tr>
+                <td><span class="placeholder">填写不足</span></td>
+                <td><span class="placeholder">填写措施</span></td>
+                <td><span class="placeholder">时间</span></td>
+            </tr>
+            <tr>
+                <td><span class="placeholder">填写不足</span></td>
+                <td><span class="placeholder">填写措施</span></td>
+                <td><span class="placeholder">时间</span></td>
+            </tr>
+        </table>
+
+        <div class="sub-title">6. 再教设计建议</div>
+        <div class="tip-box">
+            <strong>填写提示：</strong>基于本次教学经验，若再次执教本课题，将做如下调整：
+            <div class="fill-line"></div>
+            <div class="fill-line"></div>
+        </div>
+    </div>
+
+    <!-- ============================================================
+         页脚
+         ============================================================ -->
+    <div class="lp-footer">
+        <p>本教案依据标准教案模板生成 | 教案编写技能</p>
+        <p>提示：请将所有占位符替换为实际内容，教学反思部分在课后填写</p>
+    </div>
+
+</div>
+
+</body>
+</html>

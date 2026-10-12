@@ -1,0 +1,37 @@
+# 教师端智能体后端依赖（python backend/server.py）
+# 核心：HTTP 服务 + LangGraph 工作流 + 文档导出
+fastapi>=0.110
+uvicorn>=0.29
+pydantic>=2.5
+
+# LLM
+openai>=1.30
+
+# API Key 加密存储（Fernet 回退；缺失时退回弱混淆，建议安装）
+cryptography>=42.0
+
+# 工作流（workflow.py 依赖；缺失时自动退化为 Mock 串行模式）
+langgraph>=0.2
+langchain-core>=0.3
+
+# 文档导出（docx/xlsx/pptx）
+python-docx>=1.1
+openpyxl>=3.1
+python-pptx>=0.6.23
+
+# 联网搜索（可选，缺失时使用内置资料兜底）
+duckduckgo-search>=6.3
+
+# ============ RAG 检索层（高中全学科知识库） ============
+# 向量库（sqlite-vec，pre-v1 锁版本；接口已薄封装可平移 Chroma）
+sqlite-vec>=0.1.6
+sqlite-vec==0.1.6 ; python_version >= "3.11"
+# 中文分词 + BM25 关键词召回
+jieba>=0.42.1
+rank-bm25>=0.2.2
+# 生产环境 ONNX 推理（embeddings + reranker）；缺失时自动回退 mock 向量（仅链路自测）
+# onnxruntime>=1.17
+# tokenizers>=0.15
+
+# 可选：WPS/飞书推送
+# requests>=2.31

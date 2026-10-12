@@ -1,0 +1,9 @@
+{
+  "//": "渲染进程（浏览器端）严格类型检查入口：tsc -p tsconfig.json --noEmit",
+  "extends": "./tsconfig.base.json",
+  "compilerOptions": {
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "types": []
+  },
+  "include": ["src/renderer/**/*.ts", "src/types/**/*.d.ts"]
+}

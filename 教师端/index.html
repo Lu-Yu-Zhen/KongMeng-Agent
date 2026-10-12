@@ -1,0 +1,1541 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>孔孟大模型 · 教师端 — 智能教研工作台</title>
+ <!-- 本地 vendor 依赖（桌面应用离线可用；如缺文件自动回退 CDN） -->
+ <script src="teacher-agent-sandbox/vendor/tailwind/tailwind.min.js"></script>
+ <link rel="stylesheet" href="teacher-agent-sandbox/vendor/font-awesome/css/all.min.css">
+ <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;600;700&family=Noto+Serif+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+ <link rel="stylesheet" href="teacher-agent-sandbox/vendor/katex/katex.min.css">
+ <script src="teacher-agent-sandbox/vendor/katex/katex.min.js"></script>
+ <script src="teacher-agent-sandbox/vendor/katex/auto-render.min.js"></script>
+ <script src="teacher-agent-sandbox/vendor/marked/marked.min.js"></script>
+ <script src="teacher-agent-sandbox/vendor/pdfjs/pdf.min.js"></script>
+<script src="teacher-agent-sandbox/vendor/jszip/jszip.min.js"></script>
+<script src="teacher-agent-sandbox/vendor/chartjs/chart.umd.min.js"></script>
+<script src="teacher-agent-sandbox/vendor/xlsx/xlsx.full.min.js"></script>
+ <!-- 教师智能体备课沙箱样式 -->
+ <link rel="stylesheet" href="teacher-agent-sandbox/css/style.css">
+
+ <script src="build/renderer/block1.js"></script>
+ <style>
+ html,body{background:#faf8f3;}
+ body{font-feature-settings:"palt";background-image:radial-gradient(circle at 1px 1px,rgba(120,100,70,.025) 1px,transparent 0);background-size:22px 22px;}
+ /* 优雅滚动条 */
+ .scroll-thin::-webkit-scrollbar{width:6px;height:6px;}
+ .scroll-thin::-webkit-scrollbar-thumb{background:#d9ccb8;border-radius:6px;}
+ .scroll-thin::-webkit-scrollbar-thumb:hover{background:#a89a82;}
+ .scroll-thin::-webkit-scrollbar-track{background:transparent;}
+ .settings-scroll::-webkit-scrollbar{width:5px;}
+ .settings-scroll::-webkit-scrollbar-thumb{background:#e8dfd0;border-radius:6px;}
+ /* 流式光标 */
+ .stream-cursor::after{content:'▌';color:#4f7a66;animation:blink 1s steps(2) infinite;margin-left:2px;font-weight:300;}
+ @keyframes blink{50%{opacity:0;}}
+ /* 推送入场 */
+ .fade-up{animation:fadeUp .4s cubic-bezier(.2,.7,.3,1) both;}
+ @keyframes fadeUp{from{opacity:0;transform:translateY(8px);}to{opacity:1;transform:none;}}
+ .stagger>*{animation:fadeUp .45s cubic-bezier(.2,.7,.3,1) both;}
+ .stagger>*:nth-child(1){animation-delay:.04s}
+ .stagger>*:nth-child(2){animation-delay:.09s}
+ .stagger>*:nth-child(3){animation-delay:.14s}
+ .stagger>*:nth-child(4){animation-delay:.19s}
+ .stagger>*:nth-child(5){animation-delay:.24s}
+ .stagger>*:nth-child(6){animation-delay:.29s}
+ /* 思考内容折叠 */
+ details.reasoning summary{cursor:pointer;list-style:none;color:#a89a82;font-size:11px;}
+ details.reasoning summary::-webkit-details-marker{display:none;}
+ details.reasoning summary i{transition:transform .2s;}
+ details[open].reasoning summary i{transform:rotate(90deg);}
+ /* 下拉项 */
+ .model-option-item{cursor:pointer;transition:background .15s;}
+ .model-option-item:hover{background:#faf8f3;}
+ .model-option-item.selected{background:#eef4f0;}
+ /* 下拉面板：绝对定位，防止撑高父容器；面板背景穿透点击，避免遮挡下方按钮（如"生成题库"）导致点击无响应，内部选项/按钮保持可点击 */
+ .model-dropdown-panel{position:absolute;z-index:50;pointer-events:none;}
+ .model-dropdown-panel *{pointer-events:auto;}
+ /* 所有下拉面板隐藏时彻底穿透点击（防止 hidden 类未生效时遮挡标签按钮） */
+ #gradingDropdownPanel.hidden,#teacherSubjectDropdownPanel.hidden,#teacherTextbookDropdownPanel.hidden{pointer-events:none!important;display:none!important;}
+ /* 标签按钮容器：确保始终可点击 */
+ header .flex.items-center.gap-1{position:relative;z-index:10;}
+ /* 题卡悬浮 */
+ .qcard{transition:box-shadow .2s,transform .2s,border-color .2s;}
+ .qcard:hover{box-shadow:0 4px 18px -8px rgba(52,80,66,.18);}
+ /* 横向条形图 */
+ .barfill{transition:width .9s cubic-bezier(.2,.7,.3,1);}
+ /* 印章式标签 */
+ .stamp{font-family:'"Noto Serif SC"',serif;letter-spacing:.1em;}
+ /* 教案工作区：空态时输入框居中 */
+ #beikeSection.beike-empty #beikeEmptyHint{display:none;}
+ #beikeSection.beike-empty #beikeMessages{opacity:0;pointer-events:none;}
+ #beikeSection.beike-empty #beikeInputArea{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:min(94%,56rem);border-top-color:transparent;background:transparent;padding:0;z-index:5;}
+ #beikeSection #beikeInputArea{max-width:min(94%,56rem);margin:0 auto;width:100%;}
+ #beikeSection #beikeMessages{max-width:min(94%,56rem);margin:0 auto;width:100%;}
+ /* 教案记录面板折叠 */
+ #beikeHistoryPanel.collapsed #beikeHistoryList{display:none;}
+ #beikeHistoryPanel.collapsed{flex:0 0 auto !important;}
+ /* 右侧侧边栏动画 */
+ #beikeRightPanel{transition:width .35s cubic-bezier(.4,0,.2,1),opacity .25s ease,min-width .35s cubic-bezier(.4,0,.2,1);}
+ #beikeRightPanel.collapsed{width:0!important;min-width:0!important;opacity:0;overflow:hidden;border-left-width:0!important;}
+ #beikeRightPanel>.inner{min-width:340px;height:100%;display:flex;flex-direction:column;}
+ /* 左侧任务栏动画 */
+ #beikeSidebar{transition:width .35s cubic-bezier(.4,0,.2,1),opacity .25s ease,min-width .35s cubic-bezier(.4,0,.2,1);}
+ #beikeSidebar.collapsed{width:0!important;min-width:0!important;opacity:0;overflow:hidden;border-right-width:0!important;}
+ #beikeSidebar>.inner{min-width:150px;height:100%;display:flex;flex-direction:column;}
+ #beikeSidebarShowBtn{transition:opacity .25s ease,transform .25s ease;}
+ #beikeRightPanelToggleBtn i{transition:transform .3s ease;}
+ /* 教案记录三点菜单 */
+ .beike-record-menu{position:absolute;top:100%;right:0;mt:2;background:white;border:1px solid #e8dfd0;border-radius:10px;box-shadow:0 4px 20px -4px rgba(0,0,0,.1);z-index:20;overflow:hidden;min-width:120px;}
+ .beike-record-menu button{width:100%;text-align:left;padding:8px 12px;font-size:12px;color:#4a4a4a;display:flex;align-items:gap:6px;transition:background .15s;}
+ .beike-record-menu button:hover{background:#f8f7f4;}
+ .beike-record-menu button.danger{color:#e53e3e;}
+ .beike-record-menu button.danger:hover{background:#fef2f2;}
+ .beike-record-menu .beike-menu-divider{height:1px;background:#e8dfd0;margin:0;}
+ /* AI Markdown 渲染样式 */
+ .ai-markdown h1{font-size:1.4em;font-weight:700;margin:.8em 0 .4em;color:#1a1a1a;}
+ .ai-markdown h2{font-size:1.2em;font-weight:700;margin:.7em 0 .35em;color:#1a1a1a;border-bottom:1px solid #e8dfd0;padding-bottom:.2em;}
+ .ai-markdown h3{font-size:1.05em;font-weight:600;margin:.6em 0 .3em;color:#333;}
+ .ai-markdown h4{font-size:1em;font-weight:600;margin:.5em 0 .25em;color:#444;}
+ .ai-markdown p{margin:.4em 0;line-height:1.7;}
+ .ai-markdown ul,.ai-markdown ol{margin:.4em 0;padding-left:1.5em;}
+ .ai-markdown li{margin:.2em 0;line-height:1.6;}
+ .ai-markdown ul li{list-style:disc;}
+ .ai-markdown ol li{list-style:decimal;}
+ .ai-markdown blockquote{border-left:3px solid #c8d6cc;margin:.5em 0;padding:.2em 0 .2em 1em;color:#666;background:#f8f7f4;border-radius:0 6px 6px 0;}
+ .ai-markdown code{background:#f0ede5;color:#c0392b;padding:.1em .4em;border-radius:4px;font-size:.9em;font-family:'Consolas','Monaco',monospace;}
+ .ai-markdown pre{background:#1e293b;color:#e2e8f0;padding:.8em 1em;border-radius:10px;overflow-x:auto;margin:.6em 0;font-size:.85em;line-height:1.5;}
+ .ai-markdown pre code{background:transparent;color:inherit;padding:0;}
+ .ai-markdown table{border-collapse:collapse;width:100%;margin:.6em 0;font-size:.9em;}
+ .ai-markdown th,.ai-markdown td{border:1px solid #e0d8c8;padding:.4em .6em;text-align:left;}
+ .ai-markdown th{background:#f8f7f4;font-weight:600;}
+ .ai-markdown tr:nth-child(even){background:#faf9f5;}
+ .ai-markdown img{max-width:100%;border-radius:8px;margin:.4em 0;}
+ .ai-markdown a{color:#4f7a66;text-decoration:underline;}
+ .ai-markdown hr{border:none;border-top:1px solid #e8dfd0;margin:.8em 0;}
+ .ai-markdown strong{font-weight:700;color:#1a1a1a;}
+ .ai-markdown em{font-style:italic;}
+ .ai-markdown .katex{font-size:1.05em;}
+ .ai-markdown .katex-display{margin:.6em 0;overflow-x:auto;overflow-y:hidden;padding:.3em 0;}
+ .ai-markdown details{margin:.4em 0;}
+ .ai-markdown summary{cursor:pointer;color:#888;font-size:.85em;user-select:none;}
+ .ai-markdown details>div{margin-top:.3em;}
+ #beikeSection.beike-empty #beikeTitleWrap{display:block;}
+ #beikeSection #beikeTitleWrap{display:none;}
+ #beikeSection #beikeContentWrap{position:relative;flex:1;min-height:0;}
+ /* 教案输入卡片 */
+ #beikeInputCard{background:white;border:1.5px solid #d5dcd6;border-radius:18px;box-shadow:0 2px 12px -4px rgba(60,90,70,.06);transition:box-shadow .2s,border-color .2s;overflow:visible;}
+ #beikeInputCard:focus-within{border-color:#9bc4ae;box-shadow:0 4px 24px -6px rgba(60,90,70,.14);}
+ #beikeSection.beike-empty #beikeInputCard{box-shadow:0 8px 40px -8px rgba(60,90,70,.16);border-color:#c8d6cc;}
+ /* 打字光标 */
+ .typing-cursor::after{content:'|';animation:blink 1s steps(1) infinite;color:#6e9882;font-weight:300;}
+ @keyframes blink{50%{opacity:0;}}
+ /* 输入聚焦 */
+ input:focus,textarea:focus,select:focus{outline:none;}
+ .field{border:1px solid #e8dfd0;background:#fff;border-radius:8px;transition:border-color .2s,box-shadow .2s;}
+ .field:focus-within{border-color:#6e9882;box-shadow:0 0 0 3px rgba(79,122,102,.12);}
+ .field input,.field textarea,.field select{background:transparent;border:none;}
+ /* 国风分割线：细线 + 中央竹青菱纹 */
+ .div-orn{display:flex;align-items:center;gap:10px;color:#d9ccb8;}
+ .div-orn::before,.div-orn::after{content:'';flex:1;height:1px;background:linear-gradient(90deg,transparent,#d9ccb8,transparent);}
+ .div-orn i{color:#4f7a66;font-size:6px;transform:rotate(45deg);display:inline-block;width:6px;height:6px;border:1px solid #4f7a66;background:transparent;}
+ .vline{background:linear-gradient(180deg,transparent,#e8dfd0 12%,#e8dfd0 88%,transparent);width:1px;}
+ /* 打印样式 */
+ @media print{
+ .no-print{display:none!important;}
+ .print-area{box-shadow:none!important;border:none!important;}
+ body{background:#fff;background-image:none;}
+ }
+ /* ====== 设置弹窗 ====== */
+ #settingsOverlay{position:fixed;inset:0;z-index:100;display:flex;justify-content:flex-end;background:rgba(0,0,0,.32);opacity:0;pointer-events:none;transition:opacity .25s ease;}
+ #settingsOverlay.open{opacity:1;pointer-events:auto;}
+ #settingsDrawer{width:960px;max-width:95vw;height:100vh;background:#faf8f3;display:flex;flex-direction:row;box-shadow:-8px 0 40px -8px rgba(0,0,0,.18);transform:translateX(100%);transition:transform .3s cubic-bezier(.4,0,.2,1);}
+ #settingsOverlay.open #settingsDrawer{transform:translateX(0);}
+ #settingsSidebar{width:200px;flex-shrink:0;background:#f3eee4;border-right:1px solid #e8dfd0;display:flex;flex-direction:column;padding:16px 8px;overflow-y:auto;}
+ #settingsContent{flex:1;display:flex;flex-direction:column;overflow:hidden;}
+ .settings-nav-item{display:flex;align-items:center;gap:10px;padding:8px 12px;border-radius:8px;font-size:13px;color:#5b5345;cursor:pointer;transition:background .15s,color .15s;border:none;background:transparent;width:100%;text-align:left;}
+ .settings-nav-item:hover{background:rgba(0,0,0,.04);}
+ .settings-nav-item.active{background:#dae8e0;color:#345042;font-weight:600;}
+ .settings-nav-item i{width:16px;text-align:center;font-size:13px;}
+ .settings-section{display:none;flex:1;overflow-y:auto;padding:24px 28px;}
+ .settings-section.active{display:block;}
+ .settings-section h2{font-size:18px;font-weight:700;color:#2b271f;margin-bottom:4px;}
+ .settings-section .section-desc{font-size:12px;color:#a89a82;margin-bottom:20px;}
+ .settings-field{margin-bottom:16px;}
+ .settings-field label{display:block;font-size:12px;font-weight:600;color:#5b5345;margin-bottom:6px;}
+ .settings-field input,.settings-field select,.settings-field textarea{width:100%;padding:8px 12px;font-size:13px;border:1px solid #e8dfd0;border-radius:8px;background:#fff;color:#2b271f;transition:border-color .2s;}
+ .settings-field input:focus,.settings-field select:focus,.settings-field textarea:focus{border-color:#6e9882;box-shadow:0 0 0 3px rgba(79,122,102,.1);}
+ .settings-info-card{background:#fff;border:1px solid #e8dfd0;border-radius:10px;padding:14px 16px;margin-bottom:12px;}
+ .settings-info-row{display:flex;justify-content:space-between;align-items:center;padding:6px 0;font-size:13px;}
+ .settings-info-row+.settings-info-row{border-top:1px solid #f3eee4;}
+ .settings-info-row .label{color:#7a6f5c;font-weight:500;}
+ .settings-info-row .value{color:#2b271f;font-weight:600;}
+ .theme-card{border:2px solid #e8dfd0;border-radius:12px;padding:16px;cursor:pointer;transition:border-color .2s,box-shadow .2s;flex:1;}
+ .theme-card.selected{border-color:#4f7a66;box-shadow:0 0 0 3px rgba(79,122,102,.1);}
+ .theme-preview{height:60px;border-radius:8px;margin-bottom:8px;border:1px solid #e8dfd0;}
+ .theme-preview.warm{background:#faf8f3;background-image:radial-gradient(circle at 1px 1px,rgba(120,100,70,.04) 1px,transparent 0);background-size:12px 12px;}
+ .theme-preview.white{background:#ffffff;border:1px solid #e8e8e8;}
+ .theme-preview.sky{background:#ffffff;border:1px solid #e0e7ff;background-image:linear-gradient(180deg,#ffffff 62%,#dbeafe 62%);}
+ .theme-preview.forest{background:#ffffff;border:1px solid #d4ecc9;background-image:linear-gradient(180deg,#ffffff 62%,#c8e6c9 62%);}
+ .theme-preview.pink{background:#ffffff;border:1px solid #fbd5e0;background-image:linear-gradient(180deg,#ffffff 62%,#f8bbd0 62%);}
+ .theme-card h4{font-size:13px;font-weight:600;color:#2b271f;}
+ .theme-card p{font-size:11px;color:#a89a82;margin-top:2px;}
+ .settings-placeholder{text-align:center;padding:60px 20px;color:#a89a82;}
+ .settings-placeholder i{font-size:32px;margin-bottom:12px;display:block;color:#d9ccb8;}
+ .settings-placeholder p{font-size:13px;}
+ .settings-model-item{display:flex;align-items:center;justify-content:space-between;padding:8px 12px;background:#fff;border:1px solid #e8dfd0;border-radius:8px;margin-bottom:6px;}
+ .settings-model-item .model-name{font-size:12px;font-weight:600;color:#2b271f;display:flex;align-items:center;gap:8px;}
+ .settings-model-item .model-actions{display:flex;align-items:center;gap:6px;}
+ .settings-model-item .badge{font-size:10px;padding:2px 6px;border-radius:4px;font-weight:500;}
+ .badge.active{background:#dae8e0;color:#345042;}
+ .badge.inactive{background:#f3eee4;color:#a89a82;}
+ /* ====== 任教班级多选下拉 ====== */
+ .account-class-trigger{display:flex;align-items:center;justify-content:space-between;padding:8px 12px;font-size:13px;border:1px solid #e8dfd0;border-radius:8px;background:#fff;color:#2b271f;cursor:pointer;transition:border-color .2s;min-height:38px;}
+ .account-class-trigger:hover{border-color:#6e9882;}
+ .account-class-display{flex:1;display:flex;flex-wrap:wrap;gap:4px;align-items:center;min-height:18px;}
+ .account-class-chip{display:inline-flex;align-items:center;gap:4px;background:#dae8e0;color:#345042;font-size:11px;font-weight:500;padding:2px 8px;border-radius:999px;}
+ .account-class-chip .remove{color:#4f7a66;cursor:pointer;font-size:10px;padding:0 2px;}
+ .account-class-chip .remove:hover{color:#b91c1c;}
+ .account-class-placeholder{color:#a89a82;font-size:13px;}
+ .account-class-dropdown{position:absolute;left:0;right:0;top:calc(100% + 4px);background:#fff;border:1px solid #e8dfd0;border-radius:10px;box-shadow:0 8px 30px -6px rgba(0,0,0,.15);z-index:60;overflow:hidden;}
+ .account-class-actions{display:flex;justify-content:space-between;align-items:center;padding:8px 12px;border-bottom:1px solid #f3eee4;background:#faf8f3;}
+ .account-class-actions button{font-size:11px;color:#4f7a66;font-weight:600;background:none;border:none;cursor:pointer;padding:2px 6px;}
+ .account-class-actions button:hover{text-decoration:underline;}
+ .account-class-options{max-height:220px;overflow-y:auto;padding:6px;}
+ .account-class-options .cls-item{display:flex;align-items:center;gap:8px;padding:6px 8px;border-radius:6px;cursor:pointer;font-size:12px;color:#403a30;transition:background .12s;}
+ .account-class-options .cls-item:hover{background:#faf8f3;}
+ .account-class-options .cls-item input{width:14px;height:14px;accent-color:#4f7a66;cursor:pointer;}
+ .account-class-options .cls-item .cls-count{margin-left:auto;font-size:10px;color:#a89a82;}
+ /* ====== 插件与技能 ====== */
+ .ps-sub-tabs{display:flex;gap:0;border-bottom:1px solid #e8dfd0;margin-bottom:16px;}
+ .ps-sub-tab{padding:8px 18px;font-size:13px;font-weight:500;color:#a89a82;cursor:pointer;border:none;background:transparent;border-bottom:2px solid transparent;transition:all .15s;}
+ .ps-sub-tab:hover{color:#5b5345;}
+ .ps-sub-tab.active{color:#345042;border-bottom-color:#4f7a66;font-weight:600;}
+ .ps-sub-content{display:none;}
+ .ps-sub-content.active{display:block;}
+ .ps-toolbar{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px;}
+ .ps-toolbar .ps-count{font-size:12px;color:#a89a82;}
+ .ps-upload-btn{display:inline-flex;align-items:center;gap:6px;padding:6px 14px;font-size:12px;font-weight:500;color:#fff;background:#4f7a66;border:none;border-radius:8px;cursor:pointer;transition:background .2s;}
+ .ps-upload-btn:hover{background:#3f6453;}
+ .ps-card{display:flex;align-items:flex-start;gap:12px;padding:14px 16px;background:#fff;border:1px solid #e8dfd0;border-radius:10px;margin-bottom:8px;transition:border-color .2s,box-shadow .2s;}
+ .ps-card:hover{border-color:#b6cdbe;box-shadow:0 2px 8px rgba(0,0,0,.04);}
+ .ps-card-icon{width:40px;height:40px;flex-shrink:0;display:flex;align-items:center;justify-content:center;border-radius:10px;font-size:18px;}
+ .ps-card-icon.jade{background:#eef4f0;color:#4f7a66;}
+ .ps-card-icon.blue{background:#e0f2fe;color:#0284c7;}
+ .ps-card-icon.rose{background:#fce7f3;color:#be185d;}
+ .ps-card-icon.teal{background:#ccfbf1;color:#0d9488;}
+ .ps-card-icon.indigo{background:#e0e7ff;color:#4338ca;}
+ .ps-card-icon.amber{background:#fef3c7;color:#b45309;}
+ .ps-card-icon.slate{background:#f1f5f9;color:#475569;}
+ .ps-card-icon.violet{background:#ede9fe;color:#6d28d9;}
+ .ps-card-icon.cyan{background:#cffafe;color:#0e7490;}
+ .ps-card-icon.gray{background:#f3f4f6;color:#6b7280;}
+ .ps-card-body{flex:1;min-width:0;}
+ .ps-card-name{font-size:14px;font-weight:600;color:#2b271f;margin-bottom:2px;}
+ .ps-card-desc{font-size:12px;color:#7a6f5c;line-height:1.5;}
+ .ps-card-meta{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px;}
+ .ps-card-tag{font-size:10px;padding:2px 8px;border-radius:999px;font-weight:500;}
+ .ps-card-tag.folder{background:#f3eee4;color:#8c6a3e;}
+ .ps-card-tag.priority{background:#dae8e0;color:#345042;}
+ .ps-card-tag.custom{background:#fef3c7;color:#b45309;}
+ .ps-card-actions{display:flex;align-items:center;gap:6px;flex-shrink:0;}
+ .ps-card-toggle{width:36px;height:20px;border-radius:10px;background:#e8dfd0;cursor:pointer;position:relative;transition:background .2s;border:none;padding:0;flex-shrink:0;}
+ .ps-card-toggle.on{background:#4f7a66;}
+ .ps-card-toggle::after{content:'';position:absolute;top:2px;left:2px;width:16px;height:16px;border-radius:50%;background:#fff;transition:transform .2s;}
+ .ps-card-toggle.on::after{transform:translateX(16px);}
+ .ps-card-delete{background:none;border:none;color:#a89a82;cursor:pointer;font-size:14px;padding:4px;border-radius:6px;transition:all .15s;}
+ .ps-card-delete:hover{color:#c2604f;background:#fbe9e7;}
+ .ps-upload-area{border:2px dashed #d9ccb8;border-radius:10px;padding:32px 20px;text-align:center;cursor:pointer;transition:border-color .2s,background .2s;margin-bottom:12px;}
+ .ps-upload-area:hover{border-color:#6e9882;background:rgba(238,244,240,.3);}
+ .ps-upload-area.dragover{border-color:#4f7a66;background:rgba(238,244,240,.5);}
+ .ps-upload-area i{font-size:28px;color:#b6cdbe;margin-bottom:8px;display:block;}
+ .ps-upload-area p{font-size:13px;color:#7a6f5c;margin:0;}
+ .ps-upload-area .ps-upload-hint{font-size:11px;color:#a89a82;margin-top:4px;}
+ .ps-empty{text-align:center;padding:40px 20px;color:#a89a82;}
+ .ps-empty i{font-size:32px;margin-bottom:10px;display:block;color:#d9ccb8;}
+ .ps-empty p{font-size:13px;}
+ /* ====== 规则与记忆 ====== */
+ .rules-section{margin-bottom:24px;}
+ .rules-section-title{font-size:14px;font-weight:600;color:#2b271f;margin-bottom:8px;display:flex;align-items:center;gap:8px;}
+ .rules-section-title i{color:#4f7a66;font-size:15px;}
+ .rules-section-desc{font-size:12px;color:#a89a82;margin-bottom:10px;}
+ .rules-textarea{width:100%;min-height:80px;padding:10px 14px;font-size:13px;border:1px solid #e8dfd0;border-radius:8px;background:#fff;color:#2b271f;resize:vertical;transition:border-color .2s;font-family:inherit;line-height:1.6;}
+ .rules-textarea:focus{border-color:#6e9882;box-shadow:0 0 0 3px rgba(79,122,102,.1);outline:none;}
+ .rules-select{width:100%;padding:8px 12px;font-size:13px;border:1px solid #e8dfd0;border-radius:8px;background:#fff;color:#2b271f;cursor:pointer;transition:border-color .2s;}
+ .rules-select:focus{border-color:#6e9882;box-shadow:0 0 0 3px rgba(79,122,102,.1);outline:none;}
+ .rules-import-row{display:flex;gap:8px;margin-top:8px;}
+ .rules-import-btn{display:inline-flex;align-items:center;gap:6px;padding:6px 14px;font-size:12px;font-weight:500;color:#4f7a66;background:#eef4f0;border:1px solid #b6cdbe;border-radius:8px;cursor:pointer;transition:all .2s;white-space:nowrap;}
+ .rules-import-btn:hover{background:#dae8e0;border-color:#90b29d;}
+ .rules-save-btn{display:inline-flex;align-items:center;gap:6px;padding:8px 24px;font-size:13px;font-weight:600;color:#fff;background:#4f7a66;border:none;border-radius:8px;cursor:pointer;transition:background .2s;margin-top:8px;}
+ .rules-save-btn:hover{background:#3f6453;}
+ .kb-file-list{display:flex;flex-direction:column;gap:6px;margin-top:10px;}
+ .kb-file-item{display:flex;align-items:center;gap:10px;padding:8px 12px;background:#fff;border:1px solid #e8dfd0;border-radius:8px;transition:border-color .2s;}
+ .kb-file-item:hover{border-color:#b6cdbe;}
+ .kb-file-icon{font-size:16px;flex-shrink:0;}
+ .kb-file-icon.docx{color:#2563eb;}
+ .kb-file-icon.pdf{color:#dc2626;}
+ .kb-file-icon.md{color:#7a6f5c;}
+ .kb-file-icon.json{color:#b45309;}
+ .kb-file-icon.py{color:#0d9488;}
+ .kb-file-icon.txt{color:#6b7280;}
+ .kb-file-name{flex:1;font-size:12px;color:#2b271f;font-weight:500;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+ .kb-file-size{font-size:11px;color:#a89a82;flex-shrink:0;}
+ .kb-file-remove{background:none;border:none;color:#a89a82;cursor:pointer;font-size:13px;padding:4px;border-radius:6px;transition:all .15s;flex-shrink:0;}
+ .kb-file-remove:hover{color:#c2604f;background:#fbe9e7;}
+ .kb-file-empty{text-align:center;padding:20px;color:#a89a82;font-size:12px;}
+ .ps-upload-hidden{display:none;}
+ /* ====== 规则条目列表（输出规则/上下文记忆/知识库通用） ====== */
+ .rules-add-row{display:flex;gap:8px;margin-bottom:10px;}
+ .rules-add-input{flex:1;padding:8px 12px;font-size:13px;border:1px solid #e8dfd0;border-radius:8px;background:#fff;color:#2b271f;transition:border-color .2s;}
+ .rules-add-input:focus{border-color:#6e9882;box-shadow:0 0 0 3px rgba(79,122,102,.1);outline:none;}
+ .rules-add-btn{display:inline-flex;align-items:center;gap:6px;padding:8px 16px;font-size:12px;font-weight:600;color:#fff;background:#4f7a66;border:none;border-radius:8px;cursor:pointer;transition:background .2s;white-space:nowrap;}
+ .rules-add-btn:hover{background:#3f6453;}
+ .rules-item-list{display:flex;flex-direction:column;gap:6px;}
+ .rules-item{display:flex;align-items:center;gap:10px;padding:8px 12px;background:#fff;border:1px solid #e8dfd0;border-radius:8px;transition:border-color .2s,opacity .2s;}
+ .rules-item:hover{border-color:#b6cdbe;}
+ .rules-item.disabled{opacity:.5;}
+ .rules-item-icon{font-size:14px;color:#a89a82;flex-shrink:0;}
+ .rules-item-text{flex:1;font-size:12px;color:#2b271f;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;line-height:1.4;}
+ .rules-item-text.multiline{white-space:normal;word-break:break-word;max-height:40px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;}
+ .rules-item-toggle{width:36px;height:20px;border-radius:10px;background:#e8dfd0;cursor:pointer;position:relative;transition:background .2s;border:none;padding:0;flex-shrink:0;}
+ .rules-item-toggle.on{background:#4f7a66;}
+ .rules-item-toggle::after{content:'';position:absolute;top:2px;left:2px;width:16px;height:16px;border-radius:50%;background:#fff;transition:transform .2s;}
+ .rules-item-toggle.on::after{transform:translateX(16px);}
+ .rules-item-delete{background:none;border:none;color:#a89a82;cursor:pointer;font-size:13px;padding:4px;border-radius:6px;transition:all .15s;flex-shrink:0;}
+ .rules-item-delete:hover{color:#c2604f;background:#fbe9e7;}
+ .rules-empty{text-align:center;padding:14px;color:#a89a82;font-size:12px;}
+ /* ====== 主题系统（5 套主题：暖墨国风/纯白简约/天空与海/绿树成荫/粉系少女） ====== */
+ :root{
+  --t-bg:#faf8f3;--t-bg-img:radial-gradient(circle at 1px 1px,rgba(120,100,70,.025) 1px,transparent 0);--t-bg-size:22px 22px;
+  --t-scroll:#d9ccb8;--t-scroll-h:#a89a82;
+  --ink50:#faf8f3;--ink100:#f3eee4;--ink200:#e8dfd0;--ink300:#d9ccb8;--ink400:#a89a82;--ink500:#7a6f5c;--ink600:#5b5345;--ink700:#403a30;--ink800:#2b271f;--ink900:#19160f;
+  --jade50:#eef4f0;--jade100:#dae8e0;--jade200:#b6cdbe;--jade300:#90b29d;--jade400:#6e9882;--jade500:#4f7a66;--jade600:#3f6453;--jade700:#345042;--jade800:#263a30;
+  --tan300:#d4b48f;--tan400:#bd9a6c;--tan500:#a8814e;--tan600:#8c6a3e;
+  --accent:#4f7a66;--accent-r:79,122,102;--accent-l:rgba(79,122,102,.1);--accent50:#eef4f0;--accent100:#dae8e0;
+ }
+ /* 纯白简约 */
+ html[data-theme="white"]{
+  --t-bg:#ffffff;--t-bg-img:none;--t-bg-size:auto;
+  --t-scroll:#ced4da;--t-scroll-h:#868e96;
+  --ink50:#f8f9fa;--ink100:#f1f3f5;--ink200:#e9ecef;--ink300:#dee2e6;--ink400:#868e96;--ink500:#495057;--ink600:#343a40;--ink700:#25292e;--ink800:#1a1d20;--ink900:#0d0f11;
+  --jade50:#e7f0ff;--jade100:#d0e2ff;--jade200:#a5c8ff;--jade300:#78a8ff;--jade400:#4c8aff;--jade500:#3b5bdb;--jade600:#2f44b8;--jade700:#28388f;--jade800:#1e296b;
+  --tan300:#dee2e6;--tan400:#ced4da;--tan500:#adb5bd;--tan600:#868e96;
+  --accent:#3b5bdb;--accent-r:59,91,219;--accent-l:rgba(59,91,219,.08);--accent50:#e7f0ff;--accent100:#d0e2ff;
+ }
+ /* 天空与海 */
+ html[data-theme="sky"]{
+  --t-bg:#ffffff;--t-bg-img:none;--t-bg-size:auto;
+  --t-scroll:#93c5fd;--t-scroll-h:#3b82f6;
+  --ink50:#ffffff;--ink100:#f0f7fe;--ink200:#dbeafe;--ink300:#bfdbfe;--ink400:#60a5fa;--ink500:#3b82f6;--ink600:#2563eb;--ink700:#1d4ed8;--ink800:#1e3a5f;--ink900:#0c3a5e;
+  --jade50:#e0f2fe;--jade100:#bae6fd;--jade200:#7dd3fc;--jade300:#38bdf8;--jade400:#0ea5e9;--jade500:#0284c7;--jade600:#0369a1;--jade700:#075985;--jade800:#0c4a6e;
+  --tan300:#bae6fd;--tan400:#7dd3fc;--tan500:#38bdf8;--tan600:#0ea5e9;
+  --accent:#0284c7;--accent-r:2,132,199;--accent-l:rgba(2,132,199,.1);--accent50:#e0f2fe;--accent100:#bae6fd;
+ }
+ /* 绿树成荫 */
+ html[data-theme="forest"]{
+  --t-bg:#ffffff;--t-bg-img:none;--t-bg-size:auto;
+  --t-scroll:#a8d89a;--t-scroll-h:#5a9a47;
+  --ink50:#ffffff;--ink100:#f1f8ef;--ink200:#d4ecc9;--ink300:#a8d89a;--ink400:#7cb86b;--ink500:#5a9a47;--ink600:#3d7a2e;--ink700:#2d5a1f;--ink800:#1a3a11;--ink900:#0d1f08;
+  --jade50:#e8f5e9;--jade100:#c8e6c9;--jade200:#a5d6a7;--jade300:#81c784;--jade400:#66bb6a;--jade500:#2d8a3e;--jade600:#246b30;--jade700:#1a5024;--jade800:#103a18;
+  --tan300:#c8e6c9;--tan400:#a5d6a7;--tan500:#66bb6a;--tan600:#43a047;
+  --accent:#2d8a3e;--accent-r:45,138,62;--accent-l:rgba(45,138,62,.1);--accent50:#e8f5e9;--accent100:#c8e6c9;
+ }
+ /* 粉系少女 */
+ html[data-theme="pink"]{
+  --t-bg:#ffffff;--t-bg-img:none;--t-bg-size:auto;
+  --t-scroll:#f5b3c7;--t-scroll-h:#e5739b;
+  --ink50:#ffffff;--ink100:#fdf2f5;--ink200:#fbd5e0;--ink300:#f5b3c7;--ink400:#ef9db8;--ink500:#e5739b;--ink600:#d14a7c;--ink700:#ad4a6a;--ink800:#6b1a3a;--ink900:#4a0d2a;
+  --jade50:#fce4ec;--jade100:#f8bbd0;--jade200:#f48fb1;--jade300:#f06292;--jade400:#ec407a;--jade500:#e91e63;--jade600:#c2185b;--jade700:#ad1457;--jade800:#880e4f;
+  --tan300:#f8bbd0;--tan400:#f48fb1;--tan500:#f06292;--tan600:#ec407a;
+  --accent:#e91e63;--accent-r:233,30,99;--accent-l:rgba(233,30,99,.1);--accent50:#fce4ec;--accent100:#f8bbd0;
+ }
+ /* body 背景与纹理 */
+ html,body{background:var(--t-bg,#faf8f3)!important;}
+ body{background-image:var(--t-bg-img,radial-gradient(circle at 1px 1px,rgba(120,100,70,.025) 1px,transparent 0))!important;background-size:var(--t-bg-size,22px 22px)!important;}
+ /* 滚动条 */
+ .scroll-thin::-webkit-scrollbar-thumb{background:var(--t-scroll,#d9ccb8)!important;}
+ .scroll-thin::-webkit-scrollbar-thumb:hover{background:var(--t-scroll-h,#a89a82)!important;}
+ .settings-scroll::-webkit-scrollbar-thumb{background:var(--ink200,#e8dfd0)!important;}
+ /* 流式光标 */
+ .stream-cursor::after{color:var(--accent,#4f7a66)!important;}
+ /* ink 色阶 — 背景 */
+ .bg-ink-50{background-color:var(--ink50)!important;}.bg-ink-100{background-color:var(--ink100)!important;}.bg-ink-200{background-color:var(--ink200)!important;}.bg-ink-300{background-color:var(--ink300)!important;}.bg-ink-400{background-color:var(--ink400)!important;}.bg-ink-500{background-color:var(--ink500)!important;}.bg-ink-600{background-color:var(--ink600)!important;}.bg-ink-700{background-color:var(--ink700)!important;}.bg-ink-800{background-color:var(--ink800)!important;}.bg-ink-900{background-color:var(--ink900)!important;}
+ /* ink 色阶 — 边框 */
+ .border-ink-50{border-color:var(--ink50)!important;}.border-ink-100{border-color:var(--ink100)!important;}.border-ink-200{border-color:var(--ink200)!important;}.border-ink-300{border-color:var(--ink300)!important;}.border-ink-400{border-color:var(--ink400)!important;}.border-ink-500{border-color:var(--ink500)!important;}.border-ink-600{border-color:var(--ink600)!important;}.border-ink-700{border-color:var(--ink700)!important;}.border-ink-800{border-color:var(--ink800)!important;}.border-ink-900{border-color:var(--ink900)!important;}
+ /* ink hover 变体（仅背景） */
+ .hover\:bg-ink-50:hover{background-color:var(--ink50)!important;}.hover\:bg-ink-100:hover{background-color:var(--ink100)!important;}.hover\:bg-ink-200:hover{background-color:var(--ink200)!important;}
+ /* jade 色阶 — 背景 */
+ .bg-jade-50{background-color:var(--jade50)!important;}.bg-jade-100{background-color:var(--jade100)!important;}.bg-jade-200{background-color:var(--jade200)!important;}.bg-jade-300{background-color:var(--jade300)!important;}.bg-jade-400{background-color:var(--jade400)!important;}.bg-jade-500{background-color:var(--jade500)!important;}.bg-jade-600{background-color:var(--jade600)!important;}.bg-jade-700{background-color:var(--jade700)!important;}.bg-jade-800{background-color:var(--jade800)!important;}
+ /* jade 色阶 — 边框 */
+ .border-jade-100{border-color:var(--jade100)!important;}.border-jade-200{border-color:var(--jade200)!important;}.border-jade-300{border-color:var(--jade300)!important;}.border-jade-400{border-color:var(--jade400)!important;}.border-jade-500{border-color:var(--jade500)!important;}.border-jade-600{border-color:var(--jade600)!important;}.border-jade-700{border-color:var(--jade700)!important;}
+ /* tan 色阶 — 背景与边框 */
+ .bg-tan-300{background-color:var(--tan300)!important;}.bg-tan-400{background-color:var(--tan400)!important;}.bg-tan-500{background-color:var(--tan500)!important;}.bg-tan-600{background-color:var(--tan600)!important;}
+ .border-tan-300{border-color:var(--tan300)!important;}.border-tan-400{border-color:var(--tan400)!important;}.border-tan-500{border-color:var(--tan500)!important;}
+ /* 下拉项 */
+ .model-option-item:hover{background:var(--ink100,#f3eee4)!important;}
+ .model-option-item.selected{background:var(--accent50,#eef4f0)!important;}
+ /* 题卡悬浮 */
+ .qcard:hover{box-shadow:0 4px 18px -8px rgba(var(--accent-r,79,122,102),.18)!important;}
+ /* 思考折叠（文字颜色保持固定） */
+ details.reasoning summary{color:#a89a82!important;}
+ /* 主题选中态 */
+ .theme-card.selected{border-color:var(--accent,#4f7a66)!important;box-shadow:0 0 0 3px var(--accent-l,rgba(79,122,102,.1))!important;}
+ /* 设置弹窗主题适配 */
+ #settingsSidebar{background:var(--ink50,#faf8f3)!important;border-right-color:var(--ink200,#e8dfd0)!important;}
+ .settings-field input,.settings-field select,.settings-field textarea{border-color:var(--ink200,#e8dfd0)!important;}
+ .settings-info-card{border-color:var(--ink200,#e8dfd0)!important;}
+ .settings-info-row+.settings-info-row{border-top-color:var(--ink100,#f3eee4)!important;}
+ .settings-model-item{border-color:var(--ink200,#e8dfd0)!important;}
+ .account-class-trigger{border-color:var(--ink200,#e8dfd0)!important;}
+ .account-class-trigger:hover{border-color:var(--jade400,#6e9882)!important;}
+ .account-class-chip{background:var(--accent100,#dae8e0)!important;color:var(--jade700,#345042)!important;}
+ .account-class-chip .remove{color:var(--accent,#4f7a66)!important;}
+ .account-class-actions{background:var(--ink50,#faf8f3)!important;border-bottom-color:var(--ink100,#f3eee4)!important;}
+ .account-class-actions button{color:var(--accent,#4f7a66)!important;}
+ .account-class-options .cls-item:hover{background:var(--ink100,#f3eee4)!important;}
+ .account-class-options .cls-item input{accent-color:var(--accent,#4f7a66)!important;}
+ .badge.active{background:var(--accent100,#dae8e0)!important;}
+ .badge.inactive{background:var(--ink100,#f3eee4)!important;}
+ /* 智能体沙箱元素（文字颜色保持固定，仅背景/边框/图标随主题变化） */
+ .agent-run-head{background:linear-gradient(90deg,var(--accent50,#eef4f0) 0%,var(--ink50,#faf8f3) 100%)!important;border-left-color:var(--accent,#4f7a66)!important;}
+ .agent-status-dot{background:var(--accent,#4f7a66)!important;box-shadow:0 0 0 0 rgba(var(--accent-r,79,122,102),.5)!important;}
+ .agent-status-dot.done{background:var(--jade400,#6e9882)!important;}
+ .agent-step-badge{background:var(--ink100,#f3eee4)!important;}
+ .agent-skill-badge{background:var(--jade100,#dae8e0)!important;}
+ .agent-step-row{background:rgba(var(--accent-r,79,122,102),.03)!important;border-color:var(--ink200,#e8dfd0)!important;}
+ .agent-step-row.executing{border-color:rgba(var(--accent-r,79,122,102),.35)!important;background:linear-gradient(90deg,rgba(var(--accent-r,79,122,102),.06) 0%,var(--ink50,#faf8f3) 50%,rgba(var(--accent-r,79,122,102),.06) 100%)!important;}
+ .agent-step-row.executing::before{background:var(--accent,#4f7a66)!important;}
+ .agent-step-icon{background:var(--accent-l,rgba(79,122,102,.1))!important;}
+ .agent-step-row.executing .agent-step-icon{background:rgba(var(--accent-r,79,122,102),.2)!important;}
+ </style>
+</head>
+<body class="bg-white font-sans text-ink-800 h-screen flex flex-col overflow-hidden">
+
+ <!-- ====== 顶部导航 ====== -->
+ <header class="relative bg-white/95 backdrop-blur border-b border-ink-100 px-6 py-3 flex items-center justify-between z-20 shrink-0">
+ <div class="flex items-center space-x-3">
+ <div class="w-10 h-10 flex items-center justify-center">
+ <img src="./教育大模型logo.png" alt="孔孟大模型" class="w-full h-full object-contain" onerror="this.style.display='none'">
+ </div>
+ <div class="leading-tight">
+ <h1 class="text-base font-bold text-ink-900 tracking-wide font-display">孔孟大模型 <span class="text-ink-300 font-normal">·</span> <span class="text-ink-600 text-sm font-medium">教师端</span></h1>
+ <p class="text-[10px] text-ink-400 tracking-wider stamp">智能教研工作台</p>
+ </div>
+ </div>
+
+ <!-- 功能标签 -->
+ <div class="flex items-center gap-1">
+ <button onclick="switchTab('prepare')" id="tab-prepare" class="tab-btn relative px-5 py-2 text-sm font-semibold transition-all duration-200 text-jade-700 border-b-2 border-jade-600">
+ <i class="fa-solid fa-chalkboard-user mr-1.5"></i>Work
+ </button>
+ <button onclick="switchTab('studentq')" id="tab-studentq" class="tab-btn relative px-5 py-2 text-sm font-medium transition-all duration-200 text-ink-400 border-b-2 border-transparent hover:text-ink-700">
+ <i class="fa-solid fa-comments mr-1.5"></i>学生提问
+ </button>
+ <div class="relative" id="gradingTabContainer">
+ <button onclick="toggleGradingDropdown()" id="tab-grading" class="tab-btn relative px-5 py-2 text-sm font-medium transition-all duration-200 text-ink-400 border-b-2 border-transparent hover:text-ink-700">
+ <i class="fa-solid fa-pen-to-square mr-1.5"></i>题目批改
+ <i class="fa-solid fa-chevron-down text-[9px] ml-1 transition-transform duration-200" id="gradingTabArrow"></i>
+ </button>
+ <div id="gradingDropdownPanel" class="hidden absolute top-full left-0 mt-0.5 bg-white shadow-xl border border-ink-100 rounded-xl z-50 overflow-hidden min-w-[150px]">
+ <div onclick="switchGradingTab('exam')" class="flex items-center gap-2 px-4 py-2.5 text-xs font-medium text-ink-600 hover:bg-ink-50 hover:text-ink-900 cursor-pointer transition-all border-b border-ink-50">
+ <i class="fa-solid fa-file-pen text-ink-400"></i>试卷批改
+ </div>
+ <div onclick="switchGradingTab('homework')" class="flex items-center gap-2 px-4 py-2.5 text-xs font-medium text-ink-600 hover:bg-ink-50 hover:text-ink-900 cursor-pointer transition-all border-b border-ink-50">
+ <i class="fa-solid fa-book text-ink-400"></i>作业批改
+ </div>
+ <div onclick="switchGradingTab('essay')" class="flex items-center gap-2 px-4 py-2.5 text-xs font-medium text-ink-600 hover:bg-ink-50 hover:text-ink-900 cursor-pointer transition-all border-b border-ink-50">
+ <i class="fa-solid fa-feather text-ink-400"></i>作文批改
+ </div>
+ <div onclick="switchGradingTab('assignment')" class="flex items-center gap-2 px-4 py-2.5 text-xs font-medium text-ink-600 hover:bg-ink-50 hover:text-ink-900 cursor-pointer transition-all">
+ <i class="fa-solid fa-list-check text-ink-400"></i>学生作业
+ </div>
+ </div>
+ </div>
+ <button onclick="switchTab('paper')" id="tab-paper" class="tab-btn relative px-5 py-2 text-sm font-medium transition-all duration-200 text-ink-400 border-b-2 border-transparent hover:text-ink-700">
+ <i class="fa-solid fa-layer-group mr-1.5"></i>智能组卷
+ </button>
+ <button onclick="switchTab('analytics')" id="tab-analytics" class="tab-btn relative px-5 py-2 text-sm font-medium transition-all duration-200 text-ink-400 border-b-2 border-transparent hover:text-ink-700">
+ <i class="fa-solid fa-chart-line mr-1.5"></i>学生学情分析
+ </button>
+ </div>
+
+ <div class="flex items-center space-x-2">
+ <div id="connectionStatus" class="flex items-center space-x-2 text-xs text-ink-400 bg-ink-50 px-2.5 py-1 rounded-full font-medium">
+ <span class="w-2 h-2 rounded-full bg-ink-300"></span>
+ <span>未配置智能体</span>
+ </div>
+ <button onclick="openSettings()" class="flex items-center gap-1.5 px-3 py-1.5 bg-ink-50 hover:bg-ink-100 border border-ink-200 rounded-lg transition" title="设置">
+ <i class="fa-solid fa-gear text-ink-500 text-sm"></i>
+ <span class="text-xs text-ink-600 font-medium">设置</span>
+ </button>
+ </div>
+ </header>
+
+ <!-- ========== Tab 1: 备课 ========== -->
+ <main id="page-prepare" class="tab-page flex-1 flex flex-col md:flex-row p-4 overflow-hidden bg-white border border-ink-200">
+ <!-- 左侧任务栏切换按钮（隐藏时显示） -->
+ <button onclick="toggleBeikeSidebar()" id="beikeSidebarShowBtn" class="hidden absolute left-4 top-1/2 -translate-y-1/2 z-10 w-6 h-12 bg-ink-50 hover:bg-ink-100 rounded-r-lg flex items-center justify-center text-ink-400 hover:text-ink-600 transition" title="显示任务栏"><i class="fa-solid fa-chevron-right text-[10px]"></i></button>
+
+ <section class="w-full md:w-[15%] flex flex-col overflow-hidden" id="beikeSidebar">
+ <div class="inner">
+ <div class="p-4 space-y-1">
+ <div class="flex items-center justify-between">
+ <span class="text-xs font-semibold text-ink-500">任务栏</span>
+ <button onclick="toggleBeikeSidebar()" class="w-6 h-6 flex items-center justify-center rounded hover:bg-ink-100 text-ink-400 hover:text-ink-600 transition" title="隐藏任务栏"><i class="fa-solid fa-chevron-left text-[10px]"></i></button>
+ </div>
+ <button onclick="newBeikeTask()" class="w-full flex items-center gap-3 px-3 py-2.5 rounded-xl hover:bg-ink-50 transition text-left">
+ <div class="w-8 h-8 bg-jade-50 text-jade-600 rounded-lg flex items-center justify-center shrink-0"><i class="fa-solid fa-circle-plus text-sm"></i></div>
+ <span class="text-sm text-ink-700 font-medium">新建任务</span>
+ </button>
+ <button onclick="openBeikeSkills()" class="w-full flex items-center gap-3 px-3 py-2.5 rounded-xl hover:bg-ink-50 transition text-left">
+ <div class="w-8 h-8 bg-ink-50 text-ink-500 rounded-lg flex items-center justify-center shrink-0"><i class="fa-solid fa-clone text-sm"></i></div>
+ <span class="text-sm text-ink-700 font-medium">技能</span>
+ </button>
+ </div>
+ <div class="flex-1 flex flex-col min-h-0 border-t border-ink-100 mt-1" id="beikeHistoryPanel">
+ <div class="px-4 pt-3 pb-2 flex items-center justify-between">
+ <span class="text-xs font-semibold text-ink-500">教案记录</span>
+ <div class="flex items-center gap-2 text-ink-300">
+ <button onclick="toggleBeikeHistoryView()" id="beikeHistoryExpandBtn" class="hover:text-ink-500 transition" title="展开/折叠"><i class="fa-solid fa-chevron-down text-[11px]"></i></button>
+ <button onclick="confirmClearBeikeHistory()" id="beikeHistoryClearBtn" class="hover:text-rose-500 transition hidden" title="清空记录"><i class="fa-solid fa-trash-can text-[11px]"></i></button>
+ </div>
+ </div>
+ <div id="beikeHistoryList" class="flex-1 overflow-y-auto scroll-thin px-2 pb-3 space-y-1">
+ <p id="beikeHistoryEmpty" class="text-xs text-ink-300 text-center py-8">暂无教案记录</p>
+ </div>
+ </div>
+ </div>
+ </section>
+
+ <!-- 技能市场弹窗 -->
+ <div id="beikeSkillsModal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/30" onclick="if(event.target===this)closeBeikeSkills()">
+ <div class="bg-white rounded-2xl shadow-xl w-[680px] max-w-[92vw] max-h-[88vh] flex flex-col">
+ <div class="px-5 py-4 border-b border-ink-100 flex items-center justify-between">
+ <div class="flex items-center gap-2.5">
+ <div class="w-8 h-8 bg-ink-50 text-ink-500 rounded-lg flex items-center justify-center"><i class="fa-solid fa-store text-sm"></i></div>
+ <div>
+ <h2 class="text-sm font-semibold text-ink-900 font-display">技能市场</h2>
+ <p class="text-[11px] text-ink-400">选择适合的技能提升教研效率</p>
+ </div>
+ </div>
+ <div class="flex items-center gap-3">
+ <button onclick="importBeikeSkill()" class="text-xs text-jade-600 hover:text-jade-700 transition flex items-center gap-1.5"><i class="fa-solid fa-file-import"></i>导入技能</button>
+ <button onclick="closeBeikeSkills()" class="text-ink-300 hover:text-ink-500 transition"><i class="fa-solid fa-xmark"></i></button>
+ </div>
+ </div>
+ <div class="flex-1 overflow-y-auto scroll-thin p-5">
+ <div id="beikeSkillGrid" class="grid grid-cols-2 gap-3"></div>
+ </div>
+ </div>
+ </div>
+
+ <!-- 确认弹窗 -->
+ <div id="beikeConfirmModal" class="fixed inset-0 z-[60] hidden items-center justify-center bg-black/30">
+ <div class="bg-white rounded-2xl shadow-xl w-[360px] max-w-[90vw] p-6">
+ <div class="flex items-start gap-3 mb-4">
+ <div class="w-10 h-10 bg-rose-50 text-rose-500 rounded-xl flex items-center justify-center shrink-0"><i class="fa-solid fa-triangle-exclamation"></i></div>
+ <div>
+ <h3 id="beikeConfirmTitle" class="text-sm font-semibold text-ink-900 mb-1">确认操作</h3>
+ <p id="beikeConfirmMsg" class="text-xs text-ink-500 leading-relaxed">确定要执行此操作吗？</p>
+ </div>
+ </div>
+ <div class="flex justify-end gap-2">
+ <button onclick="closeBeikeConfirm()" class="px-4 py-2 text-xs text-ink-500 hover:text-ink-700 transition rounded-lg hover:bg-ink-50">取消</button>
+ <button id="beikeConfirmOkBtn" class="px-4 py-2 text-xs text-white bg-rose-500 hover:bg-rose-600 rounded-lg transition">确认</button>
+ </div>
+ </div>
+ </div>
+
+
+<!-- 导入学情数据弹窗 -->
+<div id="importDataModal" class="fixed inset-0 z-[60] hidden items-center justify-center bg-black/30" onclick="if(event.target===this)closeImportDataModal()">
+ <div class="bg-white rounded-2xl shadow-xl w-[560px] max-w-[90vw] max-h-[90vh] flex flex-col overflow-hidden">
+  <div class="px-6 py-4 border-b border-ink-200 flex items-center justify-between shrink-0">
+   <h3 class="text-sm font-semibold text-ink-900 flex items-center gap-2"><i class="fa-solid fa-database text-jade-600"></i>数据编辑</h3>
+   <button onclick="closeImportDataModal()" class="text-ink-400 hover:text-ink-600 transition"><i class="fa-solid fa-xmark"></i></button>
+  </div>
+  <!-- 滑块切换 -->
+  <div class="px-6 pt-4 shrink-0">
+   <div class="relative flex items-center bg-ink-100 rounded-lg p-0.5 text-xs font-medium select-none cursor-pointer" id="dataEditSwitch" onclick="toggleDataEditMode()">
+    <div id="dataEditThumb" class="absolute top-0.5 left-0.5 h-[calc(100%-4px)] bg-white rounded-md shadow-sm transition-all duration-200" style="width:80px"></div>
+    <span id="dataEditImportLabel" class="relative z-10 px-4 py-1.5 text-ink-900 transition-colors flex-1 text-center">导入数据</span>
+    <span id="dataEditManageLabel" class="relative z-10 px-4 py-1.5 text-ink-400 transition-colors flex-1 text-center">数据管理</span>
+   </div>
+  </div>
+  <!-- 导入数据面板 -->
+  <div id="dataEditImportPanel" class="p-6 space-y-4 overflow-y-auto scroll-thin flex-1">
+   <div class="grid grid-cols-2 gap-3">
+   <div class="field px-3 py-1.5"><label class="text-[10px] text-ink-400 block leading-none mb-0.5">考试名称</label>
+   <input id="impExamName" type="text" placeholder="如：2026届四模" class="w-full text-xs text-ink-700 font-medium bg-transparent outline-none"></div>
+   <div class="field px-3 py-1.5"><label class="text-[10px] text-ink-400 block leading-none mb-0.5">考试日期</label>
+   <input id="impExamDate" type="date" class="w-full text-xs text-ink-700 font-medium bg-transparent outline-none"></div>
+   </div>
+   <div class="field px-3 py-1.5"><label class="text-[10px] text-ink-400 block leading-none mb-0.5">班级</label>
+   <select id="impClass" class="w-full text-xs text-ink-700 font-medium bg-transparent outline-none"><option>高三（1）班</option><option>高三（2）班</option><option>高三（3）班</option></select></div>
+   <div>
+   <label class="text-[10px] text-ink-400 block mb-1.5">成绩表（Excel/CSV）</label>
+   <div id="impGradeDrop" class="border-2 border-dashed border-ink-200 rounded-xl p-4 text-center cursor-pointer hover:border-jade-300 transition" onclick="document.getElementById('impGradeFile').click()">
+   <i class="fa-solid fa-file-excel text-2xl text-ink-300 mb-1"></i>
+   <p class="text-[11px] text-ink-400">点击或拖拽上传 .xlsx/.xls/.csv 文件</p>
+   <p id="impGradeFileName" class="text-[11px] text-jade-600 mt-1 hidden"></p>
+   <input id="impGradeFile" type="file" accept=".xlsx,.xls,.csv" class="hidden" onchange="onGradeFileSelected(this)">
+   </div>
+   </div>
+   <div>
+   <label class="text-[10px] text-ink-400 block mb-1.5">试卷</label>
+   <div id="impPaperDrop" class="border-2 border-dashed border-ink-200 rounded-xl p-4 text-center cursor-pointer hover:border-jade-300 transition" onclick="document.getElementById('impPaperFile').click()">
+   <i class="fa-solid fa-file-lines text-2xl text-ink-300 mb-1"></i>
+   <p class="text-[11px] text-ink-400">点击或拖拽上传 docx/pdf/jpg/png</p>
+   <p id="impPaperFileName" class="text-[11px] text-jade-600 mt-1 hidden"></p>
+   <input id="impPaperFile" type="file" accept=".docx,.pdf,.jpg,.jpeg,.png" class="hidden" onchange="onPaperFileSelected(this)">
+   </div>
+   </div>
+   <div>
+   <label class="text-[10px] text-ink-400 block mb-1.5">参考答案及评分标准</label>
+   <div id="impAnswerDrop" class="border-2 border-dashed border-ink-200 rounded-xl p-4 text-center cursor-pointer hover:border-jade-300 transition" onclick="document.getElementById('impAnswerFile').click()">
+   <i class="fa-solid fa-file-circle-check text-2xl text-ink-300 mb-1"></i>
+   <p class="text-[11px] text-ink-400">点击或拖拽上传 docx/pdf/jpg/png</p>
+   <p id="impAnswerFileName" class="text-[11px] text-jade-600 mt-1 hidden"></p>
+   <input id="impAnswerFile" type="file" accept=".docx,.pdf,.jpg,.jpeg,.png" class="hidden" onchange="onAnswerFileSelected(this)">
+   </div>
+   </div>
+  </div>
+  <!-- 数据管理面板 -->
+  <div id="dataEditManagePanel" class="p-6 space-y-3 overflow-y-auto scroll-thin flex-1 hidden">
+   <div id="dataManageList" class="space-y-2">
+    <p class="text-xs text-ink-400 text-center py-8">暂无导入的考试数据</p>
+   </div>
+  </div>
+  <!-- 底部按钮 -->
+  <div id="dataEditImportFooter" class="px-6 py-4 border-t border-ink-200 flex justify-end gap-2 shrink-0">
+   <button onclick="closeImportDataModal()" class="px-4 py-2 text-xs text-ink-500 hover:bg-ink-50 rounded-lg transition">取消</button>
+   <button onclick="submitImportData()" class="px-4 py-2 text-xs text-white bg-jade-600 hover:bg-jade-700 rounded-lg transition flex items-center gap-1.5"><i class="fa-solid fa-check"></i>确认导入</button>
+  </div>
+  <div id="dataEditManageFooter" class="px-6 py-4 border-t border-ink-200 flex justify-end shrink-0 hidden">
+   <button onclick="closeImportDataModal()" class="px-4 py-2 text-xs text-ink-500 hover:bg-ink-50 rounded-lg transition">关闭</button>
+  </div>
+ </div>
+</div>
+
+<!-- 学生详情弹窗 -->
+<div id="stuDetailModal" class="fixed inset-0 z-[60] hidden items-center justify-center bg-black/30" onclick="if(event.target===this)closeStuDetail()">
+ <div class="bg-white rounded-2xl shadow-xl w-[820px] max-w-[95vw] max-h-[90vh] flex flex-col overflow-hidden">
+  <div class="px-5 py-3 border-b border-ink-200 flex items-center justify-between shrink-0">
+   <div class="flex items-center gap-2.5">
+    <div class="w-9 h-9 bg-jade-50 flex items-center justify-center text-jade-600 rounded-xl"><i class="fa-solid fa-user-graduate"></i></div>
+    <div><h3 id="stuDetailName" class="text-sm font-semibold text-ink-900 font-display">学生详情</h3><p id="stuDetailSub" class="text-xs text-ink-400"></p></div>
+   </div>
+   <button onclick="closeStuDetail()" class="text-ink-400 hover:text-ink-600 transition"><i class="fa-solid fa-xmark"></i></button>
+  </div>
+  <div class="flex-1 overflow-y-auto scroll-thin p-5 space-y-4">
+   <!-- 成绩表格 -->
+   <div id="stuDetailScores"></div>
+   <!-- 雷达图 + 折线图 -->
+   <div class="grid grid-cols-2 gap-4">
+    <div>
+     <h4 class="text-xs font-semibold text-ink-700 mb-2">各模块得分雷达图</h4>
+     <div class="relative bg-ink-50/30 rounded-xl p-2" style="height:280px"><canvas id="stuRadarChart"></canvas></div>
+    </div>
+    <div>
+     <h4 class="text-xs font-semibold text-ink-700 mb-2">多次考试得分趋势</h4>
+     <div class="relative bg-ink-50/30 rounded-xl p-2" style="height:280px"><canvas id="stuTrendChart"></canvas></div>
+    </div>
+   </div>
+   <!-- AI 报告 -->
+   <div>
+    <div class="flex items-center justify-between mb-2">
+     <h4 class="text-xs font-semibold text-ink-700">AI 个性化分析报告</h4>
+     <button onclick="generateStuReport()" id="stuReportBtn" class="text-[11px] text-white bg-jade-600 hover:bg-jade-700 rounded-lg px-3 py-1.5 transition flex items-center gap-1.5"><i class="fa-solid fa-wand-magic-sparkles"></i>生成报告</button>
+    </div>
+    <div id="stuReportBody" class="rounded-xl border border-ink-200 p-4 min-h-[60px]">
+     <p class="text-xs text-ink-400 text-center py-4">点击「生成报告」获取 AI 针对该学生的个性化分析</p>
+    </div>
+   </div>
+  </div>
+ </div>
+</div>
+
+ <!-- 隐藏的备课参数（JS 使用） -->
+ <div class="hidden">
+ <select id="beikeGrade"><option>高一</option><option>高二</option><option selected>高三</option></select>
+ <input id="beikeTopic" type="text" placeholder="如：函数的单调性">
+ <select id="beikeDuration"><option>1课时</option><option selected>2课时</option><option>1节复习课</option><option>专题课</option></select>
+ <textarea id="beikeRemark" rows="3" placeholder="如：侧重核心素养、融入情境教学、面向基础薄弱班级..."></textarea>
+ <button onclick="startPrepare()"></button>
+ </div>
+
+ <section id="beikeSection" class="flex-1 flex flex-col md:border-l md:border-ink-200 relative min-w-0">
+ <div class="px-5 py-3 border-b border-ink-200 flex items-center justify-between">
+ <span class="text-sm font-semibold text-ink-900 font-display">教案工作区</span>
+ <button onclick="toggleBeikeRightPanel()" id="beikeRightPanelToggleBtn" class="text-ink-600 hover:text-ink-800 hover:bg-ink-100 transition text-sm flex items-center gap-1 w-8 h-8 justify-center rounded-lg bg-ink-50" title="显示/隐藏侧边栏"><i class="fa-solid fa-chevron-left"></i></button>
+ </div>
+ <div class="flex-1 flex min-h-0">
+ <div id="beikeContentWrap" class="flex-1 flex flex-col min-h-0 min-w-0">
+ <div id="beikeMessages" class="flex-1 overflow-y-auto scroll-thin p-5 space-y-4">
+ <div id="beikeEmptyHint" class="flex flex-col items-center justify-center text-center py-10 -mt-32">
+ <div class="w-16 h-16 bg-ink-50 rounded-2xl flex items-center justify-center text-ink-300 mb-4"><i class="fa-solid fa-feather-pointed text-2xl"></i></div>
+ <p class="text-sm text-ink-500 mb-1">填写课题后点击「生成教案」</p>
+ <p class="text-xs text-ink-400">AI 将生成教学目标、重难点、教学过程、板书设计与作业</p>
+ </div>
+ </div>
+ <div id="beikeInputArea" class="px-5 pb-4 pt-2">
+ <div id="beikeTitleWrap" class="text-center mb-4">
+ <h3 id="beikeTitle" class="text-2xl font-medium text-ink-600 tracking-wide typing-cursor"></h3>
+ <p class="text-xs text-ink-400 mt-1">输入课题开始智能教研</p>
+ </div>
+ <div id="beikeInputCard" class="relative">
+ <textarea id="beikeInput" rows="2.6" placeholder="输入课题、追问或调整教案..." class="w-full px-5 pt-4 pb-2 text-sm border-0 focus:ring-0 resize-none scroll-thin leading-relaxed placeholder:text-ink-300 appearance-none bg-transparent rounded-t-[18px]" onkeydown="if(event.key==='Enter'&&!event.shiftKey){event.preventDefault();sendBeikeFollowup();}"></textarea>
+ <div id="beikeAttachments" class="flex flex-wrap gap-1.5 px-5 pb-1"></div>
+ <div class="flex items-center justify-between px-3 py-0.5">
+ <div class="flex items-center gap-1">
+ <div class="relative">
+ <button onclick="togglePlusMenu('beike');event.stopPropagation();" id="beikePlusBtn" class="w-8 h-8 flex items-center justify-center rounded-full hover:bg-ink-50 text-ink-400 hover:text-jade-600 transition" title="上传文件 / 图片 / 拍照"><i class="fa-solid fa-plus text-base"></i></button>
+ <div id="beikePlusMenu" class="hidden absolute bottom-full left-0 mb-1.5 bg-white shadow-xl border border-ink-100 rounded-xl z-50 overflow-hidden min-w-[160px]">
+ <button onclick="triggerRichInput('beike','file')" class="w-full text-left px-3 py-2 text-xs text-ink-700 hover:bg-ink-50 flex items-center gap-2"><i class="fa-solid fa-paperclip text-ink-400 w-4"></i>上传文件</button>
+ <button onclick="triggerRichInput('beike','image')" class="w-full text-left px-3 py-2 text-xs text-ink-700 hover:bg-ink-50 flex items-center gap-2"><i class="fa-solid fa-image text-ink-400 w-4"></i>上传图片</button>
+ <button onclick="triggerRichInput('beike','camera')" class="w-full text-left px-3 py-2 text-xs text-ink-700 hover:bg-ink-50 flex items-center gap-2"><i class="fa-solid fa-camera text-ink-400 w-4"></i>拍照上传</button>
+ </div>
+ </div>
+ <div class="relative">
+ <button onclick="toggleSkillMenu('beike');event.stopPropagation();" id="beikeSkillBtn" class="w-8 h-8 flex items-center justify-center rounded-full hover:bg-ink-50 text-ink-400 hover:text-jade-600 transition" title="Skill 技能"><i class="fa-solid fa-wand-magic-sparkles text-sm"></i></button>
+ <div id="beikeSkillMenu" class="hidden absolute bottom-full left-0 mb-1.5 bg-white shadow-xl border border-ink-100 rounded-xl z-50 overflow-hidden min-w-[200px]">
+ <button onclick="applyBeikeSkill('lesson-design')" class="w-full text-left px-3 py-2 text-xs text-ink-700 hover:bg-ink-50 flex items-center gap-2"><i class="fa-solid fa-book-open text-jade-500 w-4"></i>单元整体设计</button>
+ <button onclick="applyBeikeSkill('homework')" class="w-full text-left px-3 py-2 text-xs text-ink-700 hover:bg-ink-50 flex items-center gap-2"><i class="fa-solid fa-clipboard-check text-jade-500 w-4"></i>分层作业设计</button>
+ <button onclick="applyBeikeSkill('exam')" class="w-full text-left px-3 py-2 text-xs text-ink-700 hover:bg-ink-50 flex items-center gap-2"><i class="fa-solid fa-file-pen text-jade-500 w-4"></i>同步练习命题</button>
+ <button onclick="applyBeikeSkill('expand')" class="w-full text-left px-3 py-2 text-xs text-ink-700 hover:bg-ink-50 flex items-center gap-2"><i class="fa-solid fa-lightbulb text-jade-500 w-4"></i>教学拓展资源</button>
+ </div>
+ </div>
+ <!-- Agent/Chat 模式切换 -->
+ <div onclick="toggleBeikeMode();event.stopPropagation();" class="relative flex items-center bg-ink-50 rounded-lg p-0.5 cursor-pointer select-none" id="beikeModeToggle" title="切换 Agent / Chat 模式" style="width:96px;">
+  <div id="beikeModeSlider" class="absolute top-0.5 left-0.5 h-[calc(100%-4px)] w-[calc(50%-2px)] bg-jade-600 rounded-md shadow-sm transition-all duration-300 ease-in-out" style="transform:translateX(100%);"></div>
+  <span class="relative z-10 flex-1 py-1 text-center text-[10px] font-medium transition-colors duration-300 text-ink-400" id="beikeModeAgent">Agent</span>
+  <span class="relative z-10 flex-1 py-1 text-center text-[10px] font-medium transition-colors duration-300 text-white" id="beikeModeChat">Chat</span>
+ </div>
+ </div>
+ <div class="flex items-center gap-1">
+ <div class="relative">
+ <button onclick="toggleBeikeInlineModel();event.stopPropagation();" id="beikeInlineModelBtn" class="flex items-center gap-1.5 px-2.5 py-1.5 text-xs text-ink-600 hover:bg-ink-50 rounded-lg transition max-w-[220px]" title="切换智能体">
+ <span class="shrink-0 flex items-center" id="beikeInlineModelDot"><span class="w-2 h-2 rounded-full bg-ink-300"></span></span>
+ <span id="beikeInlineModelLabel" class="truncate" title="">未配置</span>
+ <i class="fa-solid fa-chevron-down text-ink-300 text-[8px] shrink-0"></i>
+ </button>
+ <div id="beikeInlineModelPanel" class="hidden absolute bottom-full left-0 mb-1 bg-white shadow-xl border border-ink-100 rounded-xl z-50 overflow-hidden min-w-[220px] max-w-[320px] max-h-56 overflow-y-auto settings-scroll"></div>
+ </div>
+ <button onclick="toggleBeikeSearch();event.stopPropagation();" id="beikeSearchBtn" class="flex items-center gap-1 px-2 py-1.5 text-xs rounded-lg transition text-ink-400 hover:bg-ink-50 border border-transparent" title="联网搜索" style="display:none;"><i class="fa-solid fa-globe text-sm text-ink-400"></i><span>联网</span></button>
+ <button onclick="beikeVoiceInput()" class="w-8 h-8 flex items-center justify-center rounded-full hover:bg-ink-50 text-ink-400 hover:text-jade-600 transition" title="语音输入"><i class="fa-solid fa-microphone text-sm"></i></button>
+ <button onclick="beikeVoiceDiscuss()" class="w-8 h-8 flex items-center justify-center rounded-full hover:bg-ink-50 text-ink-400 hover:text-jade-600 transition" title="语音讨论"><i class="fa-solid fa-headphones text-sm"></i></button>
+ <button onclick="sendBeikeFollowup()" id="beikeSendBtn" class="w-9 h-9 bg-jade-600 hover:bg-jade-700 text-white rounded-xl text-xs transition flex items-center justify-center shadow-sm" title="发送"><i class="fa-solid fa-paper-plane"></i></button>
+ </div>
+ </div>
+ </div>
+ <input type="file" id="beikeFileInput" class="hidden" accept=".jpg,.jpeg,.png,.pdf,.docx,.doc,.txt" multiple onchange="handleRichInputFiles('beike',this.files)">
+ <input type="file" id="beikeImageInput" class="hidden" accept="image/*" multiple onchange="handleRichInputFiles('beike',this.files)">
+ <input type="file" id="beikeCameraInput" class="hidden" accept="image/*" capture="environment" onchange="handleRichInputFiles('beike',this.files)">
+ </div>
+ </div>
+ <!-- 右侧侧边栏 -->
+ <aside id="beikeRightPanel" class="collapsed md:border-l md:border-ink-200 overflow-hidden md:w-[28%] md:min-w-[340px] shrink-0">
+ <div class="inner">
+ <!-- 待办 -->
+ <div class="border-b border-ink-100 flex-[35] flex flex-col min-h-0 overflow-hidden">
+ <div class="px-4 pt-3 pb-2 flex items-center justify-between shrink-0">
+ <span class="text-xs font-semibold text-ink-500 flex items-center gap-1.5"><i class="fa-solid fa-list-check text-ink-400"></i>待办</span>
+ <span id="beikeTodoCount" class="text-[10px] text-ink-300 bg-ink-50 px-1.5 rounded">0</span>
+ </div>
+ <div id="beikeTodoList" class="flex-1 overflow-y-auto scroll-thin px-3 pb-3 space-y-1">
+ <p class="text-[11px] text-ink-300 text-center py-3">暂无待办</p>
+ </div>
+ </div>
+ <!-- 任务产物 -->
+ <div class="border-b border-ink-100 flex-[35] flex flex-col min-h-0">
+ <div class="px-4 pt-3 pb-2 flex items-center justify-between">
+ <span class="text-xs font-semibold text-ink-500 flex items-center gap-1.5"><i class="fa-solid fa-file-export text-ink-400"></i>任务产物</span>
+ </div>
+ <div id="beikeArtifactList" class="flex-1 overflow-y-auto overflow-x-hidden scroll-thin px-3 pb-3 space-y-1">
+ <p class="text-[11px] text-ink-300 text-center py-3">暂无产物</p>
+ </div>
+ </div>
+ <!-- 参考信息 -->
+ <div class="flex-[30] flex flex-col min-h-0">
+ <div class="px-4 pt-3 pb-2 flex items-center justify-between">
+ <span class="text-xs font-semibold text-ink-500 flex items-center gap-1.5"><i class="fa-solid fa-circle-info text-ink-400"></i>参考信息</span>
+ </div>
+ <div id="beikeRefList" class="flex-1 overflow-y-auto scroll-thin px-3 pb-3 space-y-1">
+ <p class="text-[11px] text-ink-300 text-center py-3">暂无参考</p>
+ </div>
+ </div>
+ </div>
+ </aside>
+ </div>
+ </section>
+ </main>
+
+ <!-- ========== Tab 2: 学生提问 ========== -->
+ <div id="page-studentq" class="tab-page hidden flex-1 flex flex-col md:flex-row p-4 overflow-hidden bg-white border border-ink-200">
+ <section class="w-full md:w-[32%] flex flex-col overflow-hidden">
+ <div class="px-5 py-3 border-b border-ink-200 flex items-center justify-between">
+ <div class="flex items-center gap-3">
+ <div class="w-9 h-9 bg-jade-50 text-jade-600 rounded-xl flex items-center justify-center"><i class="fa-solid fa-comments"></i></div>
+ <div>
+ <h2 class="text-sm font-semibold text-ink-900 font-display">学生提问</h2>
+ <p class="text-xs text-ink-400">辅助教师解答学生疑难</p>
+ </div>
+ </div>
+ <button onclick="showNewQuestionForm()" class="text-xs text-jade-600 hover:text-jade-700 font-medium px-2 py-1 border border-jade-200 hover:border-jade-400 rounded-lg transition"><i class="fa-solid fa-plus mr-1"></i>新建</button>
+ </div>
+ <div id="sqFilterBar" class="px-5 py-2 border-b border-ink-100 bg-ink-50/40 flex items-center gap-1.5">
+ <button onclick="setSqFilter('pending')" id="sqFilterPending" class="flex-1 py-1.5 text-xs font-medium rounded-lg transition flex items-center justify-center gap-1.5 bg-white text-jade-700 border border-jade-200"><span class="w-1.5 h-1.5 rounded-full bg-tan-400"></span>未回答 <span id="sqPendingCount" class="text-[10px] text-ink-400">0</span></button>
+ <button onclick="setSqFilter('answered')" id="sqFilterAnswered" class="flex-1 py-1.5 text-xs font-medium rounded-lg transition flex items-center justify-center gap-1.5 text-ink-500 hover:bg-white border border-transparent"><span class="w-1.5 h-1.5 rounded-full bg-jade-500"></span>已回答 <span id="sqAnsweredCount" class="text-[10px] text-ink-400">0</span></button>
+ </div>
+ <div id="sqList" class="flex-1 overflow-y-auto scroll-thin"></div>
+ </section>
+ <section class="w-full md:w-[68%] flex flex-col overflow-hidden md:border-l md:border-ink-200">
+ <div class="px-5 py-3 border-b border-ink-200 flex items-center justify-between">
+ <span class="text-sm font-semibold text-ink-900 font-display">解答与讲评</span>
+ <button onclick="clearSqChat()" class="text-[11px] text-ink-400 hover:text-rose-500 transition"><i class="fa-solid fa-rotate-left mr-1"></i>清空</button>
+ </div>
+ <div id="sqMessages" class="flex-1 overflow-y-auto scroll-thin p-5 space-y-4">
+ <div class="flex flex-col items-center justify-center h-full text-center py-16">
+ <div class="w-16 h-16 bg-ink-50 rounded-2xl flex items-center justify-center text-ink-300 mb-4"><i class="fa-solid fa-circle-question text-2xl"></i></div>
+ <p class="text-sm text-ink-500 mb-1">点击左侧问题查看详情</p>
+ <p class="text-xs text-ink-400">或点击右上角「新建」录入新问题</p>
+ </div>
+ </div>
+ <div class="p-3 border-t border-ink-100">
+ <div class="flex items-center gap-2 mb-1.5">
+ <button onclick="togglePlusMenu('sq')" id="sqPlusBtn" class="w-8 h-8 flex items-center justify-center rounded-full bg-white border border-ink-200 hover:border-jade-400 hover:text-jade-600 text-ink-500 transition shrink-0" title="上传文件 / 图片 / 拍照"><i class="fa-solid fa-plus text-xs"></i></button>
+ <div class="flex-1 relative">
+ <input id="sqInput" type="text" placeholder="追问：再出一道同类变式题..." class="w-full px-4 py-2 text-sm border border-ink-200 focus:border-ink-400 rounded-xl focus:ring-2 focus:ring-ink-100 transition pr-10" onkeydown="if(event.key==='Enter')sendSqFollowup()">
+ <button onclick="sendSqFollowup()" class="absolute right-1.5 top-1/2 -translate-y-1/2 w-7 h-7 bg-jade-600 hover:bg-jade-700 text-white rounded-lg text-xs transition flex items-center justify-center"><i class="fa-solid fa-paper-plane"></i></button>
+ </div>
+ </div>
+ <div id="sqAttachments" class="flex flex-wrap gap-1.5 mb-1"></div>
+ <div id="sqPlusMenu" class="hidden absolute mt-1 bg-white shadow-xl border border-ink-100 rounded-xl z-50 overflow-hidden min-w-[160px]">
+ <button onclick="triggerRichInput('sq','file')" class="w-full text-left px-3 py-2 text-xs text-ink-700 hover:bg-ink-50 flex items-center gap-2"><i class="fa-solid fa-paperclip text-ink-400 w-4"></i>上传文件</button>
+ <button onclick="triggerRichInput('sq','image')" class="w-full text-left px-3 py-2 text-xs text-ink-700 hover:bg-ink-50 flex items-center gap-2"><i class="fa-solid fa-image text-ink-400 w-4"></i>上传图片</button>
+ <button onclick="triggerRichInput('sq','camera')" class="w-full text-left px-3 py-2 text-xs text-ink-700 hover:bg-ink-50 flex items-center gap-2"><i class="fa-solid fa-camera text-ink-400 w-4"></i>拍照上传</button>
+ </div>
+ <input type="file" id="sqFileInput" class="hidden" accept=".jpg,.jpeg,.png,.pdf,.docx,.doc,.txt" multiple onchange="handleRichInputFiles('sq',this.files)">
+ <input type="file" id="sqImageInput" class="hidden" accept="image/*" multiple onchange="handleRichInputFiles('sq',this.files)">
+ <input type="file" id="sqCameraInput" class="hidden" accept="image/*" capture="environment" onchange="handleRichInputFiles('sq',this.files)">
+ </div>
+ </section>
+ </div>
+
+ <!-- ========== Tab 3: 题目批改 ========== -->
+ <div id="page-grading" class="tab-page hidden flex-1 flex flex-col md:flex-row p-4 overflow-hidden bg-white border border-ink-200">
+ <section class="w-full md:w-[26%] flex flex-col overflow-hidden">
+ <div class="px-5 py-3 border-b border-ink-200 flex items-center justify-between shrink-0 h-14">
+ <div class="flex items-center gap-3">
+ <div class="w-9 h-9 bg-jade-50 flex items-center justify-center text-jade-600 rounded-xl"><i class="fa-solid fa-pen-to-square"></i></div>
+ <div>
+ <h2 id="gradingTitle" class="text-sm font-semibold text-ink-900 font-display">试卷批改</h2>
+ <p id="gradingSubTitle" class="text-xs text-ink-400">上传试卷答案，AI 智能批改</p>
+ </div>
+ </div>
+ <div class="flex items-center gap-1.5">
+ <button onclick="toggleGradingHistory()" class="text-xs text-ink-400 hover:text-jade-600 px-2 py-1 hover:bg-jade-50 rounded-md transition flex items-center gap-1" title="查看批改历史记录"><i class="fa-solid fa-clock-rotate-left"></i>历史</button>
+ <button onclick="resetGradingForm()" class="text-xs text-ink-400 hover:text-rose-500 px-2 py-1 hover:bg-rose-50 rounded-md transition"><i class="fa-solid fa-rotate-left mr-1"></i>重置</button>
+ </div>
+ </div>
+ <div class="px-3 py-2 border-b border-ink-200 bg-ink-50/50 flex items-center gap-2.5" id="gradingModelRow">
+ <div class="relative flex-1" id="gradingModelDropdownContainer">
+ <button onclick="toggleGradingModelDropdown()" class="model-dropdown-trigger w-full flex items-center justify-between px-2.5 py-1 bg-white border border-ink-200 rounded-lg shadow-sm hover:border-ink-300">
+ <span class="flex items-center gap-1.5 min-w-0">
+ <span class="text-[9px] text-ink-400 font-medium shrink-0">智能体</span>
+ <span class="text-ink-500 shrink-0 flex items-center" id="gradingModelDot"><span class="w-1.5 h-1.5 rounded-full bg-ink-200"></span></span>
+ <span id="gradingModelLabel" class="text-xs text-ink-500 font-medium truncate">未配置</span>
+ </span>
+ <i class="fa-solid fa-chevron-down text-ink-300 text-[9px] model-dropdown-arrow transition-transform duration-200" id="gradingModelArrow"></i>
+ </button>
+ <div id="gradingModelDropdownPanel" class="model-dropdown-panel hidden absolute left-0 right-0 top-full mt-1 bg-white shadow-xl border border-ink-100 rounded-xl z-50 overflow-hidden">
+ <div id="gradingModelDropdownOptions" class="py-1 max-h-56 overflow-y-auto settings-scroll"></div>
+ <button onclick="openSettingsFromDropdown()" class="w-full text-left px-3 py-2 text-[11px] text-ink-500 hover:bg-ink-50 border-t border-ink-100"><i class="fa-solid fa-gear mr-1"></i>配置智能体</button>
+ </div>
+ </div>
+ </div>
+ <div id="gradingUploadPanel" class="flex-1 overflow-y-auto scroll-thin p-4 space-y-3.5">
+ <div id="gradingEssayLangSection" class="hidden">
+ <label class="text-xs font-semibold text-ink-700 mb-1.5 block">作文语言 <span class="text-rose-400">*</span></label>
+ <div class="flex gap-2">
+ <button type="button" id="gradingEssayLangCN" onclick="selectEssayLang('chinese')" class="flex-1 py-2 text-xs font-medium border transition-all bg-jade-600 text-white border-jade-600 rounded-xl"><i class="fa-solid fa-language mr-1"></i>语文作文</button>
+ <button type="button" id="gradingEssayLangEN" onclick="selectEssayLang('english')" class="flex-1 py-2 text-xs font-medium border transition-all bg-white text-ink-500 border-ink-200 rounded-xl hover:border-ink-400"><i class="fa-solid fa-globe mr-1"></i>英语作文</button>
+ </div>
+ </div>
+ <div id="gradingEssayTopicSection" class="hidden">
+ <label class="text-xs font-semibold text-ink-700 mb-1.5 block">作文题目 <span class="text-rose-400">*</span> <span class="text-[10px] text-ink-400 font-normal">jpg/png/pdf/docx</span></label>
+ <div onclick="document.getElementById('gradingEssayTopicInput').click()" class="border-2 border-dashed border-ink-200 rounded-xl p-4 text-center cursor-pointer hover:border-ink-400 hover:bg-ink-50/50 transition-all">
+ <i class="fa-solid fa-file-lines text-2xl text-ink-300 mb-1.5"></i>
+ <p class="text-xs text-ink-400">点击上传作文题目</p>
+ <input type="file" id="gradingEssayTopicInput" class="hidden" accept=".jpg,.jpeg,.png,.pdf,.docx,.doc" multiple>
+ </div>
+ <div id="gradingEssayTopicFiles" class="flex flex-wrap gap-1.5 mt-2"></div>
+ </div>
+ <div>
+ <label class="text-xs font-semibold text-ink-700 mb-1.5 block"><span id="gradingUploadLabel">试卷上传</span> <span class="text-rose-400">*</span> <span class="text-[10px] text-ink-400 font-normal">jpg/png/pdf/docx</span></label>
+ <div onclick="document.getElementById('gradingExamInput').click()" class="border-2 border-dashed border-ink-200 rounded-xl p-4 text-center cursor-pointer hover:border-ink-400 hover:bg-ink-50/50 transition-all">
+ <i class="fa-solid fa-cloud-arrow-up text-2xl text-ink-300 mb-1.5"></i>
+ <p class="text-xs text-ink-400">点击或拖拽文件上传</p>
+ <input type="file" id="gradingExamInput" class="hidden" accept=".jpg,.jpeg,.png,.pdf,.docx,.doc" multiple>
+ </div>
+ <div id="gradingExamFiles" class="flex flex-wrap gap-1.5 mt-2"></div>
+ </div>
+ <div id="gradingAnswerSection">
+ <label class="text-xs font-semibold text-ink-700 mb-1.5 block">参考答案及评分标准 <span class="text-[10px] text-ink-400 font-normal">（可选）</span></label>
+ <div onclick="document.getElementById('gradingAnswerInput').click()" class="border-2 border-dashed border-ink-200 rounded-xl p-4 text-center cursor-pointer hover:border-ink-400 hover:bg-ink-50/50 transition-all">
+ <i class="fa-solid fa-clipboard-list text-2xl text-ink-300 mb-1.5"></i>
+ <p class="text-xs text-ink-400">点击上传参考答案</p>
+ <input type="file" id="gradingAnswerInput" class="hidden" accept=".jpg,.jpeg,.png,.pdf,.docx,.doc" multiple>
+ </div>
+ <div id="gradingAnswerFiles" class="flex flex-wrap gap-1.5 mt-2"></div>
+ </div>
+ <div id="gradingCardSection">
+ <label class="text-xs font-semibold text-ink-700 mb-1.5 block">答题卡上传 <span class="text-[10px] text-ink-400 font-normal">（可选）</span></label>
+ <div onclick="document.getElementById('gradingCardInput').click()" class="border-2 border-dashed border-ink-200 rounded-xl p-4 text-center cursor-pointer hover:border-ink-400 hover:bg-ink-50/50 transition-all">
+ <i class="fa-solid fa-id-card text-2xl text-ink-300 mb-1.5"></i>
+ <p class="text-xs text-ink-400">点击上传答题卡</p>
+ <input type="file" id="gradingCardInput" class="hidden" accept=".jpg,.jpeg,.png,.pdf,.docx,.doc" multiple>
+ </div>
+ <div id="gradingCardFiles" class="flex flex-wrap gap-1.5 mt-2"></div>
+ </div>
+ <div>
+ <label class="text-xs font-semibold text-ink-700 mb-1.5 block">补充说明</label>
+ <div class="relative">
+ <textarea id="gradingRemark" rows="3" placeholder="输入批改要求或其他说明..." class="w-full pl-3 pr-12 py-2 bg-ink-50/50 border border-ink-200 text-sm focus:border-ink-400 rounded-xl focus:bg-white transition-all text-ink-700 placeholder:text-ink-400 resize-none"></textarea>
+ <button onclick="togglePlusMenu('gradingRemark')" id="gradingRemarkPlusBtn" class="absolute right-2 bottom-2 w-7 h-7 flex items-center justify-center rounded-full bg-white border border-ink-200 hover:border-jade-400 hover:text-jade-600 text-ink-500 transition" title="上传文件 / 图片 / 拍照"><i class="fa-solid fa-plus text-xs"></i></button>
+ <div id="gradingRemarkPlusMenu" class="hidden absolute right-0 bottom-10 bg-white shadow-xl border border-ink-100 rounded-xl z-50 overflow-hidden min-w-[160px]">
+ <button onclick="triggerRichInput('gradingRemark','file')" class="w-full text-left px-3 py-2 text-xs text-ink-700 hover:bg-ink-50 flex items-center gap-2"><i class="fa-solid fa-paperclip text-ink-400 w-4"></i>上传文件</button>
+ <button onclick="triggerRichInput('gradingRemark','image')" class="w-full text-left px-3 py-2 text-xs text-ink-700 hover:bg-ink-50 flex items-center gap-2"><i class="fa-solid fa-image text-ink-400 w-4"></i>上传图片</button>
+ <button onclick="triggerRichInput('gradingRemark','camera')" class="w-full text-left px-3 py-2 text-xs text-ink-700 hover:bg-ink-50 flex items-center gap-2"><i class="fa-solid fa-camera text-ink-400 w-4"></i>拍照上传</button>
+ </div>
+ </div>
+ <div id="gradingRemarkAttachments" class="flex flex-wrap gap-1.5 mt-1.5"></div>
+ <input type="file" id="gradingRemarkFileInput" class="hidden" accept=".jpg,.jpeg,.png,.pdf,.docx,.doc,.txt" multiple onchange="handleRichInputFiles('gradingRemark',this.files)">
+ <input type="file" id="gradingRemarkImageInput" class="hidden" accept="image/*" multiple onchange="handleRichInputFiles('gradingRemark',this.files)">
+ <input type="file" id="gradingRemarkCameraInput" class="hidden" accept="image/*" capture="environment" onchange="handleRichInputFiles('gradingRemark',this.files)">
+ </div>
+ <div id="gradingEssayModelSection" class="hidden">
+ <label class="text-xs font-semibold text-ink-700 mb-1.5 block">范文上传 <span class="text-[10px] text-ink-400 font-normal">（可选）</span></label>
+ <div onclick="document.getElementById('gradingEssayModelInput').click()" class="border-2 border-dashed border-ink-200 rounded-xl p-4 text-center cursor-pointer hover:border-ink-400 hover:bg-ink-50/50 transition-all">
+ <i class="fa-solid fa-book-open text-2xl text-ink-300 mb-1.5"></i>
+ <p class="text-xs text-ink-400">点击上传范文</p>
+ <input type="file" id="gradingEssayModelInput" class="hidden" accept=".jpg,.jpeg,.png,.pdf,.docx,.doc" multiple>
+ </div>
+ <div id="gradingEssayModelFiles" class="flex flex-wrap gap-1.5 mt-2"></div>
+ </div>
+ </div>
+ <!-- 学生作业：布置记录面板 -->
+ <div id="gradingAssignmentPanel" class="hidden flex-1 flex flex-col overflow-hidden">
+ <div class="px-4 py-2 border-b border-ink-100 bg-ink-50/50 flex items-center justify-between shrink-0">
+ <span class="text-xs font-semibold text-ink-700"><i class="fa-solid fa-list-check text-ink-400 mr-1.5"></i>布置记录</span>
+ <span id="assignmentCountBadge" class="text-[10px] text-ink-400">共 0 条</span>
+ </div>
+ <div class="flex-1 overflow-y-auto scroll-thin p-3 space-y-2">
+ <div class="text-[10px] font-semibold text-ink-400 tracking-wider px-1 flex items-center gap-1"><i class="fa-solid fa-hourglass-half text-jade-500"></i>未截止</div>
+ <div id="assignmentActiveList" class="space-y-2"></div>
+ <div class="text-[10px] font-semibold text-ink-400 tracking-wider px-1 pt-3 flex items-center gap-1"><i class="fa-solid fa-hourglass-end text-ink-300"></i>已截止</div>
+ <div id="assignmentExpiredList" class="space-y-2"></div>
+ </div>
+ </div>
+ <div class="p-3 border-t border-ink-200 bg-white">
+ <button onclick="handleGradingSubmit()" id="gradingSubmitBtn" class="w-full py-2.5 bg-jade-600 hover:bg-jade-700 text-white rounded-xl text-sm font-semibold transition-all flex items-center justify-center gap-2"><i class="fa-solid fa-pen-to-square"></i>开始批改</button>
+ <button onclick="showAssignmentNewForm()" id="gradingAssignmentNewBtn" class="hidden w-full py-2.5 bg-jade-600 hover:bg-jade-700 text-white rounded-xl text-sm font-semibold transition-all flex items-center justify-center gap-2"><i class="fa-solid fa-plus"></i>新建作业</button>
+ </div>
+ </section>
+ <section class="flex-1 flex flex-row overflow-hidden md:border-l md:border-ink-200">
+ <div id="gradingUploadView" class="flex-1 flex flex-row overflow-hidden">
+ <!-- 左侧 35%：上传图片展示 -->
+ <div class="w-[35%] flex flex-col overflow-hidden border-r border-ink-200">
+ <div class="px-5 py-3 border-b border-ink-200 flex items-center justify-between shrink-0 h-14">
+ <h2 class="text-sm font-semibold text-ink-900 font-display">上传文件预览</h2>
+ <p class="text-xs text-ink-400">点击批改后展示</p>
+ </div>
+ <div id="gradingImagePreview" class="flex-1 overflow-y-auto scroll-thin p-4">
+ <div class="flex flex-col items-center justify-center h-full text-center py-16 text-ink-400">
+ <i class="fa-solid fa-images text-4xl text-ink-200 mb-3"></i>
+ <p class="text-xs">上传文件并点击批改后展示</p>
+ </div>
+ </div>
+ </div>
+ <!-- 右侧 65%：AI批改报告 -->
+ <div class="w-[65%] flex flex-col overflow-hidden">
+ <div class="px-5 py-3 border-b border-ink-200 flex items-center justify-between shrink-0 h-14">
+ <div class="flex items-center gap-2.5">
+ <span class="w-9 h-9 bg-jade-50 flex items-center justify-center text-jade-600 rounded-xl"><i class="fa-solid fa-clipboard-check"></i></span>
+ <div><h2 class="text-sm font-semibold text-ink-900 font-display">批改报告</h2><p class="text-xs text-ink-400">逐题评分、得分点与提升建议</p></div>
+ </div>
+ <button onclick="clearGradingResult()" class="text-[11px] text-ink-400 hover:text-rose-500 transition"><i class="fa-solid fa-eraser mr-1"></i>清空</button>
+ </div>
+ <div id="gradingResult" class="flex-1 overflow-y-auto scroll-thin p-6">
+ <div class="flex flex-col items-center justify-center h-full text-center py-16 text-ink-400">
+ <i class="fa-solid fa-clipboard-check text-4xl text-ink-200 mb-3"></i>
+ <p class="text-xs">上传试卷与答案后点击「开始批改」</p>
+ </div>
+ </div>
+ </div>
+ </div>
+ <!-- 学生作业：提交情况面板 -->
+ <div id="gradingAssignmentDetail" class="hidden flex-1 flex flex-col overflow-hidden">
+ <!-- 空状态 -->
+ <div id="assignmentDetailDefault" class="flex-1 flex flex-col items-center justify-center text-center py-16 text-ink-400">
+ <i class="fa-solid fa-list-check text-4xl text-ink-200 mb-3"></i>
+ <p class="text-sm text-ink-500 mb-1">从左侧选择作业查看提交情况</p>
+ <p class="text-xs text-ink-400">或点击「新建作业」布置新的作业</p>
+ </div>
+ <!-- 新建作业表单 -->
+ <div id="assignmentDetailForm" class="hidden flex-1 flex flex-col overflow-y-auto scroll-thin p-6">
+ <div class="max-w-xl mx-auto">
+ <div class="flex items-center gap-3 mb-5">
+ <span class="w-9 h-9 bg-jade-50 flex items-center justify-center text-jade-600 rounded-xl"><i class="fa-solid fa-plus"></i></span>
+ <div><h2 class="text-sm font-semibold text-ink-900 font-display">新建作业</h2><p class="text-xs text-ink-400">填写作业信息，布置给学生</p></div>
+ </div>
+ <div class="space-y-4">
+ <div>
+ <label class="text-xs font-semibold text-ink-700 mb-1.5 block">作业标题 <span class="text-rose-400">*</span></label>
+ <input type="text" id="assignmentNewTitle" placeholder="如：函数的单调性 课后作业" class="w-full pl-3 pr-3 py-2 bg-ink-50/50 border border-ink-200 text-sm focus:border-ink-400 rounded-xl focus:bg-white transition-all text-ink-700 placeholder:text-ink-400">
+ </div>
+ <div class="grid grid-cols-2 gap-3">
+ <div>
+ <label class="text-xs font-semibold text-ink-700 mb-1.5 block">班级 <span class="text-rose-400">*</span> <span class="text-[10px] text-ink-400 font-normal">人数固定</span></label>
+ <select id="assignmentNewClass" onchange="onAssignmentClassChange()" class="w-full pl-3 pr-8 py-2 bg-ink-50/50 border border-ink-200 text-sm focus:border-ink-400 rounded-xl focus:bg-white transition-all text-ink-700">
+ <option value="">请选择班级</option>
+ </select>
+ </div>
+ <div>
+ <label class="text-xs font-semibold text-ink-700 mb-1.5 block">班级人数</label>
+ <div id="assignmentNewClassCount" class="w-full pl-3 pr-3 py-2 bg-ink-100/70 border border-ink-100 text-sm rounded-xl text-ink-400 flex items-center"><i class="fa-solid fa-users text-xs mr-1.5"></i>选择班级后显示</div>
+ </div>
+ </div>
+ <div>
+ <label class="text-xs font-semibold text-ink-700 mb-1.5 block">截止时间 <span class="text-rose-400">*</span></label>
+ <input type="datetime-local" id="assignmentNewDeadline" class="w-full pl-3 pr-3 py-2 bg-ink-50/50 border border-ink-200 text-sm focus:border-ink-400 rounded-xl focus:bg-white transition-all text-ink-700">
+ </div>
+ <div>
+ <label class="text-xs font-semibold text-ink-700 mb-1.5 block">作业要求 <span class="text-rose-400">*</span> <span class="text-[10px] text-ink-400 font-normal">必写</span></label>
+ <div class="relative">
+ <textarea id="assignmentNewReq" rows="5" placeholder="说明作业内容、格式要求、提交方式等..." class="w-full pl-3 pr-12 py-2 bg-ink-50/50 border border-ink-200 text-sm focus:border-ink-400 rounded-xl focus:bg-white transition-all text-ink-700 placeholder:text-ink-400 resize-none"></textarea>
+ <div class="absolute right-2 bottom-2 flex items-center gap-1">
+ <button type="button" onclick="polishAssignmentText('assignmentNewReq')" id="polishReqBtn" class="w-7 h-7 flex items-center justify-center rounded-full bg-white border border-ink-200 hover:border-jade-400 hover:text-jade-600 text-ink-500 transition" title="AI 润色"><i class="fa-solid fa-wand-magic-sparkles text-xs"></i></button>
+ <button type="button" onclick="clearAssignmentText('assignmentNewReq')" class="w-7 h-7 flex items-center justify-center rounded-full bg-white border border-ink-200 hover:border-rose-400 hover:text-rose-500 text-ink-500 transition" title="清空"><i class="fa-solid fa-eraser text-xs"></i></button>
+ </div>
+ </div>
+ <p id="assignmentReqStatus" class="hidden text-[10px] text-jade-600 mt-1 flex items-center gap-1"><i class="fa-solid fa-spinner fa-spin"></i>AI 润色中...</p>
+ </div>
+ <div>
+ <label class="text-xs font-semibold text-ink-700 mb-1.5 block">补充说明 <span class="text-[10px] text-ink-400 font-normal">（可选）</span></label>
+ <div class="relative">
+ <textarea id="assignmentNewNote" rows="3" placeholder="补充说明，如评分标准、分组安排、注意事项等..." class="w-full pl-3 pr-12 py-2 bg-ink-50/50 border border-ink-200 text-sm focus:border-ink-400 rounded-xl focus:bg-white transition-all text-ink-700 placeholder:text-ink-400 resize-none"></textarea>
+ <div class="absolute right-2 bottom-2 flex items-center gap-1">
+ <button type="button" onclick="polishAssignmentText('assignmentNewNote')" id="polishNoteBtn" class="w-7 h-7 flex items-center justify-center rounded-full bg-white border border-ink-200 hover:border-jade-400 hover:text-jade-600 text-ink-500 transition" title="AI 润色"><i class="fa-solid fa-wand-magic-sparkles text-xs"></i></button>
+ <button type="button" onclick="clearAssignmentText('assignmentNewNote')" class="w-7 h-7 flex items-center justify-center rounded-full bg-white border border-ink-200 hover:border-rose-400 hover:text-rose-500 text-ink-500 transition" title="清空"><i class="fa-solid fa-eraser text-xs"></i></button>
+ </div>
+ </div>
+ <p id="assignmentNoteStatus" class="hidden text-[10px] text-jade-600 mt-1 flex items-center gap-1"><i class="fa-solid fa-spinner fa-spin"></i>AI 润色中...</p>
+ </div>
+ <div class="flex gap-2 pt-1">
+ <button onclick="createGradingAssignment()" class="flex-1 py-2.5 bg-jade-600 hover:bg-jade-700 text-white rounded-xl text-sm font-semibold transition-all"><i class="fa-solid fa-paper-plane mr-1"></i>布置作业</button>
+ <button onclick="resetAssignmentDetail()" class="px-5 py-2.5 bg-white border border-ink-200 hover:border-ink-400 text-ink-600 rounded-xl text-sm font-medium transition-all">取消</button>
+ </div>
+ </div>
+ </div>
+ </div>
+ <!-- 作业详情：提交情况 -->
+ <div id="assignmentDetailView" class="hidden flex-1 flex flex-col overflow-hidden">
+ <div class="px-5 py-3 border-b border-ink-200 flex items-center justify-between shrink-0">
+ <button onclick="backAssignmentList()" class="text-[11px] text-ink-400 hover:text-jade-600 transition flex items-center gap-1"><i class="fa-solid fa-arrow-left"></i>返回列表</button>
+ <button onclick="showAssignmentNewForm()" class="text-[11px] text-ink-400 hover:text-jade-600 transition flex items-center gap-1"><i class="fa-solid fa-plus"></i>新建作业</button>
+ </div>
+ <div id="assignmentDetailBody" class="flex-1 overflow-y-auto scroll-thin p-5"></div>
+ </div>
+ </div>
+ </section>
+ </div>
+
+ <!-- ========== Tab 4: 智能组卷 ========== -->
+ <div id="page-paper" class="tab-page hidden flex-1 flex flex-col md:flex-row p-4 overflow-hidden bg-white border border-ink-200">
+ <!-- 左：配置 + 生成题池 -->
+ <section class="w-full md:w-[40%] flex flex-col overflow-hidden">
+ <div class="px-5 py-3 border-b border-ink-200 flex items-center justify-between">
+ <div class="flex items-center gap-3">
+ <div class="w-9 h-9 bg-jade-50 flex items-center justify-center text-jade-600 rounded-xl"><i class="fa-solid fa-layer-group"></i></div>
+ <div><h2 class="text-sm font-semibold text-ink-900 font-display">智能组卷</h2><p class="text-xs text-ink-400">AI 生成题库 · 教师挑选 · 右侧排版</p></div>
+ </div>
+ <div class="flex items-center gap-2">
+ <button onclick="togglePaperHistory()" class="text-xs text-ink-400 hover:text-jade-600 px-2 py-1 hover:bg-jade-50 rounded-md transition flex items-center gap-1" title="查看组卷历史记录"><i class="fa-solid fa-clock-rotate-left"></i>历史</button>
+ <span id="paperPoolStat" class="text-[10px] text-ink-400">题池 0 · 已选 0</span>
+ </div>
+ </div>
+ <div class="p-3 border-b border-ink-200 space-y-2.5">
+ <div class="grid grid-cols-2 gap-2">
+ <div class="field px-2.5 py-1.5"><label class="text-[9px] text-ink-400 block leading-none">难度</label>
+ <select id="paperDifficulty" class="w-full text-xs text-ink-700 font-medium"><option value="easy">基础巩固</option><option value="medium" selected>能力提升</option><option value="hard">挑战拔高</option></select></div>
+ <div class="field px-2.5 py-1.5 relative" id="paperModelDropdownContainer"><label class="text-[9px] text-ink-400 block leading-none">智能体</label>
+ <button onclick="togglePaperModelDropdown()" class="w-full flex items-center justify-between text-xs text-ink-700 font-medium"><span class="flex items-center gap-1.5 min-w-0"><span class="text-ink-500 shrink-0 flex items-center" id="paperModelDot"><span class="w-2 h-2 rounded-full bg-ink-300"></span></span><span id="paperModelLabel" class="truncate">未配置</span></span><i class="fa-solid fa-chevron-down text-ink-300 text-[9px] transition-transform" id="paperModelArrow"></i></button>
+ <div id="paperModelDropdownPanel" class="model-dropdown-panel hidden absolute left-0 right-0 top-full mt-1 bg-white shadow-xl border border-ink-100 rounded-xl z-50 overflow-hidden"><div id="paperModelDropdownOptions" class="py-1 max-h-56 overflow-y-auto settings-scroll"></div><button onclick="openSettingsFromDropdown()" class="w-full text-left px-3 py-2 text-[11px] text-ink-500 hover:bg-ink-50 border-t border-ink-100"><i class="fa-solid fa-gear mr-1"></i>配置智能体</button></div>
+ </div>
+ </div>
+ <div class="field px-2.5 py-1.5"><label class="text-[9px] text-ink-400 block leading-none">知识点 / 章节</label>
+ <input id="paperTopic" type="text" placeholder="如：函数与导数、牛顿运动定律" class="w-full text-xs text-ink-700"></div>
+ <div class="grid grid-cols-4 gap-2">
+ <div class="field px-2.5 py-1.5"><label class="text-[9px] text-ink-400 block leading-none">单选</label><input id="qSingle" type="number" min="0" value="3" class="w-full text-xs text-ink-700"></div>
+ <div class="field px-2.5 py-1.5"><label class="text-[9px] text-ink-400 block leading-none">多选</label><input id="qMulti" type="number" min="0" value="2" class="w-full text-xs text-ink-700"></div>
+ <div class="field px-2.5 py-1.5"><label class="text-[9px] text-ink-400 block leading-none">填空</label><input id="qFill" type="number" min="0" value="2" class="w-full text-xs text-ink-700"></div>
+ <div class="field px-2.5 py-1.5"><label class="text-[9px] text-ink-400 block leading-none">解答</label><input id="qSolve" type="number" min="0" value="2" class="w-full text-xs text-ink-700"></div>
+ </div>
+ <div class="flex gap-2 items-center">
+ <button onclick="generatePaper()" id="genPaperBtn" class="flex-1 py-2 bg-jade-600 hover:bg-jade-700 text-white rounded-xl text-xs font-semibold transition flex items-center justify-center gap-1.5"><i class="fa-solid fa-bolt"></i>生成题库</button>
+ <button onclick="togglePaperSearch()" id="paperSearchBtn" class="flex items-center gap-1 px-2.5 py-2 text-xs rounded-xl transition text-ink-400 hover:bg-ink-50 border border-transparent" title="联网搜索真题" style="display:none;"><i class="fa-solid fa-globe text-sm text-ink-400"></i><span>联网真题</span></button>
+ <button onclick="toggleSelectAllPool()" class="px-3 py-2 bg-white border border-ink-200 hover:border-ink-400 text-ink-600 rounded-xl text-xs font-medium transition"><i class="fa-solid fa-check-double mr-1"></i>全选</button>
+ <button onclick="addSelectedToPaper()" class="px-3 py-2 bg-jade-50 hover:bg-jade-100 text-jade-700 rounded-xl text-xs font-semibold transition"><i class="fa-solid fa-arrow-right-long"></i></button>
+ </div>
+ </div>
+ <div id="paperPool" class="flex-1 overflow-y-auto scroll-thin p-3 space-y-2.5 bg-ink-50/30">
+ <div class="flex flex-col items-center justify-center h-full text-center py-12 text-ink-400">
+ <i class="fa-solid fa-box-open text-4xl text-ink-200 mb-3"></i>
+ <p class="text-xs">配置要求后点击「生成题库」</p>
+ <p class="text-[11px] text-ink-300 mt-1">AI 生成试题，勾选后加入右侧试卷</p>
+ </div>
+ </div>
+ </section>
+ <!-- 右：试卷排版预览 -->
+ <section class="w-full md:w-[58%] flex flex-col overflow-hidden md:border-l md:border-ink-200">
+ <div class="px-5 py-3 border-b border-ink-200 flex items-center justify-between">
+ <div class="flex items-center gap-3">
+ <div class="w-9 h-9 bg-jade-50 flex items-center justify-center text-jade-600 rounded-xl"><i class="fa-solid fa-file-lines"></i></div>
+ <div><h2 class="text-sm font-semibold text-ink-900 font-display">试卷预览</h2><p class="text-xs text-ink-400">排版 · 调序 · 设置分值 · 导出</p></div>
+ </div>
+ <div class="flex items-center gap-2">
+ <div class="relative flex items-center bg-ink-100 rounded-lg p-0.5 text-[11px] font-medium select-none cursor-pointer" onclick="togglePaperVersion()">
+ <div id="paperVersionThumb" class="absolute top-0.5 left-0.5 h-[calc(100%-4px)] bg-white rounded-md shadow-sm transition-all duration-200" style="width:56px"></div>
+ <span id="paperVersionExamLabel" class="relative z-10 px-3 py-1 text-ink-900 transition-colors">考试版</span>
+ <span id="paperVersionAnalysisLabel" class="relative z-10 px-3 py-1 text-ink-400 transition-colors">解析版</span>
+ </div>
+ <button onclick="exportPaper()" class="px-3 py-1.5 text-xs font-medium text-ink-600 border border-ink-200 hover:border-ink-400 rounded-lg transition"><i class="fa-solid fa-print mr-1"></i>导出</button>
+ <button onclick="clearPaper()" class="px-3 py-1.5 text-xs font-medium text-ink-400 hover:text-rose-500 transition"><i class="fa-solid fa-trash-can mr-1"></i>清空</button>
+ </div>
+ </div>
+ <div id="paperPreview" class="flex-1 overflow-y-auto scroll-thin p-6 print-area">
+ <div class="flex flex-col items-center justify-center h-full text-center py-16 text-ink-400">
+ <i class="fa-solid fa-feather-pointed text-4xl text-ink-200 mb-3"></i>
+ <p class="text-xs">从左侧题池勾选试题，加入此处排版</p>
+ </div>
+ </div>
+ </section>
+ </div>
+
+ <!-- ========== Tab 5: 学生学情分析 ========== -->
+ <div id="page-analytics" class="tab-page hidden flex-1 flex flex-col md:flex-row p-4 overflow-hidden bg-white border border-ink-200">
+ <section class="w-full md:w-[25%] flex flex-col overflow-hidden">
+ <div class="px-5 py-3 border-b border-ink-200 flex items-center gap-3">
+ <div class="w-9 h-9 bg-jade-50 flex items-center justify-center text-jade-600 rounded-xl"><i class="fa-solid fa-chart-line"></i></div>
+ <div class="flex-1"><h2 class="text-sm font-semibold text-ink-900 font-display">学情数据</h2><p class="text-xs text-ink-400">班级成绩与诊断分析</p></div>
+ <button onclick="openDataEditModal()" class="text-[11px] text-jade-600 border border-jade-200 rounded-lg px-2.5 py-1.5 hover:bg-jade-50 transition flex items-center gap-1.5 shrink-0"><i class="fa-solid fa-database"></i>数据编辑</button>
+ </div>
+ <div class="p-4 space-y-3 shrink-0">
+ <div class="field px-3 py-1.5"><label class="text-[10px] text-ink-400 block leading-none mb-0.5">班级</label>
+ <select id="anaClass" onchange="renderAnalytics()" class="w-full text-xs text-ink-700 font-medium"><option>高三（1）班</option><option>高三（2）班</option><option>高三（3）班</option></select></div>
+ <div class="field px-3 py-1.5"><label class="text-[10px] text-ink-400 block leading-none mb-0.5">考试</label>
+ <select id="anaExam" onchange="renderAnalytics()" class="w-full text-xs text-ink-700 font-medium"><option>2026届三模</option><option>2026届二模</option><option>2026届一模</option></select></div>
+ <div class="field px-3 py-1.5"><label class="text-[10px] text-ink-400 block leading-none mb-0.5">其他要求 <span class="text-[9px] text-ink-300 font-normal">（可选）</span></label>
+ <input type="text" id="anaExtraReq" placeholder="如：重点分析物理薄弱学生、关注临界生…" class="w-full text-xs text-ink-700"></div>
+ <button onclick="generateAnalyticsReport()" id="anaAiBtn" class="w-full py-2.5 bg-jade-600 hover:bg-jade-700 text-white rounded-xl text-xs font-semibold transition flex items-center justify-center gap-2"><i class="fa-solid fa-wand-magic-sparkles"></i>AI 深度学情诊断</button>
+ <div id="anaStatsRow" class="grid grid-cols-2 gap-2"></div>
+ </div>
+ <!-- 左侧底部：趋势图 -->
+ <div class="border-t border-ink-200 p-4 shrink-0 flex-1 flex flex-col min-h-0">
+ <p class="text-[11px] font-semibold text-ink-500 mb-2 stamp shrink-0">平均分与及格率趋势</p>
+ <div class="flex-1 min-h-0 relative"><canvas id="anaTrendChart"></canvas></div>
+ </div>
+ </section>
+ <section class="w-full md:w-[75%] flex flex-col overflow-hidden md:border-l md:border-ink-200 md:pl-4">
+ <div id="anaTopPanel" class="rounded-xl border border-ink-200 flex flex-col overflow-hidden shrink-0" style="height:50%">
+ <div class="px-5 py-3 border-b border-ink-200 flex items-center justify-between">
+ <span class="text-xs font-semibold text-ink-700 tracking-wider flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-jade-500"></span>成绩分布与排名</span>
+ <span id="anaHint" class="text-[10px] text-ink-400"></span>
+ <div class="relative flex items-center bg-ink-100 rounded-lg p-0.5 text-[11px] font-medium select-none cursor-pointer" id="anaViewSwitch" onclick="setAnaViewMode(anaViewMode==='total'?'subject':'total')">
+  <div id="anaSwitchThumb" class="absolute top-0.5 left-0.5 h-[calc(100%-4px)] bg-white rounded-md shadow-sm transition-all duration-200" style="width:48px"></div>
+  <span id="anaSwitchTotal" class="relative z-10 px-3 py-1 text-ink-400 transition-colors">总分</span>
+  <span id="anaSwitchSubject" class="relative z-10 px-3 py-1 text-ink-900 transition-colors">单科</span>
+ </div>
+ </div>
+ <div class="flex-1 flex min-h-0 overflow-hidden">
+ <div class="w-[30%] p-4 border-r border-ink-200 overflow-y-auto scroll-thin">
+ <p class="text-[11px] font-semibold text-ink-500 mb-3 stamp" id="anaDistTitle">分数段分布</p>
+ <div id="anaDist" class="space-y-2"></div>
+ </div>
+ <div class="w-[70%] overflow-auto scroll-thin">
+ <p class="text-[11px] font-semibold text-ink-500 mb-2 p-4 pb-2 stamp sticky top-0 bg-white">学生排名（全部·含模块得分）</p>
+ <div id="anaRank" class="px-4 pb-4"></div>
+ </div>
+ </div>
+ </div>
+ <!-- 可拖拽分隔线 -->
+ <div id="anaResizer" class="h-2 cursor-row-resize flex items-center justify-center shrink-0 group">
+ <div class="w-12 h-1 bg-ink-200 rounded-full group-hover:bg-jade-400 transition"></div>
+ </div>
+ <div id="anaReportCard" class="rounded-xl border border-ink-200 flex flex-col overflow-hidden hidden flex-1 min-h-0">
+ <div class="px-5 py-3 border-b border-ink-200 flex items-center justify-between">
+ <span class="text-xs font-semibold text-ink-700 tracking-wider flex items-center gap-2"><i class="fa-solid fa-file-waveform text-jade-600"></i>AI 学情诊断报告</span>
+ <div class="flex items-center gap-2">
+ <button onclick="exportAnalyticsReport()" class="text-[11px] text-ink-400 hover:text-jade-600 transition flex items-center gap-1"><i class="fa-solid fa-download"></i>导出</button>
+ <button onclick="document.getElementById('anaReportBody').innerHTML='';document.getElementById('anaReportCard').classList.add('hidden');document.getElementById('anaReportPlaceholder').classList.remove('hidden');" class="text-[11px] text-ink-400 hover:text-rose-500"><i class="fa-solid fa-xmark"></i></button>
+ </div>
+ </div>
+ <div id="anaReportBody" class="p-5 overflow-y-auto scroll-thin text-[15px] text-ink-700 leading-relaxed ai-markdown"></div>
+ </div>
+ <div id="anaReportPlaceholder" class="flex flex-col items-center justify-center flex-1 min-h-0 text-center text-ink-400 rounded-xl border border-dashed border-ink-200">
+<div class="w-14 h-14 bg-ink-50 rounded-xl flex items-center justify-center text-ink-300 mb-3"><i class="fa-solid fa-file-waveform text-xl"></i></div>
+<p class="text-xs text-ink-400">点击左侧「AI 深度学情诊断」生成报告</p>
+</div>
+ </section>
+ </div>
+
+<script src="build/renderer/block2.js"></script>
+
+<!-- ========== 教师智能体备课沙箱（Agent Sandbox）========== -->
+<!-- 顺序：工具注册 → 记忆 → 联网搜索 → 沙箱运行时 → MCP → 技能 → 质量验证 → 工作流提示词 → LangGraph工作流 → 核心引擎 → UI控制器 -->
+<script src="teacher-agent-sandbox/js/tool-registry.js"></script>
+<script src="teacher-agent-sandbox/js/memory-system.js"></script>
+<script src="teacher-agent-sandbox/js/web-search.js"></script>
+<script src="teacher-agent-sandbox/js/sandbox-runtime.js"></script>
+<script src="teacher-agent-sandbox/js/mcp-client.js"></script>
+<script src="teacher-agent-sandbox/js/skills-engine.js"></script>
+<script src="teacher-agent-sandbox/js/quality-validator.js"></script>
+<script src="teacher-agent-sandbox/js/workflow-prompts.js"></script>
+<script src="teacher-agent-sandbox/js/langgraph-workflow.js"></script>
+<script src="teacher-agent-sandbox/js/sub-workflows.js"></script>
+<script src="teacher-agent-sandbox/js/backend-client.js"></script>
+<script src="teacher-agent-sandbox/js/agent-core.js"></script>
+<script src="teacher-agent-sandbox/js/ui-controller.js"></script>
+
+<!-- ========== 设置弹窗 ========== -->
+<div id="settingsOverlay">
+ <div id="settingsDrawer">
+  <!-- 侧边栏导航 -->
+  <div id="settingsSidebar">
+   <div style="padding:4px 8px 12px;font-size:15px;font-weight:700;color:#2b271f;font-family:'Noto Serif SC',serif;">设置</div>
+   <button class="settings-nav-item active" data-tab="account" onclick="switchSettingsTab('account')">
+    <i class="fa-solid fa-user-circle"></i><span>账号</span>
+   </button>
+   <button class="settings-nav-item" data-tab="model" onclick="switchSettingsTab('model')">
+    <i class="fa-solid fa-brain"></i><span>模型</span>
+   </button>
+   <button class="settings-nav-item" data-tab="appearance" onclick="switchSettingsTab('appearance')">
+    <i class="fa-solid fa-palette"></i><span>外观</span>
+   </button>
+   <button class="settings-nav-item" data-tab="plugins" onclick="switchSettingsTab('plugins')">
+    <i class="fa-solid fa-puzzle-piece"></i><span>插件与技能</span>
+   </button>
+   <button class="settings-nav-item" data-tab="conversation" onclick="switchSettingsTab('conversation')">
+    <i class="fa-solid fa-exchange-alt"></i><span>对话流</span>
+   </button>
+   <button class="settings-nav-item" data-tab="browser" onclick="switchSettingsTab('browser')">
+    <i class="fa-solid fa-globe"></i><span>浏览器</span>
+   </button>
+   <button class="settings-nav-item" data-tab="commands" onclick="switchSettingsTab('commands')">
+    <i class="fa-solid fa-terminal"></i><span>命令</span>
+   </button>
+   <button class="settings-nav-item" data-tab="rules" onclick="switchSettingsTab('rules')">
+    <i class="fa-solid fa-book"></i><span>规则与记忆</span>
+   </button>
+   <div style="flex:1;"></div>
+   <button class="settings-nav-item" onclick="closeSettings()" style="color:#a89a82;">
+    <i class="fa-solid fa-xmark"></i><span>关闭设置</span>
+   </button>
+  </div>
+  <!-- 内容区 -->
+  <div id="settingsContent">
+   <!-- 账号 -->
+   <div class="settings-section active" id="settingsTab-account">
+    <h2>账号</h2>
+    <p class="section-desc">管理您的教师个人信息，包括姓名、所教科目、班级和教材版本。</p>
+    <div class="settings-info-card" id="accountDisplayCard">
+     <div class="settings-info-row"><span class="label">姓名</span><span class="value" id="accountDisplayName">未设置</span></div>
+     <div class="settings-info-row"><span class="label">所教科目</span><span class="value" id="accountDisplaySubject">未设置</span></div>
+     <div class="settings-info-row"><span class="label">任教班级</span><span class="value" id="accountDisplayClass">未设置</span></div>
+     <div class="settings-info-row"><span class="label">教材版本</span><span class="value" id="accountDisplayTextbook">未设置</span></div>
+    </div>
+    <div id="accountEditForm" style="display:none;">
+     <div class="settings-field">
+      <label>姓名</label>
+      <input type="text" id="accountInputName" placeholder="请输入教师姓名">
+     </div>
+     <div class="settings-field">
+      <label>所教科目</label>
+      <select id="accountInputSubject" onchange="updateAccountTextbookOptions()"></select>
+     </div>
+     <div class="settings-field">
+      <label>任教班级（可多选）</label>
+      <div class="relative" id="accountClassContainer">
+       <div class="account-class-trigger" id="accountClassTrigger" onclick="toggleAccountClassDropdown(event)">
+        <span class="account-class-display" id="accountClassDisplay"><span class="account-class-placeholder">请选择班级</span></span>
+        <i class="fa-solid fa-chevron-down text-[10px] text-ink-400 transition-transform" id="accountClassArrow"></i>
+       </div>
+       <div id="accountClassDropdown" class="account-class-dropdown hidden">
+        <div class="account-class-actions">
+         <button type="button" onclick="selectAllAccountClasses()">全选</button>
+         <span style="font-size:10px;color:#a89a82;" id="accountClassSelectedCount">已选 0 个</span>
+         <button type="button" onclick="clearAccountClasses()">清空</button>
+        </div>
+        <div class="account-class-options" id="accountClassOptions"></div>
+       </div>
+      </div>
+     </div>
+     <div class="settings-field">
+      <label>教材版本</label>
+      <select id="accountInputTextbook"></select>
+     </div>
+    </div>
+    <div style="display:flex;gap:8px;margin-top:8px;">
+     <button onclick="toggleAccountEdit()" id="accountEditBtn" class="flex-1 py-2 border border-ink-200 rounded-lg text-sm text-ink-600 hover:bg-ink-50 transition">编辑</button>
+     <button onclick="saveAccountSettings()" id="accountSaveBtn" class="flex-1 py-2 bg-jade-600 hover:bg-jade-700 text-white rounded-lg text-sm font-medium transition" style="display:none;">保存</button>
+     <button onclick="cancelAccountEdit()" id="accountCancelBtn" class="flex-1 py-2 border border-ink-200 rounded-lg text-sm text-ink-400 hover:bg-ink-50 transition" style="display:none;">取消</button>
+    </div>
+   </div>
+
+   <!-- 模型 -->
+   <div class="settings-section" id="settingsTab-model">
+    <h2>模型</h2>
+    <p class="section-desc">配置大语言模型的 API Key，配置后教师端各模块共享使用。</p>
+    <div class="settings-field">
+     <label>选择模型</label>
+     <select id="settingsModelSelect"></select>
+    </div>
+    <div class="settings-field">
+     <label>API Key</label>
+     <input type="password" id="settingsApiKey" placeholder="输入 API Key...">
+    </div>
+    <button onclick="addOrUpdateModel()" class="w-full py-2 bg-jade-600 hover:bg-jade-700 text-white rounded-lg text-sm font-medium transition mb-4">添加 / 更新</button>
+    <div style="font-size:12px;font-weight:600;color:#5b5345;margin-bottom:8px;">已配置的智能体</div>
+    <div id="configuredModelsInner"></div>
+    <div style="margin-top:12px;">
+     <button onclick="clearAllConfigured()" class="px-4 py-1.5 text-xs text-ink-400 hover:text-rose-500 font-medium border border-ink-100 rounded-lg transition">清空全部</button>
+    </div>
+   </div>
+
+   <!-- 外观 -->
+   <div class="settings-section" id="settingsTab-appearance">
+    <h2>外观</h2>
+    <p class="section-desc">选择应用的主题风格，切换后立即生效。</p>
+    <div style="display:flex;flex-wrap:wrap;gap:12px;">
+     <div class="theme-card selected" id="themeCardDefault" onclick="applyTheme('default')" style="flex:1 1 calc(50% - 6px);min-width:140px;max-width:calc(50% - 6px);">
+      <div class="theme-preview warm"></div>
+      <h4>暖墨国风</h4>
+      <p>宣纸米白底色，竹青点缀</p>
+     </div>
+     <div class="theme-card" id="themeCardWhite" onclick="applyTheme('white')" style="flex:1 1 calc(50% - 6px);min-width:140px;max-width:calc(50% - 6px);">
+      <div class="theme-preview white"></div>
+      <h4>纯白简约</h4>
+      <p>纯净白底，简洁清爽</p>
+     </div>
+     <div class="theme-card" id="themeCardSky" onclick="applyTheme('sky')" style="flex:1 1 calc(50% - 6px);min-width:140px;max-width:calc(50% - 6px);">
+      <div class="theme-preview sky"></div>
+      <h4>天空与海</h4>
+      <p>湛蓝底色，海洋气息</p>
+     </div>
+     <div class="theme-card" id="themeCardForest" onclick="applyTheme('forest')" style="flex:1 1 calc(50% - 6px);min-width:140px;max-width:calc(50% - 6px);">
+      <div class="theme-preview forest"></div>
+      <h4>绿树成荫</h4>
+      <p>清新绿底，自然生机</p>
+     </div>
+     <div class="theme-card" id="themeCardPink" onclick="applyTheme('pink')" style="flex:1 1 calc(50% - 6px);min-width:140px;max-width:calc(50% - 6px);">
+      <div class="theme-preview pink"></div>
+      <h4>粉系少女</h4>
+      <p>柔和粉底，温柔浪漫</p>
+     </div>
+    </div>
+   </div>
+
+   <!-- 插件与技能 -->
+   <div class="settings-section" id="settingsTab-plugins">
+    <h2>插件与技能</h2>
+    <p class="section-desc">管理已安装的插件和技能模块，支持上传文件夹或 ZIP 文件。</p>
+    <!-- 子标签栏 -->
+    <div class="ps-sub-tabs">
+     <button class="ps-sub-tab active" data-ps-tab="skills" onclick="switchPsTab('skills')">
+      <i class="fa-solid fa-wand-magic-sparkles" style="margin-right:6px;"></i>技能
+     </button>
+     <button class="ps-sub-tab" data-ps-tab="plugins" onclick="switchPsTab('plugins')">
+      <i class="fa-solid fa-puzzle-piece" style="margin-right:6px;"></i>插件
+     </button>
+    </div>
+    <!-- 技能列表 -->
+    <div class="ps-sub-content active" id="psTab-skills">
+     <div class="ps-toolbar">
+      <span class="ps-count" id="psSkillCount">加载中...</span>
+      <button class="ps-upload-btn" onclick="document.getElementById('skillUploadInput').click()">
+       <i class="fa-solid fa-upload"></i> 上传技能
+      </button>
+      <input type="file" id="skillUploadInput" class="ps-upload-hidden" multiple webkitdirectory directory accept=".zip,.md,.json,.py,.js,.html,.css" />
+     </div>
+     <div class="ps-upload-area" id="skillUploadArea" onclick="document.getElementById('skillUploadInput').click()">
+      <i class="fa-solid fa-cloud-arrow-up"></i>
+      <p>点击或拖拽文件夹/ZIP文件到此处上传技能</p>
+      <p class="ps-upload-hint">支持上传包含 SKILL.md 的文件夹或 .zip 压缩包</p>
+     </div>
+     <div id="psSkillList"></div>
+    </div>
+    <!-- 插件列表 -->
+    <div class="ps-sub-content" id="psTab-plugins">
+     <div class="ps-toolbar">
+      <span class="ps-count" id="psPluginCount">加载中...</span>
+      <button class="ps-upload-btn" onclick="document.getElementById('pluginUploadInput').click()">
+       <i class="fa-solid fa-upload"></i> 上传插件
+      </button>
+      <input type="file" id="pluginUploadInput" class="ps-upload-hidden" multiple accept=".zip" />
+     </div>
+     <div class="ps-upload-area" id="pluginUploadArea" onclick="document.getElementById('pluginUploadInput').click()">
+      <i class="fa-solid fa-cloud-arrow-up"></i>
+      <p>点击或拖拽 ZIP 文件到此处上传插件</p>
+      <p class="ps-upload-hint">支持上传 .zip 格式的插件压缩包</p>
+     </div>
+     <div id="psPluginList"></div>
+    </div>
+   </div>
+
+   <!-- 对话流 -->
+   <div class="settings-section" id="settingsTab-conversation">
+    <h2>对话流</h2>
+    <p class="section-desc">配置对话流程和行为参数。</p>
+    <div class="settings-placeholder">
+     <i class="fa-solid fa-exchange-alt"></i>
+     <p>对话流设置即将推出</p>
+    </div>
+   </div>
+
+   <!-- 浏览器 -->
+   <div class="settings-section" id="settingsTab-browser">
+    <h2>浏览器</h2>
+    <p class="section-desc">配置内置浏览器和网页访问规则。</p>
+    <div class="settings-placeholder">
+     <i class="fa-solid fa-globe"></i>
+     <p>浏览器设置即将推出</p>
+    </div>
+   </div>
+
+   <!-- 命令 -->
+   <div class="settings-section" id="settingsTab-commands">
+    <h2>命令</h2>
+    <p class="section-desc">管理自定义命令和快捷操作。</p>
+    <div class="settings-placeholder">
+     <i class="fa-solid fa-terminal"></i>
+     <p>暂无自定义命令</p>
+    </div>
+   </div>
+
+   <!-- 规则与记忆 -->
+   <div class="settings-section" id="settingsTab-rules">
+    <h2>规则与记忆</h2>
+    <p class="section-desc">配置智能体的语言风格、输出规则、上下文记忆与知识库。</p>
+
+    <!-- 语言风格 -->
+    <div class="rules-section">
+     <div class="rules-section-title"><i class="fa-solid fa-language"></i> 语言风格</div>
+     <p class="rules-section-desc">选择智能体回复的语言风格，影响所有对话输出的语气与措辞。</p>
+     <select class="rules-select" id="rulesLanguageStyle">
+      <option value="standard">标准化专业（准确清晰，有条有理）</option>
+      <option value="concise">简洁精炼（言简意赅，直击要点）</option>
+      <option value="accessible">通俗易懂（深入浅出，易于理解）</option>
+      <option value="academic">学术研究（严谨规范，引用充分）</option>
+      <option value="lively">活泼生动（轻松亲切，举例丰富）</option>
+     </select>
+    </div>
+
+    <!-- 输出规则 -->
+    <div class="rules-section">
+     <div class="rules-section-title"><i class="fa-solid fa-list-check"></i> 输出规则</div>
+     <p class="rules-section-desc">设定智能体生成内容时的格式与约束规则，每条可单独开启/关闭或删除。</p>
+     <div class="rules-add-row">
+      <input type="text" class="rules-add-input" id="outputRuleInput" placeholder="输入一条输出规则，如：所有数学公式使用 LaTeX 语法" />
+      <button class="rules-add-btn" onclick="addOutputRuleItem()">
+       <i class="fa-solid fa-plus"></i> 添加
+      </button>
+     </div>
+     <div class="rules-item-list" id="outputRuleList"></div>
+    </div>
+
+    <!-- 上下文记忆 -->
+    <div class="rules-section">
+     <div class="rules-section-title"><i class="fa-solid fa-brain"></i> 上下文记忆</div>
+     <p class="rules-section-desc">输入智能体需要记住的上下文信息，也可导入 docx、pdf、md 等文档自动提取。每条可单独开启/关闭或删除。</p>
+     <div class="rules-add-row">
+      <input type="text" class="rules-add-input" id="contextMemoryInput" placeholder="输入上下文信息，如：用户偏好简洁回答" />
+      <button class="rules-add-btn" onclick="addContextMemoryItem()">
+       <i class="fa-solid fa-plus"></i> 添加
+      </button>
+      <button class="rules-import-btn" onclick="document.getElementById('memoryImportInput').click()">
+       <i class="fa-solid fa-file-import"></i> 导入文档
+      </button>
+      <input type="file" id="memoryImportInput" class="ps-upload-hidden" accept=".docx,.pdf,.md,.txt" />
+     </div>
+     <div class="rules-item-list" id="contextMemoryList"></div>
+    </div>
+
+    <!-- 知识库 -->
+    <div class="rules-section">
+     <div class="rules-section-title"><i class="fa-solid fa-book-bookmark"></i> 知识库</div>
+     <p class="rules-section-desc">上传知识库文件，支持 docx、pdf、md、json、python 等多种格式。每个文件可单独开启/关闭或删除。</p>
+     <div class="ps-upload-area" id="kbUploadArea" onclick="document.getElementById('kbUploadInput').click()" style="padding:20px;">
+      <i class="fa-solid fa-cloud-arrow-up"></i>
+      <p>点击或拖拽文件到此处上传</p>
+      <p class="ps-upload-hint">支持 .docx .pdf .md .json .py .js .txt .csv .xlsx 等格式</p>
+     </div>
+     <input type="file" id="kbUploadInput" class="ps-upload-hidden" multiple accept=".docx,.pdf,.md,.json,.py,.js,.txt,.csv,.xlsx" />
+     <div class="rules-item-list" id="kbFileList" style="margin-top:10px;"></div>
+    </div>
+
+    <button class="rules-save-btn" onclick="saveRulesSettings()">
+     <i class="fa-solid fa-floppy-disk"></i> 保存设置
+    </button>
+   </div>
+  </div>
+ </div>
+</div>
+
+<!-- ========== 题目批改 历史记录面板（侧边横推） ========== -->
+<div id="gradingHistoryOverlay" class="hidden fixed inset-0 z-40" onclick="closeGradingHistory(event)">
+ <div id="gradingHistoryPanel" class="absolute left-0 top-0 h-full w-[22%] min-w-[300px] max-w-[360px] bg-white shadow-2xl border-r border-ink-100 flex flex-col" style="transform: translateX(-100%); transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);" onclick="event.stopPropagation()">
+  <div class="p-4 border-b border-ink-100 flex items-center justify-between bg-white shrink-0">
+   <div class="flex items-center gap-2">
+    <div class="w-7 h-7 rounded-full bg-jade-50 flex items-center justify-center text-jade-600"><i class="fa-solid fa-clock-rotate-left text-xs"></i></div>
+    <h3 class="text-sm font-semibold text-ink-800">批改历史</h3>
+    <span id="gradingHistoryCount" class="text-[10px] text-jade-400 font-medium">0</span>
+   </div>
+   <div class="flex items-center gap-1.5">
+    <button onclick="clearGradingHistory()" class="text-[11px] text-ink-400 hover:text-rose-500 px-2 py-1 rounded-md hover:bg-rose-50 transition-all">清空全部</button>
+    <button onclick="closeGradingHistory()" class="text-ink-400 hover:text-jade-600 w-7 h-7 rounded-md hover:bg-jade-50 flex items-center justify-center transition-all"><i class="fa-solid fa-xmark"></i></button>
+   </div>
+  </div>
+  <div id="gradingHistoryList" class="flex-1 overflow-y-auto p-3 space-y-2 settings-scroll">
+   <div class="text-center py-8 text-ink-300"><i class="fa-solid fa-pen-to-square text-3xl mb-2 opacity-40"></i><p class="text-xs">暂无批改历史</p></div>
+  </div>
+ </div>
+</div>
+
+<!-- ========== 智能组卷 历史记录面板（侧边横推） ========== -->
+<div id="paperHistoryOverlay" class="hidden fixed inset-0 z-40" onclick="closePaperHistory(event)">
+ <div id="paperHistoryPanel" class="absolute left-0 top-0 h-full w-[22%] min-w-[300px] max-w-[360px] bg-white shadow-2xl border-r border-ink-100 flex flex-col" style="transform: translateX(-100%); transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);" onclick="event.stopPropagation()">
+  <div class="p-4 border-b border-ink-100 flex items-center justify-between bg-white shrink-0">
+   <div class="flex items-center gap-2">
+    <div class="w-7 h-7 rounded-full bg-jade-50 flex items-center justify-center text-jade-600"><i class="fa-solid fa-clock-rotate-left text-xs"></i></div>
+    <h3 class="text-sm font-semibold text-ink-800">组卷历史</h3>
+    <span id="paperHistoryCount" class="text-[10px] text-jade-400 font-medium">0</span>
+   </div>
+   <div class="flex items-center gap-1.5">
+    <button onclick="clearPaperHistory()" class="text-[11px] text-ink-400 hover:text-rose-500 px-2 py-1 rounded-md hover:bg-rose-50 transition-all">清空全部</button>
+    <button onclick="closePaperHistory()" class="text-ink-400 hover:text-jade-600 w-7 h-7 rounded-md hover:bg-jade-50 flex items-center justify-center transition-all"><i class="fa-solid fa-xmark"></i></button>
+   </div>
+  </div>
+  <div id="paperHistoryList" class="flex-1 overflow-y-auto p-3 space-y-2 settings-scroll">
+   <div class="text-center py-8 text-ink-300"><i class="fa-solid fa-layer-group text-3xl mb-2 opacity-40"></i><p class="text-xs">暂无组卷历史</p></div>
+  </div>
+ </div>
+</div>
+
+<!-- ========== 孔孟大模型 悬浮球 ========== -->
+<script src="build/renderer/block3.js"></script>
+<script src="build/renderer/block4.js"></script>
+<script src="./build/renderer/悬浮球.js"></script>
+
+</body>
+</html>

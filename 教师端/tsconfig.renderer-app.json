@@ -1,0 +1,11 @@
+{
+  "//": "index.html 主界面逻辑（原内联脚本）构建：tsc -p tsconfig.renderer-app.json（产物 build/renderer/blockN.js，由 index.html 引用）",
+  "extends": "./tsconfig.base.json",
+  "compilerOptions": {
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "types": [],
+    "rootDir": "src/renderer/app",
+    "outDir": "build/renderer"
+  },
+  "include": ["src/renderer/app/**/*.ts", "src/types/**/*.d.ts"]
+}

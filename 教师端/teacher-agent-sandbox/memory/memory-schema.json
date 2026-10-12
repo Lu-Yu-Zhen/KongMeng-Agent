@@ -1,0 +1,88 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "教师智能体记忆数据结构",
+  "description": "定义备课智能体短期与长期记忆的结构、字段与生命周期",
+  "version": "1.0.0",
+  "types": {
+    "WorkingMemory": {
+      "description": "短期记忆：当前任务的实时上下文，任务结束后归档",
+      "fields": {
+        "taskId": "string (唯一任务ID)",
+        "subject": "string (学科)",
+        "topic": "string (课题)",
+        "grade": "string (年级)",
+        "userIntent": "string (用户原始意图)",
+        "plan": "PlanStep[] (任务计划)",
+        "scratchpad": "string (推理草稿区)",
+        "activeSkill": "string (当前激活技能ID)",
+        "artifacts": "string[] (已生成产物路径)",
+        "toolCallCount": "number (本轮工具调用次数)",
+        "createdAt": "number (时间戳)",
+        "ttlMs": "number (存活时长，默认 1800000=30分钟)"
+      }
+    },
+    "PlanStep": {
+      "fields": {
+        "id": "string",
+        "action": "string (动作描述)",
+        "tool": "string (使用的工具)",
+        "status": "enum[pending, running, done, failed, skipped]",
+        "result": "string (执行结果摘要)"
+      }
+    },
+    "EpisodicMemory": {
+      "description": "情景记忆：历次备课任务记录",
+      "fields": {
+        "id": "string",
+        "timestamp": "number",
+        "subject": "string",
+        "topic": "string",
+        "summary": "string (任务摘要)",
+        "outcome": "enum[success, partial, failed]",
+        "skillUsed": "string",
+        "artifacts": "string[]",
+        "teacherFeedback": "string (教师反馈/评分)",
+        "tags": "string[]"
+      }
+    },
+    "SemanticMemory": {
+      "description": "语义记忆：教师画像、偏好、学情等稳定知识",
+      "fields": {
+        "teacherId": "string",
+        "subjects": "string[] (任教学科)",
+        "preferredStyle": "string (偏好教学风格)",
+        "classProfiles": "ClassProfile[]",
+        "frequentTopics": "string[] (常备课题)",
+        "lessonPrefs": "object (教案偏好：模块取舍、详略、分层默认值)",
+        "feedbackHistory": "Feedback[]",
+        "updatedAt": "number"
+      }
+    },
+    "ClassProfile": {
+      "fields": {
+        "classId": "string",
+        "className": "string",
+        "studentCount": "number",
+        "avgScore": "number",
+        "weakPoints": "string[] (班级薄弱知识点)",
+        "tierDist": "object {base, mid, top: number} (分层分布)",
+        "lastUpdated": "number"
+      }
+    },
+    "Feedback": {
+      "fields": {
+        "timestamp": "number",
+        "topic": "string",
+        "rating": "number (1-5)",
+        "comment": "string"
+      }
+    }
+  },
+  "policies": {
+    "workingMemory": "任务结束或 TTL 到期后归档为情景记忆并清空",
+    "episodicRetention": "保留最近 200 条，超出按时间淘汰",
+    "semanticUpdate": "每次任务结束根据教师反馈增量更新",
+    "recallStrategy": "按语义相关性 + 时间衰减加权检索 topK=5",
+    "privacy": "仅本地存储（localStorage/IndexedDB），不上传，不含学生真实姓名"
+  }
+}

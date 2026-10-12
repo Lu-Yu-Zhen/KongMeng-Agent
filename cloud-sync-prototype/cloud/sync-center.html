@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>云端同步中心 - 孔孟·智学云</title>
+<link rel="stylesheet" href="../assets/styles.css">
+<style>
+  /* 页面级微样式：仅补充共享件未覆盖的排版细节，不重写 Shell/导航 */
+  .bc-counts{ display:flex; gap:var(--space-2); margin-top:var(--space-2); }
+  .bc-counts .bc-item{ flex:1; text-align:center; padding:var(--space-2) 0; border:1px solid var(--border); border-radius:var(--radius-sm); background:var(--ink-50); transition:border-color .15s, background .15s; }
+  .bc-counts .bc-item:hover{ border-color:var(--primary); background:var(--primary-50); }
+  .kv-row{ display:flex; align-items:center; justify-content:space-between; gap:var(--space-3); padding:var(--space-2) var(--space-1); border-bottom:1px dashed var(--border); font-size:var(--fs-sm); }
+  .kv-row:last-child{ border-bottom:none; }
+  .kv-row .k{ color:var(--ink-400); display:inline-flex; align-items:center; gap:6px; }
+  .kv-row .v{ color:var(--ink-700); font-weight:500; }
+  .tl-meta .badge{ font-size:var(--fs-xs); }
+  .stat-card{ border:1px solid var(--border); }
+  .stat-card:hover{ border-color:var(--primary); box-shadow:var(--shadow-md); }
+</style>
+</head>
+<body>
+<script src="../assets/mock.js"></script>
+<script src="../assets/api.js"></script>
+<script src="../assets/components.js"></script>
+<script>
+/* ============ 云端同步中心 · 纯静态高保真交互 ============ */
+renderShell('cloud', 'sync');
+
+const state = { classId: '', subject: '' };
+
+/* ---------- 顶部概览统计卡 ---------- */
+function statCard(iconName, label, value, note) {
+  return '<div class="card stat-card">' +
+    '<span class="stat-label">' + icon(iconName) + ' ' + escapeHtml(label) + '</span>' +
+    '<span class="stat-value">' + value + '</span>' +
+    (note ? '<span class="stat-note">' + escapeHtml(note) + '</span>' : '') +
+    '</div>';
+}
+
+function latestSyncTime() {
+  if (!DB.syncEvents.length) return '暂无同步记录';
+  let latest = DB.syncEvents[0];
+  DB.syncEvents.forEach(function(e) { if (e.ts > latest.ts) latest = e; });
+  return latest.ts;
+}
+
+function renderStatCards() {
+  const ov = store.schoolOverview();
+  const files = Object.keys(store.cloudFiles).length;
+  document.getElementById('statCards').innerHTML =
+    statCard('database', '云端数据文件', files, 'homework / grades / questions / comments') +
+    statCard('book', '总作业', ov.totalHomework, '全部班级 · 全部科目') +
+    statCard('chart', '总成绩', ov.totalGrades, '已公布成绩记录') +
+    statCard('message', '总提问', ov.totalQuestions, '含待回复与已回复');
+}
+
+/* ---------- 班级×科目分桶概览 ---------- */
+function fileCount(label, val) {
+  return '<div class="bc-item">' +
+    '<div class="bc-count">' + val + '</div>' +
+    '<div class="bc-meta">' + escapeHtml(label) + '</div>' +
+    '</div>';
+}
+
+function bucketCard(b) {
+  const cls = store.getClass(b.classId);
+  const name = cls ? cls.name : b.className;
+  return '<div class="card bucket-card">' +
+    '<div class="bc-head">' +
+      classBadge(name) +
+      subjectBadge(b.subject) +
+    '</div>' +
+    '<div class="bc-counts">' +
+      fileCount('作业', b.homework) +
+      fileCount('成绩', b.grades) +
+      fileCount('提问', b.questions) +
+      fileCount('批改', b.comments) +
+    '</div>' +
+    '</div>';
+}
+
+function renderBuckets() {
+  const root = document.getElementById('bucketGrid');
+  let buckets = store.syncBuckets();
+  if (state.classId) buckets = buckets.filter(function(b) { return b.classId === state.classId; });
+  if (state.subject) buckets = buckets.filter(function(b) { return b.subject === state.subject; });
+  if (!buckets.length) {
+    root.innerHTML = emptyState('当前筛选条件下暂无班级 × 科目分桶数据', 'database');
+    return;
+  }
+  root.innerHTML = buckets.map(bucketCard).join('');
+}
+
+/* ---------- 云端载荷文件（桶卡片下方） ---------- */
+function renderCloudFiles() {
+  const root = document.getElementById('cloudFiles');
+  const files = Object.entries(store.cloudFiles);
+  if (!files.length) {
+    root.innerHTML = emptyState('暂无云端载荷文件', 'file');
+    return;
+  }
+  root.innerHTML = files.map(function(entry) {
+    const name = entry[0];
+    const f = entry[1];
+    const writerCls = (f.lastWriter === '学生端') ? 'badge-subject' : 'badge-default';
+    return '<div class="kv-row">' +
+      '<span class="k">' + icon('file') + ' ' + escapeHtml(name) + '</span>' +
+      '<span class="v">' +
+        '<span class="badge ' + writerCls + '" style="margin-right:8px">' + escapeHtml(f.lastWriter) + '</span>' +
+        escapeHtml(f.updatedAt) + ' · ' + f.count + ' 条' +
+      '</span>' +
+      '</div>';
+  }).join('');
+}
+
+/* ---------- 跨端数据流转时间线 ---------- */
+function timelineItem(e) {
+  const toTeacher = e.direction.indexOf('student→cloud→teacher') !== -1;
+  const dotCls = toTeacher ? 'to-teacher' : 'to-student';
+  const cls = store.getClass(e.classId);
+  const clsName = cls ? cls.name : e.classId;
+  return '<div class="tl-item ' + dotCls + '">' +
+    '<div class="tl-card">' +
+      '<div class="tl-head">' +
+        '<span class="tl-title">' + escapeHtml(e.chain) + '</span>' +
+        '<span class="tl-flow">' + icon('arrowRight') + ' ' + escapeHtml(e.from) + ' → ' + escapeHtml(e.to) + '</span>' +
+      '</div>' +
+      '<div class="tl-meta mt-2">' +
+        '<span>' + icon('file') + ' ' + escapeHtml(e.file) + '</span>' +
+        classBadge(clsName) +
+        subjectBadge(e.subject) +
+        '<span>' + icon('activity') + ' ' + escapeHtml(e.action) + '</span>' +
+        '<span>' + icon('check') + ' 新增 ' + e.delta + ' 条</span>' +
+        '<span>' + icon('time') + ' ' + escapeHtml(e.ts) + '</span>' +
+      '</div>' +
+    '</div>' +
+    '</div>';
+}
+
+async function loadTimeline() {
+  const root = document.getElementById('timeline');
+  root.innerHTML =
+    '<div class="skeleton" style="height:84px;margin-bottom:12px"></div>' +
+    '<div class="skeleton" style="height:84px;margin-bottom:12px"></div>';
+  const res = await API.getSyncEvents({
+    classId: state.classId || undefined,
+    subject: state.subject || undefined
+  });
+  const list = res && res.list ? res.list : [];
+  if (!list.length) {
+    root.innerHTML = emptyState('当前筛选条件下暂无跨端数据流转记录', 'activity');
+    return;
+  }
+  root.innerHTML = list.map(timelineItem).join('');
+}
+
+/* ---------- 筛选 + 刷新 ---------- */
+function onFilterChange() {
+  state.classId = document.getElementById('fClass').value;
+  state.subject = document.getElementById('fSubject').value;
+  renderBuckets();
+  loadTimeline();
+}
+
+function onRefresh() {
+  toast('正在从云端重拉数据…', 'success');
+  loadAll();
+}
+
+async function loadAll() {
+  renderStatCards();
+  renderBuckets();
+  renderCloudFiles();
+  await loadTimeline();
+}
+
+/* ---------- 筛选下拉（右上） ---------- */
+function buildFilterBar() {
+  const classOpts = '<option value="">全部班级</option>' +
+    store.getClassList().map(function(c) { return '<option value="' + c.id + '">' + escapeHtml(c.name) + '</option>'; }).join('');
+  const subOpts = '<option value="">全部科目</option>' +
+    store.getSubjects().map(function(s) { return '<option value="' + s + '">' + escapeHtml(s) + '</option>'; }).join('');
+  return '<div class="flex items-center gap-2">' +
+    '<select class="select" id="fClass" style="width:auto" onchange="onFilterChange()">' + classOpts + '</select>' +
+    '<select class="select" id="fSubject" style="width:auto" onchange="onFilterChange()">' + subOpts + '</select>' +
+    '</div>';
+}
+
+/* ---------- 组装页面主体（仅填充 main-content） ---------- */
+pageRoot().innerHTML =
+  '<div class="page-head">' +
+    '<div>' +
+      '<h1>云端同步中心</h1>' +
+      '<div class="sub">' + icon('cloud') + ' 跨端数据流转总览 · 最近同步：' + escapeHtml(latestSyncTime()) + '</div>' +
+    '</div>' +
+    '<div class="page-actions">' +
+      buildFilterBar() +
+      '<button class="btn btn-ghost btn-md" onclick="onRefresh()">' + icon('refresh') + ' 刷新</button>' +
+    '</div>' +
+  '</div>' +
+
+  '<div class="grid grid-4 mb-4" id="statCards"></div>' +
+
+  '<h2 class="text-lg mb-2">' + icon('database') + ' 班级 × 科目 分桶概览</h2>' +
+  '<div class="grid grid-3 mb-4" id="bucketGrid"></div>' +
+
+  '<div class="card mb-4" style="padding:0;overflow:hidden">' +
+    '<div style="padding:14px 16px;border-bottom:1px solid var(--border);font-weight:600;color:var(--ink-900);display:flex;align-items:center;gap:8px">' + icon('file') + ' 云端载荷文件</div>' +
+    '<div id="cloudFiles" style="padding:8px 16px"></div>' +
+  '</div>' +
+
+  '<h2 class="text-lg mb-2">' + icon('activity') + ' 跨端数据流转时间线</h2>' +
+  '<div class="timeline" id="timeline"></div>';
+
+loadAll();
+</script>
+</body>
+</html>
