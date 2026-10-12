@@ -1,9 +1,16 @@
-const { app, BrowserWindow, ipcMain } = require('electron');
+const { app, BrowserWindow, ipcMain, protocol, net, shell } = require('electron');
 const path = require('path');
+const url = require('url');
 const fs = require('fs');
 
 let mainWindow;
 let dataRoot;
+
+// 自定义协议名：以 app://app/ 承载 dataRoot 下的本地资源，
+// 使页面与本地资源同源（知识图谱 fetch kg_data.json 等正常工作），
+// 同时得以开启 webSecurity:true 获得完整同源策略保护
+const APP_SCHEME = 'app';
+const APP_HOST = 'app';
 
 // 确定数据根目录
 function getDataRoot() {
@@ -17,6 +24,16 @@ function getDataRoot() {
     }
     // 开发模式：__dirname 即 main.js 所在目录（项目根目录）
     return __dirname;
+}
+
+// 将渲染进程传入的相对路径安全地解析到 dataRoot 内；
+// 非字符串、空值、越权（.. / 绝对路径）一律拒绝，防止路径穿越读写全盘文件
+function resolveInRoot(relPath) {
+    if (typeof relPath !== 'string' || !relPath) return null;
+    var full = path.resolve(dataRoot, relPath);
+    var root = path.resolve(dataRoot);
+    if (full !== root && !full.startsWith(root + path.sep)) return null;
+    return full;
 }
 
 // 确保所有数据目录存在
@@ -58,13 +75,12 @@ function createWindow() {
             preload: path.join(app.getAppPath(), 'preload.js'),
             contextIsolation: true,
             nodeIntegration: false,
-            webSecurity: false
+            webSecurity: true
         }
     });
 
-    // 从数据根目录加载 HTML（支持外部修改同步更新）
-    var htmlPath = path.join(dataRoot, 'index.html');
-    mainWindow.loadFile(htmlPath);
+    // 经自定义协议加载页面（资源与页面同源，fetch 本地 JSON 正常工作，同时 webSecurity 完整生效）
+    mainWindow.loadURL(APP_SCHEME + '://' + APP_HOST + '/index.html');
     mainWindow.setMenuBarVisibility(false);
     mainWindow.maximize();
 
@@ -72,14 +88,55 @@ function createWindow() {
     // mainWindow.webContents.openDevTools();
 }
 
+// 注册自定义协议：app://app/<相对路径> → dataRoot/<相对路径>
+function registerAppProtocol() {
+    protocol.handle(APP_SCHEME, function(request) {
+        try {
+            var pathname = decodeURIComponent(new URL(request.url).pathname);
+            var rel = pathname.replace(/^\/+/, '');
+            var filePath = resolveInRoot(rel);
+            if (!filePath || !fs.existsSync(filePath)) {
+                return new Response('Not Found', { status: 404 });
+            }
+            return net.fetch(url.pathToFileURL(filePath).toString());
+        } catch (e) {
+            console.error('[Electron Protocol] error:', request.url, e.message);
+            return new Response('Bad Request', { status: 400 });
+        }
+    });
+}
+
+// 统一管控窗口导航与新窗口：禁止页面被导航到外部地址，外部链接交给系统浏览器
+function guardWebContents() {
+    app.on('web-contents-created', function(event, contents) {
+        contents.on('will-navigate', function(e, navUrl) {
+            var allowed = navUrl.startsWith(APP_SCHEME + '://' + APP_HOST + '/') || navUrl.startsWith('about:blank');
+            if (!allowed) {
+                e.preventDefault();
+                shell.openExternal(navUrl).catch(function() {});
+            }
+        });
+        contents.setWindowOpenHandler(function(details) {
+            if (details.url === 'about:blank' || details.url.startsWith(APP_SCHEME + '://')) {
+                return { action: 'allow' };
+            }
+            shell.openExternal(details.url).catch(function() {});
+            return { action: 'deny' };
+        });
+    });
+}
+
 app.whenReady().then(function() {
     dataRoot = getDataRoot();
     ensureDataDirs();
+    registerAppProtocol();
+    guardWebContents();
 
     // ===== IPC: 同步读取文件 =====
     ipcMain.on('fs-read-sync', function(event, relPath) {
         try {
-            var fullPath = path.join(dataRoot, relPath);
+            var fullPath = resolveInRoot(relPath);
+            if (!fullPath) { event.returnValue = null; return; }
             if (fs.existsSync(fullPath)) {
                 event.returnValue = fs.readFileSync(fullPath, 'utf-8');
             } else {
@@ -94,7 +151,8 @@ app.whenReady().then(function() {
     // ===== IPC: 异步写入文件 =====
     ipcMain.handle('fs-write', function(event, relPath, content) {
         try {
-            var fullPath = path.join(dataRoot, relPath);
+            var fullPath = resolveInRoot(relPath);
+            if (!fullPath) return false;
             var dir = path.dirname(fullPath);
             if (!fs.existsSync(dir)) {
                 fs.mkdirSync(dir, { recursive: true });
@@ -110,7 +168,8 @@ app.whenReady().then(function() {
     // ===== IPC: 同步检查文件是否存在 =====
     ipcMain.on('fs-exists-sync', function(event, relPath) {
         try {
-            event.returnValue = fs.existsSync(path.join(dataRoot, relPath));
+            var fullPath = resolveInRoot(relPath);
+            event.returnValue = fullPath ? fs.existsSync(fullPath) : false;
         } catch(e) {
             event.returnValue = false;
         }

@@ -1313,8 +1313,8 @@
                         <p class="text-xs text-ink-400">AI 将在讲解时自动生成可视化内容</p>
                         <p class="text-[10px] text-ink-300 mt-1">支持 HTML / 图表 / 公式 / 动态交互</p>
                     </div>
-                    <!-- 预览模式：iframe 渲染 -->
-                    <iframe id="vizPreviewFrame" class="w-full h-full border-0 hidden" sandbox="allow-scripts allow-same-origin"></iframe>
+                    <!-- 预览模式：iframe 渲染（沙箱隔离：允许脚本但禁止同源，防止 AI 生成内容经 parent.electronAPI 读写本机文件） -->
+                    <iframe id="vizPreviewFrame" class="w-full h-full border-0 hidden" sandbox="allow-scripts"></iframe>
                     <!-- 代码模式：代码展示（GitHub亮色主题） -->
                     <div id="vizCodeView" class="hidden absolute inset-0 overflow-auto bg-[#f6f8fa] p-4">
                         <pre id="vizCodeContent" class="text-xs text-[#24292f] font-mono whitespace-pre-wrap break-all leading-relaxed"></pre>
@@ -9244,6 +9244,7 @@ ${topic && topic !== 'auto' ? '知识点：' + topic : ''}${extraReqPrompt}
             html += '</body></html>';
             
             var printWindow = window.open('', '_blank');
+            if (!printWindow) { showToast('请允许弹出窗口后重试'); return; }
             printWindow.document.write(html);
             printWindow.document.close();
             setTimeout(function() { printWindow.focus(); printWindow.print(); }, 500);
@@ -9291,6 +9292,7 @@ ${topic && topic !== 'auto' ? '知识点：' + topic : ''}${extraReqPrompt}
             });
 
             const printWindow = window.open('', '_blank');
+            if (!printWindow) { showToast('请允许弹出窗口后重试'); return; }
             printWindow.document.write('<!DOCTYPE html><html><head><meta charset="UTF-8"><title>' + reportTitle + '</title>');
             printWindow.document.write('<style>');
             printWindow.document.write('@page { size: A4; margin: 1.5cm; }');
