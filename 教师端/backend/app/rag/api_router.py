@@ -20,8 +20,8 @@ from pydantic import BaseModel, Field
 
 from . import config, hybrid, pipeline
 from . import bm25
-from . import kb
-from .rag import vector_store as _vector_store
+from .. import kb  # app.kb（此前误写为 `from . import kb`，触发 rag→app.rag 循环导入）
+from . import vector_store as _vector_store
 
 log = logging.getLogger("teacher-backend.rag")
 

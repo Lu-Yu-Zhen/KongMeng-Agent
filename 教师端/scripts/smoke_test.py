@@ -19,7 +19,9 @@ import sys
 import traceback
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+# backend 包（app.*）与 workflow.py（教师端根目录）都要可导入
 sys.path.insert(0, os.path.join(ROOT, "backend"))
+sys.path.insert(0, ROOT)
 
 FAILED: list[str] = []
 PASSED = 0
@@ -30,10 +32,10 @@ def check(name: str, fn) -> None:
     try:
         detail = fn()
         PASSED += 1
-        print(f"  ✓ {name}" + (f"（{detail}）" if detail else ""))
+        print(f"  [PASS] {name}" + (f"（{detail}）" if detail else ""))
     except Exception as e:  # noqa: BLE001
         FAILED.append(f"{name}: {e}")
-        print(f"  ✗ {name}: {e}")
+        print(f"  [FAIL] {name}: {e}")
         traceback.print_exc()
 
 
@@ -50,7 +52,7 @@ def t_compile_all() -> str:
 
 
 def t_workflow_mock() -> str:
-    from app import workflow  # noqa: PLC0415
+    import workflow  # noqa: PLC0415
 
     state = workflow.run("帮我生成《函数单调性》教案", history=[])
     products = [pid for pid in workflow.PRODUCERS if (state.get(pid) or {}).get("content")]
@@ -60,11 +62,15 @@ def t_workflow_mock() -> str:
 def t_databus_roundtrip() -> str:
     from app import databus  # noqa: PLC0415
 
+    # databus 用独立库（backend/data/kongmeng.db），需先建表再查询
+    databus.init_db()
     usage = databus.data_usage(subject="")
     return f"data_usage 返回 {len(usage)} 项"
 
 
 def t_rag_importable() -> str:
+    # 直接 import 子模块（绕开 app.rag.__init__ 的 api_router → kb 循环导入链，
+    # 子模块本身可独立导入；生产链路由 server.py 显式 include 触发，不受影响）
     from app.rag import bm25, hybrid, pipeline, vector_store  # noqa: PLC0415,F401
 
     st = pipeline.status()
@@ -100,7 +106,7 @@ def main() -> int:
         for f in FAILED:
             print("  - " + f)
         return 1
-    print("[smoke] 全部通过 ✓")
+    print("[smoke] 全部通过 [PASS]")
     return 0
 
 
