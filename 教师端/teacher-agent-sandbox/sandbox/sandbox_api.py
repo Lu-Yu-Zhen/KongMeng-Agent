@@ -38,6 +38,7 @@ import tempfile
 import traceback
 import threading
 import multiprocessing
+import ast
 from pathlib import Path
 from datetime import datetime
 from typing import Any, Optional, List, Dict, Union
@@ -192,7 +193,11 @@ def validate_workspace_path(path: Union[str, Path]) -> Path:
     """
     target = (WORKSPACE_DIR / path).resolve() if not Path(path).is_absolute() else Path(path).resolve()
     workspace_resolved = WORKSPACE_DIR.resolve()
-    if not str(target).startswith(str(workspace_resolved)):
+    # 用 is_relative_to 做路径包含判断：字符串 startswith 会被同前缀兄弟目录绕过
+    # （如 /path/workspace-evil/x 以 /path/workspace 为前缀即通过）
+    try:
+        target.relative_to(workspace_resolved)
+    except ValueError:
         raise HTTPException(status_code=403, detail=f"路径越权：{path} 不在 workspace 目录内")
     return target
 
@@ -382,6 +387,41 @@ class RestrictedExec:
 
         return g
 
+    # 危险属性链（沙箱逃逸常用）：__class__.__base__.__subclasses__() 等
+    DANGEROUS_ATTRS = {
+        "__class__", "__subclasses__", "__base__", "__bases__", "__globals__",
+        "__builtins__", "__code__", "__closure__", "__func__", "__self__",
+        "__mro__", "__dict__", "__module__", "__spec__", "__loader__",
+        "__wrapped__", "__defaults__", "__kwdefaults__",
+    }
+
+    @staticmethod
+    def _static_check(code: str) -> None:
+        """编译前静态检查（DANGEROUS_NAMES / ALLOWED_MODULES 的真正执行点）：
+        1. 拒绝危险属性链（__class__.__base__.__subclasses__() 等逃逸手法）；
+        2. 拒绝黑名单名称（open/exec/eval/__import__ 等）；
+        3. import 仅允许教学/数据处理白名单模块。
+        注：这是纵深防御的一层，进程级隔离仍是最终方案（见沙箱加固路线图）。
+        """
+        try:
+            tree = ast.parse(code)
+        except SyntaxError as e:
+            raise HTTPException(status_code=400, detail=f"代码语法错误: {e.msg} (line {e.lineno})")
+        for node in ast.walk(tree):
+            if isinstance(node, ast.Attribute) and node.attr in RestrictedExec.DANGEROUS_ATTRS:
+                raise HTTPException(status_code=403, detail=f"代码包含受限属性访问: .{node.attr}")
+            if isinstance(node, ast.Name) and node.id in DANGEROUS_NAMES:
+                raise HTTPException(status_code=403, detail=f"代码包含受限名称: {node.id}")
+            if isinstance(node, ast.Import):
+                for a in node.names:
+                    root = (a.name or "").split(".")[0]
+                    if root and root not in ALLOWED_MODULES:
+                        raise HTTPException(status_code=403, detail=f"禁止导入模块: {root}（仅允许白名单内的教学/数据处理库）")
+            elif isinstance(node, ast.ImportFrom):
+                root = (node.module or "").split(".")[0]
+                if root and root not in ALLOWED_MODULES:
+                    raise HTTPException(status_code=403, detail=f"禁止导入模块: {root}（仅允许白名单内的教学/数据处理库）")
+
     @staticmethod
     def execute(code: str, timeout: int = DEFAULT_TIMEOUT, packages: Optional[List[str]] = None) -> dict:
         """
@@ -397,9 +437,13 @@ class RestrictedExec:
                 "files": list,
             }
         """
-        # 可选包安装
+        # 可选包安装（白名单校验：仅允许 ALLOWED_MODULES 内的包，防止任意包装/供应链风险）
         install_msgs = []
         if packages:
+            allowed_lower = {m.lower() for m in ALLOWED_MODULES}
+            for pkg in packages:
+                if not re.fullmatch(r"[A-Za-z0-9._-]+", pkg) or pkg.split(".")[0].lower() not in allowed_lower:
+                    raise HTTPException(status_code=403, detail=f"不允许安装包: {pkg}（仅支持白名单内的库）")
             for pkg in packages:
                 try:
                     subprocess.run(
@@ -409,6 +453,9 @@ class RestrictedExec:
                     install_msgs.append(f"已安装: {pkg}")
                 except Exception as e:
                     install_msgs.append(f"安装失败 {pkg}: {e}")
+
+        # 编译前静态安全检查（先于任何执行）
+        RestrictedExec._static_check(code)
 
         # 捕获 stdout/stderr
         old_stdout = sys.stdout
@@ -1252,11 +1299,14 @@ def convert_document(from_format: str, to_format: str, file_content: str, filena
     # 创建临时文件
     with tempfile.TemporaryDirectory() as tmpdir:
         tmpdir_path = Path(tmpdir)
-        input_path = tmpdir_path / filename
+        # filename 来自请求体，必须剥离路径成分（`../../evil.docx` 可写到临时目录外）；
+        # 与其余生成接口一致使用 safe_filename 消毒
+        safe_name = safe_filename(filename, Path(filename).suffix.lstrip(".") or "bin")
+        input_path = tmpdir_path / safe_name
         input_path.write_bytes(file_bytes)
         
         # 确定输出文件名
-        stem = Path(filename).stem
+        stem = Path(safe_name).stem
         output_filename = f"{stem}.{to_format}"
         output_path = tmpdir_path / output_filename
         
@@ -1604,11 +1654,19 @@ app = FastAPI(
     version="1.0.0",
 )
 
-# CORS 中间件（开发环境允许所有源）
+# CORS 收敛（对齐 backend/server.py）：仅允许本地来源，不再对 "*" 全开。
+# 沙箱暴露 /execute（任意代码执行）等敏感能力，必须防止任意外部网页跨域调用本机沙箱。
+_cors_env = os.getenv("SANDBOX_CORS_ORIGINS", "").strip()
+_CORS_ORIGINS = (
+    [o.strip() for o in _cors_env.split(",") if o.strip()]
+    if _cors_env
+    else ["null", "file://", "app://."]
+)
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
-    allow_credentials=True,
+    allow_origins=_CORS_ORIGINS,
+    allow_origin_regex=r"https?://(localhost|127\.0\.0\.1)(:\d+)?",
+    allow_credentials=False,
     allow_methods=["*"],
     allow_headers=["*"],
 )
@@ -1665,7 +1723,7 @@ async def health_check():
 # ---- 7.2 执行 Python 代码 ----
 
 @app.post("/execute", response_model=ExecuteResponse, summary="执行 Python 代码")
-async def execute_code(req: ExecuteRequest):
+def execute_code(req: ExecuteRequest):
     """
     在隔离的 exec 环境中执行 Python 代码。
     - 捕获 stdout/stderr/返回值
@@ -1693,7 +1751,7 @@ async def execute_code(req: ExecuteRequest):
 # ---- 7.3 生成 Word 文档 ----
 
 @app.post("/generate/docx", summary="生成 Word 文档")
-async def gen_docx(req: DocxRequest):
+def gen_docx(req: DocxRequest):
     """用 python-docx 生成 .docx 文件，解析 Markdown 内容"""
     try:
         result = generate_docx(
@@ -1711,7 +1769,7 @@ async def gen_docx(req: DocxRequest):
 # ---- 7.4 生成 PPT 课件 ----
 
 @app.post("/generate/pptx", summary="生成 PPT 课件")
-async def gen_pptx(req: PptxRequest):
+def gen_pptx(req: PptxRequest):
     """用 python-pptx 生成 .pptx 文件，16:9 布局，主题色 jade/ink/bg"""
     try:
         result = generate_pptx(
@@ -1728,7 +1786,7 @@ async def gen_pptx(req: PptxRequest):
 # ---- 7.5 生成 Excel ----
 
 @app.post("/generate/xlsx", summary="生成 Excel 表格")
-async def gen_xlsx(req: XlsxRequest):
+def gen_xlsx(req: XlsxRequest):
     """用 openpyxl 生成 .xlsx 文件，列宽自适应，表头加粗"""
     try:
         result = generate_xlsx(
@@ -1747,7 +1805,7 @@ async def gen_xlsx(req: XlsxRequest):
 # ---- 7.6 生成 PDF ----
 
 @app.post("/generate/pdf", summary="生成 PDF 文档")
-async def gen_pdf(req: PdfRequest):
+def gen_pdf(req: PdfRequest):
     """优先用 weasyprint（HTML→PDF），降级用 reportlab 生成 PDF"""
     try:
         result = generate_pdf(
@@ -1765,7 +1823,7 @@ async def gen_pdf(req: PdfRequest):
 # ---- 7.7 文档格式转换 ----
 
 @app.post("/convert", summary="文档格式转换")
-async def convert_doc(req: ConvertRequest):
+def convert_doc(req: ConvertRequest):
     """
     支持 pandoc 转换：md <-> docx <-> html <-> pdf
     支持 libreoffice 转换：pptx->pdf, docx->pdf, xlsx->pdf
@@ -1788,7 +1846,7 @@ async def convert_doc(req: ConvertRequest):
 # ---- 7.8 OCR 文字识别 ----
 
 @app.post("/ocr", summary="OCR 文字识别")
-async def ocr_image(req: OcrRequest):
+def ocr_image(req: OcrRequest):
     """调用 tesseract 命令行进行 OCR 识别，返回识别文本"""
     try:
         result = run_ocr(
@@ -1878,7 +1936,7 @@ async def list_files():
 # ---- 7.11 生成图表 ----
 
 @app.post("/analyze/chart", summary="生成图表")
-async def gen_chart(req: ChartRequest):
+def gen_chart(req: ChartRequest):
     """用 matplotlib 生成图表（bar/line/pie/radar/scatter）并保存为 PNG"""
     try:
         result = generate_chart(

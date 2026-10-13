@@ -1479,6 +1479,14 @@
     /** 生成 PDF（服务器优先 → jsPDF 降级） */
     async genPDF(opts: LegacyBoundary) {
       opts = opts || {};
+      // jsPDF 未嵌入中文字体：含中文的内容直接走 printHTML（HTML+浏览器打印，中文友好），
+      // 避免生成乱码 PDF。英文/纯数字内容仍走 jsPDF 快速路径。
+      if (/[\u4e00-\u9fa5]/.test(opts.text || '')) {
+        const esc = String(opts.text || '')
+          .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+        const html = '<pre style="white-space:pre-wrap;font-family:inherit;margin:0">' + esc + '</pre>';
+        return await this.printHTML(html, opts.filename || '文档', { saveOnly: opts.saveOnly !== false });
+      }
       if (this.serverAvailable) {
         const sr = await this.serverGenPDF(opts);
         if (sr.ok) return sr;

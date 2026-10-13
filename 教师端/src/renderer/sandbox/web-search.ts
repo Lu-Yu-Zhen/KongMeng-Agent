@@ -601,7 +601,10 @@
       var wikiUrl = 'https://zh.wikipedia.org/w/api.php?action=query&list=search&srsearch=' + encodeURIComponent(query) + '&format=json&srprop=snippet&srlimit=' + num + '&origin=*';
       var wikiR = await _httpGet(wikiUrl, 8000);
       if (wikiR.ok) {
-        var wd = JSON.parse(wikiR.text);
+        // 容错：反爬验证页/非 JSON 响应时返回空而非抛错（此前 JSON.parse 无保护，
+        // 异常被外层 track().catch() 吞掉导致 wiki 引擎结果静默丢失）
+        var wd = null;
+        try { wd = JSON.parse(wikiR.text); } catch (e: LegacyBoundary) { return []; }
         if (wd && wd.query && wd.query.search) {
           return wd.query.search.map(function (s: LegacyBoundary) {
             return {

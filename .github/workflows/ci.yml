@@ -1,0 +1,55 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  python:
+    name: Python 语法与冒烟
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: 教师端
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: 安装后端依赖
+        run: pip install -r backend/requirements.txt
+      - name: Python 编译检查 + 冒烟测试
+        run: python scripts/smoke_test.py
+
+  typescript:
+    name: TypeScript 构建（基线容忍）
+    runs-on: windows-latest
+    defaults:
+      run:
+        working-directory: 教师端
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - name: 安装依赖（含 typescript）
+        run: npm ci || npm install
+      - name: TS 构建（错误数不超过预存基线）
+        run: npm run build:ts
+      - name: typecheck 基线报告（不阻断，仅展示）
+        continue-on-error: true
+        run: npm run typecheck
+
+  student-app:
+    name: 学生端语法检查
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - name: main.js / preload.js 语法
+        run: |
+          node --check "学生端/main.js"
+          node --check "学生端/preload.js"

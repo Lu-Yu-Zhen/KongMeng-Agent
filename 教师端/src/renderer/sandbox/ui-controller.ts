@@ -53,7 +53,18 @@
         if (global.AgentCore.running) {
           // 智能体正在执行：中止当前任务并开始新任务（不降级到 Chat）
           global.AgentCore.stop();
-          setTimeout(function () { self.handleAgentSend(); }, 300);
+          // 等待旧任务真正退出（running 复位）后再发起，避免固定延迟竞态：
+          // 旧任务若未退出，新 run() 会早退丢弃消息，或旧任务 finally 晚于新 run()
+          // 把新任务的 running/abort 清掉导致双任务并发。最多等待 3s，超时由
+          // AgentCore 的代次保护兜底（旧任务 finally 不再改动新任务状态）。
+          var waited = 0;
+          var waitTimer = setInterval(function () {
+            waited += 100;
+            if (!global.AgentCore.running || waited >= 3000) {
+              clearInterval(waitTimer);
+              self.handleAgentSend();
+            }
+          }, 100);
           return;
         }
         self.handleAgentSend();
@@ -86,7 +97,12 @@
       if (global.clearBeikeChat && !(global.clearBeikeChat as LegacyBoundary)._hooked) {
         const origClear = global.clearBeikeChat;
         global.clearBeikeChat = function () {
-          if (global.AgentCore) global.AgentCore.resetMemory();
+          if (global.AgentCore) {
+            // 若任务正挂在澄清选择上，先取消放行 Promise，避免 run() 永不 settle 造成任务死锁
+            if (typeof global.AgentCore.onClarifyCancel === 'function') global.AgentCore.onClarifyCancel();
+            if (typeof global.AgentCore.stop === 'function') global.AgentCore.stop();
+            global.AgentCore.resetMemory();
+          }
           self._removeClarifyPanel();
           return origClear.apply(global, arguments);
         };
@@ -349,6 +365,9 @@
       if (!this._runCard) return;
       const div = document.createElement('div');
       div.className = 'agent-step-row fade-up executing';
+      // 标记工具名：并行批量调用时 onToolResult 据此匹配各自的步骤行，
+      // 避免所有结果都写到最后一个 _curStepDiv（前 N-1 行永远停在"执行中"且结果错位）
+      if (info && info.name) div.dataset.toolName = String(info.name);
       // 简洁展示：图标 + 动作描述 + 下拉按钮
       const actionDesc = this._toolActionDesc(info.name, info.args);
       div.innerHTML =
@@ -369,11 +388,20 @@
     },
 
     onToolResult(info: LegacyBoundary) {
-      if (!this._curStepDiv) return;
+      // 优先匹配"同名且仍在执行中"的步骤行（并行批量调用场景）；找不到再回退当前行
+      let target: LegacyBoundary = this._curStepDiv;
+      if (info && info.name && this._runCard) {
+        const rows = this._runCard.querySelectorAll('.agent-step-row.executing');
+        for (let i = rows.length - 1; i >= 0; i--) {
+          const row = rows[i] as LegacyBoundary;
+          if (row.dataset && row.dataset.toolName === String(info.name)) { target = row; break; }
+        }
+      }
+      if (!target) return;
       // 移除执行中状态
-      this._curStepDiv.classList.remove('executing');
-      const status = this._curStepDiv.querySelector('.agent-step-status');
-      const resWrap = this._curStepDiv.querySelector('.agent-detail-result');
+      target.classList.remove('executing');
+      const status = target.querySelector('.agent-step-status');
+      const resWrap = target.querySelector('.agent-detail-result');
       if (status) {
         status.textContent = info.ok ? '完成' : '失败';
         status.classList.remove('running');

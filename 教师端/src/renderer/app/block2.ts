@@ -1303,6 +1303,13 @@ async function* callAIStream(prompt: string, systemInstruction: LegacyBoundary, 
 
 /* ---- Markdown 渲染（KaTeX + marked）---- */
 function escapeHtml(t: LegacyBoundary){ const d=document.createElement('div'); d.textContent=t; return d.innerHTML; }
+/* 将任意字符串编码为可安全嵌入 HTML 属性（onclick 等）内的 JS 字符串字面量：
+   JSON.stringify 转义引号/反斜杠，再转义 < > & 防 HTML 上下文歧义。
+   用于把不可信外部输入（如搜索引擎返回的 URL）传入 inline 事件处理器。 */
+function jsStrForAttr(s: LegacyBoundary): string {
+  return JSON.stringify(String(s == null ? '' : s))
+    .replace(/</g, '\\u003c').replace(/>/g, '\\u003e').replace(/&/g, '\\u0026');
+}
 function renderMarkdown(text: string){
  if(!text) return '';
  try{
@@ -1663,7 +1670,7 @@ function updateBeikeRefList(refs: LegacyBoundary){
    if(!title) title='参考 '+(i+1);
    var readBadge=r.read?'<span class="text-[8px] text-jade-700 bg-jade-100 rounded px-1 py-px ml-1 shrink-0">已读</span>':'';
    var snippet=(r.read&&r.snippet)?'<p class="text-[10px] text-ink-400 mt-0.5 line-clamp-2">'+escapeHtml(r.snippet)+'</p>':'';
-   return '<div onclick="openRefInNewTab(\''+escapeHtml(url)+'\')" class="block px-2.5 py-2 rounded-lg hover:bg-jade-50 transition group cursor-pointer">'
+   return '<div onclick="openRefInNewTab(' + jsStrForAttr(url) + ')" class="block px-2.5 py-2 rounded-lg hover:bg-jade-50 transition group cursor-pointer">'
     +'<div class="flex items-start gap-2">'
     +_siteIcon(url)
     +'<div class="flex-1 min-w-0">'
@@ -1693,6 +1700,11 @@ function deepReadBeikeRefs(refs: LegacyBoundary){
 }
 function openRefInNewTab(url: string){
  if(!url||url==='#'){ showToast('无可用链接'); return; }
+ // 仅允许 http/https：拦截 javascript: 等危险协议（URL 来自搜索引擎结果，属不可信外部输入）
+ try{
+  const u=new URL(url);
+  if(u.protocol!=='http:'&&u.protocol!=='https:'){ showToast('不支持的链接协议'); return; }
+ }catch(_){ showToast('链接格式无效'); return; }
  window.open(url,'_blank','noopener,noreferrer,width=1200,height=800');
 }
 
@@ -2530,6 +2542,11 @@ function loadBeikeHistoryRecord(id: string){
     list.appendChild(item)!!;
    });
   }
+ }
+ /* 同步 Agent 对话记忆：只恢复界面不复记忆会让智能体跨轮上下文仍是上一个会话，
+    回答与当前记录脱节（P3-14） */
+ if(window.AgentCore && typeof window.AgentCore.loadHistory==='function'){
+  window.AgentCore.loadHistory(beikeHistory||[]);
  }
 }
 function deleteBeikeHistoryRecord(id: string){

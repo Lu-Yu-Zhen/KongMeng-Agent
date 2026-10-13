@@ -19,6 +19,9 @@ from fastapi import APIRouter, HTTPException, Query
 from pydantic import BaseModel, Field
 
 from . import config, hybrid, pipeline
+from . import bm25
+from .. import kb  # app.kb（此前误写为 `from . import kb`，触发 rag→app.rag 循环导入）
+from . import vector_store as _vector_store
 
 log = logging.getLogger("teacher-backend.rag")
 
@@ -108,6 +111,14 @@ def _run_build_task(task_id: str, payload: Dict[str, Any], task) -> Dict[str, An
 
     try:
         result = pipeline.build(subjects=subjects, force=force, progress=_progress)
+        # 构建成功后必须重置 RAG 可用性缓存：_rag_ok() 首次探测后永久缓存，
+        # 若服务启动时索引为空，之后即使构建成功 kb.retrieve 仍走旧检索直到进程重启
+        try:
+            kb.reset_rag_cache()
+            bm25.get_index()
+            _vector_store.reset()
+        except Exception as ce:  # 重置失败不影响构建结果，仅记录
+            log.warning("rag 构建后重置缓存失败：%s", ce)
         return {"ok": True, "result": result}
     except Exception as e:
         log.error("rag 构建失败：%s", e, exc_info=True)

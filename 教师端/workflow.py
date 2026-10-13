@@ -983,14 +983,27 @@ _LLM_INST: Optional[BaseLLM] = None
 # 模型配置并发锁：后端 config.py 改写 SETTINGS / 重置 _LLM_INST 时持有同一把锁，
 # 避免"写 SETTINGS"与"读 SETTINGS 构建 LLM"交错导致读到半成品配置。
 _MODEL_LOCK = threading.RLock()
+# 线程本地 LLM 实例：每个任务线程持有自己构建的实例，config 改写模型配置只影响
+# 后续新构建，不会串改其他并发任务正在使用的实例（修复进程级全局配置互相覆盖）。
+_llm_local = threading.local()
 
 
 def _llm() -> BaseLLM:
-    global _LLM_INST
+    inst = getattr(_llm_local, "inst", None)
+    if inst is not None:
+        return inst
     with _MODEL_LOCK:
+        global _LLM_INST
         if _LLM_INST is None:
             _LLM_INST = build_llm()
+        _llm_local.inst = _LLM_INST
         return _LLM_INST
+
+
+def reset_thread_llm() -> None:
+    """清除当前线程的 LLM 实例缓存（config 改写模型配置后由本线程调用）。
+    后续 _llm() 按新配置重建；其他线程已构建的实例不受影响。"""
+    _llm_local.inst = None
 
 
 def _chat(system: str, user: str) -> str:
@@ -1113,7 +1126,9 @@ def ask_questions(state: LessonState) -> LessonState:
         })
 
     if questions and not parsed.get("studentTagsExplicit", False) and any(
-        t in TEACHING_TASKS for t in (parsed.get("products") or [])
+        # products 是连字符产物 ID（lesson-plan），TEACHING_TASKS 是下划线任务 ID（lesson_plan），
+        # 必须先经 PRODUCT_TASKS 映射再比对，否则 any(...) 恒为 False、学情追问永不出现
+        PRODUCT_TASKS.get(p, p) in TEACHING_TASKS for p in (parsed.get("products") or [])
     ):
         questions.append({
             "field": "studentTags",

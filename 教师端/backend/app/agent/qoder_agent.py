@@ -15,6 +15,7 @@
 """
 from __future__ import annotations
 
+import asyncio
 import json
 import os
 import re
@@ -469,11 +470,13 @@ async def run_lesson_prep(request: Dict[str, Any]) -> Dict[str, Any]:
         try:
             out = await run_with_qoder(request)
         except Exception as e:  # noqa: BLE001 —— 真引擎失败自动回退，保证可用性
-            out = run_with_mock(request)
+            # run_with_mock 是同步重活（databus 查询 + docx/pptx 渲染），
+            # 必须放线程池执行，否则会卡死 FastAPI 事件循环（健康检查/SSE 全挂）
+            out = await asyncio.to_thread(run_with_mock, request)
             out["engineDetail"] = {"reason": f"qoder 引擎失败回退 mock：{e}"}
             out["engine"] = "mock(fallback)"
     else:
-        out = run_with_mock(request)
+        out = await asyncio.to_thread(run_with_mock, request)
     reg = out.get("artifacts") or []
     lp = next((a for a in reg if a["kind"] == "lesson_plan"), {})
     ppt = next((a for a in reg if a["kind"] == "ppt"), {})

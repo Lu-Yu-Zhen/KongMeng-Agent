@@ -58,6 +58,15 @@ class BM25Index:
         if self.corpus:
             self.bm25 = BM25Okapi(self.corpus)
 
+    def reset(self) -> None:
+        """清空索引（全量重建前调用）。
+        get_index() 会从 pickle 加载旧内容，若不清空直接 add_docs 会把全量文档
+        重复灌入（重启后再次构建索引变 2N/3N，检索结果重复且 pickle 持续膨胀）。"""
+        self.doc_ids = []
+        self.doc_meta = []
+        self.corpus = []
+        self.bm25 = None
+
     def search(self, query: str, top_k: int = 30, subject: Optional[str] = None) -> List[Dict[str, Any]]:
         if self.bm25 is None or not query:
             return []

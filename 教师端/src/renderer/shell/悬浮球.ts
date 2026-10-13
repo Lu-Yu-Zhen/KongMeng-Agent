@@ -27,7 +27,9 @@
   function init() {
     try {
       var CONFIG = (window as LegacyBoundary).KM_FLOAT_CONFIG || {};
-      var LOGO = CONFIG.logo || 'logo.png';
+      // 默认 logo 用仓库内实际存在的文件（教师端根目录无 logo.png，只有 教育大模型logo.png，
+      // 原默认值导致悬浮球与聊天窗口头像 404 破图）
+      var LOGO = CONFIG.logo || '教育大模型logo.png';
       var STORAGE_KEY = 'km_floating_agent_settings';
 
       var DEFAULTS = {

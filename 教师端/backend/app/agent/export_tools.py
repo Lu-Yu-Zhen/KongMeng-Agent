@@ -48,6 +48,8 @@ def _export_dir() -> str:
 def reset_registry() -> None:
     with _lock:
         _current_dir.clear()
+        # 必须同步清空产物登记表：否则跨请求累积，后续备课会取到史上第一条旧产物（张冠李戴）且内存泄漏
+        EXPORT_REGISTRY.clear()
 
 
 EXPORT_REGISTRY: List[Dict[str, Any]] = []

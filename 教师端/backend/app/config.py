@@ -127,12 +127,14 @@ def apply_model_to_workflow(name: str = "") -> bool:
             workflow.SETTINGS.provider = "mock"
             workflow.SETTINGS.llm_candidates = []
             workflow._LLM_INST = None
+            workflow.reset_thread_llm()
             return False
         api_key = security.decrypt(row.get("api_key_enc", ""))
         if not api_key:
             workflow.SETTINGS.provider = "mock"
             workflow.SETTINGS.llm_candidates = []
             workflow._LLM_INST = None
+            workflow.reset_thread_llm()
             return False
         base_url = _normalize_base_url(row.get("base_url") or row.get("endpoint") or "")
         workflow.SETTINGS.provider = "openai"
@@ -141,6 +143,8 @@ def apply_model_to_workflow(name: str = "") -> bool:
         workflow.SETTINGS.base_url = base_url
         workflow.SETTINGS.llm_candidates = _build_candidates(row)
         workflow._LLM_INST = None
+        # 使本线程后续 _llm() 按新配置重建（线程本地，不影响其他并发任务）
+        workflow.reset_thread_llm()
         return True
 
 
@@ -172,3 +176,5 @@ def apply_inline_model(model: Optional[Any]) -> None:
         # 前端传的是临时模型，仍可注入已配置的其他模型作为回退
         workflow.SETTINGS.llm_candidates = _build_candidates(db.get_default_model() or {})
         workflow._LLM_INST = None
+        # 使本线程后续 _llm() 按新配置重建（线程本地，不影响其他并发任务）
+        workflow.reset_thread_llm()

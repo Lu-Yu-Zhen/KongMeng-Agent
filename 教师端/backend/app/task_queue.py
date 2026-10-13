@@ -243,7 +243,9 @@ def submit(kind: str, session_id: int, payload: Dict[str, Any], timeout: int = 1
 
 def _task_done(task_id: str) -> bool:
     t = db.get_task(task_id)
-    return bool(t and t.get("status") in ("success", "failed", "cancelled", "awaiting_input"))
+    # awaiting_input 不是终态：等待教师补充信息期间看门狗必须继续计时，
+    # 否则前端不调 continue 时任务永远挂在等待态（只能等重启清理）
+    return bool(t and t.get("status") in ("success", "failed", "cancelled"))
 
 
 def cancel(task_id: str) -> bool:

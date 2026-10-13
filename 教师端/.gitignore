@@ -26,3 +26,4 @@ teacher-agent-sandbox/js/*.js
 build/renderer/
 tests/_*.txt
 tests/_*.json
+node_modules/
