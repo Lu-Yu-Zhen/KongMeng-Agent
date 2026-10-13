@@ -556,10 +556,13 @@
         // 订阅 SSE 进度
         const stageDone = new Promise((resolve) => {
           let resolved = false;
+          let hardTimeout: LegacyBoundary = null;
           const doneResolve = () => {
             if (resolved) return;
             resolved = true;
             clearInterval(abortTimer);
+            // 清理超时兜底定时器：否则正常结束也遗留一个 10 分钟定时器，长时间使用后堆积
+            if (hardTimeout) { clearTimeout(hardTimeout); hardTimeout = null; }
             if (stopWatch) { try { stopWatch(); } catch (e: LegacyBoundary) {} }
             resolve();
           };
@@ -589,7 +592,8 @@
             } catch (e: LegacyBoundary) { /* 忽略 */ }
           });
           // 超时兜底：600 秒后仍未结束则强制结束，降级同步（后端任务超时为 900 秒，保证长任务不被提前切断）
-          setTimeout(doneResolve, 600000);
+          // doneResolve 内会 clearTimeout，正常结束不遗留定时器
+          hardTimeout = setTimeout(doneResolve, 600000);
         });
 
         await stageDone;
